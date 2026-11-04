@@ -1,0 +1,25 @@
+{
+  "sitio": {
+    "nombre": "A Todo Tenis",
+    "url": "https://atodotenis.vercel.app",
+    "descripcion": "Tenis desde Argentina: resultados, ranking y noticias del circuito ATP, WTA, Challenger, Copa Davis y Billie Jean King Cup.",
+    "zonaHoraria": "America/Argentina/Buenos_Aires",
+    "firma": "Redacción A Todo Tenis"
+  },
+  "api": {
+    "presupuestoDiario": 100,
+    "reserva": 8,
+    "horaReinicioUTC": 22,
+    "toursCalendario": ["atp", "wta", "challenger"],
+    "calendarioCadaHoras": 3,
+    "jugadoresPaginas": 3,
+    "maxDetallesPorCorrida": 6,
+    "diasDeHistorial": 7
+  },
+  "notas": {
+    "publicarAutomaticamente": true,
+    "maxNotasPorCorrida": 4,
+    "modelos": ["gemini-2.5-flash", "gemini-2.5-flash-lite"],
+    "paisDestacado": "arg"
+  }
+}

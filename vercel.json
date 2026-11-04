@@ -1,0 +1,8 @@
+{
+  "buildCommand": "node scripts/build.mjs",
+  "outputDirectory": "dist",
+  "installCommand": "echo sin dependencias",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false
+}
