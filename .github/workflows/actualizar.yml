@@ -3,7 +3,12 @@ name: Actualizar sitio
 on:
   schedule:
     - cron: '17 * * * *'   # cada hora, al minuto 17
-  workflow_dispatch: {}     # permite correrlo a mano desde la pestaña Actions
+  workflow_dispatch:        # permite correrlo a mano desde la pestaña Actions
+    inputs:
+      prueba_partidos:
+        description: 'Solo para pruebas: IDs de partidos (separados por coma) para escribir notas sin publicarlas'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -30,6 +35,7 @@ jobs:
       - name: Escribir notas con IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PRUEBA_PARTIDOS: ${{ github.event.inputs.prueba_partidos }}
         run: node scripts/articles.mjs
 
       - name: Probar que el sitio se genera bien

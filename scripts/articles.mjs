@@ -14,8 +14,12 @@ const partidos = leerJSON('data/partidos.json', {});
 const registro = leerJSON('data/notas-registro.json', {}); // partidoId -> slug | 'descartada'
 const N = CONFIG.notas;
 
+// Modo prueba: PRUEBA_PARTIDOS="id1,id2" escribe notas de esos partidos sin publicarlas
+const PRUEBA = (process.env.PRUEBA_PARTIDOS || '').split(',').map((x) => x.trim()).filter(Boolean);
 const candidatos = Object.values(partidos)
-  .filter((p) => p.importante && p.confirmado && p.estado === 'finalizado' && p.ganador && !registro[p.id])
+  .filter((p) => PRUEBA.length
+    ? PRUEBA.includes(String(p.id)) && p.confirmado && p.ganador
+    : p.importante && p.confirmado && p.estado === 'finalizado' && p.ganador && !registro[p.id])
   .sort((a, b) => String(b.horario).localeCompare(String(a.horario)))
   .slice(0, N.maxNotasPorCorrida);
 
@@ -142,7 +146,7 @@ async function main() {
     const slug = slugify(`${(p.horario || '').slice(0, 10)} ${apellido(g.nombre)} ${apellido(pe.nombre)} ${p.torneo}`);
     const doc = {
       slug,
-      estado: N.publicarAutomaticamente ? 'publicada' : 'revision',
+      estado: PRUEBA.length ? 'prueba' : (N.publicarAutomaticamente ? 'publicada' : 'revision'),
       fecha: new Date().toISOString(),
       fechaPartido: p.horario,
       titulo: nota.titulo.trim(),
@@ -159,7 +163,7 @@ async function main() {
       generadoCon: modelo
     };
     fs.writeFileSync(path.join(ROOT, 'content/notas', `${slug}.json`), JSON.stringify(doc, null, 1) + '\n');
-    registro[p.id] = slug;
+    if (!PRUEBA.length) registro[p.id] = slug;
     log(`Nota escrita: ${doc.titulo}`);
     await new Promise((s) => setTimeout(s, 4000)); // cuidar el límite por minuto de Gemini
   }
