@@ -1184,7 +1184,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-04T20:08:27.174Z",
+  "visto": "2026-11-04T20:09:27.055Z",
   "importante": false,
   "tier": null,
   "torneoId": "2499",
@@ -1204,7 +1204,7 @@
     0
    ],
    "puntos": [
-    "15",
+    "30",
     "40"
    ],
    "saca": 1
@@ -1457,14 +1457,14 @@
     0
    ],
    "puntos": [
-    "15",
-    "0"
+    "30",
+    "15"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:08:27.174Z",
+  "visto": "2026-11-04T20:09:27.055Z",
   "motivo": null,
   "importante": false
  },
@@ -2384,9 +2384,35 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.011Z",
+  "visto": "2026-11-04T20:09:27.487Z",
   "importante": false,
-  "tier": "atp_1000"
+  "tier": "atp_1000",
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     2
+    ],
+    [
+     7,
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "214277": {
   "id": 214277,
@@ -2654,7 +2680,7 @@
      2
     ],
     [
-     1
+     2
     ]
    ],
    "sets": [
@@ -2662,14 +2688,14 @@
     0
    ],
    "puntos": [
-    "40",
-    "AD"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:08:27.174Z",
+  "visto": "2026-11-04T20:09:27.055Z",
   "motivo": null,
   "importante": false
  },
@@ -2974,23 +3000,51 @@
   "genero": "women",
   "horario": "2026-11-04T10:50:00Z",
   "j1": {
-   "id": 1216,
-   "nombre": "Maya Joint",
-   "pais": "aus",
-   "ranking": 90
-  },
-  "j2": {
    "id": 509,
    "nombre": "Maria Sakkari",
    "pais": "gre",
    "ranking": 30
   },
+  "j2": {
+   "id": 1216,
+   "nombre": "Maya Joint",
+   "pais": "aus",
+   "ranking": 90
+  },
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:09:28.146Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "2241",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     6,
+     6
+    ],
+    [
+     6,
+     3,
+     3
+    ]
+   ],
+   "sets": [
+    2,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "214890": {
   "id": 214890,
@@ -3203,23 +3257,51 @@
   "genero": "men",
   "horario": "2026-11-04T10:15:00Z",
   "j1": {
-   "id": 29,
-   "nombre": "Quentin Halys",
-   "pais": "fra",
-   "ranking": 46
-  },
-  "j2": {
    "id": 9,
    "nombre": "Frances Tiafoe",
    "pais": "usa",
    "ranking": 8
   },
+  "j2": {
+   "id": 29,
+   "nombre": "Quentin Halys",
+   "pais": "fra",
+   "ranking": 46
+  },
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.011Z",
+  "visto": "2026-11-04T20:09:28.343Z",
   "importante": false,
-  "tier": "atp_1000"
+  "tier": "atp_1000",
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     6,
+     6
+    ],
+    [
+     6,
+     1,
+     7
+    ]
+   ],
+   "sets": [
+    1,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "214923": {
   "id": 214923,
@@ -3275,9 +3357,35 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:09:27.285Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     7,
+     6
+    ],
+    [
+     6,
+     1
+    ]
+   ],
+   "sets": [
+    2,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "214925": {
   "id": 214925,
@@ -3341,9 +3449,9 @@
   "id": 214927,
   "tour": "challenger",
   "tier": null,
-  "torneo": "Bratislava 2, Slovakia",
+  "torneo": "Bratislava 2",
   "torneoId": "3196",
-  "ronda": "Round of 16",
+  "ronda": "Bratislava 2 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "cubierto": true,
@@ -3382,13 +3490,13 @@
    ],
    "puntos": [
     "40",
-    "40"
+    "AD"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:08:27.174Z",
+  "visto": "2026-11-04T20:09:27.055Z",
   "motivo": null,
   "importante": false
  },
@@ -3559,9 +3667,35 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.011Z",
+  "visto": "2026-11-04T20:09:27.978Z",
   "importante": false,
-  "tier": "atp_1000"
+  "tier": "atp_1000",
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     7,
+     6
+    ],
+    [
+     6,
+     4
+    ]
+   ],
+   "sets": [
+    2,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "214977": {
   "id": 214977,
@@ -3654,9 +3788,9 @@
   "id": 214980,
   "tour": "challenger",
   "tier": null,
-  "torneo": "Bratislava 2, Slovakia",
+  "torneo": "Bratislava 2",
   "torneoId": "3196",
-  "ronda": "Round of 16",
+  "ronda": "Bratislava 2 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "cubierto": true,
@@ -3694,14 +3828,14 @@
     1
    ],
    "puntos": [
-    "15",
-    "0"
+    "30",
+    "15"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:08:27.174Z",
+  "visto": "2026-11-04T20:09:27.055Z",
   "motivo": null,
   "importante": false
  },
@@ -3871,9 +4005,35 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.011Z",
+  "visto": "2026-11-04T20:09:27.680Z",
   "importante": false,
-  "tier": "atp_1000"
+  "tier": "atp_1000",
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     6
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "sets": [
+    2,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "215019": {
   "id": 215019,
@@ -4166,9 +4326,9 @@
   "id": 215051,
   "tour": "challenger",
   "tier": null,
-  "torneo": "Villa Maria, Argentina",
+  "torneo": "Villa Maria",
   "torneoId": "7863",
-  "ronda": "Round of 16",
+  "ronda": "Villa Maria - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "clay",
   "cubierto": false,
@@ -4213,7 +4373,7 @@
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:08:27.174Z",
+  "visto": "2026-11-04T20:09:27.055Z",
   "motivo": null,
   "importante": false
  },
@@ -4981,13 +5141,13 @@
    ],
    "puntos": [
     "15",
-    "0"
+    "30"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:08:27.174Z",
+  "visto": "2026-11-04T20:09:27.055Z",
   "motivo": null,
   "importante": false
  },
@@ -5140,9 +5300,9 @@
   "id": 215221,
   "tour": "challenger",
   "tier": null,
-  "torneo": "Charlottesville, USA",
+  "torneo": "Charlottesville",
   "torneoId": "2497",
-  "ronda": "Round of 16",
+  "ronda": "Charlottesville - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "cubierto": true,
@@ -5178,14 +5338,14 @@
     0
    ],
    "puntos": [
-    "15",
+    "40",
     "15"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:08:27.174Z",
+  "visto": "2026-11-04T20:09:27.055Z",
   "motivo": null,
   "importante": false
  },
@@ -5231,14 +5391,14 @@
     0
    ],
    "puntos": [
-    "15",
+    "30",
     "30"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:08:27.174Z",
+  "visto": "2026-11-04T20:09:27.055Z",
   "motivo": null,
   "importante": false
  },
