@@ -98,6 +98,12 @@ function esImportante(m) {
   // Finales de temporada (ATP Finals / WTA Finals): todos los partidos de singles
   if (torneo.includes('finals') && !m.dobles) return true;
   if (m.dobles) return ['atp', 'wta'].includes(base) && r === 'F';
+  // Sorpresas: un top 10 pierde con alguien de fuera del top 30 (o un top 3 pierde con quien sea), en el cuadro principal ATP/WTA
+  if (['atp', 'wta'].includes(base) && m.ganador) {
+    const g = m.ganador === 1 ? m.j1 : m.j2, pe = m.ganador === 1 ? m.j2 : m.j1;
+    const rg = g?.ranking || 9999, rp = pe?.ranking || 9999;
+    if ((rp <= 10 && rg > 30) || rp <= 3) return true;
+  }
   const t = m.tier || '';
   if (['grand_slam'].includes(t)) return ['R16', 'QF', 'SF', 'F'].includes(r);
   if (['atp_1000', 'wta_1000'].includes(t)) return ['QF', 'SF', 'F'].includes(r);

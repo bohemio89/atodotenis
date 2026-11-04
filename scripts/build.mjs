@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  CONFIG, ROOT, leerJSON, tourBase, nombreRonda, nombreCategoria, sets, marcadorTexto, apellido, fechaArg, nombrePais
+  CONFIG, ROOT, leerJSON, tourBase, nombreRonda, nombreCategoria, sets, marcadorTexto, apellido, fechaArg, nombrePais, nombreTorneo
 } from './lib/util.mjs';
 
 const S = CONFIG.sitio;
@@ -121,7 +121,7 @@ function porTorneo(lista, max = 999) {
     if (total >= max) return '';
     const vis = ps.slice(0, Math.max(0, max - total)); total += vis.length;
     const p = ps[0];
-    return `<div class="grupo"><div class="grupo-tit">${esc(p.torneo)}<span>${esc(nombreCategoria(p.tier, p.tour, p.torneo))}</span></div>${vis.map(filaPartido).join('')}</div>`;
+    return `<div class="grupo"><div class="grupo-tit">${esc(nombreTorneo(p.torneo))}<span>${esc(nombreCategoria(p.tier, p.tour, p.torneo))}</span></div>${vis.map(filaPartido).join('')}</div>`;
   }).join('');
 }
 

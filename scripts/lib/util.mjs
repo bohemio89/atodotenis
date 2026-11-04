@@ -119,3 +119,17 @@ export function tourBase(tour) {
   const b = tour.replace(/_doubles$/, '').replace(/_women$/, '');
   return ['atp', 'wta', 'challenger'].includes(b) ? b : null;
 }
+
+const CIUDADES = { Paris: 'París', London: 'Londres', Rome: 'Roma', Beijing: 'Pekín', Shanghai: 'Shanghái', Vienna: 'Viena', Basel: 'Basilea',
+  Turin: 'Turín', Riyadh: 'Riad', 'Monte Carlo': 'Montecarlo', Hamburg: 'Hamburgo', Munich: 'Múnich', Geneva: 'Ginebra', Stockholm: 'Estocolmo',
+  Athens: 'Atenas', Brussels: 'Bruselas', Tokyo: 'Tokio', Dubai: 'Dubái', Rotterdam: 'Róterdam', Marseille: 'Marsella', Moscow: 'Moscú',
+  Seoul: 'Seúl', Mexico: 'México', 'Mexico City': 'Ciudad de México', Cordoba: 'Córdoba', 'Villa Maria': 'Villa María', 'Sao Paulo': 'San Pablo',
+  'Costa do Sauipe': 'Costa do Sauípe', Bogota: 'Bogotá', Lyon: 'Lyon', Strasbourg: 'Estrasburgo', Warsaw: 'Varsovia', Prague: 'Praga',
+  Florence: 'Florencia', Naples: 'Nápoles', Milan: 'Milán', Lisbon: 'Lisboa', Copenhagen: 'Copenhague', Helsinki: 'Helsinki', Antwerp: 'Amberes',
+  'Finals - Riyadh': 'Finales de Riad', 'Finals - Turin': 'Finales de Turín' };
+export function nombreTorneo(t) {
+  if (!t) return '';
+  const limpio = t.trim();
+  if (CIUDADES[limpio]) return CIUDADES[limpio];
+  return limpio.split(/(\s+\d+$)/)[0] in CIUDADES ? CIUDADES[limpio.split(/(\s+\d+$)/)[0]] + limpio.slice(limpio.split(/(\s+\d+$)/)[0].length) : limpio;
+}
