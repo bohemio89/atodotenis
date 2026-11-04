@@ -43,7 +43,7 @@ function datosDelPartido(p) {
   const rg = g.ranking || 9999, rp = pe.ranking || 9999;
   const sorpresa = rp < rg && (rg - rp >= 20 || (rp <= 10 && rg > 20)) ? (rg - rp >= 50 || rp <= 5 ? 'grande' : 'moderada') : 'no';
   const sv = sets(p.score).map(([a, b]) => (p.ganador === 1 ? [a, b] : [b, a]));
-  const desarrollo = sv.map(([a, b], i) => `set ${i + 1}: ${a > b ? 'lo ganó el ganador' : 'lo ganó el perdedor'} ${a}-${b}${(a === 7 && b === 6) || (a === 6 && b === 7) ? ' (tie-break)' : ''}${i === 2 && Math.max(a, b) >= 10 ? ' (super tie-break)' : ''}`);
+  const desarrollo = sv.map(([a, b], i) => `set ${i + 1}: lo ganó ${a > b ? g.nombre : pe.nombre} ${Math.max(a, b)}-${Math.min(a, b)}${(a === 7 && b === 6) || (a === 6 && b === 7) ? ' (tie-break)' : ''}${i === 2 && Math.max(a, b) >= 10 ? ' (super tie-break)' : ''}`);
   // próximo rival del ganador, si ya figura en el calendario
   const proximo = Object.values(partidos).find((o) => o.estado === 'programado' && o.torneo === p.torneo &&
     [o.j1?.id, o.j2?.id].includes(g.id));
@@ -73,12 +73,12 @@ const ESTILO = `Sos redactor de A Todo Tenis, un sitio de tenis hecho en Argenti
 
 QUÉ CONTAR:
 - Encontrá la noticia: si "sorpresa_por_ranking" es "grande" o "moderada", ese es el eje (el favorito cayó). Si hubo "remontada", destacala. Si fue un trámite (dos sets claros), decilo sin dramatizar.
-- Usá "desarrollo_por_set" para narrar el partido: quién arrancó mejor, si hubo tie-break, cómo se definió.
+- Usá "desarrollo_por_set" para narrar el partido: quién arrancó mejor, si hubo tie-break, cómo se definió. Al hablar de un set, el puntaje va desde quien lo ganó (6-2, nunca 2-6).
 - De "otros_resultados_destacados_del_dia" mencioná como mucho UNO, y solo si suma (por ejemplo, otra caída importante del día). No hagas listas de resultados.
 - La cobertura es internacional: tratá a todos los jugadores por igual, sin favorecer nacionalidades.
 
 REGLAS ESTRICTAS (no negociables):
-- Usá SOLO los datos que te paso. No inventes declaraciones, citas, lesiones, clima, público, estadísticas (aces, quiebres, duración), historial entre los jugadores, edades, títulos ni récords.
+- Usá SOLO los datos que te paso. No inventes declaraciones, citas, lesiones, clima, público, estadísticas (aces, quiebres, duración), historial entre los jugadores, edades, títulos, récords, cabezas de serie ni valoraciones sobre la carrera de nadie.
 - No escribas números que no estén en los datos. Escribí en letras las cantidades chicas ("dos sets", "el tercer set"). El marcador va con números y guiones: 7-6 6-3.
 - Si "proximo_partido_del_ganador" dice "todavía no confirmado", no menciones rival futuro.
 - Prohibido: "en un emocionante", "sin lugar a dudas", "cabe destacar", "en conclusión", "demostró su", "un partido para el recuerdo", "en resumen", "no cabe duda", "épico", "electrizante", "brillante actuación", "dejó en claro", "la jornada", "cotejo", "en la pista", "escalafón", "certamen".
@@ -103,7 +103,7 @@ async function modelosDisponibles() {
       .filter((m) => (m.supportedGenerationMethods || []).includes('generateContent'))
       .map((m) => m.name.replace(/^models\//, ''));
     log('Modelos disponibles:', nombres.join(', '));
-    const flash = nombres.filter((n) => /flash/.test(n) && !/(image|tts|audio|live|thinking|exp|embedding|vision)/.test(n))
+    const flash = nombres.filter((n) => /flash/.test(n) && !/(lite|omni|image|tts|audio|live|thinking|exp|embedding|vision|transcribe)/.test(n))
       .sort((a, b) => (/lite/.test(a) - /lite/.test(b)) || (/preview/.test(a) - /preview/.test(b)) || b.localeCompare(a, undefined, { numeric: true }));
     MODELOS = [...new Set([...N.modelos.filter((m) => nombres.includes(m)), ...flash])].slice(0, 4);
   } catch (e) { log('No se pudo listar modelos:', e.message); MODELOS = N.modelos; }
@@ -157,7 +157,7 @@ function validar(nota, datos) {
   }
   if (!texto.includes(datos.marcador_desde_el_ganador.split(' ')[0])) problemas.push('no incluye el marcador');
   if (/[“”"«»]/.test(nota.cuerpo.join(' ')) && /(dijo|declar|afirm|expres|señal)/i.test(texto)) problemas.push('parece incluir citas');
-  const prohibidas = ['emocionante', 'sin lugar a dudas', 'cabe destacar', 'en conclusión', 'para el recuerdo', 'épico', 'electrizante', 'la jornada', 'cotejo', 'escalafón', 'certamen'];
+  const prohibidas = ['emocionante', 'sin lugar a dudas', 'cabe destacar', 'en conclusión', 'para el recuerdo', 'épico', 'electrizante', 'la jornada', 'cotejo', 'escalafón', 'certamen', 'quiebr', 'quebr', 'break', 'favorito del torneo', 'cabeza de serie', 'preclasificad', 'de su carrera', 'saque', 'aces'];
   for (const f of prohibidas) if (texto.toLowerCase().includes(f)) problemas.push(`frase prohibida: ${f}`);
   return problemas;
 }
