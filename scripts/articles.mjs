@@ -87,7 +87,7 @@ async function modelosDisponibles() {
     log('Modelos disponibles:', nombres.join(', '));
     const flash = nombres.filter((n) => /flash/.test(n) && !/(image|tts|audio|live|thinking|exp|embedding|vision)/.test(n))
       .sort((a, b) => (/lite/.test(a) - /lite/.test(b)) || (/preview/.test(a) - /preview/.test(b)) || b.localeCompare(a, undefined, { numeric: true }));
-    MODELOS = [...new Set([...N.modelos.filter((m) => nombres.includes(m)), ...flash])].slice(0, 3);
+    MODELOS = [...new Set([...N.modelos.filter((m) => nombres.includes(m)), ...flash])].slice(0, 4);
   } catch (e) { log('No se pudo listar modelos:', e.message); MODELOS = N.modelos; }
   log('Modelos a usar:', MODELOS.join(', '));
   return MODELOS;
@@ -108,6 +108,7 @@ async function gemini(prompt) {
           })
         });
         if (r.status === 429) { ultimoError = new Error('429 límite de Gemini'); await new Promise((s) => setTimeout(s, 20000)); continue; }
+        if ([400, 403, 404].includes(r.status)) { ultimoError = new Error(`Gemini ${modelo} HTTP ${r.status}: ${(await r.text()).replace(/\s+/g, ' ').slice(0, 200)}`); log(ultimoError.message); MODELOS = MODELOS.filter((x) => x !== modelo); break; }
         if (!r.ok) throw new Error(`Gemini ${modelo} HTTP ${r.status}: ${(await r.text()).replace(/\s+/g, ' ').slice(0, 300)}`);
         const j = await r.json();
         const texto = j.candidates?.[0]?.content?.parts?.map((x) => x.text).join('') || '';
