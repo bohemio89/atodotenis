@@ -1,7 +1,7 @@
 {
  "213021": {
   "id": 213021,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Hong Kong",
   "ronda": "WTA Hong Kong - 1/8-finals",
   "rondaCod": "R16",
@@ -10,23 +10,51 @@
   "genero": "women",
   "horario": "2026-11-04T14:00:00Z",
   "j1": {
-   "id": 17527,
-   "nombre": "Harrison/ Hewitt",
+   "id": 12022,
+   "nombre": "Hao-Ching Chan / Kato",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 12022,
-   "nombre": "Chan H-/Kato",
+   "id": 17527,
+   "nombre": "Dalayna Hewitt / Harrison",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:13:07.051Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "8694",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     6,
+     12
+    ],
+    [
+     6,
+     3,
+     10
+    ]
+   ],
+   "sets": [
+    2,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "213024": {
   "id": 213024,
@@ -404,7 +432,7 @@
  },
  "213086": {
   "id": 213086,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Chennai",
   "ronda": "WTA Chennai - 1/8-finals",
   "rondaCod": "R16",
@@ -413,23 +441,49 @@
   "genero": "women",
   "horario": "2026-11-04T14:20:00Z",
   "j1": {
-   "id": 44011,
-   "nombre": "Adkar/ Bhosale",
+   "id": 5359,
+   "nombre": "Amelia Rajecki / Madeleine Brooks",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 5359,
-   "nombre": "Brooks/ Rajecki",
+   "id": 44011,
+   "nombre": "Adkar / Bhosale",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:13:06.837Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "7826",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     4
+    ],
+    [
+     6,
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "213087": {
   "id": 213087,
@@ -1210,7 +1264,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-04T20:10:09.867Z",
+  "visto": "2026-11-04T20:13:05.575Z",
   "importante": false,
   "tier": null,
   "torneoId": "2499",
@@ -1222,7 +1276,7 @@
      0
     ],
     [
-     0
+     1
     ]
    ],
    "sets": [
@@ -1230,10 +1284,10 @@
     0
    ],
    "puntos": [
-    "40",
-    "40"
+    "30",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -1472,7 +1526,7 @@
   "score": {
    "games": [
     [
-     2
+     3
     ],
     [
      5
@@ -1483,14 +1537,14 @@
     0
    ],
    "puntos": [
-    "40",
-    "15"
+    "0",
+    "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:10:09.867Z",
+  "visto": "2026-11-04T20:13:05.575Z",
   "motivo": null,
   "importante": false
  },
@@ -2729,7 +2783,7 @@
   "score": {
    "games": [
     [
-     2
+     3
     ],
     [
      2
@@ -2740,14 +2794,14 @@
     0
    ],
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:10:09.867Z",
+  "visto": "2026-11-04T20:13:05.575Z",
   "motivo": null,
   "importante": false
  },
@@ -3641,7 +3695,7 @@
     ],
     [
      2,
-     2
+     3
     ]
    ],
    "sets": [
@@ -3652,11 +3706,11 @@
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:10:09.867Z",
+  "visto": "2026-11-04T20:13:05.575Z",
   "motivo": null,
   "importante": false
  },
@@ -3976,7 +4030,7 @@
    "games": [
     [
      5,
-     0
+     1
     ],
     [
      7,
@@ -3988,14 +4042,14 @@
     1
    ],
    "puntos": [
-    "40",
+    "15",
     "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:10:09.867Z",
+  "visto": "2026-11-04T20:13:05.575Z",
   "motivo": null,
   "importante": false
  },
@@ -4508,7 +4562,7 @@
    "pais": "uru",
    "ranking": 1063
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "games": [
@@ -4626,7 +4680,7 @@
  },
  "215136": {
   "id": 215136,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
   "ronda": "ATP Paris - 1/8-finals",
   "rondaCod": "R16",
@@ -4636,22 +4690,48 @@
   "horario": "2026-11-04T16:15:00Z",
   "j1": {
    "id": 1340,
-   "nombre": "Bolelli/ Vavassori",
-   "pais": null,
+   "nombre": "Andrea Vavassori / Simone Bolelli",
+   "pais": "ita",
    "ranking": null
   },
   "j2": {
    "id": 31278,
-   "nombre": "Cash/ Nakashima",
+   "nombre": "Nakashima / Robert Cash",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.011Z",
+  "visto": "2026-11-04T20:13:06.095Z",
   "importante": false,
-  "tier": "atp_1000"
+  "tier": "atp_1000",
+  "torneoId": "1726",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1,
+     6
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "sets": [
+    0,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "215137": {
   "id": 215137,
@@ -5198,7 +5278,7 @@
  },
  "215179": {
   "id": 215179,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
   "ronda": "ATP Paris - 1/16-finals",
   "rondaCod": "R32",
@@ -5208,22 +5288,48 @@
   "horario": "2026-11-04T14:45:00Z",
   "j1": {
    "id": 1564,
-   "nombre": "Martos Gornes/ Walkow",
+   "nombre": "Sergio Martos Gornes / Walkow",
    "pais": null,
    "ranking": null
   },
   "j2": {
    "id": 42956,
-   "nombre": "Doumbia/ Pel",
+   "nombre": "Pel / Sadio Doumbia",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.011Z",
+  "visto": "2026-11-04T20:13:06.465Z",
   "importante": false,
-  "tier": "atp_1000"
+  "tier": "atp_1000",
+  "torneoId": "1726",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     4
+    ],
+    [
+     6,
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "215180": {
   "id": 215180,
@@ -5287,7 +5393,7 @@
     [
      7,
      3,
-     3
+     4
     ],
     [
      6,
@@ -5300,14 +5406,14 @@
     1
    ],
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:10:09.867Z",
+  "visto": "2026-11-04T20:13:05.575Z",
   "motivo": null,
   "importante": false
  },
@@ -5487,7 +5593,7 @@
   "score": {
    "games": [
     [
-     4
+     5
     ],
     [
      2
@@ -5498,14 +5604,14 @@
     0
    ],
    "puntos": [
-    "40",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:10:09.867Z",
+  "visto": "2026-11-04T20:13:05.575Z",
   "motivo": null,
   "importante": false
  },
@@ -5540,7 +5646,7 @@
   "score": {
    "games": [
     [
-     4
+     5
     ],
     [
      5
@@ -5551,14 +5657,14 @@
     0
    ],
    "puntos": [
-    "40",
-    "30"
+    "0",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:10:09.867Z",
+  "visto": "2026-11-04T20:13:05.575Z",
   "motivo": null,
   "importante": false
  },
@@ -6759,23 +6865,51 @@
   "genero": "women",
   "horario": "2026-11-04T06:10:00Z",
   "j1": {
-   "id": 758,
-   "nombre": "M. Stojsavljevic",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 505,
    "nombre": "Sofia Kenin",
    "pais": "usa",
    "ranking": 187
   },
+  "j2": {
+   "id": 758,
+   "nombre": "Mika Stojsavljevic",
+   "pais": "gbr",
+   "ranking": 411
+  },
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:13:05.834Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "2241",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     6,
+     4
+    ],
+    [
+     6,
+     4,
+     6
+    ]
+   ],
+   "sets": [
+    1,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "215438": {
   "id": 215438,
@@ -6895,7 +7029,7 @@
  },
  "215461": {
   "id": 215461,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Chennai",
   "ronda": "WTA Chennai - 1/8-finals",
   "rondaCod": "R16",
@@ -6904,23 +7038,49 @@
   "genero": "women",
   "horario": "2026-11-04T14:30:00Z",
   "j1": {
-   "id": 44014,
-   "nombre": "Burrage/ Montgomery",
+   "id": 12109,
+   "nombre": "Falei / Iatcenko",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 12109,
-   "nombre": "Falei/ Iatcenko",
+   "id": 44014,
+   "nombre": "Burrage / Montgomery",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:13:06.667Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "7826",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     2
+    ],
+    [
+     6,
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "215465": {
   "id": 215465,
