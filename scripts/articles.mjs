@@ -85,7 +85,7 @@ REGLAS ESTRICTAS (no negociables):
 - Variá la forma de nombrar a los jugadores (apellido, nacionalidad, "el número 9 del mundo"), sin repetir la misma fórmula.
 
 FORMATO:
-- Título: corto y con la noticia (máximo 75 caracteres), sin la ronda si no es una instancia decisiva, sin signos de exclamación. Ejemplos de tono: "Hijikata da el golpe y elimina a Djokovic en París", "Alcaraz avanza en París sin pasar sobresaltos".
+- Título: corto y con la noticia (máximo 75 caracteres), sin la ronda si no es una instancia decisiva, sin signos de exclamación. Escribilo con verbos variados y concretos (no uses siempre "da el golpe", "elimina" o "avanza"); no repitas fórmulas de otras notas.
 - Bajada: una sola oración que agregue algo que el título no dice.
 - Cuerpo: 3 o 4 párrafos cortos (2 o 3 oraciones). El primero responde qué pasó y por qué importa.
 
