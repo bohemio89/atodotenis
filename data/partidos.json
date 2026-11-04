@@ -271,23 +271,49 @@
   "genero": "women",
   "horario": "2026-11-04T06:10:00Z",
   "j1": {
-   "id": 715,
-   "nombre": "Antonia Ruzic",
-   "pais": "cro",
-   "ranking": 81
-  },
-  "j2": {
    "id": 148,
    "nombre": "Alina Charaeva",
    "pais": "arm",
    "ranking": 82
   },
+  "j2": {
+   "id": 715,
+   "nombre": "Antonia Ruzic",
+   "pais": "cro",
+   "ranking": 81
+  },
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:10:11.308Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "2241",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     4
+    ],
+    [
+     7,
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "213074": {
   "id": 213074,
@@ -1184,7 +1210,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-04T20:09:27.055Z",
+  "visto": "2026-11-04T20:10:09.867Z",
   "importante": false,
   "tier": null,
   "torneoId": "2499",
@@ -1204,7 +1230,7 @@
     0
    ],
    "puntos": [
-    "30",
+    "40",
     "40"
    ],
    "saca": 1
@@ -1457,14 +1483,14 @@
     0
    ],
    "puntos": [
-    "30",
+    "40",
     "15"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:09:27.055Z",
+  "visto": "2026-11-04T20:10:09.867Z",
   "motivo": null,
   "importante": false
  },
@@ -2286,23 +2312,49 @@
   "genero": "women",
   "horario": "2026-11-04T08:45:00Z",
   "j1": {
-   "id": 973,
-   "nombre": "Claire Liu",
-   "pais": "usa",
-   "ranking": 102
-  },
-  "j2": {
    "id": 644,
    "nombre": "Katie Boulter",
    "pais": "gbr",
    "ranking": 49
   },
+  "j2": {
+   "id": 973,
+   "nombre": "Claire Liu",
+   "pais": "usa",
+   "ranking": 102
+  },
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:10:10.740Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "2241",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5,
+     4
+    ],
+    [
+     7,
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "214266": {
   "id": 214266,
@@ -2688,14 +2740,14 @@
     0
    ],
    "puntos": [
-    "0",
+    "15",
     "0"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:09:27.055Z",
+  "visto": "2026-11-04T20:10:09.867Z",
   "motivo": null,
   "importante": false
  },
@@ -2979,15 +3031,43 @@
   "j2": {
    "id": 548,
    "nombre": "Aliaksandra Sasnovich",
-   "pais": "blr",
+   "pais": null,
    "ranking": 101
   },
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:10:11.045Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "2241",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1,
+     7,
+     6
+    ],
+    [
+     6,
+     5,
+     7
+    ]
+   ],
+   "sets": [
+    1,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "214889": {
   "id": 214889,
@@ -3129,9 +3209,37 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:10:10.265Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     3,
+     7
+    ],
+    [
+     4,
+     6,
+     5
+    ]
+   ],
+   "sets": [
+    2,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "214913": {
   "id": 214913,
@@ -3187,9 +3295,35 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.011Z",
+  "visto": "2026-11-04T20:10:10.106Z",
   "importante": false,
-  "tier": "atp_1000"
+  "tier": "atp_1000",
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     1
+    ],
+    [
+     6,
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "214921": {
   "id": 214921,
@@ -3314,23 +3448,49 @@
   "genero": "women",
   "horario": "2026-11-04T09:40:00Z",
   "j1": {
-   "id": 728,
-   "nombre": "Oksana Selekhmeteva",
-   "pais": "esp",
-   "ranking": 122
-  },
-  "j2": {
    "id": 251,
    "nombre": "Polina Kudermetova",
    "pais": "uzb",
    "ranking": 93
   },
+  "j2": {
+   "id": 728,
+   "nombre": "Oksana Selekhmeteva",
+   "pais": "esp",
+   "ranking": 122
+  },
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:10:10.607Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     6
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "sets": [
+    2,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "214924": {
   "id": 214924,
@@ -3481,7 +3641,7 @@
     ],
     [
      2,
-     1
+     2
     ]
    ],
    "sets": [
@@ -3489,14 +3649,14 @@
     0
    ],
    "puntos": [
-    "40",
-    "AD"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:09:27.055Z",
+  "visto": "2026-11-04T20:10:09.867Z",
   "motivo": null,
   "importante": false
  },
@@ -3828,14 +3988,14 @@
     1
    ],
    "puntos": [
-    "30",
+    "40",
     "15"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:09:27.055Z",
+  "visto": "2026-11-04T20:10:09.867Z",
   "motivo": null,
   "importante": false
  },
@@ -4366,14 +4526,14 @@
     0
    ],
    "puntos": [
-    "0",
+    "15",
     "0"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:09:27.055Z",
+  "visto": "2026-11-04T20:10:09.867Z",
   "motivo": null,
   "importante": false
  },
@@ -5140,14 +5300,14 @@
     1
    ],
    "puntos": [
-    "15",
+    "30",
     "30"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:09:27.055Z",
+  "visto": "2026-11-04T20:10:09.867Z",
   "motivo": null,
   "importante": false
  },
@@ -5339,13 +5499,13 @@
    ],
    "puntos": [
     "40",
-    "15"
+    "30"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:09:27.055Z",
+  "visto": "2026-11-04T20:10:09.867Z",
   "motivo": null,
   "importante": false
  },
@@ -5391,14 +5551,14 @@
     0
    ],
    "puntos": [
-    "30",
+    "40",
     "30"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:09:27.055Z",
+  "visto": "2026-11-04T20:10:09.867Z",
   "motivo": null,
   "importante": false
  },
