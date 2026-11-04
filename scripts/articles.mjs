@@ -73,9 +73,29 @@ REGLAS ESTRICTAS:
 
 Devolvé SOLO JSON con esta forma: {"titulo": "...", "bajada": "...", "cuerpo": ["párrafo", "..."], "etiquetas": ["...", "..."]}`;
 
+// Elige modelos disponibles: primero los de config.json que existan, después cualquier "flash" de texto
+let MODELOS = null;
+async function modelosDisponibles() {
+  if (MODELOS) return MODELOS;
+  try {
+    const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=200', { headers: { 'x-goog-api-key': KEY } });
+    const j = await r.json();
+    if (!r.ok) throw new Error(JSON.stringify(j).slice(0, 300));
+    const nombres = (j.models || [])
+      .filter((m) => (m.supportedGenerationMethods || []).includes('generateContent'))
+      .map((m) => m.name.replace(/^models\//, ''));
+    log('Modelos disponibles:', nombres.join(', '));
+    const flash = nombres.filter((n) => /flash/.test(n) && !/(image|tts|audio|live|thinking|exp|embedding|vision)/.test(n))
+      .sort((a, b) => (/lite/.test(a) - /lite/.test(b)) || (/preview/.test(a) - /preview/.test(b)) || b.localeCompare(a, undefined, { numeric: true }));
+    MODELOS = [...new Set([...N.modelos.filter((m) => nombres.includes(m)), ...flash])].slice(0, 3);
+  } catch (e) { log('No se pudo listar modelos:', e.message); MODELOS = N.modelos; }
+  log('Modelos a usar:', MODELOS.join(', '));
+  return MODELOS;
+}
+
 async function gemini(prompt) {
   let ultimoError;
-  for (const modelo of N.modelos) {
+  for (const modelo of await modelosDisponibles()) {
     for (let intento = 1; intento <= 2; intento++) {
       try {
         const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
@@ -88,7 +108,7 @@ async function gemini(prompt) {
           })
         });
         if (r.status === 429) { ultimoError = new Error('429 límite de Gemini'); await new Promise((s) => setTimeout(s, 20000)); continue; }
-        if (!r.ok) throw new Error(`Gemini ${modelo} HTTP ${r.status}: ${(await r.text()).slice(0, 200)}`);
+        if (!r.ok) throw new Error(`Gemini ${modelo} HTTP ${r.status}: ${(await r.text()).replace(/\s+/g, ' ').slice(0, 300)}`);
         const j = await r.json();
         const texto = j.candidates?.[0]?.content?.parts?.map((x) => x.text).join('') || '';
         return { modelo, nota: JSON.parse(texto.replace(/^```json\s*|```\s*$/g, '')) };
