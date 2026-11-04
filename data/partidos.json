@@ -58,7 +58,7 @@
  },
  "213024": {
   "id": 213024,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Hong Kong",
   "ronda": "WTA Hong Kong - 1/8-finals",
   "rondaCod": "R16",
@@ -67,27 +67,53 @@
   "genero": "women",
   "horario": "2026-11-04T11:55:00Z",
   "j1": {
-   "id": 43995,
-   "nombre": "Gorgodze/ Timofeeva",
+   "id": 6068,
+   "nombre": "Cho / Cho I-",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 6068,
-   "nombre": "Cho I-/Cho",
+   "id": 43995,
+   "nombre": "Gorgodze / Timofeeva",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:20:26.432Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "8694",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     7,
+     7
+    ],
+    [
+     6,
+     6
+    ]
+   ],
+   "sets": [
+    2,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "213026": {
   "id": 213026,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Hong Kong",
   "ronda": "WTA Hong Kong - 1/8-finals",
   "rondaCod": "R16",
@@ -97,22 +123,50 @@
   "horario": "2026-11-04T13:25:00Z",
   "j1": {
    "id": 41491,
-   "nombre": "Lee/ Wu",
+   "nombre": "Lee / Wu",
    "pais": null,
    "ranking": null
   },
   "j2": {
    "id": 43997,
-   "nombre": "Williams/ Xu",
+   "nombre": "Williams / Xu",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:20:25.267Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "8694",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     3,
+     4
+    ],
+    [
+     4,
+     6,
+     10
+    ]
+   ],
+   "sets": [
+    1,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "213029": {
   "id": 213029,
@@ -345,7 +399,7 @@
  },
  "213074": {
   "id": 213074,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
   "ronda": "ATP Paris - 1/16-finals",
   "rondaCod": "R32",
@@ -354,23 +408,49 @@
   "genero": "men",
   "horario": "2026-11-04T11:25:00Z",
   "j1": {
-   "id": 1384,
-   "nombre": "Andreozzi/ Guinard",
+   "id": 1337,
+   "nombre": "Adam Pavlasek / Patrik Rikl",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 1337,
-   "nombre": "Pavlasek/ Rikl",
+   "id": 1384,
+   "nombre": "Guido Andreozzi / Manuel Guinard",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.011Z",
+  "visto": "2026-11-04T20:20:26.987Z",
   "importante": false,
-  "tier": "atp_1000"
+  "tier": "atp_1000",
+  "torneoId": "1726",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     7,
+     7
+    ],
+    [
+     6,
+     6
+    ]
+   ],
+   "sets": [
+    2,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "213080": {
   "id": 213080,
@@ -487,7 +567,7 @@
  },
  "213087": {
   "id": 213087,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Chennai",
   "ronda": "WTA Chennai - 1/8-finals",
   "rondaCod": "R16",
@@ -496,23 +576,49 @@
   "genero": "women",
   "horario": "2026-11-04T11:40:00Z",
   "j1": {
-   "id": 36316,
-   "nombre": "da Silva Fick/ Kulambayeva",
+   "id": 30722,
+   "nombre": "Kuwata / Raina",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 30722,
-   "nombre": "Kuwata/ Raina",
+   "id": 44012,
+   "nombre": "da Silva Fick / Kulambayeva",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:20:26.658Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "7826",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1,
+     1
+    ],
+    [
+     6,
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "213088": {
   "id": 213088,
@@ -661,7 +767,7 @@
  },
  "213093": {
   "id": 213093,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Chennai",
   "ronda": "WTA Chennai - 1/8-finals",
   "rondaCod": "R16",
@@ -671,22 +777,48 @@
   "horario": "2026-11-04T12:50:00Z",
   "j1": {
    "id": 44017,
-   "nombre": "Karamoko/ Waltert",
+   "nombre": "Karamoko / Waltert",
    "pais": null,
    "ranking": null
   },
   "j2": {
    "id": 44019,
-   "nombre": "Ramesh/ Vinayagamurthy",
+   "nombre": "Ramesh / Vinayagamurthy",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.242Z",
+  "visto": "2026-11-04T20:20:26.049Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "7826",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     6
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "sets": [
+    2,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "213094": {
   "id": 213094,
@@ -1264,7 +1396,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-04T20:13:05.575Z",
+  "visto": "2026-11-04T20:20:24.890Z",
   "importante": false,
   "tier": null,
   "torneoId": "2499",
@@ -1273,10 +1405,10 @@
   "score": {
    "games": [
     [
-     0
+     1
     ],
     [
-     1
+     2
     ]
    ],
    "sets": [
@@ -1284,7 +1416,7 @@
     0
    ],
    "puntos": [
-    "30",
+    "0",
     "0"
    ],
    "saca": 2
@@ -1526,25 +1658,27 @@
   "score": {
    "games": [
     [
-     3
+     3,
+     0
     ],
     [
-     5
+     6,
+     0
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "0",
-    "30"
+    "15",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:13:05.575Z",
+  "visto": "2026-11-04T20:20:24.890Z",
   "motivo": null,
   "importante": false
  },
@@ -2436,7 +2570,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-04T20:08:28.677Z",
-  "importante": false,
+  "importante": true,
   "tier": "atp_1000",
   "torneoId": "1725",
   "cubierto": true,
@@ -2491,7 +2625,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-04T20:09:27.487Z",
-  "importante": false,
+  "importante": true,
   "tier": "atp_1000",
   "torneoId": "1725",
   "cubierto": true,
@@ -2674,7 +2808,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-04T20:00:00Z",
+  "horario": "2026-11-04T20:15:00Z",
   "j1": {
    "id": 27,
    "nombre": "Arthur Fils",
@@ -2688,11 +2822,35 @@
    "ranking": 69
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.011Z",
+  "visto": "2026-11-04T20:20:24.890Z",
   "importante": false,
-  "tier": "atp_1000"
+  "tier": "atp_1000",
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "214376": {
   "id": 214376,
@@ -2794,14 +2952,14 @@
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "15"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:13:05.575Z",
+  "visto": "2026-11-04T20:20:24.890Z",
   "motivo": null,
   "importante": false
  },
@@ -3432,7 +3590,7 @@
   },
   "confirmado": true,
   "ganador": 1,
-  "importante": false
+  "importante": true
  },
  "214922": {
   "id": 214922,
@@ -3460,7 +3618,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-04T20:09:28.343Z",
-  "importante": false,
+  "importante": true,
   "tier": "atp_1000",
   "torneoId": "1725",
   "cubierto": true,
@@ -3663,9 +3821,9 @@
   "id": 214927,
   "tour": "challenger",
   "tier": null,
-  "torneo": "Bratislava 2",
+  "torneo": "Bratislava 2, Slovakia",
   "torneoId": "3196",
-  "ronda": "Bratislava 2 - 1/8-finals",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "cubierto": true,
@@ -3691,7 +3849,7 @@
    "games": [
     [
      6,
-     0
+     1
     ],
     [
      2,
@@ -3703,14 +3861,14 @@
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:13:05.575Z",
+  "visto": "2026-11-04T20:20:24.890Z",
   "motivo": null,
   "importante": false
  },
@@ -4002,9 +4160,9 @@
   "id": 214980,
   "tour": "challenger",
   "tier": null,
-  "torneo": "Bratislava 2",
+  "torneo": "Bratislava 2, Slovakia",
   "torneoId": "3196",
-  "ronda": "Bratislava 2 - 1/8-finals",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "cubierto": true,
@@ -4030,11 +4188,11 @@
    "games": [
     [
      5,
-     1
+     2
     ],
     [
      7,
-     3
+     4
     ]
    ],
    "sets": [
@@ -4042,14 +4200,14 @@
     1
    ],
    "puntos": [
-    "15",
+    "0",
     "15"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:13:05.575Z",
+  "visto": "2026-11-04T20:20:24.890Z",
   "motivo": null,
   "importante": false
  },
@@ -5393,12 +5551,12 @@
     [
      7,
      3,
-     4
+     5
     ],
     [
      6,
      6,
-     3
+     4
     ]
    ],
    "sets": [
@@ -5407,13 +5565,13 @@
    ],
    "puntos": [
     "0",
-    "0"
+    "30"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:13:05.575Z",
+  "visto": "2026-11-04T20:20:24.889Z",
   "motivo": null,
   "importante": false
  },
@@ -5536,39 +5694,63 @@
  "215193": {
   "id": 215193,
   "tour": "challenger",
-  "torneo": "Costa do Sauipe",
-  "ronda": "Costa do Sauipe - 1/8-finals",
+  "torneo": "Costa do Sauipe, Brazil",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-04T20:00:00Z",
+  "horario": "2026-11-04T20:15:00Z",
   "j1": {
-   "id": 424,
-   "nombre": "Lautaro Midon",
-   "pais": "arg",
-   "ranking": 185
-  },
-  "j2": {
    "id": 68,
    "nombre": "Tomas Vera Barrios",
    "pais": "chi",
    "ranking": 154
   },
+  "j2": {
+   "id": 424,
+   "nombre": "Lautaro Midon",
+   "pais": "arg",
+   "ranking": 185
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.484Z",
+  "visto": "2026-11-04T20:20:24.890Z",
   "importante": false,
-  "tier": null
+  "tier": null,
+  "torneoId": "13361",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "AD"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215221": {
   "id": 215221,
   "tour": "challenger",
   "tier": null,
-  "torneo": "Charlottesville",
+  "torneo": "Charlottesville, USA",
   "torneoId": "2497",
-  "ronda": "Charlottesville - 1/8-finals",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "cubierto": true,
@@ -5596,7 +5778,7 @@
      5
     ],
     [
-     2
+     4
     ]
    ],
    "sets": [
@@ -5605,13 +5787,13 @@
    ],
    "puntos": [
     "0",
-    "0"
+    "15"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:13:05.575Z",
+  "visto": "2026-11-04T20:20:24.890Z",
   "motivo": null,
   "importante": false
  },
@@ -5649,7 +5831,7 @@
      5
     ],
     [
-     5
+     6
     ]
    ],
    "sets": [
@@ -5658,13 +5840,13 @@
    ],
    "puntos": [
     "0",
-    "15"
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-04T20:13:05.575Z",
+  "visto": "2026-11-04T20:20:24.890Z",
   "motivo": null,
   "importante": false
  },
@@ -6913,7 +7095,7 @@
  },
  "215438": {
   "id": 215438,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
   "ronda": "ATP Paris - 1/16-finals",
   "rondaCod": "R32",
@@ -6922,23 +7104,51 @@
   "genero": "men",
   "horario": "2026-11-04T13:15:00Z",
   "j1": {
-   "id": 36826,
-   "nombre": "Miedler/ Oberleitner",
+   "id": 1469,
+   "nombre": "Arthur Reymond / Diego Augusto Barreto Sanchez",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 1469,
-   "nombre": "Reymond/ Sanchez",
+   "id": 36826,
+   "nombre": "Miedler / Oberleitner",
    "pais": null,
-   "ranking": null
+   "ranking": 219
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.011Z",
+  "visto": "2026-11-04T20:20:25.762Z",
   "importante": false,
-  "tier": "atp_1000"
+  "tier": "atp_1000",
+  "torneoId": "1726",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     7,
+     2,
+     3
+    ],
+    [
+     5,
+     6,
+     10
+    ]
+   ],
+   "sets": [
+    1,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "215439": {
   "id": 215439,
