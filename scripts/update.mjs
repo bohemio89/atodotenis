@@ -91,16 +91,19 @@ function desdeFixture(f) {
 function esImportante(m) {
   if (!m || m.clasificacion) return false;
   const torneo = (m.torneo || '').toLowerCase();
-  const equipos = torneo.includes('davis') || torneo.includes('billie jean') || ['davis_cup', 'bjk_cup'].includes(m.tier);
-  const arg = [m.j1, m.j2].some((j) => j?.pais === CONFIG.notas.paisDestacado);
   const base = tourBase(m.tour);
-  const nivelTour = ['atp', 'wta'].includes(base);
-  if (equipos) return !m.dobles || m.rondaCod === 'F';
-  if (arg && (nivelTour || base === 'challenger')) return true;
-  if (m.dobles) return nivelTour && m.rondaCod === 'F';
-  if (nivelTour && ['F', 'SF'].includes(m.rondaCod)) return true;
-  if (nivelTour && ['grand_slam', 'atp_1000', 'wta_1000'].includes(m.tier) && ['QF'].includes(m.rondaCod)) return true;
-  if (base === 'challenger' && m.rondaCod === 'F') return true;
+  const r = m.rondaCod;
+  // Copa Davis y Billie Jean King Cup: todos los singles y las finales de dobles
+  if (torneo.includes('davis') || torneo.includes('billie jean') || ['davis_cup', 'bjk_cup'].includes(m.tier)) return !m.dobles || r === 'F';
+  // Finales de temporada (ATP Finals / WTA Finals): todos los partidos de singles
+  if (torneo.includes('finals') && !m.dobles) return true;
+  if (m.dobles) return ['atp', 'wta'].includes(base) && r === 'F';
+  const t = m.tier || '';
+  if (['grand_slam'].includes(t)) return ['R16', 'QF', 'SF', 'F'].includes(r);
+  if (['atp_1000', 'wta_1000'].includes(t)) return ['QF', 'SF', 'F'].includes(r);
+  if (['atp_500', 'wta_500'].includes(t)) return ['SF', 'F'].includes(r);
+  if (['atp', 'wta'].includes(base)) return r === 'F';
+  if (base === 'challenger') return r === 'F';
   return false;
 }
 
@@ -181,7 +184,12 @@ async function main() {
   }
   log(`Confirmados ${confirmados} (cupo ${cupo}, pendientes ${pendientes.length})`);
 
-  // 5) Limpiar historial viejo y guardar
+  // 5) Completar la categoría (tier) de partidos del calendario con la de su torneo
+  const tierDe = {};
+  for (const p of Object.values(partidos)) if (p.tier && p.torneo) tierDe[`${tourBase(p.tour)}|${p.torneo}`] = p.tier;
+  for (const p of Object.values(partidos)) if (!p.tier) p.tier = tierDe[`${tourBase(p.tour)}|${p.torneo}`] || null;
+
+  // 6) Limpiar historial viejo y guardar
   const limite = Date.now() - C.diasDeHistorial * 86400e3;
   for (const [id, p] of Object.entries(partidos)) {
     const t = new Date(p.horario || p.visto).getTime();

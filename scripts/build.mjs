@@ -36,7 +36,7 @@ function imagenNota(n) {
 }
 
 function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
-  const t = titulo ? `${titulo} | ${S.nombre}` : `${S.nombre} | Tenis desde Argentina`;
+  const t = titulo ? `${titulo} | ${S.nombre}` : `${S.nombre} | Todo el tenis`;
   const actualizado = estado.ultimaCorrida ? `Actualizado ${fechaArg(estado.ultimaCorrida, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })} (hora Argentina)` : '';
   const item = (href, txt, clave) => `<a href="${href}"${activo === clave ? ' class="activo" aria-current="page"' : ''}>${txt}</a>`;
   return `<!doctype html>
@@ -68,14 +68,14 @@ ${logo}
 <div class="cab-lado der"><a class="pill" href="/noticias">Noticias</a></div>
 </div></header>
 <nav class="menu" aria-label="Principal"><div class="contenedor">
-${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/ranking', 'Ranking', 'ranking')}${item('/argentinos', 'Argentinos', 'argentinos')}
+${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/ranking', 'Ranking', 'ranking')}
 <span class="actualizado">${esc(actualizado)}</span>
 </div></nav>
 <main id="contenido" class="contenedor">
 ${cuerpo}
 </main>
 <footer class="pie"><div class="contenedor">
-<div>${logo}<p style="color:#C9D1D9;font-size:14px;max-width:380px">Tenis desde Argentina desde 2007. Resultados, ranking y noticias del circuito.</p></div>
+<div>${logo}<p style="color:#C9D1D9;font-size:14px;max-width:380px">En la red desde 2007. Resultados, ranking y noticias de todo el circuito.</p></div>
 <nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/ranking|Ranking', '/argentinos|Argentinos', '/acerca|Acerca del sitio'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)} · Datos de partidos: Live Tennis API · Las notas se elaboran con asistencia de inteligencia artificial a partir de resultados oficiales.</div></footer>
 <script>
@@ -114,7 +114,8 @@ function porTorneo(lista, max = 999) {
     if (!grupos.has(k)) grupos.set(k, []);
     grupos.get(k).push(p);
   }
-  const orden = (ps) => { const p = ps[0]; return (['atp', 'wta'].includes(tourBase(p.tour)) ? 0 : 1) * 10 + (ps.some((x) => [x.j1, x.j2].some((j) => j?.pais === ARG)) ? 0 : 1); };
+  const NIVEL = { grand_slam: 0, atp_finals: 0, wta_finals: 0, davis_cup: 1, bjk_cup: 1, atp_1000: 2, wta_1000: 2, atp_500: 3, wta_500: 3, atp_250: 4, wta_250: 4 };
+  const orden = (ps) => { const p = ps[0]; const n = NIVEL[p.tier] ?? (['atp', 'wta'].includes(tourBase(p.tour)) ? 5 : 8); return n * 10 + (ps.every((x) => x.dobles) ? 5 : 0); };
   let total = 0;
   return [...grupos.values()].sort((a, b) => orden(a) - orden(b)).map((ps) => {
     if (total >= max) return '';
@@ -151,17 +152,17 @@ function panelRanking(id, max) {
 
 // ---------- Notas ----------
 const fechaCorta = (iso) => fechaArg(iso, { day: 'numeric', month: 'short', year: 'numeric' });
-const cardNota = (n) => `<a class="card" href="/nota/${n.slug}"><div class="img">${imagenNota(n)}<span class="etiqueta">${esc(n.argentina ? 'Argentinos' : n.categoria)}</span></div><div class="txt"><h3>${esc(n.titulo)}</h3><span class="meta">${fechaCorta(n.fecha)}</span></div></a>`;
+const cardNota = (n) => `<a class="card" href="/nota/${n.slug}"><div class="img">${imagenNota(n)}<span class="etiqueta">${esc(n.categoria)}</span></div><div class="txt"><h3>${esc(n.titulo)}</h3><span class="meta">${fechaCorta(n.fecha)}</span></div></a>`;
 
 function hero() {
-  const items = notas.slice(0, 5).map((n, i) => `<a class="tarjeta-foto" href="/nota/${n.slug}">${imagenNota(n)}<span class="etiqueta">${esc(n.argentina ? 'Argentinos' : n.categoria)}</span>${i === 0 ? `<h2>${esc(n.titulo)}</h2><p>${esc(n.bajada)}</p>` : `<h3>${esc(n.titulo)}</h3>`}</a>`);
+  const items = notas.slice(0, 5).map((n, i) => `<a class="tarjeta-foto" href="/nota/${n.slug}">${imagenNota(n)}<span class="etiqueta">${esc(n.categoria)}</span>${i === 0 ? `<h2>${esc(n.titulo)}</h2><p>${esc(n.bajada)}</p>` : `<h3>${esc(n.titulo)}</h3>`}</a>`);
   // Si todavía hay pocas notas, se completa con resultados destacados
   for (const p of terminados.filter((x) => x.importante)) {
     if (items.length >= 5) break;
     const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
     items.push(`<a class="tarjeta-foto" href="/resultados">${cancha(p.superficie)}<span class="etiqueta">${esc(nombreCategoria(p.tier, p.tour, p.torneo))}</span>${items.length === 0 ? '<h2>' : '<h3>'}${esc(apellido(g.nombre))} venció a ${esc(apellido(pe.nombre))} ${esc(marcadorTexto(p.score, p.ganador))}${items.length === 0 ? '</h2>' : '</h3>'}</a>`);
   }
-  if (items.length === 0) items.push(`<div class="tarjeta-foto">${cancha('clay')}<h2>El tenis argentino vuelve a latir</h2><p>Seguí todos los torneos nacionales e internacionales en A Todo Tenis.</p></div>`);
+  if (items.length === 0) items.push(`<div class="tarjeta-foto">${cancha('clay')}<h2>Todo el tenis, en un solo lugar</h2><p>Resultados, ranking y noticias del circuito ATP, WTA, Challenger, Copa Davis y Billie Jean King Cup.</p></div>`);
   while (items.length < 5) items.push(`<a class="tarjeta-foto" href="/resultados">${cancha(['hard', 'clay', 'grass', 'hard'][items.length % 4])}<h3>Todos los resultados del circuito</h3></a>`);
   return `<section class="hero" aria-label="Destacadas">${items.join('')}</section>`;
 }
@@ -177,8 +178,8 @@ ${notas.length ? `<div class="notas2">${notas.slice(0, 6).map(cardNota).join('')
 <section><div class="sec-tit"><h2>Torneos y resultados</h2></div>${panelResultados('home', 10)}<a class="ver-mas panel" href="/resultados" style="margin-top:8px">Ver todos los resultados →</a></section>
 <section><div class="sec-tit"><h2>Ranking A Todo Tenis</h2></div>${panelRanking('rk', 10)}<a class="ver-mas panel" href="/ranking" style="margin-top:8px">Ranking completo →</a></section>
 </div>
-<section class="sec"><div class="sec-tit"><h2>Argentinos en el circuito</h2><a href="/argentinos">Ver todo</a></div>
-<div class="panel">${porTorneo([...visibles.filter((p) => conArg(p) && p.estado === 'en_vivo'), ...terminados.filter(conArg), ...proximos.filter(conArg)].slice(0, 12)) || '<div class="vacio" style="border:0">Sin partidos de argentinos por ahora.</div>'}</div></section>
+<section class="sec"><div class="sec-tit"><h2>Próximos partidos</h2><a href="/resultados">Ver todos</a></div>
+<div class="panel">${porTorneo(proximos.filter((p) => !p.dobles), 12) || '<div class="vacio" style="border:0">No hay partidos programados por ahora.</div>'}</div></section>
 <section class="franja" aria-label="Espacios publicitarios">${[1, 2, 3, 4, 5].map(() => '<div>Tu marca acá</div>').join('')}</section>
 ` }));
 
@@ -220,7 +221,7 @@ for (const n of notas) {
   escribir(`nota/${n.slug}.html`, pagina({
     titulo: n.titulo, descripcion: n.bajada, ruta: `/nota/${n.slug}`, activo: 'noticias',
     extraHead: `<meta property="og:type" content="article"><script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`,
-    cuerpo: `<article class="nota"><span class="etiqueta">${esc(n.argentina ? 'Argentinos' : n.categoria)}</span>
+    cuerpo: `<article class="nota"><span class="etiqueta">${esc(n.categoria)}</span>
 <h1>${esc(n.titulo)}</h1><p class="bajada">${esc(n.bajada)}</p>
 <div class="firma"><span>Por ${esc(n.firma)}</span><span>·</span><time datetime="${n.fecha}">${fechaArg(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</time></div>
 <figure><div class="img">${imagenNota(n)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: ${n.imagen.enlace ? `<a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>` : esc(n.imagen.credito)}</figcaption>` : ''}</figure>

@@ -25,7 +25,12 @@ const RONDAS = {
   R32: 'Ronda de 32', R64: 'Ronda de 64', R128: 'Primera ronda', RR: 'Fase de grupos',
   Q1: 'Clasificación (1ª ronda)', Q2: 'Clasificación (2ª ronda)', Q3: 'Clasificación (ronda final)'
 };
-export const nombreRonda = (code, texto) => RONDAS[code] || (texto ? texto.replace(/^.* - /, '') : '');
+const RONDAS_EN = { '1/16-finals': 'Ronda de 32', '1/8-finals': 'Octavos de final', '1/4-finals': 'Cuartos de final', '1/2-finals': 'Semifinal', 'final': 'Final', '1/32-finals': 'Ronda de 64', '1/64-finals': 'Ronda de 128' };
+export const nombreRonda = (code, texto) => {
+  if (RONDAS[code]) return RONDAS[code];
+  const t = (texto || '').replace(/^.* - /, '').trim();
+  return RONDAS_EN[t.toLowerCase()] || t;
+};
 
 const CATEGORIAS = {
   grand_slam: 'Grand Slam', atp_1000: 'Masters 1000', atp_500: 'ATP 500', atp_250: 'ATP 250',

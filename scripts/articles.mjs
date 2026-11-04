@@ -56,12 +56,12 @@ function datosDelPartido(p) {
   };
 }
 
-const ESTILO = `Sos redactor de A Todo Tenis, un sitio argentino de tenis. Escribís en español rioplatense periodístico (tercera persona, como un diario deportivo argentino; nada de voseo en la nota).
+const ESTILO = `Sos redactor de A Todo Tenis, un sitio de tenis hecho en Argentina que cubre todo el circuito internacional. Escribís en español rioplatense periodístico (tercera persona, como un diario deportivo argentino; nada de voseo en la nota).
 
 REGLAS ESTRICTAS:
 - Usá SOLO los datos que te paso. No inventes declaraciones, citas, lesiones, clima, público, estadísticas (aces, quiebres, duración), historial entre los jugadores, edades ni récords.
 - No escribas ningún número que no esté en los datos (ni años, ni duraciones, ni porcentajes). El marcador tiene que aparecer tal cual.
-- Si el ganador o el perdedor es argentino, contalo desde la mirada argentina.
+- La cobertura es de tenis internacional: tratá a todos los jugadores por igual, sin favorecer ninguna nacionalidad.
 - Si "proximo_partido_del_ganador" dice "todavía no confirmado", no menciones rival futuro.
 - Sonar humano: oraciones de largo variado, arranque directo con el hecho, sin muletillas de IA. PROHIBIDO usar: "en un emocionante", "sin lugar a dudas", "cabe destacar", "en conclusión", "demostró su", "un partido para el recuerdo", "en resumen", "no cabe duda", "épico", "electrizante", "brillante actuación", "dejó en claro".
 - Título informativo, sin signos de exclamación, máximo 90 caracteres. Bajada de una o dos oraciones.
