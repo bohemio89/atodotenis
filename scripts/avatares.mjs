@@ -5,6 +5,7 @@ import { leerJSON, guardarJSON, log } from './lib/util.mjs';
 const API = 'https://commons.wikimedia.org/w/api.php';
 const UA = 'AToDoTenisBot/1.0 (https://atodotenis.vercel.app)';
 const LICENCIAS_OK = /^(CC BY(-SA)? \d|CC0|Public domain|PD)/i;
+const STOP = new Set(['file', 'portrait', 'tennis', 'player', 'photo', 'image']);
 const TOP = 20, MAX_POR_CORRIDA = 45, RENOVAR_DIAS = 60;
 
 const jugadores = leerJSON('data/jugadores.json', { lista: {} });
@@ -27,6 +28,10 @@ async function buscar(nombre) {
     if (!LICENCIAS_OK.test(lic) || /non-?free|fair use/i.test(lic)) continue;
     const titulo = norm(p.title);
     if (!titulo.includes(ap)) continue;                       // el apellido tiene que estar en el nombre del archivo
+    // Si el archivo empieza con el apellido de otra persona (ej. "Tauson_Mboko"), probablemente sea otro jugador
+    const primera = titulo.replace(/^file:/, '').split(/[^a-z0-9]+/)[0];
+    const tokens = norm(nombre).split(/\s+/);
+    if (/^[a-z]{4,}$/.test(primera) && !primera.includes(ap) && !tokens.includes(primera) && !STOP.has(primera)) continue;
     if (/(and|vs|with|doubles|trophy|team|signature|autograph)/i.test(titulo)) continue; // evitar fotos grupales
     if (ii.width < 300) continue;
     const fecha = (limpiar(m.DateTimeOriginal?.value).match(/\d{4}/) || ['0'])[0];
@@ -46,7 +51,9 @@ async function main() {
   let con = 0;
   for (const j of pendientes) {
     try {
-      const f = await buscar(j.nombre);
+      let f = await buscar(j.nombre);
+      const ascii = j.nombre.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      if (!f && ascii !== j.nombre) f = await buscar(ascii); // probar sin acentos (ej. Menšik)
       avatares[j.nombre] = f ? { ...f, revisado: new Date().toISOString() } : { url: null, revisado: new Date().toISOString() };
       if (f) con++;
     } catch (e) { log('Commons falló:', j.nombre, e.message); }
