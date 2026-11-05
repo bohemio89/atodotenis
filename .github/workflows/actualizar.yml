@@ -38,6 +38,9 @@ jobs:
           PRUEBA_PARTIDOS: ${{ github.event.inputs.prueba_partidos }}
         run: node scripts/articles.mjs
 
+      - name: Buscar fotos recientes con licencia libre
+        run: node scripts/fotos.mjs
+
       - name: Probar que el sitio se genera bien
         run: node scripts/build.mjs
 

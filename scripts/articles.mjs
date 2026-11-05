@@ -199,6 +199,7 @@ async function main() {
       argentina: [p.j1, p.j2].some((j) => j?.pais === CONFIG.notas.paisDestacado),
       superficie: p.superficie,
       partidoId: p.id,
+      jugadores: [g.nombre, pe.nombre],
       torneo: nombreTorneo(p.torneo),
       firma: CONFIG.sitio.firma,
       imagen: null, // { url, credito, enlace } cuando se sume una fuente de imágenes con licencia

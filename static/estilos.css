@@ -251,3 +251,23 @@ img{max-width:100%;display:block}
 .gs-ao .fondo{background:#2C7BC9}.gs-uso .fondo{background:#24407A}.gs-wb .fondo{background:#2F6B4A}.gs-rg .fondo{background:#B4532A}
 @media (max-width:700px){.gs-camps{grid-template-columns:1fr}.gs-tabs button{font-size:10px}}
 .gs-cuadro .rcol{width:300px}
+
+/* Carrusel de notas */
+.carrusel{position:relative}
+.car-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 28px)/3);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:2px}
+.car-track::-webkit-scrollbar{display:none}
+.car-track>*{scroll-snap-align:start}
+.car-track .card .img{height:170px}
+.car-ctrl{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}
+.car-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--linea);background:var(--panel);color:var(--texto);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.car-btn:hover{background:var(--lima);color:#12161B;border-color:var(--lima)}
+.car-dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.car-dots span{width:7px;height:7px;border-radius:4px;background:#3A4856;transition:width .2s ease,background .2s ease}
+.car-dots span.on{width:20px;background:var(--lima)}
+.credito-mini{position:absolute;right:0;bottom:0;max-width:80%;background:rgba(0,0,0,.55);color:#E6E9EC;font-size:9px;line-height:1.3;padding:2px 6px;border-top-left-radius:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;z-index:1}
+.card .img .credito-mini{bottom:auto;top:0;border-radius:0 0 0 4px}
+.tarjeta-foto .credito-mini{bottom:auto;top:0}
+.nota figure.getty iframe{border-radius:6px;background:#0D1014}
+.nota figcaption a{color:var(--suave);text-decoration:underline}
+@media (max-width:1000px){.car-track{grid-auto-columns:calc((100% - 14px)/2)}}
+@media (max-width:700px){.car-track{grid-auto-columns:82%}.car-track .card .img{height:150px}}

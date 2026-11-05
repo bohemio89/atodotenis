@@ -35,8 +35,14 @@ function cancha(sup) {
   // Ilustración de cancha (no es una foto): color según superficie
   return `<div class="fondo sup-${esc(sup || 'hard')}"><svg class="cancha" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="110" fill="#000" opacity=".18"/><g fill="none" stroke="#fff" stroke-width="3" opacity=".38"><path d="M40 300 120 150h160l80 150"/><path d="M75 235h250M200 235v-85M95 190h210"/></g><circle cx="300" cy="95" r="10" fill="#C6F432" opacity=".9"/></svg></div>`;
 }
-function imagenNota(n) {
-  if (n.imagen?.url) return `<div class="fondo"><img src="${esc(n.imagen.url)}" alt="" style="width:100%;height:100%;object-fit:cover"></div>`;
+// Getty: solo se acepta su código oficial para incrustar (embed.gettyimages.com)
+function gettySrc(codigo) {
+  const m = String(codigo || '').match(/https:\/\/embed\.gettyimages\.com\/embed\/[^"'\s<>]+/);
+  return m ? m[0].replace(/&amp;/g, '&') : null;
+}
+const creditoCorto = (n) => n.imagen?.credito ? n.imagen.credito.replace(/, vía Wikimedia Commons$/, '') : '';
+function imagenNota(n, conCredito = true) {
+  if (n.imagen?.url) return `<div class="fondo"><img src="${esc(n.imagen.url)}" alt="${esc(n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%">${conCredito ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
   return cancha(n.superficie);
 }
 
@@ -85,6 +91,9 @@ ${cuerpo}
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)} · Datos de partidos: Live Tennis API · Las notas se elaboran con asistencia de inteligencia artificial a partir de resultados oficiales.</div></footer>
 <script>
 try{var fl={};document.querySelectorAll('time[data-local]').forEach(function(t){var o=JSON.parse(t.getAttribute('data-local'));var k=t.getAttribute('data-local');fl[k]=fl[k]||new Intl.DateTimeFormat('es-AR',o);t.textContent=fl[k].format(new Date(t.getAttribute('datetime')));});}catch(e){}
+document.querySelectorAll('[data-carrusel]').forEach(function(c){var t=c.querySelector('.car-track'),d=c.querySelectorAll('.car-dots span');
+c.querySelectorAll('.car-btn').forEach(function(b){b.addEventListener('click',function(){t.scrollBy({left:+b.getAttribute('data-dir')*t.clientWidth*0.9,behavior:'smooth'})})});
+t.addEventListener('scroll',function(){var w=t.firstElementChild?t.firstElementChild.getBoundingClientRect().width+14:1;var i=Math.round(t.scrollLeft/w);d.forEach(function(x,k){x.classList.toggle('on',k===i)})},{passive:true});});
 document.querySelectorAll('[data-cuadro]').forEach(function(c){
 var sc=c.querySelector('.cuadro-scroll');
 c.querySelectorAll('[data-ir]').forEach(function(b){b.addEventListener('click',function(){var col=document.getElementById(b.getAttribute('data-ir'));sc.scrollTo({left:col.offsetLeft-sc.offsetLeft-8,behavior:'smooth'});c.querySelectorAll('.ronda-chip').forEach(function(x){x.classList.toggle('on',x===b)})})});
@@ -183,6 +192,10 @@ function panelRanking(id, max) {
 
 // ---------- Notas ----------
 const fechaCorta = (iso) => fechaArg(iso, { day: 'numeric', month: 'short', year: 'numeric' });
+function carrusel(lista) {
+  return `<div class="carrusel" data-carrusel><div class="car-track" tabindex="0" aria-label="Últimas noticias">${lista.map(cardNota).join('')}</div>
+<div class="car-ctrl"><button type="button" class="car-btn" data-dir="-1" aria-label="Noticias anteriores"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><div class="car-dots" aria-hidden="true">${lista.map((_, i) => `<span${i ? '' : ' class="on"'}></span>`).join('')}</div><button type="button" class="car-btn" data-dir="1" aria-label="Más noticias"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button></div></div>`;
+}
 const cardNota = (n) => `<a class="card" href="/nota/${n.slug}"><div class="img">${imagenNota(n)}<span class="etiqueta">${esc(n.categoria)}</span></div><div class="txt"><h3>${esc(n.titulo)}</h3><span class="meta">${fechaCorta(n.fecha)}</span></div></a>`;
 
 function hero() {
@@ -208,7 +221,7 @@ escribir('index.html', pagina({ ruta: '/', activo: 'inicio', cuerpo: `
 ${hero()}
 <div class="tres sec">
 <section><div class="sec-tit"><h2>Últimas noticias</h2><a href="/noticias">Ver todas</a></div>
-${notas.length ? `<div class="notas2">${notas.slice(0, 6).map(cardNota).join('')}</div>` : '<div class="panel"><div class="vacio" style="border:0">Las primeras notas se publican automáticamente a medida que terminan los partidos.</div></div>'}</section>
+${notas.length ? carrusel(notas.slice(0, 12)) : '<div class="panel"><div class="vacio" style="border:0">Las primeras notas se publican automáticamente a medida que terminan los partidos.</div></div>'}</section>
 <section><div class="sec-tit"><h2>Torneos y resultados</h2></div>${panelResultados('home', 10)}<a class="ver-mas panel" href="/resultados" style="margin-top:8px">Ver todos los resultados →</a></section>
 <section><div class="sec-tit"><h2>Ranking A Todo Tenis</h2></div>${panelRanking('rk', 10)}<a class="ver-mas panel" href="/ranking" style="margin-top:8px">Ranking completo →</a></section>
 </div>
@@ -259,7 +272,8 @@ for (const n of notas) {
     cuerpo: `<article class="nota"><span class="etiqueta">${esc(n.categoria)}</span>
 <h1>${esc(n.titulo)}</h1><p class="bajada">${esc(n.bajada)}</p>
 <div class="firma"><span>Por ${esc(n.firma)}</span><span>·</span>${hora(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
-<figure><div class="img">${imagenNota(n)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: ${n.imagen.enlace ? `<a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>` : esc(n.imagen.credito)}</figcaption>` : ''}</figure>
+${gettySrc(n.getty) ? `<figure class="getty"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="width:100%;aspect-ratio:3/2;border:0"></iframe><figcaption>Crédito de la imagen: Getty Images</figcaption></figure>`
+  : `<figure><div class="img">${imagenNota(n, false)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: <a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>${n.imagen.fechaFoto ? ` · foto del ${esc(fechaArg(n.imagen.fechaFoto, { day: 'numeric', month: 'long', year: 'numeric' }))}` : ''}${n.imagen.licenciaUrl ? ` · <a href="${esc(n.imagen.licenciaUrl)}" rel="noopener license">licencia</a>` : ''}</figcaption>` : ''}</figure>`}
 <div class="cuerpo">${n.cuerpo.map((x) => `<p>${esc(x)}</p>`).join('')}</div>${ficha}
 ${relacionadas.length ? `<div class="sec-tit sec"><h2>Más noticias</h2></div><div class="lista-notas">${relacionadas.map(cardNota).join('')}</div>` : ''}
 </article>`
