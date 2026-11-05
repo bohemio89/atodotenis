@@ -225,3 +225,29 @@ img{max-width:100%;display:block}
 @media (prefers-reduced-motion:reduce){.tcard,.cm{transition:none}}
 .rcol{width:228px}
 .cm.sin-datos{border-style:dashed}
+
+/* ---------- Grand Slam ---------- */
+.gs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.gs-card{background:var(--panel);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease}
+.gs-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.4);color:var(--texto)}
+.gs-card-top{position:relative;height:170px;isolation:isolate;display:flex;align-items:flex-end;padding:16px}
+.gs-card-top>.fondo{position:absolute;inset:0;z-index:-2}
+.gs-card-top::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,22,27,0) 0%,rgba(18,22,27,.85) 100%)}
+.gs-card-tit{display:flex;flex-direction:column;gap:6px}
+.gs-card-tit .etiqueta{margin:0}
+.gs-card-tit h2{margin:0;font:900 28px/1 Montserrat,sans-serif;text-transform:uppercase}
+.gs-card-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:12px}
+.gs-camp{display:flex;flex-direction:column;gap:4px}
+.gs-camp+.gs-camp{border-top:1px solid var(--linea);padding-top:12px}
+.gs-camp-lbl{font:800 11px Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--lima)}
+.gs-camp-j{display:flex;align-items:center;gap:8px;font-size:18px}
+.gs-camp-f{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:13px;color:var(--suave)}
+.gs-camp-f .marc{font-variant-numeric:tabular-nums;color:var(--texto);font-weight:600}
+.seed{font-size:12px;color:var(--tenue);font-weight:500}
+.gs-camps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.gs-camps .gs-camp{background:var(--panel);border-radius:10px;padding:16px;border:1px solid rgba(198,244,50,.25)}
+.gs-camps .gs-camp+.gs-camp{border-top:1px solid rgba(198,244,50,.25);padding-top:16px}
+.gs-tabs{max-width:640px;grid-auto-columns:minmax(0,1fr)}
+.gs-ao .fondo{background:#2C7BC9}.gs-uso .fondo{background:#24407A}.gs-wb .fondo{background:#2F6B4A}.gs-rg .fondo{background:#B4532A}
+@media (max-width:700px){.gs-camps{grid-template-columns:1fr}.gs-tabs button{font-size:10px}}
+.gs-cuadro .rcol{width:300px}

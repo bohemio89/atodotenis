@@ -1,0 +1,53 @@
+{
+  "_ayuda": "Datos cargados a mano desde fuentes oficiales (ATP, WTA y sitios de cada Grand Slam). Cada partido: ronda (R128, R64, R32, R16, QF, SF, F), ganador y perdedor con país (código de 3 letras) y preclasificación, y marcador desde el ganador.",
+  "torneos": [
+    {
+      "slug": "australian-open-2026", "nombre": "Australian Open", "anio": 2026, "ciudad": "Melbourne", "pais": "AU",
+      "superficie": "hard", "fechas": "18 de enero al 1 de febrero de 2026",
+      "cuadros": {
+        "masculino": { "partidos": [
+          { "ronda": "F", "ganador": { "nombre": "Carlos Alcaraz", "pais": "esp", "seed": 1 }, "perdedor": { "nombre": "Novak Djokovic", "pais": "srb", "seed": 4 }, "marcador": "2-6 6-2 6-3 7-5" }
+        ] },
+        "femenino": { "partidos": [
+          { "ronda": "F", "ganador": { "nombre": "Elena Rybakina", "pais": "kaz", "seed": 5 }, "perdedor": { "nombre": "Aryna Sabalenka", "pais": "blr", "seed": 1 }, "marcador": "6-4 4-6 6-4" }
+        ] }
+      }
+    },
+    {
+      "slug": "roland-garros-2026", "nombre": "Roland Garros", "anio": 2026, "ciudad": "París", "pais": "FR",
+      "superficie": "clay", "fechas": "24 de mayo al 7 de junio de 2026",
+      "cuadros": {
+        "masculino": { "partidos": [
+          { "ronda": "F", "ganador": { "nombre": "Alexander Zverev", "pais": "ger", "seed": 2 }, "perdedor": { "nombre": "Flavio Cobolli", "pais": "ita", "seed": 10 }, "marcador": "6-1 4-6 6-4 6-7(5) 6-1" }
+        ] },
+        "femenino": { "partidos": [
+          { "ronda": "F", "ganador": { "nombre": "Mirra Andreeva", "pais": "rus", "seed": 8 }, "perdedor": { "nombre": "Maja Chwalinska", "pais": "pol", "seed": null }, "marcador": "6-3 6-2" }
+        ] }
+      }
+    },
+    {
+      "slug": "wimbledon-2026", "nombre": "Wimbledon", "anio": 2026, "ciudad": "Londres", "pais": "GB",
+      "superficie": "grass", "fechas": "29 de junio al 12 de julio de 2026",
+      "cuadros": {
+        "masculino": { "partidos": [
+          { "ronda": "F", "ganador": { "nombre": "Jannik Sinner", "pais": "ita", "seed": 1 }, "perdedor": { "nombre": "Alexander Zverev", "pais": "ger", "seed": 2 }, "marcador": "6-7(7) 7-6(2) 6-3 6-4" }
+        ] },
+        "femenino": { "partidos": [
+          { "ronda": "F", "ganador": { "nombre": "Linda Noskova", "pais": "cze", "seed": 9 }, "perdedor": { "nombre": "Karolina Muchova", "pais": "cze", "seed": 10 }, "marcador": "6-2 5-7 6-3" }
+        ] }
+      }
+    },
+    {
+      "slug": "us-open-2026", "nombre": "US Open", "anio": 2026, "ciudad": "Nueva York", "pais": "US",
+      "superficie": "hard", "fechas": "30 de agosto al 13 de septiembre de 2026",
+      "cuadros": {
+        "masculino": { "partidos": [
+          { "ronda": "F", "ganador": { "nombre": "Alexander Zverev", "pais": "ger", "seed": 1 }, "perdedor": { "nombre": "Ben Shelton", "pais": "usa", "seed": 8 }, "marcador": "6-3 7-6(2) 5-7 6-2" }
+        ] },
+        "femenino": { "partidos": [
+          { "ronda": "F", "ganador": { "nombre": "Elena Rybakina", "pais": "kaz", "seed": 2 }, "perdedor": { "nombre": "Aryna Sabalenka", "pais": "blr", "seed": 1 }, "marcador": "6-4 5-7 6-2" }
+        ] }
+      }
+    }
+  ]
+}

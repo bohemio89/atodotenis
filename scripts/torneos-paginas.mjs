@@ -155,5 +155,5 @@ ${t.dobles.length ? `<div id="cd" role="tabpanel" aria-labelledby="t-d" class="o
 ${hoy.length ? `<section class="sec"><div class="sec-tit"><h2>Próximos partidos y en vivo</h2></div><div class="panel"><div class="grupo">${hoy.slice(0, 20).map(filaPartido).join('')}</div></div></section>` : ''}`
     }));
   }
-  return { lista, cardTorneo };
+  return { lista, cardTorneo, htmlCuadro };
 }

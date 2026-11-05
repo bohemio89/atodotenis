@@ -5,6 +5,7 @@ import {
   CONFIG, ROOT, leerJSON, tourBase, nombreRonda, nombreCategoria, sets, marcadorTexto, apellido, fechaArg, nombrePais, nombreTorneo, IOC_ISO2, NEUTRALES
 } from './lib/util.mjs';
 import { generarTorneos } from './torneos-paginas.mjs';
+import { generarGrandSlams } from './grand-slams-paginas.mjs';
 
 const S = CONFIG.sitio;
 const DIST = path.join(ROOT, 'dist');
@@ -72,7 +73,7 @@ ${logo}
 <div class="cab-lado der"><a class="pill" href="/noticias">Noticias</a></div>
 </div></header>
 <nav class="menu" aria-label="Principal"><div class="contenedor">
-${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/torneos', 'Torneos', 'torneos')}${item('/ranking', 'Ranking', 'ranking')}
+${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/torneos', 'Torneos', 'torneos')}${item('/grand-slams', 'Grand Slam', 'grand-slam')}${item('/ranking', 'Ranking', 'ranking')}
 <span class="actualizado">${actualizado}</span>
 </div></nav>
 <main id="contenido" class="contenedor">
@@ -80,7 +81,7 @@ ${cuerpo}
 </main>
 <footer class="pie"><div class="contenedor">
 <div>${logo}<p style="color:#C9D1D9;font-size:14px;max-width:380px">En la red desde 2007. Resultados, ranking y noticias de todo el circuito.</p></div>
-<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/ranking|Ranking', '/argentinos|Argentinos', '/acerca|Acerca del sitio'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
+<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/argentinos|Argentinos', '/acerca|Acerca del sitio'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)} · Datos de partidos: Live Tennis API · Las notas se elaboran con asistencia de inteligencia artificial a partir de resultados oficiales.</div></footer>
 <script>
 try{var fl={};document.querySelectorAll('time[data-local]').forEach(function(t){var o=JSON.parse(t.getAttribute('data-local'));var k=t.getAttribute('data-local');fl[k]=fl[k]||new Intl.DateTimeFormat('es-AR',o);t.textContent=fl[k].format(new Date(t.getAttribute('datetime')));});}catch(e){}
@@ -201,6 +202,7 @@ function escribir(rel, html) { const p = path.join(DIST, rel); fs.mkdirSync(path
 
 // ---------- Páginas ----------
 const T = generarTorneos({ torneos, partidos: visibles, esc, paisTag, filaPartido, hora, pagina, escribir: (rel, html) => escribir(rel, html), cancha, ARG });
+const GS = generarGrandSlams({ datos: leerJSON('content/grand-slams.json', { torneos: [] }), esc, paisTag, pagina, escribir: (rel, html) => escribir(rel, html), cancha, htmlCuadro: T.htmlCuadro });
 const torneosEnJuego = T.lista.filter((t) => t.enJuego).slice(0, 8);
 escribir('index.html', pagina({ ruta: '/', activo: 'inicio', cuerpo: `
 ${hero()}
@@ -267,7 +269,7 @@ ${relacionadas.length ? `<div class="sec-tit sec"><h2>Más noticias</h2></div><d
 escribir('404.html', pagina({ titulo: 'Página no encontrada', ruta: '/404', cuerpo: '<article class="nota"><h1>Esta pelota se fue afuera</h1><p class="bajada">La página que buscás no existe. <a href="/" style="color:#C6F432">Volver al inicio</a>.</p></article>' }));
 
 // SEO: sitemap, RSS, robots
-const urls = ['/', '/noticias', '/resultados', '/torneos', '/ranking', '/argentinos', '/acerca', ...T.lista.map((t) => `/torneo/${t.slug}`), ...notas.map((n) => `/nota/${n.slug}`)];
+const urls = ['/', '/noticias', '/resultados', '/torneos', '/grand-slams', ...GS.torneos.map((t) => `/grand-slam/${t.slug}`), '/ranking', '/argentinos', '/acerca', ...T.lista.map((t) => `/torneo/${t.slug}`), ...notas.map((n) => `/nota/${n.slug}`)];
 escribir('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${S.url}${u}</loc></url>`).join('')}</urlset>\n`);
 escribir('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${S.url}/sitemap.xml\n`);
 escribir('rss.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>${esc(S.nombre)}</title><link>${S.url}</link><description>${esc(S.descripcion)}</description><language>es-ar</language>${notas.slice(0, 30).map((n) => `<item><title>${esc(n.titulo)}</title><link>${S.url}/nota/${n.slug}</link><guid>${S.url}/nota/${n.slug}</guid><pubDate>${new Date(n.fecha).toUTCString()}</pubDate><description>${esc(n.bajada)}</description></item>`).join('')}</channel></rss>\n`);
