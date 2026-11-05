@@ -258,7 +258,7 @@ async function main() {
       const n = norm(parte); if (!n || paisPorNombre(parte, p.tour)) continue;
       const ap = n.split(' ').pop(); const t = (p.tour || '').replace(/_.*/, '');
       if (ap.length < 3 || paises.porNombre[`#${t}|${ap}`]) continue;
-      apellidos.set(`${t}|${ap}`, { t, ap, prio: p.estado === 'en_vivo' ? 0 : p.estado === 'programado' ? 1 : 2 });
+      apellidos.set(`${t}|${ap}`, { t, ap, prio: (tourBase(p.tour) === 'challenger' ? 10 : 0) + (p.estado === 'en_vivo' ? 0 : p.estado === 'programado' ? 1 : 2) });
     }
   }
   let buscadosDobles = 0;
