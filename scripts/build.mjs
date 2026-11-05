@@ -4,6 +4,7 @@ import path from 'node:path';
 import {
   CONFIG, ROOT, leerJSON, tourBase, nombreRonda, nombreCategoria, sets, marcadorTexto, apellido, fechaArg, nombrePais, nombreTorneo, IOC_ISO2, NEUTRALES
 } from './lib/util.mjs';
+import { generarTorneos } from './torneos-paginas.mjs';
 
 const S = CONFIG.sitio;
 const DIST = path.join(ROOT, 'dist');
@@ -14,6 +15,7 @@ fs.cpSync(path.join(ROOT, 'static'), DIST, { recursive: true });
 const partidos = Object.values(leerJSON('data/partidos.json', {}));
 const jugadores = leerJSON('data/jugadores.json', { lista: {} });
 const estado = leerJSON('data/estado.json', {});
+const torneos = leerJSON('data/torneos.json', {});
 const notas = fs.readdirSync(path.join(ROOT, 'content/notas')).filter((f) => f.endsWith('.json'))
   .map((f) => JSON.parse(fs.readFileSync(path.join(ROOT, 'content/notas', f), 'utf8')))
   .filter((n) => n.estado === 'publicada')
@@ -70,7 +72,7 @@ ${logo}
 <div class="cab-lado der"><a class="pill" href="/noticias">Noticias</a></div>
 </div></header>
 <nav class="menu" aria-label="Principal"><div class="contenedor">
-${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/ranking', 'Ranking', 'ranking')}
+${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/torneos', 'Torneos', 'torneos')}${item('/ranking', 'Ranking', 'ranking')}
 <span class="actualizado">${actualizado}</span>
 </div></nav>
 <main id="contenido" class="contenedor">
@@ -78,10 +80,17 @@ ${cuerpo}
 </main>
 <footer class="pie"><div class="contenedor">
 <div>${logo}<p style="color:#C9D1D9;font-size:14px;max-width:380px">En la red desde 2007. Resultados, ranking y noticias de todo el circuito.</p></div>
-<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/ranking|Ranking', '/argentinos|Argentinos', '/acerca|Acerca del sitio'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
+<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/ranking|Ranking', '/argentinos|Argentinos', '/acerca|Acerca del sitio'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)} · Datos de partidos: Live Tennis API · Las notas se elaboran con asistencia de inteligencia artificial a partir de resultados oficiales.</div></footer>
 <script>
 try{var fl={};document.querySelectorAll('time[data-local]').forEach(function(t){var o=JSON.parse(t.getAttribute('data-local'));var k=t.getAttribute('data-local');fl[k]=fl[k]||new Intl.DateTimeFormat('es-AR',o);t.textContent=fl[k].format(new Date(t.getAttribute('datetime')));});}catch(e){}
+document.querySelectorAll('[data-cuadro]').forEach(function(c){
+var sc=c.querySelector('.cuadro-scroll');
+c.querySelectorAll('[data-ir]').forEach(function(b){b.addEventListener('click',function(){var col=document.getElementById(b.getAttribute('data-ir'));sc.scrollTo({left:col.offsetLeft-sc.offsetLeft-8,behavior:'smooth'});c.querySelectorAll('.ronda-chip').forEach(function(x){x.classList.toggle('on',x===b)})})});
+function marcar(id){c.classList.toggle('foco',!!id);c.querySelectorAll('.cj[data-j]').forEach(function(x){x.classList.toggle('sel',!!id&&x.getAttribute('data-j')===id)});c.querySelectorAll('.cm').forEach(function(m){m.classList.toggle('camino',!!id&&!!m.querySelector('.cj.sel'))})}
+var actual=null;c.querySelectorAll('.cj[data-j]').forEach(function(x){x.addEventListener('click',function(){var id=x.getAttribute('data-j');actual=actual===id?null:id;marcar(actual)})});
+var q=c.querySelector('[data-buscar]');if(q)q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();if(!v){actual=null;marcar(null);return}var h=[].find.call(c.querySelectorAll('.cj[data-j]'),function(x){return x.textContent.toLowerCase().indexOf(v)>=0});if(h){actual=h.getAttribute('data-j');marcar(actual);var col=h.closest('.rcol');sc.scrollTo({left:col.offsetLeft-sc.offsetLeft-8,behavior:'smooth'})}});
+});
 document.querySelectorAll('[data-tabs]').forEach(function(box){var bs=box.querySelectorAll('[role=tab]');bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-selected',x===b);document.getElementById(x.getAttribute('aria-controls')).classList.toggle('oculto',x!==b)})})})});
 </script>
 </body>
@@ -191,6 +200,8 @@ function hero() {
 function escribir(rel, html) { const p = path.join(DIST, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
 
 // ---------- Páginas ----------
+const T = generarTorneos({ torneos, partidos: visibles, esc, paisTag, filaPartido, hora, pagina, escribir: (rel, html) => escribir(rel, html), cancha, ARG });
+const torneosEnJuego = T.lista.filter((t) => t.enJuego).slice(0, 8);
 escribir('index.html', pagina({ ruta: '/', activo: 'inicio', cuerpo: `
 ${hero()}
 <div class="tres sec">
@@ -199,6 +210,7 @@ ${notas.length ? `<div class="notas2">${notas.slice(0, 6).map(cardNota).join('')
 <section><div class="sec-tit"><h2>Torneos y resultados</h2></div>${panelResultados('home', 10)}<a class="ver-mas panel" href="/resultados" style="margin-top:8px">Ver todos los resultados →</a></section>
 <section><div class="sec-tit"><h2>Ranking A Todo Tenis</h2></div>${panelRanking('rk', 10)}<a class="ver-mas panel" href="/ranking" style="margin-top:8px">Ranking completo →</a></section>
 </div>
+${torneosEnJuego.length ? `<section class="sec"><div class="sec-tit"><h2>Torneos en juego</h2><a href="/torneos">Ver todos</a></div><div class="tgrid fila-scroll">${torneosEnJuego.map(T.cardTorneo).join('')}</div></section>` : ''}
 <section class="sec"><div class="sec-tit"><h2>Próximos partidos</h2><a href="/resultados">Ver todos</a></div>
 <div class="panel">${porTorneo(proximos.filter((p) => !p.dobles), 12) || '<div class="vacio" style="border:0">No hay partidos programados por ahora.</div>'}</div></section>
 <section class="franja" aria-label="Espacios publicitarios">${[1, 2, 3, 4, 5].map(() => '<div>Tu marca acá</div>').join('')}</section>
@@ -255,7 +267,7 @@ ${relacionadas.length ? `<div class="sec-tit sec"><h2>Más noticias</h2></div><d
 escribir('404.html', pagina({ titulo: 'Página no encontrada', ruta: '/404', cuerpo: '<article class="nota"><h1>Esta pelota se fue afuera</h1><p class="bajada">La página que buscás no existe. <a href="/" style="color:#C6F432">Volver al inicio</a>.</p></article>' }));
 
 // SEO: sitemap, RSS, robots
-const urls = ['/', '/noticias', '/resultados', '/ranking', '/argentinos', '/acerca', ...notas.map((n) => `/nota/${n.slug}`)];
+const urls = ['/', '/noticias', '/resultados', '/torneos', '/ranking', '/argentinos', '/acerca', ...T.lista.map((t) => `/torneo/${t.slug}`), ...notas.map((n) => `/nota/${n.slug}`)];
 escribir('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${S.url}${u}</loc></url>`).join('')}</urlset>\n`);
 escribir('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${S.url}/sitemap.xml\n`);
 escribir('rss.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>${esc(S.nombre)}</title><link>${S.url}</link><description>${esc(S.descripcion)}</description><language>es-ar</language>${notas.slice(0, 30).map((n) => `<item><title>${esc(n.titulo)}</title><link>${S.url}/nota/${n.slug}</link><guid>${S.url}/nota/${n.slug}</guid><pubDate>${new Date(n.fecha).toUTCString()}</pubDate><description>${esc(n.bajada)}</description></item>`).join('')}</channel></rss>\n`);

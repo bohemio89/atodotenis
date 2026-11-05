@@ -126,10 +126,10 @@ const CIUDADES = { Paris: 'París', London: 'Londres', Rome: 'Roma', Beijing: 'P
   Seoul: 'Seúl', Mexico: 'México', 'Mexico City': 'Ciudad de México', Cordoba: 'Córdoba', 'Villa Maria': 'Villa María', 'Sao Paulo': 'San Pablo',
   'Costa do Sauipe': 'Costa do Sauípe', Bogota: 'Bogotá', Lyon: 'Lyon', Strasbourg: 'Estrasburgo', Warsaw: 'Varsovia', Prague: 'Praga',
   Florence: 'Florencia', Naples: 'Nápoles', Milan: 'Milán', Lisbon: 'Lisboa', Copenhagen: 'Copenhague', Helsinki: 'Helsinki', Antwerp: 'Amberes',
-  'Finals - Riyadh': 'Finales de Riad', 'Finals - Turin': 'Finales de Turín' };
+  'Finals - Riyadh': 'WTA Finals', 'Finals - Turin': 'ATP Finals' };
 export function nombreTorneo(t) {
   if (!t) return '';
-  const limpio = t.trim();
+  const limpio = t.trim().replace(/\s*\([A-Za-z ]+\)(?=\s*(-|$))/, '');
   if (CIUDADES[limpio]) return CIUDADES[limpio];
   return limpio.split(/(\s+\d+$)/)[0] in CIUDADES ? CIUDADES[limpio.split(/(\s+\d+$)/)[0]] + limpio.slice(limpio.split(/(\s+\d+$)/)[0].length) : limpio;
 }

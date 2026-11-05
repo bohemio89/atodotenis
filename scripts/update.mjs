@@ -1,6 +1,6 @@
 // Recolector: trae partidos en vivo, calendario, resultados y ranking desde Live Tennis API.
 // Respeta el límite gratuito (100 consultas por día, se reinicia a las 22:00 UTC).
-import { CONFIG, leerJSON, guardarJSON, log, ganador, tourBase } from './lib/util.mjs';
+import { CONFIG, leerJSON, guardarJSON, log, ganador, tourBase, sets } from './lib/util.mjs';
 
 const KEY = process.env.LIVE_TENNIS_API_KEY;
 const BASE = 'https://api.livetennisapi.com/api/public/v1';
@@ -42,6 +42,34 @@ async function api(ruta) {
 // ---------- Base de partidos ----------
 const partidos = leerJSON('data/partidos.json', {}); // id -> partido normalizado
 const jugadores = leerJSON('data/jugadores.json', { actualizado: null, lista: {} });
+// Catálogo de torneos: clave "tour|nombre" -> datos, campeones, fechas vistas
+const torneos = leerJSON('data/torneos.json', {});
+const claveTorneo = (p) => p.tour && p.torneo ? `${p.tour.replace(/_doubles$/, '')}|${p.torneo.trim()}` : null;
+function actualizarTorneos() {
+  for (const p of Object.values(partidos)) {
+    const k = claveTorneo(p); if (!k || p.clasificacion) continue;
+    p.torneoClave = k;
+    const t = torneos[k] ||= { clave: k, nombre: p.torneo.trim(), tour: p.tour.replace(/_doubles$/, ''), id: null, meta: null, campeones: {}, primeraVez: null, ultimaVez: null };
+    if (p.torneoId && !t.id) t.id = String(p.torneoId);
+    if (p.tier && !t.tier) t.tier = p.tier;
+    if (p.superficie && !t.superficie) t.superficie = p.superficie;
+    const h = p.horario || p.visto;
+    if (h && (!t.primeraVez || h < t.primeraVez)) t.primeraVez = h;
+    if (h && (!t.ultimaVez || h > t.ultimaVez)) t.ultimaVez = h;
+    // Campeones: se registran cuando se confirma la final
+    if (p.rondaCod === 'F' && p.confirmado && p.ganador) {
+      const g = p.ganador === 1 ? p.j1 : p.j2, f = p.ganador === 1 ? p.j2 : p.j1;
+      const anio = (h || '').slice(0, 4);
+      t.campeones[anio] ||= {};
+      t.campeones[anio][p.dobles ? 'dobles' : 'singles'] = {
+        campeon: g?.nombre, pais: g?.pais || null, paises: g?.paises || null,
+        finalista: f?.nombre, paisFinalista: f?.pais || null, paisesFinalista: f?.paises || null,
+        marcador: sets(p.score).map(([a, b]) => (p.ganador === 1 ? `${a}-${b}` : `${b}-${a}`)).join(' '), partidoId: p.id
+      };
+    }
+  }
+}
+
 // Registro permanente de países: id -> país, y nombre normalizado -> país
 const paises = leerJSON('data/paises.json', { porId: {}, porNombre: {} });
 const norm = (s) => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim();
@@ -232,6 +260,17 @@ async function main() {
   }
   log(`Confirmados ${confirmados} (cupo ${cupo}, pendientes ${pendientes.length})`);
 
+  // 4b) Datos de torneos nuevos (ciudad, país, categoría), una sola vez por torneo
+  actualizarTorneos();
+  const sinMeta = Object.values(torneos).filter((t) => t.id && !t.meta && tourBase(t.tour))
+    .sort((a, b) => String(b.ultimaVez).localeCompare(String(a.ultimaVez))).slice(0, Math.max(0, Math.min(6, disponibles - confirmados)));
+  for (const t of sinMeta) {
+    const m = await api(`tournaments/${t.id}`);
+    t.meta = { ciudad: m.city, pais: m.country, categoria: m.category, superficie: m.surface, cubierto: !!m.indoor, genero: m.gender };
+  }
+  const usadasTorneos = sinMeta.length;
+  log(`Torneos: ${Object.keys(torneos).length} en catálogo, ${usadasTorneos} completados`);
+
   // 5) Países: completar con el registro y buscar de a uno los que falten (con lo que sobra del cupo)
   for (const p of Object.values(partidos)) completarPais(p);
   const faltan = new Map();
@@ -242,7 +281,7 @@ async function main() {
       if (j?.id && !j.pais && !paises.porId[j.id] && !faltan.has(j.id)) faltan.set(j.id, p.estado === 'en_vivo' ? 0 : p.estado === 'programado' ? 1 : 2);
     }
   }
-  const cupoPaises = Math.max(0, Math.min(C.maxPaisesPorCorrida, disponibles - confirmados));
+  const cupoPaises = Math.max(0, Math.min(C.maxPaisesPorCorrida, disponibles - confirmados - usadasTorneos));
   const ids = [...faltan.entries()].sort((a, b) => a[1] - b[1]).slice(0, cupoPaises).map(([id]) => id);
   for (const id of ids) {
     const j = await api(`players/${id}`);
@@ -279,15 +318,18 @@ async function main() {
 
   // 7) Limpiar historial viejo y guardar
   const limite = Date.now() - C.diasDeHistorial * 86400e3;
+  actualizarTorneos();
+  const activo = (p) => { const t = torneos[claveTorneo(p)]; return t && Date.now() - new Date(t.ultimaVez).getTime() < 10 * 86400e3; };
   for (const [id, p] of Object.entries(partidos)) {
     const t = new Date(p.horario || p.visto).getTime();
-    if (t < limite || !tourBase(p.tour)) delete partidos[id];
+    if ((t < limite && !activo(p)) || !tourBase(p.tour)) delete partidos[id];
     else p.importante = esImportante(p);
   }
   estado.ultimaCorrida = ahora.toISOString();
   guardarJSON('data/partidos.json', partidos);
   guardarJSON('data/estado.json', estado);
   guardarJSON('data/paises.json', paises);
+  guardarJSON('data/torneos.json', torneos);
   log(`Listo. Consultas usadas hoy: ${estado.usadas}`);
 }
 
