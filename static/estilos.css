@@ -271,3 +271,93 @@ img{max-width:100%;display:block}
 .nota figcaption a{color:var(--suave);text-decoration:underline}
 @media (max-width:1000px){.car-track{grid-auto-columns:calc((100% - 14px)/2)}}
 @media (max-width:700px){.car-track{grid-auto-columns:82%}.car-track .card .img{height:150px}}
+
+/* ================= Rediseño visual (estilo de la imagen de referencia) ================= */
+:root{--cond:"Roboto Condensed","Arial Narrow",sans-serif}
+body{background:#0F1317}
+/* Logo */
+.logo{position:relative;display:inline-flex;align-items:flex-end;padding:14px 26px 0 0;line-height:1;text-decoration:none}
+.logo-txt{font:italic 900 44px/0.9 var(--cond);letter-spacing:-.02em;color:#fff;text-shadow:0 2px 0 #1F4E7A,0 0 18px rgba(116,172,223,.25);white-space:nowrap}
+.logo-txt .l-a{font-size:1.05em;margin-right:4px}
+.logo-txt .l-todo{font-size:.9em;margin-right:6px}
+.logo-sw{position:absolute;right:-6px;top:-4px;width:118px;height:40px}
+.logo:hover .logo-txt{color:#fff}
+.pie .logo-txt{font-size:30px}.pie .logo-sw{width:80px;height:28px;right:-4px;top:-2px}
+@media (max-width:700px){.logo-txt{font-size:30px}.logo-sw{width:82px;height:28px;top:-2px}}
+/* Encabezado y menú */
+.cabecera{background:#151A20}
+.pill{font-family:var(--cond);font-weight:700;font-size:15px;height:42px;padding:0 24px;border-radius:21px}
+.menu{background:#1B2B3C;border:0}
+.menu .contenedor{min-height:54px;gap:4px}
+.menu a{font:600 17px var(--cond);letter-spacing:.02em;height:54px;padding:0 18px;color:#F2F4F5}
+.menu a.activo{background:var(--lima);color:#12161B}
+.buscador{margin-left:auto;display:flex;align-items:center;flex:0 0 auto}
+.buscador input{width:190px;height:36px;border:0;border-radius:18px 0 0 18px;background:#0F1A26;color:var(--texto);padding:0 14px;font:400 14px Inter,sans-serif}
+.buscador input::placeholder{color:#8A96A3}
+.buscador button{width:42px;height:36px;border:0;border-radius:0 18px 18px 0;background:var(--lima);color:#12161B;display:flex;align-items:center;justify-content:center;cursor:pointer}
+@media (max-width:900px){.buscador input{width:120px}}
+@media (max-width:700px){.buscador{display:none}}
+/* Títulos de sección */
+.sec-tit h2,.sec-tit h1{font:600 26px var(--cond);letter-spacing:.01em;color:#E2E6E9}
+.sec-tit a{font-family:var(--cond);font-size:15px}
+/* Carrusel principal */
+.hero2{position:relative;margin-top:22px}
+.hs-fila{display:flex;gap:8px;height:400px}
+.hs{position:relative;overflow:hidden;border-radius:8px;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;isolation:isolate;min-width:0;transition:flex-grow .35s ease}
+.hs>.fondo{position:absolute;inset:0;z-index:-2}
+.hs>.fondo img{transition:transform .5s ease}
+.hs:hover>.fondo img{transform:scale(1.04)}
+.hs::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.82) 100%)}
+.hs .etiqueta{margin-bottom:10px}
+.hs h2{margin:0;font:800 20px/1.15 Montserrat,sans-serif;color:#fff}
+.hs p{display:none;margin:10px 0 0;color:#E6E9EC;font-size:15px;max-width:560px}
+.hs:nth-child(1),.hs:nth-child(5){flex:1 1 0}
+.hs:nth-child(2){flex:3.4 1 0}
+.hs:nth-child(3){flex:1.6 1 0}
+.hs:nth-child(4){flex:1.9 1 0}
+.hs:nth-child(n+6){display:none}
+.hs:nth-child(1) h2,.hs:nth-child(1) .etiqueta,.hs:nth-child(5) h2,.hs:nth-child(5) .etiqueta{display:none}
+.hs:nth-child(2) h2{font-size:clamp(26px,3vw,40px);font-weight:900;text-transform:uppercase;line-height:1.02;max-width:560px}
+.hs:nth-child(2) p{display:block}
+.hs-flecha{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#12161B;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.4);z-index:2}
+.hs-flecha.izq{left:calc(11.1% - 20px)}
+.hs-flecha.der{right:calc(11.1% - 20px)}
+.hs-flecha:hover{background:var(--lima)}
+@media (max-width:900px){.hs-fila{height:320px}.hs:nth-child(1),.hs:nth-child(5){display:none}.hs:nth-child(4){display:none}.hs-flecha.izq{left:8px}.hs-flecha.der{right:8px}}
+@media (max-width:600px){.hs-fila{height:260px}.hs:nth-child(3){display:none}.hs:nth-child(2) h2{font-size:24px}.hs p{font-size:13px}}
+/* Tarjetas de notas */
+.card{background:linear-gradient(160deg,#1E2A27 0%,#232335 100%);border:1px solid #2A3540;border-radius:8px;transition:transform .15s ease,border-color .15s ease}
+.card:hover{transform:translateY(-2px);border-color:#3B4A57;color:var(--texto)}
+.card .txt{gap:6px}
+.card .cat{font:700 12px var(--cond);letter-spacing:.06em;text-transform:uppercase;color:var(--lima)}
+.card h3{font:600 18px/1.22 var(--cond)}
+.car-track{grid-auto-columns:calc((100% - 14px)/2)}
+@media (max-width:700px){.car-track{grid-auto-columns:82%}}
+/* Pestañas (resultados y ranking) */
+.tabs button{font:700 13px var(--cond);letter-spacing:.04em;height:40px}
+.grupo-tit{font-family:var(--cond);font-size:13px}
+/* Ranking con foto */
+.rk-cab{background:#1F3346;font:700 13px var(--cond);color:#C9D1D9}
+.rk,.rk-cab{grid-template-columns:30px minmax(0,1fr) 70px;padding:10px 16px}
+.rk{background:#17322A;border-top:1px solid #234538}
+.rk:nth-of-type(even){background:#1A372E}
+.rk:first-of-type{background:#1E4234}
+.rk .pos{color:var(--lima);font:700 17px var(--cond)}
+.rk .jug{gap:12px}
+.rk .jug .n{font:600 16px var(--cond);white-space:nowrap}
+.rk .pts{font:700 16px var(--cond)}
+.av{position:relative;flex:0 0 40px;width:40px;height:40px;border-radius:50%;overflow:visible;display:inline-block}
+.av>img,.av-ini{width:40px;height:40px;border-radius:50%;object-fit:cover;display:flex;align-items:center;justify-content:center;background:#2B3B4A;color:#C9D1D9;font:700 14px var(--cond);border:2px solid rgba(255,255,255,.12)}
+.av-flag{position:absolute;right:-4px;bottom:-2px;line-height:0}
+.av-flag .bandera{width:16px;height:12px;flex-basis:16px;box-shadow:0 0 0 2px #17322A}
+.av-flag .pais{font-size:8px}
+/* Pie */
+.pie{background:#0B0E12}
+.tres .sec-tit h2{font-size:23px;white-space:nowrap}
+.hs:nth-child(2) h2{font-size:clamp(24px,2.5vw,34px)}
+.rk,.rk-cab{grid-template-columns:26px minmax(0,1fr) 56px;padding:9px 12px;gap:8px}
+.rk .jug{gap:10px}
+.rk .jug .n{font-size:15px;overflow:hidden;text-overflow:ellipsis}
+.rk .mov{flex:0 0 10px;font-size:9px}
+.av{flex-basis:36px;width:36px;height:36px}
+.av>img,.av-ini{width:36px;height:36px;font-size:13px}

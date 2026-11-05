@@ -29,7 +29,7 @@ const ARG = CONFIG.notas.paisDestacado;
 
 // ---------- Piezas ----------
 const pelota = (t = 24) => `<svg width="${t}" height="${t}" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="12" fill="#C6F432"/><path d="M3 7C10 11 10 15 3 19M23 7C16 11 16 15 23 19" fill="none" stroke="#fff" stroke-width="1.8"/></svg>`;
-const logo = `<a class="logo" href="/" aria-label="${esc(S.nombre)}, inicio">A<small> Todo </small><b>Tenis</b>${pelota()}</a>`;
+const logo = `<a class="logo" href="/" aria-label="${esc(S.nombre)}, inicio"><span class="logo-txt"><span class="l-a">A</span><span class="l-todo">Todo</span><span class="l-tenis">Tenis</span></span><svg class="logo-sw" viewBox="0 0 130 44" aria-hidden="true"><path d="M2 40C34 18 70 8 104 12" fill="none" stroke="#C6F432" stroke-width="4" stroke-linecap="round"/><path d="M14 42C42 26 72 18 100 20" fill="none" stroke="#C6F432" stroke-width="2.5" stroke-linecap="round" opacity=".7"/><path d="M30 43C52 33 76 27 98 28" fill="none" stroke="#C6F432" stroke-width="1.6" stroke-linecap="round" opacity=".45"/><circle cx="114" cy="14" r="12" fill="#C6F432"/><path d="M104 8C110 12 110 17 104 21M124 8C118 12 118 17 124 21" fill="none" stroke="#12161B" stroke-width="1.6" opacity=".55"/></svg></a>`;
 
 function cancha(sup) {
   // Ilustración de cancha (no es una foto): color según superficie
@@ -65,7 +65,7 @@ function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
 <meta name="theme-color" content="#12161B">
 <link rel="icon" href="data:image/svg+xml,${encodeURIComponent(pelota(26).replace(' aria-hidden="true"', ' xmlns="http://www.w3.org/2000/svg"'))}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Inter:wght@400;500;600;700&family=Roboto+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/estilos.css">
 <link rel="alternate" type="application/rss+xml" title="${esc(S.nombre)}" href="/rss.xml">
 ${extraHead}
@@ -80,17 +80,19 @@ ${logo}
 </div></header>
 <nav class="menu" aria-label="Principal"><div class="contenedor">
 ${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/torneos', 'Torneos', 'torneos')}${item('/grand-slams', 'Grand Slam', 'grand-slam')}${item('/ranking', 'Ranking', 'ranking')}
-<span class="actualizado">${actualizado}</span>
+<form class="buscador" action="/noticias" method="get" role="search"><label for="q" class="saltar">Buscar en el sitio</label><input id="q" name="q" type="search" placeholder="Buscador" autocomplete="off"><button type="submit" aria-label="Buscar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button></form>
 </div></nav>
 <main id="contenido" class="contenedor">
 ${cuerpo}
 </main>
 <footer class="pie"><div class="contenedor">
 <div>${logo}<p style="color:#C9D1D9;font-size:14px;max-width:380px">En la red desde 2007. Resultados, ranking y noticias de todo el circuito.</p></div>
-<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/argentinos|Argentinos', '/acerca|Acerca del sitio'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
+<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/argentinos|Argentinos', '/acerca|Acerca del sitio', '/creditos|Créditos de imágenes'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)} · Datos de partidos: Live Tennis API · Las notas se elaboran con asistencia de inteligencia artificial a partir de resultados oficiales.</div></footer>
 <script>
 try{var fl={};document.querySelectorAll('time[data-local]').forEach(function(t){var o=JSON.parse(t.getAttribute('data-local'));var k=t.getAttribute('data-local');fl[k]=fl[k]||new Intl.DateTimeFormat('es-AR',o);t.textContent=fl[k].format(new Date(t.getAttribute('datetime')));});}catch(e){}
+document.querySelectorAll('[data-hero]').forEach(function(h){var f=h.querySelector('.hs-fila');h.querySelectorAll('[data-hs]').forEach(function(b){b.addEventListener('click',function(){if(+b.getAttribute('data-hs')>0)f.appendChild(f.firstElementChild);else f.insertBefore(f.lastElementChild,f.firstElementChild)})})});
+(function(){var q=new URLSearchParams(location.search).get('q');var box=document.querySelector('[data-buscar-notas]');if(!q||!box)return;var v=q.toLowerCase(),n=0;box.querySelectorAll('.card').forEach(function(c){var ok=c.textContent.toLowerCase().indexOf(v)>=0;c.style.display=ok?'':'none';if(ok)n++});var t=document.getElementById('busqueda-info');if(t){t.textContent=n?('Resultados para "'+q+'": '+n):('No hay notas que coincidan con "'+q+'".');t.hidden=false}var i=document.getElementById('q');if(i)i.value=q})();
 document.querySelectorAll('[data-carrusel]').forEach(function(c){var t=c.querySelector('.car-track'),d=c.querySelectorAll('.car-dots span');
 c.querySelectorAll('.car-btn').forEach(function(b){b.addEventListener('click',function(){t.scrollBy({left:+b.getAttribute('data-dir')*t.clientWidth*0.9,behavior:'smooth'})})});
 t.addEventListener('scroll',function(){var w=t.firstElementChild?t.firstElementChild.getBoundingClientRect().width+14:1;var i=Math.round(t.scrollLeft/w);d.forEach(function(x,k){x.classList.toggle('on',k===i)})},{passive:true});});
@@ -180,9 +182,16 @@ ${cont('v', enVivo, 'No hay partidos en juego en este momento.', hayVivo)}${cont
 }
 
 // ---------- Ranking ----------
+const avatares = leerJSON('data/avatares.json', {});
+function avatar(j) {
+  const a = avatares[j.nombre];
+  const ini = esc(j.nombre.split(' ').map((x) => x[0]).slice(0, 2).join(''));
+  const foto = a?.url ? `<img src="${esc(a.url)}" alt="" loading="lazy" style="object-position:${esc(a.foco || 'center 20%')}">` : `<span class="av-ini">${ini}</span>`;
+  return `<span class="av">${foto}<span class="av-flag">${paisTag(j)}</span></span>`;
+}
 const rankingDe = (tour) => Object.values(jugadores.lista).filter((j) => j.tour === tour).sort((a, b) => a.ranking - b.ranking);
 function tablaRanking(tour, max) {
-  const filas = rankingDe(tour).slice(0, max).map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug"><span class="mov ${j.mov === 'up' ? 'up' : j.mov === 'down' ? 'down' : ''}" aria-label="${j.mov === 'up' ? 'subió' : j.mov === 'down' ? 'bajó' : 'sin cambios'}">${j.mov === 'up' ? '▲' : j.mov === 'down' ? '▼' : '·'}</span>${paisTag(j)}<span class="n">${esc(j.nombre)}</span></span><span class="pts">${(j.puntos ?? '').toLocaleString('es-AR')}</span></div>`).join('');
+  const filas = rankingDe(tour).slice(0, max).map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug">${avatar(j)}<span class="n">${esc(j.nombre)}</span><span class="mov ${j.mov === 'up' ? 'up' : j.mov === 'down' ? 'down' : ''}" aria-label="${j.mov === 'up' ? 'subió' : j.mov === 'down' ? 'bajó' : 'sin cambios'}">${j.mov === 'up' ? '▲' : j.mov === 'down' ? '▼' : ''}</span></span><span class="pts">${(j.puntos ?? '').toLocaleString('es-AR')}</span></div>`).join('');
   return `<div class="rk-cab"><span>#</span><span>Jugador${tour === 'wta' ? 'a' : ''}</span><span style="text-align:right">Puntos</span></div>${filas || '<div class="vacio">Ranking no disponible todavía.</div>'}`;
 }
 function panelRanking(id, max) {
@@ -196,20 +205,25 @@ function carrusel(lista) {
   return `<div class="carrusel" data-carrusel><div class="car-track" tabindex="0" aria-label="Últimas noticias">${lista.map(cardNota).join('')}</div>
 <div class="car-ctrl"><button type="button" class="car-btn" data-dir="-1" aria-label="Noticias anteriores"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><div class="car-dots" aria-hidden="true">${lista.map((_, i) => `<span${i ? '' : ' class="on"'}></span>`).join('')}</div><button type="button" class="car-btn" data-dir="1" aria-label="Más noticias"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button></div></div>`;
 }
-const cardNota = (n) => `<a class="card" href="/nota/${n.slug}"><div class="img">${imagenNota(n)}<span class="etiqueta">${esc(n.categoria)}</span></div><div class="txt"><h3>${esc(n.titulo)}</h3><span class="meta">${fechaCorta(n.fecha)}</span></div></a>`;
+const cardNota = (n) => `<a class="card" href="/nota/${n.slug}"><div class="img">${imagenNota(n)}</div><div class="txt"><span class="cat">${esc(n.categoria)}</span><h3>${esc(n.titulo)}</h3><span class="meta">${fechaCorta(n.fecha)}</span></div></a>`;
 
 function hero() {
-  const items = notas.slice(0, 5).map((n, i) => `<a class="tarjeta-foto" href="/nota/${n.slug}">${imagenNota(n)}<span class="etiqueta">${esc(n.categoria)}</span>${i === 0 ? `<h2>${esc(n.titulo)}</h2><p>${esc(n.bajada)}</p>` : `<h3>${esc(n.titulo)}</h3>`}</a>`);
+  const item = (href, fondo, cat, titulo, bajada) => `<a class="hs" href="${href}">${fondo}${cat ? `<span class="etiqueta">${esc(cat)}</span>` : ''}<h2>${esc(titulo)}</h2>${bajada ? `<p>${esc(bajada)}</p>` : ''}</a>`;
+  const items = notas.slice(0, 8).map((n) => item(`/nota/${n.slug}`, imagenNota(n), n.categoria, n.titulo, n.bajada));
   // Si todavía hay pocas notas, se completa con resultados destacados
   const conNota = new Set(notas.map((n) => n.partidoId));
   for (const p of terminados.filter((x) => x.importante && !conNota.has(x.id))) {
-    if (items.length >= 5) break;
+    if (items.length >= 6) break;
     const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
-    items.push(`<a class="tarjeta-foto" href="/resultados">${cancha(p.superficie)}<span class="etiqueta">${esc(nombreCategoria(p.tier, p.tour, p.torneo))}</span>${items.length === 0 ? '<h2>' : '<h3>'}${esc(apellido(g.nombre))} venció a ${esc(apellido(pe.nombre))} ${esc(marcadorTexto(p.score, p.ganador))}${items.length === 0 ? '</h2>' : '</h3>'}</a>`);
+    items.push(item('/resultados', cancha(p.superficie), nombreCategoria(p.tier, p.tour, p.torneo), `${apellido(g.nombre)} venció a ${apellido(pe.nombre)} ${marcadorTexto(p.score, p.ganador)}`, nombreTorneo(p.torneo)));
   }
-  if (items.length === 0) items.push(`<div class="tarjeta-foto">${cancha('clay')}<h2>Todo el tenis, en un solo lugar</h2><p>Resultados, ranking y noticias del circuito ATP, WTA, Challenger, Copa Davis y Billie Jean King Cup.</p></div>`);
-  while (items.length < 5) items.push(`<a class="tarjeta-foto" href="/resultados">${cancha(['hard', 'clay', 'grass', 'hard'][items.length % 4])}<h3>Todos los resultados del circuito</h3></a>`);
-  return `<section class="hero" aria-label="Destacadas">${items.join('')}</section>`;
+  if (!items.length) items.push(item('/resultados', cancha('clay'), '', 'Todo el tenis, en un solo lugar', 'Resultados, ranking y noticias del circuito ATP, WTA, Challenger, Copa Davis y Billie Jean King Cup.'));
+  const relleno = [['hard', 'Todos los resultados del circuito', '/resultados'], ['clay', 'Cuadros de cada torneo', '/torneos'], ['grass', 'Los cuatro Grand Slam', '/grand-slams'], ['hard', 'Ranking ATP y WTA', '/ranking']];
+  for (let k = 0; items.length < 6; k++) { const [sup, t, h] = relleno[k % relleno.length]; items.push(item(h, cancha(sup), '', t, '')); }
+  // La primera nota va al centro: el último elemento queda asomando a la izquierda
+  const orden = [items[items.length - 1], ...items.slice(0, -1)];
+  const flecha = (dir, txt, d) => `<button type="button" class="hs-flecha ${dir}" data-hs="${dir === 'izq' ? -1 : 1}" aria-label="${txt}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="${d}"/></svg></button>`;
+  return `<section class="hero2" aria-label="Destacadas" data-hero><div class="hs-fila">${orden.join('')}</div>${flecha('izq', 'Anterior', 'M15 18l-6-6 6-6')}${flecha('der', 'Siguiente', 'M9 18l6-6-6-6')}</section>`;
 }
 
 function escribir(rel, html) { const p = path.join(DIST, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
@@ -223,7 +237,7 @@ ${hero()}
 <div class="tres sec">
 <section><div class="sec-tit"><h2>Últimas noticias</h2><a href="/noticias">Ver todas</a></div>
 ${notas.length ? carrusel(notas.slice(0, 12)) : '<div class="panel"><div class="vacio" style="border:0">Las primeras notas se publican automáticamente a medida que terminan los partidos.</div></div>'}</section>
-<section><div class="sec-tit"><h2>Torneos y resultados</h2></div>${panelResultados('home', 10)}<a class="ver-mas panel" href="/resultados" style="margin-top:8px">Ver todos los resultados →</a></section>
+<section><div class="sec-tit"><h2>Torneos y resultados</h2></div>${panelResultados('home', 10)}<a class="ver-mas panel" href="/resultados" style="margin-top:8px">Ver todos los resultados →</a>${estado.ultimaCorrida ? `<p class="meta" style="margin:6px 2px 0">Actualizado ${hora(estado.ultimaCorrida, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</p>` : ''}</section>
 <section><div class="sec-tit"><h2>Ranking A Todo Tenis</h2></div>${panelRanking('rk', 10)}<a class="ver-mas panel" href="/ranking" style="margin-top:8px">Ranking completo →</a></section>
 </div>
 ${torneosEnJuego.length ? `<section class="sec"><div class="sec-tit"><h2>Torneos en juego</h2><a href="/torneos">Ver todos</a></div><div class="tgrid fila-scroll">${torneosEnJuego.map(T.cardTorneo).join('')}</div></section>` : ''}
@@ -234,7 +248,7 @@ ${torneosEnJuego.length ? `<section class="sec"><div class="sec-tit"><h2>Torneos
 
 escribir('noticias.html', pagina({ titulo: 'Noticias', ruta: '/noticias', activo: 'noticias', cuerpo: `
 <div class="sec"><div class="sec-tit"><h1>Noticias</h1></div>
-${notas.length ? `<div class="lista-notas">${notas.map(cardNota).join('')}</div>` : '<div class="panel"><div class="vacio" style="border:0">Todavía no hay notas publicadas.</div></div>'}</div>` }));
+<p id="busqueda-info" class="meta" hidden></p>${notas.length ? `<div class="lista-notas" data-buscar-notas>${notas.map(cardNota).join('')}</div>` : '<div class="panel"><div class="vacio" style="border:0">Todavía no hay notas publicadas.</div></div>'}</div>` }));
 
 escribir('resultados.html', pagina({ titulo: 'Resultados y partidos en vivo', descripcion: 'Resultados del día, partidos en vivo y próximos partidos del circuito ATP, WTA y Challenger.', ruta: '/resultados', activo: 'resultados', cuerpo: `
 <div class="sec"><div class="sec-tit"><h1>Resultados</h1></div>${panelResultados('res', 999)}
@@ -242,7 +256,7 @@ escribir('resultados.html', pagina({ titulo: 'Resultados y partidos en vivo', de
 
 escribir('ranking.html', pagina({ titulo: 'Ranking ATP y WTA', descripcion: 'Ranking ATP y WTA actualizado.', ruta: '/ranking', activo: 'ranking', cuerpo: `
 <div class="sec"><div class="sec-tit"><h1>Ranking</h1></div>${panelRanking('rkc', 200)}
-<p class="meta" style="margin-top:10px">Actualizado una vez por día${jugadores.actualizado ? ` · última actualización ${fechaCorta(jugadores.actualizado)}` : ''}.</p></div>` }));
+<p class="meta" style="margin-top:10px">Fotos de los jugadores: Wikimedia Commons, con licencia libre (<a href="/creditos" style="text-decoration:underline">ver créditos</a>). Actualizado una vez por día${jugadores.actualizado ? ` · última actualización ${fechaCorta(jugadores.actualizado)}` : ''}.</p></div>` }));
 
 const argRank = (tour) => rankingDe(tour).filter((j) => j.pais === ARG).slice(0, 30);
 escribir('argentinos.html', pagina({ titulo: 'Argentinos en el circuito', ruta: '/argentinos', activo: 'argentinos', cuerpo: `
@@ -281,6 +295,9 @@ ${relacionadas.length ? `<div class="sec-tit sec"><h2>Más noticias</h2></div><d
   }));
 }
 
+escribir('creditos.html', pagina({ titulo: 'Créditos de imágenes', ruta: '/creditos', cuerpo: `<article class="nota"><h1>Créditos de imágenes</h1><div class="cuerpo">
+<p>Las fotos de los jugadores provienen de Wikimedia Commons y se publican bajo las licencias libres indicadas, con el crédito de su autor.</p></div>
+<div class="panel">${Object.entries(avatares).filter(([, a]) => a?.url).sort((x, y) => x[0].localeCompare(y[0])).map(([nombre, a]) => `<div class="grupo" style="display:flex;gap:12px;align-items:center"><span class="av"><img src="${esc(a.url)}" alt="" loading="lazy" style="object-position:${esc(a.foco || 'center 20%')}"></span><span><strong>${esc(nombre)}</strong><br><span class="meta">Foto: ${esc(a.autor)} · <a href="${esc(a.pagina)}" rel="noopener" style="text-decoration:underline">${esc(a.licencia)}</a>, vía Wikimedia Commons</span></span></div>`).join('') || '<div class="vacio" style="border:0">Todavía no hay fotos cargadas.</div>'}</div></article>` }));
 escribir('404.html', pagina({ titulo: 'Página no encontrada', ruta: '/404', cuerpo: '<article class="nota"><h1>Esta pelota se fue afuera</h1><p class="bajada">La página que buscás no existe. <a href="/" style="color:#C6F432">Volver al inicio</a>.</p></article>' }));
 
 // SEO: sitemap, RSS, robots

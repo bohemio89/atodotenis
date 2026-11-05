@@ -41,6 +41,9 @@ jobs:
       - name: Buscar fotos recientes con licencia libre
         run: node scripts/fotos.mjs
 
+      - name: Fotos para el ranking
+        run: node scripts/avatares.mjs
+
       - name: Probar que el sitio se genera bien
         run: node scripts/build.mjs
 
