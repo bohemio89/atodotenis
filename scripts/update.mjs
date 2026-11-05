@@ -253,7 +253,7 @@ async function main() {
   let cupoDobles = cupoPaises - ids.length;
   const apellidos = new Map();
   for (const p of Object.values(partidos)) {
-    if (!p.dobles || p.clasificacion || !tourBase(p.tour)) continue;
+    if (!p.dobles || p.clasificacion || !tourBase(p.tour) || tourBase(p.tour) === 'challenger') continue; // dobles de Challenger: ocultos
     for (const k of ['j1', 'j2']) for (const parte of (p[k]?.nombre || '').split('/')) {
       const n = norm(parte); if (!n || paisPorNombre(parte, p.tour)) continue;
       const ap = n.split(' ').pop(); const t = (p.tour || '').replace(/_.*/, '');

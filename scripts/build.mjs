@@ -145,7 +145,8 @@ function porTorneo(lista, max = 999) {
   }).join('');
 }
 
-const visibles = partidos.filter((p) => !p.clasificacion && tourBase(p.tour));
+// Los dobles de Challenger no se muestran (decisión editorial)
+const visibles = partidos.filter((p) => !p.clasificacion && tourBase(p.tour) && !(p.dobles && tourBase(p.tour) === 'challenger'));
 const enVivo = visibles.filter((p) => p.estado === 'en_vivo');
 const terminados = visibles.filter((p) => p.confirmado && p.ganador).sort((a, b) => String(b.horario).localeCompare(String(a.horario)));
 const proximos = visibles.filter((p) => p.estado === 'programado').sort((a, b) => String(a.horario).localeCompare(String(b.horario)));
