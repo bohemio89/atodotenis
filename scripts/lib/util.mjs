@@ -145,7 +145,7 @@ export const IOC_ISO2 = {
   mlt:'mt', mne:'me', mon:'mc', mgl:'mn', ned:'nl', nga:'ng', nor:'no', nzl:'nz', pak:'pk', pan:'pa', par:'py', per:'pe', phi:'ph',
   pol:'pl', por:'pt', pur:'pr', qat:'qa', rou:'ro', rsa:'za', sen:'sn', sgp:'sg', slo:'si', srb:'rs', sri:'lk', sui:'ch', svk:'sk',
   swe:'se', syr:'sy', tai:'tw', tpe:'tw', tha:'th', tjk:'tj', tkm:'tm', tog:'tg', tun:'tn', tur:'tr', uae:'ae', uga:'ug', ukr:'ua',
-  uru:'uy', usa:'us', uzb:'uz', ven:'ve', vie:'vn', zim:'zw', deu:'de', nmi:'mp', pr:'pr'
+  uru:'uy', usa:'us', uzb:'uz', ven:'ve', rus:'ru', blr:'by', vie:'vn', zim:'zw', deu:'de', nmi:'mp', pr:'pr'
 };
 // Jugadores que compiten sin bandera (atletas neutrales)
-export const NEUTRALES = new Set(['rus', 'blr', 'wor']);
+export const NEUTRALES = new Set(['wor']);
