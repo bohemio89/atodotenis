@@ -4,10 +4,17 @@
   "nombre": "Hong Kong",
   "tour": "wta",
   "id": "8694",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "wta_250",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "women"
+  },
   "campeones": {},
   "primeraVez": "2026-11-04T06:10:00Z",
-  "ultimaVez": "2026-11-06T06:00:00Z",
+  "ultimaVez": "2026-11-06T12:00:00Z",
   "superficie": "hard"
  },
  "challenger|Taipei": {
@@ -18,7 +25,7 @@
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-04T02:10:00Z",
-  "ultimaVez": "2026-11-05T11:10:00Z",
+  "ultimaVez": "2026-11-06T09:30:00Z",
   "superficie": "hard"
  },
  "atp|Paris": {
@@ -36,7 +43,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-04T09:00:00Z",
-  "ultimaVez": "2026-11-06T09:00:00Z",
+  "ultimaVez": "2026-11-06T14:30:00Z",
   "tier": "atp_1000",
   "superficie": "hard"
  },
@@ -45,10 +52,17 @@
   "nombre": "Chennai",
   "tour": "wta",
   "id": "7826",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "wta_250",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "women"
+  },
   "campeones": {},
   "primeraVez": "2026-11-04T04:30:00Z",
-  "ultimaVez": "2026-11-06T04:30:00Z",
+  "ultimaVez": "2026-11-06T14:00:00Z",
   "superficie": "hard"
  },
  "challenger|Bratislava 2": {
@@ -56,10 +70,17 @@
   "nombre": "Bratislava 2",
   "tour": "challenger",
   "id": "3196",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": true,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-04T10:05:00Z",
-  "ultimaVez": "2026-11-06T09:00:00Z",
+  "ultimaVez": "2026-11-06T14:00:00Z",
   "superficie": "hard"
  },
  "challenger|Taranto (Italy)": {
@@ -67,10 +88,17 @@
   "nombre": "Taranto (Italy)",
   "tour": "challenger",
   "id": "14827",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-04T09:05:00Z",
-  "ultimaVez": "2026-11-05T14:00:00Z",
+  "ultimaVez": "2026-11-06T12:30:00Z",
   "superficie": "hard"
  },
  "challenger|Charlottesville": {
@@ -135,18 +163,18 @@
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-04T09:05:00Z",
-  "ultimaVez": "2026-11-06T09:00:00Z",
+  "ultimaVez": "2026-11-06T15:30:00Z",
   "superficie": "hard"
  },
  "challenger_women|Luanda (Angola)": {
   "clave": "challenger_women|Luanda (Angola)",
   "nombre": "Luanda (Angola)",
   "tour": "challenger_women",
-  "id": null,
+  "id": "14828",
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-04T09:10:00Z",
-  "ultimaVez": "2026-11-05T12:30:00Z",
+  "ultimaVez": "2026-11-06T09:00:00Z",
   "superficie": "hard"
  },
  "challenger_women|Cali": {
@@ -190,7 +218,7 @@
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-05T15:30:00Z",
-  "ultimaVez": "2026-11-05T15:30:00Z",
+  "ultimaVez": "2026-11-05T15:40:00Z",
   "superficie": "hard"
  },
  "challenger|Luanda (Angola)": {
