@@ -147,3 +147,4 @@ img{max-width:100%;display:block}
 .banderas2{flex-direction:row;gap:2px;align-items:center}
 .banderas2 .bandera{width:14px;height:10px;flex-basis:14px}
 .banderas2 .vacia2{width:14px;height:10px;box-shadow:none;background:none}
+@media (max-width:700px){.franja div:nth-child(5){display:none}}
