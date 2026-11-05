@@ -1561,7 +1561,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "gbr",
     null
    ]
   },
@@ -1589,7 +1589,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "bul",
     null
    ]
   },
@@ -2094,7 +2094,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "bra"
    ]
   },
   "dobles": true,
@@ -3613,7 +3613,7 @@
  },
  "214376": {
   "id": 214376,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Cali",
   "ronda": "Cali - 1/8-finals",
   "rondaCod": "R16",
@@ -3636,10 +3636,36 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.484Z",
+  "visto": "2026-11-05T11:07:53.084Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger_women|Cali"
+  "torneoClave": "challenger|Cali",
+  "torneoId": "1857",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     6
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "sets": [
+    2,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "214385": {
   "id": 214385,
@@ -4769,17 +4795,17 @@
  },
  "214965": {
   "id": 214965,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
   "ronda": "ATP Paris - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T10:00:00Z",
+  "horario": "2026-11-05T10:10:00Z",
   "j1": {
-   "id": 38426,
-   "nombre": "Nouza/ Venus",
+   "id": 1761,
+   "nombre": "Marcelo Arevalo / Mate Pavic",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -4788,8 +4814,8 @@
    ]
   },
   "j2": {
-   "id": 1761,
-   "nombre": "Arevalo/ Pavic",
+   "id": 38426,
+   "nombre": "Nouza / Venus",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -4798,12 +4824,38 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.161Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "importante": false,
   "tier": "atp_1000",
-  "torneoClave": "atp|Paris"
+  "torneoClave": "atp|Paris",
+  "torneoId": "1726",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     4
+    ],
+    [
+     6,
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "214966": {
   "id": 214966,
@@ -5476,9 +5528,9 @@
    "ranking": 136
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.279Z",
+  "visto": "2026-11-05T11:07:52.034Z",
   "importante": false,
   "tier": null,
   "torneoId": "2241",
@@ -5488,25 +5540,27 @@
    "games": [
     [
      7,
-     1
+     1,
+     3
     ],
     [
      6,
-     5
+     6,
+     6
     ]
    ],
    "sets": [
     1,
-    0
+    2
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null,
+  "confirmado": true,
+  "ganador": 2,
   "torneoClave": "wta|Hong Kong"
  },
  "215045": {
@@ -5780,7 +5834,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T09:30:00Z",
+  "horario": "2026-11-05T09:40:00Z",
   "j1": {
    "id": 217,
    "nombre": "Jay Clarke",
@@ -5794,12 +5848,38 @@
    "ranking": 215
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.420Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger|Taranto (Italy)"
+  "torneoClave": "challenger|Taranto (Italy)",
+  "torneoId": "14827",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     5
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215053": {
   "id": 215053,
@@ -6063,7 +6143,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "cze",
     null
    ]
   },
@@ -6094,26 +6174,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-05T09:30:00Z",
+  "horario": "2026-11-05T09:40:00Z",
   "j1": {
-   "id": 1580,
-   "nombre": "Mai Hontama",
-   "pais": "jpn",
-   "ranking": 160
-  },
-  "j2": {
    "id": 1069,
    "nombre": "Zhibek Kulambayeva",
    "pais": "kaz",
    "ranking": 473
   },
+  "j2": {
+   "id": 1580,
+   "nombre": "Mai Hontama",
+   "pais": "jpn",
+   "ranking": 160
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.279Z",
+  "visto": "2026-11-05T11:07:50.987Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Chennai"
+  "torneoClave": "wta|Chennai",
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     2
+    ],
+    [
+     4,
+     2
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215142": {
   "id": 215142,
@@ -6124,26 +6230,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-05T09:30:00Z",
+  "horario": "2026-11-05T09:40:00Z",
   "j1": {
-   "id": 11795,
-   "nombre": "M. Uchijima",
-   "pais": "jpn",
-   "ranking": null
-  },
-  "j2": {
    "id": 292,
    "nombre": "Magda Linette",
    "pais": "pol",
    "ranking": 68
   },
+  "j2": {
+   "id": 11795,
+   "nombre": "Maiko Uchijima",
+   "pais": "jpn",
+   "ranking": 1371
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.279Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Chennai"
+  "torneoClave": "wta|Chennai",
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     7,
+     3
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215143": {
   "id": 215143,
@@ -6317,7 +6449,7 @@
  },
  "215147": {
   "id": 215147,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Cali",
   "ronda": "Cali - 1/8-finals",
   "rondaCod": "R16",
@@ -6326,35 +6458,63 @@
   "genero": "women",
   "horario": "2026-11-04T16:10:00Z",
   "j1": {
-   "id": 680,
-   "nombre": "Laura Samson",
-   "pais": "cze",
-   "ranking": 116
-  },
-  "j2": {
    "id": 275,
    "nombre": "Carole Monnet",
    "pais": "fra",
    "ranking": 218
   },
+  "j2": {
+   "id": 680,
+   "nombre": "Laura Samson",
+   "pais": "cze",
+   "ranking": 116
+  },
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-04T19:53:19.484Z",
+  "visto": "2026-11-05T11:07:52.915Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger_women|Cali"
+  "torneoClave": "challenger|Cali",
+  "torneoId": "1857",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     7,
+     6
+    ],
+    [
+     6,
+     6,
+     3
+    ]
+   ],
+   "sets": [
+    2,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "215148": {
   "id": 215148,
-  "tour": "challenger_women",
-  "torneo": "Luanda (Angola) - Qualification",
+  "tour": "challenger",
+  "torneo": "Luanda (Angola)",
   "ronda": "Luanda - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-05T09:00:00Z",
+  "horario": "2026-11-05T09:10:00Z",
   "j1": {
    "id": 278,
    "nombre": "Anna Blinkova",
@@ -6368,12 +6528,40 @@
    "ranking": 304
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.420Z",
+  "visto": "2026-11-05T11:07:50.987Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger_women|Luanda (Angola) - Qualification"
+  "torneoClave": "challenger|Luanda (Angola)",
+  "torneoId": "14828",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     4,
+     5
+    ],
+    [
+     3,
+     6,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    1
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215149": {
   "id": 215149,
@@ -8444,9 +8632,9 @@
    "ranking": 220
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.420Z",
+  "visto": "2026-11-05T11:07:52.542Z",
   "importante": false,
   "tier": null,
   "torneoId": "2429",
@@ -8457,26 +8645,26 @@
     [
      4,
      6,
-     5
+     6
     ],
     [
      6,
      3,
-     5
+     7
     ]
    ],
    "sets": [
     1,
-    1
+    2
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null,
+  "confirmado": true,
+  "ganador": 2,
   "torneoClave": "challenger|Taipei"
  },
  "215430": {
@@ -8488,7 +8676,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T10:30:00Z",
+  "horario": "2026-11-05T10:20:00Z",
   "j1": {
    "id": 465,
    "nombre": "Carl Emil Overbeck",
@@ -8502,12 +8690,38 @@
    "ranking": 409
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.420Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger|Taipei"
+  "torneoClave": "challenger|Taipei",
+  "torneoId": "2429",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215435": {
   "id": 215435,
@@ -8694,9 +8908,9 @@
    "ranking": 38
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.279Z",
+  "visto": "2026-11-05T11:07:52.263Z",
   "importante": false,
   "tier": null,
   "torneoId": "2241",
@@ -8707,26 +8921,26 @@
     [
      6,
      4,
-     3
+     6
     ],
     [
      3,
      6,
-     0
+     2
     ]
    ],
    "sets": [
-    1,
+    2,
     1
    ],
    "puntos": [
-    "40",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null,
+  "confirmado": true,
+  "ganador": 1,
   "torneoClave": "wta|Hong Kong"
  },
  "215450": {
@@ -8922,7 +9136,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-05T08:10:15.420Z",
   "importante": false,
@@ -8964,26 +9178,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T09:30:00Z",
+  "horario": "2026-11-05T09:40:00Z",
   "j1": {
-   "id": 12473,
-   "nombre": "A. Andreev",
-   "pais": "bul",
-   "ranking": null
-  },
-  "j2": {
    "id": 405,
    "nombre": "Matteo Martineau",
    "pais": "fra",
    "ranking": 244
   },
+  "j2": {
+   "id": 12473,
+   "nombre": "Adrian Andreev",
+   "pais": "bul",
+   "ranking": 631
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.420Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger|Taranto (Italy)"
+  "torneoClave": "challenger|Taranto (Italy)",
+  "torneoId": "14827",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215473": {
   "id": 215473,
@@ -9092,7 +9332,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T10:00:00Z",
+  "horario": "2026-11-05T10:10:00Z",
   "j1": {
    "id": 19,
    "nombre": "Tommy Paul",
@@ -9106,12 +9346,38 @@
    "ranking": 46
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.162Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "importante": false,
   "tier": "atp_1000",
-  "torneoClave": "atp|Paris"
+  "torneoClave": "atp|Paris",
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     7,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215493": {
   "id": 215493,
@@ -9219,7 +9485,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "chn",
     null
    ]
   },
@@ -9319,17 +9585,17 @@
  },
  "215499": {
   "id": 215499,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Bratislava 2",
   "ronda": "Bratislava 2 - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T11:00:00Z",
+  "horario": "2026-11-05T11:05:00Z",
   "j1": {
    "id": 1348,
-   "nombre": "Gille/ Verbeek",
+   "nombre": "Sander Gille / Sem Verbeek",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -9339,7 +9605,7 @@
   },
   "j2": {
    "id": 11266,
-   "nombre": "Rojer/ Winegar",
+   "nombre": "Rojer / Theodore Winegar",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -9348,26 +9614,50 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.420Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger|Bratislava 2"
+  "torneoClave": "challenger|Bratislava 2",
+  "torneoId": "3197",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215500": {
   "id": 215500,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Taipei",
   "ronda": "Taipei - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T09:40:00Z",
+  "horario": "2026-11-05T10:00:00Z",
   "j1": {
-   "id": 44003,
-   "nombre": "Hsieh/ Hsu",
+   "id": 10162,
+   "nombre": "Kaito Uesugi / Loof",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -9376,8 +9666,8 @@
    ]
   },
   "j2": {
-   "id": 10162,
-   "nombre": "Loof/ Uesugi",
+   "id": 44003,
+   "nombre": "Hsieh / Hsu",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -9386,12 +9676,40 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.420Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger|Taipei"
+  "torneoClave": "challenger|Taipei",
+  "torneoId": "8838",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1,
+     7
+    ],
+    [
+     3,
+     6,
+     6
+    ]
+   ],
+   "sets": [
+    1,
+    1
+   ],
+   "puntos": [
+    "7",
+    "6"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215501": {
   "id": 215501,
@@ -9500,7 +9818,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T09:30:00Z",
+  "horario": "2026-11-05T09:40:00Z",
   "j1": {
    "id": 392,
    "nombre": "Felix Gill",
@@ -9514,12 +9832,38 @@
    "ranking": 266
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.420Z",
+  "visto": "2026-11-05T11:07:50.987Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger|Taranto (Italy)"
+  "torneoClave": "challenger|Taranto (Italy)",
+  "torneoId": "14827",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     7,
+     4
+    ],
+    [
+     6,
+     2
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215509": {
   "id": 215509,
@@ -9621,17 +9965,17 @@
  },
  "215531": {
   "id": 215531,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Hong Kong",
   "ronda": "WTA Hong Kong - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-05T09:55:00Z",
+  "horario": "2026-11-05T10:45:00Z",
   "j1": {
    "id": 6068,
-   "nombre": "Cho I-/Cho",
+   "nombre": "Cho / Cho I-",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -9641,7 +9985,7 @@
   },
   "j2": {
    "id": 43996,
-   "nombre": "Jiang/ Wong Hong Yi",
+   "nombre": "Hong Yi Cody Wong / Jiang",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -9650,28 +9994,52 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.279Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Hong Kong"
+  "torneoClave": "wta|Hong Kong",
+  "torneoId": "8694",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215532": {
   "id": 215532,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Round of 16",
+  "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T10:00:00Z",
+  "horario": "2026-11-05T10:10:00Z",
   "j1": {
    "id": 1388,
-   "nombre": "Luz/ Matos",
+   "nombre": "Orlando Luz / Rafael Matos",
    "pais": null,
-   "ranking": null,
+   "ranking": 97,
    "paises": [
     null,
     null
@@ -9679,21 +10047,47 @@
   },
   "j2": {
    "id": 36826,
-   "nombre": "Miedler/ Oberleitner",
+   "nombre": "Miedler / Oberleitner",
    "pais": null,
-   "ranking": null,
+   "ranking": 219,
    "paises": [
     null,
     null
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.162Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "importante": false,
   "tier": "atp_1000",
-  "torneoClave": "atp|Paris"
+  "torneoClave": "atp|Paris",
+  "torneoId": "1726",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     6
+    ],
+    [
+     6,
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "3",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215533": {
   "id": 215533,
@@ -9863,7 +10257,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "gbr",
     null
    ]
   },
@@ -9961,7 +10355,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "bra",
     null
    ]
   },
@@ -10091,17 +10485,17 @@
  },
  "215567": {
   "id": 215567,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Bratislava 2",
   "ronda": "Bratislava 2 - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T11:00:00Z",
+  "horario": "2026-11-05T11:05:00Z",
   "j1": {
    "id": 5266,
-   "nombre": "Karol/ Paulson",
+   "nombre": "Andrew Paulson / Milos Karol",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -10111,7 +10505,7 @@
   },
   "j2": {
    "id": 35359,
-   "nombre": "Balaji/ King",
+   "nombre": "Balaji / Evan King",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -10120,12 +10514,36 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T08:10:15.420Z",
+  "visto": "2026-11-05T11:07:50.988Z",
   "tier": null,
   "importante": false,
-  "torneoClave": "challenger|Bratislava 2"
+  "torneoClave": "challenger|Bratislava 2",
+  "torneoId": "3197",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215568": {
   "id": 215568,
@@ -11065,7 +11483,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "bra",
     null
    ]
   },
@@ -11230,7 +11648,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "bra"
    ]
   },
   "j2": {
