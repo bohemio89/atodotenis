@@ -157,8 +157,9 @@ function validar(nota, datos) {
   }
   if (!texto.includes(datos.marcador_desde_el_ganador.split(' ')[0])) problemas.push('no incluye el marcador');
   if (/[“”"«»]/.test(nota.cuerpo.join(' ')) && /(dijo|declar|afirm|expres|señal)/i.test(texto)) problemas.push('parece incluir citas');
-  const prohibidas = ['emocionante', 'sin lugar a dudas', 'cabe destacar', 'en conclusión', 'para el recuerdo', 'épico', 'electrizante', 'la jornada', 'cotejo', 'escalafón', 'certamen', 'quiebr', 'quebr', 'break', 'favorito del torneo', 'cabeza de serie', 'preclasificad', 'de su carrera', 'saque', 'aces'];
+  const prohibidas = ['emocionante', 'sin lugar a dudas', 'cabe destacar', 'en conclusión', 'para el recuerdo', 'épico', 'electrizante', 'la jornada', 'cotejo', 'escalafón', 'certamen', 'quiebr', 'quebr', 'favorito del torneo', 'cabeza de serie', 'preclasificad', 'de su carrera', 'saque', 'aces'];
   for (const f of prohibidas) if (texto.toLowerCase().includes(f)) problemas.push(`frase prohibida: ${f}`);
+  if (/(?<!tie-|tie |super tie-|súper tie-)\bbreak/i.test(texto)) problemas.push('frase prohibida: break (quiebre)');
   return problemas;
 }
 

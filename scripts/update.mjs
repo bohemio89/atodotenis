@@ -125,6 +125,11 @@ function prioridad(m) {
 
 // ---------- Corrida ----------
 async function main() {
+  // GitHub corre esta tarea cada 15 minutos (porque a veces saltea corridas); la API se consulta como mucho una vez por hora
+  if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < 50 && !process.env.FORZAR) {
+    log('Última consulta hace menos de 50 minutos: no se consulta la API en esta corrida.');
+    return;
+  }
   log(`Día API ${diaAPI}: usadas ${estado.usadas}/${C.presupuestoDiario}, faltan ${horasHastaReinicio} h para el reinicio`);
 
   // 1) En vivo (todas las giras en una consulta)
