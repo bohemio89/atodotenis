@@ -42,6 +42,42 @@ async function api(ruta) {
 // ---------- Base de partidos ----------
 const partidos = leerJSON('data/partidos.json', {}); // id -> partido normalizado
 const jugadores = leerJSON('data/jugadores.json', { actualizado: null, lista: {} });
+// Registro permanente de países: id -> país, y nombre normalizado -> país
+const paises = leerJSON('data/paises.json', { porId: {}, porNombre: {} });
+const norm = (s) => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim();
+function registrar(id, nombre, pais, tour) {
+  if (!pais || !nombre || nombre.includes('/')) return;
+  if (id) paises.porId[id] = pais;
+  const n = norm(nombre); paises.porNombre[n] = pais;
+  const ap = n.split(' ').slice(1).join(' ') || n; // apellido(s)
+  const t = (tour || '').replace(/_.*/, '');
+  const clave = `${t}|${ap}`;
+  const prev = paises.porNombre['@' + clave];
+  paises.porNombre['@' + clave] = prev && prev !== pais ? '?' : pais; // '?' = apellido ambiguo
+}
+function paisPorNombre(nombre, tour) {
+  const n = norm(nombre);
+  if (paises.porNombre[n]) return paises.porNombre[n];
+  const t = (tour || '').replace(/_.*/, '');
+  const partes = n.split(' ');
+  for (let i = 0; i < partes.length; i++) { // probar apellido con y sin nombre de pila
+    const v = paises.porNombre[`@${t}|${partes.slice(i).join(' ')}`];
+    if (v && v !== '?') return v;
+  }
+  return null;
+}
+function completarPais(p) {
+  for (const k of ['j1', 'j2']) {
+    const j = p[k]; if (!j) continue;
+    if (p.dobles || (j.nombre || '').includes('/')) {
+      const ps = (j.nombre || '').split('/').map((x) => paisPorNombre(x.trim(), p.tour));
+      p[k] = { ...j, paises: ps };
+    } else if (!j.pais) {
+      const v = (j.id && paises.porId[j.id]) || paisPorNombre(j.nombre, p.tour);
+      if (v) p[k] = { ...j, pais: v };
+    }
+  }
+}
 
 function infoJugador(id, nombreCorto) {
   const j = jugadores.lista[id];
@@ -50,7 +86,7 @@ function infoJugador(id, nombreCorto) {
 
 function desdeMatch(m) {
   const viejo = partidos[m.id] || {};
-  const p = (x) => x && { id: x.id, nombre: x.name, pais: x.country, ranking: x.ranking ?? null };
+  const p = (x) => { if (!x) return x; registrar(x.id, x.name, x.country, m.tour); return { id: x.id, nombre: x.name, pais: x.country, ranking: x.ranking ?? null }; };
   const final = m.status === 'completed';
   return {
     ...viejo,
@@ -164,6 +200,7 @@ async function main() {
       for (const j of r.data || []) {
         if (!j.ranking || j.is_doubles_team) continue;
         lista[j.id] = { nombre: j.name, pais: j.country, ranking: j.ranking, puntos: j.ranking_points, mov: j.ranking_movement, tour: j.tour };
+        registrar(j.id, j.name, j.country, j.tour);
       }
     }
     jugadores.lista = lista; jugadores.actualizado = ahora.toISOString();
@@ -195,12 +232,52 @@ async function main() {
   }
   log(`Confirmados ${confirmados} (cupo ${cupo}, pendientes ${pendientes.length})`);
 
-  // 5) Completar la categoría (tier) de partidos del calendario con la de su torneo
+  // 5) Países: completar con el registro y buscar de a uno los que falten (con lo que sobra del cupo)
+  for (const p of Object.values(partidos)) completarPais(p);
+  const faltan = new Map();
+  for (const p of Object.values(partidos)) {
+    if (p.clasificacion || p.dobles || !tourBase(p.tour) || p.estado === 'cancelado') continue;
+    for (const k of ['j1', 'j2']) {
+      const j = p[k];
+      if (j?.id && !j.pais && !paises.porId[j.id] && !faltan.has(j.id)) faltan.set(j.id, p.estado === 'en_vivo' ? 0 : p.estado === 'programado' ? 1 : 2);
+    }
+  }
+  const cupoPaises = Math.max(0, Math.min(C.maxPaisesPorCorrida, disponibles - confirmados));
+  const ids = [...faltan.entries()].sort((a, b) => a[1] - b[1]).slice(0, cupoPaises).map(([id]) => id);
+  for (const id of ids) {
+    const j = await api(`players/${id}`);
+    paises.porId[id] = j.country || 'sin';
+    registrar(j.id, j.name, j.country, j.tour);
+  }
+  // Dobles: buscar por apellido a los integrantes que falten (cada apellido se busca una sola vez)
+  let cupoDobles = cupoPaises - ids.length;
+  const apellidos = new Map();
+  for (const p of Object.values(partidos)) {
+    if (!p.dobles || p.clasificacion || !tourBase(p.tour)) continue;
+    for (const k of ['j1', 'j2']) for (const parte of (p[k]?.nombre || '').split('/')) {
+      const n = norm(parte); if (!n || paisPorNombre(parte, p.tour)) continue;
+      const ap = n.split(' ').pop(); const t = (p.tour || '').replace(/_.*/, '');
+      if (ap.length < 3 || paises.porNombre[`#${t}|${ap}`]) continue;
+      apellidos.set(`${t}|${ap}`, { t, ap, prio: p.estado === 'en_vivo' ? 0 : p.estado === 'programado' ? 1 : 2 });
+    }
+  }
+  let buscadosDobles = 0;
+  for (const { t, ap } of [...apellidos.values()].sort((a, b) => a.prio - b.prio)) {
+    if (cupoDobles-- <= 0) break;
+    const r = await api(`players?search=${encodeURIComponent(ap)}&limit=20`);
+    paises.porNombre[`#${t}|${ap}`] = true;
+    for (const j of r.data || []) if (!j.is_doubles_team && j.country) registrar(j.id, j.name, j.country, j.tour);
+    buscadosDobles++;
+  }
+  for (const p of Object.values(partidos)) completarPais(p);
+  log(`Países buscados: ${ids.length} jugadores (faltaban ${faltan.size}), ${buscadosDobles} apellidos de dobles (faltaban ${apellidos.size})`);
+
+  // 6) Completar la categoría (tier) de partidos del calendario con la de su torneo
   const tierDe = {};
   for (const p of Object.values(partidos)) if (p.tier && p.torneo) tierDe[`${tourBase(p.tour)}|${p.torneo}`] = p.tier;
   for (const p of Object.values(partidos)) if (!p.tier) p.tier = tierDe[`${tourBase(p.tour)}|${p.torneo}`] || null;
 
-  // 6) Limpiar historial viejo y guardar
+  // 7) Limpiar historial viejo y guardar
   const limite = Date.now() - C.diasDeHistorial * 86400e3;
   for (const [id, p] of Object.entries(partidos)) {
     const t = new Date(p.horario || p.visto).getTime();
@@ -210,6 +287,7 @@ async function main() {
   estado.ultimaCorrida = ahora.toISOString();
   guardarJSON('data/partidos.json', partidos);
   guardarJSON('data/estado.json', estado);
+  guardarJSON('data/paises.json', paises);
   log(`Listo. Consultas usadas hoy: ${estado.usadas}`);
 }
 

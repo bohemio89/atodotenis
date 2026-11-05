@@ -86,8 +86,17 @@ document.querySelectorAll('[data-tabs]').forEach(function(box){var bs=box.queryS
 }
 
 // ---------- Partidos ----------
+function banderaDe(c) {
+  c = (c || '').toLowerCase();
+  if (!c || c === 'sin') return '<span class="bandera vacia" aria-hidden="true"></span>';
+  if (NEUTRALES.has(c)) return '<span class="bandera neutral" title="Atleta neutral" role="img" aria-label="Atleta neutral">N</span>';
+  const iso = IOC_ISO2[c], nombre = esc(nombrePais(c));
+  return iso ? `<img class="bandera" src="/banderas/${iso}.svg" width="20" height="15" alt="${nombre}" title="${nombre}" loading="lazy">` : `<span class="pais" title="${nombre}">${esc(c.toUpperCase())}</span>`;
+}
 function paisTag(j) {
+  if (Array.isArray(j?.paises)) return j.paises.some(Boolean) ? `<span class="banderas2">${j.paises.map((c) => c ? banderaDe(c) : '<span class="bandera vacia2"></span>').join('')}</span>` : '<span class="bandera vacia" aria-hidden="true"></span>';
   const c = (j?.pais || '').toLowerCase();
+  if (c === 'sin') return '<span class="bandera vacia" aria-hidden="true"></span>';
   if (!c) return '<span class="bandera vacia" aria-hidden="true"></span>';
   if (NEUTRALES.has(c)) return '<span class="bandera neutral" title="Atleta neutral" role="img" aria-label="Atleta neutral">N</span>';
   const iso = IOC_ISO2[c];
@@ -108,7 +117,7 @@ function filaPartido(p) {
   };
   let info = nombreRonda(p.rondaCod, p.ronda);
   if (vivo) info = `<span class="vivo-dot"></span>En vivo · ${info}`;
-  else if (p.estado === 'programado' && p.horario) info += ` · ${fechaArg(p.horario, { weekday: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })} h`;
+  else if (p.estado === 'programado' && p.horario) info += ` · ${fechaArg(p.horario, { weekday: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}`;
   else if (p.estado === 'cancelado') info += ' · Cancelado';
   else if (!fin && ['finalizado', 'por_confirmar'].includes(p.estado)) info += ' · Finalizado (resultado a confirmar)';
   if (p.resultado && p.resultado !== 'completed') info += ` · ${{ retired: 'Retiro', walkover: 'W.O.' }[p.resultado] || p.resultado}`;

@@ -140,3 +140,6 @@ img{max-width:100%;display:block}
 .img .fondo{position:absolute;inset:0}
 .rk .jug .n{white-space:normal;line-height:1.25}
 @media (max-width:700px){.rk .jug .n{white-space:nowrap}}
+.banderas2{display:inline-flex;flex-direction:column;gap:2px}.banderas2 .bandera{width:16px;height:11px;flex-basis:16px}
+.bandera.vacia{height:0}.banderas2 .vacia2{display:block;width:16px;height:11px}
+.fila{min-height:21px}
