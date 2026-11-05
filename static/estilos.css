@@ -129,3 +129,14 @@ img{max-width:100%;display:block}
   .nota figure .img{height:220px}
   .nota .cuerpo p{font-size:17px}
 }
+
+/* Banderas */
+.bandera{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(255,255,255,.12);flex:0 0 20px;display:inline-block;vertical-align:middle}
+.bandera.vacia{box-shadow:none}
+.bandera.neutral{background:#3A4856;color:#C9D1D9;font:700 9px/15px Inter,sans-serif;text-align:center}
+.fila{grid-template-columns:24px minmax(0,1fr) auto}
+.rk .bandera{margin-right:2px}
+.img{overflow:hidden}
+.img .fondo{position:absolute;inset:0}
+.rk .jug .n{white-space:normal;line-height:1.25}
+@media (max-width:700px){.rk .jug .n{white-space:nowrap}}

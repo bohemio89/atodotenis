@@ -2,14 +2,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  CONFIG, ROOT, leerJSON, tourBase, nombreRonda, nombreCategoria, sets, marcadorTexto, apellido, fechaArg, nombrePais, nombreTorneo
+  CONFIG, ROOT, leerJSON, tourBase, nombreRonda, nombreCategoria, sets, marcadorTexto, apellido, fechaArg, nombrePais, nombreTorneo, IOC_ISO2, NEUTRALES
 } from './lib/util.mjs';
 
 const S = CONFIG.sitio;
 const DIST = path.join(ROOT, 'dist');
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.mkdirSync(path.join(DIST, 'nota'), { recursive: true });
-fs.copyFileSync(path.join(ROOT, 'static/estilos.css'), path.join(DIST, 'estilos.css'));
+fs.cpSync(path.join(ROOT, 'static'), DIST, { recursive: true });
 
 const partidos = Object.values(leerJSON('data/partidos.json', {}));
 const jugadores = leerJSON('data/jugadores.json', { lista: {} });
@@ -86,7 +86,15 @@ document.querySelectorAll('[data-tabs]').forEach(function(box){var bs=box.queryS
 }
 
 // ---------- Partidos ----------
-const paisTag = (j) => `<span class="pais${j?.pais === ARG ? ' arg' : ''}" title="${esc(nombrePais(j?.pais))}">${esc((j?.pais || '').toUpperCase())}</span>`;
+function paisTag(j) {
+  const c = (j?.pais || '').toLowerCase();
+  if (!c) return '<span class="bandera vacia" aria-hidden="true"></span>';
+  if (NEUTRALES.has(c)) return '<span class="bandera neutral" title="Atleta neutral" role="img" aria-label="Atleta neutral">N</span>';
+  const iso = IOC_ISO2[c];
+  const nombre = esc(nombrePais(c));
+  if (!iso) return `<span class="pais" title="${nombre}">${esc(c.toUpperCase())}</span>`;
+  return `<img class="bandera" src="/banderas/${iso}.svg" width="20" height="15" alt="${nombre}" title="${nombre}" loading="lazy">`;
+}
 const nombreCorto = (j) => esc(j?.nombre || 'A confirmar');
 
 function filaPartido(p) {

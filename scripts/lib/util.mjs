@@ -66,7 +66,7 @@ const PAISES = {
   rsa: 'Sudáfrica', tun: 'Túnez', egy: 'Egipto', ind: 'India', kor: 'Corea del Sur', tpe: 'Taipéi',
   nzl: 'Nueva Zelanda', geo: 'Georgia', arm: 'Armenia', lat: 'Letonia', est: 'Estonia', ltu: 'Lituania',
   slo: 'Eslovenia', bih: 'Bosnia', mon: 'Mónaco', isr: 'Israel', tha: 'Tailandia', phi: 'Filipinas', ina: 'Indonesia',
-  uzb: 'Uzbekistán', hkg: 'Hong Kong'
+  uzb: 'Uzbekistán', hkg: 'Hong Kong', and: 'Andorra', lux: 'Luxemburgo', mar: 'Marruecos', mlt: 'Malta', tai: 'Taipéi', irl: 'Irlanda', mda: 'Moldavia', cyp: 'Chipre', dom: 'República Dominicana', pur: 'Puerto Rico', ksa: 'Arabia Saudita', uae: 'Emiratos Árabes', vie: 'Vietnam', mas: 'Malasia', sgp: 'Singapur', lbn: 'Líbano', jam: 'Jamaica', crc: 'Costa Rica', gua: 'Guatemala', esa: 'El Salvador', cub: 'Cuba', bar: 'Barbados', mkd: 'Macedonia del Norte', mne: 'Montenegro', alb: 'Albania', isl: 'Islandia', lie: 'Liechtenstein', irn: 'Irán', iri: 'Irán', pak: 'Pakistán', sri: 'Sri Lanka', nga: 'Nigeria', ken: 'Kenia', zim: 'Zimbabue', sen: 'Senegal', civ: 'Costa de Marfil', alg: 'Argelia'
 };
 export const nombrePais = (c) => (c && PAISES[c.toLowerCase()]) || (c ? c.toUpperCase() : '');
 
@@ -133,3 +133,19 @@ export function nombreTorneo(t) {
   if (CIUDADES[limpio]) return CIUDADES[limpio];
   return limpio.split(/(\s+\d+$)/)[0] in CIUDADES ? CIUDADES[limpio.split(/(\s+\d+$)/)[0]] + limpio.slice(limpio.split(/(\s+\d+$)/)[0].length) : limpio;
 }
+
+// Código de país del circuito (IOC) -> ISO 3166 de 2 letras (para la bandera)
+export const IOC_ISO2 = {
+  afg:'af', alb:'al', alg:'dz', and:'ad', ang:'ao', arg:'ar', arm:'am', aus:'au', aut:'at', aze:'az', bah:'bs', bar:'bb', bel:'be',
+  ben:'bj', ber:'bm', bih:'ba', bol:'bo', bot:'bw', bra:'br', bul:'bg', bur:'bf', can:'ca', chi:'cl', chn:'cn', civ:'ci', cmr:'cm',
+  col:'co', crc:'cr', cro:'hr', cub:'cu', cyp:'cy', cze:'cz', den:'dk', dom:'do', ecu:'ec', egy:'eg', esa:'sv', esp:'es', est:'ee',
+  fin:'fi', fra:'fr', gbr:'gb', geo:'ge', ger:'de', gha:'gh', gre:'gr', gua:'gt', hkg:'hk', hon:'hn', hun:'hu', ina:'id', ind:'in',
+  irl:'ie', iri:'ir', irq:'iq', isl:'is', isr:'il', ita:'it', jam:'jm', jor:'jo', jpn:'jp', kaz:'kz', ken:'ke', kgz:'kg', kor:'kr',
+  ksa:'sa', kuw:'kw', lat:'lv', lbn:'lb', lie:'li', ltu:'lt', lux:'lu', mad:'mg', mar:'ma', mas:'my', mda:'md', mex:'mx', mkd:'mk',
+  mlt:'mt', mne:'me', mon:'mc', mgl:'mn', ned:'nl', nga:'ng', nor:'no', nzl:'nz', pak:'pk', pan:'pa', par:'py', per:'pe', phi:'ph',
+  pol:'pl', por:'pt', pur:'pr', qat:'qa', rou:'ro', rsa:'za', sen:'sn', sgp:'sg', slo:'si', srb:'rs', sri:'lk', sui:'ch', svk:'sk',
+  swe:'se', syr:'sy', tai:'tw', tpe:'tw', tha:'th', tjk:'tj', tkm:'tm', tog:'tg', tun:'tn', tur:'tr', uae:'ae', uga:'ug', ukr:'ua',
+  uru:'uy', usa:'us', uzb:'uz', ven:'ve', vie:'vn', zim:'zw', deu:'de', nmi:'mp', pr:'pr'
+};
+// Jugadores que compiten sin bandera (atletas neutrales)
+export const NEUTRALES = new Set(['rus', 'blr', 'wor']);
