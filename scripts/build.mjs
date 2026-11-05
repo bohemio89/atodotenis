@@ -201,7 +201,8 @@ const cardNota = (n) => `<a class="card" href="/nota/${n.slug}"><div class="img"
 function hero() {
   const items = notas.slice(0, 5).map((n, i) => `<a class="tarjeta-foto" href="/nota/${n.slug}">${imagenNota(n)}<span class="etiqueta">${esc(n.categoria)}</span>${i === 0 ? `<h2>${esc(n.titulo)}</h2><p>${esc(n.bajada)}</p>` : `<h3>${esc(n.titulo)}</h3>`}</a>`);
   // Si todavía hay pocas notas, se completa con resultados destacados
-  for (const p of terminados.filter((x) => x.importante)) {
+  const conNota = new Set(notas.map((n) => n.partidoId));
+  for (const p of terminados.filter((x) => x.importante && !conNota.has(x.id))) {
     if (items.length >= 5) break;
     const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
     items.push(`<a class="tarjeta-foto" href="/resultados">${cancha(p.superficie)}<span class="etiqueta">${esc(nombreCategoria(p.tier, p.tour, p.torneo))}</span>${items.length === 0 ? '<h2>' : '<h3>'}${esc(apellido(g.nombre))} venció a ${esc(apellido(pe.nombre))} ${esc(marcadorTexto(p.score, p.ganador))}${items.length === 0 ? '</h2>' : '</h3>'}</a>`);
