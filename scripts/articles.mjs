@@ -12,6 +12,7 @@ if (!KEY) { console.log('Sin GEMINI_API_KEY: no se escriben notas en esta corrid
 
 const partidos = leerJSON('data/partidos.json', {});
 const registro = leerJSON('data/notas-registro.json', {}); // partidoId -> slug | 'descartada'
+const TORNEOS = leerJSON('data/torneos.json', {});
 const N = CONFIG.notas;
 
 // Modo prueba: PRUEBA_PARTIDOS="id1,id2" escribe notas de esos partidos sin publicarlas
@@ -48,6 +49,9 @@ function datosDelPartido(p) {
   const proximo = Object.values(partidos).find((o) => o.estado === 'programado' && o.torneo === p.torneo &&
     [o.j1?.id, o.j2?.id].includes(g.id));
   const rival = proximo && (proximo.j1?.id === g.id ? proximo.j2 : proximo.j1);
+  const anio = Number((p.horario || '').slice(0, 4)) || new Date().getFullYear();
+  const catalogo = TORNEOS[`${(p.tour || '').replace(/_doubles$/, '')}|${(p.torneo || '').trim()}`];
+  const defensor = catalogo?.campeones?.[anio - 1]?.[p.dobles ? 'dobles' : 'singles']?.campeon;
   return {
     torneo: nombreTorneo(p.torneo),
     categoria: nombreCategoria(p.tier, p.tour, p.torneo),
@@ -64,6 +68,8 @@ function datosDelPartido(p) {
     sorpresa_por_ranking: sorpresa,
     remontada: sv.length >= 2 && sv[0][0] < sv[0][1] ? 'sí, perdió el primer set y dio vuelta el partido' : 'no',
     resultado_especial: p.resultado || 'ninguno',
+    el_perdedor_era_el_campeon_defensor: defensor && defensor === pe.nombre ? 'sí' : 'no',
+    el_ganador_es_el_campeon_defensor: defensor && defensor === g.nombre ? 'sí' : 'no',
     otros_resultados_destacados_del_dia: contexto,
     proximo_partido_del_ganador: rival ? `${nombreRonda(proximo.rondaCod, proximo.ronda)} ante ${rival.nombre}` : 'todavía no confirmado'
   };
@@ -73,13 +79,24 @@ const ESTILO = `Sos redactor de A Todo Tenis, un sitio de tenis hecho en Argenti
 
 QUÉ CONTAR:
 - Encontrá la noticia: si "sorpresa_por_ranking" es "grande" o "moderada", ese es el eje (el favorito cayó). Si hubo "remontada", destacala. Si fue un trámite (dos sets claros), decilo sin dramatizar.
+- Si "el_perdedor_era_el_campeon_defensor" es "sí", es parte central de la noticia: el torneo se quedó sin su campeón defensor.
 - Usá "desarrollo_por_set" para narrar el partido: quién arrancó mejor, si hubo tie-break, cómo se definió. Al hablar de un set, el puntaje va desde quien lo ganó (6-2, nunca 2-6).
 - De "otros_resultados_destacados_del_dia" mencioná como mucho UNO, y solo si suma (por ejemplo, otra caída importante del día). No hagas listas de resultados.
 - La cobertura es internacional: tratá a todos los jugadores por igual, sin favorecer nacionalidades.
 
+VOZ DE LA CASA (así escribe A Todo Tenis desde hace años):
+- Directo y con el dato adelante: primero quién le ganó a quién, el marcador y la instancia; después el contexto. Oraciones cortas.
+- Ranking siempre con "N°": "el N° 1 del mundo", "la N° 8 del ranking". Nunca "número uno" ni "top" en inglés.
+- Marcador completo con comas y una "y" antes del último set: "Fue 7-5, 5-7, 6-2 y 6-4." En dos sets parejos vale "por un doble 6-4".
+- Si "sorpresa_por_ranking" es "grande", el primer párrafo arranca con "¡Batacazo!" seguido del hecho: "¡Batacazo! Fulano derrotó a Mengano, N° 1 del mundo." Es la única exclamación permitida y solo en ese caso.
+- Verbos de la casa: derrotó, venció, superó, se impuso, dejó en el camino, avanzó a, se metió en, se quedó con. En una final: "se consagró campeón" o "se quedó con el título".
+- Para el próximo rival: "En cuartos lo espera Fulano" o "Espera en semifinales por Fulano".
+- Gentilicios para no repetir nombres: "el suizo", "la kazaja", "el estadounidense" (deducidos del país que te paso). Con un jugador conocido también sirve el apellido solo.
+- Torneos en castellano y con su categoría: "el Masters 1000 de París", "el ATP 500 de Viena", "el WTA 1000 de Wuhan", "el Abierto de Australia". Usá el nombre tal como viene en "torneo" y "categoria".
+
 REGLAS ESTRICTAS (no negociables):
 - Usá SOLO los datos que te paso. No inventes declaraciones, citas, lesiones, clima, público, estadísticas (aces, quiebres, duración), historial entre los jugadores, edades, títulos, récords, cabezas de serie ni valoraciones sobre la carrera de nadie.
-- No escribas números que no estén en los datos. Escribí en letras las cantidades chicas ("dos sets", "el tercer set"). El marcador va con números y guiones: 7-6 6-3.
+- No escribas números que no estén en los datos. Escribí en letras las cantidades chicas ("dos sets", "el tercer set"). El marcador va con números y guiones.
 - Si "proximo_partido_del_ganador" dice "todavía no confirmado", no menciones rival futuro.
 - Prohibido: "en un emocionante", "sin lugar a dudas", "cabe destacar", "en conclusión", "demostró su", "un partido para el recuerdo", "en resumen", "no cabe duda", "épico", "electrizante", "brillante actuación", "dejó en claro", "la jornada", "cotejo", "en la pista", "escalafón", "certamen".
 - Variá la forma de nombrar a los jugadores (apellido, nacionalidad, "el número 9 del mundo"), sin repetir la misma fórmula.
@@ -144,6 +161,9 @@ function validar(nota, datos) {
   if (!nota || typeof nota.titulo !== 'string' || !Array.isArray(nota.cuerpo)) return ['formato inválido'];
   if (nota.titulo.length > 110) problemas.push('título demasiado largo');
   if (nota.titulo.length > 90) problemas.push('título de más de 90 caracteres');
+  if (/[!¡]/.test(nota.titulo)) problemas.push('el título no lleva exclamaciones');
+  const exclam = [nota.bajada, ...nota.cuerpo].join(' ').match(/¡[^!]*!/g) || [];
+  if (exclam.some((e) => e !== '¡Batacazo!') || (exclam.length && datos.sorpresa_por_ranking !== 'grande')) problemas.push('exclamación fuera de lugar');
   if (nota.cuerpo.length < 3 || nota.cuerpo.length > 5) problemas.push('cantidad de párrafos fuera de rango');
   const texto = [nota.titulo, nota.bajada, ...nota.cuerpo].join(' ');
   const permitidos = new Set(JSON.stringify(datos).match(/\d+/g) || []);

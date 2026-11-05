@@ -230,7 +230,7 @@ function escribir(rel, html) { const p = path.join(DIST, rel); fs.mkdirSync(path
 
 // ---------- Páginas ----------
 const T = generarTorneos({ torneos, partidos: visibles, esc, paisTag, filaPartido, hora, pagina, escribir: (rel, html) => escribir(rel, html), cancha, ARG });
-const GS = generarGrandSlams({ datos: leerJSON('content/grand-slams.json', { torneos: [] }), esc, paisTag, pagina, escribir: (rel, html) => escribir(rel, html), cancha, htmlCuadro: T.htmlCuadro });
+const GS = generarGrandSlams({ datos: leerJSON('content/grand-slams.json', { torneos: [] }), rankingDe, partidos, esc, paisTag, pagina, escribir: (rel, html) => escribir(rel, html), cancha, htmlCuadro: T.htmlCuadro });
 const torneosEnJuego = T.lista.filter((t) => t.enJuego).slice(0, 8);
 escribir('index.html', pagina({ ruta: '/', activo: 'inicio', cuerpo: `
 ${hero()}

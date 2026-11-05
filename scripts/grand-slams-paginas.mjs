@@ -1,6 +1,7 @@
 // Sección Grand Slam: cuadros y finales de la temporada, cargados a mano desde fuentes oficiales
 // (content/grand-slams.json). Desde 2027 se pueden complementar con los datos automáticos.
 import { slugify, SUPERFICIES } from './lib/util.mjs';
+import { tablaTopTen, RONDA_TXT } from './lib/puntos-gs.mjs';
 
 const RONDAS = ['R128', 'R64', 'R32', 'R16', 'QF', 'SF', 'F'];
 const regionES = new Intl.DisplayNames(['es'], { type: 'region' });
@@ -17,7 +18,7 @@ function aPartido(m, i, cuadro) {
   };
 }
 
-export function generarGrandSlams({ datos, esc, paisTag, pagina, escribir, cancha, htmlCuadro }) {
+export function generarGrandSlams({ datos, rankingDe, partidos, esc, paisTag, pagina, escribir, cancha, htmlCuadro }) {
   const torneos = (datos?.torneos || []).slice().sort((a, b) => b.anio - a.anio);
   const finalDe = (t, c) => (t.cuadros?.[c]?.partidos || []).find((p) => p.ronda === 'F');
   const bandera = (iso2) => iso2 ? `<img class="bandera" src="/banderas/${iso2.toLowerCase()}.svg" width="20" height="15" alt="${esc(regionES.of(iso2))}">` : '';
@@ -37,9 +38,28 @@ export function generarGrandSlams({ datos, esc, paisTag, pagina, escribir, canch
 <div class="gs-card-body">${campeonCard(t, 'masculino', 'Campeón')}${campeonCard(t, 'femenino', 'Campeona')}</div></a>`;
 
   const anios = [...new Set(torneos.map((t) => t.anio))];
+  const num = (n) => n == null ? '<span class="sd">s/d</span>' : Number(n).toLocaleString('es-AR');
+  const tablaPuntos = (tour, titulo) => {
+    const T = tablaTopTen({ ranking: rankingDe ? rankingDe(tour) : [], partidos: partidos || [], grandSlams: datos, tour });
+    if (!T.filas.length) return '';
+    const fila = (f) => `<tr><td class="pos">${f.ranking}</td><td class="jug">${paisTag(f)}${esc(f.nombre)}</td><td>${num(f.puntos)}</td>
+<td>${f.rondaDefendida ? esc(RONDA_TXT[f.rondaDefendida] || f.rondaDefendida) : '<span class="sd">s/d</span>'}</td><td class="def">${num(f.defiende)}</td>
+${T.enJuego ? `<td>${f.enVivo ? esc(RONDA_TXT[f.enVivo.ronda]) + (f.enVivo.vivo ? '' : ' <span class="sd">(eliminado)</span>') : '—'}</td>` : ''}
+<td>${f.siCampeon ? `N° ${f.siCampeon}${f.siCampeon < f.ranking ? ' <span class="sube">▲</span>' : f.siCampeon > f.ranking ? ' <span class="baja">▼</span>' : ''}` : '—'}</td></tr>`;
+    return `<div class="pts-bloque"><h3>${titulo}</h3><div class="tabla-scroll"><table class="pts-tabla">
+<thead><tr><th>N°</th><th>Jugador</th><th>Puntos</th><th>Ronda ${T.anterior ? T.anterior.anio : 'anterior'}</th><th>Defiende</th>${T.enJuego ? '<th>Ronda actual</th>' : ''}<th>Si es campeón</th></tr></thead>
+<tbody>${T.filas.map(fila).join('')}</tbody></table></div>
+${T.completo ? '' : `<p class="cuadro-ayuda">Por ahora solo está cargada la final de la edición ${T.anterior?.anio ?? 'anterior'}: los puntos de los demás jugadores se completan al cargar el cuadro entero.</p>`}</div>`;
+  };
+  const T0 = tablaTopTen({ ranking: [], partidos: [], grandSlams: datos, tour: 'atp' });
+  const seccionPuntos = rankingDe ? `<section class="sec pts"><div class="sec-tit"><h2>Puntos que defiende el Top Ten en el ${esc(T0.slam.nombre)} ${T0.slam.anio}</h2></div>
+<p class="meta" style="margin:-6px 0 12px">Lo que cada uno sumó en la edición anterior y que pierde del ranking al terminar el torneo. "Si es campeón" muestra el puesto al que llegaría ganando el título, con el resto en los puntos que ya tiene asegurados.</p>
+<div class="pts-grid">${tablaPuntos('atp', 'ATP')}${tablaPuntos('wta', 'WTA')}</div>
+<p class="meta">Puntos por ronda: ATP (Media Guide 2025) y WTA (tabla de puntos 2026). Ranking y puntos actuales: Live Tennis API.</p></section>` : '';
   escribir('grand-slams.html', pagina({
     titulo: 'Grand Slam', descripcion: 'Los cuatro Grand Slam de la temporada: campeones, finales y cuadros completos.', ruta: '/grand-slams', activo: 'grand-slam',
     cuerpo: `<div class="sec"><div class="sec-tit"><h1>Grand Slam</h1></div><p class="meta" style="margin:-6px 0 0">Australian Open, Roland Garros, Wimbledon y US Open: campeones, finales y cuadros.</p></div>
+${seccionPuntos}
 ${anios.map((a) => `<section class="sec"><div class="sec-tit"><h2>Temporada ${a}</h2></div><div class="gs-grid">${torneos.filter((t) => t.anio === a).map(card).join('')}</div></section>`).join('')}`
   }));
 
