@@ -19,6 +19,8 @@ const notas = fs.readdirSync(path.join(ROOT, 'content/notas')).filter((f) => f.e
   .filter((n) => n.estado === 'publicada')
   .sort((a, b) => b.fecha.localeCompare(a.fecha));
 
+// Hora que el navegador convierte a la zona del visitante (respaldo: hora Argentina)
+const hora = (iso, opciones) => `<time datetime="${esc(iso)}" data-local='${JSON.stringify(opciones)}'>${fechaArg(iso, opciones)}</time>`;
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const ARG = CONFIG.notas.paisDestacado;
 
@@ -37,7 +39,7 @@ function imagenNota(n) {
 
 function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
   const t = titulo ? `${titulo} | ${S.nombre}` : `${S.nombre} | Todo el tenis`;
-  const actualizado = estado.ultimaCorrida ? `Actualizado ${fechaArg(estado.ultimaCorrida, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })} (hora Argentina)` : '';
+  const actualizado = estado.ultimaCorrida ? `Actualizado ${hora(estado.ultimaCorrida, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}` : '';
   const item = (href, txt, clave) => `<a href="${href}"${activo === clave ? ' class="activo" aria-current="page"' : ''}>${txt}</a>`;
   return `<!doctype html>
 <html lang="es-AR">
@@ -69,7 +71,7 @@ ${logo}
 </div></header>
 <nav class="menu" aria-label="Principal"><div class="contenedor">
 ${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/ranking', 'Ranking', 'ranking')}
-<span class="actualizado">${esc(actualizado)}</span>
+<span class="actualizado">${actualizado}</span>
 </div></nav>
 <main id="contenido" class="contenedor">
 ${cuerpo}
@@ -79,6 +81,7 @@ ${cuerpo}
 <nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/ranking|Ranking', '/argentinos|Argentinos', '/acerca|Acerca del sitio'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)} · Datos de partidos: Live Tennis API · Las notas se elaboran con asistencia de inteligencia artificial a partir de resultados oficiales.</div></footer>
 <script>
+try{var fl={};document.querySelectorAll('time[data-local]').forEach(function(t){var o=JSON.parse(t.getAttribute('data-local'));var k=t.getAttribute('data-local');fl[k]=fl[k]||new Intl.DateTimeFormat('es-AR',o);t.textContent=fl[k].format(new Date(t.getAttribute('datetime')));});}catch(e){}
 document.querySelectorAll('[data-tabs]').forEach(function(box){var bs=box.querySelectorAll('[role=tab]');bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-selected',x===b);document.getElementById(x.getAttribute('aria-controls')).classList.toggle('oculto',x!==b)})})})});
 </script>
 </body>
@@ -117,7 +120,7 @@ function filaPartido(p) {
   };
   let info = nombreRonda(p.rondaCod, p.ronda);
   if (vivo) info = `<span class="vivo-dot"></span>En vivo · ${info}`;
-  else if (p.estado === 'programado' && p.horario) info += ` · ${fechaArg(p.horario, { weekday: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}`;
+  else if (p.estado === 'programado' && p.horario) info += ` · ${hora(p.horario, { weekday: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}`;
   else if (p.estado === 'cancelado') info += ' · Cancelado';
   else if (!fin && ['finalizado', 'por_confirmar'].includes(p.estado)) info += ' · Finalizado (resultado a confirmar)';
   if (p.resultado && p.resultado !== 'completed') info += ` · ${{ retired: 'Retiro', walkover: 'W.O.' }[p.resultado] || p.resultado}`;
@@ -206,7 +209,7 @@ ${notas.length ? `<div class="lista-notas">${notas.map(cardNota).join('')}</div>
 
 escribir('resultados.html', pagina({ titulo: 'Resultados y partidos en vivo', descripcion: 'Resultados del día, partidos en vivo y próximos partidos del circuito ATP, WTA y Challenger.', ruta: '/resultados', activo: 'resultados', cuerpo: `
 <div class="sec"><div class="sec-tit"><h1>Resultados</h1></div>${panelResultados('res', 999)}
-<p class="meta" style="margin-top:10px">Los marcadores se actualizan cada hora. Los partidos "a confirmar" muestran el resultado apenas se verifica.</p></div>` }));
+<p class="meta" style="margin-top:10px">Los horarios se muestran en tu hora local. Los marcadores se actualizan cada hora. Los partidos "a confirmar" muestran el resultado apenas se verifica.</p></div>` }));
 
 escribir('ranking.html', pagina({ titulo: 'Ranking ATP y WTA', descripcion: 'Ranking ATP y WTA actualizado.', ruta: '/ranking', activo: 'ranking', cuerpo: `
 <div class="sec"><div class="sec-tit"><h1>Ranking</h1></div>${panelRanking('rkc', 200)}
@@ -240,7 +243,7 @@ for (const n of notas) {
     extraHead: `<meta property="og:type" content="article"><script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`,
     cuerpo: `<article class="nota"><span class="etiqueta">${esc(n.categoria)}</span>
 <h1>${esc(n.titulo)}</h1><p class="bajada">${esc(n.bajada)}</p>
-<div class="firma"><span>Por ${esc(n.firma)}</span><span>·</span><time datetime="${n.fecha}">${fechaArg(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</time></div>
+<div class="firma"><span>Por ${esc(n.firma)}</span><span>·</span>${hora(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
 <figure><div class="img">${imagenNota(n)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: ${n.imagen.enlace ? `<a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>` : esc(n.imagen.credito)}</figcaption>` : ''}</figure>
 <div class="cuerpo">${n.cuerpo.map((x) => `<p>${esc(x)}</p>`).join('')}</div>${ficha}
 ${relacionadas.length ? `<div class="sec-tit sec"><h2>Más noticias</h2></div><div class="lista-notas">${relacionadas.map(cardNota).join('')}</div>` : ''}
