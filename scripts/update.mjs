@@ -64,7 +64,7 @@ function actualizarTorneos() {
       t.campeones[anio][p.dobles ? 'dobles' : 'singles'] = {
         campeon: g?.nombre, pais: g?.pais || null, paises: g?.paises || null,
         finalista: f?.nombre, paisFinalista: f?.pais || null, paisesFinalista: f?.paises || null,
-        marcador: sets(p.score).map(([a, b]) => (p.ganador === 1 ? `${a}-${b}` : `${b}-${a}`)).join(' '), partidoId: p.id
+        marcador: sets(p.score).map(([a, b]) => (p.ganador === 1 ? `${a}-${b}` : `${b}-${a}`)).join(' '), partidoId: p.id, fecha: h || null
       };
     }
   }

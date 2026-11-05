@@ -374,3 +374,9 @@ body{background:#0F1317}
 .pts-tabla .sd{opacity:.5;font-size:12px}
 .pts-tabla .sube{color:#4ade80}.pts-tabla .baja{color:#f87171}
 @media (max-width:520px){.pts-grid{grid-template-columns:1fr}}
+
+/* Un día como hoy */
+.efem{margin-top:14px;padding:14px 16px;border-left:3px solid var(--lima,#c6f432)}
+.efem-tit{font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:12px;font-weight:700;color:var(--lima,#c6f432);margin-bottom:6px}
+.efem-txt{margin:0;font-size:15px;line-height:1.45}
+.efem-fte{margin:8px 0 0;font-size:12px;opacity:.7}

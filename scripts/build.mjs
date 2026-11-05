@@ -232,13 +232,40 @@ function escribir(rel, html) { const p = path.join(DIST, rel); fs.mkdirSync(path
 const T = generarTorneos({ torneos, partidos: visibles, esc, paisTag, filaPartido, hora, pagina, escribir: (rel, html) => escribir(rel, html), cancha, ARG });
 const GS = generarGrandSlams({ datos: leerJSON('content/grand-slams.json', { torneos: [] }), rankingDe, partidos, esc, paisTag, pagina, escribir: (rel, html) => escribir(rel, html), cancha, htmlCuadro: T.htmlCuadro });
 const torneosEnJuego = T.lista.filter((t) => t.enJuego).slice(0, 8);
+
+// "Un día como hoy": efemérides verificadas (content/efemerides.json) + campeones que registra el sitio.
+// Se elige en el navegador según la fecha local de cada visitante.
+function recuadroEfemeride() {
+  const base = leerJSON('content/efemerides.json', { items: [] }).items || [];
+  const coma = (m) => { const s = String(m || '').split(' ').filter(Boolean); return s.length > 1 ? `${s.slice(0, -1).join(', ')} y ${s.at(-1)}` : s[0] || ''; };
+  const auto = [];
+  for (const t of Object.values(torneos)) {
+    if (!/^(atp|wta)$/.test(t.tour)) continue;
+    for (const [anio, c] of Object.entries(t.campeones || {})) {
+      const s = c.singles; if (!s?.fecha || !s.campeon) continue;
+      auto.push({ fecha: s.fecha.slice(0, 10), texto: `${s.campeon} se quedaba con el título en ${nombreTorneo(t.nombre)}${s.finalista ? ` tras vencer en la final a ${s.finalista}` : ''}${s.marcador ? ` por ${coma(s.marcador)}` : ''}.`, fuente: 'Resultados de A Todo Tenis' });
+    }
+  }
+  const items = [...base, ...auto].filter((x) => /^\d{4}-\d{2}-\d{2}$/.test(x.fecha) && x.texto);
+  if (!items.length) return '';
+  return `<div class="efem panel" id="efem" hidden><div class="efem-tit">Un día como hoy</div><p class="efem-txt"></p><p class="efem-fte meta"></p></div>
+<script type="application/json" id="efem-datos">${JSON.stringify(items).replace(/</g, '\\u003c')}</script>
+<script>(function(){try{var d=JSON.parse(document.getElementById('efem-datos').textContent),h=new Date(),hoy=new Date(h.getFullYear(),h.getMonth(),h.getDate()),el=document.getElementById('efem');
+var md=function(f){return f.slice(5)},cand=[],dias=0;
+for(;dias<7&&!cand.length;dias++){var x=new Date(hoy);x.setDate(x.getDate()-dias);var k=String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');cand=d.filter(function(e){return md(e.fecha)===k&&+e.fecha.slice(0,4)<hoy.getFullYear()});}
+if(!cand.length)return;var e=cand[(hoy.getDate()+hoy.getMonth())%cand.length],p=e.fecha.split('-'),f=new Date(+p[0],+p[1]-1,+p[2]),txt=f.toLocaleDateString('es-AR',{day:'numeric',month:'long'})+' de '+p[0];
+el.querySelector('.efem-tit').textContent=dias===1?'Un día como hoy':'Esta semana en la historia';
+el.querySelector('.efem-txt').textContent=(dias===1?'Un día como hoy, ':'Un ')+txt+', '+e.texto;
+el.querySelector('.efem-fte').textContent='Fuente: '+e.fuente;el.hidden=false;}catch(_){}})();</script>`;
+}
+
 escribir('index.html', pagina({ ruta: '/', activo: 'inicio', cuerpo: `
 ${hero()}
 <div class="tres sec">
 <section><div class="sec-tit"><h2>Últimas noticias</h2><a href="/noticias">Ver todas</a></div>
 ${notas.length ? carrusel(notas.slice(0, 12)) : '<div class="panel"><div class="vacio" style="border:0">Las primeras notas se publican automáticamente a medida que terminan los partidos.</div></div>'}</section>
 <section><div class="sec-tit"><h2>Torneos y resultados</h2></div>${panelResultados('home', 10)}<a class="ver-mas panel" href="/resultados" style="margin-top:8px">Ver todos los resultados →</a>${estado.ultimaCorrida ? `<p class="meta" style="margin:6px 2px 0">Actualizado ${hora(estado.ultimaCorrida, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</p>` : ''}</section>
-<section><div class="sec-tit"><h2>Ranking A Todo Tenis</h2></div>${panelRanking('rk', 10)}<a class="ver-mas panel" href="/ranking" style="margin-top:8px">Ranking completo →</a></section>
+<section><div class="sec-tit"><h2>Ranking A Todo Tenis</h2></div>${panelRanking('rk', 10)}<a class="ver-mas panel" href="/ranking" style="margin-top:8px">Ranking completo →</a>${recuadroEfemeride()}</section>
 </div>
 ${torneosEnJuego.length ? `<section class="sec"><div class="sec-tit"><h2>Torneos en juego</h2><a href="/torneos">Ver todos</a></div><div class="tgrid fila-scroll">${torneosEnJuego.map(T.cardTorneo).join('')}</div></section>` : ''}
 <section class="sec"><div class="sec-tit"><h2>Próximos partidos</h2><a href="/resultados">Ver todos</a></div>
