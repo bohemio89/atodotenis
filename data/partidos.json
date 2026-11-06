@@ -10178,26 +10178,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T10:30:00Z",
+  "horario": "2026-11-06T10:40:00Z",
   "j1": {
-   "id": 548,
-   "nombre": "Aliaksandra Sasnovich",
-   "pais": "blr",
-   "ranking": 101
-  },
-  "j2": {
    "id": 509,
    "nombre": "Maria Sakkari",
    "pais": "gre",
    "ranking": 30
   },
+  "j2": {
+   "id": 548,
+   "nombre": "Aliaksandra Sasnovich",
+   "pais": "sin",
+   "ranking": 101
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.431Z",
+  "visto": "2026-11-06T10:45:24.221Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Hong Kong"
+  "torneoClave": "wta|Hong Kong",
+  "torneoId": "2241",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215507": {
   "id": 215507,
@@ -10820,7 +10844,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T09:30:00Z",
+  "horario": "2026-11-06T09:40:00Z",
   "j1": {
    "id": 251,
    "nombre": "Polina Kudermetova",
@@ -10836,7 +10860,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T09:45:22.474Z",
+  "visto": "2026-11-06T10:45:24.220Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Chennai",
@@ -10846,21 +10870,23 @@
   "score": {
    "games": [
     [
-     1
+     7,
+     0
     ],
     [
+     5,
      0
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
     "0",
-    "30"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -10943,7 +10969,7 @@
  },
  "215565": {
   "id": 215565,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Hong Kong",
   "ronda": "WTA Hong Kong - Quarter-finals",
   "rondaCod": "QF",
@@ -10972,9 +10998,9 @@
    ]
   },
   "dobles": true,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.431Z",
+  "visto": "2026-11-06T10:45:24.614Z",
   "tier": null,
   "importante": false,
   "torneoClave": "wta|Hong Kong",
@@ -10985,25 +11011,27 @@
    "games": [
     [
      1,
-     0
+     6,
+     10
     ],
     [
      6,
-     0
+     3,
+     7
     ]
    ],
    "sets": [
-    0,
+    2,
     1
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215566": {
   "id": 215566,
@@ -12663,17 +12691,17 @@
  },
  "215906": {
   "id": 215906,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Taipei",
   "ronda": "Taipei - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T09:00:00Z",
+  "horario": "2026-11-06T09:55:00Z",
   "j1": {
-   "id": 44002,
-   "nombre": "Chandrasekar/ Rai",
+   "id": 42975,
+   "nombre": "Donski / Poljak",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -12682,22 +12710,48 @@
    ]
   },
   "j2": {
-   "id": 42975,
-   "nombre": "Donski/ Poljak",
+   "id": 44002,
+   "nombre": "Anirudh Chandrasekar / Rai",
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ind",
     null
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.476Z",
+  "visto": "2026-11-06T10:45:24.220Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8838",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5,
+     1
+    ],
+    [
+     7,
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215907": {
   "id": 215907,
@@ -12760,9 +12814,9 @@
    "ranking": 102
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.431Z",
+  "visto": "2026-11-06T10:45:24.498Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": false,
@@ -12773,25 +12827,25 @@
    "games": [
     [
      1,
-     1
+     4
     ],
     [
      6,
-     1
+     6
     ]
    ],
    "sets": [
     0,
-    1
+    2
    ],
    "puntos": [
-    "30",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "215915": {
   "id": 215915,
@@ -13105,27 +13159,17 @@
  },
  "215937": {
   "id": 215937,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Hong Kong",
   "ronda": "WTA Hong Kong - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T10:00:00Z",
+  "horario": "2026-11-06T10:10:00Z",
   "j1": {
-   "id": 26829,
-   "nombre": "Gibson/ Inglis",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "aus",
-    "aus"
-   ]
-  },
-  "j2": {
    "id": 1425,
-   "nombre": "Maleckova/ Skoch",
+   "nombre": "Jesika Maleckova / Miriam Skoch",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -13133,13 +13177,47 @@
     "cze"
    ]
   },
+  "j2": {
+   "id": 26829,
+   "nombre": "Gibson / Inglis",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "aus",
+    "aus"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.431Z",
+  "visto": "2026-11-06T10:45:24.220Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8694",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215938": {
   "id": 215938,
@@ -13202,7 +13280,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T09:45:22.474Z",
   "torneoClave": "challenger|Luanda (Angola)",
@@ -13302,7 +13380,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T09:35:00Z",
+  "horario": "2026-11-06T09:40:00Z",
   "j1": {
    "id": 100,
    "nombre": "Maxim Mrva",
@@ -13318,7 +13396,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T09:45:22.474Z",
+  "visto": "2026-11-06T10:45:24.220Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
   "importante": false,
@@ -13328,21 +13406,23 @@
   "score": {
    "games": [
     [
-     0
+     5,
+     2
     ],
     [
-     0
+     7,
+     3
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "30",
-    "40"
+    "40",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -13425,17 +13505,27 @@
  },
  "215975": {
   "id": 215975,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Chennai",
   "ronda": "WTA Chennai - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T10:30:00Z",
+  "horario": "2026-11-06T10:35:00Z",
   "j1": {
-   "id": 36316,
-   "nombre": "da Silva Fick/ Kulambayeva",
+   "id": 12375,
+   "nombre": "Alana Smith / Falkowska",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "usa",
+    "pol"
+   ]
+  },
+  "j2": {
+   "id": 44012,
+   "nombre": "da Silva Fick / Kulambayeva",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -13443,23 +13533,37 @@
     "kaz"
    ]
   },
-  "j2": {
-   "id": 12375,
-   "nombre": "Falkowska/ Smith",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "pol",
-    "usa"
-   ]
-  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.431Z",
+  "visto": "2026-11-06T10:45:24.220Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "7826",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215976": {
   "id": 215976,
@@ -13522,12 +13626,12 @@
    "ranking": 136
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T09:45:22.473Z",
+  "visto": "2026-11-06T10:45:24.372Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
-  "importante": false,
+  "importante": true,
   "torneoId": "2241",
   "cubierto": false,
   "resultado": null,
@@ -13535,25 +13639,25 @@
    "games": [
     [
      2,
-     0
+     3
     ],
     [
      6,
-     0
+     6
     ]
    ],
    "sets": [
     0,
-    1
+    2
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "215978": {
   "id": 215978,
