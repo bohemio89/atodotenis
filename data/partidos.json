@@ -5491,7 +5491,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-04T20:08:28.456Z",
-  "importante": false,
+  "importante": true,
   "tier": "atp_1000",
   "torneoId": "1725",
   "cubierto": true,
@@ -6204,7 +6204,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T07:02:15.476Z",
   "importante": false,
@@ -9455,7 +9455,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-05T19:05:20.757Z",
-  "importante": false,
+  "importante": true,
   "tier": "atp_1000",
   "torneoClave": "atp|Paris",
   "torneoId": "1725",
@@ -9769,7 +9769,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-06T00:11:32.244Z",
-  "importante": false,
+  "importante": true,
   "tier": "atp_1000",
   "torneoClave": "atp|Paris",
   "torneoId": "1725",
@@ -10779,7 +10779,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-05T19:05:19.940Z",
-  "importante": false,
+  "importante": true,
   "tier": "atp_1000",
   "torneoClave": "atp|Paris",
   "torneoId": "1725",
@@ -10948,7 +10948,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T07:02:15.431Z",
   "tier": null,
@@ -11008,7 +11008,7 @@
   "motivo": null,
   "visto": "2026-11-05T19:05:20.122Z",
   "tier": "atp_1000",
-  "importante": false,
+  "importante": true,
   "torneoClave": "atp|Paris",
   "torneoId": "1725",
   "cubierto": true,
@@ -11456,7 +11456,7 @@
   "motivo": null,
   "visto": "2026-11-05T19:05:19.785Z",
   "tier": "atp_1000",
-  "importante": false,
+  "importante": true,
   "torneoClave": "atp|Paris",
   "torneoId": "1725",
   "cubierto": true,
@@ -11674,7 +11674,7 @@
   "motivo": null,
   "visto": "2026-11-05T19:05:19.185Z",
   "tier": "atp_1000",
-  "importante": false,
+  "importante": true,
   "torneoClave": "atp|Paris"
  },
  "215721": {
@@ -11704,7 +11704,7 @@
   "motivo": "walkover",
   "visto": "2026-11-05T19:05:19.185Z",
   "tier": "atp_1000",
-  "importante": false,
+  "importante": true,
   "torneoClave": "atp|Paris"
  },
  "215722": {
@@ -12014,7 +12014,7 @@
   "motivo": null,
   "visto": "2026-11-06T00:11:31.954Z",
   "tier": "atp_1000",
-  "importante": false,
+  "importante": true,
   "torneoClave": "atp|Paris",
   "torneoId": "1725",
   "cubierto": true,
@@ -12574,7 +12574,7 @@
    "ranking": 375
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T07:02:15.476Z",
   "torneoClave": "challenger|Taipei",
@@ -12736,7 +12736,7 @@
    "ranking": 102
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T07:02:15.431Z",
   "torneoClave": "wta|Hong Kong",
@@ -12906,7 +12906,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T07:30:00Z",
+  "horario": "2026-11-06T08:00:00Z",
   "j1": {
    "id": 193,
    "nombre": "Coleman Chak Lam Wong",
@@ -12920,12 +12920,36 @@
    "ranking": 409
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.476Z",
+  "visto": "2026-11-06T08:45:36.440Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2429",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215920": {
   "id": 215920,
@@ -13426,12 +13450,36 @@
    "ranking": 136
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.431Z",
+  "visto": "2026-11-06T08:45:36.440Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2241",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": null
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215978": {
   "id": 215978,
