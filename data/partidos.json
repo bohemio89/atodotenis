@@ -11490,7 +11490,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T13:45:24.401Z",
   "tier": "atp_1000",
@@ -12036,7 +12036,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T14:10:00Z",
+  "horario": "2026-11-06T14:00:00Z",
   "j1": {
    "id": 447,
    "nombre": "Nishesh Basavareddy",
@@ -12050,12 +12050,38 @@
    "ranking": 164
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.838Z",
+  "visto": "2026-11-06T14:45:21.096Z",
   "tier": null,
   "importante": false,
-  "torneoClave": "challenger|Bratislava 2"
+  "torneoClave": "challenger|Bratislava 2",
+  "torneoId": "3196",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215731": {
   "id": 215731,
@@ -12096,7 +12122,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T14:00:00Z",
+  "horario": "2026-11-06T14:10:00Z",
   "j1": {
    "id": 555,
    "nombre": "Oriol Roca Batalla",
@@ -12110,12 +12136,36 @@
    "ranking": 340
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.838Z",
+  "visto": "2026-11-06T14:45:21.096Z",
   "tier": null,
   "importante": false,
-  "torneoClave": "challenger|Villa Maria"
+  "torneoClave": "challenger|Villa Maria",
+  "torneoId": "7863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215769": {
   "id": 215769,
@@ -13054,26 +13104,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T13:40:00Z",
+  "horario": "2026-11-06T13:55:00Z",
   "j1": {
-   "id": 1580,
-   "nombre": "Mai Hontama",
-   "pais": "jpn",
-   "ranking": 160
-  },
-  "j2": {
    "id": 292,
    "nombre": "Magda Linette",
    "pais": "pol",
    "ranking": 68
   },
+  "j2": {
+   "id": 1580,
+   "nombre": "Mai Hontama",
+   "pais": "jpn",
+   "ranking": 160
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.744Z",
+  "visto": "2026-11-06T14:45:21.096Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215918": {
   "id": 215918,
@@ -13100,7 +13176,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T13:45:24.401Z",
+  "visto": "2026-11-06T14:45:21.096Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": false,
@@ -13110,19 +13186,21 @@
   "score": {
    "games": [
     [
-     5
+     7,
+     4
     ],
     [
-     6
+     6,
+     2
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "30",
-    "15"
+    "40",
+    "AD"
    ],
    "saca": 2
   },
@@ -13206,7 +13284,7 @@
    "ranking": 228
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T13:45:24.401Z",
   "torneoClave": "challenger|Taranto (Italy)",
@@ -13266,7 +13344,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T13:45:24.401Z",
+  "visto": "2026-11-06T14:45:21.096Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": true,
@@ -13276,19 +13354,23 @@
   "score": {
    "games": [
     [
-     5
+     6,
+     4,
+     4
     ],
     [
-     4
+     4,
+     6,
+     1
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -13320,7 +13402,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T13:45:24.401Z",
+  "visto": "2026-11-06T14:45:21.096Z",
   "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
   "importante": false,
@@ -13330,18 +13412,20 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     3
     ],
     [
-     0
+     2,
+     3
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
+    "30",
     "0"
    ],
    "saca": 1
@@ -13351,27 +13435,17 @@
  },
  "215936": {
   "id": 215936,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Chennai",
   "ronda": "WTA Chennai - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T12:30:00Z",
+  "horario": "2026-11-06T14:10:00Z",
   "j1": {
-   "id": 44013,
-   "nombre": "Bhamidipaty/ Rajeshwaran Revathi",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "ind"
-   ]
-  },
-  "j2": {
    "id": 10994,
-   "nombre": "Haverlag/ Udvardy",
+   "nombre": "Isabelle Haverlag / Udvardy",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -13379,13 +13453,49 @@
     "hun"
    ]
   },
+  "j2": {
+   "id": 44013,
+   "nombre": "Bhamidipaty / Maaya Rajeshwaran Revathi",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "ind"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.744Z",
+  "visto": "2026-11-06T14:45:21.096Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "7826",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215937": {
   "id": 215937,
@@ -13564,7 +13674,7 @@
    "ranking": 137
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T13:45:24.401Z",
   "torneoClave": "challenger|Bratislava 2",
@@ -13606,26 +13716,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T13:25:00Z",
+  "horario": "2026-11-06T14:45:00Z",
   "j1": {
-   "id": 586,
-   "nombre": "Kilian Feldbausch",
-   "pais": "sui",
-   "ranking": 262
-  },
-  "j2": {
    "id": 396,
    "nombre": "Sumit Nagal",
    "pais": "ind",
    "ranking": 265
   },
+  "j2": {
+   "id": 586,
+   "nombre": "Kilian Feldbausch",
+   "pais": "sui",
+   "ranking": 262
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.838Z",
+  "visto": "2026-11-06T14:45:21.096Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14827",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215942": {
   "id": 215942,
@@ -14170,7 +14304,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T13:45:24.401Z",
   "torneoClave": "challenger|Taranto (Italy)",
