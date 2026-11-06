@@ -16,7 +16,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "jpn"
    ]
   },
   "j2": {
@@ -155,7 +155,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "usa",
     "gbr"
    ]
   },
@@ -551,8 +551,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "fra",
+    "fra"
    ]
   },
   "j2": {
@@ -562,7 +562,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "usa"
    ]
   },
   "dobles": true,
@@ -666,7 +666,7 @@
    "ranking": null,
    "paises": [
     "ind",
-    null
+    "ind"
    ]
   },
   "dobles": true,
@@ -729,7 +729,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "aus",
     "kaz"
    ]
   },
@@ -961,7 +961,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ned",
     "hun"
    ]
   },
@@ -1805,7 +1805,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ecu",
     null
    ]
   },
@@ -3427,8 +3427,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "aut",
+    "aut"
    ]
   },
   "j2": {
@@ -3476,7 +3476,7 @@
    "ranking": null,
    "paises": [
     "usa",
-    null
+    "gbr"
    ]
   },
   "dobles": true,
@@ -4124,7 +4124,7 @@
   "j2": {
    "id": 548,
    "nombre": "Aliaksandra Sasnovich",
-   "pais": null,
+   "pais": "sin",
    "ranking": 101
   },
   "dobles": false,
@@ -4296,7 +4296,7 @@
   "j2": {
    "id": 2522,
    "nombre": "K. Novak",
-   "pais": null,
+   "pais": "slo",
    "ranking": null
   },
   "dobles": false,
@@ -4744,24 +4744,50 @@
   "genero": "women",
   "horario": "2026-11-05T11:15:00Z",
   "j1": {
-   "id": 985,
-   "nombre": "Tereza Valentova",
-   "pais": "cze",
-   "ranking": 85
-  },
-  "j2": {
    "id": 62,
    "nombre": "Alexandra Eala",
    "pais": "phi",
    "ranking": 17
   },
+  "j2": {
+   "id": 985,
+   "nombre": "Tereza Valentova",
+   "pais": "cze",
+   "ranking": 85
+  },
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:32.112Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Hong Kong"
+  "torneoClave": "wta|Hong Kong",
+  "torneoId": "2241",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     7
+    ],
+    [
+     4,
+     6
+    ]
+   ],
+   "sets": [
+    2,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "214927": {
   "id": 214927,
@@ -4845,8 +4871,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "cze",
+    "nzl"
    ]
   },
   "dobles": true,
@@ -5720,7 +5746,7 @@
   "j2": {
    "id": 5960,
    "nombre": "M. Walters",
-   "pais": null,
+   "pais": "gbr",
    "ranking": null
   },
   "dobles": false,
@@ -6028,7 +6054,7 @@
    "ranking": null,
    "paises": [
     "usa",
-    null
+    "usa"
    ]
   },
   "dobles": true,
@@ -6074,10 +6100,10 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-05T22:00:00Z",
+  "horario": "2026-11-05T23:05:00Z",
   "j1": {
-   "id": 44724,
-   "nombre": "McGiffin/ Osborne",
+   "id": 19632,
+   "nombre": "Georgina García Pérez / Mediorreal",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -6086,8 +6112,8 @@
    ]
   },
   "j2": {
-   "id": 19632,
-   "nombre": "Mediorreal/ Perez Garcia",
+   "id": 44724,
+   "nombre": "McGiffin / Osborne",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -6096,12 +6122,38 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger_women|Cali"
+  "torneoClave": "challenger_women|Cali",
+  "torneoId": "8539",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     7,
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215138": {
   "id": 215138,
@@ -6112,10 +6164,20 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-05T20:50:00Z",
+  "horario": "2026-11-05T23:10:00Z",
   "j1": {
+   "id": 6071,
+   "nombre": "Despina Papamichail / Sofia Costoulas",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "gre",
+    "bel"
+   ]
+  },
+  "j2": {
    "id": 17107,
-   "nombre": "Carle/ Pigossi",
+   "nombre": "Carle / Pigossi",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -6123,23 +6185,39 @@
     null
    ]
   },
-  "j2": {
-   "id": 6071,
-   "nombre": "Costoulas/ Papamichail",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "gre"
-   ]
-  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger_women|Cali"
+  "torneoClave": "challenger_women|Cali",
+  "torneoId": "8539",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     1
+    ],
+    [
+     6,
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215139": {
   "id": 215139,
@@ -6242,7 +6320,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:32.317Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Chennai",
@@ -6253,25 +6331,27 @@
    "games": [
     [
      6,
-     2
+     4,
+     5
     ],
     [
      4,
-     2
+     6,
+     7
     ]
    ],
    "sets": [
     1,
-    0
+    2
    ],
    "puntos": [
-    "15",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "215142": {
   "id": 215142,
@@ -6298,7 +6378,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:32.421Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Chennai",
@@ -6309,7 +6389,7 @@
    "games": [
     [
      7,
-     3
+     6
     ],
     [
      6,
@@ -6317,17 +6397,17 @@
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
     "15",
     "15"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215143": {
   "id": 215143,
@@ -6992,10 +7072,36 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:32.017Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Chennai"
+  "torneoClave": "wta|Chennai",
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2,
+     3
+    ],
+    [
+     6,
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    2
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": true,
+  "ganador": 2
  },
  "215190": {
   "id": 215190,
@@ -7514,7 +7620,7 @@
    "ranking": 182
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-05T19:05:19.551Z",
   "importante": false,
@@ -7568,7 +7674,7 @@
    "ranking": 248
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-05T19:05:19.551Z",
   "importante": false,
@@ -7726,7 +7832,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T23:00:00Z",
+  "horario": "2026-11-05T23:15:00Z",
   "j1": {
    "id": 116,
    "nombre": "Andres Andrade",
@@ -7740,12 +7846,38 @@
    "ranking": 542
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger|Charlottesville"
+  "torneoClave": "challenger|Charlottesville",
+  "torneoId": "2497",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     1
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215394": {
   "id": 215394,
@@ -7756,26 +7888,50 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T22:00:00Z",
+  "horario": "2026-11-06T00:00:00Z",
   "j1": {
-   "id": 891,
-   "nombre": "Thiago Seyboth Wild",
-   "pais": "bra",
-   "ranking": 109
-  },
-  "j2": {
    "id": 149,
    "nombre": "Franco Roncadelli",
    "pais": "uru",
    "ranking": 261
   },
+  "j2": {
+   "id": 891,
+   "nombre": "Thiago Seyboth Wild",
+   "pais": "bra",
+   "ranking": 109
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger|Costa do Sauipe"
+  "torneoClave": "challenger|Costa do Sauipe",
+  "torneoId": "13361",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215395": {
   "id": 215395,
@@ -7800,7 +7956,7 @@
    "ranking": 676
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-05T19:05:19.550Z",
   "importante": false,
@@ -7859,14 +8015,14 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "sui",
     "ita"
    ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -7888,7 +8044,7 @@
    "ranking": null,
    "paises": [
     "esp",
-    null
+    "usa"
    ]
   },
   "j2": {
@@ -7904,7 +8060,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -7942,7 +8098,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -7980,7 +8136,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8002,7 +8158,7 @@
    "ranking": null,
    "paises": [
     "esp",
-    null
+    "usa"
    ]
   },
   "j2": {
@@ -8011,14 +8167,14 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "sui",
     "ita"
    ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8056,7 +8212,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8094,7 +8250,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8125,14 +8281,14 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "sui",
     "ita"
    ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8170,7 +8326,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8208,7 +8364,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8240,13 +8396,13 @@
    "ranking": null,
    "paises": [
     "esp",
-    null
+    "usa"
    ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8284,7 +8440,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8344,7 +8500,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8374,7 +8530,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8404,7 +8560,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8434,7 +8590,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8464,7 +8620,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8494,7 +8650,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8524,7 +8680,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8554,7 +8710,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8584,7 +8740,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8614,7 +8770,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8644,7 +8800,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8674,7 +8830,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh"
@@ -8935,8 +9091,8 @@
    "pais": null,
    "ranking": 219,
    "paises": [
-    null,
-    null
+    "aut",
+    "aut"
    ]
   },
   "dobles": true,
@@ -9467,8 +9623,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "fra",
+    "fra"
    ]
   },
   "dobles": true,
@@ -9504,7 +9660,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.185Z",
+  "visto": "2026-11-06T00:11:32.244Z",
   "importante": false,
   "tier": "atp_1000",
   "torneoClave": "atp|Paris",
@@ -9515,25 +9671,25 @@
    "games": [
     [
      7,
-     0
+     6
     ],
     [
      6,
-     0
+     4
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
-    "30",
+    "0",
     "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215493": {
   "id": 215493,
@@ -9620,7 +9776,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "importante": false,
   "tier": null,
   "torneoClave": "challenger_women|Luanda (Angola) - Qualification"
@@ -9930,7 +10086,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Hong Kong"
@@ -10064,7 +10220,7 @@
   "j1": {
    "id": 349,
    "nombre": "F. Ribero",
-   "pais": null,
+   "pais": "arg",
    "ranking": null
   },
   "j2": {
@@ -10207,8 +10363,8 @@
    "pais": null,
    "ranking": 219,
    "paises": [
-    null,
-    null
+    "aut",
+    "aut"
    ]
   },
   "dobles": true,
@@ -10271,7 +10427,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "usa",
     "gbr"
    ]
   },
@@ -10518,7 +10674,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Chennai"
@@ -10626,13 +10782,13 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "jpn"
    ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "tier": null,
   "importante": false,
   "torneoClave": "wta|Hong Kong"
@@ -10858,7 +11014,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "tier": null,
   "importante": false,
   "torneoClave": "wta|Chennai"
@@ -10946,7 +11102,7 @@
    "ranking": 578
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-05T19:05:19.550Z",
   "tier": null,
@@ -11025,7 +11181,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "usa",
     "usa"
    ]
   },
@@ -11036,13 +11192,13 @@
    "ranking": null,
    "paises": [
     "usa",
-    null
+    "gbr"
    ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.186Z",
+  "visto": "2026-11-06T00:11:30.959Z",
   "tier": "atp_1000",
   "importante": false,
   "torneoClave": "atp|Paris"
@@ -11056,7 +11212,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T04:30:00Z",
+  "horario": "2026-11-06T14:00:00Z",
   "j1": {
    "id": 44014,
    "nombre": "Burrage/ Montgomery",
@@ -11074,13 +11230,13 @@
    "ranking": null,
    "paises": [
     "ind",
-    null
+    "ind"
    ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "tier": null,
   "importante": false,
   "torneoClave": "wta|Chennai"
@@ -11150,34 +11306,60 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T00:00:00Z",
+  "horario": "2026-11-05T23:45:00Z",
   "j1": {
    "id": 7476,
-   "nombre": "Aboian/ Fernandez",
+   "nombre": "Aboian / Bruno Fernandez",
    "pais": null,
    "ranking": null,
    "paises": [
     null,
-    null
+    "bra"
    ]
   },
   "j2": {
    "id": 27479,
-   "nombre": "Dellien Velasco/ Huertas Del Pino Cordova",
+   "nombre": "Arklon Huertas Del Pino Cordova / Murkel Alejandro Dellien Velasco",
    "pais": null,
    "ranking": null,
    "paises": [
     null,
-    null
+    "bol"
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
-  "torneoClave": "challenger|Villa Maria"
+  "torneoClave": "challenger|Villa Maria",
+  "torneoId": "7858",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215679": {
   "id": 215679,
@@ -11188,7 +11370,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T22:35:00Z",
+  "horario": "2026-11-05T22:05:00Z",
   "j1": {
    "id": 44054,
    "nombre": "Casanova/ Ribero",
@@ -11210,9 +11392,9 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.550Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
   "torneoClave": "challenger|Villa Maria"
@@ -11390,7 +11572,7 @@
    "ranking": 218
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-05T19:05:19.550Z",
   "tier": null,
@@ -11454,7 +11636,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-05T19:05:19.550Z",
   "tier": null,
@@ -11552,7 +11734,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
   "torneoClave": "challenger|Bratislava 2"
@@ -11566,7 +11748,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T15:00:00Z",
+  "horario": "2026-11-06T17:30:00Z",
   "j1": {
    "id": 436,
    "nombre": "Stefan Kozlov",
@@ -11582,7 +11764,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
   "torneoClave": "challenger|Charlottesville"
@@ -11596,7 +11778,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T13:00:00Z",
+  "horario": "2026-11-06T14:00:00Z",
   "j1": {
    "id": 555,
    "nombre": "Oriol Roca Batalla",
@@ -11612,7 +11794,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
   "torneoClave": "challenger|Villa Maria"
@@ -11640,9 +11822,9 @@
    "ranking": 7
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.185Z",
+  "visto": "2026-11-06T00:11:31.954Z",
   "tier": "atp_1000",
   "importante": false,
   "torneoClave": "atp|Paris",
@@ -11653,25 +11835,25 @@
    "games": [
     [
      6,
-     2
+     6
     ],
     [
      3,
-     1
+     4
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215770": {
   "id": 215770,
@@ -11696,7 +11878,7 @@
    "ranking": 137
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-05T19:05:19.550Z",
   "tier": null,
@@ -11735,8 +11917,8 @@
   "id": 215780,
   "tour": "challenger",
   "torneo": "Costa do Sauipe",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Costa do Sauipe - Quarter-finals",
+  "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
@@ -11756,7 +11938,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
   "torneoClave": "challenger|Costa do Sauipe"
@@ -11822,7 +12004,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-05T19:05:19.550Z",
   "tier": null,
@@ -11938,20 +12120,10 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T20:40:00Z",
+  "horario": "2026-11-05T23:15:00Z",
   "j1": {
-   "id": 42976,
-   "nombre": "Galarneau/ Hach Verdugo",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "j2": {
    "id": 12417,
-   "nombre": "Milavsky/ Shick",
+   "nombre": "Milavsky / Shick",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -11959,13 +12131,49 @@
     "usa"
    ]
   },
+  "j2": {
+   "id": 42976,
+   "nombre": "Galarneau / Hans Hach Verdugo",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.550Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
-  "torneoClave": "challenger|Charlottesville"
+  "torneoClave": "challenger|Charlottesville",
+  "torneoId": "2499",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     5
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215863": {
   "id": 215863,
@@ -11976,7 +12184,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T15:00:00Z",
+  "horario": "2026-11-06T23:00:00Z",
   "j1": {
    "id": 990,
    "nombre": "Marcos Giron",
@@ -11992,7 +12200,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
   "torneoClave": "challenger|Charlottesville"
@@ -12006,7 +12214,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T13:00:00Z",
+  "horario": "2026-11-06T15:30:00Z",
   "j1": {
    "id": 422,
    "nombre": "Juan Manuel La Serna",
@@ -12022,7 +12230,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
   "torneoClave": "challenger|Villa Maria"
@@ -12031,12 +12239,12 @@
   "id": 215871,
   "tour": "challenger_doubles",
   "torneo": "Costa do Sauipe",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Costa do Sauipe - Quarter-finals",
+  "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-05T22:00:00Z",
+  "horario": "2026-11-05T22:15:00Z",
   "j1": {
    "id": 44042,
    "nombre": "Marcondes/ Meligeni Alves",
@@ -12058,9 +12266,9 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
   "torneoClave": "challenger|Costa do Sauipe"
@@ -12069,8 +12277,8 @@
   "id": 215880,
   "tour": "challenger",
   "torneo": "Costa do Sauipe",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Costa do Sauipe - Quarter-finals",
+  "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
@@ -12090,7 +12298,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "tier": null,
   "importante": false,
   "torneoClave": "challenger|Costa do Sauipe"
@@ -12120,7 +12328,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
   "importante": false
@@ -12150,7 +12358,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
   "importante": false
@@ -12180,7 +12388,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
   "importante": false
@@ -12210,7 +12418,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger_women|Luanda (Angola) - Qualification",
   "tier": null,
   "importante": false
@@ -12248,7 +12456,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
   "importante": false
@@ -12286,7 +12494,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
   "importante": false
@@ -12316,7 +12524,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": false
@@ -12346,7 +12554,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger_women|Luanda (Angola) - Qualification",
   "tier": null,
   "importante": false
@@ -12367,8 +12575,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "aut",
+    "aut"
    ]
   },
   "j2": {
@@ -12377,14 +12585,14 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "cze",
+    "nzl"
    ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.185Z",
+  "visto": "2026-11-06T00:11:30.959Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": false
@@ -12414,7 +12622,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
   "importante": false
@@ -12444,7 +12652,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": false
@@ -12474,7 +12682,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
   "importante": false
@@ -12504,7 +12712,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
   "importante": false
@@ -12534,7 +12742,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.185Z",
+  "visto": "2026-11-06T00:11:30.959Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": false
@@ -12564,7 +12772,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger_women|Luanda (Angola) - Qualification",
   "tier": null,
   "importante": false
@@ -12578,7 +12786,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T04:30:00Z",
+  "horario": "2026-11-06T12:30:00Z",
   "j1": {
    "id": 44013,
    "nombre": "Bhamidipaty/ Rajeshwaran Revathi",
@@ -12595,14 +12803,14 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ned",
     "hun"
    ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
   "importante": false
@@ -12640,7 +12848,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": false
@@ -12670,7 +12878,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
+  "visto": "2026-11-06T00:11:31.021Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
   "importante": false
@@ -12708,7 +12916,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger_women|Luanda (Angola)",
   "tier": null,
   "importante": false
@@ -12738,7 +12946,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger|Bratislava 2",
   "tier": null,
   "importante": false
@@ -12768,7 +12976,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
   "importante": false
@@ -12798,8 +13006,590 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
+  "visto": "2026-11-06T00:11:31.145Z",
   "torneoClave": "challenger|Taranto (Italy)",
+  "tier": null,
+  "importante": false
+ },
+ "215973": {
+  "id": 215973,
+  "tour": "atp_doubles",
+  "torneo": "Paris",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T16:00:00Z",
+  "j1": {
+   "id": 1743,
+   "nombre": "Halys/ Herbert",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "fra",
+    null
+   ]
+  },
+  "j2": {
+   "id": 1400,
+   "nombre": "Arribage/ Olivetti",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "fra",
+    "fra"
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:30.959Z",
+  "torneoClave": "atp|Paris",
+  "tier": "atp_1000",
+  "importante": false
+ },
+ "215974": {
+  "id": 215974,
+  "tour": "atp_doubles",
+  "torneo": "Paris",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T17:30:00Z",
+  "j1": {
+   "id": 1788,
+   "nombre": "Heliovaara/ Patten",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 10961,
+   "nombre": "Bonzi/ Rinderknech",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "fra",
+    "fra"
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:30.959Z",
+  "torneoClave": "atp|Paris",
+  "tier": "atp_1000",
+  "importante": false
+ },
+ "215975": {
+  "id": 215975,
+  "tour": "wta_doubles",
+  "torneo": "Chennai",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-06T10:30:00Z",
+  "j1": {
+   "id": 36316,
+   "nombre": "da Silva Fick/ Kulambayeva",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "aus",
+    "kaz"
+   ]
+  },
+  "j2": {
+   "id": 12375,
+   "nombre": "Falkowska/ Smith",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "pol",
+    "usa"
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.021Z",
+  "torneoClave": "wta|Chennai",
+  "tier": null,
+  "importante": false
+ },
+ "215976": {
+  "id": 215976,
+  "tour": "challenger_women_doubles",
+  "torneo": "Luanda (Angola)",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-06T12:30:00Z",
+  "j1": {
+   "id": 44192,
+   "nombre": "Sanchez/ Zaytseva",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 4320,
+   "nombre": "Kubka/ Mikulskyte",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger_women|Luanda (Angola)",
+  "tier": null,
+  "importante": false
+ },
+ "215977": {
+  "id": 215977,
+  "tour": "wta",
+  "torneo": "Hong Kong",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-06T08:30:00Z",
+  "j1": {
+   "id": 63,
+   "nombre": "Sorana Cirstea",
+   "pais": "rou",
+   "ranking": 15
+  },
+  "j2": {
+   "id": 1905,
+   "nombre": "Alexandra Shubladze",
+   "pais": "rus",
+   "ranking": 136
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.021Z",
+  "torneoClave": "wta|Hong Kong",
+  "tier": null,
+  "importante": false
+ },
+ "215978": {
+  "id": 215978,
+  "tour": "challenger_doubles",
+  "torneo": "Bratislava 2",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T11:00:00Z",
+  "j1": {
+   "id": 5251,
+   "nombre": "Liutarevich/ Pieczonka",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 11266,
+   "nombre": "Rojer/ Winegar",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger|Bratislava 2",
+  "tier": null,
+  "importante": false
+ },
+ "216026": {
+  "id": 216026,
+  "tour": "atp",
+  "torneo": "Paris",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T14:30:00Z",
+  "j1": {
+   "id": 232,
+   "nombre": "Luca van Assche",
+   "pais": "fra",
+   "ranking": 47
+  },
+  "j2": {
+   "id": 190,
+   "nombre": "Rinky Hijikata",
+   "pais": "aus",
+   "ranking": 83
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:30.959Z",
+  "torneoClave": "atp|Paris",
+  "tier": "atp_1000",
+  "importante": false
+ },
+ "216027": {
+  "id": 216027,
+  "tour": "challenger_doubles",
+  "torneo": "Bratislava 2",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T11:00:00Z",
+  "j1": {
+   "id": 20573,
+   "nombre": "Vocel/ Vrbensky",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 5266,
+   "nombre": "Karol/ Paulson",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger|Bratislava 2",
+  "tier": null,
+  "importante": false
+ },
+ "216028": {
+  "id": 216028,
+  "tour": "challenger_doubles",
+  "torneo": "Taranto (Italy)",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T11:00:00Z",
+  "j1": {
+   "id": 42963,
+   "nombre": "Hopper/ Whitehouse",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 1676,
+   "nombre": "Mansouri/ Neuchrist",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger|Taranto (Italy)",
+  "tier": null,
+  "importante": false
+ },
+ "216029": {
+  "id": 216029,
+  "tour": "challenger_doubles",
+  "torneo": "Taranto (Italy)",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T12:30:00Z",
+  "j1": {
+   "id": 1679,
+   "nombre": "Forcano/ Izquierdo Luque",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 44026,
+   "nombre": "Duda/ Pereira",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger|Taranto (Italy)",
+  "tier": null,
+  "importante": false
+ },
+ "216036": {
+  "id": 216036,
+  "tour": "challenger",
+  "torneo": "Bratislava 2",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T16:00:00Z",
+  "j1": {
+   "id": 399,
+   "nombre": "Dalibor Svrcina",
+   "pais": "cze",
+   "ranking": 119
+  },
+  "j2": {
+   "id": 576,
+   "nombre": "Zsombor Piros",
+   "pais": "hun",
+   "ranking": 101
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger|Bratislava 2",
+  "tier": null,
+  "importante": false
+ },
+ "216037": {
+  "id": 216037,
+  "tour": "challenger",
+  "torneo": "Taranto (Italy)",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T14:00:00Z",
+  "j1": {
+   "id": 206,
+   "nombre": "Francesco Maestrelli",
+   "pais": "ita",
+   "ranking": 176
+  },
+  "j2": {
+   "id": 90,
+   "nombre": "Carlo Alberto Caniato",
+   "pais": "ita",
+   "ranking": 306
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger|Taranto (Italy)",
+  "tier": null,
+  "importante": false
+ },
+ "216038": {
+  "id": 216038,
+  "tour": "challenger",
+  "torneo": "Villa Maria",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T17:00:00Z",
+  "j1": {
+   "id": 417,
+   "nombre": "Juan Bautista Torres",
+   "pais": "arg",
+   "ranking": 314
+  },
+  "j2": {
+   "id": 622,
+   "nombre": "Genaro Alberto Olivieri",
+   "pais": "arg",
+   "ranking": 257
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger|Villa Maria",
+  "tier": null,
+  "importante": false
+ },
+ "216051": {
+  "id": 216051,
+  "tour": "atp",
+  "torneo": "Paris",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T18:00:00Z",
+  "j1": {
+   "id": 18,
+   "nombre": "Taylor Fritz",
+   "pais": "usa",
+   "ranking": 12
+  },
+  "j2": {
+   "id": 13,
+   "nombre": "Carlos Alcaraz",
+   "pais": "esp",
+   "ranking": 3
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:30.959Z",
+  "torneoClave": "atp|Paris",
+  "tier": "atp_1000",
+  "importante": false
+ },
+ "216052": {
+  "id": 216052,
+  "tour": "challenger_women",
+  "torneo": "Cali",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-06T16:00:00Z",
+  "j1": {
+   "id": 156,
+   "nombre": "Leyre Romero Gormaz",
+   "pais": "esp",
+   "ranking": 131
+  },
+  "j2": {
+   "id": 455,
+   "nombre": "Julia Riera",
+   "pais": "arg",
+   "ranking": 137
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger_women|Cali",
+  "tier": null,
+  "importante": false
+ },
+ "216053": {
+  "id": 216053,
+  "tour": "challenger",
+  "torneo": "Charlottesville",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T16:00:00Z",
+  "j1": {
+   "id": 784,
+   "nombre": "Max Hans Rehberg",
+   "pais": "ger",
+   "ranking": 248
+  },
+  "j2": {
+   "id": 618,
+   "nombre": "Aidan Mayo",
+   "pais": "usa",
+   "ranking": 285
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger|Charlottesville",
+  "tier": null,
+  "importante": false
+ },
+ "216054": {
+  "id": 216054,
+  "tour": "challenger_doubles",
+  "torneo": "Charlottesville",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-07T18:00:00Z",
+  "j1": {
+   "id": 38341,
+   "nombre": "Jans/ Vliegen",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 38376,
+   "nombre": "Hilderbrand/ Pavel",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-06T00:11:31.145Z",
+  "torneoClave": "challenger|Charlottesville",
   "tier": null,
   "importante": false
  },
@@ -12834,7 +13624,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-05T19:05:19.550Z",
   "importante": false,
