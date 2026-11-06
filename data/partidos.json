@@ -6175,14 +6175,14 @@
  },
  "215137": {
   "id": 215137,
-  "tour": "challenger_women_doubles",
+  "tour": "challenger",
   "torneo": "Cali",
   "ronda": "Cali - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T17:00:00Z",
+  "horario": "2026-11-06T17:05:00Z",
   "j1": {
    "id": 19632,
    "nombre": "Georgina García Pérez / Mediorreal",
@@ -6204,12 +6204,12 @@
    ]
   },
   "dobles": true,
-  "estado": "por_confirmar",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.866Z",
+  "visto": "2026-11-06T17:45:22.667Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger_women|Cali",
+  "torneoClave": "challenger|Cali",
   "torneoId": "8539",
   "cubierto": false,
   "resultado": null,
@@ -6217,22 +6217,24 @@
    "games": [
     [
      6,
-     1
+     7,
+     6
     ],
     [
      7,
-     2
+     6,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -11552,7 +11554,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T16:45:22.635Z",
   "tier": null,
@@ -12622,7 +12624,7 @@
    "ranking": 254
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T16:45:22.635Z",
   "tier": null,
@@ -13088,7 +13090,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T15:40:00Z",
+  "horario": "2026-11-07T10:00:00Z",
   "j1": {
    "id": 278,
    "nombre": "Anna Blinkova",
@@ -13104,7 +13106,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T16:45:22.635Z",
+  "visto": "2026-11-06T17:45:22.667Z",
   "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
   "importante": false,
@@ -13672,11 +13674,11 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T16:40:00Z",
+  "horario": "2026-11-06T16:50:00Z",
   "j1": {
    "id": 301,
    "nombre": "Anastasia Zakharova",
-   "pais": "sin",
+   "pais": "rus",
    "ranking": 107
   },
   "j2": {
@@ -13688,7 +13690,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T16:45:22.635Z",
+  "visto": "2026-11-06T17:45:22.667Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
   "importante": false,
@@ -13698,19 +13700,21 @@
   "score": {
    "games": [
     [
+     6,
      0
     ],
     [
+     2,
      0
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "AD",
+    "40"
    ],
    "saca": 2
   },
@@ -13858,7 +13862,7 @@
    "ranking": 262
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T16:45:22.635Z",
   "torneoClave": "challenger|Taranto (Italy)",
@@ -13960,7 +13964,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T16:35:00Z",
+  "horario": "2026-11-06T16:45:00Z",
   "j1": {
    "id": 1400,
    "nombre": "Albano Olivetti / Theo Arribage",
@@ -13984,7 +13988,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T16:45:22.635Z",
+  "visto": "2026-11-06T17:45:22.667Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": false,
@@ -13994,18 +13998,20 @@
   "score": {
    "games": [
     [
-     0
+     5,
+     2
     ],
     [
-     0
+     7,
+     4
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
    "saca": 2
@@ -14298,7 +14304,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T16:45:22.635Z",
+  "visto": "2026-11-06T17:45:22.667Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": true,
@@ -14309,22 +14315,24 @@
    "games": [
     [
      4,
-     5
+     7,
+     3
     ],
     [
+     6,
      6,
      4
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "0",
-    "0"
+    "30",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -14544,7 +14552,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T16:45:22.635Z",
+  "visto": "2026-11-06T17:45:22.667Z",
   "torneoClave": "challenger|Bratislava 2",
   "tier": null,
   "importante": false,
@@ -14554,18 +14562,22 @@
   "score": {
    "games": [
     [
+     4,
+     6,
      3
     ],
     [
-     5
+     6,
+     0,
+     1
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "40",
+    "30",
     "30"
    ],
    "saca": 2
@@ -14582,26 +14594,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T16:10:00Z",
+  "horario": "2026-11-06T17:40:00Z",
   "j1": {
-   "id": 206,
-   "nombre": "Francesco Maestrelli",
-   "pais": "ita",
-   "ranking": 176
-  },
-  "j2": {
    "id": 90,
    "nombre": "Carlo Alberto Caniato",
    "pais": "ita",
    "ranking": 306
   },
+  "j2": {
+   "id": 206,
+   "nombre": "Francesco Maestrelli",
+   "pais": "ita",
+   "ranking": 176
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.866Z",
+  "visto": "2026-11-06T17:45:22.667Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14827",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216038": {
   "id": 216038,
@@ -14612,7 +14648,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T17:15:00Z",
+  "horario": "2026-11-06T17:25:00Z",
   "j1": {
    "id": 417,
    "nombre": "Juan Bautista Torres",
@@ -14626,12 +14662,36 @@
    "ranking": 257
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.866Z",
+  "visto": "2026-11-06T17:45:22.667Z",
   "torneoClave": "challenger|Villa Maria",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "7863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216051": {
   "id": 216051,
@@ -14665,14 +14725,14 @@
  },
  "216052": {
   "id": 216052,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Cali",
   "ronda": "Cali - Semi-finals",
   "rondaCod": "SF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T17:00:00Z",
+  "horario": "2026-11-06T17:15:00Z",
   "j1": {
    "id": 156,
    "nombre": "Leyre Romero Gormaz",
@@ -14686,12 +14746,36 @@
    "ranking": 137
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.866Z",
-  "torneoClave": "challenger_women|Cali",
+  "visto": "2026-11-06T17:45:22.667Z",
+  "torneoClave": "challenger|Cali",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1857",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216053": {
   "id": 216053,
@@ -14718,7 +14802,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T16:45:22.635Z",
+  "visto": "2026-11-06T17:45:22.667Z",
   "torneoClave": "challenger|Charlottesville",
   "tier": null,
   "importante": false,
@@ -14728,21 +14812,23 @@
   "score": {
    "games": [
     [
-     3
+     7,
+     5
     ],
     [
-     4
+     6,
+     2
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -15156,7 +15242,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T16:45:22.635Z",
   "torneoClave": "challenger|Villa Maria",
