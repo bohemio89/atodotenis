@@ -6204,7 +6204,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T11:45:22.838Z",
   "importante": false,
@@ -9861,7 +9861,7 @@
  },
  "215495": {
   "id": 215495,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Luanda (Angola)",
   "ronda": "Luanda - Quarter-finals",
   "rondaCod": "QF",
@@ -9884,29 +9884,31 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.838Z",
+  "visto": "2026-11-06T12:45:22.561Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "challenger_women|Luanda (Angola)",
+  "torneoClave": "challenger|Luanda (Angola)",
   "torneoId": "14828",
   "cubierto": false,
   "resultado": null,
   "score": {
    "games": [
     [
-     4
+     7,
+     3
     ],
     [
-     4
+     6,
+     2
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "30",
-    "15"
+    "40",
+    "30"
    ],
    "saca": 2
   },
@@ -10216,7 +10218,7 @@
    "ranking": 101
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T11:45:22.744Z",
   "importante": false,
@@ -10884,7 +10886,7 @@
    "ranking": 75
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T11:45:22.744Z",
   "importante": false,
@@ -11266,7 +11268,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T12:10:00Z",
+  "horario": "2026-11-06T12:20:00Z",
   "j1": {
    "id": 277,
    "nombre": "Robin Montgomery",
@@ -11275,17 +11277,41 @@
   },
   "j2": {
    "id": 5572,
-   "nombre": "M. Rajeshwaran Revathi",
+   "nombre": "Maaya Rajeshwaran Revathi",
    "pais": "ind",
-   "ranking": null
+   "ranking": 669
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.744Z",
+  "visto": "2026-11-06T12:45:22.561Z",
   "tier": null,
   "importante": false,
-  "torneoClave": "wta|Chennai"
+  "torneoClave": "wta|Chennai",
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215595": {
   "id": 215595,
@@ -12689,7 +12715,7 @@
  },
  "215905": {
   "id": 215905,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Luanda (Angola)",
   "ronda": "Luanda - Quarter-finals",
   "rondaCod": "QF",
@@ -12712,8 +12738,8 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.838Z",
-  "torneoClave": "challenger_women|Luanda (Angola)",
+  "visto": "2026-11-06T12:45:22.561Z",
+  "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
   "importante": false,
   "torneoId": "14828",
@@ -12722,19 +12748,21 @@
   "score": {
    "games": [
     [
-     1
+     1,
+     5
     ],
     [
-     5
+     6,
+     6
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "15",
-    "40"
+    "0",
+    "15"
    ],
    "saca": 2
   },
@@ -12807,7 +12835,7 @@
  },
  "215907": {
   "id": 215907,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Taipei",
   "ronda": "Taipei - Semi-finals",
   "rondaCod": "SF",
@@ -12838,7 +12866,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.838Z",
+  "visto": "2026-11-06T12:45:22.561Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
   "importante": false,
@@ -12848,21 +12876,23 @@
   "score": {
    "games": [
     [
-     1
+     6,
+     5
     ],
     [
-     0
+     4,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
+    "30",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -13030,26 +13060,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T12:10:00Z",
+  "horario": "2026-11-06T12:30:00Z",
   "j1": {
-   "id": 715,
-   "nombre": "Antonia Ruzic",
-   "pais": "cro",
-   "ranking": 81
-  },
-  "j2": {
    "id": 62,
    "nombre": "Alexandra Eala",
    "pais": "phi",
    "ranking": 17
   },
+  "j2": {
+   "id": 715,
+   "nombre": "Antonia Ruzic",
+   "pais": "cro",
+   "ranking": 81
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.744Z",
+  "visto": "2026-11-06T12:45:22.561Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2241",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215919": {
   "id": 215919,
@@ -13114,26 +13168,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T11:55:00Z",
+  "horario": "2026-11-06T12:10:00Z",
   "j1": {
-   "id": 392,
-   "nombre": "Felix Gill",
-   "pais": "gbr",
-   "ranking": 228
-  },
-  "j2": {
    "id": 217,
    "nombre": "Jay Clarke",
    "pais": "gbr",
    "ranking": 241
   },
+  "j2": {
+   "id": 392,
+   "nombre": "Felix Gill",
+   "pais": "gbr",
+   "ranking": 228
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.838Z",
+  "visto": "2026-11-06T12:45:22.561Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14827",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215934": {
   "id": 215934,
@@ -13396,7 +13474,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T12:40:00Z",
+  "horario": "2026-11-06T12:25:00Z",
   "j1": {
    "id": 130,
    "nombre": "Matej Dodig",
@@ -13410,12 +13488,36 @@
    "ranking": 137
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.838Z",
+  "visto": "2026-11-06T12:45:22.561Z",
   "torneoClave": "challenger|Bratislava 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "3196",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215941": {
   "id": 215941,
@@ -13470,7 +13572,7 @@
    "ranking": 244
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T11:45:22.838Z",
   "torneoClave": "challenger|Taranto (Italy)",
@@ -13612,7 +13714,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T11:45:22.744Z",
   "torneoClave": "wta|Chennai",
@@ -13770,7 +13872,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T11:45:22.838Z",
   "torneoClave": "challenger|Bratislava 2",
@@ -13864,7 +13966,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T11:45:22.838Z",
   "torneoClave": "challenger|Bratislava 2",
@@ -13928,7 +14030,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T11:45:22.838Z",
   "torneoClave": "challenger|Taranto (Italy)",
@@ -14717,7 +14819,7 @@
     null
    ]
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "games": [
