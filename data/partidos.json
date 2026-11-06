@@ -561,7 +561,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "gbr",
     "usa"
    ]
   },
@@ -617,8 +617,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "mon",
+    "fra"
    ]
   },
   "j2": {
@@ -627,8 +627,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "fra",
+    "ned"
    ]
   },
   "dobles": true,
@@ -656,7 +656,7 @@
    "ranking": null,
    "paises": [
     "gbr",
-    null
+    "gbr"
    ]
   },
   "j2": {
@@ -719,8 +719,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "jpn",
+    "ind"
    ]
   },
   "j2": {
@@ -886,7 +886,7 @@
    "ranking": null,
    "paises": [
     "usa",
-    null
+    "gbr"
    ]
   },
   "j2": {
@@ -896,7 +896,7 @@
    "ranking": null,
    "paises": [
     "jpn",
-    null
+    "tha"
    ]
   },
   "dobles": true,
@@ -1025,7 +1025,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "jpn",
     "usa"
    ]
   },
@@ -1079,7 +1079,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "sui",
     "sui"
    ]
   },
@@ -1089,7 +1089,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ind",
     null
    ]
   },
@@ -3417,8 +3417,8 @@
    "pais": null,
    "ranking": 97,
    "paises": [
-    null,
-    null
+    "bra",
+    "bra"
    ]
   },
   "j2": {
@@ -3491,7 +3491,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ned",
     "bel"
    ]
   },
@@ -3557,7 +3557,7 @@
    "pais": null,
    "ranking": 35,
    "paises": [
-    null,
+    "bol",
     null
    ]
   },
@@ -6979,8 +6979,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "ned",
+    "fra"
    ]
   },
   "dobles": true,
@@ -10416,7 +10416,7 @@
    "ranking": null,
    "paises": [
     "jpn",
-    null
+    "tha"
    ]
   },
   "j2": {
@@ -10425,7 +10425,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "sui",
     "sui"
    ]
   },
@@ -10490,7 +10490,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "chn"
    ]
   },
   "dobles": true,
@@ -10541,8 +10541,8 @@
    "pais": null,
    "ranking": 97,
    "paises": [
-    null,
-    null
+    "bra",
+    "bra"
    ]
   },
   "j2": {
@@ -10987,8 +10987,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "fra",
+    "ned"
    ]
   },
   "dobles": true,
@@ -11286,7 +11286,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.385Z",
+  "visto": "2026-11-06T22:45:24.919Z",
   "tier": null,
   "importante": false,
   "torneoClave": "wta|Chennai",
@@ -11296,24 +11296,26 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     6
     ],
     [
+     3,
      3
     ]
    ],
    "sets": [
-    0,
+    2,
     0
    ],
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215595": {
   "id": 215595,
@@ -13184,7 +13186,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T21:45:25.374Z",
+  "visto": "2026-11-06T22:45:22.697Z",
   "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
   "importante": false,
@@ -13302,7 +13304,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.385Z",
+  "visto": "2026-11-06T22:45:24.586Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
   "importante": false,
@@ -13314,26 +13316,26 @@
     [
      4,
      7,
-     0
+     6
     ],
     [
      6,
      5,
-     0
+     4
     ]
    ],
    "sets": [
-    1,
+    2,
     1
    ],
    "puntos": [
-    "15",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215918": {
   "id": 215918,
@@ -13360,7 +13362,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.385Z",
+  "visto": "2026-11-06T22:45:24.787Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": false,
@@ -13371,25 +13373,25 @@
    "games": [
     [
      7,
-     4
+     7
     ],
     [
      6,
-     2
+     5
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
     "40",
-    "AD"
+    "15"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215919": {
   "id": 215919,
@@ -13528,7 +13530,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.195Z",
+  "visto": "2026-11-06T22:45:24.428Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": true,
@@ -13540,16 +13542,16 @@
     [
      6,
      4,
-     4
+     6
     ],
     [
      4,
      6,
-     1
+     3
     ]
    ],
    "sets": [
-    1,
+    2,
     1
    ],
    "puntos": [
@@ -13558,8 +13560,8 @@
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215935": {
   "id": 215935,
@@ -14406,7 +14408,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.195Z",
+  "visto": "2026-11-06T22:45:24.278Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": true,
@@ -14418,26 +14420,26 @@
     [
      4,
      7,
-     3
+     5
     ],
     [
      6,
      6,
-     4
+     7
     ]
    ],
    "sets": [
     1,
-    1
+    2
    ],
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "216027": {
   "id": 216027,
@@ -14822,9 +14824,9 @@
    "ranking": 12
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T21:45:25.373Z",
+  "visto": "2026-11-06T22:45:24.097Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": true,
@@ -14836,7 +14838,7 @@
     [
      6,
      7,
-     5
+     6
     ],
     [
      7,
@@ -14845,17 +14847,17 @@
     ]
    ],
    "sets": [
-    1,
+    2,
     1
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216052": {
   "id": 216052,
@@ -15120,7 +15122,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T21:45:25.374Z",
   "torneoClave": "challenger|Costa do Sauipe",
@@ -15160,26 +15162,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T20:35:00Z",
+  "horario": "2026-11-06T22:15:00Z",
   "j1": {
-   "id": 537,
-   "nombre": "Casper Ruud",
-   "pais": "nor",
-   "ranking": 23
-  },
-  "j2": {
    "id": 503,
    "nombre": "Nuno Borges",
    "pais": "por",
    "ranking": 49
   },
+  "j2": {
+   "id": 537,
+   "nombre": "Casper Ruud",
+   "pais": "nor",
+   "ranking": 23
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.195Z",
+  "visto": "2026-11-06T22:45:22.697Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
-  "importante": true
+  "importante": true,
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216083": {
   "id": 216083,
@@ -15262,7 +15288,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T21:45:25.373Z",
+  "visto": "2026-11-06T22:45:22.697Z",
   "torneoClave": "challenger|Cali",
   "tier": null,
   "importante": false,
@@ -15351,27 +15377,17 @@
  },
  "216129": {
   "id": 216129,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Costa do Sauipe",
   "ronda": "Costa do Sauipe - Semi-finals",
   "rondaCod": "SF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T22:40:00Z",
+  "horario": "2026-11-06T22:45:00Z",
   "j1": {
-   "id": 44044,
-   "nombre": "Hidalgo/ Molteni",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "j2": {
    "id": 44043,
-   "nombre": "Justo/ Midon",
+   "nombre": "Justo / Midon",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -15379,13 +15395,47 @@
     "arg"
    ]
   },
+  "j2": {
+   "id": 44044,
+   "nombre": "Hidalgo / Molteni",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.624Z",
+  "visto": "2026-11-06T22:45:22.697Z",
   "torneoClave": "challenger|Costa do Sauipe",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13360",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216130": {
   "id": 216130,
@@ -15520,7 +15570,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T21:45:25.373Z",
   "torneoClave": "challenger|Charlottesville",
@@ -15624,26 +15674,50 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T22:00:00Z",
+  "horario": "2026-11-06T22:05:00Z",
   "j1": {
-   "id": 891,
-   "nombre": "Thiago Seyboth Wild",
-   "pais": "bra",
-   "ranking": 109
-  },
-  "j2": {
    "id": 581,
    "nombre": "Joao Lucas Reis Da Silva",
    "pais": "bra",
    "ranking": 177
   },
+  "j2": {
+   "id": 891,
+   "nombre": "Thiago Seyboth Wild",
+   "pais": "bra",
+   "ranking": 109
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.624Z",
+  "visto": "2026-11-06T22:45:22.697Z",
   "torneoClave": "challenger|Costa do Sauipe",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13361",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216149": {
   "id": 216149,
@@ -15668,7 +15742,7 @@
    "ranking": 211
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T21:45:25.373Z",
   "torneoClave": "challenger|Charlottesville",
@@ -15872,7 +15946,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "chn",
     null
    ]
   },
