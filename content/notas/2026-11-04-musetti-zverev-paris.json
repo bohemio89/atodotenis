@@ -27,5 +27,29 @@
  "torneo": "París",
  "firma": "Redacción A Todo Tenis",
  "generadoCon": "gemini-3.5-flash",
- "fotoBuscada": "2026-11-06T11:06:47.335Z"
+ "fotoBuscada": "2026-11-06T11:06:47.335Z",
+ "resultado": {
+  "ganador": {
+   "nombre": "Lorenzo Musetti",
+   "pais": "ita",
+   "ranking": 24
+  },
+  "perdedor": {
+   "nombre": "Alexander Zverev",
+   "pais": "ger",
+   "ranking": 1
+  },
+  "sets": [
+   [
+    7,
+    6
+   ],
+   [
+    6,
+    2
+   ]
+  ],
+  "ronda": "R32",
+  "resultado": null
+ }
 }

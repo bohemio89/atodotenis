@@ -27,5 +27,33 @@
  "firma": "Redacción A Todo Tenis",
  "imagen": null,
  "generadoCon": "gemini-3.5-flash",
- "fotoBuscada": "2026-11-06T08:49:53.019Z"
+ "fotoBuscada": "2026-11-06T08:49:53.019Z",
+ "resultado": {
+  "ganador": {
+   "nombre": "Ben Shelton",
+   "pais": "usa",
+   "ranking": 4
+  },
+  "perdedor": {
+   "nombre": "Arthur Rinderknech",
+   "pais": "fra",
+   "ranking": 68
+  },
+  "sets": [
+   [
+    3,
+    6
+   ],
+   [
+    6,
+    4
+   ],
+   [
+    7,
+    6
+   ]
+  ],
+  "ronda": "R16",
+  "resultado": null
+ }
 }

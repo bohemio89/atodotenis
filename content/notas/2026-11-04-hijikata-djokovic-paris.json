@@ -28,5 +28,33 @@
  "firma": "Redacción A Todo Tenis",
  "imagen": null,
  "generadoCon": "gemini-3.5-flash",
- "fotoBuscada": "2026-11-06T09:06:47.454Z"
+ "fotoBuscada": "2026-11-06T09:06:47.454Z",
+ "resultado": {
+  "ganador": {
+   "nombre": "Rinky Hijikata",
+   "pais": "aus",
+   "ranking": 83
+  },
+  "perdedor": {
+   "nombre": "Novak Djokovic",
+   "pais": "srb",
+   "ranking": 11
+  },
+  "sets": [
+   [
+    2,
+    6
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    6,
+    3
+   ]
+  ],
+  "ronda": "R32",
+  "resultado": null
+ }
 }

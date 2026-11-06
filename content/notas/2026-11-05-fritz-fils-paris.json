@@ -27,5 +27,29 @@
  "firma": "Redacción A Todo Tenis",
  "imagen": null,
  "generadoCon": "gemini-3.5-flash",
- "fotoBuscada": "2026-11-06T09:06:51.767Z"
+ "fotoBuscada": "2026-11-06T09:06:51.767Z",
+ "resultado": {
+  "ganador": {
+   "nombre": "Taylor Fritz",
+   "pais": "usa",
+   "ranking": 12
+  },
+  "perdedor": {
+   "nombre": "Arthur Fils",
+   "pais": "fra",
+   "ranking": 7
+  },
+  "sets": [
+   [
+    6,
+    3
+   ],
+   [
+    6,
+    4
+   ]
+  ],
+  "ronda": "R16",
+  "resultado": null
+ }
 }

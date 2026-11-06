@@ -27,5 +27,29 @@
  "torneo": "París",
  "firma": "Redacción A Todo Tenis",
  "generadoCon": "gemini-3.5-flash",
- "fotoBuscada": "2026-11-06T11:06:50.361Z"
+ "fotoBuscada": "2026-11-06T11:06:50.361Z",
+ "resultado": {
+  "ganador": {
+   "nombre": "Nuno Borges",
+   "pais": "por",
+   "ranking": 49
+  },
+  "perdedor": {
+   "nombre": "Ignacio Buse",
+   "pais": "per",
+   "ranking": 33
+  },
+  "sets": [
+   [
+    6,
+    0
+   ],
+   [
+    6,
+    2
+   ]
+  ],
+  "ronda": "R16",
+  "resultado": null
+ }
 }

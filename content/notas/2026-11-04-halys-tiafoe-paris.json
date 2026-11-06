@@ -28,5 +28,33 @@
  "firma": "Redacción A Todo Tenis",
  "imagen": null,
  "generadoCon": "gemini-3.5-flash",
- "fotoBuscada": "2026-11-05T11:12:34.900Z"
+ "fotoBuscada": "2026-11-05T11:12:34.900Z",
+ "resultado": {
+  "ganador": {
+   "nombre": "Quentin Halys",
+   "pais": "fra",
+   "ranking": 46
+  },
+  "perdedor": {
+   "nombre": "Frances Tiafoe",
+   "pais": "usa",
+   "ranking": 8
+  },
+  "sets": [
+   [
+    6,
+    3
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    7,
+    6
+   ]
+  ],
+  "ronda": "R32",
+  "resultado": null
+ }
 }

@@ -24,5 +24,29 @@
  "firma": "Redacción A Todo Tenis",
  "imagen": null,
  "generadoCon": "gemini-3.5-flash",
- "fotoBuscada": "2026-11-05T11:12:38.674Z"
+ "fotoBuscada": "2026-11-05T11:12:38.674Z",
+ "resultado": {
+  "ganador": {
+   "nombre": "Tomas Martin Etcheverry",
+   "pais": "arg",
+   "ranking": 31
+  },
+  "perdedor": {
+   "nombre": "Alex De Minaur",
+   "pais": "aus",
+   "ranking": 9
+  },
+  "sets": [
+   [
+    7,
+    6
+   ],
+   [
+    6,
+    3
+   ]
+  ],
+  "ronda": "R32",
+  "resultado": null
+ }
 }

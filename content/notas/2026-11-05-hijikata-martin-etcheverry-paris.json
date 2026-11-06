@@ -28,5 +28,33 @@
  "firma": "Redacción A Todo Tenis",
  "imagen": null,
  "generadoCon": "gemini-3.5-flash",
- "fotoBuscada": "2026-11-06T08:49:50.342Z"
+ "fotoBuscada": "2026-11-06T08:49:50.342Z",
+ "resultado": {
+  "ganador": {
+   "nombre": "Rinky Hijikata",
+   "pais": "aus",
+   "ranking": 83
+  },
+  "perdedor": {
+   "nombre": "Tomas Martin Etcheverry",
+   "pais": "arg",
+   "ranking": 31
+  },
+  "sets": [
+   [
+    2,
+    6
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    7,
+    5
+   ]
+  ],
+  "ronda": "R16",
+  "resultado": null
+ }
 }
