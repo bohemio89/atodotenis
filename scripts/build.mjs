@@ -14,6 +14,7 @@ fs.mkdirSync(path.join(DIST, 'nota'), { recursive: true });
 fs.cpSync(path.join(ROOT, 'static'), DIST, { recursive: true });
 
 const partidos = Object.values(leerJSON('data/partidos.json', {}));
+const avatares = leerJSON('data/avatares.json', {});
 const jugadores = leerJSON('data/jugadores.json', { lista: {} });
 const estado = leerJSON('data/estado.json', {});
 const torneos = leerJSON('data/torneos.json', {});
@@ -45,9 +46,39 @@ const creditoCorto = (n) => n.imagen?.credito ? n.imagen.credito.replace(/, vía
 const srcsetCommons = (url) => /\/1920px-/.test(url)
   ? ` srcset="${[960, 1280, 1920].map((w) => `${esc(url.replace('/1920px-', `/${w}px-`))} ${w}w`).join(', ')}" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 66vw, 1200px"`
   : '';
+
+// Placa gráfica del resultado (cuando no hay una foto buena): no es una foto, es un gráfico con datos reales
+const RONDA_PLACA = { R128: '1° ronda', R64: '2° ronda', R32: '3° ronda', R16: 'Octavos de final', QF: 'Cuartos de final', SF: 'Semifinal', F: 'Final' };
+const partidosPorId = Object.fromEntries(partidos.map((p) => [String(p.id), p]));
+function resultadoNota(n) {
+  if (n.resultado) return n.resultado;
+  const p = partidosPorId[String(n.partidoId)];
+  if (!p?.ganador || !p.score) return null;
+  const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
+  const gs = p.score.games || [[], []];
+  return { ganador: g, perdedor: pe, ronda: p.rondaCod, resultado: p.resultado,
+    sets: (gs[0] || []).map((x, i) => p.ganador === 1 ? [x, gs[1][i]] : [gs[1][i], x]).filter(([a, b]) => a != null && b != null) };
+}
+function placa(n) {
+  const r = resultadoNota(n);
+  if (!r?.ganador?.nombre) return '';
+  const cara = (j) => {
+    const a = avatares[j.nombre];
+    const ini = String(j.nombre).split(/\s+/).map((x) => x[0]).slice(0, 2).join('');
+    return a?.url ? `<span class="pl-cara"><img src="${esc(a.url)}" alt="" loading="lazy"></span>` : `<span class="pl-cara pl-ini">${esc(ini)}</span>`;
+  };
+  const fila = (j, gana) => `<div class="pl-fila${gana ? ' gana' : ''}">${cara(j)}<span class="pl-nom">${paisTag(j)}<span class="pl-n"><span class="pl-full">${esc(j.nombre)}</span><span class="pl-ape">${esc(String(j.nombre).trim().split(/\s+/).pop())}</span></span>${j.ranking ? `<small>N° ${j.ranking}</small>` : ''}</span>
+<span class="pl-sets">${r.sets.map(([a, b]) => `<b class="${(gana ? a > b : b > a) ? 'g' : ''}">${gana ? a : b}</b>`).join('')}</span></div>`;
+  const ronda = RONDA_PLACA[r.ronda] || '';
+  const extra = r.resultado === 'retiro' ? ' · por retiro' : '';
+  return `<div class="fondo placa sup-${esc(n.superficie || 'hard')}" role="img" aria-label="${esc(`${r.ganador.nombre} venció a ${r.perdedor.nombre}`)}">
+<svg class="cancha" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="3" opacity=".16"><path d="M40 300 120 150h160l80 150"/><path d="M75 235h250M200 235v-85M95 190h210"/></g></svg>
+<div class="pl-in"><div class="pl-torneo">${esc([n.categoria, n.torneo].filter(Boolean).join(' · '))}${ronda ? ` <span>${esc(ronda)}${extra}</span>` : ''}</div>
+${fila(r.ganador, true)}${fila(r.perdedor, false)}<div class="pl-marca">A Todo Tenis</div></div></div>`;
+}
 function imagenNota(n, conCredito = true) {
   if (n.imagen?.url) return `<div class="fondo"><img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} alt="${esc(n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%">${conCredito ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
-  return cancha(n.superficie);
+  return placa(n) || cancha(n.superficie);
 }
 
 function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
@@ -186,7 +217,6 @@ ${cont('v', enVivo, 'No hay partidos en juego en este momento.', hayVivo)}${cont
 }
 
 // ---------- Ranking ----------
-const avatares = leerJSON('data/avatares.json', {});
 function avatar(j) {
   const a = avatares[j.nombre];
   const ini = esc(j.nombre.split(' ').map((x) => x[0]).slice(0, 2).join(''));

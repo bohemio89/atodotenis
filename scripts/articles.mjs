@@ -13,6 +13,24 @@ if (!KEY) { console.log('Sin GEMINI_API_KEY: no se escriben notas en esta corrid
 const partidos = leerJSON('data/partidos.json', {});
 const registro = leerJSON('data/notas-registro.json', {}); // partidoId -> slug | 'descartada'
 const TORNEOS = leerJSON('data/torneos.json', {});
+const PARTIDOS_TODOS = leerJSON('data/partidos.json', {});
+
+// Datos del partido que usa la placa gráfica de la nota (nombres, países, ranking, sets desde el ganador)
+function resultadoParaNota(p) {
+  if (!p?.ganador || !p.score) return null;
+  const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
+  const jug = (j) => ({ nombre: j?.nombre || '', pais: j?.pais || '', ranking: j?.ranking || null });
+  const gs = p.score.games || [[], []];
+  const setsG = (gs[0] || []).map((x, i) => p.ganador === 1 ? [x, gs[1][i]] : [gs[1][i], x]).filter(([a, b]) => a != null && b != null);
+  return { ganador: jug(g), perdedor: jug(pe), sets: setsG, ronda: p.rondaCod || null, resultado: p.resultado || null };
+}
+for (const f of fs.readdirSync(path.join(ROOT, 'content/notas')).filter((x) => x.endsWith('.json'))) {
+  const ruta = path.join(ROOT, 'content/notas', f);
+  const n = JSON.parse(fs.readFileSync(ruta, 'utf8'));
+  if (n.resultado || !n.partidoId) continue;
+  const r = resultadoParaNota(PARTIDOS_TODOS[n.partidoId]);
+  if (r) { n.resultado = r; fs.writeFileSync(ruta, JSON.stringify(n, null, 1) + '\n'); }
+}
 const N = CONFIG.notas;
 
 // Modo prueba: PRUEBA_PARTIDOS="id1,id2" escribe notas de esos partidos sin publicarlas
@@ -221,6 +239,7 @@ async function main() {
       partidoId: p.id,
       jugadores: [g.nombre, pe.nombre],
       torneo: nombreTorneo(p.torneo),
+      resultado: resultadoParaNota(p),
       firma: CONFIG.sitio.firma,
       imagen: null, // { url, credito, enlace } cuando se sume una fuente de imágenes con licencia
       generadoCon: modelo
