@@ -41,8 +41,12 @@ function gettySrc(codigo) {
   return m ? m[0].replace(/&amp;/g, '&') : null;
 }
 const creditoCorto = (n) => n.imagen?.credito ? n.imagen.credito.replace(/, vía Wikimedia Commons$/, '') : '';
+// Tamaños intermedios de Commons para que el celular no baje la foto de 1920 px
+const srcsetCommons = (url) => /\/1920px-/.test(url)
+  ? ` srcset="${[960, 1280, 1920].map((w) => `${esc(url.replace('/1920px-', `/${w}px-`))} ${w}w`).join(', ')}" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 66vw, 1200px"`
+  : '';
 function imagenNota(n, conCredito = true) {
-  if (n.imagen?.url) return `<div class="fondo"><img src="${esc(n.imagen.url)}" alt="${esc(n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%">${conCredito ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
+  if (n.imagen?.url) return `<div class="fondo"><img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} alt="${esc(n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%">${conCredito ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
   return cancha(n.superficie);
 }
 

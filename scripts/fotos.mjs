@@ -26,7 +26,7 @@ function fechaFoto(meta) {
 async function buscar(jugador, fechaNota) {
   const q = new URLSearchParams({
     action: 'query', format: 'json', generator: 'search', gsrnamespace: '6', gsrlimit: '40',
-    gsrsearch: `"${jugador}" filetype:bitmap`, prop: 'imageinfo', iiprop: 'url|extmetadata|size', iiurlwidth: '1280'
+    gsrsearch: `"${jugador}" filetype:bitmap`, prop: 'imageinfo', iiprop: 'url|extmetadata|size', iiurlwidth: '1920'
   });
   const r = await fetch(`${API}?${q}`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
   if (!r.ok) throw new Error(`Commons HTTP ${r.status}`);
@@ -43,12 +43,14 @@ async function buscar(jugador, fechaNota) {
     if (!f || f < limite || f > new Date(fechaNota)) continue; // solo fotos recientes
     const texto = norm(`${p.title} ${limpiar(meta.ImageDescription?.value)}`);
     if (!texto.includes(apellido)) continue;
-    if (ii.width < 800 || ii.height < 450) continue;
+    // Calidad: fotos grandes (no se estiran en pantalla) y sin compresión excesiva
     const apaisada = ii.width >= ii.height;
+    if (apaisada ? (ii.width < 1600 || ii.height < 900) : ii.width < 1400) continue;
+    if (ii.size && ii.size / (ii.width * ii.height) < 0.1) continue;
     // Evitar fotos grupales o de otros temas (trofeos con varios, autógrafos, etc.)
     const varios = /(and|y|vs\.?|with|&)\s+[a-z]+/i.test(limpiar(meta.ObjectName?.value || p.title).replace(/\.(jpe?g|png|webp)$/i, ''));
     candidatas.push({
-      url: ii.thumburl || ii.url, ancho: ii.thumbwidth || ii.width, alto: ii.thumbheight || ii.height,
+      url: ii.thumburl || ii.url, ancho: ii.thumbwidth || ii.width, alto: ii.thumbheight || ii.height, original: ii.width,
       autor: limpiar(meta.Artist?.value) || 'Autor desconocido', licencia: lic,
       licenciaUrl: limpiar(meta.LicenseUrl?.value) || null, pagina: ii.descriptionurl, fecha: f.toISOString().slice(0, 10),
       puntaje: f.getTime() / 864e5 + (apaisada ? 120 : 0) - (varios ? 200 : 0)
@@ -63,7 +65,10 @@ async function main() {
   for (const f of notas) {
     const ruta = path.join(dir, f);
     const n = JSON.parse(fs.readFileSync(ruta, 'utf8'));
-    if (n.imagen?.url || n.getty) continue;
+    if (n.getty) continue;
+    if (n.imagen?.url && n.imagen.calidad === 2) continue;
+    const anterior = n.imagen?.url ? n.imagen : null; // foto elegida con el criterio viejo: se vuelve a evaluar
+    if (anterior) { delete n.imagen; n.fotoBuscada = null; }
     // reintentar como mucho una vez por semana
     if (n.fotoBuscada && Date.now() - new Date(n.fotoBuscada).getTime() < 7 * 864e5 && !process.env.FORZAR_FOTOS) continue;
     const p = partidos[n.partidoId];
@@ -78,10 +83,11 @@ async function main() {
     if (foto) {
       n.imagen = {
         url: foto.url, credito: `${foto.autor} / ${foto.licencia}, vía Wikimedia Commons`, enlace: foto.pagina,
-        licenciaUrl: foto.licenciaUrl, fechaFoto: foto.fecha, jugador: foto.jugador, alt: `${foto.jugador}`
+        licenciaUrl: foto.licenciaUrl, fechaFoto: foto.fecha, jugador: foto.jugador, alt: `${foto.jugador}`,
+        ancho: foto.ancho, alto: foto.alto, calidad: 2
       };
       log(`Foto para "${n.titulo}": ${foto.jugador}, ${foto.fecha}, ${foto.licencia}`);
-    } else log(`Sin foto reciente para "${n.titulo}"`);
+    } else log(`Sin foto reciente de buena calidad para "${n.titulo}"${anterior ? ' (se quita la anterior)' : ''}`);
     fs.writeFileSync(ruta, JSON.stringify(n, null, 1) + '\n');
     cambios++;
   }
