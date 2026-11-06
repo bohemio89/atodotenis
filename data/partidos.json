@@ -9882,7 +9882,7 @@
    "ranking": 145
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T12:45:22.561Z",
   "importante": false,
@@ -11282,7 +11282,7 @@
    "ranking": 669
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T12:45:22.561Z",
   "tier": null,
@@ -11461,27 +11461,17 @@
  },
  "215675": {
   "id": 215675,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
   "ronda": "ATP Paris - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T13:00:00Z",
+  "horario": "2026-11-06T13:10:00Z",
   "j1": {
-   "id": 31278,
-   "nombre": "Cash/ Nakashima",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    "usa"
-   ]
-  },
-  "j2": {
    "id": 1391,
-   "nombre": "Harrison/ Skupski",
+   "nombre": "Christian Harrison / Neal Skupski",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -11489,13 +11479,47 @@
     "gbr"
    ]
   },
+  "j2": {
+   "id": 31278,
+   "nombre": "Nakashima / Robert Cash",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "usa",
+    "usa"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.650Z",
+  "visto": "2026-11-06T13:45:24.401Z",
   "tier": "atp_1000",
   "importante": false,
-  "torneoClave": "atp|Paris"
+  "torneoClave": "atp|Paris",
+  "torneoId": "1726",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6
+    ],
+    [
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215676": {
   "id": 215676,
@@ -12736,7 +12760,7 @@
    "ranking": 324
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T12:45:22.561Z",
   "torneoClave": "challenger|Luanda (Angola)",
@@ -12864,7 +12888,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T12:45:22.561Z",
   "torneoClave": "challenger|Taipei",
@@ -13060,7 +13084,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T12:30:00Z",
+  "horario": "2026-11-06T12:40:00Z",
   "j1": {
    "id": 62,
    "nombre": "Alexandra Eala",
@@ -13076,7 +13100,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T12:45:22.561Z",
+  "visto": "2026-11-06T13:45:24.401Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": false,
@@ -13086,10 +13110,10 @@
   "score": {
    "games": [
     [
-     1
+     5
     ],
     [
-     1
+     6
     ]
    ],
    "sets": [
@@ -13097,10 +13121,10 @@
     0
    ],
    "puntos": [
-    "15",
-    "0"
+    "30",
+    "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -13184,7 +13208,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T12:45:22.561Z",
+  "visto": "2026-11-06T13:45:24.401Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
   "importante": false,
@@ -13194,10 +13218,68 @@
   "score": {
    "games": [
     [
-     4
+     4,
+     6,
+     0
     ],
     [
-     3
+     6,
+     4,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
+ },
+ "215934": {
+  "id": 215934,
+  "tour": "atp",
+  "torneo": "Paris",
+  "ronda": "ATP Paris - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-06T13:10:00Z",
+  "j1": {
+   "id": 11,
+   "nombre": "Ben Shelton",
+   "pais": "usa",
+   "ranking": 4
+  },
+  "j2": {
+   "id": 19,
+   "nombre": "Tommy Paul",
+   "pais": "usa",
+   "ranking": 14
+  },
+  "dobles": false,
+  "estado": "en_vivo",
+  "motivo": null,
+  "visto": "2026-11-06T13:45:24.401Z",
+  "torneoClave": "atp|Paris",
+  "tier": "atp_1000",
+  "importante": true,
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     4
     ]
    ],
    "sets": [
@@ -13213,65 +13295,59 @@
   "confirmado": false,
   "ganador": null
  },
- "215934": {
-  "id": 215934,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T13:00:00Z",
-  "j1": {
-   "id": 11,
-   "nombre": "Ben Shelton",
-   "pais": "usa",
-   "ranking": 4
-  },
-  "j2": {
-   "id": 19,
-   "nombre": "Tommy Paul",
-   "pais": "usa",
-   "ranking": 14
-  },
-  "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-06T11:45:22.650Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": true
- },
  "215935": {
   "id": 215935,
-  "tour": "challenger_women",
-  "torneo": "Luanda (Angola) - Qualification",
+  "tour": "challenger",
+  "torneo": "Luanda (Angola)",
   "ronda": "Luanda - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T12:30:00Z",
+  "horario": "2026-11-06T13:40:00Z",
   "j1": {
-   "id": 716,
-   "nombre": "Justina Mikulskyte",
-   "pais": "ltu",
-   "ranking": 235
-  },
-  "j2": {
    "id": 700,
    "nombre": "Noma Noha Akugue",
    "pais": "ger",
    "ranking": 118
   },
+  "j2": {
+   "id": 716,
+   "nombre": "Justina Mikulskyte",
+   "pais": "ltu",
+   "ranking": 235
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.838Z",
-  "torneoClave": "challenger_women|Luanda (Angola) - Qualification",
+  "visto": "2026-11-06T13:45:24.401Z",
+  "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14828",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215936": {
   "id": 215936,
@@ -13490,7 +13566,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T12:45:22.561Z",
+  "visto": "2026-11-06T13:45:24.401Z",
   "torneoClave": "challenger|Bratislava 2",
   "tier": null,
   "importante": false,
@@ -13500,21 +13576,23 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     5
     ],
     [
-     2
+     4,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "40",
+    "AD",
     "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -13774,7 +13852,7 @@
    "ranking": null,
    "paises": [
     "pol",
-    null
+    "ltu"
    ]
   },
   "dobles": true,
@@ -14063,17 +14141,17 @@
  },
  "216029": {
   "id": 216029,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Taranto (Italy)",
   "ronda": "Taranto - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T12:40:00Z",
+  "horario": "2026-11-06T12:55:00Z",
   "j1": {
    "id": 1679,
-   "nombre": "Forcano/ Izquierdo Luque",
+   "nombre": "Ignasi Forcano / Rafael Izquierdo Luque",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -14083,7 +14161,7 @@
   },
   "j2": {
    "id": 44026,
-   "nombre": "Duda/ Pereira",
+   "nombre": "Duda / Pereira",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -14092,12 +14170,38 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T11:45:22.838Z",
+  "visto": "2026-11-06T13:45:24.401Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14825",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     3
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216036": {
   "id": 216036,
