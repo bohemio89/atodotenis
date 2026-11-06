@@ -12358,7 +12358,7 @@
    "ranking": 185
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T20:45:21.981Z",
   "tier": null,
@@ -13184,7 +13184,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T20:45:21.982Z",
+  "visto": "2026-11-06T21:45:25.374Z",
   "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
   "importante": false,
@@ -14824,7 +14824,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T20:45:21.981Z",
+  "visto": "2026-11-06T21:45:25.373Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": true,
@@ -14835,20 +14835,22 @@
    "games": [
     [
      6,
-     3
+     7,
+     5
     ],
     [
      7,
-     5
+     5,
+     3
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "40",
-    "AD"
+    "0",
+    "0"
    ],
    "saca": 1
   },
@@ -15056,7 +15058,7 @@
    "ranking": 831
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T20:45:21.981Z",
   "torneoClave": "challenger|Villa Maria",
@@ -15089,41 +15091,65 @@
  },
  "216079": {
   "id": 216079,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Costa do Sauipe",
   "ronda": "Costa do Sauipe - Semi-finals",
   "rondaCod": "SF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T21:10:00Z",
+  "horario": "2026-11-06T21:15:00Z",
   "j1": {
    "id": 44046,
-   "nombre": "Ribeiro/ Rodrigues",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "bra",
-    null
-   ]
-  },
-  "j2": {
-   "id": 44047,
-   "nombre": "Kolar/ Rodriguez Taverna",
+   "nombre": "Natan Rodrigues / Ribeiro",
    "pais": null,
    "ranking": null,
    "paises": [
     null,
-    null
+    "bra"
+   ]
+  },
+  "j2": {
+   "id": 44047,
+   "nombre": "Kolar / Santiago Rodriguez Taverna",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "arg"
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.624Z",
+  "visto": "2026-11-06T21:45:25.374Z",
   "torneoClave": "challenger|Costa do Sauipe",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13360",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216082": {
   "id": 216082,
@@ -15236,7 +15262,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T20:45:21.981Z",
+  "visto": "2026-11-06T21:45:25.373Z",
   "torneoClave": "challenger|Cali",
   "tier": null,
   "importante": false,
@@ -15247,11 +15273,11 @@
    "games": [
     [
      6,
-     0
+     5
     ],
     [
      0,
-     0
+     4
     ]
    ],
    "sets": [
@@ -15259,10 +15285,10 @@
     0
    ],
    "puntos": [
-    "30",
+    "15",
     "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -15290,7 +15316,7 @@
    "ranking": 72
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T20:45:21.981Z",
   "torneoClave": "challenger|Costa do Sauipe",
@@ -15496,7 +15522,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T20:45:21.981Z",
+  "visto": "2026-11-06T21:45:25.373Z",
   "torneoClave": "challenger|Charlottesville",
   "tier": null,
   "importante": false,
@@ -15506,21 +15532,23 @@
   "score": {
    "games": [
     [
-     1
+     7,
+     2
     ],
     [
-     0
+     6,
+     3
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
     "0",
-    "15"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -15642,7 +15670,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T20:45:21.981Z",
+  "visto": "2026-11-06T21:45:25.373Z",
   "torneoClave": "challenger|Charlottesville",
   "tier": null,
   "importante": false,
@@ -15653,22 +15681,24 @@
    "games": [
     [
      3,
+     6,
      4
     ],
     [
      6,
-     3
+     4,
+     2
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
     "15",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
