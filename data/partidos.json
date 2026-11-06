@@ -6204,7 +6204,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T15:45:21.866Z",
   "importante": false,
@@ -11523,7 +11523,7 @@
  },
  "215676": {
   "id": 215676,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Chennai",
   "ronda": "WTA Chennai - Quarter-finals",
   "rondaCod": "QF",
@@ -11554,7 +11554,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.768Z",
+  "visto": "2026-11-06T16:45:22.635Z",
   "tier": null,
   "importante": false,
   "torneoClave": "wta|Chennai",
@@ -11564,21 +11564,23 @@
   "score": {
    "games": [
     [
-     1
+     7,
+     2
     ],
     [
-     2
+     5,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "40",
+    "30",
     "30"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -12608,24 +12610,50 @@
   "genero": "men",
   "horario": "2026-11-06T15:45:00Z",
   "j1": {
-   "id": 422,
-   "nombre": "Juan Manuel La Serna",
-   "pais": "arg",
-   "ranking": 254
-  },
-  "j2": {
    "id": 337,
    "nombre": "Carlos Maria Zarate",
    "pais": "arg",
    "ranking": 341
   },
+  "j2": {
+   "id": 422,
+   "nombre": "Juan Manuel La Serna",
+   "pais": "arg",
+   "ranking": 254
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.866Z",
+  "visto": "2026-11-06T16:45:22.635Z",
   "tier": null,
   "importante": false,
-  "torneoClave": "challenger|Villa Maria"
+  "torneoClave": "challenger|Villa Maria",
+  "torneoId": "7863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     1
+    ],
+    [
+     6,
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215871": {
   "id": 215871,
@@ -13053,7 +13081,7 @@
  },
  "215915": {
   "id": 215915,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Luanda (Angola)",
   "ronda": "Luanda - Quarter-finals",
   "rondaCod": "QF",
@@ -13076,8 +13104,8 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.866Z",
-  "torneoClave": "challenger_women|Luanda (Angola)",
+  "visto": "2026-11-06T16:45:22.635Z",
+  "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
   "importante": false,
   "torneoId": "14828",
@@ -13136,7 +13164,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T15:45:21.664Z",
   "torneoClave": "atp|Paris",
@@ -13192,7 +13220,7 @@
    "ranking": 160
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T15:45:21.768Z",
   "torneoClave": "wta|Chennai",
@@ -13644,7 +13672,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T16:00:00Z",
+  "horario": "2026-11-06T16:40:00Z",
   "j1": {
    "id": 301,
    "nombre": "Anastasia Zakharova",
@@ -13658,12 +13686,36 @@
    "ranking": 117
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.768Z",
+  "visto": "2026-11-06T16:45:22.635Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215939": {
   "id": 215939,
@@ -13808,7 +13860,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.866Z",
+  "visto": "2026-11-06T16:45:22.635Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
   "importante": false,
@@ -13819,22 +13871,24 @@
    "games": [
     [
      3,
-     4
+     7,
+     3
     ],
     [
      6,
-     2
+     5,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -13899,27 +13953,27 @@
  },
  "215973": {
   "id": 215973,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
   "ronda": "ATP Paris - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T16:20:00Z",
+  "horario": "2026-11-06T16:35:00Z",
   "j1": {
-   "id": 1743,
-   "nombre": "Halys/ Herbert",
+   "id": 1400,
+   "nombre": "Albano Olivetti / Theo Arribage",
    "pais": null,
    "ranking": null,
    "paises": [
     "fra",
-    null
+    "fra"
    ]
   },
   "j2": {
-   "id": 1400,
-   "nombre": "Arribage/ Olivetti",
+   "id": 1743,
+   "nombre": "Pierre-Hugues Herbert / Quentin Halys",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -13928,12 +13982,36 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.664Z",
+  "visto": "2026-11-06T16:45:22.635Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
-  "importante": false
+  "importante": false,
+  "torneoId": "1726",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215974": {
   "id": 215974,
@@ -14220,7 +14298,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.664Z",
+  "visto": "2026-11-06T16:45:22.635Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": true,
@@ -14230,21 +14308,23 @@
   "score": {
    "games": [
     [
-     3
+     4,
+     5
     ],
     [
-     3
+     6,
+     4
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -14448,7 +14528,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T16:00:00Z",
+  "horario": "2026-11-06T16:10:00Z",
   "j1": {
    "id": 399,
    "nombre": "Dalibor Svrcina",
@@ -14462,12 +14542,36 @@
    "ranking": 101
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.866Z",
+  "visto": "2026-11-06T16:45:22.635Z",
   "torneoClave": "challenger|Bratislava 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "3196",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216037": {
   "id": 216037,
@@ -14598,26 +14702,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T16:00:00Z",
+  "horario": "2026-11-06T16:10:00Z",
   "j1": {
-   "id": 784,
-   "nombre": "Max Hans Rehberg",
-   "pais": "ger",
-   "ranking": 248
-  },
-  "j2": {
    "id": 618,
    "nombre": "Aidan Mayo",
    "pais": "usa",
    "ranking": 285
   },
+  "j2": {
+   "id": 784,
+   "nombre": "Max Hans Rehberg",
+   "pais": "ger",
+   "ranking": 248
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.866Z",
+  "visto": "2026-11-06T16:45:22.635Z",
   "torneoClave": "challenger|Charlottesville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2497",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216054": {
   "id": 216054,
@@ -14999,27 +15127,27 @@
  },
  "216134": {
   "id": 216134,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Villa Maria",
   "ronda": "Villa Maria - Semi-finals",
   "rondaCod": "SF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T16:00:00Z",
+  "horario": "2026-11-06T16:10:00Z",
   "j1": {
-   "id": 44059,
-   "nombre": "Bagnis/ Villanueva",
+   "id": 27479,
+   "nombre": "Arklon Huertas Del Pino Cordova / Murkel Alejandro Dellien Velasco",
    "pais": null,
    "ranking": null,
    "paises": [
     null,
-    null
+    "bol"
    ]
   },
   "j2": {
-   "id": 27479,
-   "nombre": "Dellien Velasco/ Huertas Del Pino Cordova",
+   "id": 44059,
+   "nombre": "Bagnis / Villanueva",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -15028,12 +15156,36 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T15:45:21.866Z",
+  "visto": "2026-11-06T16:45:22.635Z",
   "torneoClave": "challenger|Villa Maria",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "7858",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216140": {
   "id": 216140,
