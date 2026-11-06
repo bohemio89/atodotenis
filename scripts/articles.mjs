@@ -20,7 +20,7 @@ const PRUEBA = (process.env.PRUEBA_PARTIDOS || '').split(',').map((x) => x.trim(
 const candidatos = Object.values(partidos)
   .filter((p) => PRUEBA.length
     ? PRUEBA.includes(String(p.id)) && p.confirmado && p.ganador
-    : p.importante && p.confirmado && p.estado === 'finalizado' && p.ganador && !registro[p.id])
+    : p.importante && p.confirmado && p.estado === 'finalizado' && p.ganador && !registro[p.id] && Date.now() - new Date(p.horario).getTime() < 60 * 3600e3)
   .sort((a, b) => String(b.horario).localeCompare(String(a.horario)))
   .slice(0, N.maxNotasPorCorrida);
 

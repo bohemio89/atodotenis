@@ -166,13 +166,14 @@ function esImportante(m) {
   if (['atp', 'wta'].includes(base) && m.ganador) {
     const g = m.ganador === 1 ? m.j1 : m.j2, pe = m.ganador === 1 ? m.j2 : m.j1;
     const rg = g?.ranking || 9999, rp = pe?.ranking || 9999;
-    if ((rp <= 10 && rg > 30) || rp <= 3) return true;
+    // Top 3 que pierde; top 10 ante alguien de fuera del top 30; top 20 ante alguien que está 40 puestos o más abajo
+    if (rp <= 3 || (rp <= 10 && rg > 30) || (rp <= 20 && rg - rp >= 40)) return true;
   }
   const t = m.tier || '';
-  if (['grand_slam'].includes(t)) return ['R16', 'QF', 'SF', 'F'].includes(r);
-  if (['atp_1000', 'wta_1000'].includes(t)) return ['QF', 'SF', 'F'].includes(r);
-  if (['atp_500', 'wta_500'].includes(t)) return ['SF', 'F'].includes(r);
-  if (['atp', 'wta'].includes(base)) return r === 'F';
+  if (['grand_slam'].includes(t)) return ['R32', 'R16', 'QF', 'SF', 'F'].includes(r);
+  if (['atp_1000', 'wta_1000'].includes(t)) return ['R16', 'QF', 'SF', 'F'].includes(r);
+  if (['atp_500', 'wta_500'].includes(t)) return ['QF', 'SF', 'F'].includes(r);
+  if (['atp', 'wta'].includes(base)) return ['SF', 'F'].includes(r);
   if (base === 'challenger') return r === 'F';
   return false;
 }
