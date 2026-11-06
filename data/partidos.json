@@ -10822,24 +10822,48 @@
   "genero": "women",
   "horario": "2026-11-06T09:30:00Z",
   "j1": {
-   "id": 488,
-   "nombre": "Janice Tjen",
-   "pais": "ina",
-   "ranking": 75
-  },
-  "j2": {
    "id": 251,
    "nombre": "Polina Kudermetova",
    "pais": "uzb",
    "ranking": 93
   },
+  "j2": {
+   "id": 488,
+   "nombre": "Janice Tjen",
+   "pais": "ina",
+   "ranking": 75
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.431Z",
+  "visto": "2026-11-06T09:45:22.474Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Chennai"
+  "torneoClave": "wta|Chennai",
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215561": {
   "id": 215561,
@@ -12920,7 +12944,7 @@
    "ranking": 409
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-06T08:45:36.440Z",
   "torneoClave": "challenger|Taipei",
@@ -13149,27 +13173,17 @@
  },
  "215939": {
   "id": 215939,
-  "tour": "challenger_women_doubles",
+  "tour": "challenger",
   "torneo": "Luanda (Angola)",
   "ronda": "Luanda - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T09:00:00Z",
+  "horario": "2026-11-06T09:10:00Z",
   "j1": {
-   "id": 44888,
-   "nombre": "Li/ Novak",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "chn",
-    null
-   ]
-  },
-  "j2": {
    "id": 44194,
-   "nombre": "Nahimana/ Okutoyi",
+   "nombre": "Nahimana / Okutoyi",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -13177,13 +13191,47 @@
     null
    ]
   },
+  "j2": {
+   "id": 44888,
+   "nombre": "Li / Novak",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "chn",
+    null
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.476Z",
-  "torneoClave": "challenger_women|Luanda (Angola)",
+  "visto": "2026-11-06T09:45:22.474Z",
+  "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14828",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215940": {
   "id": 215940,
@@ -13254,7 +13302,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-06T09:30:00Z",
+  "horario": "2026-11-06T09:35:00Z",
   "j1": {
    "id": 100,
    "nombre": "Maxim Mrva",
@@ -13268,12 +13316,36 @@
    "ranking": 244
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T07:02:15.476Z",
+  "visto": "2026-11-06T09:45:22.474Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14827",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215973": {
   "id": 215973,
@@ -13436,7 +13508,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T08:30:00Z",
+  "horario": "2026-11-06T09:00:00Z",
   "j1": {
    "id": 63,
    "nombre": "Sorana Cirstea",
@@ -13452,7 +13524,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-06T08:45:36.440Z",
+  "visto": "2026-11-06T09:45:22.473Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": false,
@@ -13462,21 +13534,23 @@
   "score": {
    "games": [
     [
+     2,
      0
     ],
     [
+     6,
      0
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": null
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
