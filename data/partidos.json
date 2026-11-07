@@ -15322,7 +15322,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T06:00:35.292Z",
+  "visto": "2026-11-07T07:00:36.235Z",
   "torneoClave": "challenger|Cali",
   "tier": null,
   "importante": false,
@@ -15836,7 +15836,7 @@
    "ranking": 194
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T06:00:35.292Z",
   "torneoClave": "challenger|Taipei",
@@ -15878,7 +15878,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T06:30:00Z",
+  "horario": "2026-11-07T06:50:00Z",
   "j1": {
    "id": 193,
    "nombre": "Coleman Chak Lam Wong",
@@ -15892,12 +15892,36 @@
    "ranking": 375
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T04:00:34.080Z",
+  "visto": "2026-11-07T07:00:36.235Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2429",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216178": {
   "id": 216178,
@@ -15971,7 +15995,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-07T06:00:00Z",
+  "horario": "2026-11-07T06:10:00Z",
   "j1": {
    "id": 973,
    "nombre": "Claire Liu",
@@ -15987,7 +16011,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T06:00:35.292Z",
+  "visto": "2026-11-07T07:00:36.235Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": true,
@@ -15997,10 +16021,10 @@
   "score": {
    "games": [
     [
-     0
+     6
     ],
     [
-     0
+     5
     ]
    ],
    "sets": [
@@ -16011,7 +16035,7 @@
     "0",
     "0"
    ],
-   "saca": null
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
