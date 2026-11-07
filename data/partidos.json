@@ -13212,7 +13212,7 @@
    "ranking": 254
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T12:00:36.194Z",
   "torneoClave": "challenger_women|Luanda (Angola)",
@@ -15327,7 +15327,7 @@
  },
  "216127": {
   "id": 216127,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Cali",
   "ronda": "Cali - Semi-finals",
   "rondaCod": "SF",
@@ -15350,8 +15350,8 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:36.194Z",
-  "torneoClave": "challenger_women|Cali",
+  "visto": "2026-11-07T13:00:35.069Z",
+  "torneoClave": "challenger|Cali",
   "tier": null,
   "importante": false,
   "torneoId": "1857",
@@ -16074,41 +16074,67 @@
  },
  "216185": {
   "id": 216185,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Hong Kong",
   "ronda": "WTA Hong Kong - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-07T12:10:00Z",
+  "horario": "2026-11-07T12:15:00Z",
   "j1": {
-   "id": 43996,
-   "nombre": "Jiang/ Wong Hong Yi",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "chn",
-    null
-   ]
-  },
-  "j2": {
    "id": 12022,
-   "nombre": "Chan H-/Kato",
+   "nombre": "Hao-Ching Chan / Kato",
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "tai",
     "jpn"
    ]
   },
+  "j2": {
+   "id": 43996,
+   "nombre": "Hong Yi Cody Wong / Jiang",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "hkg",
+    "chn"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:36.081Z",
+  "visto": "2026-11-07T13:00:35.068Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8694",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216186": {
   "id": 216186,
@@ -16141,7 +16167,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T12:00:36.194Z",
   "torneoClave": "challenger|Bratislava 2",
@@ -16247,56 +16273,104 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-07T12:30:00Z",
+  "horario": "2026-11-07T12:40:00Z",
   "j1": {
-   "id": 488,
-   "nombre": "Janice Tjen",
-   "pais": "ina",
-   "ranking": 75
-  },
-  "j2": {
    "id": 277,
    "nombre": "Robin Montgomery",
    "pais": "usa",
    "ranking": 151
   },
+  "j2": {
+   "id": 488,
+   "nombre": "Janice Tjen",
+   "pais": "ina",
+   "ranking": 75
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:36.081Z",
+  "visto": "2026-11-07T13:00:35.068Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
-  "importante": true
+  "importante": true,
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216213": {
   "id": 216213,
-  "tour": "challenger_women",
-  "torneo": "Luanda (Angola) - Qualification",
+  "tour": "challenger",
+  "torneo": "Luanda (Angola)",
   "ronda": "Luanda - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-07T12:30:00Z",
+  "horario": "2026-11-07T12:40:00Z",
   "j1": {
-   "id": 1100,
-   "nombre": "Sofya Lansere",
-   "pais": "rus",
-   "ranking": 266
-  },
-  "j2": {
    "id": 700,
    "nombre": "Noma Noha Akugue",
    "pais": "ger",
    "ranking": 118
   },
+  "j2": {
+   "id": 1100,
+   "nombre": "Sofya Lansere",
+   "pais": "rus",
+   "ranking": 266
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:36.194Z",
-  "torneoClave": "challenger_women|Luanda (Angola) - Qualification",
+  "visto": "2026-11-07T13:00:35.068Z",
+  "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14828",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216214": {
   "id": 216214,
@@ -16307,7 +16381,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T12:15:00Z",
+  "horario": "2026-11-07T12:45:00Z",
   "j1": {
    "id": 392,
    "nombre": "Felix Gill",
@@ -16321,12 +16395,36 @@
    "ranking": 244
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:36.194Z",
+  "visto": "2026-11-07T13:00:35.068Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14827",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216215": {
   "id": 216215,
@@ -16359,7 +16457,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T12:00:36.194Z",
   "torneoClave": "challenger|Taranto (Italy)",
@@ -16481,7 +16579,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T12:00:35.984Z",
   "torneoClave": "atp|Paris",
@@ -16545,7 +16643,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T12:00:36.081Z",
   "torneoClave": "wta|Chennai",
@@ -16611,7 +16709,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T12:00:36.081Z",
   "torneoClave": "wta|Chennai",
@@ -16653,26 +16751,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T12:30:00Z",
+  "horario": "2026-11-07T13:00:00Z",
   "j1": {
-   "id": 1576,
-   "nombre": "Jerome Kym",
-   "pais": "sui",
-   "ranking": 164
-  },
-  "j2": {
    "id": 130,
    "nombre": "Matej Dodig",
    "pais": "cro",
    "ranking": 138
   },
+  "j2": {
+   "id": 1576,
+   "nombre": "Jerome Kym",
+   "pais": "sui",
+   "ranking": 164
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:36.194Z",
+  "visto": "2026-11-07T13:00:35.069Z",
   "torneoClave": "challenger|Bratislava 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "3196",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216239": {
   "id": 216239,
@@ -16918,7 +17040,7 @@
    "ranking": 184
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T12:00:35.984Z",
   "tier": null,
@@ -16961,7 +17083,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-07T12:20:00Z",
+  "horario": "2026-11-07T13:00:00Z",
   "j1": {
    "id": 204,
    "nombre": "Damir Dzumhur",
@@ -16975,11 +17097,35 @@
    "ranking": 191
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:35.984Z",
+  "visto": "2026-11-07T13:00:35.068Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216283": {
   "id": 216283,
@@ -17006,7 +17152,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:35.984Z",
+  "visto": "2026-11-07T13:00:35.068Z",
   "tier": null,
   "importante": false,
   "torneoId": "1681",
@@ -17015,21 +17161,23 @@
   "score": {
    "games": [
     [
-     1
+     6,
+     3
     ],
     [
-     1
+     4,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
+    "30",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
