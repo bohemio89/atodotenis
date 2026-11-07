@@ -17999,7 +17999,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T20:00:34.174Z",
+  "visto": "2026-11-07T21:00:33.853Z",
   "torneoClave": "challenger|Costa do Sauipe",
   "tier": null,
   "importante": false,
@@ -18009,10 +18009,10 @@
   "score": {
    "games": [
     [
-     2
+     6
     ],
     [
-     2
+     6
     ]
    ],
    "sets": [
@@ -18020,8 +18020,8 @@
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "5",
+    "3"
    ],
    "saca": 2
   },
@@ -18037,26 +18037,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T20:05:00Z",
+  "horario": "2026-11-07T20:10:00Z",
   "j1": {
-   "id": 678,
-   "nombre": "Clement Chidekh",
-   "pais": "fra",
-   "ranking": 131
-  },
-  "j2": {
    "id": 436,
    "nombre": "Stefan Kozlov",
    "pais": "usa",
    "ranking": 271
   },
+  "j2": {
+   "id": 678,
+   "nombre": "Clement Chidekh",
+   "pais": "fra",
+   "ranking": 131
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T20:00:34.174Z",
+  "visto": "2026-11-07T21:00:33.853Z",
   "torneoClave": "challenger|Charlottesville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2497",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216332": {
   "id": 216332,
