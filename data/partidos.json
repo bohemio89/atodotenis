@@ -1143,7 +1143,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "swe",
     null
    ]
   },
@@ -1153,7 +1153,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ind",
     null
    ]
   },
@@ -11149,8 +11149,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "ind",
+    "usa"
    ]
   },
   "dobles": true,
@@ -15973,7 +15973,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ned",
     null
    ]
   },
@@ -16041,7 +16041,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:34.069Z",
+  "visto": "2026-11-07T22:00:36.294Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": true,
@@ -16052,25 +16052,25 @@
    "games": [
     [
      7,
-     5
+     6
     ],
     [
      5,
-     3
+     4
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
-    "30",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216185": {
   "id": 216185,
@@ -16289,7 +16289,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:34.069Z",
+  "visto": "2026-11-07T22:00:36.033Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
   "importante": true,
@@ -16304,21 +16304,21 @@
     ],
     [
      6,
-     5
+     6
     ]
    ],
    "sets": [
     0,
-    1
+    2
    ],
    "puntos": [
-    "15",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "216213": {
   "id": 216213,
@@ -16519,7 +16519,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:34.069Z",
+  "visto": "2026-11-07T22:00:36.173Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": true,
@@ -16531,26 +16531,26 @@
     [
      7,
      3,
-     1
+     6
     ],
     [
      5,
      6,
-     0
+     4
     ]
    ],
    "sets": [
-    1,
+    2,
     1
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216235": {
   "id": 216235,
@@ -16947,7 +16947,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:34.069Z",
+  "visto": "2026-11-07T22:00:35.778Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
   "importante": true,
@@ -16959,26 +16959,26 @@
     [
      2,
      6,
-     3
+     6
     ],
     [
      6,
      2,
-     0
+     3
     ]
    ],
    "sets": [
-    1,
+    2,
     1
    ],
    "puntos": [
     "0",
-    "40"
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216270": {
   "id": 216270,
@@ -17043,7 +17043,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:33.991Z",
+  "visto": "2026-11-07T22:00:35.894Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": true,
@@ -17054,15 +17054,17 @@
    "games": [
     [
      5,
-     3
+     6,
+     6
     ],
     [
      7,
-     2
+     3,
+     4
     ]
    ],
    "sets": [
-    0,
+    2,
     1
    ],
    "puntos": [
@@ -17071,8 +17073,8 @@
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216280": {
   "id": 216280,
@@ -17945,7 +17947,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:33.991Z",
+  "visto": "2026-11-07T22:00:35.663Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": true,
@@ -17955,24 +17957,26 @@
   "score": {
    "games": [
     [
-     3
+     6,
+     6
     ],
     [
-     3
+     4,
+     4
     ]
    ],
    "sets": [
-    0,
+    2,
     0
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216325": {
   "id": 216325,
@@ -17997,7 +18001,7 @@
    "ranking": 109
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T21:00:33.853Z",
   "torneoClave": "challenger|Costa do Sauipe",
@@ -18053,7 +18057,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T21:00:33.853Z",
+  "visto": "2026-11-07T22:00:34.297Z",
   "torneoClave": "challenger|Charlottesville",
   "tier": null,
   "importante": false,
@@ -18064,20 +18068,22 @@
    "games": [
     [
      6,
-     1
+     1,
+     5
     ],
     [
      2,
-     3
+     6,
+     4
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "40",
-    "40"
+    "15",
+    "30"
    ],
    "saca": 1
   },
@@ -18830,7 +18836,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "aus",
     "pol"
    ]
   },
@@ -18858,8 +18864,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "swe",
+    "swe"
    ]
   },
   "j2": {
@@ -18896,7 +18902,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ind",
     null
    ]
   },
@@ -18944,7 +18950,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ger",
     "usa"
    ]
   },
@@ -18972,7 +18978,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "cro",
     "fra"
    ]
   },
@@ -18983,7 +18989,7 @@
    "ranking": null,
    "paises": [
     "usa",
-    null
+    "aut"
    ]
   },
   "dobles": true,
@@ -19010,8 +19016,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "ger",
+    "aus"
    ]
   },
   "j2": {
@@ -19048,8 +19054,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "ger",
+    "ger"
    ]
   },
   "j2": {
@@ -19157,7 +19163,7 @@
   "j2": {
    "id": 7980,
    "nombre": "M. Dahlin",
-   "pais": null,
+   "pais": "swe",
    "ranking": null
   },
   "dobles": false,
@@ -19421,7 +19427,7 @@
   "j1": {
    "id": 12213,
    "nombre": "Z. Stevens",
-   "pais": null,
+   "pais": "aus",
    "ranking": null
   },
   "j2": {
@@ -20255,7 +20261,7 @@
   "j2": {
    "id": 462,
    "nombre": "Y. Kusuhara",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "dobles": false,
@@ -20309,7 +20315,7 @@
   "j1": {
    "id": 70,
    "nombre": "N. Honda",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "j2": {
@@ -20339,7 +20345,7 @@
   "j1": {
    "id": 831,
    "nombre": "S. Nakagawa",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "j2": {
