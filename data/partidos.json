@@ -15322,7 +15322,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T05:00:47.023Z",
+  "visto": "2026-11-07T06:00:35.292Z",
   "torneoClave": "challenger|Cali",
   "tier": null,
   "importante": false,
@@ -15822,7 +15822,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T05:00:00Z",
+  "horario": "2026-11-07T05:10:00Z",
   "j1": {
    "id": 78,
    "nombre": "Yuta Shimizu",
@@ -15836,12 +15836,38 @@
    "ranking": 194
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T04:00:34.080Z",
+  "visto": "2026-11-07T06:00:35.292Z",
   "torneoClave": "challenger|Taipei",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2429",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5,
+     1
+    ],
+    [
+     7,
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216176": {
   "id": 216176,
@@ -15947,24 +15973,48 @@
   "genero": "women",
   "horario": "2026-11-07T06:00:00Z",
   "j1": {
-   "id": 1905,
-   "nombre": "Alexandra Shubladze",
-   "pais": "rus",
-   "ranking": 136
-  },
-  "j2": {
    "id": 973,
    "nombre": "Claire Liu",
    "pais": "usa",
    "ranking": 102
   },
+  "j2": {
+   "id": 1905,
+   "nombre": "Alexandra Shubladze",
+   "pais": "rus",
+   "ranking": 136
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T04:00:34.008Z",
+  "visto": "2026-11-07T06:00:35.292Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
-  "importante": true
+  "importante": true,
+  "torneoId": "2241",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": null
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216185": {
   "id": 216185,
