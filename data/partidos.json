@@ -15350,7 +15350,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T14:00:35.809Z",
+  "visto": "2026-11-07T15:00:36.472Z",
   "torneoClave": "challenger|Cali",
   "tier": null,
   "importante": false,
@@ -16103,7 +16103,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T14:00:35.807Z",
   "torneoClave": "wta|Hong Kong",
@@ -16287,7 +16287,7 @@
    "ranking": 75
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T14:00:35.808Z",
   "torneoClave": "wta|Chennai",
@@ -16343,7 +16343,7 @@
    "ranking": 266
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T14:00:35.808Z",
   "torneoClave": "challenger|Luanda (Angola)",
@@ -16769,7 +16769,7 @@
    "ranking": 164
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T14:00:35.808Z",
   "torneoClave": "challenger|Bratislava 2",
@@ -16811,7 +16811,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T14:00:00Z",
+  "horario": "2026-11-07T14:10:00Z",
   "j1": {
    "id": 422,
    "nombre": "Juan Manuel La Serna",
@@ -16825,12 +16825,38 @@
    "ranking": 340
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:36.194Z",
+  "visto": "2026-11-07T15:00:36.472Z",
   "torneoClave": "challenger|Villa Maria",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "7863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216256": {
   "id": 216256,
@@ -16879,7 +16905,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-07T14:00:00Z",
+  "horario": "2026-11-07T14:30:00Z",
   "j1": {
    "id": 292,
    "nombre": "Magda Linette",
@@ -16893,12 +16919,38 @@
    "ranking": 107
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:36.081Z",
+  "visto": "2026-11-07T15:00:36.472Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
-  "importante": true
+  "importante": true,
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216270": {
   "id": 216270,
@@ -16963,7 +17015,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T14:00:35.808Z",
+  "visto": "2026-11-07T15:00:36.471Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": true,
@@ -16973,19 +17025,21 @@
   "score": {
    "games": [
     [
-     2
+     5,
+     3
     ],
     [
-     1
+     7,
+     2
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -17127,7 +17181,7 @@
    "ranking": 191
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T14:00:35.808Z",
   "tier": null,
@@ -17223,25 +17277,49 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-07T13:35:00Z",
+  "horario": "2026-11-07T14:50:00Z",
   "j1": {
-   "id": 992,
-   "nombre": "Viktor Durasovic",
-   "pais": "nor",
-   "ranking": 482
-  },
-  "j2": {
    "id": 12,
    "nombre": "Alexander Shevchenko",
    "pais": "kaz",
    "ranking": 107
   },
+  "j2": {
+   "id": 992,
+   "nombre": "Viktor Durasovic",
+   "pais": "nor",
+   "ranking": 482
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:35.984Z",
+  "visto": "2026-11-07T15:00:36.472Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216285": {
   "id": 216285,
@@ -17268,7 +17346,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T14:00:35.809Z",
+  "visto": "2026-11-07T15:00:36.471Z",
   "tier": null,
   "importante": false,
   "torneoId": "1681",
@@ -17277,19 +17355,21 @@
   "score": {
    "games": [
     [
+     7,
      2
     ],
     [
-     1
+     6,
+     0
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "15",
-    "0"
+    "40",
+    "AD"
    ],
    "saca": 2
   },
@@ -17417,7 +17497,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T14:00:35.809Z",
+  "visto": "2026-11-07T15:00:36.471Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
   "importante": false,
@@ -17427,21 +17507,23 @@
   "score": {
    "games": [
     [
-     0
+     4,
+     2
     ],
     [
-     0
+     6,
+     3
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "0",
-    "30"
+    "15",
+    "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -17455,26 +17537,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T14:00:00Z",
+  "horario": "2026-11-07T14:30:00Z",
   "j1": {
-   "id": 399,
-   "nombre": "Dalibor Svrcina",
-   "pais": "cze",
-   "ranking": 119
-  },
-  "j2": {
    "id": 224,
    "nombre": "Jurij Rodionov",
    "pais": "aut",
    "ranking": 142
   },
+  "j2": {
+   "id": 399,
+   "nombre": "Dalibor Svrcina",
+   "pais": "cze",
+   "ranking": 119
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:36.194Z",
+  "visto": "2026-11-07T15:00:36.472Z",
   "torneoClave": "challenger|Bratislava 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "3196",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216305": {
   "id": 216305,
