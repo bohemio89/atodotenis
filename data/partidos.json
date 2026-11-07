@@ -15350,7 +15350,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T13:00:35.069Z",
+  "visto": "2026-11-07T14:00:35.809Z",
   "torneoClave": "challenger|Cali",
   "tier": null,
   "importante": false,
@@ -16105,7 +16105,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T13:00:35.068Z",
+  "visto": "2026-11-07T14:00:35.807Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": false,
@@ -16116,11 +16116,11 @@
    "games": [
     [
      6,
-     0
+     1
     ],
     [
      1,
-     0
+     1
     ]
    ],
    "sets": [
@@ -16128,8 +16128,8 @@
     0
    ],
    "puntos": [
-    "15",
-    "0"
+    "30",
+    "30"
    ],
    "saca": 1
   },
@@ -16289,7 +16289,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T13:00:35.068Z",
+  "visto": "2026-11-07T14:00:35.808Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
   "importante": true,
@@ -16299,21 +16299,23 @@
   "score": {
    "games": [
     [
-     1
+     3,
+     4
     ],
     [
-     4
+     6,
+     5
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "15",
-    "40"
+    "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -16343,7 +16345,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T13:00:35.068Z",
+  "visto": "2026-11-07T14:00:35.808Z",
   "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
   "importante": false,
@@ -16353,18 +16355,20 @@
   "score": {
    "games": [
     [
-     1
+     6,
+     0
     ],
     [
+     7,
      2
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "0",
+    "30",
     "40"
    ],
    "saca": 2
@@ -16395,7 +16399,7 @@
    "ranking": 244
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T13:00:35.068Z",
   "torneoClave": "challenger|Taranto (Italy)",
@@ -16767,7 +16771,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T13:00:35.069Z",
+  "visto": "2026-11-07T14:00:35.808Z",
   "torneoClave": "challenger|Bratislava 2",
   "tier": null,
   "importante": false,
@@ -16777,15 +16781,17 @@
   "score": {
    "games": [
     [
-     0
+     4,
+     2
     ],
     [
-     1
+     6,
+     5
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "0",
@@ -16941,26 +16947,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T13:30:00Z",
+  "horario": "2026-11-07T13:45:00Z",
   "j1": {
-   "id": 232,
-   "nombre": "Luca van Assche",
-   "pais": "fra",
-   "ranking": 47
-  },
-  "j2": {
    "id": 11,
    "nombre": "Ben Shelton",
    "pais": "usa",
    "ranking": 4
   },
+  "j2": {
+   "id": 232,
+   "nombre": "Luca van Assche",
+   "pais": "fra",
+   "ranking": 47
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:35.984Z",
+  "visto": "2026-11-07T14:00:35.808Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
-  "importante": true
+  "importante": true,
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216280": {
   "id": 216280,
@@ -17099,7 +17129,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T13:00:35.068Z",
+  "visto": "2026-11-07T14:00:35.808Z",
   "tier": null,
   "importante": false,
   "torneoId": "1681",
@@ -17108,19 +17138,21 @@
   "score": {
    "games": [
     [
-     0
+     5,
+     1
     ],
     [
-     1
+     7,
+     2
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 1
   },
@@ -17150,7 +17182,7 @@
    "ranking": 416
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T13:00:35.068Z",
   "tier": null,
@@ -17220,25 +17252,49 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-07T13:10:00Z",
+  "horario": "2026-11-07T13:50:00Z",
   "j1": {
-   "id": 2313,
-   "nombre": "K. Friberg",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 397,
    "nombre": "Toby Samuel",
    "pais": "gbr",
    "ranking": 97
   },
+  "j2": {
+   "id": 2313,
+   "nombre": "Karl Friberg",
+   "pais": "swe",
+   "ranking": 813
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:35.984Z",
+  "visto": "2026-11-07T14:00:35.809Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216286": {
   "id": 216286,
@@ -17345,7 +17401,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T13:00:00Z",
+  "horario": "2026-11-07T14:10:00Z",
   "j1": {
    "id": 90,
    "nombre": "Carlo Alberto Caniato",
@@ -17359,12 +17415,36 @@
    "ranking": 262
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T12:00:36.194Z",
+  "visto": "2026-11-07T14:00:35.809Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14827",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216304": {
   "id": 216304,
