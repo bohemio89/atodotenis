@@ -1296,7 +1296,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "usa"
    ]
   },
   "j2": {
@@ -10058,7 +10058,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "usa"
    ]
   },
   "dobles": true,
@@ -14406,7 +14406,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "usa"
    ]
   },
   "dobles": true,
@@ -15974,7 +15974,7 @@
    "ranking": null,
    "paises": [
     "ned",
-    null
+    "usa"
    ]
   },
   "j2": {
@@ -16163,7 +16163,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "usa"
    ]
   },
   "dobles": true,
@@ -16874,7 +16874,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "usa",
     null
    ]
   },
@@ -17213,7 +17213,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:33.991Z",
+  "visto": "2026-11-07T23:00:35.384Z",
   "tier": null,
   "importante": false,
   "torneoId": "1681",
@@ -17223,16 +17223,16 @@
    "games": [
     [
      5,
-     1
+     3
     ],
     [
      7,
-     2
+     6
     ]
    ],
    "sets": [
     0,
-    1
+    2
    ],
    "puntos": [
     "0",
@@ -17240,8 +17240,8 @@
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "216283": {
   "id": 216283,
@@ -17268,7 +17268,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:33.991Z",
+  "visto": "2026-11-07T23:00:35.529Z",
   "tier": null,
   "importante": false,
   "torneoId": "1681",
@@ -17278,25 +17278,25 @@
    "games": [
     [
      6,
-     3
+     7
     ],
     [
      4,
-     4
+     6
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
-    "30",
+    "0",
     "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216284": {
   "id": 216284,
@@ -17323,7 +17323,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:33.991Z",
+  "visto": "2026-11-07T23:00:35.180Z",
   "tier": null,
   "importante": false,
   "torneoId": "1681",
@@ -17332,24 +17332,26 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     6
     ],
     [
+     1,
      1
     ]
    ],
    "sets": [
-    0,
+    2,
     0
    ],
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216285": {
   "id": 216285,
@@ -17376,7 +17378,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:33.991Z",
+  "visto": "2026-11-07T23:00:35.310Z",
   "tier": null,
   "importante": false,
   "torneoId": "1681",
@@ -17386,25 +17388,25 @@
    "games": [
     [
      7,
-     2
+     6
     ],
     [
      6,
-     0
+     2
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
-    "40",
-    "AD"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216286": {
   "id": 216286,
@@ -17431,7 +17433,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:33.991Z",
+  "visto": "2026-11-07T23:00:35.011Z",
   "tier": null,
   "importante": false,
   "torneoId": "1681",
@@ -17440,24 +17442,26 @@
   "score": {
    "games": [
     [
-     0
+     0,
+     2
     ],
     [
-     0
+     6,
+     6
     ]
    ],
    "sets": [
     0,
-    0
+    2
    ],
    "puntos": [
-    "15",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "216287": {
   "id": 216287,
@@ -17484,7 +17488,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-07T20:00:33.991Z",
+  "visto": "2026-11-07T23:00:35.095Z",
   "tier": null,
   "importante": false,
   "torneoId": "1681",
@@ -17493,14 +17497,16 @@
   "score": {
    "games": [
     [
-     4
+     6,
+     6
     ],
     [
-     3
+     4,
+     1
     ]
    ],
    "sets": [
-    0,
+    2,
     0
    ],
    "puntos": [
@@ -17509,8 +17515,8 @@
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216294": {
   "id": 216294,
@@ -18092,17 +18098,17 @@
  },
  "216332": {
   "id": 216332,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Costa do Sauipe",
   "ronda": "Costa do Sauipe - Final",
   "rondaCod": "F",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T21:15:00Z",
+  "horario": "2026-11-07T22:20:00Z",
   "j1": {
    "id": 44044,
-   "nombre": "Hidalgo/ Molteni",
+   "nombre": "Hidalgo / Molteni",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -18112,21 +18118,47 @@
   },
   "j2": {
    "id": 44047,
-   "nombre": "Kolar/ Rodriguez Taverna",
+   "nombre": "Kolar / Santiago Rodriguez Taverna",
    "pais": null,
    "ranking": null,
    "paises": [
     null,
-    null
+    "arg"
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T20:00:34.174Z",
+  "visto": "2026-11-07T23:00:34.909Z",
   "torneoClave": "challenger|Costa do Sauipe",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13360",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216357": {
   "id": 216357,
@@ -19093,7 +19125,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "usa"
    ]
   },
   "j2": {
@@ -19102,7 +19134,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "swe",
     "swe"
    ]
   },
@@ -21505,7 +21537,7 @@
    "ranking": null,
    "paises": [
     "aus",
-    null
+    "col"
    ]
   },
   "j2": {
@@ -21515,7 +21547,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "usa"
    ]
   },
   "estado": "por_confirmar",
@@ -21721,7 +21753,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "usa",
     null
    ]
   },
