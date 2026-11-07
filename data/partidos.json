@@ -11465,7 +11465,7 @@
  },
  "215675": {
   "id": 215675,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
   "ronda": "ATP Paris - Quarter-finals",
   "rondaCod": "QF",
@@ -11496,7 +11496,7 @@
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.195Z",
+  "visto": "2026-11-07T02:00:37.454Z",
   "tier": "atp_1000",
   "importante": false,
   "torneoClave": "atp|Paris",
@@ -11506,24 +11506,26 @@
   "score": {
    "games": [
     [
+     7,
      6
     ],
     [
-     6
+     6,
+     4
     ]
    ],
    "sets": [
-    0,
+    2,
     0
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215676": {
   "id": 215676,
@@ -13243,7 +13245,7 @@
  },
  "215916": {
   "id": 215916,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
   "ronda": "ATP Paris - Quarter-finals",
   "rondaCod": "QF",
@@ -13274,7 +13276,7 @@
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.195Z",
+  "visto": "2026-11-07T02:00:37.292Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
   "importante": false,
@@ -13285,25 +13287,27 @@
    "games": [
     [
      6,
+     6,
      1
     ],
     [
      7,
+     4,
      0
     ]
    ],
    "sets": [
-    0,
+    2,
     1
    ],
    "puntos": [
     "0",
-    "15"
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215917": {
   "id": 215917,
@@ -13647,7 +13651,7 @@
  },
  "215936": {
   "id": 215936,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Chennai",
   "ronda": "WTA Chennai - Quarter-finals",
   "rondaCod": "QF",
@@ -13678,7 +13682,7 @@
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-06T19:45:20.385Z",
+  "visto": "2026-11-07T02:00:37.343Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
   "importante": false,
@@ -13689,25 +13693,25 @@
    "games": [
     [
      6,
-     1
+     6
     ],
     [
      3,
-     0
+     4
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215937": {
   "id": 215937,
@@ -15302,7 +15306,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-06T20:15:00Z",
+  "horario": "2026-11-07T15:00:00Z",
   "j1": {
    "id": 289,
    "nombre": "Bianca Andreescu",
@@ -15318,7 +15322,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T01:00:36.088Z",
+  "visto": "2026-11-07T02:00:37.114Z",
   "torneoClave": "challenger|Cali",
   "tier": null,
   "importante": false,
