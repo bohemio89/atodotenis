@@ -16889,7 +16889,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T16:00:35.380Z",
   "torneoClave": "challenger_women|Cali",
@@ -16945,7 +16945,7 @@
    "ranking": 107
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T16:00:35.234Z",
   "torneoClave": "wta|Chennai",
@@ -17427,7 +17427,7 @@
    "ranking": 90
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T16:00:35.102Z",
   "tier": null,
@@ -17480,7 +17480,7 @@
    "ranking": 1299
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T16:00:35.102Z",
   "tier": null,
@@ -17629,7 +17629,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T16:00:35.380Z",
+  "visto": "2026-11-07T17:00:35.469Z",
   "torneoClave": "challenger|Bratislava 2",
   "tier": null,
   "importante": false,
@@ -17640,19 +17640,21 @@
    "games": [
     [
      6,
+     6,
      5
     ],
     [
      3,
-     5
+     7,
+     2
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "30",
+    "40",
     "30"
    ],
    "saca": 2
@@ -17699,26 +17701,52 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T16:00:00Z",
+  "horario": "2026-11-07T16:15:00Z",
   "j1": {
-   "id": 1574,
-   "nombre": "F. Coria",
-   "pais": "arg",
-   "ranking": null
-  },
-  "j2": {
    "id": 622,
    "nombre": "Genaro Alberto Olivieri",
    "pais": "arg",
    "ranking": 257
   },
+  "j2": {
+   "id": 1574,
+   "nombre": "Federico Coria",
+   "pais": "arg",
+   "ranking": 831
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T16:00:35.380Z",
+  "visto": "2026-11-07T17:00:35.470Z",
   "torneoClave": "challenger|Villa Maria",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "7863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216313": {
   "id": 216313,
@@ -17797,26 +17825,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T16:00:00Z",
+  "horario": "2026-11-07T16:30:00Z",
   "j1": {
-   "id": 537,
-   "nombre": "Casper Ruud",
-   "pais": "nor",
-   "ranking": 23
-  },
-  "j2": {
    "id": 13,
    "nombre": "Carlos Alcaraz",
    "pais": "esp",
    "ranking": 3
   },
+  "j2": {
+   "id": 537,
+   "nombre": "Casper Ruud",
+   "pais": "nor",
+   "ranking": 23
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T16:00:35.102Z",
+  "visto": "2026-11-07T17:00:35.470Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
-  "importante": true
+  "importante": true,
+  "torneoId": "1725",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216325": {
   "id": 216325,
@@ -20370,12 +20422,12 @@
  },
  "216450": {
   "id": 216450,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "tier": null,
   "torneo": "Luanda (Angola)",
   "torneoId": "14828",
   "ronda": "Semifinals",
-  "rondaCod": null,
+  "rondaCod": "SF",
   "superficie": "hard",
   "cubierto": false,
   "dobles": false,
@@ -20399,15 +20451,19 @@
   "score": {
    "games": [
     [
-     5
+     5,
+     6,
+     0
     ],
     [
-     5
+     7,
+     4,
+     0
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
     "0",
@@ -20417,9 +20473,9 @@
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-07T16:00:35.380Z",
+  "visto": "2026-11-07T17:00:35.470Z",
   "motivo": null,
-  "torneoClave": "challenger_women|Luanda (Angola)",
+  "torneoClave": "challenger|Luanda (Angola)",
   "importante": false
  },
  "216453": {
@@ -21276,7 +21332,7 @@
     null
    ]
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "games": [
@@ -21304,6 +21360,59 @@
   "visto": "2026-11-07T16:00:34.986Z",
   "torneoClave": "wta|Cali, Colombia, Doubles",
   "importante": false
+ },
+ "216488": {
+  "id": 216488,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Cali",
+  "torneoId": "1857",
+  "ronda": "Final",
+  "rondaCod": "F",
+  "superficie": "clay",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-07T16:35:00Z",
+  "j1": {
+   "id": 156,
+   "nombre": "Leyre Romero Gormaz",
+   "pais": "esp",
+   "ranking": 131
+  },
+  "j2": {
+   "id": 289,
+   "nombre": "Bianca Andreescu",
+   "pais": "can",
+   "ranking": 109
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-07T17:00:35.470Z",
+  "torneoClave": "challenger|Cali",
+  "importante": true
  },
  "null": {
   "id": null,
