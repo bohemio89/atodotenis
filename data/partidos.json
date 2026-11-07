@@ -17512,17 +17512,27 @@
  },
  "216294": {
   "id": 216294,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Paris",
   "ronda": "ATP Paris - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T17:30:00Z",
+  "horario": "2026-11-07T18:20:00Z",
   "j1": {
+   "id": 1743,
+   "nombre": "Pierre-Hugues Herbert / Quentin Halys",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "fra",
+    "fra"
+   ]
+  },
+  "j2": {
    "id": 1788,
-   "nombre": "Heliovaara/ Patten",
+   "nombre": "Harri Heliovaara / Henry Patten",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -17530,23 +17540,39 @@
     "gbr"
    ]
   },
-  "j2": {
-   "id": 1743,
-   "nombre": "Halys/ Herbert",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    null
-   ]
-  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T16:00:35.102Z",
+  "visto": "2026-11-07T19:00:35.091Z",
   "torneoClave": "atp|Paris",
   "tier": "atp_1000",
-  "importante": false
+  "importante": false,
+  "torneoId": "1726",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216295": {
   "id": 216295,
@@ -17671,7 +17697,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T18:00:00Z",
+  "horario": "2026-11-07T18:10:00Z",
   "j1": {
    "id": 139,
    "nombre": "Gonzalo Bueno",
@@ -17685,12 +17711,38 @@
    "ranking": 81
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T16:00:35.380Z",
+  "visto": "2026-11-07T19:00:35.091Z",
   "torneoClave": "challenger|Costa do Sauipe",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13361",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     0
+    ],
+    [
+     6,
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216311": {
   "id": 216311,
@@ -17715,7 +17767,7 @@
    "ranking": 831
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T18:00:33.991Z",
   "torneoClave": "challenger|Villa Maria",
@@ -17759,26 +17811,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T18:30:00Z",
+  "horario": "2026-11-07T18:45:00Z",
   "j1": {
-   "id": 618,
-   "nombre": "Aidan Mayo",
-   "pais": "usa",
-   "ranking": 285
-  },
-  "j2": {
    "id": 116,
    "nombre": "Andres Andrade",
    "pais": "ecu",
    "ranking": 229
   },
+  "j2": {
+   "id": 618,
+   "nombre": "Aidan Mayo",
+   "pais": "usa",
+   "ranking": 285
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T16:00:35.380Z",
+  "visto": "2026-11-07T19:00:35.091Z",
   "torneoClave": "challenger|Charlottesville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2497",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216317": {
   "id": 216317,
@@ -17811,7 +17887,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T18:00:33.991Z",
   "torneoClave": "challenger|Charlottesville",
@@ -20412,27 +20488,17 @@
  },
  "216447": {
   "id": 216447,
-  "tour": "challenger_women_doubles",
+  "tour": "challenger",
   "torneo": "Luanda (Angola)",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Final",
+  "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-07T16:30:00Z",
+  "horario": "2026-11-07T18:05:00Z",
   "j1": {
-   "id": 44194,
-   "nombre": "Nahimana/ Okutoyi",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "j2": {
    "id": 4320,
-   "nombre": "Kubka/ Mikulskyte",
+   "nombre": "Kubka / Mikulskyte",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -20440,13 +20506,49 @@
     "ltu"
    ]
   },
+  "j2": {
+   "id": 44194,
+   "nombre": "Nahimana / Okutoyi",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T16:00:35.380Z",
-  "torneoClave": "challenger_women|Luanda (Angola)",
+  "visto": "2026-11-07T19:00:35.090Z",
+  "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14828",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     1
+    ],
+    [
+     6,
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216450": {
   "id": 216450,
@@ -21415,7 +21517,7 @@
    "pais": "can",
    "ranking": 109
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "games": [
@@ -21443,6 +21545,67 @@
   "visto": "2026-11-07T18:00:33.991Z",
   "torneoClave": "challenger|Cali",
   "importante": true
+ },
+ "216499": {
+  "id": 216499,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Cali",
+  "torneoId": "8539",
+  "ronda": "Final",
+  "rondaCod": "F",
+  "superficie": "clay",
+  "cubierto": false,
+  "dobles": true,
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-07T18:30:00Z",
+  "j1": {
+   "id": 3732,
+   "nombre": "Allura Zamarripa / Anna Rogers",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 17107,
+   "nombre": "Carle / Pigossi",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6
+    ],
+    [
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "6",
+    "4"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-07T19:00:35.091Z",
+  "torneoClave": "challenger|Cali",
+  "importante": false
  },
  "null": {
   "id": null,
