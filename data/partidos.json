@@ -13191,7 +13191,7 @@
  },
  "215915": {
   "id": 215915,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Luanda (Angola)",
   "ronda": "Luanda - Quarter-finals",
   "rondaCod": "QF",
@@ -13212,10 +13212,10 @@
    "ranking": 254
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T08:00:37.796Z",
-  "torneoClave": "challenger_women|Luanda (Angola)",
+  "visto": "2026-11-07T11:00:36.185Z",
+  "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
   "importante": false,
   "torneoId": "14828",
@@ -13224,21 +13224,23 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     1
     ],
     [
-     0
+     2,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -14259,27 +14261,17 @@
  },
  "215976": {
   "id": 215976,
-  "tour": "challenger_women_doubles",
+  "tour": "challenger",
   "torneo": "Luanda (Angola)",
   "ronda": "Luanda - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-07T10:30:00Z",
+  "horario": "2026-11-07T10:45:00Z",
   "j1": {
-   "id": 44192,
-   "nombre": "Sanchez/ Zaytseva",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "rus"
-   ]
-  },
-  "j2": {
    "id": 4320,
-   "nombre": "Kubka/ Mikulskyte",
+   "nombre": "Kubka / Mikulskyte",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -14287,13 +14279,47 @@
     "ltu"
    ]
   },
+  "j2": {
+   "id": 44192,
+   "nombre": "Sanchez / Zaytseva",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "rus"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T08:00:37.796Z",
-  "torneoClave": "challenger_women|Luanda (Angola)",
+  "visto": "2026-11-07T11:00:36.186Z",
+  "torneoClave": "challenger|Luanda (Angola)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14828",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215977": {
   "id": 215977,
@@ -15322,7 +15348,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T10:00:33.582Z",
+  "visto": "2026-11-07T11:00:36.186Z",
   "torneoClave": "challenger|Cali",
   "tier": null,
   "importante": false,
@@ -16151,7 +16177,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-07T10:00:33.582Z",
   "torneoClave": "challenger|Taipei",
@@ -16276,17 +16302,17 @@
  },
  "216215": {
   "id": 216215,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Taranto (Italy)",
   "ronda": "Taranto - Final",
   "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-07T10:00:00Z",
+  "horario": "2026-11-07T10:50:00Z",
   "j1": {
    "id": 1676,
-   "nombre": "Mansouri/ Neuchrist",
+   "nombre": "Maximilian Neuchrist / Skander Mansouri",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -16296,7 +16322,7 @@
   },
   "j2": {
    "id": 1679,
-   "nombre": "Forcano/ Izquierdo Luque",
+   "nombre": "Ignasi Forcano / Rafael Izquierdo Luque",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -16305,12 +16331,36 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T08:00:37.796Z",
+  "visto": "2026-11-07T11:00:36.186Z",
   "torneoClave": "challenger|Taranto (Italy)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14825",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216234": {
   "id": 216234,
@@ -16337,7 +16387,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T10:00:33.582Z",
+  "visto": "2026-11-07T11:00:36.185Z",
   "torneoClave": "wta|Hong Kong",
   "tier": null,
   "importante": true,
@@ -16348,22 +16398,24 @@
    "games": [
     [
      7,
+     3,
      1
     ],
     [
      5,
-     4
+     6,
+     0
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
     "40",
-    "0"
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -16408,17 +16460,27 @@
  },
  "216236": {
   "id": 216236,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Chennai",
   "ronda": "WTA Chennai - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-07T10:30:00Z",
+  "horario": "2026-11-07T10:40:00Z",
   "j1": {
+   "id": 12375,
+   "nombre": "Alana Smith / Falkowska",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "usa",
+    "pol"
+   ]
+  },
+  "j2": {
    "id": 44011,
-   "nombre": "Adkar/ Bhosale",
+   "nombre": "Adkar / Bhosale",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -16426,47 +16488,51 @@
     "ind"
    ]
   },
-  "j2": {
-   "id": 12375,
-   "nombre": "Falkowska/ Smith",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "pol",
-    "usa"
-   ]
-  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T08:00:37.715Z",
+  "visto": "2026-11-07T11:00:36.186Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "7826",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216237": {
   "id": 216237,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Chennai",
   "ronda": "WTA Chennai - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-07T10:30:00Z",
+  "horario": "2026-11-07T10:40:00Z",
   "j1": {
-   "id": 44017,
-   "nombre": "Karamoko/ Waltert",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "sui",
-    "sui"
-   ]
-  },
-  "j2": {
    "id": 10994,
-   "nombre": "Haverlag/ Udvardy",
+   "nombre": "Isabelle Haverlag / Udvardy",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -16474,13 +16540,47 @@
     "hun"
    ]
   },
+  "j2": {
+   "id": 44017,
+   "nombre": "Karamoko / Waltert",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "sui",
+    "sui"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T08:00:37.715Z",
+  "visto": "2026-11-07T11:00:36.186Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "7826",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216238": {
   "id": 216238,
@@ -16687,7 +16787,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-07T10:00:00Z",
+  "horario": "2026-11-07T10:10:00Z",
   "j1": {
    "id": 221,
    "nombre": "Nikoloz Basilashvili",
@@ -16701,11 +16801,37 @@
    "ranking": 153
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T08:00:37.623Z",
+  "visto": "2026-11-07T11:00:36.185Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216281": {
   "id": 216281,
@@ -16716,25 +16842,51 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-07T10:00:00Z",
+  "horario": "2026-11-07T10:10:00Z",
   "j1": {
-   "id": 4797,
-   "nombre": "Mika Brunold",
-   "pais": "sui",
-   "ranking": 184
-  },
-  "j2": {
    "id": 140,
    "nombre": "Borna Gojo",
    "pais": "cro",
    "ranking": 133
   },
+  "j2": {
+   "id": 4797,
+   "nombre": "Mika Brunold",
+   "pais": "sui",
+   "ranking": 184
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-07T08:00:37.623Z",
+  "visto": "2026-11-07T11:00:36.185Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     7,
+     0
+    ],
+    [
+     5,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216282": {
   "id": 216282,
