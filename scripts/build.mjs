@@ -93,7 +93,6 @@ function imagenNota(n, conCredito = true) {
 
 function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
   const t = titulo ? `${titulo} | ${S.nombre}` : `${S.nombre} | Todo el tenis`;
-  const actualizado = estado.ultimaCorrida ? `Actualizado ${hora(estado.ultimaCorrida, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}` : '';
   const item = (href, txt, clave) => `<a href="${href}"${activo === clave ? ' class="activo" aria-current="page"' : ''}>${txt}</a>`;
   return `<!doctype html>
 <html lang="es-AR">
@@ -319,7 +318,7 @@ ${hero()}
 <div class="tres sec">
 <section><div class="sec-tit"><h2>Últimas noticias</h2><a href="/noticias">Ver todas</a></div>
 ${notas.length ? carrusel(notas.slice(0, 12)) : '<div class="panel"><div class="vacio" style="border:0">Las primeras notas se publican automáticamente a medida que terminan los partidos.</div></div>'}</section>
-<section><div class="sec-tit"><h2>Torneos y resultados</h2></div>${panelResultados('home', 10)}<a class="ver-mas panel" href="/resultados" style="margin-top:8px">Ver todos los resultados →</a>${estado.ultimaCorrida ? `<p class="meta" style="margin:6px 2px 0">Actualizado ${hora(estado.ultimaCorrida, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</p>` : ''}</section>
+<section><div class="sec-tit"><h2>Torneos y resultados</h2></div>${panelResultados('home', 10)}<a class="ver-mas panel" href="/resultados" style="margin-top:8px">Ver todos los resultados →</a></section>
 <section><div class="sec-tit"><h2>Ranking A Todo Tenis</h2></div>${panelRanking('rk', 10)}<a class="ver-mas panel" href="/ranking" style="margin-top:8px">Ranking completo →</a>${recuadroEfemeride()}</section>
 </div>
 ${torneosEnJuego.length ? `<section class="sec"><div class="sec-tit"><h2>Torneos en juego</h2><a href="/torneos">Ver todos</a></div><div class="tgrid fila-scroll">${torneosEnJuego.map(T.cardTorneo).join('')}</div></section>` : ''}
@@ -338,7 +337,7 @@ escribir('resultados.html', pagina({ titulo: 'Resultados y partidos en vivo', de
 
 escribir('ranking.html', pagina({ titulo: 'Ranking ATP y WTA', descripcion: 'Ranking ATP y WTA actualizado.', ruta: '/ranking', activo: 'ranking', cuerpo: `
 <div class="sec"><div class="sec-tit"><h1>Ranking</h1></div>${panelRanking('rkc', 200, false)}
-<p class="meta" style="margin-top:10px">Fotos de los jugadores: Wikimedia Commons, con licencia libre (<a href="/creditos" style="text-decoration:underline">ver créditos</a>). Actualizado una vez por día${jugadores.actualizado ? ` · última actualización ${fechaCorta(jugadores.actualizado)}` : ''}.</p></div>` }));
+<p class="meta" style="margin-top:10px">Fotos de los jugadores: Wikimedia Commons, con licencia libre (<a href="/creditos" style="text-decoration:underline">ver créditos</a>).</p></div>` }));
 
 const argRank = (tour) => rankingDe(tour).filter((j) => j.pais === ARG).slice(0, 30);
 escribir('argentinos.html', pagina({ titulo: 'Argentinos en el circuito', ruta: '/argentinos', activo: 'argentinos', cuerpo: `
