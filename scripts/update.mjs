@@ -240,7 +240,11 @@ async function main() {
       const r = await api(`players?limit=200&offset=${i * 200}`);
       for (const j of r.data || []) {
         if (!j.ranking || j.is_doubles_team) continue;
-        lista[j.id] = { nombre: j.name, pais: j.country, ranking: j.ranking, puntos: j.ranking_points, mov: j.ranking_movement, tour: j.tour };
+        // Puestos que subió o bajó: se compara con el ranking anterior guardado (la API solo da la dirección)
+        const viejo = jugadores.lista?.[j.id];
+        let cambio = viejo?.cambio ?? null, rankAnterior = viejo?.rankAnterior ?? null;
+        if (viejo?.ranking && viejo.ranking !== j.ranking) { rankAnterior = viejo.ranking; cambio = viejo.ranking - j.ranking; }
+        lista[j.id] = { nombre: j.name, pais: j.country, ranking: j.ranking, puntos: j.ranking_points, mov: j.ranking_movement, tour: j.tour, cambio, rankAnterior };
         registrar(j.id, j.name, j.country, j.tour);
       }
     }

@@ -234,8 +234,17 @@ function avatar(j) {
   return `<span class="av">${foto}<span class="av-flag">${paisTag(j)}</span></span>`;
 }
 const rankingDe = (tour) => Object.values(jugadores.lista).filter((j) => j.tour === tour).sort((a, b) => a.ranking - b.ranking);
+// Flecha y puestos que subió o bajó (si coincide con la dirección que informa la API)
+function movimiento(j) {
+  const c = Number(j.cambio) || 0;
+  const dir = c > 0 ? 'up' : c < 0 ? 'down' : j.mov === 'up' ? 'up' : j.mov === 'down' ? 'down' : '';
+  if (!dir) return '<span class="mov" aria-label="sin cambios"></span>';
+  const n = c && ((c > 0) === (dir === 'up')) ? Math.abs(c) : null;
+  const txt = dir === 'up' ? 'subió' : 'bajó';
+  return `<span class="mov ${dir}" aria-label="${txt}${n ? ` ${n} ${n === 1 ? 'puesto' : 'puestos'}` : ''}">${dir === 'up' ? '▲' : '▼'}${n ? `<small>${n}</small>` : ''}</span>`;
+}
 function tablaRanking(tour, max) {
-  const filas = rankingDe(tour).slice(0, max).map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug">${avatar(j)}<span class="n">${esc(j.nombre)}</span><span class="mov ${j.mov === 'up' ? 'up' : j.mov === 'down' ? 'down' : ''}" aria-label="${j.mov === 'up' ? 'subió' : j.mov === 'down' ? 'bajó' : 'sin cambios'}">${j.mov === 'up' ? '▲' : j.mov === 'down' ? '▼' : ''}</span></span><span class="pts">${(j.puntos ?? '').toLocaleString('es-AR')}</span></div>`).join('');
+  const filas = rankingDe(tour).slice(0, max).map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug">${avatar(j)}<span class="n">${esc(j.nombre)}</span>${movimiento(j)}</span><span class="pts">${(j.puntos ?? '').toLocaleString('es-AR')}</span></div>`).join('');
   return `<div class="rk-cab"><span>#</span><span>Jugador${tour === 'wta' ? 'a' : ''}</span><span style="text-align:right">Puntos</span></div>${filas || '<div class="vacio">Ranking no disponible todavía.</div>'}`;
 }
 function panelRanking(id, max) {
@@ -285,6 +294,8 @@ function recuadroEfemeride() {
   const auto = [];
   for (const t of Object.values(torneos)) {
     if (!/^(atp|wta)$/.test(t.tour)) continue;
+    // Solo títulos significativos: Grand Slam, Finals y Masters/WTA 1000
+    if (!/^(grand_slam|atp_1000|wta_1000|atp_finals|wta_finals|finals)$/.test(t.meta?.categoria || '') && !/finals/i.test(t.nombre)) continue;
     for (const [anio, c] of Object.entries(t.campeones || {})) {
       const s = c.singles; if (!s?.fecha || !s.campeon) continue;
       auto.push({ fecha: s.fecha.slice(0, 10), texto: `${s.campeon} se quedaba con el título en ${nombreTorneo(t.nombre)}${s.finalista ? ` tras vencer en la final a ${s.finalista}` : ''}${s.marcador ? ` por ${coma(s.marcador)}` : ''}.`, fuente: 'Resultados de A Todo Tenis' });
@@ -323,7 +334,7 @@ escribir('noticias.html', pagina({ titulo: 'Noticias', ruta: '/noticias', activo
 
 escribir('resultados.html', pagina({ titulo: 'Resultados y partidos en vivo', descripcion: 'Resultados del día, partidos en vivo y próximos partidos del circuito ATP, WTA y Challenger.', ruta: '/resultados', activo: 'resultados', cuerpo: `
 <div class="sec"><div class="sec-tit"><h1>Resultados</h1></div>${panelResultados('res', 999)}
-<p class="meta" style="margin-top:10px">Los horarios se muestran en tu hora local. Los marcadores se actualizan cada hora. Los partidos "a confirmar" muestran el resultado apenas se verifica.</p></div>` }));
+</div>` }));
 
 escribir('ranking.html', pagina({ titulo: 'Ranking ATP y WTA', descripcion: 'Ranking ATP y WTA actualizado.', ruta: '/ranking', activo: 'ranking', cuerpo: `
 <div class="sec"><div class="sec-tit"><h1>Ranking</h1></div>${panelRanking('rkc', 200)}
