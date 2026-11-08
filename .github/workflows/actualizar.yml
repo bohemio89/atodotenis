@@ -41,6 +41,9 @@ jobs:
       - name: Buscar fotos recientes con licencia libre
         run: node scripts/fotos.mjs
 
+      - name: Buscar highlights en YouTube
+        run: node scripts/videos.mjs
+
       - name: Fotos para el ranking
         run: node scripts/avatares.mjs
 
