@@ -18199,7 +18199,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-08T00:00:00Z",
+  "horario": "2026-11-08T00:10:00Z",
   "j1": {
    "id": 458,
    "nombre": "Hiroki Moriya",
@@ -18208,17 +18208,41 @@
   },
   "j2": {
    "id": 27830,
-   "nombre": "N. Baker",
-   "pais": null,
+   "nombre": "Nikolas Baker",
+   "pais": "aus",
    "ranking": null
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T00:00:37.671Z",
+  "visto": "2026-11-08T01:00:34.576Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216359": {
   "id": 216359,
@@ -18259,26 +18283,52 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-08T00:00:00Z",
+  "horario": "2026-11-08T00:10:00Z",
   "j1": {
-   "id": 12572,
-   "nombre": "D. Pham",
-   "pais": null,
-   "ranking": null
+   "id": 633,
+   "nombre": "Pavle Marinkov",
+   "pais": "aus",
+   "ranking": 664
   },
   "j2": {
-   "id": 633,
-   "nombre": "P. Marinkov",
-   "pais": null,
-   "ranking": null
+   "id": 12572,
+   "nombre": "Derek Pham",
+   "pais": "aus",
+   "ranking": 1187
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T00:00:37.671Z",
+  "visto": "2026-11-08T01:00:34.576Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216361": {
   "id": 216361,
@@ -18289,26 +18339,50 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-08T00:00:00Z",
+  "horario": "2026-11-08T00:10:00Z",
   "j1": {
-   "id": 5390,
-   "nombre": "M. E. Sik",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 1944,
    "nombre": "Isaac Becroft",
    "pais": "nzl",
    "ranking": 533
   },
+  "j2": {
+   "id": 5390,
+   "nombre": "Mustafa Ege Sik",
+   "pais": "aus",
+   "ranking": 1581
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T00:00:37.671Z",
+  "visto": "2026-11-08T01:00:34.576Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216365": {
   "id": 216365,
@@ -18365,7 +18439,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "aus"
    ]
   },
   "j2": {
@@ -18440,7 +18514,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "nzl",
     null
    ]
   },
