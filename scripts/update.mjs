@@ -22,17 +22,25 @@ if (estado.diaAPI !== diaAPI) {
   estado.diaAPI = diaAPI; estado.usadas = 0; estado.jugadoresHoy = false;
 }
 
+let esperoUnaVez = false;
 async function api(ruta) {
   if (estado.usadas >= C.presupuestoDiario - 1) throw new Error('Presupuesto diario agotado');
   for (let intento = 1; intento <= 3; intento++) {
     estado.usadas++;
     try {
       const r = await fetch(`${BASE}/${ruta}`, { headers: { Authorization: `Bearer ${KEY}` }, signal: AbortSignal.timeout(30000) });
-      if (r.status === 429) { const w = Number(r.headers.get('retry-after') || 30); log('429, espero', w); await new Promise((s) => setTimeout(s, w * 1000)); continue; }
+      if (r.status === 429) {
+        const w = Number(r.headers.get('retry-after') || 0);
+        const info = ['retry-after', 'x-ratelimit-limit', 'x-ratelimit-remaining', 'x-ratelimit-reset'].map((h) => `${h}=${r.headers.get(h) ?? '-'}`).join(' ');
+        log('429 de la API:', info);
+        // Límite por minuto: se espera una sola vez. Cupo diario agotado: se corta y no se insiste.
+        if (!esperoUnaVez && w > 0 && w <= 65) { esperoUnaVez = true; await new Promise((s) => setTimeout(s, w * 1000)); continue; }
+        const e = new Error('CUPO: la API rechazó por cupo agotado'); e.cupo = true; e.retryAfter = w; throw e;
+      }
       if (!r.ok) throw new Error(`HTTP ${r.status} en ${ruta}: ${(await r.text()).slice(0, 200)}`);
       return await r.json();
     } catch (e) {
-      if (intento === 3 || /HTTP 4\d\d/.test(e.message)) throw e;
+      if (e.cupo || intento === 3 || /HTTP 4\d\d/.test(e.message)) throw e;
       log('Error, reintento:', e.message);
       await new Promise((s) => setTimeout(s, 5000 * intento));
     }
@@ -195,6 +203,10 @@ async function main() {
     log('Última consulta hace menos de 50 minutos: no se consulta la API en esta corrida.');
     return;
   }
+  if (estado.pausaHasta && new Date(estado.pausaHasta) > ahora && !process.env.FORZAR) {
+    log(`API en pausa por cupo agotado hasta ${estado.pausaHasta}: se publica con los datos que ya hay.`);
+    return;
+  }
   log(`Día API ${diaAPI}: usadas ${estado.usadas}/${C.presupuestoDiario}, faltan ${horasHastaReinicio} h para el reinicio`);
 
   // 1) En vivo (todas las giras en una consulta)
@@ -334,9 +346,20 @@ async function main() {
   log(`Listo. Consultas usadas hoy: ${estado.usadas}`);
 }
 
-main().catch((e) => {
+main().then(() => {
+  if (estado.pausaHasta && new Date(estado.pausaHasta) <= new Date()) { delete estado.pausaHasta; estado.pausaHoras = 0; guardarJSON('data/estado.json', estado); }
+}).catch((e) => {
+  estado.ultimaCorrida = new Date().toISOString();
+  if (e.cupo) {
+    // Pausa creciente: 1 h, 2 h, 4 h, hasta 8 h (o lo que pida la API), para no gastar el cupo con rechazos
+    estado.pausaHoras = Math.min(8, (estado.pausaHoras || 0.5) * 2);
+    const horas = Math.max(estado.pausaHoras, (e.retryAfter || 0) / 3600);
+    estado.pausaHasta = new Date(Date.now() + horas * 3600e3).toISOString();
+    console.log(`::warning::La API de resultados rechazó por cupo. Pausa de ${horas} h (hasta ${estado.pausaHasta}). El sitio se sigue publicando con los datos guardados.`);
+  } else {
+    console.log(`::warning::Falló la consulta a la API: ${e.message}. El sitio se sigue publicando con los datos guardados.`);
+  }
   guardarJSON('data/partidos.json', partidos);
   guardarJSON('data/estado.json', estado);
-  console.error('ERROR:', e.message);
-  process.exit(1);
+  process.exit(0);
 });
