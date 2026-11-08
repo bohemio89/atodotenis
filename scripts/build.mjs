@@ -243,13 +243,13 @@ function movimiento(j) {
   const txt = dir === 'up' ? 'subió' : 'bajó';
   return `<span class="mov ${dir}" aria-label="${txt}${n ? ` ${n} ${n === 1 ? 'puesto' : 'puestos'}` : ''}">${dir === 'up' ? '▲' : '▼'}${n ? `<small>${n}</small>` : ''}</span>`;
 }
-function tablaRanking(tour, max) {
-  const filas = rankingDe(tour).slice(0, max).map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug">${avatar(j)}<span class="n">${esc(j.nombre)}</span>${movimiento(j)}</span><span class="pts">${(j.puntos ?? '').toLocaleString('es-AR')}</span></div>`).join('');
+function tablaRanking(tour, max, fotos = true) {
+  const filas = rankingDe(tour).slice(0, max).map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug">${fotos ? avatar(j) : `<span class="rk-flag">${paisTag(j)}</span>`}<span class="n">${esc(j.nombre)}</span>${movimiento(j)}</span><span class="pts">${(j.puntos ?? '').toLocaleString('es-AR')}</span></div>`).join('');
   return `<div class="rk-cab"><span>#</span><span>Jugador${tour === 'wta' ? 'a' : ''}</span><span style="text-align:right">Puntos</span></div>${filas || '<div class="vacio">Ranking no disponible todavía.</div>'}`;
 }
-function panelRanking(id, max) {
+function panelRanking(id, max, fotos = true) {
   return `<div class="panel" data-tabs><div class="tabs" role="tablist"><button role="tab" id="${id}-ta" aria-controls="${id}-a" aria-selected="true">ATP</button><button role="tab" id="${id}-tw" aria-controls="${id}-w" aria-selected="false">WTA</button></div>
-<div id="${id}-a" role="tabpanel" aria-labelledby="${id}-ta">${tablaRanking('atp', max)}</div><div id="${id}-w" role="tabpanel" aria-labelledby="${id}-tw" class="oculto">${tablaRanking('wta', max)}</div></div>`;
+<div id="${id}-a" role="tabpanel" aria-labelledby="${id}-ta">${tablaRanking('atp', max, fotos)}</div><div id="${id}-w" role="tabpanel" aria-labelledby="${id}-tw" class="oculto">${tablaRanking('wta', max, fotos)}</div></div>`;
 }
 
 // ---------- Notas ----------
@@ -337,7 +337,7 @@ escribir('resultados.html', pagina({ titulo: 'Resultados y partidos en vivo', de
 </div>` }));
 
 escribir('ranking.html', pagina({ titulo: 'Ranking ATP y WTA', descripcion: 'Ranking ATP y WTA actualizado.', ruta: '/ranking', activo: 'ranking', cuerpo: `
-<div class="sec"><div class="sec-tit"><h1>Ranking</h1></div>${panelRanking('rkc', 200)}
+<div class="sec"><div class="sec-tit"><h1>Ranking</h1></div>${panelRanking('rkc', 200, false)}
 <p class="meta" style="margin-top:10px">Fotos de los jugadores: Wikimedia Commons, con licencia libre (<a href="/creditos" style="text-decoration:underline">ver créditos</a>). Actualizado una vez por día${jugadores.actualizado ? ` · última actualización ${fechaCorta(jugadores.actualizado)}` : ''}.</p></div>` }));
 
 const argRank = (tour) => rankingDe(tour).filter((j) => j.pais === ARG).slice(0, 30);
