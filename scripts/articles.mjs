@@ -35,11 +35,68 @@ const N = CONFIG.notas;
 
 // Modo prueba: PRUEBA_PARTIDOS="id1,id2" escribe notas de esos partidos sin publicarlas
 const PRUEBA = (process.env.PRUEBA_PARTIDOS || '').split(',').map((x) => x.trim()).filter(Boolean);
+// ---------- Importancia y tope por jornada ----------
+// Máximo de notas automáticas por jornada (día del partido, hora de Argentina); quedan las más importantes.
+const MAX_JORNADA = N.maxNotasPorJornada || 5;
+const jornadaDe = (iso) => new Date(new Date(iso).getTime() - 3 * 3600e3).toISOString().slice(0, 10);
+const BASE_RONDA = {
+  grand_slam: { F: 100, SF: 90, QF: 80, R16: 68, R32: 55 },
+  finals: { F: 95, SF: 85, RR: 65 },
+  atp_1000: { F: 85, SF: 75, QF: 65, R16: 52 }, wta_1000: { F: 85, SF: 75, QF: 65, R16: 52 },
+  atp_500: { F: 65, SF: 52, QF: 42 }, wta_500: { F: 65, SF: 52, QF: 42 },
+  otros: { F: 50, SF: 38 }
+};
+function importancia(p) {
+  const t = String(p.tier || ''), r = p.rondaCod || '';
+  const tabla = /finals/.test(t) || /finals/i.test(p.torneo || '') ? BASE_RONDA.finals : BASE_RONDA[t] || (/davis|bjk|billie/i.test(p.torneo || '') ? { F: 70, SF: 60, QF: 58, RR: 55 } : BASE_RONDA.otros);
+  let v = tabla[r] ?? 30;
+  const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
+  const rg = g?.ranking || 999, rp = pe?.ranking || 999;
+  if (rp <= 3) v += 20;                       // cae un top 3
+  else if (rp <= 10 && rg > 30) v += 25;      // batacazo grande
+  else if (rp <= 20 && rg - rp >= 40) v += 15; // sorpresa
+  if (rg <= 5 && r === 'F') v += 5;           // final con una figura
+  if (p.dobles) v -= 25;
+  return v;
+}
+// Notas automáticas ya escritas, agrupadas por jornada
+const NOTAS_DIR = path.join(ROOT, 'content/notas');
+const leerNotas = () => fs.readdirSync(NOTAS_DIR).filter((x) => x.endsWith('.json')).map((f) => ({ f, n: JSON.parse(fs.readFileSync(path.join(NOTAS_DIR, f), 'utf8')) }));
+function importanciaNota(n) {
+  if (typeof n.importancia === 'number') return n.importancia;
+  const p = partidos[n.partidoId];
+  return p ? importancia(p) : 40;
+}
+// Deja publicadas solo las MAX_JORNADA más importantes de cada jornada; el resto queda archivado (no se muestra)
+function curarJornadas() {
+  const grupos = {};
+  for (const x of leerNotas()) {
+    if (x.n.manual || !['publicada', 'archivada'].includes(x.n.estado) || !x.n.fechaPartido) continue;
+    (grupos[jornadaDe(x.n.fechaPartido)] ||= []).push(x);
+  }
+  for (const [dia, lista] of Object.entries(grupos)) {
+    lista.sort((a, b) => importanciaNota(b.n) - importanciaNota(a.n) || String(a.n.fecha).localeCompare(String(b.n.fecha)));
+    lista.forEach((x, i) => {
+      const estado = i < MAX_JORNADA ? 'publicada' : 'archivada';
+      if (typeof x.n.importancia !== 'number') x.n.importancia = importanciaNota(x.n);
+      if (x.n.estado !== estado || !('importancia' in x.n)) log(`Jornada ${dia}: "${x.n.titulo}" → ${estado}`);
+      x.n.estado = estado;
+      fs.writeFileSync(path.join(NOTAS_DIR, x.f), JSON.stringify(x.n, null, 1) + '\n');
+    });
+  }
+}
+// Para no gastar escritura en partidos que no entrarían entre los 5 de su jornada
+function entraEnJornada(p) {
+  const dia = jornadaDe(p.horario);
+  const vals = leerNotas().filter((x) => !x.n.manual && ['publicada', 'archivada'].includes(x.n.estado) && x.n.fechaPartido && jornadaDe(x.n.fechaPartido) === dia).map((x) => importanciaNota(x.n)).sort((a, b) => b - a);
+  return vals.length < MAX_JORNADA || importancia(p) > vals[MAX_JORNADA - 1];
+}
+
 const candidatos = Object.values(partidos)
   .filter((p) => PRUEBA.length
     ? PRUEBA.includes(String(p.id)) && p.confirmado && p.ganador
     : p.importante && p.confirmado && p.estado === 'finalizado' && p.ganador && !registro[p.id] && Date.now() - new Date(p.horario).getTime() < 60 * 3600e3)
-  .sort((a, b) => String(b.horario).localeCompare(String(a.horario)))
+  .sort((a, b) => importancia(b) - importancia(a) || String(b.horario).localeCompare(String(a.horario)))
   .slice(0, N.maxNotasPorCorrida);
 
 function datosDelPartido(p) {
@@ -204,6 +261,7 @@ function validar(nota, datos) {
 async function main() {
   log(`Notas candidatas: ${candidatos.length}`);
   for (const p of candidatos) {
+    if (!PRUEBA.length && !entraEnJornada(p)) { log(`Fuera de las ${MAX_JORNADA} más importantes de su jornada: ${p.j1?.nombre} - ${p.j2?.nombre}`); registro[p.id] = 'omitida'; continue; }
     const datos = datosDelPartido(p);
     let prompt = `${ESTILO}\n\nDATOS DEL PARTIDO:\n${JSON.stringify(datos, null, 2)}`;
     let nota, modelo, problemas = ['sin intentar'];
@@ -240,6 +298,7 @@ async function main() {
       jugadores: [g.nombre, pe.nombre],
       torneo: nombreTorneo(p.torneo),
       resultado: resultadoParaNota(p),
+      importancia: importancia(p),
       firma: CONFIG.sitio.firma,
       imagen: null, // { url, credito, enlace } cuando se sume una fuente de imágenes con licencia
       generadoCon: modelo
@@ -249,6 +308,7 @@ async function main() {
     log(`Nota escrita: ${doc.titulo}`);
     await new Promise((s) => setTimeout(s, 4000)); // cuidar el límite por minuto de Gemini
   }
+  if (!PRUEBA.length) curarJornadas();
   guardarJSON('data/notas-registro.json', registro);
 }
 

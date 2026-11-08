@@ -341,13 +341,13 @@ for (const n of notas) {
   const p = partidos.find((x) => x.id === n.partidoId);
   const ficha = p && p.score ? `<div class="ficha"><div class="grupo-tit">${esc(n.torneo)}<span>${esc(nombreCategoria(p.tier, p.tour, p.torneo))}</span></div>${filaPartido(p)}</div>` : '';
   const relacionadas = notas.filter((x) => x.slug !== n.slug).slice(0, 3);
-  const ld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: n.titulo, description: n.bajada, datePublished: n.fecha, author: { '@type': 'Organization', name: n.firma }, publisher: { '@type': 'Organization', name: S.nombre } };
+  const ld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: n.titulo, description: n.bajada, datePublished: n.fecha, author: { '@type': 'Organization', name: S.nombre }, publisher: { '@type': 'Organization', name: S.nombre } };
   escribir(`nota/${n.slug}.html`, pagina({
     titulo: n.titulo, descripcion: n.bajada, ruta: `/nota/${n.slug}`, activo: 'noticias',
     extraHead: `<meta property="og:type" content="article"><script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`,
     cuerpo: `<article class="nota"><span class="etiqueta">${esc(n.categoria)}</span>
 <h1>${esc(n.titulo)}</h1><p class="bajada">${esc(n.bajada)}</p>
-<div class="firma"><span>Por ${esc(n.firma)}</span><span>·</span>${hora(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
+<div class="firma">${hora(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
 ${gettySrc(n.getty) ? `<figure class="getty"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="width:100%;aspect-ratio:3/2;border:0"></iframe><figcaption>Crédito de la imagen: Getty Images</figcaption></figure>`
   : `<figure><div class="img">${imagenNota(n, false)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: <a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>${n.imagen.fechaFoto ? ` · foto del ${esc(fechaArg(n.imagen.fechaFoto, { day: 'numeric', month: 'long', year: 'numeric' }))}` : ''}${n.imagen.licenciaUrl ? ` · <a href="${esc(n.imagen.licenciaUrl)}" rel="noopener license">licencia</a>` : ''}</figcaption>` : ''}</figure>`}
 <div class="cuerpo">${n.cuerpo.map((x) => `<p>${esc(x)}</p>`).join('')}</div>${ficha}
