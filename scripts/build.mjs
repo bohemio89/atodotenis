@@ -356,7 +356,7 @@ escribir('acerca.html', pagina({ titulo: 'Acerca del sitio', ruta: '/acerca', cu
 <article class="nota"><h1>Acerca de A Todo Tenis</h1><div class="cuerpo">
 <p>A Todo Tenis nació en 2007 como un sitio argentino dedicado al tenis. Hoy vuelve con una nueva versión que sigue en tiempo real el circuito ATP, WTA, Challenger, la Copa Davis y la Billie Jean King Cup.</p>
 <p>Los resultados, el calendario y el ranking provienen de Live Tennis API y se actualizan automáticamente. Las notas se escriben siempre a partir de resultados verificados y sin declaraciones inventadas.</p>
-<p>Las imágenes que acompañan las notas se publican con su crédito correspondiente. Cuando una nota no tiene foto, se muestra una ilustración de la cancha según la superficie del torneo.</p>
+<p>Las imágenes que acompañan las notas se publican con su crédito correspondiente. Cuando una nota no tiene foto, se muestra una placa con el resultado del partido.</p>
 </div></article>` }));
 
 for (const n of notas) {
