@@ -111,6 +111,8 @@ function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Inter:wght@400;500;600;700&family=Roboto+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/estilos.css">
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <link rel="alternate" type="application/rss+xml" title="${esc(S.nombre)}" href="/rss.xml">
 ${extraHead}
 </head>
