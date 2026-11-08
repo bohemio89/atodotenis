@@ -302,7 +302,7 @@ function recuadroEfemeride() {
   }
   const items = [...base, ...auto].filter((x) => /^\d{4}-\d{2}-\d{2}$/.test(x.fecha) && x.texto);
   if (!items.length) return '';
-  return `<div class="efem panel" id="efem" hidden><div class="efem-tit">Un día como hoy</div><p class="efem-txt"></p><p class="efem-fte meta"></p></div>
+  return `<div class="efem panel" id="efem" hidden><div class="efem-tit">Un día como hoy</div><p class="efem-txt"></p></div>
 <script type="application/json" id="efem-datos">${JSON.stringify(items).replace(/</g, '\\u003c')}</script>
 <script>(function(){try{var d=JSON.parse(document.getElementById('efem-datos').textContent),h=new Date(),hoy=new Date(h.getFullYear(),h.getMonth(),h.getDate()),el=document.getElementById('efem');
 var md=function(f){return f.slice(5)},cand=[],dias=0;
@@ -310,7 +310,7 @@ for(;dias<7&&!cand.length;dias++){var x=new Date(hoy);x.setDate(x.getDate()-dias
 if(!cand.length)return;var e=cand[(hoy.getDate()+hoy.getMonth())%cand.length],p=e.fecha.split('-'),f=new Date(+p[0],+p[1]-1,+p[2]),txt=f.toLocaleDateString('es-AR',{day:'numeric',month:'long'})+' de '+p[0];
 el.querySelector('.efem-tit').textContent=dias===1?'Un día como hoy':'Esta semana en la historia';
 el.querySelector('.efem-txt').textContent=(dias===1?'Un día como hoy, ':'Un ')+txt+', '+e.texto;
-el.querySelector('.efem-fte').textContent='Fuente: '+e.fuente;el.hidden=false;}catch(_){}})();</script>`;
+el.hidden=false;}catch(_){}})();</script>`;
 }
 
 escribir('index.html', pagina({ ruta: '/', activo: 'inicio', cuerpo: `
