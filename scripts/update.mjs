@@ -32,7 +32,7 @@ async function api(ruta) {
       if (r.status === 429) {
         const w = Number(r.headers.get('retry-after') || 0);
         const info = ['retry-after', 'x-ratelimit-limit', 'x-ratelimit-remaining', 'x-ratelimit-reset'].map((h) => `${h}=${r.headers.get(h) ?? '-'}`).join(' ');
-        log('429 de la API:', info);
+        log('429 de la API:', info, '|', (await r.text().catch(() => '')).slice(0, 200));
         // Límite por minuto: se espera una sola vez. Cupo diario agotado: se corta y no se insiste.
         if (!esperoUnaVez && w > 0 && w <= 65) { esperoUnaVez = true; await new Promise((s) => setTimeout(s, w * 1000)); continue; }
         const e = new Error('CUPO: la API rechazó por cupo agotado'); e.cupo = true; e.retryAfter = w; throw e;
