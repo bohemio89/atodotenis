@@ -19557,24 +19557,50 @@
   "genero": "men",
   "horario": "2026-11-09T13:30:00Z",
   "j1": {
-   "id": 197,
-   "nombre": "Daniel Adolfo Vallejo",
-   "pais": "par",
-   "ranking": 56
-  },
-  "j2": {
    "id": 4,
    "nombre": "Ugo Humbert",
    "pais": "fra",
    "ranking": 38
   },
+  "j2": {
+   "id": 197,
+   "nombre": "Daniel Adolfo Vallejo",
+   "pais": "par",
+   "ranking": 56
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.713Z",
+  "visto": "2026-11-09T14:15:25.637Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216405": {
   "id": 216405,
@@ -24572,26 +24598,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T11:45:00Z",
+  "horario": "2026-11-09T13:55:00Z",
   "j1": {
-   "id": 1848,
-   "nombre": "Johannus Monday",
-   "pais": "gbr",
-   "ranking": 509
-  },
-  "j2": {
    "id": 1050,
    "nombre": "Georgii Kravchenko",
    "pais": "ukr",
    "ranking": 310
   },
+  "j2": {
+   "id": 1848,
+   "nombre": "Johannus Monday",
+   "pais": "gbr",
+   "ranking": 509
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z",
+  "visto": "2026-11-09T14:15:25.637Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216600": {
   "id": 216600,
@@ -24664,24 +24714,50 @@
   "genero": "men",
   "horario": "2026-11-09T13:15:00Z",
   "j1": {
-   "id": 13416,
-   "nombre": "R. Peniston",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 1855,
    "nombre": "Henry Searle",
    "pais": "gbr",
    "ranking": 217
   },
+  "j2": {
+   "id": 13416,
+   "nombre": "Ryan Peniston",
+   "pais": "gbr",
+   "ranking": 886
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z",
+  "visto": "2026-11-09T14:15:25.637Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216603": {
   "id": 216603,
@@ -26542,7 +26618,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T13:30:00Z",
+  "horario": "2026-11-09T14:00:00Z",
   "j1": {
    "id": 1660,
    "nombre": "Semen Pankin",
@@ -26551,14 +26627,39 @@
   },
   "j2": {
    "id": 1885,
-   "nombre": "M. Janvier",
-   "pais": null,
-   "ranking": null
+   "nombre": "Maxime Janvier",
+   "pais": "fra",
+   "ranking": 605
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z"
+  "visto": "2026-11-09T14:15:25.637Z",
+  "tier": null,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217152": {
   "id": 217152,
@@ -26691,7 +26792,7 @@
    "ranking": 480
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T13:15:23.824Z",
   "tier": null,
@@ -26745,7 +26846,7 @@
    "ranking": 526
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T13:15:23.824Z",
   "tier": null,
@@ -26785,7 +26886,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T13:30:00Z",
+  "horario": "2026-11-09T14:00:00Z",
   "j1": {
    "id": 2195,
    "nombre": "Nino Ehrenschneider",
@@ -26794,14 +26895,39 @@
   },
   "j2": {
    "id": 2265,
-   "nombre": "M. Malige",
-   "pais": null,
-   "ranking": null
+   "nombre": "Mae Malige",
+   "pais": "fra",
+   "ranking": 838
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z"
+  "visto": "2026-11-09T14:15:25.637Z",
+  "tier": null,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217157": {
   "id": 217157,
@@ -26826,7 +26952,7 @@
    "ranking": 440
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T13:15:23.824Z",
   "tier": null,
@@ -27111,23 +27237,48 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T13:30:00Z",
+  "horario": "2026-11-09T13:40:00Z",
   "j1": {
+   "id": 2002,
+   "nombre": "Nikolai Barsukov",
+   "pais": "ger",
+   "ranking": 667
+  },
+  "j2": {
    "id": 2374,
    "nombre": "Toufik Sahtali",
    "pais": "alg",
    "ranking": 561
   },
-  "j2": {
-   "id": 2002,
-   "nombre": "N. Barsukov",
-   "pais": null,
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z"
+  "visto": "2026-11-09T14:15:25.637Z",
+  "tier": null,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217175": {
   "id": 217175,
@@ -27152,7 +27303,7 @@
    "ranking": 631
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T13:15:23.824Z",
   "tier": null,
@@ -27210,7 +27361,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T13:15:23.824Z",
+  "visto": "2026-11-09T14:15:25.637Z",
   "tier": null,
   "torneoId": "2353",
   "cubierto": true,
@@ -27219,22 +27370,24 @@
    "games": [
     [
      3,
-     5
+     7,
+     1
     ],
     [
+     6,
      6,
      4
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "0",
+    "40",
     "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -27318,7 +27471,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T13:15:23.824Z",
+  "visto": "2026-11-09T14:15:25.637Z",
   "tier": null,
   "torneoId": "2353",
   "cubierto": true,
@@ -27326,19 +27479,21 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     3
     ],
     [
-     3
+     4,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "40"
    ],
    "saca": 1
   },
@@ -28097,7 +28252,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T13:15:23.824Z",
+  "visto": "2026-11-09T14:15:25.637Z",
   "tier": null,
   "torneoId": "1681",
   "cubierto": true,
@@ -28105,14 +28260,16 @@
   "score": {
    "games": [
     [
-     0
+     6,
+     2
     ],
     [
-     0
+     3,
+     3
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
