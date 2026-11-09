@@ -76,6 +76,12 @@ function placa(n) {
 <div class="pl-in"><div class="pl-torneo">${esc([n.categoria, n.torneo].filter(Boolean).join(' · '))}${ronda ? ` <span>${esc(ronda)}${extra}</span>` : ''}</div>
 ${fila(r.ganador, true)}${fila(r.perdedor, false)}<div class="pl-marca">A Todo Tenis</div></div></div>`;
 }
+// Declaración textual tomada de una fuente oficial, traducida y con su atribución
+function declaracionNota(n) {
+  const d = n.declaracion;
+  if (!d?.texto || !d.jugador) return '';
+  return `<blockquote class="decl"><p>«${esc(d.texto)}»</p><footer>${esc(d.jugador)}, en declaraciones publicadas por ${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.fuente)}</a>` : esc(d.fuente)}</footer></blockquote>`;
+}
 // Highlights oficiales de YouTube: miniatura + botón; el reproductor (sin cookies) carga solo al tocar
 function videoNota(n) {
   const id = n.video?.youtube;
@@ -460,7 +466,7 @@ for (const n of notas) {
 <div class="firma">${hora(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
 ${gettySrc(n.getty) ? `<figure class="getty"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="width:100%;aspect-ratio:3/2;border:0"></iframe><figcaption>Crédito de la imagen: Getty Images</figcaption></figure>`
   : `<figure><div class="img">${imagenNota(n, false)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: <a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>${n.imagen.fechaFoto ? ` · foto del ${esc(fechaArg(n.imagen.fechaFoto, { day: 'numeric', month: 'long', year: 'numeric' }))}` : ''}${n.imagen.licenciaUrl ? ` · <a href="${esc(n.imagen.licenciaUrl)}" rel="noopener license">licencia</a>` : ''}</figcaption>` : ''}</figure>`}
-<div class="cuerpo">${n.cuerpo.map((x) => `<p>${esc(x)}</p>`).join('')}</div>${videoNota(n)}${ficha}
+<div class="cuerpo">${n.cuerpo.map((x, i) => `<p>${esc(x)}</p>${i === 1 ? declaracionNota(n) : ''}`).join('')}</div>${videoNota(n)}${ficha}
 ${relacionadas.length ? `<div class="sec-tit sec"><h2>Más noticias</h2></div><div class="lista-notas">${relacionadas.map(cardNota).join('')}</div>` : ''}
 </article>`
   }));
