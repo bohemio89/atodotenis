@@ -8133,8 +8133,8 @@
  },
  "215400": {
   "id": 215400,
-  "tour": "wta_doubles",
-  "torneo": "Finals - Riyadh",
+  "tour": "wta",
+  "torneo": "WTA Tour Finals, Doubles, Group B",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
@@ -8156,7 +8156,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.076Z",
+  "visto": "2026-11-09T04:15:22.327Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8166,19 +8166,21 @@
   "score": {
    "games": [
     [
-     1
+     6,
+     5
     ],
     [
-     0
+     0,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "40",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 1
   },
@@ -20383,26 +20385,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T03:30:00Z",
+  "horario": "2026-11-09T03:50:00Z",
   "j1": {
-   "id": 1104,
-   "nombre": "Bernard Tomic",
-   "pais": "aus",
-   "ranking": 181
-  },
-  "j2": {
    "id": 473,
    "nombre": "Blake Ellis",
    "pais": "aus",
    "ranking": 412
   },
+  "j2": {
+   "id": 1104,
+   "nombre": "Bernard Tomic",
+   "pais": "aus",
+   "ranking": 181
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z",
+  "visto": "2026-11-09T04:15:22.328Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216436": {
   "id": 216436,
@@ -25656,7 +25682,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z",
+  "visto": "2026-11-09T04:15:22.327Z",
   "tier": null,
   "torneoId": "8222",
   "cubierto": false,
@@ -25666,12 +25692,12 @@
     [
      6,
      3,
-     2
+     3
     ],
     [
      3,
      6,
-     1
+     2
     ]
    ],
    "sets": [
@@ -25679,8 +25705,8 @@
     1
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -25874,7 +25900,7 @@
    "ranking": 691
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T03:15:24.258Z",
   "tier": null,
@@ -25930,7 +25956,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z",
+  "visto": "2026-11-09T04:15:22.327Z",
   "tier": null,
   "torneoId": "8222",
   "cubierto": false,
@@ -25939,11 +25965,11 @@
    "games": [
     [
      6,
-     1
+     2
     ],
     [
      1,
-     0
+     3
     ]
    ],
    "sets": [
@@ -25951,8 +25977,8 @@
     0
    ],
    "puntos": [
-    "0",
-    "40"
+    "40",
+    "30"
    ],
    "saca": 2
   },
@@ -26011,7 +26037,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z",
+  "visto": "2026-11-09T04:15:22.327Z",
   "tier": null,
   "torneoId": "8222",
   "cubierto": false,
@@ -26019,10 +26045,10 @@
   "score": {
    "games": [
     [
-     2
+     6
     ],
     [
-     3
+     6
     ]
    ],
    "sets": [
@@ -26030,8 +26056,8 @@
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "4",
+    "2"
    ],
    "saca": 1
   },
@@ -26097,7 +26123,7 @@
   "tour": "challenger",
   "torneo": "Brisbane 3",
   "ronda": "Brisbane 3 - Final",
-  "rondaCod": null,
+  "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
@@ -26117,7 +26143,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z",
+  "visto": "2026-11-09T04:15:22.327Z",
   "tier": null,
   "torneoId": "13459",
   "cubierto": false,
@@ -26125,21 +26151,23 @@
   "score": {
    "games": [
     [
+     7,
      4
     ],
     [
+     6,
      3
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "30"
+    "40",
+    "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -26167,7 +26195,7 @@
    "ranking": 722
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T03:15:24.258Z",
   "tier": null,
