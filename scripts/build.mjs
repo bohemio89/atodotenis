@@ -22,6 +22,8 @@ const avatares = leerJSON('data/avatares.json', {});
 const jugadores = leerJSON('data/jugadores.json', { lista: {} });
 const estado = leerJSON('data/estado.json', {});
 const torneos = leerJSON('data/torneos.json', {});
+const notasES = fs.readdirSync(path.join(ROOT, 'content/notas')).filter((f) => f.endsWith('.json'))
+  .map((f) => JSON.parse(fs.readFileSync(path.join(ROOT, 'content/notas', f), 'utf8'))).filter((n) => n.estado === 'publicada');
 const notas = fs.readdirSync(path.join(ROOT, 'content/notas')).filter((f) => f.endsWith('.json'))
   .map((f) => JSON.parse(fs.readFileSync(path.join(ROOT, 'content/notas', f), 'utf8')))
   .filter((n) => n.estado === 'publicada')
@@ -385,7 +387,9 @@ function hero() {
   for (const p of terminados.filter((x) => x.importante && !conNota.has(x.id))) {
     if (items.length >= 5) break;
     const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
-    items.push(item('/resultados', cancha(p.superficie), nombreCategoria(p.tier, p.tour, p.torneo), `${apellido(g.nombre)} ${EN ? 'def.' : 'venció a'} ${apellido(pe.nombre)} ${marcadorTexto(p.score, p.ganador)}`, nombreTorneo(p.torneo)));
+    // En inglés, si la nota todavía no está traducida, se usa igual su foto
+    const ne = EN && notasES.find((x) => x.partidoId === p.id && x.imagen?.url);
+    items.push(item('/resultados', ne ? imagenNota({ ...ne, titulo: `${g.nombre} - ${pe.nombre}` }) : cancha(p.superficie), nombreCategoria(p.tier, p.tour, p.torneo), `${apellido(g.nombre)} ${EN ? 'def.' : 'venció a'} ${apellido(pe.nombre)} ${marcadorTexto(p.score, p.ganador)}`, nombreTorneo(p.torneo)));
   }
   if (!items.length) items.push(item('/resultados', cancha('clay'), '', 'Todo el tenis, en un solo lugar', 'Resultados, ranking y noticias del circuito ATP, WTA, Challenger, Copa Davis y Billie Jean King Cup.'));
   const relleno = [['hard', 'Todos los resultados del circuito', '/resultados'], ['clay', 'Cuadros de cada torneo', '/torneos'], ['grass', 'Los cuatro Grand Slam', '/grand-slams'], ['hard', 'Ranking ATP y WTA', '/ranking']];
