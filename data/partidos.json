@@ -19090,41 +19090,57 @@
  },
  "216388": {
   "id": 216388,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Stockholm",
   "ronda": "ATP Stockholm - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T10:00:00Z",
+  "horario": "2026-11-09T10:05:00Z",
   "j1": {
    "id": 44940,
-   "nombre": "Kecmanovic/ Melo",
+   "nombre": "Kecmanovic / Melo",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "srb",
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44941,
-   "nombre": "Jebens/ Seggerman",
+   "nombre": "Jebens / Seggerman",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "ger",
-    "usa"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.197Z",
+  "visto": "2026-11-09T10:15:25.110Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1686",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216389": {
   "id": 216389,
@@ -19166,41 +19182,57 @@
  },
  "216390": {
   "id": 216390,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Stockholm",
   "ronda": "ATP Stockholm - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T10:00:00Z",
+  "horario": "2026-11-09T10:10:00Z",
   "j1": {
-   "id": 44943,
-   "nombre": "Frantzen/ Stevens",
+   "id": 38426,
+   "nombre": "Nouza / Venus",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "ger",
-    "aus"
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 38426,
-   "nombre": "Nouza/ Venus",
+   "id": 44943,
+   "nombre": "Frantzen / Stevens",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "nzl"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.196Z",
+  "visto": "2026-11-09T10:15:25.110Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1686",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216391": {
   "id": 216391,
@@ -20543,7 +20575,7 @@
    "ranking": 232
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T09:15:25.522Z",
   "torneoClave": "challenger|Matsuyama",
@@ -26471,7 +26503,7 @@
    "ranking": 624
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T09:15:25.522Z",
   "tier": null,
@@ -26525,7 +26557,7 @@
    "ranking": 1486
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T09:15:25.522Z",
   "tier": null,
@@ -26700,23 +26732,48 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T10:00:00Z",
+  "horario": "2026-11-09T10:10:00Z",
   "j1": {
    "id": 596,
-   "nombre": "B. Kittay",
-   "pais": null,
-   "ranking": null
+   "nombre": "Benjamin Kittay",
+   "pais": "usa",
+   "ranking": 1876
   },
   "j2": {
    "id": 13907,
-   "nombre": "A. Gobat",
-   "pais": null,
-   "ranking": null
+   "nombre": "Adrien Gobat",
+   "pais": "fra",
+   "ranking": 854
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.429Z"
+  "visto": "2026-11-09T10:15:25.110Z",
+  "tier": null,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217160": {
   "id": 217160,
@@ -26741,7 +26798,7 @@
    "ranking": 744
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T09:15:25.522Z",
   "tier": null,
@@ -26781,23 +26838,48 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T10:00:00Z",
+  "horario": "2026-11-09T10:05:00Z",
   "j1": {
-   "id": 674,
-   "nombre": "Buvaysar Gadamauri",
-   "pais": "bel",
-   "ranking": 266
-  },
-  "j2": {
    "id": 484,
    "nombre": "Ugo Blanchet",
    "pais": "fra",
    "ranking": 334
   },
+  "j2": {
+   "id": 674,
+   "nombre": "Buvaysar Gadamauri",
+   "pais": "bel",
+   "ranking": 266
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.429Z"
+  "visto": "2026-11-09T10:15:25.110Z",
+  "tier": null,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217170": {
   "id": 217170,
@@ -26808,7 +26890,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T09:30:00Z",
+  "horario": "2026-11-09T09:40:00Z",
   "j1": {
    "id": 428,
    "nombre": "Vladyslav Orlov",
@@ -26822,9 +26904,34 @@
    "ranking": 531
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.429Z"
+  "visto": "2026-11-09T10:15:25.110Z",
+  "tier": null,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217171": {
   "id": 217171,
@@ -26862,7 +26969,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T09:30:00Z",
+  "horario": "2026-11-09T09:40:00Z",
   "j1": {
    "id": 2001,
    "nombre": "Nikita Mashtakov",
@@ -26871,14 +26978,39 @@
   },
   "j2": {
    "id": 12473,
-   "nombre": "A. Andreev",
-   "pais": null,
-   "ranking": null
+   "nombre": "Adrian Andreev",
+   "pais": "bul",
+   "ranking": 631
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.429Z"
+  "visto": "2026-11-09T10:15:25.110Z",
+  "tier": null,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "AD",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217176": {
   "id": 217176,
@@ -27240,23 +27372,48 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T09:30:00Z",
+  "horario": "2026-11-09T09:55:00Z",
   "j1": {
-   "id": 4879,
-   "nombre": "A. Reco",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 310,
    "nombre": "Lorenzo Carboni",
    "pais": "ita",
    "ranking": 552
   },
+  "j2": {
+   "id": 4879,
+   "nombre": "Alexandre Reco",
+   "pais": "fra",
+   "ranking": 811
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.429Z"
+  "visto": "2026-11-09T10:15:25.110Z",
+  "tier": null,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217201": {
   "id": 217201,
