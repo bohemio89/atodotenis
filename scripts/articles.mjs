@@ -51,7 +51,7 @@ const BASE_RONDA = {
 function importancia(p) {
   const t = String(p.tier || ''), r = p.rondaCod || '';
   const tabla = /finals/.test(t) || /finals/i.test(p.torneo || '') ? BASE_RONDA.finals : BASE_RONDA[t] || (/davis|bjk|billie/i.test(p.torneo || '') ? { F: 70, SF: 60, QF: 58, RR: 55 } : BASE_RONDA.otros);
-  let v = tabla[r] ?? 30;
+  let v = tabla[r || (tabla === BASE_RONDA.finals ? 'RR' : '')] ?? 30;
   const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
   const rg = g?.ranking || 999, rp = pe?.ranking || 999;
   if (rp <= 3) v += 20;                       // cae un top 3
@@ -65,9 +65,9 @@ function importancia(p) {
 const NOTAS_DIR = path.join(ROOT, 'content/notas');
 const leerNotas = () => fs.readdirSync(NOTAS_DIR).filter((x) => x.endsWith('.json')).map((f) => ({ f, n: JSON.parse(fs.readFileSync(path.join(NOTAS_DIR, f), 'utf8')) }));
 function importanciaNota(n) {
-  if (typeof n.importancia === 'number') return n.importancia;
   const p = partidos[n.partidoId];
-  return p ? importancia(p) : 40;
+  if (p) return importancia(p);
+  return typeof n.importancia === 'number' ? n.importancia : 40;
 }
 // Deja publicadas solo las MAX_JORNADA más importantes de cada jornada; el resto queda archivado (no se muestra)
 function curarJornadas() {
@@ -80,7 +80,7 @@ function curarJornadas() {
     lista.sort((a, b) => importanciaNota(b.n) - importanciaNota(a.n) || String(a.n.fecha).localeCompare(String(b.n.fecha)));
     lista.forEach((x, i) => {
       const estado = i < MAX_JORNADA ? 'publicada' : 'archivada';
-      if (typeof x.n.importancia !== 'number') x.n.importancia = importanciaNota(x.n);
+      x.n.importancia = importanciaNota(x.n);
       if (x.n.estado !== estado || !('importancia' in x.n)) log(`Jornada ${dia}: "${x.n.titulo}" → ${estado}`);
       x.n.estado = estado;
       fs.writeFileSync(path.join(NOTAS_DIR, x.f), JSON.stringify(x.n, null, 1) + '\n');

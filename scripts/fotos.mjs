@@ -24,13 +24,20 @@ function fechaFoto(meta) {
 }
 
 async function buscar(jugador, fechaNota) {
-  const q = new URLSearchParams({
-    action: 'query', format: 'json', generator: 'search', gsrnamespace: '6', gsrlimit: '40',
-    gsrsearch: `"${jugador}" filetype:bitmap`, prop: 'imageinfo', iiprop: 'url|extmetadata|size', iiurlwidth: '1920'
-  });
-  const r = await fetch(`${API}?${q}`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
-  if (!r.ok) throw new Error(`Commons HTTP ${r.status}`);
-  const j = await r.json();
+  // Varias búsquedas: por año (para que las fotos recientes no queden tapadas por las viejas) y general
+  const y = new Date(fechaNota).getFullYear();
+  const paginas = {};
+  for (const extra of [` ${y}`, ` ${y - 1}`, ` ${y - 2}`, '']) {
+    const q = new URLSearchParams({
+      action: 'query', format: 'json', generator: 'search', gsrnamespace: '6', gsrlimit: '50',
+      gsrsearch: `"${jugador}"${extra} filetype:bitmap`, prop: 'imageinfo', iiprop: 'url|extmetadata|size', iiurlwidth: '1920'
+    });
+    const r = await fetch(`${API}?${q}`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
+    if (!r.ok) throw new Error(`Commons HTTP ${r.status}`);
+    const jj = await r.json();
+    Object.assign(paginas, jj.query?.pages || {});
+  }
+  const j = { query: { pages: paginas } };
   const limite = new Date(fechaNota); limite.setMonth(limite.getMonth() - MESES_MAX);
   const apellido = norm(jugador).split(' ').pop();
   const candidatas = [];
@@ -70,7 +77,7 @@ async function main() {
     const anterior = n.imagen?.url ? n.imagen : null; // foto elegida con el criterio viejo: se vuelve a evaluar
     if (anterior) { delete n.imagen; n.fotoBuscada = null; }
     // reintentar como mucho una vez por semana
-    if (n.fotoBuscada && n.fotoBuscada > '2026-11-09T19' && Date.now() - new Date(n.fotoBuscada).getTime() < 7 * 864e5 && !process.env.FORZAR_FOTOS) continue;
+    if (n.fotoBuscada && n.fotoBuscada > '2026-11-09T19:30' && Date.now() - new Date(n.fotoBuscada).getTime() < 7 * 864e5 && !process.env.FORZAR_FOTOS) continue;
     const p = partidos[n.partidoId];
     const jugadores = n.jugadores || (p ? [p.ganador === 2 ? p.j2 : p.j1, p.ganador === 2 ? p.j1 : p.j2].filter(Boolean).map((j) => j.nombre) : []);
     let foto = null;
