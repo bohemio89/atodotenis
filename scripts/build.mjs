@@ -172,8 +172,16 @@ function banderaDe(c) {
 // Países de las jugadoras neutrales (o sin dato) según el ranking oficial de la WTA
 const PAISES_WTA = leerJSON('data/paises-wta.json', { jugadoras: {} }).jugadoras || {};
 const normP = (s) => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
+// Coincidencia exacta o, si no, por apellido + inicial del nombre (grafías distintas entre fuentes)
+const PAISES_WTA_AP = {};
+for (const [k, v] of Object.entries(PAISES_WTA)) { const ps = k.split(' '); const clave = `${ps[0][0]} ${ps.at(-1)}`; PAISES_WTA_AP[clave] = PAISES_WTA_AP[clave] && PAISES_WTA_AP[clave] !== v ? 'X' : v; }
+function paisWTA(nombre) {
+  const k = normP(nombre); if (PAISES_WTA[k]) return PAISES_WTA[k];
+  const ps = k.split(' '); const v = PAISES_WTA_AP[`${ps[0]?.[0]} ${ps.at(-1)}`];
+  return v && v !== 'X' ? v : null;
+}
 function paisTag(j) {
-  if (j && !Array.isArray(j.paises) && (!j.pais || NEUTRALES.has(String(j.pais).toLowerCase())) && PAISES_WTA[normP(j.nombre)]) j = { ...j, pais: PAISES_WTA[normP(j.nombre)] };
+  if (j && !Array.isArray(j.paises) && (!j.pais || NEUTRALES.has(String(j.pais).toLowerCase()))) { const c = paisWTA(j.nombre); if (c) j = { ...j, pais: c }; }
   if (Array.isArray(j?.paises)) return j.paises.some(Boolean) ? `<span class="banderas2">${j.paises.map((c) => c ? banderaDe(c) : '<span class="bandera vacia2"></span>').join('')}</span>` : '<span class="bandera vacia" aria-hidden="true"></span>';
   const c = (j?.pais || '').toLowerCase();
   if (c === 'sin') return '<span class="bandera vacia" aria-hidden="true"></span>';

@@ -88,8 +88,8 @@ export function citasDe(arts, quien, rival, desde, hasta) {
 }
 
 // ---------- Traducción ----------
-async function traducir(frase) {
-  const prompt = `Traducí al español rioplatense neutro, de forma fiel, esta declaración de un tenista. No agregues ni quites información, no expliques nada, mantené la primera persona. Devolvé SOLO JSON {"traduccion": "..."}.\n\nDeclaración: "${frase}"`;
+async function traducir(frase, femenino) {
+  const prompt = `Traducí al español rioplatense neutro, de forma fiel, esta declaración de ${femenino ? 'una tenista del circuito femenino (si habla de ella y su rival, usá el femenino: "las dos", "rivales")' : 'un tenista'}. No agregues ni quites información, no expliques nada, mantené la primera persona. Devolvé SOLO JSON {"traduccion": "..."}.\n\nDeclaración: "${frase}"`;
   for (const modelo of CONFIG.notas?.modelos || ['gemini-flash-latest']) {
     try {
       const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
@@ -133,7 +133,7 @@ async function main() {
     citas.sort((x, y) => y.puntaje - x.puntaje || (x.jugador === ganador ? -1 : 1));
     const c = citas[0];
     if (!c) { log(`Sin declaración verificable para "${n.titulo}"`); continue; }
-    const texto = await traducir(c.frase);
+    const texto = await traducir(c.frase, esWTA);
     if (!texto) continue;
     n.declaracion = { jugador: c.jugador, texto, original: c.frase, fuente: c.fuente, url: c.url, fecha: c.fecha || null };
     fs.writeFileSync(path.join(DIR, f), JSON.stringify(n, null, 1) + '\n');

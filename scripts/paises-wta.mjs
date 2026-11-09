@@ -10,7 +10,7 @@ async function main() {
   if (actual.actualizado && Date.now() - new Date(actual.actualizado).getTime() < 20 * 3600e3 && !process.env.FORZAR) { log('Países WTA: actualizados hace menos de 20 horas'); return; }
   const jugadoras = { ...actual.jugadoras };
   let total = 0;
-  for (let page = 0; page < 6; page++) {
+  for (let page = 0; page < 10; page++) {
     const r = await fetch(`https://api.wtatennis.com/tennis/players/ranked?page=${page}&pageSize=100&type=rankSingles&sort=asc&metric=SINGLES`, {
       headers: { 'User-Agent': 'AtodoTenis/1.0 (+https://atodotenis.vercel.app)' }, signal: AbortSignal.timeout(25000)
     });
