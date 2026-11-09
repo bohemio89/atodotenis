@@ -20159,7 +20159,7 @@
    "ranking": 404
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T07:15:24.429Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -20485,7 +20485,7 @@
    "ranking": 252
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T07:15:24.429Z",
   "torneoClave": "challenger|Matsuyama",
@@ -20545,7 +20545,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.429Z",
+  "visto": "2026-11-09T08:15:22.192Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
   "importante": false,
@@ -20556,22 +20556,24 @@
    "games": [
     [
      6,
-     3
+     3,
+     1
     ],
     [
      2,
+     6,
      4
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -22800,7 +22802,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.287Z",
+  "visto": "2026-11-09T08:15:22.192Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
   "importante": true,
@@ -22811,22 +22813,24 @@
    "games": [
     [
      5,
+     6,
      3
     ],
     [
      7,
-     1
+     1,
+     3
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "AD",
-    "40"
+    "30",
+    "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -26453,7 +26457,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T08:00:00Z",
+  "horario": "2026-11-09T08:05:00Z",
   "j1": {
    "id": 922,
    "nombre": "Oleksii Krutykh",
@@ -26462,14 +26466,39 @@
   },
   "j2": {
    "id": 1245,
-   "nombre": "O. Paldanius",
-   "pais": null,
-   "ranking": null
+   "nombre": "Oskari Paldanius",
+   "pais": "fin",
+   "ranking": 624
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.429Z"
+  "visto": "2026-11-09T08:15:22.192Z",
+  "tier": null,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217153": {
   "id": 217153,
@@ -26480,7 +26509,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T08:00:00Z",
+  "horario": "2026-11-09T08:05:00Z",
   "j1": {
    "id": 2013,
    "nombre": "Jack Loge",
@@ -26489,14 +26518,39 @@
   },
   "j2": {
    "id": 2233,
-   "nombre": "O. Geladaris",
-   "pais": null,
-   "ranking": null
+   "nombre": "Odysseas Geladaris",
+   "pais": "gre",
+   "ranking": 1486
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.429Z"
+  "visto": "2026-11-09T08:15:22.192Z",
+  "tier": null,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217154": {
   "id": 217154,
@@ -26669,23 +26723,48 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T08:00:00Z",
+  "horario": "2026-11-09T08:05:00Z",
   "j1": {
-   "id": 2238,
-   "nombre": "B. Pietri",
-   "pais": null,
-   "ranking": null
+   "id": 103,
+   "nombre": "Alexander Vasilev",
+   "pais": "bul",
+   "ranking": 611
   },
   "j2": {
-   "id": 103,
-   "nombre": "A. Vasilev",
-   "pais": null,
-   "ranking": null
+   "id": 2238,
+   "nombre": "Benjamin Pietri",
+   "pais": "fra",
+   "ranking": 744
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T07:15:24.429Z"
+  "visto": "2026-11-09T08:15:22.192Z",
+  "tier": null,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217161": {
   "id": 217161,
