@@ -169,7 +169,11 @@ function banderaDe(c) {
   const iso = IOC_ISO2[c], nombre = esc(nombrePais(c));
   return iso ? `<img class="bandera" src="/banderas/${iso}.svg" width="20" height="15" alt="${nombre}" title="${nombre}" loading="lazy">` : `<span class="pais" title="${nombre}">${esc(c.toUpperCase())}</span>`;
 }
+// Países de las jugadoras neutrales (o sin dato) según el ranking oficial de la WTA
+const PAISES_WTA = leerJSON('data/paises-wta.json', { jugadoras: {} }).jugadoras || {};
+const normP = (s) => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
 function paisTag(j) {
+  if (j && !Array.isArray(j.paises) && (!j.pais || NEUTRALES.has(String(j.pais).toLowerCase())) && PAISES_WTA[normP(j.nombre)]) j = { ...j, pais: PAISES_WTA[normP(j.nombre)] };
   if (Array.isArray(j?.paises)) return j.paises.some(Boolean) ? `<span class="banderas2">${j.paises.map((c) => c ? banderaDe(c) : '<span class="bandera vacia2"></span>').join('')}</span>` : '<span class="bandera vacia" aria-hidden="true"></span>';
   const c = (j?.pais || '').toLowerCase();
   if (c === 'sin') return '<span class="bandera vacia" aria-hidden="true"></span>';

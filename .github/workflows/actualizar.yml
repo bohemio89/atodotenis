@@ -41,6 +41,9 @@ jobs:
       - name: Buscar fotos recientes con licencia libre
         run: node scripts/fotos.mjs
 
+      - name: Países de las jugadoras (ranking oficial WTA)
+        run: node scripts/paises-wta.mjs
+
       - name: Buscar declaraciones oficiales
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
