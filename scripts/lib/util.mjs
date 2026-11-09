@@ -18,7 +18,9 @@ export function guardarJSON(rel, datos) {
 
 export function log(...a) { console.log(new Date().toISOString().slice(11, 19), ...a); }
 
-// ---------- Textos en español ----------
+// ---------- Textos en español (o inglés si SITIO_LANG=en) ----------
+export const LANG = process.env.SITIO_LANG === 'en' ? 'en' : 'es';
+export const LOCALE = LANG === 'en' ? 'en-US' : 'es-AR';
 
 const RONDAS = {
   F: 'Final', SF: 'Semifinal', QF: 'Cuartos de final', R16: 'Octavos de final',
@@ -26,7 +28,13 @@ const RONDAS = {
   Q1: 'Clasificación (1ª ronda)', Q2: 'Clasificación (2ª ronda)', Q3: 'Clasificación (ronda final)'
 };
 const RONDAS_EN = { '1/16-finals': 'Ronda de 32', '1/8-finals': 'Octavos de final', '1/4-finals': 'Cuartos de final', '1/2-finals': 'Semifinal', 'final': 'Final', '1/32-finals': 'Ronda de 64', '1/64-finals': 'Ronda de 128' };
+const RONDAS_I = {
+  F: 'Final', SF: 'Semifinal', QF: 'Quarterfinal', R16: 'Round of 16', R32: 'Round of 32', R64: 'Round of 64', R128: 'First round', RR: 'Group stage',
+  Q1: 'Qualifying (1st round)', Q2: 'Qualifying (2nd round)', Q3: 'Qualifying (final round)'
+};
+const RONDAS_TXT_I = { '1/16-finals': 'Round of 32', '1/8-finals': 'Round of 16', '1/4-finals': 'Quarterfinal', '1/2-finals': 'Semifinal', 'final': 'Final', '1/32-finals': 'Round of 64', '1/64-finals': 'Round of 128' };
 export const nombreRonda = (code, texto) => {
+  if (LANG === 'en') { if (RONDAS_I[code]) return RONDAS_I[code]; const t = (texto || '').replace(/^.* - /, '').trim(); return RONDAS_TXT_I[t.toLowerCase()] || t; }
   if (RONDAS[code]) return RONDAS[code];
   const t = (texto || '').replace(/^.* - /, '').trim();
   return RONDAS_EN[t.toLowerCase()] || t;
@@ -41,10 +49,10 @@ const CATEGORIAS = {
 export function nombreCategoria(tier, tourOriginal, torneo = '') {
   const tour = tourBase(tourOriginal) || tourOriginal;
   const t = (torneo || '').toLowerCase();
-  if (t.includes('davis')) return 'Copa Davis';
+  if (t.includes('davis')) return LANG === 'en' ? 'Davis Cup' : 'Copa Davis';
   if (t.includes('billie jean')) return 'Billie Jean King Cup';
   if (t.includes('finals')) return tour === 'wta' ? 'WTA Finals' : 'ATP Finals';
-  if (tier && CATEGORIAS[tier]) return CATEGORIAS[tier];
+  if (tier && CATEGORIAS[tier]) return LANG === 'en' && tier === 'davis_cup' ? 'Davis Cup' : CATEGORIAS[tier];
   if (tier && tier.startsWith('challenger_')) return 'Challenger ' + tier.split('_')[1];
   if (tour === 'challenger') return 'Challenger';
   if (tour === 'atp') return 'ATP';
@@ -53,7 +61,7 @@ export function nombreCategoria(tier, tourOriginal, torneo = '') {
   return '';
 }
 
-export const SUPERFICIES = { clay: 'polvo de ladrillo', hard: 'cemento', grass: 'césped', carpet: 'carpeta' };
+export const SUPERFICIES = LANG === 'en' ? { clay: 'clay', hard: 'hard court', grass: 'grass', carpet: 'carpet' } : { clay: 'polvo de ladrillo', hard: 'cemento', grass: 'césped', carpet: 'carpeta' };
 
 const PAISES = {
   arg: 'Argentina', esp: 'España', ita: 'Italia', ger: 'Alemania', deu: 'Alemania', fra: 'Francia', usa: 'Estados Unidos',
@@ -68,7 +76,11 @@ const PAISES = {
   slo: 'Eslovenia', bih: 'Bosnia', mon: 'Mónaco', isr: 'Israel', tha: 'Tailandia', phi: 'Filipinas', ina: 'Indonesia',
   uzb: 'Uzbekistán', hkg: 'Hong Kong', and: 'Andorra', lux: 'Luxemburgo', mar: 'Marruecos', mlt: 'Malta', tai: 'Taipéi', irl: 'Irlanda', mda: 'Moldavia', cyp: 'Chipre', dom: 'República Dominicana', pur: 'Puerto Rico', ksa: 'Arabia Saudita', uae: 'Emiratos Árabes', vie: 'Vietnam', mas: 'Malasia', sgp: 'Singapur', lbn: 'Líbano', jam: 'Jamaica', crc: 'Costa Rica', gua: 'Guatemala', esa: 'El Salvador', cub: 'Cuba', bar: 'Barbados', mkd: 'Macedonia del Norte', mne: 'Montenegro', alb: 'Albania', isl: 'Islandia', lie: 'Liechtenstein', irn: 'Irán', iri: 'Irán', pak: 'Pakistán', sri: 'Sri Lanka', nga: 'Nigeria', ken: 'Kenia', zim: 'Zimbabue', sen: 'Senegal', civ: 'Costa de Marfil', alg: 'Argelia'
 };
-export const nombrePais = (c) => (c && PAISES[c.toLowerCase()]) || (c ? c.toUpperCase() : '');
+const REGION_EN = new Intl.DisplayNames(['en'], { type: 'region' });
+export const nombrePais = (c) => {
+  if (LANG === 'en' && c) { const iso = IOC_ISO2[c.toLowerCase()]; try { if (iso) return REGION_EN.of(iso.toUpperCase()); } catch {} }
+  return (c && PAISES[c.toLowerCase()]) || (c ? c.toUpperCase() : '');
+};
 
 // ---------- Marcadores ----------
 
@@ -110,7 +122,7 @@ export function apellido(nombre) {
 }
 
 export function fechaArg(iso, opciones) {
-  return new Intl.DateTimeFormat('es-AR', { timeZone: CONFIG.sitio.zonaHoraria, ...opciones }).format(new Date(iso));
+  return new Intl.DateTimeFormat(LOCALE, { timeZone: CONFIG.sitio.zonaHoraria, ...opciones }).format(new Date(iso));
 }
 
 // "atp_doubles" -> "atp", "challenger_women" -> "challenger"; null/itf/utr -> null (no se muestran)
@@ -130,6 +142,7 @@ const CIUDADES = { Paris: 'París', London: 'Londres', Rome: 'Roma', Beijing: 'P
 export function nombreTorneo(t) {
   if (!t) return '';
   const limpio = t.trim().replace(/\s*\([A-Za-z ]+\)(?=\s*(-|$))/, '');
+  if (LANG === 'en') return /^Finals - Riyadh$/.test(limpio) ? 'WTA Finals' : /^Finals - Turin$/.test(limpio) ? 'ATP Finals' : limpio;
   if (CIUDADES[limpio]) return CIUDADES[limpio];
   return limpio.split(/(\s+\d+$)/)[0] in CIUDADES ? CIUDADES[limpio.split(/(\s+\d+$)/)[0]] + limpio.slice(limpio.split(/(\s+\d+$)/)[0].length) : limpio;
 }

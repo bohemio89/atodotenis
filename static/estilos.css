@@ -448,3 +448,9 @@ body{background:#0F1317}
 .decl p{margin:0 0 8px;font-size:19px;line-height:1.5;font-style:italic;font-family:'Roboto Condensed',sans-serif}
 .decl footer{font-size:13px;opacity:.8}
 .decl footer a{text-decoration:underline}
+/* Selector de idioma */
+.idioma{display:inline-flex;border:1px solid rgba(255,255,255,.22);border-radius:20px;overflow:hidden;height:34px}
+.idioma a{display:inline-flex;align-items:center;padding:0 11px;font:700 13px var(--cond,'Roboto Condensed'),sans-serif;letter-spacing:.05em;color:#C9D1D9}
+.idioma a:hover{color:#fff}
+.idioma a.on{background:rgba(255,255,255,.14);color:#fff}
+@media (max-width:640px){.idioma{height:30px}.idioma a{padding:0 8px;font-size:12px}.cab-lado.der .pill{display:none}}

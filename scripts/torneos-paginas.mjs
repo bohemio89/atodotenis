@@ -1,11 +1,11 @@
 // Sección de torneos: índice, página por torneo y cuadro interactivo.
 // Se llama desde build.mjs con las herramientas que ya usa el resto del sitio.
-import { nombreRonda, nombreCategoria, nombreTorneo, tourBase, slugify, SUPERFICIES, IOC_ISO2 } from './lib/util.mjs';
+import { nombreRonda, nombreCategoria, nombreTorneo, tourBase, slugify, SUPERFICIES, IOC_ISO2, LANG, LOCALE } from './lib/util.mjs';
 
 const ORDEN = ['R128', 'R64', 'R32', 'R16', 'QF', 'SF', 'F'];
-const NOMBRE_RONDA_CORTO = { R128: '1ª ronda', R64: '2ª ronda', R32: 'Ronda de 32', R16: 'Octavos', QF: 'Cuartos', SF: 'Semis', F: 'Final' };
+const NOMBRE_RONDA_CORTO = LANG === 'en' ? { R128: '1st round', R64: '2nd round', R32: 'Round of 32', R16: 'Round of 16', QF: 'QF', SF: 'SF', F: 'Final' } : { R128: '1ª ronda', R64: '2ª ronda', R32: 'Ronda de 32', R16: 'Octavos', QF: 'Cuartos', SF: 'Semis', F: 'Final' };
 const NIVEL = { grand_slam: 0, atp_finals: 0, wta_finals: 0, masters_1000: 1, atp_1000: 1, wta_1000: 1, davis_cup: 1, bjk_cup: 1, atp_500: 2, wta_500: 2, atp_250: 3, wta_250: 3 };
-const regionES = new Intl.DisplayNames(['es'], { type: 'region' });
+const regionES = new Intl.DisplayNames([LANG], { type: 'region' });
 
 export function generarTorneos({ torneos, partidos, esc, paisTag, filaPartido, hora, pagina, escribir, cancha, ARG }) {
   const ahora = Date.now();
@@ -134,7 +134,14 @@ ${!lista.length ? '<div class="panel sec"><div class="vacio" style="border:0">No
     let desc = esFinals
       ? `Las ${t.cat} cierran la temporada del circuito ${circuito(t)}: se juegan con fase de grupos, semifinales y final, sobre ${supTxt}${t.meta?.cubierto ? ', bajo techo' : ''}${cp.pais ? `, en ${cp.c} (${cp.pais})` : ''}.`
       : `${t.cat === 'Torneo' ? 'Este torneo' : `El ${t.cat} de ${nombre}`} forma parte del circuito ${circuito(t)} y se juega sobre ${supTxt}${t.meta?.cubierto ? ', bajo techo' : ', al aire libre'}${cp.pais ? `, en ${cp.c} (${cp.pais})` : ''}.`;
-    if (t.camp) desc += ` La edición ${t.ultimoCamp.anio} terminó con el título de ${t.camp.campeon}, que le ganó la final a ${t.camp.finalista} por ${t.camp.marcador}.`;
+    if (LANG === 'en') {
+      const ind = t.meta?.cubierto ? 'indoor ' : '';
+      desc = esFinals
+        ? `The ${t.cat} close the ${circuito(t)} season with a group stage, semifinals and final, played on ${ind}${supTxt}${cp.pais ? ` in ${cp.c} (${cp.pais})` : ''}.`
+        : `${t.cat === 'Torneo' ? 'This tournament' : `The ${nombre} ${t.cat}`} is part of the ${circuito(t)} tour and is played on ${t.meta?.cubierto ? 'indoor' : 'outdoor'} ${supTxt}${cp.pais ? ` in ${cp.c} (${cp.pais})` : ''}.`;
+      if (t.camp) desc += ` The ${t.ultimoCamp.anio} edition ended with ${t.camp.campeon} taking the title, beating ${t.camp.finalista} ${t.camp.marcador} in the final.`;
+      else if (t.enJuego && t.rondaActual) desc += ` The current edition has reached the ${nombreRonda(t.rondaActual).toLowerCase()}.`;
+    } else if (t.camp) desc += ` La edición ${t.ultimoCamp.anio} terminó con el título de ${t.camp.campeon}, que le ganó la final a ${t.camp.finalista} por ${t.camp.marcador}.`;
     else if (t.enJuego && t.rondaActual) desc += ` La edición en curso ya está en ${nombreRonda(t.rondaActual).toLowerCase()}.`;
     const campeonHTML = t.ultimoCamp ? `<div class="campeon"><div class="campeon-lbl">${t.camp ? 'Campeón' : 'Último campeón registrado'} ${t.ultimoCamp.anio}</div>
 <div class="campeon-j">${paisTag({ pais: t.ultimoCamp.pais })}<strong>${esc(t.ultimoCamp.campeon)}</strong></div>
@@ -143,7 +150,7 @@ ${!lista.length ? '<div class="panel sec"><div class="vacio" style="border:0">No
     const hoy = t.ms.filter((p) => ['en_vivo', 'programado'].includes(p.estado)).sort((a, b) => String(a.horario).localeCompare(String(b.horario)));
     const tabs = t.dobles.length ? `<div class="tabs cuadro-tabs" role="tablist"><button role="tab" id="t-s" aria-controls="cs" aria-selected="true">Singles</button><button role="tab" id="t-d" aria-controls="cd" aria-selected="false">Dobles</button></div>` : '';
     escribir(`torneo/${t.slug}.html`, pagina({
-      titulo: `${nombre} ${t.ultimoCamp?.anio || new Date().getFullYear()}: cuadro y resultados`, descripcion: desc, ruta: `/torneo/${t.slug}`, activo: 'torneos',
+      titulo: `${nombre} ${t.ultimoCamp?.anio || new Date().getFullYear()}: ${LANG === 'en' ? 'draw and results' : 'cuadro y resultados'}`, descripcion: desc, ruta: `/torneo/${t.slug}`, activo: 'torneos',
       cuerpo: `<section class="t-hero sup-${esc(sup(t))}">${cancha(sup(t))}<div class="t-hero-in">
 <span class="etiqueta">${esc(t.cat)}</span><h1>${esc(nombre)}</h1>
 ${t.meta ? `<div class="t-lugar">${cp.html}</div>` : ''}<div class="tc-chips">${chipSup(t)}<span class="chip">${esc(circuito(t))}</span>${t.enJuego ? '<span class="chip vivo"><span class="vivo-dot"></span>En juego</span>' : ''}</div></div>${campeonHTML}</section>

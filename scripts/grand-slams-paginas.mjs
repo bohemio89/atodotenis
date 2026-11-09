@@ -1,10 +1,10 @@
 // Sección Grand Slam: cuadros y finales de la temporada, cargados a mano desde fuentes oficiales
 // (content/grand-slams.json). Desde 2027 se pueden complementar con los datos automáticos.
-import { slugify, SUPERFICIES } from './lib/util.mjs';
+import { slugify, SUPERFICIES, LANG, LOCALE } from './lib/util.mjs';
 import { tablaTopTen, RONDA_TXT } from './lib/puntos-gs.mjs';
 
 const RONDAS = ['R128', 'R64', 'R32', 'R16', 'QF', 'SF', 'F'];
-const regionES = new Intl.DisplayNames(['es'], { type: 'region' });
+const regionES = new Intl.DisplayNames([LANG], { type: 'region' });
 const CLASE = { 'Australian Open': 'gs-ao', 'Roland Garros': 'gs-rg', Wimbledon: 'gs-wb', 'US Open': 'gs-uso' };
 
 function aPartido(m, i, cuadro) {
@@ -38,7 +38,7 @@ export function generarGrandSlams({ datos, rankingDe, partidos, esc, paisTag, pa
 <div class="gs-card-body">${campeonCard(t, 'masculino', 'Campeón')}${campeonCard(t, 'femenino', 'Campeona')}</div></a>`;
 
   const anios = [...new Set(torneos.map((t) => t.anio))];
-  const num = (n) => n == null ? '<span class="sd">s/d</span>' : Number(n).toLocaleString('es-AR');
+  const num = (n) => n == null ? '<span class="sd">s/d</span>' : Number(n).toLocaleString(LOCALE);
   const tablaPuntos = (tour, titulo) => {
     const T = tablaTopTen({ ranking: rankingDe ? rankingDe(tour) : [], partidos: partidos || [], grandSlams: datos, tour });
     if (!T.filas.length) return '';

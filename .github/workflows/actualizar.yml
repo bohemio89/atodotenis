@@ -49,6 +49,11 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/declaraciones.mjs
 
+      - name: Traducir notas al inglés
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/traducir-notas.mjs
+
       - name: Buscar highlights en YouTube
         run: node scripts/videos.mjs
 

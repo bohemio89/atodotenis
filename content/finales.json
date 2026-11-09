@@ -11,10 +11,28 @@
       "regexTorneo": "finals",
       "nota": "Elena Rybakina, N° 1 del mundo, se bajó por un problema médico. Su lugar lo ocupa Marta Kostyuk.",
       "grupos": [
-        { "nombre": "Grupo 1", "jugadores": ["Coco Gauff", "Jessica Pegula", "Linda Noskova", "Marta Kostyuk"] },
-        { "nombre": "Grupo 2", "jugadores": ["Aryna Sabalenka", "Mirra Andreeva", "Elina Svitolina", "Karolina Muchova"] }
+        {
+          "nombre": "Grupo 1",
+          "jugadores": [
+            "Coco Gauff",
+            "Jessica Pegula",
+            "Linda Noskova",
+            "Marta Kostyuk"
+          ]
+        },
+        {
+          "nombre": "Grupo 2",
+          "jugadores": [
+            "Aryna Sabalenka",
+            "Mirra Andreeva",
+            "Elina Svitolina",
+            "Karolina Muchova"
+          ]
+        }
       ],
-      "fuente": "wtatennis.com"
+      "fuente": "wtatennis.com",
+      "sede_en": "Indian Wells, United States",
+      "nota_en": "Elena Rybakina, the world No. 1, withdrew with a medical issue. Marta Kostyuk takes her place."
     },
     {
       "id": "atp-finals-2026",
@@ -24,11 +42,23 @@
       "desde": "2026-11-15",
       "hasta": "2026-11-22",
       "regexTorneo": "finals",
-      "clasificados": ["Alexander Zverev", "Carlos Alcaraz", "Ben Shelton", "Daniil Medvedev", "Flavio Cobolli", "Arthur Fils", "Frances Tiafoe", "Rafael Jodar"],
+      "clasificados": [
+        "Alexander Zverev",
+        "Carlos Alcaraz",
+        "Ben Shelton",
+        "Daniil Medvedev",
+        "Flavio Cobolli",
+        "Arthur Fils",
+        "Frances Tiafoe",
+        "Rafael Jodar"
+      ],
       "nota": "Jannik Sinner se pierde el torneo por lesión. Cuatro debutantes: Cobolli, Fils, Tiafoe y Jodar.",
       "sorteo": "El sorteo de los grupos (Grupo John McEnroe y Grupo Ivan Lendl) es el jueves 12 de noviembre.",
       "grupos": [],
-      "fuente": "atptour.com y nittoatpfinals.com"
+      "fuente": "atptour.com y nittoatpfinals.com",
+      "sede_en": "Turin, Italy",
+      "nota_en": "Jannik Sinner misses the event through injury. Four debutants: Cobolli, Fils, Tiafoe and Jodar.",
+      "sorteo_en": "The group draw (John McEnroe Group and Ivan Lendl Group) takes place on Thursday, November 12."
     }
   ]
 }

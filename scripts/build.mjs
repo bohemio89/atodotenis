@@ -2,16 +2,20 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  CONFIG, ROOT, leerJSON, tourBase, nombreRonda, nombreCategoria, sets, marcadorTexto, apellido, fechaArg, nombrePais, nombreTorneo, IOC_ISO2, NEUTRALES
+  CONFIG, ROOT, leerJSON, tourBase, nombreRonda, nombreCategoria, sets, marcadorTexto, apellido, fechaArg, nombrePais, nombreTorneo, IOC_ISO2, NEUTRALES, LANG, LOCALE
 } from './lib/util.mjs';
 import { generarTorneos } from './torneos-paginas.mjs';
 import { generarGrandSlams } from './grand-slams-paginas.mjs';
+import { traducirHTML } from './lib/i18n.mjs';
+import { execFileSync } from 'node:child_process';
+const EN = LANG === 'en';
+const PRE = EN ? '/en' : '';
 
-const S = CONFIG.sitio;
-const DIST = path.join(ROOT, 'dist');
+const S = { ...CONFIG.sitio, ...(LANG === 'en' ? { descripcion: 'All the tennis: results, rankings and news from the ATP, WTA and Challenger tours, the Davis Cup and the Billie Jean King Cup.' } : {}) };
+const DIST = path.join(ROOT, 'dist', EN ? 'en' : '');
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.mkdirSync(path.join(DIST, 'nota'), { recursive: true });
-fs.cpSync(path.join(ROOT, 'static'), DIST, { recursive: true });
+if (!EN) fs.cpSync(path.join(ROOT, 'static'), DIST, { recursive: true });
 
 const partidos = Object.values(leerJSON('data/partidos.json', {}));
 const avatares = leerJSON('data/avatares.json', {});
@@ -21,6 +25,9 @@ const torneos = leerJSON('data/torneos.json', {});
 const notas = fs.readdirSync(path.join(ROOT, 'content/notas')).filter((f) => f.endsWith('.json'))
   .map((f) => JSON.parse(fs.readFileSync(path.join(ROOT, 'content/notas', f), 'utf8')))
   .filter((n) => n.estado === 'publicada')
+  // Versión en inglés: solo las notas que ya tienen su traducción
+  .filter((n) => !EN || (n.en?.titulo && Array.isArray(n.en.cuerpo)))
+  .map((n) => EN ? { ...n, titulo: n.en.titulo, bajada: n.en.bajada, cuerpo: n.en.cuerpo, categoria: n.en.categoria || n.categoria } : n)
   .sort((a, b) => b.fecha.localeCompare(a.fecha));
 
 // Hora que el navegador convierte a la zona del visitante (respaldo: hora Argentina)
@@ -48,7 +55,7 @@ const srcsetCommons = (url) => /\/1920px-/.test(url)
   : '';
 
 // Placa gráfica del resultado (cuando no hay una foto buena): no es una foto, es un gráfico con datos reales
-const RONDA_PLACA = { R128: '1° ronda', R64: '2° ronda', R32: '3° ronda', R16: 'Octavos de final', QF: 'Cuartos de final', SF: 'Semifinal', F: 'Final' };
+const RONDA_PLACA = EN ? { R128: '1st round', R64: '2nd round', R32: '3rd round', R16: 'Round of 16', QF: 'Quarterfinal', SF: 'Semifinal', F: 'Final' } : { R128: '1° ronda', R64: '2° ronda', R32: '3° ronda', R16: 'Octavos de final', QF: 'Cuartos de final', SF: 'Semifinal', F: 'Final' };
 const partidosPorId = Object.fromEntries(partidos.map((p) => [String(p.id), p]));
 function resultadoNota(n) {
   if (n.resultado) return n.resultado;
@@ -70,8 +77,8 @@ function placa(n) {
   const fila = (j, gana) => `<div class="pl-fila${gana ? ' gana' : ''}">${cara(j)}<span class="pl-nom">${paisTag(j)}<span class="pl-n"><span class="pl-full">${esc(j.nombre)}</span><span class="pl-ape">${esc(String(j.nombre).trim().split(/\s+/).pop())}</span></span>${j.ranking ? `<small>N° ${j.ranking}</small>` : ''}</span>
 <span class="pl-sets">${r.sets.map(([a, b]) => `<b class="${(gana ? a > b : b > a) ? 'g' : ''}">${gana ? a : b}</b>`).join('')}</span></div>`;
   const ronda = RONDA_PLACA[r.ronda] || '';
-  const extra = r.resultado === 'retiro' ? ' · por retiro' : '';
-  return `<div class="fondo placa sup-${esc(n.superficie || 'hard')}" role="img" aria-label="${esc(`${r.ganador.nombre} venció a ${r.perdedor.nombre}`)}">
+  const extra = r.resultado === 'retiro' ? (EN ? ' · retirement' : ' · por retiro') : '';
+  return `<div class="fondo placa sup-${esc(n.superficie || 'hard')}" role="img" aria-label="${esc(`${r.ganador.nombre} ${EN ? 'beat' : 'venció a'} ${r.perdedor.nombre}`)}">
 <svg class="cancha" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="3" opacity=".16"><path d="M40 300 120 150h160l80 150"/><path d="M75 235h250M200 235v-85M95 190h210"/></g></svg>
 <div class="pl-in"><div class="pl-torneo">${esc([n.categoria, n.torneo].filter(Boolean).join(' · '))}${ronda ? ` <span>${esc(ronda)}${extra}</span>` : ''}</div>
 ${fila(r.ganador, true)}${fila(r.perdedor, false)}<div class="pl-marca">A Todo Tenis</div></div></div>`;
@@ -80,6 +87,7 @@ ${fila(r.ganador, true)}${fila(r.perdedor, false)}<div class="pl-marca">A Todo T
 function declaracionNota(n) {
   const d = n.declaracion;
   if (!d?.texto || !d.jugador) return '';
+  if (EN) return d.original ? `<blockquote class="decl"><p>“${esc(d.original)}”</p><footer>${esc(d.jugador)}, as published by ${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.fuente)}</a>` : esc(d.fuente)}</footer></blockquote>` : '';
   return `<blockquote class="decl"><p>«${esc(d.texto)}»</p><footer>${esc(d.jugador)}, en declaraciones publicadas por ${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.fuente)}</a>` : esc(d.fuente)}</footer></blockquote>`;
 }
 // Highlights oficiales de YouTube: miniatura + botón; el reproductor (sin cookies) carga solo al tocar
@@ -93,7 +101,7 @@ function videoNota(n) {
 <script>document.querySelectorAll('.yt').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';f.title='Highlights del partido';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.className='yt-frame';b.replaceWith(f);});});</script></section>`;
 }
 function imagenNota(n, conCredito = true) {
-  if (n.imagen?.url) return `<div class="fondo"><img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} alt="${esc(n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%">${conCredito ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
+  if (n.imagen?.url) return `<div class="fondo"><img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} alt="${esc(EN ? n.titulo : n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%">${conCredito ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
   return placa(n) || cancha(n.superficie);
 }
 
@@ -101,16 +109,17 @@ function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
   const t = titulo ? `${titulo} | ${S.nombre}` : `${S.nombre} | Todo el tenis`;
   const item = (href, txt, clave) => `<a href="${href}"${activo === clave ? ' class="activo" aria-current="page"' : ''}>${txt}</a>`;
   return `<!doctype html>
-<html lang="es-AR">
+<html lang="${EN ? 'en' : 'es-AR'}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(t)}</title>
 <meta name="description" content="${esc(descripcion || S.descripcion)}">
-<link rel="canonical" href="${S.url}${ruta}">
+<link rel="canonical" href="${S.url}${PRE}${ruta === '/' && EN ? '' : ruta}">
+<link rel="alternate" hreflang="es" href="${S.url}${ruta}"><link rel="alternate" hreflang="en" href="${S.url}/en${ruta === '/' ? '' : ruta}"><link rel="alternate" hreflang="x-default" href="${S.url}${ruta}">
 <meta property="og:title" content="${esc(titulo || S.nombre)}">
 <meta property="og:description" content="${esc(descripcion || S.descripcion)}">
-<meta property="og:url" content="${S.url}${ruta}">
+<meta property="og:url" content="${S.url}${PRE}${ruta === '/' && EN ? '' : ruta}"><meta property="og:locale" content="${EN ? 'en_US' : 'es_AR'}">
 <meta property="og:site_name" content="${esc(S.nombre)}">
 <meta name="theme-color" content="#12161B">
 <link rel="icon" href="data:image/svg+xml,${encodeURIComponent(pelota(26).replace(' aria-hidden="true"', ' xmlns="http://www.w3.org/2000/svg"'))}">
@@ -128,7 +137,7 @@ ${extraHead}
 <div class="cab-lado izq">
 <a class="icono-btn" href="#" aria-label="Instagram de A Todo Tenis"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a></div>
 ${logo}
-<div class="cab-lado der"><a class="pill" href="/noticias">Noticias</a></div>
+<div class="cab-lado der"><nav class="idioma" aria-label="Idioma / Language"><a data-lang href="${ruta === '/404' ? '/' : ruta}" hreflang="es" lang="es"${EN ? '' : ' aria-current="true" class="on"'}>ES</a><a data-lang href="/en${ruta === '/' || ruta === '/404' ? '' : ruta}" hreflang="en" lang="en"${EN ? ' aria-current="true" class="on"' : ''}>EN</a></nav><a class="pill" href="/noticias">Noticias</a></div>
 </div></header>
 <nav class="menu" aria-label="Principal"><div class="contenedor">
 ${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/torneos', 'Torneos', 'torneos')}${item('/grand-slams', 'Grand Slam', 'grand-slam')}${item('/ranking', 'Ranking', 'ranking')}${item('/calendario', 'Calendario', 'calendario')}
@@ -142,9 +151,9 @@ ${cuerpo}
 <nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/calendario|Calendario', '/argentinos|Argentinos', '/acerca|Acerca del sitio', '/creditos|Créditos de imágenes'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)}</div></footer>
 <script>
-try{var fl={};document.querySelectorAll('time[data-local]').forEach(function(t){var o=JSON.parse(t.getAttribute('data-local'));var k=t.getAttribute('data-local');fl[k]=fl[k]||new Intl.DateTimeFormat('es-AR',o);t.textContent=fl[k].format(new Date(t.getAttribute('datetime')));});}catch(e){}
+try{var fl={};document.querySelectorAll('time[data-local]').forEach(function(t){var o=JSON.parse(t.getAttribute('data-local'));var k=t.getAttribute('data-local');fl[k]=fl[k]||new Intl.DateTimeFormat('${LOCALE}',o);t.textContent=fl[k].format(new Date(t.getAttribute('datetime')));});}catch(e){}
 document.querySelectorAll('[data-hero]').forEach(function(h){var f=h.querySelector('.hs-fila');h.querySelectorAll('[data-hs]').forEach(function(b){b.addEventListener('click',function(){if(+b.getAttribute('data-hs')>0)f.appendChild(f.firstElementChild);else f.insertBefore(f.lastElementChild,f.firstElementChild)})})});
-(function(){var q=new URLSearchParams(location.search).get('q');var box=document.querySelector('[data-buscar-notas]');if(!q||!box)return;var v=q.toLowerCase(),n=0;box.querySelectorAll('.card').forEach(function(c){var ok=c.textContent.toLowerCase().indexOf(v)>=0;c.style.display=ok?'':'none';if(ok)n++});var t=document.getElementById('busqueda-info');if(t){t.textContent=n?('Resultados para "'+q+'": '+n):('No hay notas que coincidan con "'+q+'".');t.hidden=false}var i=document.getElementById('q');if(i)i.value=q})();
+(function(){var q=new URLSearchParams(location.search).get('q');var box=document.querySelector('[data-buscar-notas]');if(!q||!box)return;var v=q.toLowerCase(),n=0;box.querySelectorAll('.card').forEach(function(c){var ok=c.textContent.toLowerCase().indexOf(v)>=0;c.style.display=ok?'':'none';if(ok)n++});var t=document.getElementById('busqueda-info');if(t){t.textContent=n?('${EN ? 'Results for' : 'Resultados para'} "'+q+'": '+n):('${EN ? 'No stories match' : 'No hay notas que coincidan con'} "'+q+'".');t.hidden=false}var i=document.getElementById('q');if(i)i.value=q})();
 document.querySelectorAll('[data-carrusel]').forEach(function(c){var t=c.querySelector('.car-track'),d=c.querySelectorAll('.car-dots span');
 c.querySelectorAll('.car-btn').forEach(function(b){b.addEventListener('click',function(){t.scrollBy({left:+b.getAttribute('data-dir')*t.clientWidth*0.9,behavior:'smooth'})})});
 t.addEventListener('scroll',function(){var w=t.firstElementChild?t.firstElementChild.getBoundingClientRect().width+14:1;var i=Math.round(t.scrollLeft/w);d.forEach(function(x,k){x.classList.toggle('on',k===i)})},{passive:true});});
@@ -263,7 +272,7 @@ function movimiento(j) {
   return `<span class="mov ${dir}" aria-label="${txt}${n ? ` ${n} ${n === 1 ? 'puesto' : 'puestos'}` : ''}">${dir === 'up' ? '▲' : '▼'}${n ? `<small>${n}</small>` : ''}</span>`;
 }
 function tablaRanking(tour, max, fotos = true) {
-  const filas = rankingDe(tour).slice(0, max).map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug">${fotos ? avatar(j) : `<span class="rk-flag">${paisTag(j)}</span>`}<span class="n">${esc(j.nombre)}</span>${movimiento(j)}</span><span class="pts">${(j.puntos ?? '').toLocaleString('es-AR')}</span></div>`).join('');
+  const filas = rankingDe(tour).slice(0, max).map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug">${fotos ? avatar(j) : `<span class="rk-flag">${paisTag(j)}</span>`}<span class="n">${esc(j.nombre)}</span>${movimiento(j)}</span><span class="pts">${(j.puntos ?? '').toLocaleString(LOCALE)}</span></div>`).join('');
   return `<div class="rk-cab"><span>#</span><span>Jugador${tour === 'wta' ? 'a' : ''}</span><span style="text-align:right">Puntos</span></div>${filas || '<div class="vacio">Ranking no disponible todavía.</div>'}`;
 }
 function panelRanking(id, max, fotos = true) {
@@ -283,8 +292,9 @@ const cardNota = (n) => `<a class="card" href="/nota/${n.slug}"><div class="img"
 // ---------- Finals de fin de temporada y calendario 2027 (portada) ----------
 const FINALES = leerJSON('content/finales.json', { eventos: [] }).eventos || [];
 const CAL2027 = leerJSON('content/calendario-2027.json', { atp: [], wta: [] });
-const MESES_C = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
-const fechaC = (iso) => { const [, m, d] = iso.split('-').map(Number); return `${d} ${MESES_C[m - 1]}`; };
+const MESES_C = EN ? ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] : ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+const fechaC = (iso) => { const [, m, d] = iso.split('-').map(Number); return EN ? `${MESES_C[m - 1]} ${d}` : `${d} ${MESES_C[m - 1]}`; };
+const enX = (o, k) => (EN && o[`${k}_en`]) || o[k];
 const normN = (x) => String(x || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 const mismoJugador = (a, b) => { a = normN(a); b = normN(b); return a === b || (a.split(' ').pop() === b.split(' ').pop() && a[0] === b[0]); };
 const datosJugador = (nombre) => Object.values(jugadores.lista || {}).find((j) => mismoJugador(j.nombre, nombre)) || { nombre };
@@ -337,10 +347,10 @@ function bloqueFinales() {
     };
     const cuerpo = grupos.length
       ? `<div class="fin-grupos">${grupos.map(tabla).join('')}</div><p class="meta fin-ayuda">Partidos ganados y perdidos en la fase de grupos. Avanzan las dos primeras de cada grupo.</p>`
-      : `<div class="fin-grupo"><h4>Clasificados</h4>${(e.clasificados || []).map((n) => `<div class="fin-fila"><span class="fin-j">${paisTag(datosJugador(n))}${esc(n)}</span></div>`).join('')}</div>${e.sorteo ? `<p class="meta fin-ayuda">${esc(e.sorteo)}</p>` : ''}`;
+      : `<div class="fin-grupo"><h4>Clasificados</h4>${(e.clasificados || []).map((n) => `<div class="fin-fila"><span class="fin-j">${paisTag(datosJugador(n))}${esc(n)}</span></div>`).join('')}</div>${e.sorteo ? `<p class="meta fin-ayuda">${esc(enX(e, 'sorteo'))}</p>` : ''}`;
     const [, , d1] = e.desde.split('-').map(Number), [, m2, d2] = e.hasta.split('-').map(Number);
-    return `<div class="panel fin"><div class="fin-cab"><span class="etq">${e.tour.toUpperCase()}</span><h3>${esc(e.nombre)}</h3><span class="meta">${esc(e.sede)} · del ${d1} al ${d2} de ${['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'][m2 - 1]}</span></div>
-${e.nota ? `<p class="fin-nota">${esc(e.nota)}</p>` : ''}${cuerpo}</div>`;
+    return `<div class="panel fin"><div class="fin-cab"><span class="etq">${e.tour.toUpperCase()}</span><h3>${esc(e.nombre)}</h3><span class="meta">${esc(enX(e, 'sede'))} · ${EN ? `${['January','February','March','April','May','June','July','August','September','October','November','December'][m2 - 1]} ${d1}–${d2}` : `del ${d1} al ${d2} de ${['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'][m2 - 1]}`}</span></div>
+${e.nota ? `<p class="fin-nota">${esc(enX(e, 'nota'))}</p>` : ''}${cuerpo}</div>`;
   }).join('');
 }
 function proximosTorneos(max = 6) {
@@ -352,7 +362,7 @@ function calendario2027() {
   const hoy = new Date().toISOString().slice(0, 10);
   const lista = (arr, wta) => {
     const prox = arr.find((x) => x.fecha >= hoy);
-    return `<div class="cal-grid">${arr.map((x) => `<div class="cal-item sup-${esc(x.sup)}${x === prox ? ' prox' : ''}"><span class="cal-fecha">${wta || x.semana ? 'Semana del ' : ''}${fechaC(x.fecha)}</span><span class="cal-nom">${esc(x.torneo)}</span><span class="cal-meta">${esc(x.sede)} · ${esc(x.categoria)}</span></div>`).join('')}</div>`;
+    return `<div class="cal-grid">${arr.map((x) => `<div class="cal-item sup-${esc(x.sup)}${x === prox ? ' prox' : ''}"><span class="cal-fecha">${wta || x.semana ? (EN ? 'Week of ' : 'Semana del ') : ''}${fechaC(x.fecha)}</span><span class="cal-nom">${esc(x.torneo)}</span><span class="cal-meta">${esc(x.sede)} · ${esc(x.categoria)}</span></div>`).join('')}</div>`;
   };
   return `<section class="sec"><div class="sec-tit"><h1>Calendario 2027</h1></div>
 <div class="panel" data-tabs><div class="tabs" role="tablist"><button role="tab" id="cal-ta" aria-controls="cal-a" aria-selected="true">ATP</button><button role="tab" id="cal-tw" aria-controls="cal-w" aria-selected="false">WTA</button></div>
@@ -375,7 +385,7 @@ function hero() {
   for (const p of terminados.filter((x) => x.importante && !conNota.has(x.id))) {
     if (items.length >= 5) break;
     const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
-    items.push(item('/resultados', cancha(p.superficie), nombreCategoria(p.tier, p.tour, p.torneo), `${apellido(g.nombre)} venció a ${apellido(pe.nombre)} ${marcadorTexto(p.score, p.ganador)}`, nombreTorneo(p.torneo)));
+    items.push(item('/resultados', cancha(p.superficie), nombreCategoria(p.tier, p.tour, p.torneo), `${apellido(g.nombre)} ${EN ? 'def.' : 'venció a'} ${apellido(pe.nombre)} ${marcadorTexto(p.score, p.ganador)}`, nombreTorneo(p.torneo)));
   }
   if (!items.length) items.push(item('/resultados', cancha('clay'), '', 'Todo el tenis, en un solo lugar', 'Resultados, ranking y noticias del circuito ATP, WTA, Challenger, Copa Davis y Billie Jean King Cup.'));
   const relleno = [['hard', 'Todos los resultados del circuito', '/resultados'], ['clay', 'Cuadros de cada torneo', '/torneos'], ['grass', 'Los cuatro Grand Slam', '/grand-slams'], ['hard', 'Ranking ATP y WTA', '/ranking']];
@@ -386,7 +396,7 @@ function hero() {
   return `<section class="hero2" aria-label="Destacadas" data-hero><div class="hs-fila">${orden.join('')}</div>${flecha('izq', 'Anterior', 'M15 18l-6-6 6-6')}${flecha('der', 'Siguiente', 'M9 18l6-6-6-6')}</section>`;
 }
 
-function escribir(rel, html) { const p = path.join(DIST, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
+function escribir(rel, html) { if (EN && rel.endsWith('.html')) html = traducirHTML(html); const p = path.join(DIST, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
 
 // ---------- Páginas ----------
 const T = generarTorneos({ torneos, partidos: visibles, esc, paisTag, filaPartido, hora, pagina, escribir: (rel, html) => escribir(rel, html), cancha, ARG });
@@ -405,19 +415,20 @@ function recuadroEfemeride() {
     if (!/^(grand_slam|atp_1000|wta_1000|atp_finals|wta_finals|finals)$/.test(t.meta?.categoria || '') && !/finals/i.test(t.nombre)) continue;
     for (const [anio, c] of Object.entries(t.campeones || {})) {
       const s = c.singles; if (!s?.fecha || !s.campeon) continue;
+      if (EN) { auto.push({ fecha: s.fecha.slice(0, 10), texto: `${s.campeon} won the ${nombreTorneo(t.nombre)} title${s.finalista ? `, beating ${s.finalista} in the final` : ''}${s.marcador ? ` ${String(s.marcador).split(' ').filter(Boolean).join(', ')}` : ''}.` }); continue; }
       auto.push({ fecha: s.fecha.slice(0, 10), texto: `${s.campeon} se quedaba con el título en ${nombreTorneo(t.nombre)}${s.finalista ? ` tras vencer en la final a ${s.finalista}` : ''}${s.marcador ? ` por ${coma(s.marcador)}` : ''}.`, fuente: 'Resultados de A Todo Tenis' });
     }
   }
-  const items = [...base, ...auto].filter((x) => /^\d{4}-\d{2}-\d{2}$/.test(x.fecha) && x.texto);
+  const items = [...base.map((x) => EN ? { fecha: x.fecha, texto: x.texto_en } : x), ...auto].filter((x) => /^\d{4}-\d{2}-\d{2}$/.test(x.fecha) && x.texto);
   if (!items.length) return '';
   return `<div class="efem panel" id="efem" hidden><div class="efem-tit">Un día como hoy</div><p class="efem-txt"></p></div>
 <script type="application/json" id="efem-datos">${JSON.stringify(items).replace(/</g, '\\u003c')}</script>
 <script>(function(){try{var d=JSON.parse(document.getElementById('efem-datos').textContent),h=new Date(),hoy=new Date(h.getFullYear(),h.getMonth(),h.getDate()),el=document.getElementById('efem');
 var md=function(f){return f.slice(5)},cand=[],dias=0;
 for(;dias<7&&!cand.length;dias++){var x=new Date(hoy);x.setDate(x.getDate()-dias);var k=String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');cand=d.filter(function(e){return md(e.fecha)===k&&+e.fecha.slice(0,4)<hoy.getFullYear()});}
-if(!cand.length)return;var e=cand[(hoy.getDate()+hoy.getMonth())%cand.length],p=e.fecha.split('-'),f=new Date(+p[0],+p[1]-1,+p[2]),txt=f.toLocaleDateString('es-AR',{day:'numeric',month:'long'})+' de '+p[0];
-el.querySelector('.efem-tit').textContent=dias===1?'Un día como hoy':'Esta semana en la historia';
-el.querySelector('.efem-txt').textContent=(dias===1?'Un día como hoy, ':'Un ')+txt+', '+e.texto;
+if(!cand.length)return;var e=cand[(hoy.getDate()+hoy.getMonth())%cand.length],p=e.fecha.split('-'),f=new Date(+p[0],+p[1]-1,+p[2]),txt=${EN ? `f.toLocaleDateString('en-US',{month:'long',day:'numeric'})+', '+p[0]` : `f.toLocaleDateString('es-AR',{day:'numeric',month:'long'})+' de '+p[0]`};
+el.querySelector('.efem-tit').textContent=dias===1?'${EN ? 'On this day' : 'Un día como hoy'}':'${EN ? 'This week in history' : 'Esta semana en la historia'}';
+el.querySelector('.efem-txt').textContent=${EN ? `'On '+txt+': '+e.texto` : `(dias===1?'Un día como hoy, ':'Un ')+txt+', '+e.texto`};
 el.hidden=false;}catch(_){}})();</script>`;
 }
 
@@ -454,15 +465,19 @@ escribir('argentinos.html', pagina({ titulo: 'Argentinos en el circuito', ruta: 
 <div class="panel">${porTorneo([...visibles.filter((p) => conArg(p) && p.estado === 'en_vivo'), ...terminados.filter(conArg), ...proximos.filter(conArg)]) || '<div class="vacio" style="border:0">Sin partidos por ahora.</div>'}</div>
 ${notas.filter((n) => n.argentina).length ? `<div class="sec-tit sec"><h2>Notas</h2></div><div class="notas2">${notas.filter((n) => n.argentina).slice(0, 8).map(cardNota).join('')}</div>` : ''}</section>
 <section><div class="sec-tit"><h2>Mejores rankeados</h2></div><div class="panel" data-tabs><div class="tabs" role="tablist"><button role="tab" id="ar-ta" aria-controls="ar-a" aria-selected="true">ATP</button><button role="tab" id="ar-tw" aria-controls="ar-w" aria-selected="false">WTA</button></div>
-<div id="ar-a" role="tabpanel" aria-labelledby="ar-ta">${argRank('atp').map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug"><span>${esc(j.nombre)}</span></span><span class="pts">${j.puntos?.toLocaleString('es-AR') ?? ''}</span></div>`).join('') || '<div class="vacio">Sin datos.</div>'}</div>
-<div id="ar-w" role="tabpanel" aria-labelledby="ar-tw" class="oculto">${argRank('wta').map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug"><span>${esc(j.nombre)}</span></span><span class="pts">${j.puntos?.toLocaleString('es-AR') ?? ''}</span></div>`).join('') || '<div class="vacio">Sin argentinas entre las primeras del listado.</div>'}</div></div></section>
+<div id="ar-a" role="tabpanel" aria-labelledby="ar-ta">${argRank('atp').map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug"><span>${esc(j.nombre)}</span></span><span class="pts">${j.puntos?.toLocaleString(LOCALE) ?? ''}</span></div>`).join('') || '<div class="vacio">Sin datos.</div>'}</div>
+<div id="ar-w" role="tabpanel" aria-labelledby="ar-tw" class="oculto">${argRank('wta').map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug"><span>${esc(j.nombre)}</span></span><span class="pts">${j.puntos?.toLocaleString(LOCALE) ?? ''}</span></div>`).join('') || '<div class="vacio">Sin argentinas entre las primeras del listado.</div>'}</div></div></section>
 </div>` }));
 
 escribir('acerca.html', pagina({ titulo: 'Acerca del sitio', ruta: '/acerca', cuerpo: `
-<article class="nota"><h1>Acerca de A Todo Tenis</h1><div class="cuerpo">
+<article class="nota"><h1>Acerca de A Todo Tenis</h1><div class="cuerpo">${EN ? `
+<p>A Todo Tenis was born in 2007 as an Argentine tennis website. It is back with a new version that follows the ATP, WTA and Challenger tours, the Davis Cup and the Billie Jean King Cup in real time.</p>
+<p>Results, calendar and rankings come from Live Tennis API and update automatically. Stories are always based on verified results, with no invented quotes.</p>
+<p>Images that accompany the stories are published with their credit. When a story has no photo, a graphic with the match result is shown instead.</p>
+<p>The site is available in Spanish and English.</p>` : `
 <p>A Todo Tenis nació en 2007 como un sitio argentino dedicado al tenis. Hoy vuelve con una nueva versión que sigue en tiempo real el circuito ATP, WTA, Challenger, la Copa Davis y la Billie Jean King Cup.</p>
 <p>Los resultados, el calendario y el ranking provienen de Live Tennis API y se actualizan automáticamente. Las notas se escriben siempre a partir de resultados verificados y sin declaraciones inventadas.</p>
-<p>Las imágenes que acompañan las notas se publican con su crédito correspondiente. Cuando una nota no tiene foto, se muestra una placa con el resultado del partido.</p>
+<p>Las imágenes que acompañan las notas se publican con su crédito correspondiente. Cuando una nota no tiene foto, se muestra una placa con el resultado del partido.</p>`}
 </div></article>` }));
 
 for (const n of notas) {
@@ -491,7 +506,18 @@ escribir('404.html', pagina({ titulo: 'Página no encontrada', ruta: '/404', cue
 
 // SEO: sitemap, RSS, robots
 const urls = ['/', '/noticias', '/resultados', '/torneos', '/grand-slams', ...GS.torneos.map((t) => `/grand-slam/${t.slug}`), '/ranking', '/calendario', '/argentinos', '/acerca', ...T.lista.map((t) => `/torneo/${t.slug}`), ...notas.map((n) => `/nota/${n.slug}`)];
-escribir('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${S.url}${u}</loc></url>`).join('')}</urlset>\n`);
+if (EN) {
+  fs.writeFileSync(path.join(DIST, '.urls.json'), JSON.stringify(urls));
+  console.log(`Versión en inglés: ${urls.length} páginas, ${notas.length} notas.`);
+  process.exit(0);
+}
+// Versión en inglés en dist/en (mismo generador, otro idioma)
+execFileSync(process.execPath, [new URL(import.meta.url).pathname], { env: { ...process.env, SITIO_LANG: 'en' }, stdio: 'inherit' });
+const urlsEN = JSON.parse(fs.readFileSync(path.join(DIST, 'en/.urls.json'), 'utf8')); fs.rmSync(path.join(DIST, 'en/.urls.json'));
+const enSet = new Set(urlsEN);
+const alt = (u) => `<xhtml:link rel="alternate" hreflang="es" href="${S.url}${u}"/>${enSet.has(u) ? `<xhtml:link rel="alternate" hreflang="en" href="${S.url}/en${u === '/' ? '' : u}"/>` : ''}`;
+escribir('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls.map((u) => `<url><loc>${S.url}${u}</loc>${alt(u)}</url>`).join('')}${urlsEN.map((u) => `<url><loc>${S.url}/en${u === '/' ? '' : u}</loc>${alt(u)}</url>`).join('')}</urlset>\n`);
+if (false) escribir('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${S.url}${u}</loc></url>`).join('')}</urlset>\n`);
 escribir('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${S.url}/sitemap.xml\n`);
 escribir('rss.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>${esc(S.nombre)}</title><link>${S.url}</link><description>${esc(S.descripcion)}</description><language>es-ar</language>${notas.slice(0, 30).map((n) => `<item><title>${esc(n.titulo)}</title><link>${S.url}/nota/${n.slug}</link><guid>${S.url}/nota/${n.slug}</guid><pubDate>${new Date(n.fecha).toUTCString()}</pubDate><description>${esc(n.bajada)}</description></item>`).join('')}</channel></rss>\n`);
 
