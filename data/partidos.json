@@ -19337,9 +19337,9 @@
    "ranking": 45
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-09T12:15:24.171Z",
+  "visto": "2026-11-09T13:15:23.922Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -19349,24 +19349,26 @@
   "score": {
    "games": [
     [
-     1
+     5,
+     0
     ],
     [
-     0
+     7,
+     6
     ]
    ],
    "sets": [
     0,
-    0
+    2
    ],
    "puntos": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "216399": {
   "id": 216399,
@@ -19421,9 +19423,9 @@
    "ranking": 58
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-09T12:15:24.170Z",
+  "visto": "2026-11-09T13:15:23.995Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -19433,24 +19435,26 @@
   "score": {
    "games": [
     [
-     4
+     6,
+     6
     ],
     [
-     2
+     2,
+     3
     ]
    ],
    "sets": [
-    0,
+    2,
     0
    ],
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216401": {
   "id": 216401,
@@ -20627,7 +20631,7 @@
    "ranking": 232
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T12:15:24.171Z",
   "torneoClave": "challenger|Matsuyama",
@@ -24528,7 +24532,7 @@
    "ranking": 368
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T12:15:24.170Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -26689,7 +26693,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T12:15:24.171Z",
+  "visto": "2026-11-09T13:15:23.824Z",
   "tier": null,
   "torneoId": "13396",
   "cubierto": false,
@@ -26697,21 +26701,23 @@
   "score": {
    "games": [
     [
-     1
+     6,
+     2
     ],
     [
+     4,
      1
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "30",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -26741,7 +26747,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T12:15:24.171Z",
+  "visto": "2026-11-09T13:15:23.824Z",
   "tier": null,
   "torneoId": "13396",
   "cubierto": false,
@@ -26749,21 +26755,23 @@
   "score": {
    "games": [
     [
-     1
+     3,
+     2
     ],
     [
-     1
+     6,
+     4
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "40",
-    "30"
+    "30",
+    "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -26820,7 +26828,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T12:15:24.171Z",
+  "visto": "2026-11-09T13:15:23.824Z",
   "tier": null,
   "torneoId": "13396",
   "cubierto": false,
@@ -26828,14 +26836,16 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     3
     ],
     [
-     1
+     2,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
@@ -27005,7 +27015,7 @@
    "ranking": 266
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T12:15:24.170Z",
   "tier": null,
@@ -27144,7 +27154,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T12:15:24.170Z",
+  "visto": "2026-11-09T13:15:23.824Z",
   "tier": null,
   "torneoId": "12861",
   "cubierto": false,
@@ -27154,12 +27164,12 @@
     [
      6,
      6,
-     0
+     4
     ],
     [
      7,
      4,
-     0
+     5
     ]
    ],
    "sets": [
@@ -27167,10 +27177,10 @@
     1
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -27200,7 +27210,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T12:15:24.170Z",
+  "visto": "2026-11-09T13:15:23.824Z",
   "tier": null,
   "torneoId": "2353",
   "cubierto": true,
@@ -27208,19 +27218,21 @@
   "score": {
    "games": [
     [
-     2
+     3,
+     5
     ],
     [
-     2
+     6,
+     4
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "15",
-    "15"
+    "0",
+    "40"
    ],
    "saca": 2
   },
@@ -27290,7 +27302,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T12:00:00Z",
+  "horario": "2026-11-09T12:45:00Z",
   "j1": {
    "id": 179,
    "nombre": "Hugo Grenier",
@@ -27304,9 +27316,34 @@
    "ranking": 302
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z"
+  "visto": "2026-11-09T13:15:23.824Z",
+  "tier": null,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217191": {
   "id": 217191,
@@ -28039,28 +28076,53 @@
   "id": 217223,
   "tour": "atp",
   "torneo": "Stockholm",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "ATP Stockholm - 1/16-finals",
+  "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
   "horario": "2026-11-09T13:15:00Z",
   "j1": {
-   "id": 507,
-   "nombre": "Tomas Machac",
-   "pais": "cze",
-   "ranking": 69
-  },
-  "j2": {
    "id": 140,
    "nombre": "Borna Gojo",
    "pais": "cro",
    "ranking": 133
   },
+  "j2": {
+   "id": 507,
+   "nombre": "Tomas Machac",
+   "pais": "cze",
+   "ranking": 69
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.713Z"
+  "visto": "2026-11-09T13:15:23.824Z",
+  "tier": null,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217224": {
   "id": 217224,
