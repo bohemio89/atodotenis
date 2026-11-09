@@ -20161,7 +20161,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T05:15:22.718Z",
+  "visto": "2026-11-09T06:15:21.733Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -20171,21 +20171,23 @@
   "score": {
    "games": [
     [
-     5
+     6,
+     1
     ],
     [
+     7,
      4
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "0",
-    "0"
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -20423,7 +20425,7 @@
    "ranking": 181
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T05:15:22.718Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -20467,26 +20469,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T05:00:00Z",
+  "horario": "2026-11-09T05:50:00Z",
   "j1": {
+   "id": 462,
+   "nombre": "Yusuke Kusuhara",
+   "pais": "jpn",
+   "ranking": 929
+  },
+  "j2": {
    "id": 4786,
    "nombre": "Jay Friend",
    "pais": "jpn",
    "ranking": 252
   },
-  "j2": {
-   "id": 462,
-   "nombre": "Y. Kusuhara",
-   "pais": "jpn",
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z",
+  "visto": "2026-11-09T06:15:21.733Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216437": {
   "id": 216437,
@@ -20497,26 +20525,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T04:30:00Z",
+  "horario": "2026-11-09T06:00:00Z",
   "j1": {
-   "id": 212,
-   "nombre": "Billy Harris",
-   "pais": "gbr",
-   "ranking": 232
-  },
-  "j2": {
    "id": 71,
    "nombre": "Liam Broady",
    "pais": "gbr",
    "ranking": 212
   },
+  "j2": {
+   "id": 212,
+   "nombre": "Billy Harris",
+   "pais": "gbr",
+   "ranking": 232
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z",
+  "visto": "2026-11-09T06:15:21.733Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216438": {
   "id": 216438,
@@ -20691,7 +20743,7 @@
    "ranking": 408
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T05:15:22.718Z",
   "torneoClave": "challenger|Matsuyama",
@@ -20745,7 +20797,7 @@
    "ranking": 192
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T05:15:22.719Z",
   "torneoClave": "challenger|Matsuyama",
@@ -22726,26 +22778,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-09T05:30:00Z",
+  "horario": "2026-11-09T05:35:00Z",
   "j1": {
-   "id": 488,
-   "nombre": "Janice Tjen",
-   "pais": "ina",
-   "ranking": 75
-  },
-  "j2": {
    "id": 292,
    "nombre": "Magda Linette",
    "pais": "pol",
    "ranking": 68
   },
+  "j2": {
+   "id": 488,
+   "nombre": "Janice Tjen",
+   "pais": "ina",
+   "ranking": 75
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.076Z",
+  "visto": "2026-11-09T06:15:21.733Z",
   "torneoClave": "wta|Chennai",
   "tier": null,
-  "importante": true
+  "importante": true,
+  "torneoId": "7817",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216547": {
   "id": 216547,
@@ -26084,7 +26160,7 @@
    "ranking": 1531
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T05:15:22.718Z",
   "tier": null,
@@ -26138,7 +26214,7 @@
    "ranking": 483
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T05:15:22.718Z",
   "tier": null,
