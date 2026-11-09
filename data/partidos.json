@@ -8134,7 +8134,7 @@
  "215400": {
   "id": 215400,
   "tour": "wta",
-  "torneo": "WTA Tour Finals, Doubles, Group B",
+  "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
@@ -8154,9 +8154,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-09T04:15:22.327Z",
+  "visto": "2026-11-09T05:15:22.850Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8167,7 +8167,7 @@
    "games": [
     [
      6,
-     5
+     6
     ],
     [
      0,
@@ -8175,17 +8175,17 @@
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215401": {
   "id": 215401,
@@ -20145,7 +20145,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T04:30:00Z",
+  "horario": "2026-11-09T04:40:00Z",
   "j1": {
    "id": 360,
    "nombre": "Alafia Ayeni",
@@ -20159,12 +20159,36 @@
    "ranking": 404
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z",
+  "visto": "2026-11-09T05:15:22.718Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216428": {
   "id": 216428,
@@ -20401,7 +20425,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T04:15:22.328Z",
+  "visto": "2026-11-09T05:15:22.718Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -20411,21 +20435,25 @@
   "score": {
    "games": [
     [
+     3,
+     6,
      3
     ],
     [
-     5
+     6,
+     4,
+     3
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "15",
-    "40"
+    "40",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -20649,7 +20677,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T04:00:00Z",
+  "horario": "2026-11-09T04:45:00Z",
   "j1": {
    "id": 211,
    "nombre": "Josef Schwaerzler Joel",
@@ -20663,12 +20691,36 @@
    "ranking": 408
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z",
+  "visto": "2026-11-09T05:15:22.718Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216444": {
   "id": 216444,
@@ -20679,26 +20731,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T04:00:00Z",
+  "horario": "2026-11-09T04:55:00Z",
   "j1": {
-   "id": 660,
-   "nombre": "Keegan Smith",
-   "pais": "usa",
-   "ranking": 192
-  },
-  "j2": {
    "id": 77,
    "nombre": "Yu-Hsiou Hsu",
    "pais": "tai",
    "ranking": 304
   },
+  "j2": {
+   "id": 660,
+   "nombre": "Keegan Smith",
+   "pais": "usa",
+   "ranking": 192
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z",
+  "visto": "2026-11-09T05:15:22.719Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216445": {
   "id": 216445,
@@ -25680,7 +25756,7 @@
    "ranking": 762
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T04:15:22.327Z",
   "tier": null,
@@ -25954,7 +26030,7 @@
    "ranking": 449
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T04:15:22.327Z",
   "tier": null,
@@ -25994,23 +26070,50 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T03:30:00Z",
+  "horario": "2026-11-09T04:20:00Z",
   "j1": {
-   "id": 24648,
-   "nombre": "S. Katayama",
-   "pais": null,
-   "ranking": null
+   "id": 2296,
+   "nombre": "Shintaro Imai",
+   "pais": "jpn",
+   "ranking": 938
   },
   "j2": {
-   "id": 2296,
-   "nombre": "S. Imai",
-   "pais": null,
-   "ranking": null
+   "id": 24648,
+   "nombre": "Sho Katayama",
+   "pais": "jpn",
+   "ranking": 1531
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T03:15:24.258Z"
+  "visto": "2026-11-09T05:15:22.718Z",
+  "tier": null,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     4
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216816": {
   "id": 216816,
@@ -26037,7 +26140,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T04:15:22.327Z",
+  "visto": "2026-11-09T05:15:22.718Z",
   "tier": null,
   "torneoId": "8222",
   "cubierto": false,
@@ -26045,19 +26148,23 @@
   "score": {
    "games": [
     [
-     6
+     7,
+     3,
+     1
     ],
     [
-     6
+     6,
+     6,
+     2
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "4",
-    "2"
+    "40",
+    "15"
    ],
    "saca": 1
   },
@@ -26141,7 +26248,7 @@
    "ranking": 672
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T04:15:22.327Z",
   "tier": null,
