@@ -416,3 +416,29 @@ body{background:#0F1317}
 .video-nota .meta{margin-top:6px}
 .mov small{font-size:.78em;font-weight:700;margin-left:2px;font-variant-numeric:tabular-nums}
 .rk-flag{display:inline-flex;width:28px;justify-content:center;flex:none}
+
+/* Finals en la portada */
+.fin{margin-bottom:12px;padding:14px}
+.fin-cab{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin-bottom:8px}
+.fin-cab h3{margin:0;font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;font-size:20px}
+.fin-cab .etq{background:var(--lima,#C6F432);color:#12161B;font-weight:800;font-size:11px;padding:2px 7px;border-radius:4px;letter-spacing:.06em}
+.fin-cab .meta{width:100%}
+.fin-nota{font-size:13.5px;line-height:1.45;margin:0 0 10px;color:#C9D1D9}
+.fin-grupos{display:grid;grid-template-columns:1fr;gap:10px}
+.fin-grupo h4{margin:6px 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--lima,#C6F432)}
+.fin-fila{display:flex;justify-content:space-between;align-items:center;padding:6px 2px;border-bottom:1px solid rgba(255,255,255,.07);font-size:14px}
+.fin-j{display:flex;align-items:center;gap:7px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fin-r{font-variant-numeric:tabular-nums;font-weight:700}
+.fin-ayuda{margin:8px 2px 0;font-size:12px}
+/* Próximos torneos */
+.cal-fila{display:flex;gap:12px;align-items:center;padding:9px 4px;border-bottom:1px solid rgba(255,255,255,.07)}
+.cal-f{flex:none;width:56px;font-weight:800;color:var(--lima,#C6F432);font-family:'Roboto Condensed',sans-serif;text-transform:uppercase}
+.cal-t{display:flex;flex-direction:column;min-width:0}.cal-t small{opacity:.65;font-size:12px}
+/* Calendario 2027 */
+.cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;padding-top:10px}
+.cal-item{display:flex;flex-direction:column;gap:3px;padding:12px 14px;border-radius:8px;background:rgba(255,255,255,.04);border-left:4px solid #3B82F6}
+.cal-item.sup-clay{border-left-color:#E07A3F}.cal-item.sup-grass{border-left-color:#4CAF50}
+.cal-item.prox{outline:2px solid var(--lima,#C6F432)}
+.cal-fecha{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--lima,#C6F432)}
+.cal-nom{font-weight:800;font-family:'Roboto Condensed',sans-serif;font-size:17px}
+.cal-meta{font-size:12.5px;opacity:.7}

@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, leerJSON, log } from './lib/util.mjs';
 
-const MESES_MAX = 12;
+const MESES_MAX = 24;
 const API = 'https://commons.wikimedia.org/w/api.php';
 const UA = 'AToDoTenisBot/1.0 (https://atodotenis.vercel.app)';
 const LICENCIAS_OK = /^(CC BY(-SA)? \d|CC0|Public domain|PD)/i;
@@ -70,7 +70,7 @@ async function main() {
     const anterior = n.imagen?.url ? n.imagen : null; // foto elegida con el criterio viejo: se vuelve a evaluar
     if (anterior) { delete n.imagen; n.fotoBuscada = null; }
     // reintentar como mucho una vez por semana
-    if (n.fotoBuscada && Date.now() - new Date(n.fotoBuscada).getTime() < 7 * 864e5 && !process.env.FORZAR_FOTOS) continue;
+    if (n.fotoBuscada && n.fotoBuscada > '2026-11-09T19' && Date.now() - new Date(n.fotoBuscada).getTime() < 7 * 864e5 && !process.env.FORZAR_FOTOS) continue;
     const p = partidos[n.partidoId];
     const jugadores = n.jugadores || (p ? [p.ganador === 2 ? p.j2 : p.j1, p.ganador === 2 ? p.j1 : p.j2].filter(Boolean).map((j) => j.nombre) : []);
     let foto = null;

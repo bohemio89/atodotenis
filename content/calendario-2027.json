@@ -1,0 +1,40 @@
+{
+  "_ayuda": "Calendario 2027: Grand Slam, Masters/WTA 1000, Finals, competencias por equipos y el Argentina Open. Fuentes oficiales: calendario ATP 2027 (atptour.com, publicado el 14/1/2026) y calendario WTA 2027 (wtatennis.com, al 1/10/2026). ATP: fecha de inicio del torneo. WTA: semana en que se juega. Sujeto a cambios.",
+  "atp": [
+    { "fecha": "2027-01-01", "torneo": "United Cup", "sede": "Perth y Sídney", "categoria": "Por equipos", "sup": "hard" },
+    { "fecha": "2027-01-17", "torneo": "Abierto de Australia", "sede": "Melbourne", "categoria": "Grand Slam", "sup": "hard" },
+    { "fecha": "2027-02-15", "torneo": "Argentina Open", "sede": "Buenos Aires", "categoria": "ATP 250", "sup": "clay" },
+    { "fecha": "2027-03-03", "torneo": "Indian Wells", "sede": "Indian Wells", "categoria": "Masters 1000", "sup": "hard" },
+    { "fecha": "2027-03-17", "torneo": "Miami Open", "sede": "Miami", "categoria": "Masters 1000", "sup": "hard" },
+    { "fecha": "2027-04-04", "torneo": "Montecarlo", "sede": "Montecarlo", "categoria": "Masters 1000", "sup": "clay" },
+    { "fecha": "2027-04-21", "torneo": "Mutua Madrid Open", "sede": "Madrid", "categoria": "Masters 1000", "sup": "clay" },
+    { "fecha": "2027-05-05", "torneo": "Internazionali d'Italia", "sede": "Roma", "categoria": "Masters 1000", "sup": "clay" },
+    { "fecha": "2027-05-23", "torneo": "Roland Garros", "sede": "París", "categoria": "Grand Slam", "sup": "clay" },
+    { "fecha": "2027-06-28", "torneo": "Wimbledon", "sede": "Londres", "categoria": "Grand Slam", "sup": "grass" },
+    { "fecha": "2027-08-01", "torneo": "Masters de Canadá", "sede": "Toronto", "categoria": "Masters 1000", "sup": "hard" },
+    { "fecha": "2027-08-12", "torneo": "Cincinnati Open", "sede": "Cincinnati", "categoria": "Masters 1000", "sup": "hard" },
+    { "fecha": "2027-08-29", "torneo": "US Open", "sede": "Nueva York", "categoria": "Grand Slam", "sup": "hard" },
+    { "fecha": "2027-10-06", "torneo": "Masters de Shanghái", "sede": "Shanghái", "categoria": "Masters 1000", "sup": "hard" },
+    { "fecha": "2027-11-01", "torneo": "Masters de París", "sede": "París", "categoria": "Masters 1000", "sup": "hard" },
+    { "fecha": "2027-11-14", "torneo": "ATP Finals", "sede": "Italia", "categoria": "Finals", "sup": "hard" },
+    { "fecha": "2027-11-22", "torneo": "Finales de la Copa Davis", "sede": "Italia", "categoria": "Copa Davis", "sup": "hard", "semana": true }
+  ],
+  "wta": [
+    { "fecha": "2027-01-04", "torneo": "United Cup", "sede": "Perth y Sídney", "categoria": "Por equipos", "sup": "hard" },
+    { "fecha": "2027-01-18", "torneo": "Abierto de Australia", "sede": "Melbourne", "categoria": "Grand Slam", "sup": "hard" },
+    { "fecha": "2027-02-08", "torneo": "Qatar Open", "sede": "Doha", "categoria": "WTA 1000", "sup": "hard" },
+    { "fecha": "2027-02-15", "torneo": "Dubái", "sede": "Dubái", "categoria": "WTA 1000", "sup": "hard" },
+    { "fecha": "2027-03-01", "torneo": "Indian Wells", "sede": "Indian Wells", "categoria": "WTA 1000", "sup": "hard" },
+    { "fecha": "2027-03-15", "torneo": "Miami Open", "sede": "Miami", "categoria": "WTA 1000", "sup": "hard" },
+    { "fecha": "2027-04-19", "torneo": "Mutua Madrid Open", "sede": "Madrid", "categoria": "WTA 1000", "sup": "clay" },
+    { "fecha": "2027-05-03", "torneo": "Internazionali d'Italia", "sede": "Roma", "categoria": "WTA 1000", "sup": "clay" },
+    { "fecha": "2027-05-24", "torneo": "Roland Garros", "sede": "París", "categoria": "Grand Slam", "sup": "clay" },
+    { "fecha": "2027-06-28", "torneo": "Wimbledon", "sede": "Londres", "categoria": "Grand Slam", "sup": "grass" },
+    { "fecha": "2027-08-02", "torneo": "WTA 1000 de Canadá", "sede": "Montreal", "categoria": "WTA 1000", "sup": "hard" },
+    { "fecha": "2027-08-09", "torneo": "Cincinnati Open", "sede": "Cincinnati", "categoria": "WTA 1000", "sup": "hard" },
+    { "fecha": "2027-08-30", "torneo": "US Open", "sede": "Nueva York", "categoria": "Grand Slam", "sup": "hard" },
+    { "fecha": "2027-09-27", "torneo": "China Open", "sede": "Pekín", "categoria": "WTA 1000", "sup": "hard" },
+    { "fecha": "2027-10-11", "torneo": "Wuhan Open", "sede": "Wuhan", "categoria": "WTA 1000", "sup": "hard" },
+    { "fecha": "2027-11-08", "torneo": "WTA Finals", "sede": "Charlotte", "categoria": "Finals", "sup": "hard" }
+  ]
+}

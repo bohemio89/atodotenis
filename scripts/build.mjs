@@ -261,19 +261,107 @@ function carrusel(lista) {
 }
 const cardNota = (n) => `<a class="card" href="/nota/${n.slug}"><div class="img">${imagenNota(n)}</div><div class="txt"><span class="cat">${esc(n.categoria)}</span><h3>${esc(n.titulo)}</h3><span class="meta">${fechaCorta(n.fecha)}</span></div></a>`;
 
+
+// ---------- Finals de fin de temporada y calendario 2027 (portada) ----------
+const FINALES = leerJSON('content/finales.json', { eventos: [] }).eventos || [];
+const CAL2027 = leerJSON('content/calendario-2027.json', { atp: [], wta: [] });
+const MESES_C = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+const fechaC = (iso) => { const [, m, d] = iso.split('-').map(Number); return `${d} ${MESES_C[m - 1]}`; };
+const normN = (x) => String(x || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+const mismoJugador = (a, b) => { a = normN(a); b = normN(b); return a === b || (a.split(' ').pop() === b.split(' ').pop() && a[0] === b[0]); };
+const datosJugador = (nombre) => Object.values(jugadores.lista || {}).find((j) => mismoJugador(j.nombre, nombre)) || { nombre };
+function eventoActivo(hoy = new Date()) {
+  const d = hoy.toISOString().slice(0, 10);
+  const menos = (iso, dias) => new Date(new Date(iso).getTime() - dias * 864e5).toISOString().slice(0, 10);
+  return FINALES.filter((e) => d >= menos(e.desde, 10) && d <= e.hasta);
+}
+function partidosDeEvento(e) {
+  const re = new RegExp(e.regexTorneo || 'finals', 'i');
+  return partidos.filter((p) => !p.dobles && re.test(p.torneo || '') && (p.tour || '').replace(/_doubles$/, '') === e.tour);
+}
+function gruposDeEvento(e) {
+  if (e.grupos?.length) return e.grupos;
+  // Sin sorteo cargado: se deducen de los cruces de la fase de grupos (quienes se enfrentan están en el mismo grupo)
+  const lista = e.clasificados || [];
+  const id = new Map(lista.map((n, k) => [n, k]));
+  for (const p of partidosDeEvento(e)) {
+    if (p.rondaCod && p.rondaCod !== 'RR') continue;
+    const a = lista.find((n) => mismoJugador(n, p.j1?.nombre)), b = lista.find((n) => mismoJugador(n, p.j2?.nombre));
+    if (!a || !b || id.get(a) === id.get(b)) continue;
+    const viejo = id.get(b), nuevo = id.get(a);
+    for (const [n, v] of id) if (v === viejo) id.set(n, nuevo);
+  }
+  const comp = {};
+  for (const n of lista) (comp[id.get(n)] ||= []).push(n);
+  const gs = Object.values(comp).filter((g) => g.length === 4);
+  return gs.length === 2 ? gs.map((jug, i) => ({ nombre: `Grupo ${i + 1}`, jugadores: jug })) : [];
+}
+function bloqueFinales() {
+  const evs = eventoActivo();
+  if (!evs.length) return '';
+  return evs.map((e) => {
+    const ps = partidosDeEvento(e).filter((p) => p.estado === 'finalizado' && p.ganador);
+    const fila = (nombre) => {
+      const j = datosJugador(nombre);
+      let g = 0, pe = 0;
+      for (const p of ps) {
+        if (p.rondaCod && p.rondaCod !== 'RR') continue;
+        const lado = mismoJugador(p.j1?.nombre, nombre) ? 1 : mismoJugador(p.j2?.nombre, nombre) ? 2 : 0;
+        if (!lado) continue;
+        if (p.ganador === lado) g++; else pe++;
+      }
+      return { j, g, pe };
+    };
+    const grupos = gruposDeEvento(e);
+    const tabla = (gr) => {
+      const filas = gr.jugadores.map(fila).sort((a, b) => b.g - a.g || a.pe - b.pe);
+      return `<div class="fin-grupo"><h4>${esc(gr.nombre)}</h4>${filas.map((f) => `<div class="fin-fila"><span class="fin-j">${paisTag(f.j)}${esc(f.j.nombre)}</span><span class="fin-r">${f.g}-${f.pe}</span></div>`).join('')}</div>`;
+    };
+    const cuerpo = grupos.length
+      ? `<div class="fin-grupos">${grupos.map(tabla).join('')}</div><p class="meta fin-ayuda">Partidos ganados y perdidos en la fase de grupos. Avanzan las dos primeras de cada grupo.</p>`
+      : `<div class="fin-grupo"><h4>Clasificados</h4>${(e.clasificados || []).map((n) => `<div class="fin-fila"><span class="fin-j">${paisTag(datosJugador(n))}${esc(n)}</span></div>`).join('')}</div>${e.sorteo ? `<p class="meta fin-ayuda">${esc(e.sorteo)}</p>` : ''}`;
+    const [, , d1] = e.desde.split('-').map(Number), [, m2, d2] = e.hasta.split('-').map(Number);
+    return `<div class="panel fin"><div class="fin-cab"><span class="etq">${e.tour.toUpperCase()}</span><h3>${esc(e.nombre)}</h3><span class="meta">${esc(e.sede)} · del ${d1} al ${d2} de ${['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'][m2 - 1]}</span></div>
+${e.nota ? `<p class="fin-nota">${esc(e.nota)}</p>` : ''}${cuerpo}</div>`;
+  }).join('');
+}
+function proximosTorneos(max = 6) {
+  const hoy = new Date().toISOString().slice(0, 10);
+  const todos = [...CAL2027.atp.map((x) => ({ ...x, tour: 'ATP' })), ...CAL2027.wta.map((x) => ({ ...x, tour: 'WTA' }))].filter((x) => x.fecha >= hoy).sort((a, b) => a.fecha.localeCompare(b.fecha));
+  return `<div class="panel">${todos.slice(0, max).map((x) => `<div class="cal-fila"><span class="cal-f">${fechaC(x.fecha)}</span><span class="cal-t"><b>${esc(x.torneo)}</b><small>${x.tour} · ${esc(x.categoria)}</small></span></div>`).join('')}</div>`;
+}
+function calendario2027() {
+  const hoy = new Date().toISOString().slice(0, 10);
+  const lista = (arr, wta) => {
+    const prox = arr.find((x) => x.fecha >= hoy);
+    return `<div class="cal-grid">${arr.map((x) => `<div class="cal-item sup-${esc(x.sup)}${x === prox ? ' prox' : ''}"><span class="cal-fecha">${wta || x.semana ? 'Semana del ' : ''}${fechaC(x.fecha)}</span><span class="cal-nom">${esc(x.torneo)}</span><span class="cal-meta">${esc(x.sede)} · ${esc(x.categoria)}</span></div>`).join('')}</div>`;
+  };
+  return `<section class="sec"><div class="sec-tit"><h2>Calendario 2027</h2></div>
+<div class="panel" data-tabs><div class="tabs" role="tablist"><button role="tab" id="cal-ta" aria-controls="cal-a" aria-selected="true">ATP</button><button role="tab" id="cal-tw" aria-controls="cal-w" aria-selected="false">WTA</button></div>
+<div id="cal-a" role="tabpanel" aria-labelledby="cal-ta">${lista(CAL2027.atp, false)}</div><div id="cal-w" role="tabpanel" aria-labelledby="cal-tw" class="oculto">${lista(CAL2027.wta, true)}</div>
+<p class="meta" style="margin:10px 4px 2px">Grand Slam, Masters y WTA 1000, Finals y competencias por equipos. Fuente: calendarios oficiales de la ATP y la WTA. Sujeto a cambios.</p></div></section>`;
+}
+
+// Las 5 notas más importantes: primero la jornada más reciente, ordenadas por importancia; si faltan, la jornada anterior
+function destacadas(max = 5) {
+  const jornada = (n) => new Date(new Date(n.fechaPartido || n.fecha).getTime() - 3 * 3600e3).toISOString().slice(0, 10);
+  const propias = notas.filter((n) => n.manual).slice(0, max);
+  const auto = notas.filter((n) => !n.manual).sort((a, b) => jornada(b).localeCompare(jornada(a)) || (b.importancia ?? 0) - (a.importancia ?? 0));
+  return [...propias, ...auto].slice(0, max);
+}
 function hero() {
   const item = (href, fondo, cat, titulo, bajada) => `<a class="hs" href="${href}">${fondo}${cat ? `<span class="etiqueta">${esc(cat)}</span>` : ''}<h2>${esc(titulo)}</h2>${bajada ? `<p>${esc(bajada)}</p>` : ''}</a>`;
-  const items = notas.slice(0, 8).map((n) => item(`/nota/${n.slug}`, imagenNota(n), n.categoria, n.titulo, n.bajada));
+  const items = destacadas().map((n) => item(`/nota/${n.slug}`, imagenNota(n), n.categoria, n.titulo, n.bajada));
   // Si todavía hay pocas notas, se completa con resultados destacados
   const conNota = new Set(notas.map((n) => n.partidoId));
   for (const p of terminados.filter((x) => x.importante && !conNota.has(x.id))) {
-    if (items.length >= 6) break;
+    if (items.length >= 5) break;
     const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
     items.push(item('/resultados', cancha(p.superficie), nombreCategoria(p.tier, p.tour, p.torneo), `${apellido(g.nombre)} venció a ${apellido(pe.nombre)} ${marcadorTexto(p.score, p.ganador)}`, nombreTorneo(p.torneo)));
   }
   if (!items.length) items.push(item('/resultados', cancha('clay'), '', 'Todo el tenis, en un solo lugar', 'Resultados, ranking y noticias del circuito ATP, WTA, Challenger, Copa Davis y Billie Jean King Cup.'));
   const relleno = [['hard', 'Todos los resultados del circuito', '/resultados'], ['clay', 'Cuadros de cada torneo', '/torneos'], ['grass', 'Los cuatro Grand Slam', '/grand-slams'], ['hard', 'Ranking ATP y WTA', '/ranking']];
-  for (let k = 0; items.length < 6; k++) { const [sup, t, h] = relleno[k % relleno.length]; items.push(item(h, cancha(sup), '', t, '')); }
+  for (let k = 0; items.length < 5; k++) { const [sup, t, h] = relleno[k % relleno.length]; items.push(item(h, cancha(sup), '', t, '')); }
   // La primera nota va al centro: el último elemento queda asomando a la izquierda
   const orden = [items[items.length - 1], ...items.slice(0, -1)];
   const flecha = (dir, txt, d) => `<button type="button" class="hs-flecha ${dir}" data-hs="${dir === 'izq' ? -1 : 1}" aria-label="${txt}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="${d}"/></svg></button>`;
@@ -318,11 +406,11 @@ el.hidden=false;}catch(_){}})();</script>`;
 escribir('index.html', pagina({ ruta: '/', activo: 'inicio', cuerpo: `
 ${hero()}
 <div class="tres sec">
-<section><div class="sec-tit"><h2>Últimas noticias</h2><a href="/noticias">Ver todas</a></div>
-${notas.length ? carrusel(notas.slice(0, 12)) : '<div class="panel"><div class="vacio" style="border:0">Las primeras notas se publican automáticamente a medida que terminan los partidos.</div></div>'}</section>
+${eventoActivo().length ? `<section><div class="sec-tit"><h2>Finals ${new Date().getFullYear()}</h2></div>${bloqueFinales()}</section>` : `<section><div class="sec-tit"><h2>Próximos torneos</h2></div>${proximosTorneos()}</section>`}
 <section><div class="sec-tit"><h2>Torneos y resultados</h2></div>${panelResultados('home', 10)}<a class="ver-mas panel" href="/resultados" style="margin-top:8px">Ver todos los resultados →</a></section>
 <section><div class="sec-tit"><h2>Ranking A Todo Tenis</h2></div>${panelRanking('rk', 10)}<a class="ver-mas panel" href="/ranking" style="margin-top:8px">Ranking completo →</a>${recuadroEfemeride()}</section>
 </div>
+${calendario2027()}
 ${torneosEnJuego.length ? `<section class="sec"><div class="sec-tit"><h2>Torneos en juego</h2><a href="/torneos">Ver todos</a></div><div class="tgrid fila-scroll">${torneosEnJuego.map(T.cardTorneo).join('')}</div></section>` : ''}
 <section class="sec"><div class="sec-tit"><h2>Próximos partidos</h2><a href="/resultados">Ver todos</a></div>
 <div class="panel">${porTorneo(proximos.filter((p) => !p.dobles), 12) || '<div class="vacio" style="border:0">No hay partidos programados por ahora.</div>'}</div></section>

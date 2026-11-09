@@ -38,6 +38,8 @@ const PRUEBA = (process.env.PRUEBA_PARTIDOS || '').split(',').map((x) => x.trim(
 // ---------- Importancia y tope por jornada ----------
 // Máximo de notas automáticas por jornada (día del partido, hora de Argentina); quedan las más importantes.
 const MAX_JORNADA = N.maxNotasPorJornada || 5;
+// Solo duelos significativos: cuartos de Masters/WTA 1000, Grand Slam desde octavos, Finals, finales de 500 y grandes sorpresas
+const MIN_IMPORTANCIA = N.importanciaMinima || 60;
 const jornadaDe = (iso) => new Date(new Date(iso).getTime() - 3 * 3600e3).toISOString().slice(0, 10);
 const BASE_RONDA = {
   grand_slam: { F: 100, SF: 90, QF: 80, R16: 68, R32: 55 },
@@ -95,7 +97,7 @@ function entraEnJornada(p) {
 const candidatos = Object.values(partidos)
   .filter((p) => PRUEBA.length
     ? PRUEBA.includes(String(p.id)) && p.confirmado && p.ganador
-    : p.importante && p.confirmado && p.estado === 'finalizado' && p.ganador && !registro[p.id] && Date.now() - new Date(p.horario).getTime() < 60 * 3600e3)
+    : p.importante && importancia(p) >= MIN_IMPORTANCIA && p.confirmado && p.estado === 'finalizado' && p.ganador && !registro[p.id] && Date.now() - new Date(p.horario).getTime() < 60 * 3600e3)
   .sort((a, b) => importancia(b) - importancia(a) || String(b.horario).localeCompare(String(a.horario)))
   .slice(0, N.maxNotasPorCorrida);
 
@@ -127,7 +129,19 @@ function datosDelPartido(p) {
   const anio = Number((p.horario || '').slice(0, 4)) || new Date().getFullYear();
   const catalogo = TORNEOS[`${(p.tour || '').replace(/_doubles$/, '')}|${(p.torneo || '').trim()}`];
   const defensor = catalogo?.campeones?.[anio - 1]?.[p.dobles ? 'dobles' : 'singles']?.campeon;
+  // recorrido de cada jugador en este torneo (partidos anteriores confirmados)
+  const recorrido = (j) => Object.values(partidos)
+    .filter((o) => o.id !== p.id && o.torneo === p.torneo && o.confirmado && o.ganador && !o.dobles && [o.j1?.id, o.j2?.id].includes(j.id) && (o.horario || '') < (p.horario || ''))
+    .sort((x, y) => String(x.horario).localeCompare(String(y.horario)))
+    .map((o) => {
+      const gano = (o.ganador === 1 ? o.j1 : o.j2)?.id === j.id;
+      const rival = o.j1?.id === j.id ? o.j2 : o.j1;
+      return `${nombreRonda(o.rondaCod, o.ronda)}: ${gano ? 'venció a' : 'perdió con'} ${rival?.nombre} (ranking ${rival?.ranking ?? 's/d'}) ${marcadorTexto(o.score, o.ganador)}`;
+    });
   return {
+    importancia: importancia(p) >= 75 ? 'alta' : 'normal',
+    recorrido_del_ganador_en_el_torneo: recorrido(g),
+    recorrido_del_perdedor_en_el_torneo: recorrido(pe),
     torneo: nombreTorneo(p.torneo),
     categoria: nombreCategoria(p.tier, p.tour, p.torneo),
     circuito: p.genero === 'women' || /wta|women/.test(p.tour || '') ? 'femenino' : 'masculino',
@@ -180,6 +194,7 @@ FORMATO:
 - Título: corto y con la noticia (máximo 75 caracteres), sin la ronda si no es una instancia decisiva, sin signos de exclamación. Escribilo con verbos variados y concretos (no uses siempre "da el golpe", "elimina" o "avanza"); no repitas fórmulas de otras notas.
 - Bajada: una sola oración que agregue algo que el título no dice.
 - Cuerpo: 3 o 4 párrafos cortos (2 o 3 oraciones). El primero responde qué pasó y por qué importa.
+- Si "importancia" es "alta", escribí 5 o 6 párrafos: además del partido, contá el camino de cada uno en el torneo ("recorrido_del_ganador_en_el_torneo" y "recorrido_del_perdedor_en_el_torneo") y lo que viene. Solo con esos datos, sin agregar nada que no esté.
 
 Devolvé SOLO JSON con esta forma: {"titulo": "...", "bajada": "...", "cuerpo": ["párrafo", "..."], "etiquetas": ["...", "..."]}`;
 
@@ -239,7 +254,7 @@ function validar(nota, datos) {
   if (/[!¡]/.test(nota.titulo)) problemas.push('el título no lleva exclamaciones');
   const exclam = [nota.bajada, ...nota.cuerpo].join(' ').match(/¡[^!]*!/g) || [];
   if (exclam.some((e) => e !== '¡Batacazo!') || (exclam.length && datos.sorpresa_por_ranking !== 'grande')) problemas.push('exclamación fuera de lugar');
-  if (nota.cuerpo.length < 3 || nota.cuerpo.length > 5) problemas.push('cantidad de párrafos fuera de rango');
+  if (nota.cuerpo.length < 3 || nota.cuerpo.length > 7) problemas.push('cantidad de párrafos fuera de rango');
   const texto = [nota.titulo, nota.bajada, ...nota.cuerpo].join(' ');
   const permitidos = new Set(JSON.stringify(datos).match(/\d+/g) || []);
   ['1', '2', '3', '4', '5'].forEach((n) => permitidos.add(n)); // "dos sets", "tercer set", etc.
