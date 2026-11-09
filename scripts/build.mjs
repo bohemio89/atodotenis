@@ -125,7 +125,7 @@ ${extraHead}
 <body>
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 <header class="cabecera"><div class="contenedor">
-<div class="cab-lado izq"><svg width="38" height="25" viewBox="0 0 40 26" role="img" aria-label="Argentina"><rect width="40" height="26" rx="3" fill="#74ACDF"/><rect y="8.66" width="40" height="8.68" fill="#fff"/><circle cx="20" cy="13" r="2.6" fill="#F6B40E"/></svg>
+<div class="cab-lado izq">
 <a class="icono-btn" href="#" aria-label="Instagram de A Todo Tenis"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a></div>
 ${logo}
 <div class="cab-lado der"><a class="pill" href="/noticias">Noticias</a></div>
