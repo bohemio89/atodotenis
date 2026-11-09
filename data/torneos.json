@@ -67,9 +67,23 @@
    "cubierto": false,
    "genero": "women"
   },
-  "campeones": {},
+  "campeones": {
+   "2026": {
+    "singles": {
+     "campeon": "Magda Linette",
+     "pais": "pol",
+     "paises": null,
+     "finalista": "Janice Tjen",
+     "paisFinalista": "ina",
+     "paisesFinalista": null,
+     "marcador": "5-7 6-1 6-4",
+     "partidoId": 216546,
+     "fecha": "2026-11-09T05:35:00Z"
+    }
+   }
+  },
   "primeraVez": "2026-11-04T04:30:00Z",
-  "ultimaVez": "2026-11-08T13:00:00Z",
+  "ultimaVez": "2026-11-09T05:35:00Z",
   "superficie": "hard"
  },
  "challenger|Bratislava 2": {
@@ -231,11 +245,11 @@
   "clave": "wta|Finals - Riyadh",
   "nombre": "Finals - Riyadh",
   "tour": "wta",
-  "id": null,
+  "id": "3190",
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-08T20:00:00Z",
-  "ultimaVez": "2026-11-10T18:00:00Z",
+  "ultimaVez": "2026-11-11T18:00:00Z",
   "superficie": "hard"
  },
  "challenger_women|Taipei": {
@@ -281,40 +295,40 @@
   "clave": "challenger|Brisbane 3",
   "nombre": "Brisbane 3",
   "tour": "challenger",
-  "id": null,
+  "id": "13459",
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-08T00:00:00Z",
-  "ultimaVez": "2026-11-10T00:00:00Z",
+  "ultimaVez": "2026-11-11T00:00:00Z",
   "superficie": "hard"
  },
  "challenger|Matsuyama": {
   "clave": "challenger|Matsuyama",
   "nombre": "Matsuyama",
   "tour": "challenger",
-  "id": null,
+  "id": "8222",
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-09T00:00:00Z",
-  "ultimaVez": "2026-11-10T02:00:00Z",
+  "ultimaVez": "2026-11-11T02:00:00Z",
   "superficie": "hard"
  },
  "atp|Stockholm": {
   "clave": "atp|Stockholm",
   "nombre": "Stockholm",
   "tour": "atp",
-  "id": null,
+  "id": "1686",
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-08T11:00:00Z",
-  "ultimaVez": "2026-11-10T10:00:00Z",
+  "ultimaVez": "2026-11-12T10:00:00Z",
   "superficie": "hard"
  },
  "challenger|Hersonissos 3": {
   "clave": "challenger|Hersonissos 3",
   "nombre": "Hersonissos 3",
   "tour": "challenger",
-  "id": null,
+  "id": "12861",
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-08T08:00:00Z",
@@ -325,18 +339,18 @@
   "clave": "challenger|Monastir",
   "nombre": "Monastir",
   "tour": "challenger",
-  "id": null,
+  "id": "13395",
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-09T10:00:00Z",
-  "ultimaVez": "2026-11-10T09:00:00Z",
+  "ultimaVez": "2026-11-10T10:00:00Z",
   "superficie": "hard"
  },
  "challenger|Orleans": {
   "clave": "challenger|Orleans",
   "nombre": "Orleans",
   "tour": "challenger",
-  "id": null,
+  "id": "2353",
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-09T09:00:00Z",
@@ -360,7 +374,7 @@
   "id": null,
   "meta": null,
   "campeones": {},
-  "primeraVez": "2026-11-10T15:00:00Z",
+  "primeraVez": "2026-11-09T20:00:00Z",
   "ultimaVez": "2026-11-10T15:00:00Z",
   "superficie": "hard"
  },
@@ -371,8 +385,30 @@
   "id": null,
   "meta": null,
   "campeones": {},
-  "primeraVez": "2026-11-10T15:00:00Z",
+  "primeraVez": "2026-11-09T19:00:00Z",
   "ultimaVez": "2026-11-10T15:00:00Z",
+  "superficie": "clay"
+ },
+ "challenger_women|Sopo (Colombia) - Qualification": {
+  "clave": "challenger_women|Sopo (Colombia) - Qualification",
+  "nombre": "Sopo (Colombia) - Qualification",
+  "tour": "challenger_women",
+  "id": null,
+  "meta": null,
+  "campeones": {},
+  "primeraVez": "2026-11-09T16:30:00Z",
+  "ultimaVez": "2026-11-10T15:00:00Z",
+  "superficie": "clay"
+ },
+ "challenger|Sopo (Colombia) - Qualification": {
+  "clave": "challenger|Sopo (Colombia) - Qualification",
+  "nombre": "Sopo (Colombia) - Qualification",
+  "tour": "challenger",
+  "id": "14849",
+  "meta": null,
+  "campeones": {},
+  "primeraVez": "2026-11-09T15:35:00Z",
+  "ultimaVez": "2026-11-09T17:15:00Z",
   "superficie": "clay"
  }
 }
