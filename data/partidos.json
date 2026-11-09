@@ -19463,7 +19463,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T17:15:24.147Z",
+  "visto": "2026-11-09T18:16:11.946Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -19473,21 +19473,23 @@
   "score": {
    "games": [
     [
-     1
+     6,
+     2
     ],
     [
-     0
+     4,
+     2
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "30",
-    "15"
+    "15",
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -21665,7 +21667,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T17:15:24.147Z",
   "torneoClave": "challenger|Monastir",
@@ -22724,7 +22726,7 @@
    "ranking": 251
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T17:15:24.147Z",
   "torneoClave": "challenger|Monastir",
@@ -22766,7 +22768,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T17:15:00Z",
+  "horario": "2026-11-09T18:15:00Z",
   "j1": {
    "id": 533,
    "nombre": "Moise Kouame",
@@ -22780,12 +22782,36 @@
    "ranking": 352
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T15:15:24.893Z",
+  "visto": "2026-11-09T18:16:11.946Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216529": {
   "id": 216529,
@@ -22810,7 +22836,7 @@
    "ranking": 1100
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T17:15:24.147Z",
   "torneoClave": "challenger|Monastir",
@@ -25238,26 +25264,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T16:45:00Z",
+  "horario": "2026-11-09T17:40:00Z",
   "j1": {
-   "id": 175,
-   "nombre": "Clement Tabur",
-   "pais": "fra",
-   "ranking": 156
-  },
-  "j2": {
    "id": 98,
    "nombre": "Lukas Neumayer",
    "pais": "aut",
    "ranking": 155
   },
+  "j2": {
+   "id": 175,
+   "nombre": "Clement Tabur",
+   "pais": "fra",
+   "ranking": 156
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T15:15:24.893Z",
+  "visto": "2026-11-09T18:16:11.946Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216614": {
   "id": 216614,
@@ -27270,7 +27320,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T17:15:24.147Z",
+  "visto": "2026-11-09T18:16:11.946Z",
   "tier": null,
   "torneoId": "2353",
   "cubierto": true,
@@ -27279,20 +27329,22 @@
    "games": [
     [
      4,
-     0
+     6,
+     2
     ],
     [
      6,
-     0
+     3,
+     1
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "15",
-    "0"
+    "AD",
+    "40"
    ],
    "saca": 1
   },
@@ -27770,7 +27822,7 @@
    "ranking": 327
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T17:15:24.147Z",
   "tier": null,
@@ -27937,7 +27989,7 @@
    "ranking": 466
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T17:15:24.147Z",
   "tier": null,
@@ -28045,7 +28097,7 @@
    "ranking": 290
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T17:15:24.147Z",
   "tier": null,
@@ -28100,7 +28152,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T17:15:24.147Z",
+  "visto": "2026-11-09T18:16:11.946Z",
   "tier": null,
   "torneoId": "4819",
   "cubierto": false,
@@ -28108,21 +28160,23 @@
   "score": {
    "games": [
     [
-     0
+     1,
+     6
     ],
     [
+     6,
      5
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "0",
     "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null,
@@ -28137,25 +28191,49 @@
   "superficie": "clay",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T16:30:00Z",
+  "horario": "2026-11-09T17:45:00Z",
   "j1": {
-   "id": 575,
-   "nombre": "N. Jarry",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 340,
    "nombre": "Maximo Zeitune",
    "pais": "arg",
    "ranking": 516
   },
+  "j2": {
+   "id": 575,
+   "nombre": "Nicolas Jarry",
+   "pais": "chi",
+   "ranking": 785
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T15:15:24.893Z",
+  "visto": "2026-11-09T18:16:11.946Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217197": {
   "id": 217197,
@@ -28235,7 +28313,7 @@
    "ranking": 331
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T17:15:24.147Z",
   "tier": null,
@@ -28437,14 +28515,14 @@
  },
  "217203": {
   "id": 217203,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Sopo (Colombia) - Qualification",
   "ronda": "Sopo - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-09T16:30:00Z",
+  "horario": "2026-11-09T17:35:00Z",
   "j1": {
    "id": 271,
    "nombre": "Elizabeth Mandlik",
@@ -28458,12 +28536,38 @@
    "ranking": 158
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T15:15:24.893Z",
+  "visto": "2026-11-09T18:16:11.946Z",
   "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14849",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217204": {
   "id": 217204,
@@ -28490,7 +28594,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T17:15:24.147Z",
+  "visto": "2026-11-09T18:16:11.946Z",
   "tier": null,
   "torneoId": "14849",
   "cubierto": false,
@@ -28498,18 +28602,20 @@
   "score": {
    "games": [
     [
-     0
+     6,
+     2
     ],
     [
-     0
+     1,
+     3
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "15",
+    "30",
     "15"
    ],
    "saca": 2
@@ -28778,7 +28884,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T17:15:24.147Z",
+  "visto": "2026-11-09T18:16:11.946Z",
   "tier": null,
   "torneoId": "14849",
   "cubierto": false,
@@ -28787,22 +28893,24 @@
    "games": [
     [
      4,
-     5
+     7,
+     4
     ],
     [
      6,
+     5,
      4
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null,
@@ -28832,7 +28940,7 @@
    "ranking": 199
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T17:15:24.147Z",
   "tier": null,
@@ -29148,25 +29256,51 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T16:30:00Z",
+  "horario": "2026-11-09T17:25:00Z",
   "j1": {
-   "id": 5081,
-   "nombre": "Ozan Baris",
-   "pais": "usa",
-   "ranking": 397
-  },
-  "j2": {
    "id": 443,
    "nombre": "Patrick Zahraj",
    "pais": "ger",
    "ranking": 540
   },
+  "j2": {
+   "id": 5081,
+   "nombre": "Ozan Baris",
+   "pais": "usa",
+   "ranking": 397
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T15:15:24.893Z",
+  "visto": "2026-11-09T18:16:11.946Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2,
+     3
+    ],
+    [
+     6,
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217585": {
   "id": 217585,
