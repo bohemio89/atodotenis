@@ -19090,7 +19090,7 @@
  },
  "216388": {
   "id": 216388,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Stockholm",
   "ronda": "ATP Stockholm - 1/8-finals",
   "rondaCod": "R16",
@@ -19111,9 +19111,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.713Z",
+  "visto": "2026-11-09T12:15:24.853Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -19124,16 +19124,16 @@
    "games": [
     [
      6,
-     3
+     6
     ],
     [
      7,
-     4
+     7
     ]
    ],
    "sets": [
     0,
-    1
+    2
    ],
    "puntos": [
     "0",
@@ -19141,8 +19141,8 @@
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "216389": {
   "id": 216389,
@@ -19184,7 +19184,7 @@
  },
  "216390": {
   "id": 216390,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Stockholm",
   "ronda": "ATP Stockholm - 1/8-finals",
   "rondaCod": "R16",
@@ -19205,9 +19205,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.713Z",
+  "visto": "2026-11-09T12:15:24.524Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -19218,25 +19218,25 @@
    "games": [
     [
      5,
-     3
+     6
     ],
     [
      7,
-     3
+     7
     ]
    ],
    "sets": [
     0,
-    1
+    2
    ],
    "puntos": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "216391": {
   "id": 216391,
@@ -19323,7 +19323,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T12:00:00Z",
+  "horario": "2026-11-09T12:10:00Z",
   "j1": {
    "id": 64,
    "nombre": "James Duckworth",
@@ -19337,12 +19337,36 @@
    "ranking": 45
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.713Z",
+  "visto": "2026-11-09T12:15:24.171Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216399": {
   "id": 216399,
@@ -19383,7 +19407,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T11:45:00Z",
+  "horario": "2026-11-09T11:55:00Z",
   "j1": {
    "id": 36,
    "nombre": "Alex Michelsen",
@@ -19397,12 +19421,36 @@
    "ranking": 58
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.713Z",
+  "visto": "2026-11-09T12:15:24.170Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216401": {
   "id": 216401,
@@ -20581,7 +20629,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z",
+  "visto": "2026-11-09T12:15:24.171Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
   "importante": false,
@@ -24466,26 +24514,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T11:45:00Z",
+  "horario": "2026-11-09T11:55:00Z",
   "j1": {
-   "id": 953,
-   "nombre": "Massimo Giunta",
-   "pais": "ita",
-   "ranking": 368
-  },
-  "j2": {
    "id": 306,
    "nombre": "Francesco Forti",
    "pais": "ita",
    "ranking": 322
   },
+  "j2": {
+   "id": 953,
+   "nombre": "Massimo Giunta",
+   "pais": "ita",
+   "ranking": 368
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z",
+  "visto": "2026-11-09T12:15:24.170Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "AD"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216599": {
   "id": 216599,
@@ -26601,23 +26673,48 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T12:00:00Z",
+  "horario": "2026-11-09T12:10:00Z",
   "j1": {
+   "id": 1923,
+   "nombre": "Nicolas Tepmahc",
+   "pais": "fra",
+   "ranking": 645
+  },
+  "j2": {
    "id": 8086,
    "nombre": "Branko Djuric",
    "pais": "srb",
    "ranking": 480
   },
-  "j2": {
-   "id": 1923,
-   "nombre": "N. Tepmahc",
-   "pais": null,
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z"
+  "visto": "2026-11-09T12:15:24.171Z",
+  "tier": null,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217155": {
   "id": 217155,
@@ -26628,23 +26725,48 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T12:00:00Z",
+  "horario": "2026-11-09T12:10:00Z",
   "j1": {
+   "id": 365,
+   "nombre": "Guillaume Dalmasso",
+   "pais": "fra",
+   "ranking": 628
+  },
+  "j2": {
    "id": 1952,
    "nombre": "John Echeverria",
    "pais": "ven",
    "ranking": 526
   },
-  "j2": {
-   "id": 365,
-   "nombre": "G. Dalmasso",
-   "pais": null,
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z"
+  "visto": "2026-11-09T12:15:24.171Z",
+  "tier": null,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217156": {
   "id": 217156,
@@ -26682,23 +26804,48 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T12:00:00Z",
+  "horario": "2026-11-09T12:10:00Z",
   "j1": {
+   "id": 406,
+   "nombre": "Pedro Vives Marcos",
+   "pais": "esp",
+   "ranking": 588
+  },
+  "j2": {
    "id": 921,
    "nombre": "Yannik Kelm",
    "pais": "ger",
    "ranking": 440
   },
-  "j2": {
-   "id": 406,
-   "nombre": "P. Vives Marcos",
-   "pais": null,
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z"
+  "visto": "2026-11-09T12:15:24.171Z",
+  "tier": null,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217158": {
   "id": 217158,
@@ -26750,7 +26897,7 @@
    "ranking": 854
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T11:15:22.859Z",
   "tier": null,
@@ -26860,7 +27007,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z",
+  "visto": "2026-11-09T12:15:24.170Z",
   "tier": null,
   "torneoId": "2353",
   "cubierto": true,
@@ -26869,22 +27016,24 @@
    "games": [
     [
      7,
-     1
+     2,
+     4
     ],
     [
      6,
-     2
+     6,
+     4
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "15",
-    "15"
+    "40",
+    "AD"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -26912,7 +27061,7 @@
    "ranking": 531
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T11:15:22.859Z",
   "tier": null,
@@ -26995,7 +27144,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z",
+  "visto": "2026-11-09T12:15:24.170Z",
   "tier": null,
   "torneoId": "12861",
   "cubierto": false,
@@ -27004,20 +27153,22 @@
    "games": [
     [
      6,
+     6,
      0
     ],
     [
      7,
+     4,
      0
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "40",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -27042,14 +27193,39 @@
   },
   "j2": {
    "id": 8750,
-   "nombre": "C. Rolland de Ravel",
-   "pais": null,
-   "ranking": null
+   "nombre": "Cosme Rolland de Ravel",
+   "pais": "fra",
+   "ranking": 580
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T11:15:22.859Z"
+  "visto": "2026-11-09T12:15:24.170Z",
+  "tier": null,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217188": {
   "id": 217188,
@@ -27398,7 +27574,7 @@
    "ranking": 811
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T11:15:22.859Z",
   "tier": null,
