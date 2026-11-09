@@ -8638,7 +8638,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T21:00:42.400Z",
+  "visto": "2026-11-09T22:00:34.757Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8648,19 +8648,21 @@
   "score": {
    "games": [
     [
-     6
+     7,
+     5
     ],
     [
+     6,
      5
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "15"
    ],
    "saca": 2
   },
@@ -19485,9 +19487,9 @@
    "ranking": 772
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-09T19:08:57.885Z",
+  "visto": "2026-11-09T22:00:35.703Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -19499,26 +19501,26 @@
     [
      6,
      6,
-     1
+     6
     ],
     [
      4,
      7,
-     0
+     3
     ]
    ],
    "sets": [
-    1,
+    2,
     1
    ],
    "puntos": [
     "0",
-    "30"
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216400": {
   "id": 216400,
@@ -25126,7 +25128,7 @@
    "ranking": 95
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T21:00:42.400Z",
   "torneoClave": "challenger|Orleans",
@@ -25168,26 +25170,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T20:45:00Z",
+  "horario": "2026-11-09T21:30:00Z",
   "j1": {
-   "id": 161,
-   "nombre": "Nicolai Budkov Kjaer",
-   "pais": "nor",
-   "ranking": 182
-  },
-  "j2": {
    "id": 128,
    "nombre": "Sascha Gueymard Wayenburg",
    "pais": "fra",
    "ranking": 187
   },
+  "j2": {
+   "id": 161,
+   "nombre": "Nicolai Budkov Kjaer",
+   "pais": "nor",
+   "ranking": 182
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T19:08:58.879Z",
+  "visto": "2026-11-09T22:00:34.757Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216609": {
   "id": 216609,
@@ -25887,7 +25913,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T21:30:00Z",
+  "horario": "2026-11-09T21:35:00Z",
   "j1": {
    "id": 132,
    "nombre": "Nicolas Mejia",
@@ -25901,12 +25927,36 @@
    "ranking": 396
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T19:08:58.879Z",
+  "visto": "2026-11-09T22:00:34.757Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216787": {
   "id": 216787,
@@ -25993,7 +26043,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T21:00:42.400Z",
+  "visto": "2026-11-09T22:00:34.757Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -26003,19 +26053,21 @@
   "score": {
    "games": [
     [
-     3
+     6,
+     4
     ],
     [
-     1
+     4,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "15"
+    "40",
+    "40"
    ],
    "saca": 2
   },
@@ -26105,7 +26157,7 @@
    "ranking": 207
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T21:00:42.400Z",
   "torneoClave": "challenger|Lima 2",
@@ -26221,7 +26273,7 @@
    "ranking": 130
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T21:00:42.400Z",
   "torneoClave": "challenger|Lima 2",
@@ -28668,7 +28720,7 @@
    "ranking": 920
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T21:00:42.400Z",
   "torneoClave": "challenger|Sopo (Colombia) - Qualification",
@@ -29356,9 +29408,9 @@
    "ranking": 599
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-09T21:00:42.400Z",
+  "visto": "2026-11-09T22:00:35.576Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -29369,7 +29421,7 @@
    "games": [
     [
      6,
-     4
+     6
     ],
     [
      3,
@@ -29377,17 +29429,17 @@
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "217225": {
   "id": 217225,
