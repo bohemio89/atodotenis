@@ -131,7 +131,7 @@ ${logo}
 <div class="cab-lado der"><a class="pill" href="/noticias">Noticias</a></div>
 </div></header>
 <nav class="menu" aria-label="Principal"><div class="contenedor">
-${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/torneos', 'Torneos', 'torneos')}${item('/grand-slams', 'Grand Slam', 'grand-slam')}${item('/ranking', 'Ranking', 'ranking')}
+${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${item('/resultados', 'Resultados', 'resultados')}${item('/torneos', 'Torneos', 'torneos')}${item('/grand-slams', 'Grand Slam', 'grand-slam')}${item('/ranking', 'Ranking', 'ranking')}${item('/calendario', 'Calendario', 'calendario')}
 <form class="buscador" action="/noticias" method="get" role="search"><label for="q" class="saltar">Buscar en el sitio</label><input id="q" name="q" type="search" placeholder="Buscador" autocomplete="off"><button type="submit" aria-label="Buscar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button></form>
 </div></nav>
 <main id="contenido" class="contenedor">
@@ -139,7 +139,7 @@ ${cuerpo}
 </main>
 <footer class="pie"><div class="contenedor">
 <div>${logo}<p style="color:#C9D1D9;font-size:14px;max-width:380px">En la red desde 2007. Resultados, ranking y noticias de todo el circuito.</p></div>
-<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/argentinos|Argentinos', '/acerca|Acerca del sitio', '/creditos|Créditos de imágenes'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
+<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/calendario|Calendario', '/argentinos|Argentinos', '/acerca|Acerca del sitio', '/creditos|Créditos de imágenes'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)}</div></footer>
 <script>
 try{var fl={};document.querySelectorAll('time[data-local]').forEach(function(t){var o=JSON.parse(t.getAttribute('data-local'));var k=t.getAttribute('data-local');fl[k]=fl[k]||new Intl.DateTimeFormat('es-AR',o);t.textContent=fl[k].format(new Date(t.getAttribute('datetime')));});}catch(e){}
@@ -342,7 +342,7 @@ function calendario2027() {
     const prox = arr.find((x) => x.fecha >= hoy);
     return `<div class="cal-grid">${arr.map((x) => `<div class="cal-item sup-${esc(x.sup)}${x === prox ? ' prox' : ''}"><span class="cal-fecha">${wta || x.semana ? 'Semana del ' : ''}${fechaC(x.fecha)}</span><span class="cal-nom">${esc(x.torneo)}</span><span class="cal-meta">${esc(x.sede)} · ${esc(x.categoria)}</span></div>`).join('')}</div>`;
   };
-  return `<section class="sec"><div class="sec-tit"><h2>Calendario 2027</h2></div>
+  return `<section class="sec"><div class="sec-tit"><h1>Calendario 2027</h1></div>
 <div class="panel" data-tabs><div class="tabs" role="tablist"><button role="tab" id="cal-ta" aria-controls="cal-a" aria-selected="true">ATP</button><button role="tab" id="cal-tw" aria-controls="cal-w" aria-selected="false">WTA</button></div>
 <div id="cal-a" role="tabpanel" aria-labelledby="cal-ta">${lista(CAL2027.atp, false)}</div><div id="cal-w" role="tabpanel" aria-labelledby="cal-tw" class="oculto">${lista(CAL2027.wta, true)}</div>
 <p class="meta" style="margin:10px 4px 2px">Grand Slam, Masters y WTA 1000, Finals y competencias por equipos. Fuente: calendarios oficiales de la ATP y la WTA. Sujeto a cambios.</p></div></section>`;
@@ -412,11 +412,10 @@ el.hidden=false;}catch(_){}})();</script>`;
 escribir('index.html', pagina({ ruta: '/', activo: 'inicio', cuerpo: `
 ${hero()}
 <div class="tres sec">
-${eventoActivo().length ? `<section><div class="sec-tit"><h2>Finals ${new Date().getFullYear()}</h2></div>${bloqueFinales()}</section>` : `<section><div class="sec-tit"><h2>Próximos torneos</h2></div>${proximosTorneos()}</section>`}
+${eventoActivo().length ? `<section><div class="sec-tit"><h2>Finals ${new Date().getFullYear()}</h2></div>${bloqueFinales()}</section>` : `<section><div class="sec-tit"><h2>Próximos torneos</h2></div>${proximosTorneos()}<a class="ver-mas panel" href="/calendario" style="margin-top:8px">Calendario 2027 →</a></section>`}
 <section><div class="sec-tit"><h2>Torneos y resultados</h2></div>${panelResultados('home', 10)}<a class="ver-mas panel" href="/resultados" style="margin-top:8px">Ver todos los resultados →</a></section>
 <section><div class="sec-tit"><h2>Ranking A Todo Tenis</h2></div>${panelRanking('rk', 10)}<a class="ver-mas panel" href="/ranking" style="margin-top:8px">Ranking completo →</a>${recuadroEfemeride()}</section>
 </div>
-${calendario2027()}
 ${torneosEnJuego.length ? `<section class="sec"><div class="sec-tit"><h2>Torneos en juego</h2><a href="/torneos">Ver todos</a></div><div class="tgrid fila-scroll">${torneosEnJuego.map(T.cardTorneo).join('')}</div></section>` : ''}
 <section class="sec"><div class="sec-tit"><h2>Próximos partidos</h2><a href="/resultados">Ver todos</a></div>
 <div class="panel">${porTorneo(proximos.filter((p) => !p.dobles), 12) || '<div class="vacio" style="border:0">No hay partidos programados por ahora.</div>'}</div></section>
@@ -431,6 +430,7 @@ escribir('resultados.html', pagina({ titulo: 'Resultados y partidos en vivo', de
 <div class="sec"><div class="sec-tit"><h1>Resultados</h1></div>${panelResultados('res', 999)}
 </div>` }));
 
+escribir('calendario.html', pagina({ titulo: 'Calendario 2027', descripcion: 'Calendario 2027 del circuito ATP y WTA: Grand Slam, Masters 1000, WTA 1000, Finals y Copa Davis.', ruta: '/calendario', activo: 'calendario', cuerpo: calendario2027() }));
 escribir('ranking.html', pagina({ titulo: 'Ranking ATP y WTA', descripcion: 'Ranking ATP y WTA actualizado.', ruta: '/ranking', activo: 'ranking', cuerpo: `
 <div class="sec"><div class="sec-tit"><h1>Ranking</h1></div>${panelRanking('rkc', 200, false)}
 <p class="meta" style="margin-top:10px">Fotos de los jugadores: Wikimedia Commons, con licencia libre (<a href="/creditos" style="text-decoration:underline">ver créditos</a>).</p></div>` }));
@@ -478,7 +478,7 @@ escribir('creditos.html', pagina({ titulo: 'Créditos de imágenes', ruta: '/cre
 escribir('404.html', pagina({ titulo: 'Página no encontrada', ruta: '/404', cuerpo: '<article class="nota"><h1>Esta pelota se fue afuera</h1><p class="bajada">La página que buscás no existe. <a href="/" style="color:#C6F432">Volver al inicio</a>.</p></article>' }));
 
 // SEO: sitemap, RSS, robots
-const urls = ['/', '/noticias', '/resultados', '/torneos', '/grand-slams', ...GS.torneos.map((t) => `/grand-slam/${t.slug}`), '/ranking', '/argentinos', '/acerca', ...T.lista.map((t) => `/torneo/${t.slug}`), ...notas.map((n) => `/nota/${n.slug}`)];
+const urls = ['/', '/noticias', '/resultados', '/torneos', '/grand-slams', ...GS.torneos.map((t) => `/grand-slam/${t.slug}`), '/ranking', '/calendario', '/argentinos', '/acerca', ...T.lista.map((t) => `/torneo/${t.slug}`), ...notas.map((n) => `/nota/${n.slug}`)];
 escribir('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${S.url}${u}</loc></url>`).join('')}</urlset>\n`);
 escribir('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${S.url}/sitemap.xml\n`);
 escribir('rss.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>${esc(S.nombre)}</title><link>${S.url}</link><description>${esc(S.descripcion)}</description><language>es-ar</language>${notas.slice(0, 30).map((n) => `<item><title>${esc(n.titulo)}</title><link>${S.url}/nota/${n.slug}</link><guid>${S.url}/nota/${n.slug}</guid><pubDate>${new Date(n.fecha).toUTCString()}</pubDate><description>${esc(n.bajada)}</description></item>`).join('')}</channel></rss>\n`);
