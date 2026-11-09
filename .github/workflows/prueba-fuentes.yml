@@ -1,0 +1,19 @@
+name: Prueba de fuentes
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in \
+            "https://www.atptour.com/en/media/rss-feed/xml-feed" \
+            "https://www.atptour.com/en/news" \
+            "https://www.atptour.com/en/news/shelton-van-assche-paris-2026-sf" \
+            "https://www.wtatennis.com/news" \
+            "https://www.wtatennis.com/rss" \
+            "https://api.wtatennis.com/content/wta/text/EN/?pageSize=5" ; do
+            code=$(curl -s -o /tmp/r -w "%{http_code}" -A "Mozilla/5.0 (compatible; AtodoTenisBot/1.0)" -L --max-time 25 "$u")
+            echo "== $code $(wc -c </tmp/r) $u"; head -c 400 /tmp/r | tr '\n' ' '; echo
+          done
