@@ -22,13 +22,15 @@ Rules: keep exactly the same facts, names, scores and numbers; do not add or rem
 Return ONLY JSON with the same keys: {"titulo": "...", "bajada": "...", "cuerpo": ["..."], "categoria": "..."}.
 
 ${JSON.stringify(fuente)}`;
-  for (const modelo of CONFIG.notas?.modelos || ['gemini-flash-latest']) {
+  let cupos = 0;
+  const modelos = CONFIG.notas?.modelos || ['gemini-flash-latest'];
+  for (const modelo of modelos) {
     try {
       const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
-        method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': KEY }, signal: AbortSignal.timeout(90000),
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': KEY }, signal: AbortSignal.timeout(50000),
         body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.2, responseMimeType: 'application/json' } })
       });
-      if (!r.ok) { log(`Gemini ${modelo} HTTP ${r.status}`); if (r.status === 429) return 'cupo'; continue; }
+      if (!r.ok) { log(`Gemini ${modelo} HTTP ${r.status}`); if (r.status === 429 && ++cupos === modelos.length) return 'cupo'; continue; }
       const j = await r.json();
       const t = JSON.parse((j.candidates?.[0]?.content?.parts?.map((x) => x.text).join('') || '{}').replace(/^```json\s*|```\s*$/g, ''));
       if (!t.titulo || !t.bajada || !Array.isArray(t.cuerpo)) { log('Respuesta incompleta'); continue; }
@@ -48,8 +50,9 @@ async function main() {
   const limite = Date.now() - DIAS_MAX * 86400e3;
   const archivos = fs.readdirSync(DIR).filter((f) => f.endsWith('.json')).sort().reverse();
   let hechas = 0;
+  const fin = Date.now() + 4 * 60e3; // no demorar la actualización del sitio más de 4 minutos
   for (const f of archivos) {
-    if (hechas >= MAX_POR_CORRIDA) break;
+    if (hechas >= MAX_POR_CORRIDA || Date.now() > fin) break;
     const ruta = path.join(DIR, f);
     const n = JSON.parse(fs.readFileSync(ruta, 'utf8'));
     if (n.estado !== 'publicada' || new Date(n.fecha).getTime() < limite) continue;
