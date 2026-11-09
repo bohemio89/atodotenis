@@ -8082,7 +8082,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-09T01:05:00Z",
+  "horario": "2026-11-09T01:10:00Z",
   "j1": {
    "id": 1834,
    "nombre": "Katerina Siniakova / Taylor Townsend",
@@ -8098,7 +8098,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T01:15:21.947Z",
+  "visto": "2026-11-09T02:15:21.684Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8108,21 +8108,23 @@
   "score": {
    "games": [
     [
+     6,
      0
     ],
     [
-     1
+     4,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "15",
-    "15"
+    "30",
+    "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -24825,7 +24827,7 @@
    "ranking": 330
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T01:15:21.947Z",
   "tier": null,
@@ -24865,7 +24867,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T01:30:00Z",
+  "horario": "2026-11-09T01:55:00Z",
   "j1": {
    "id": 619,
    "nombre": "Daniel Milavsky",
@@ -24879,9 +24881,34 @@
    "ranking": 495
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
+  "visto": "2026-11-09T02:15:21.684Z",
+  "tier": null,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216716": {
   "id": 216716,
@@ -24959,7 +24986,7 @@
    "ranking": 456
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T01:15:21.947Z",
   "tier": null,
@@ -25553,7 +25580,7 @@
    "ranking": 664
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T01:15:21.947Z",
   "tier": null,
@@ -25593,7 +25620,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T01:05:00Z",
+  "horario": "2026-11-09T01:10:00Z",
   "j1": {
    "id": 818,
    "nombre": "Hikaru Shiraishi",
@@ -25609,7 +25636,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T01:15:21.947Z",
+  "visto": "2026-11-09T02:15:21.684Z",
   "tier": null,
   "torneoId": "8222",
   "cubierto": false,
@@ -25617,19 +25644,21 @@
   "score": {
    "games": [
     [
+     6,
      1
     ],
     [
-     0
+     3,
+     1
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "15",
-    "0"
+    "30",
+    "15"
    ],
    "saca": 2
   },
@@ -25661,7 +25690,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T01:15:21.947Z",
+  "visto": "2026-11-09T02:15:21.684Z",
   "tier": null,
   "torneoId": "13459",
   "cubierto": false,
@@ -25670,19 +25699,21 @@
    "games": [
     [
      6,
-     0
+     2,
+     2
     ],
     [
      3,
-     1
+     6,
+     3
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "0",
+    "15",
     "15"
    ],
    "saca": 1
@@ -25699,7 +25730,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T01:05:00Z",
+  "horario": "2026-11-09T01:10:00Z",
   "j1": {
    "id": 75,
    "nombre": "Masamichi Imamura",
@@ -25715,7 +25746,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T01:15:21.947Z",
+  "visto": "2026-11-09T02:15:21.684Z",
   "tier": null,
   "torneoId": "8222",
   "cubierto": false,
@@ -25723,15 +25754,17 @@
   "score": {
    "games": [
     [
-     0
+     3,
+     1
     ],
     [
-     1
+     6,
+     3
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "0",
@@ -25751,7 +25784,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T01:05:00Z",
+  "horario": "2026-11-09T01:10:00Z",
   "j1": {
    "id": 463,
    "nombre": "Koki Matsuda",
@@ -25767,7 +25800,113 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T01:15:21.947Z",
+  "visto": "2026-11-09T02:15:21.684Z",
+  "tier": null,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     5
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
+ },
+ "216813": {
+  "id": 216813,
+  "tour": "challenger",
+  "torneo": "Brisbane 3",
+  "ronda": "Qualification Final",
+  "rondaCod": "Q",
+  "superficie": "hard",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-09T01:55:00Z",
+  "j1": {
+   "id": 466,
+   "nombre": "Tai Sach",
+   "pais": "aus",
+   "ranking": 514
+  },
+  "j2": {
+   "id": 1701,
+   "nombre": "Thomas Fancutt",
+   "pais": "aus",
+   "ranking": 691
+  },
+  "dobles": false,
+  "estado": "en_vivo",
+  "motivo": null,
+  "visto": "2026-11-09T02:15:21.685Z",
+  "tier": null,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
+ },
+ "216814": {
+  "id": 216814,
+  "tour": "challenger",
+  "torneo": "Matsuyama",
+  "ronda": "Matsuyama - Final",
+  "rondaCod": "F",
+  "superficie": "hard",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-09T02:05:00Z",
+  "j1": {
+   "id": 820,
+   "nombre": "Takuya Kumasaka",
+   "pais": "jpn",
+   "ranking": 661
+  },
+  "j2": {
+   "id": 923,
+   "nombre": "Luca Staeheli",
+   "pais": "sui",
+   "ranking": 449
+  },
+  "dobles": false,
+  "estado": "en_vivo",
+  "motivo": null,
+  "visto": "2026-11-09T02:15:21.685Z",
   "tier": null,
   "torneoId": "8222",
   "cubierto": false,
@@ -25787,66 +25926,12 @@
    ],
    "puntos": [
     "30",
-    "40"
+    "30"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null
- },
- "216813": {
-  "id": 216813,
-  "tour": "challenger",
-  "torneo": "Brisbane 3",
-  "ronda": null,
-  "rondaCod": null,
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-09T01:30:00Z",
-  "j1": {
-   "id": 1701,
-   "nombre": "T. J. Fancutt",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
-   "id": 466,
-   "nombre": "Tai Sach",
-   "pais": "aus",
-   "ranking": 514
-  },
-  "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
- },
- "216814": {
-  "id": 216814,
-  "tour": "challenger",
-  "torneo": "Matsuyama",
-  "ronda": "Matsuyama - Final",
-  "rondaCod": "F",
-  "superficie": "hard",
-  "clasificacion": true,
-  "genero": "men",
-  "horario": "2026-11-09T02:00:00Z",
-  "j1": {
-   "id": 923,
-   "nombre": "Luca Staeheli",
-   "pais": "sui",
-   "ranking": 449
-  },
-  "j2": {
-   "id": 820,
-   "nombre": "T. Kumasaka",
-   "pais": null,
-   "ranking": null
-  },
-  "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
  },
  "216815": {
   "id": 216815,
@@ -25906,12 +25991,12 @@
   "id": 216827,
   "tour": "challenger",
   "torneo": "Brisbane 3",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Qualification Final",
+  "rondaCod": "Q",
   "superficie": "hard",
-  "clasificacion": false,
+  "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T01:05:00Z",
+  "horario": "2026-11-09T01:10:00Z",
   "j1": {
    "id": 1251,
    "nombre": "Dominik Palan",
@@ -25927,7 +26012,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T01:15:21.947Z",
+  "visto": "2026-11-09T02:15:21.684Z",
   "tier": null,
   "torneoId": "13459",
   "cubierto": false,
@@ -25935,19 +26020,21 @@
   "score": {
    "games": [
     [
-     1
+     5,
+     3
     ],
     [
-     0
+     7,
+     4
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "0",
-    "40"
+    "0"
    ],
    "saca": 2
   },
