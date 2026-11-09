@@ -98,7 +98,7 @@ function videoNota(n) {
 <button class="yt" type="button" data-id="${esc(id)}" aria-label="Reproducir: ${esc(n.video.titulo || 'highlights')}">
 <img src="https://i.ytimg.com/vi/${esc(id)}/hqdefault.jpg" alt="" loading="lazy"><span class="yt-play" aria-hidden="true"></span></button>
 <p class="meta">Video: ${esc(n.video.canal || 'YouTube')} en YouTube</p>
-<script>document.querySelectorAll('.yt').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';f.title='Highlights del partido';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.className='yt-frame';b.replaceWith(f);});});</script></section>`;
+<script>document.querySelectorAll('.yt').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';f.title='${EN ? 'Match highlights' : 'Highlights del partido'}';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.className='yt-frame';b.replaceWith(f);});});</script></section>`;
 }
 function imagenNota(n, conCredito = true) {
   if (n.imagen?.url) return `<div class="fondo"><img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} alt="${esc(EN ? n.titulo : n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%">${conCredito ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
@@ -492,7 +492,7 @@ for (const n of notas) {
 <h1>${esc(n.titulo)}</h1><p class="bajada">${esc(n.bajada)}</p>
 <div class="firma">${hora(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
 ${gettySrc(n.getty) ? `<figure class="getty"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="width:100%;aspect-ratio:3/2;border:0"></iframe><figcaption>Crédito de la imagen: Getty Images</figcaption></figure>`
-  : `<figure><div class="img">${imagenNota(n, false)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: <a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>${n.imagen.fechaFoto ? ` · foto del ${esc(fechaArg(n.imagen.fechaFoto, { day: 'numeric', month: 'long', year: 'numeric' }))}` : ''}${n.imagen.licenciaUrl ? ` · <a href="${esc(n.imagen.licenciaUrl)}" rel="noopener license">licencia</a>` : ''}</figcaption>` : ''}</figure>`}
+  : `<figure><div class="img">${imagenNota(n, false)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: <a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>${n.imagen.fechaFoto ? ` · ${EN ? 'photo from' : 'foto del'} ${esc(fechaArg(n.imagen.fechaFoto, { day: 'numeric', month: 'long', year: 'numeric' }))}` : ''}${n.imagen.licenciaUrl ? ` · <a href="${esc(n.imagen.licenciaUrl)}" rel="noopener license">licencia</a>` : ''}</figcaption>` : ''}</figure>`}
 <div class="cuerpo">${n.cuerpo.map((x, i) => `<p>${esc(x)}</p>${i === 1 ? declaracionNota(n) : ''}`).join('')}</div>${videoNota(n)}${ficha}
 ${relacionadas.length ? `<div class="sec-tit sec"><h2>Más noticias</h2></div><div class="lista-notas">${relacionadas.map(cardNota).join('')}</div>` : ''}
 </article>`
