@@ -8622,7 +8622,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-09T20:00:00Z",
+  "horario": "2026-11-09T20:10:00Z",
   "j1": {
    "id": 55,
    "nombre": "Aryna Sabalenka",
@@ -8636,12 +8636,36 @@
    "ranking": 7
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T19:08:58.229Z",
+  "visto": "2026-11-09T20:04:26.335Z",
   "importante": true,
   "tier": null,
-  "torneoClave": "wta|Finals - Riyadh"
+  "torneoClave": "wta|Finals - Riyadh",
+  "torneoId": "3195",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": null
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215415": {
   "id": 215415,
@@ -19461,7 +19485,7 @@
    "ranking": 772
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T19:08:57.885Z",
   "torneoClave": "atp|Stockholm",
@@ -22784,7 +22808,7 @@
    "ranking": 352
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T19:08:58.879Z",
   "torneoClave": "challenger|Monastir",
@@ -23567,7 +23591,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "esp",
     null
    ]
   },
@@ -23671,7 +23695,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "usa",
     null
    ]
   },
@@ -23720,7 +23744,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "arg"
    ]
   },
   "dobles": true,
@@ -25284,7 +25308,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T19:08:58.879Z",
+  "visto": "2026-11-09T20:04:26.335Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
   "importante": false,
@@ -25295,20 +25319,22 @@
    "games": [
     [
      4,
-     5
+     7,
+     3
     ],
     [
      6,
-     4
+     6,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
     "0",
-    "0"
+    "40"
    ],
    "saca": 2
   },
@@ -26015,7 +26041,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T19:30:00Z",
+  "horario": "2026-11-09T20:10:00Z",
   "j1": {
    "id": 137,
    "nombre": "Hugo Dellien",
@@ -26029,12 +26055,36 @@
    "ranking": 207
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T19:08:58.879Z",
+  "visto": "2026-11-09T20:04:26.335Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216793": {
   "id": 216793,
@@ -26119,12 +26169,38 @@
    "ranking": 130
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T19:08:58.879Z",
+  "visto": "2026-11-09T20:04:26.335Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     3,
+     3
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216796": {
   "id": 216796,
@@ -28211,7 +28287,7 @@
    "ranking": 785
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T19:08:58.879Z",
   "tier": null,
@@ -28461,7 +28537,7 @@
  },
  "217201": {
   "id": 217201,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Sopo (Colombia) - Qualification",
   "ronda": "Sopo - 1/16-finals",
   "rondaCod": "R32",
@@ -28484,8 +28560,8 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T19:08:58.879Z",
-  "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
+  "visto": "2026-11-09T20:04:26.335Z",
+  "torneoClave": "challenger|Sopo (Colombia) - Qualification",
   "tier": null,
   "importante": false,
   "torneoId": "14849",
@@ -28494,19 +28570,21 @@
   "score": {
    "games": [
     [
-     0
+     2,
+     2
     ],
     [
-     1
+     6,
+     3
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "40"
    ],
    "saca": 2
   },
@@ -28515,7 +28593,7 @@
  },
  "217202": {
   "id": 217202,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Sopo (Colombia) - Qualification",
   "ronda": "Sopo - 1/16-finals",
   "rondaCod": "R32",
@@ -28531,17 +28609,41 @@
   },
   "j2": {
    "id": 8972,
-   "nombre": "Y. Lizarazo",
-   "pais": null,
-   "ranking": null
+   "nombre": "Yuliana Lizarazo",
+   "pais": "col",
+   "ranking": 920
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T19:08:58.879Z",
-  "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
+  "visto": "2026-11-09T20:04:26.335Z",
+  "torneoClave": "challenger|Sopo (Colombia) - Qualification",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14849",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217203": {
   "id": 217203,
@@ -28566,7 +28668,7 @@
    "ranking": 158
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T19:08:58.879Z",
   "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
@@ -28680,7 +28782,7 @@
    "ranking": null
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T19:08:58.879Z",
   "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
@@ -29184,26 +29286,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T19:15:00Z",
+  "horario": "2026-11-09T20:00:00Z",
   "j1": {
-   "id": 5685,
-   "nombre": "L. Borg",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 397,
    "nombre": "Toby Samuel",
    "pais": "gbr",
    "ranking": 97
   },
+  "j2": {
+   "id": 5685,
+   "nombre": "Leo Borg",
+   "pais": "swe",
+   "ranking": 599
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T19:08:57.885Z",
+  "visto": "2026-11-09T20:04:26.335Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217225": {
   "id": 217225,
@@ -29381,7 +29507,7 @@
    "ranking": 443
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T19:08:58.879Z",
   "tier": null,
@@ -29438,7 +29564,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T19:08:58.879Z",
+  "visto": "2026-11-09T20:04:26.335Z",
   "tier": null,
   "importante": false,
   "torneoId": "2443",
@@ -29447,18 +29573,20 @@
   "score": {
    "games": [
     [
-     4
+     7,
+     3
     ],
     [
+     6,
      1
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
+    "30",
     "30"
    ],
    "saca": 2
