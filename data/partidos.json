@@ -8075,41 +8075,57 @@
  },
  "215399": {
   "id": 215399,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-08T23:30:00Z",
+  "horario": "2026-11-09T01:05:00Z",
   "j1": {
    "id": 1834,
-   "nombre": "Siniakova/ Townsend",
+   "nombre": "Katerina Siniakova / Taylor Townsend",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "usa"
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 10106,
-   "nombre": "Errani/ Paolini",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "sui",
-    "ita"
-   ]
+   "nombre": "Errani / Paolini",
+   "pais": "ita",
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T23:13:31.309Z",
+  "visto": "2026-11-09T01:15:21.947Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Finals - Riyadh"
+  "torneoClave": "wta|Finals - Riyadh",
+  "torneoId": "3190",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215400": {
   "id": 215400,
@@ -8912,9 +8928,9 @@
    "ranking": 5
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-09T00:15:21.804Z",
+  "visto": "2026-11-09T01:15:22.197Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8926,26 +8942,26 @@
     [
      6,
      6,
-     2
+     6
     ],
     [
      4,
      7,
-     0
+     2
     ]
    ],
    "sets": [
-    1,
+    2,
     1
    ],
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215428": {
   "id": 215428,
@@ -24795,23 +24811,50 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T00:15:00Z",
+  "horario": "2026-11-09T00:30:00Z",
   "j1": {
-   "id": 676,
-   "nombre": "Giles Hussey",
-   "pais": "gbr",
-   "ranking": 330
-  },
-  "j2": {
    "id": 584,
    "nombre": "Kaylan Bigun",
    "pais": "usa",
    "ranking": 523
   },
+  "j2": {
+   "id": 676,
+   "nombre": "Giles Hussey",
+   "pais": "gbr",
+   "ranking": 330
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
+  "visto": "2026-11-09T01:15:21.947Z",
+  "tier": null,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216715": {
   "id": 216715,
@@ -24918,7 +24961,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T00:15:21.804Z",
+  "visto": "2026-11-09T01:15:21.947Z",
   "tier": null,
   "torneoId": "2443",
   "cubierto": true,
@@ -24926,19 +24969,21 @@
   "score": {
    "games": [
     [
-     0
+     7,
+     1
     ],
     [
+     6,
      1
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "15"
    ],
    "saca": 1
   },
@@ -25494,7 +25539,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T00:05:00Z",
+  "horario": "2026-11-09T00:10:00Z",
   "j1": {
    "id": 458,
    "nombre": "Hiroki Moriya",
@@ -25510,9 +25555,63 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T00:15:21.804Z",
+  "visto": "2026-11-09T01:15:21.947Z",
   "tier": null,
   "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     2
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
+ },
+ "216805": {
+  "id": 216805,
+  "tour": "challenger",
+  "torneo": "Matsuyama",
+  "ronda": "Matsuyama - Final",
+  "rondaCod": "F",
+  "superficie": "hard",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-09T01:05:00Z",
+  "j1": {
+   "id": 818,
+   "nombre": "Hikaru Shiraishi",
+   "pais": "jpn",
+   "ranking": 680
+  },
+  "j2": {
+   "id": 2057,
+   "nombre": "Kosuke Ogura",
+   "pais": "jpn",
+   "ranking": 762
+  },
+  "dobles": false,
+  "estado": "en_vivo",
+  "motivo": null,
+  "visto": "2026-11-09T01:15:21.947Z",
+  "tier": null,
+  "torneoId": "8222",
   "cubierto": false,
   "resultado": null,
   "score": {
@@ -25530,50 +25629,23 @@
    ],
    "puntos": [
     "15",
-    "30"
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
- },
- "216805": {
-  "id": 216805,
-  "tour": "challenger",
-  "torneo": "Matsuyama",
-  "ronda": "Matsuyama - Final",
-  "rondaCod": "F",
-  "superficie": "hard",
-  "clasificacion": true,
-  "genero": "men",
-  "horario": "2026-11-09T01:00:00Z",
-  "j1": {
-   "id": 2057,
-   "nombre": "K. Ogura",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
-   "id": 818,
-   "nombre": "H. Shiraishi",
-   "pais": null,
-   "ranking": null
-  },
-  "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
  },
  "216806": {
   "id": 216806,
   "tour": "challenger",
   "torneo": "Brisbane 3",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Qualification Final",
+  "rondaCod": "Q",
   "superficie": "hard",
-  "clasificacion": false,
+  "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T00:05:00Z",
+  "horario": "2026-11-09T00:10:00Z",
   "j1": {
    "id": 673,
    "nombre": "Moerani Bouzige",
@@ -25589,9 +25661,63 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T00:15:21.804Z",
+  "visto": "2026-11-09T01:15:21.947Z",
   "tier": null,
   "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
+ },
+ "216809": {
+  "id": 216809,
+  "tour": "challenger",
+  "torneo": "Matsuyama",
+  "ronda": "Matsuyama - Final",
+  "rondaCod": "F",
+  "superficie": "hard",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-09T01:05:00Z",
+  "j1": {
+   "id": 75,
+   "nombre": "Masamichi Imamura",
+   "pais": "jpn",
+   "ranking": 437
+  },
+  "j2": {
+   "id": 607,
+   "nombre": "Ryuki Matsuda",
+   "pais": "jpn",
+   "ranking": 646
+  },
+  "dobles": false,
+  "estado": "en_vivo",
+  "motivo": null,
+  "visto": "2026-11-09T01:15:21.947Z",
+  "tier": null,
+  "torneoId": "8222",
   "cubierto": false,
   "resultado": null,
   "score": {
@@ -25608,40 +25734,13 @@
     0
    ],
    "puntos": [
-    "30",
+    "0",
     "0"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null
- },
- "216809": {
-  "id": 216809,
-  "tour": "challenger",
-  "torneo": "Matsuyama",
-  "ronda": "Matsuyama - Final",
-  "rondaCod": "F",
-  "superficie": "hard",
-  "clasificacion": true,
-  "genero": "men",
-  "horario": "2026-11-09T01:00:00Z",
-  "j1": {
-   "id": 75,
-   "nombre": "Masamichi Imamura",
-   "pais": "jpn",
-   "ranking": 437
-  },
-  "j2": {
-   "id": 607,
-   "nombre": "R. Matsuda",
-   "pais": null,
-   "ranking": null
-  },
-  "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
  },
  "216810": {
   "id": 216810,
@@ -25652,7 +25751,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T01:00:00Z",
+  "horario": "2026-11-09T01:05:00Z",
   "j1": {
    "id": 463,
    "nombre": "Koki Matsuda",
@@ -25661,14 +25760,39 @@
   },
   "j2": {
    "id": 832,
-   "nombre": "P. Dev S D",
-   "pais": null,
-   "ranking": null
+   "nombre": "S D Prajwal Dev",
+   "pais": "ind",
+   "ranking": 678
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
+  "visto": "2026-11-09T01:15:21.947Z",
+  "tier": null,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216813": {
   "id": 216813,
@@ -25787,23 +25911,48 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T01:00:00Z",
+  "horario": "2026-11-09T01:05:00Z",
   "j1": {
+   "id": 1251,
+   "nombre": "Dominik Palan",
+   "pais": "cze",
+   "ranking": 606
+  },
+  "j2": {
    "id": 1947,
    "nombre": "Anton Shepp",
    "pais": "nzl",
    "ranking": 488
   },
-  "j2": {
-   "id": 1251,
-   "nombre": "D. Palan",
-   "pais": null,
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
+  "visto": "2026-11-09T01:15:21.947Z",
+  "tier": null,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216828": {
   "id": 216828,
