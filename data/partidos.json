@@ -8914,7 +8914,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T23:13:31.130Z",
+  "visto": "2026-11-09T00:15:21.804Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8925,20 +8925,22 @@
    "games": [
     [
      6,
-     1
+     6,
+     2
     ],
     [
      4,
-     4
+     7,
+     0
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "0",
-    "0"
+    "30",
+    "30"
    ],
    "saca": 2
   },
@@ -24759,7 +24761,7 @@
    "pais": "jpn",
    "ranking": 422
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "games": [
@@ -24864,7 +24866,7 @@
    "pais": "jpn",
    "ranking": 589
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "games": [
@@ -24900,7 +24902,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T00:00:00Z",
+  "horario": "2026-11-09T00:15:00Z",
   "j1": {
    "id": 443,
    "nombre": "Patrick Zahraj",
@@ -24914,9 +24916,34 @@
    "ranking": 456
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
+  "visto": "2026-11-09T00:15:21.804Z",
+  "tier": null,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216780": {
   "id": 216780,
@@ -25467,7 +25494,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-09T00:00:00Z",
+  "horario": "2026-11-09T00:05:00Z",
   "j1": {
    "id": 458,
    "nombre": "Hiroki Moriya",
@@ -25476,14 +25503,39 @@
   },
   "j2": {
    "id": 633,
-   "nombre": "P. Marinkov",
-   "pais": null,
-   "ranking": null
+   "nombre": "Pavle Marinkov",
+   "pais": "aus",
+   "ranking": 664
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
+  "visto": "2026-11-09T00:15:21.804Z",
+  "tier": null,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216805": {
   "id": 216805,
@@ -25521,7 +25573,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-09T00:00:00Z",
+  "horario": "2026-11-09T00:05:00Z",
   "j1": {
    "id": 673,
    "nombre": "Moerani Bouzige",
@@ -25535,9 +25587,34 @@
    "ranking": 533
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-08T23:13:31.436Z"
+  "visto": "2026-11-09T00:15:21.804Z",
+  "tier": null,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216809": {
   "id": 216809,
