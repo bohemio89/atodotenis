@@ -60,6 +60,14 @@ jobs:
       - name: Fotos para el ranking
         run: node scripts/avatares.mjs
 
+      - name: Instagram (publicar lo preparado y preparar la próxima)
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+        run: |
+          npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed
+          node scripts/instagram.mjs publicar
+          node scripts/instagram.mjs preparar
+
       - name: Probar que el sitio se genera bien
         run: node scripts/build.mjs
 
@@ -67,7 +75,7 @@ jobs:
         run: |
           git config user.name "A Todo Tenis bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data content
+          git add data content static/ig
           if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
           git commit -m "Actualización automática $(date -u +'%Y-%m-%d %H:%M') UTC"
           git pull --rebase -X ours origin main || true

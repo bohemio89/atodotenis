@@ -1,0 +1,146 @@
+// Instagram de A Todo Tenis (@atodotenis.web).
+//   node scripts/instagram.mjs preparar  → elige la nota más importante sin publicar y arma su imagen (static/ig/<slug>.jpg)
+//   node scripts/instagram.mjs publicar  → si hay una imagen preparada y ya está online, la publica con la API oficial de Instagram
+// La publicación usa "Instagram API with Instagram Login" (no necesita página de Facebook).
+// Secreto necesario en GitHub: INSTAGRAM_TOKEN (token de larga duración de la cuenta).
+import fs from 'node:fs';
+import path from 'node:path';
+import { ROOT, leerJSON, log } from './lib/util.mjs';
+
+const CONFIG = leerJSON('config.json', {});
+const SITIO = (CONFIG.sitio?.url || 'https://atodotenis.vercel.app').replace(/\/$/, '');
+const USUARIO = 'atodotenis.web';
+const ESTADO = path.join(ROOT, 'data/instagram.json');
+const DIR_IMG = path.join(ROOT, 'static/ig');
+const MAX_POR_DIA = 2;          // publicaciones automáticas por día (UTC)
+const HORAS_ENTRE = 4;          // separación mínima entre dos publicaciones
+const HORAS_NOTA = 30;          // solo notas recientes
+const API = 'https://graph.instagram.com/v25.0';
+
+const leerEstado = () => { try { return JSON.parse(fs.readFileSync(ESTADO, 'utf8')); } catch { return { publicadas: [], pendiente: null }; } };
+const guardarEstado = (e) => fs.writeFileSync(ESTADO, JSON.stringify(e, null, 2) + '\n');
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const apellido = (n) => String(n || '').trim().split(/\s+/).slice(-1)[0];
+
+function notas() {
+  const dir = path.join(ROOT, 'content/notas');
+  return fs.readdirSync(dir).filter((f) => f.endsWith('.json'))
+    .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
+    .filter((n) => n.estado === 'publicada');
+}
+
+function hashtags(n) {
+  const t = new Set(['#tenis']);
+  const cat = `${n.categoria || ''} ${n.torneo || ''}`;
+  if (/WTA/i.test(cat)) t.add('#WTA');
+  if (/ATP|Masters|Challenger/i.test(cat)) t.add('#ATP');
+  if (/Finals/i.test(cat)) t.add(/WTA/i.test(cat) ? '#WTAFinals' : '#ATPFinals');
+  for (const j of (n.jugadores || []).slice(0, 2)) t.add('#' + apellido(j).normalize('NFD').replace(/[^A-Za-z]/g, ''));
+  return [...t].slice(0, 5).join(' ');
+}
+
+function textoPublicacion(n) {
+  const partes = [n.titulo, n.bajada];
+  if (n.declaracion?.texto) partes.push(`«${n.declaracion.texto}» — ${n.declaracion.jugador}`);
+  partes.push('La nota completa, en el link de la bio.');
+  partes.push(hashtags(n));
+  return partes.join('\n\n');
+}
+
+function html(n) {
+  const fuentes = (p) => `file://${path.join(ROOT, 'node_modules/@fontsource', p)}`;
+  const r = n.resultado || {};
+  const sets = Array.isArray(r.sets) ? r.sets : [];
+  const fila = (nombre, idx, gana) => `<div class="fila${gana ? '' : ' pierde'}"><span>${esc(apellido(nombre))}</span>${sets.map((s) => `<b>${esc(s[idx])}</b>`).join('')}</div>`;
+  const frase = n.declaracion?.texto && n.declaracion.texto.length < 150
+    ? `<p class="cita">«${esc(n.declaracion.texto)}»<br><span>— ${esc(n.declaracion.jugador)}</span></p>`
+    : `<p class="bajada">${esc(n.bajada)}</p>`;
+  return `<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Inter;font-weight:400;src:url(${fuentes('inter/files/inter-latin-400-normal.woff2')})}
+@font-face{font-family:Montserrat;font-weight:800;src:url(${fuentes('montserrat/files/montserrat-latin-800-normal.woff2')})}
+@font-face{font-family:Montserrat;font-weight:900;font-style:italic;src:url(${fuentes('montserrat/files/montserrat-latin-900-italic.woff2')})}
+@font-face{font-family:RC;font-weight:700;src:url(${fuentes('roboto-condensed/files/roboto-condensed-latin-700-normal.woff2')})}
+body{margin:0}
+#p{width:1080px;height:1350px;background:#12161B;color:#F2F4F5;font-family:Inter;position:relative;overflow:hidden}
+.cancha{position:absolute;inset:0 0 auto 0;height:520px;background:${n.superficie === 'clay' ? '#A8502C' : n.superficie === 'grass' ? '#2F6B4A' : '#2B5C8A'}}
+.chip{position:absolute;left:64px;top:56px;background:#C6F432;color:#12161B;font:800 30px Montserrat;padding:12px 20px;border-radius:10px;letter-spacing:.04em;text-transform:uppercase;max-width:620px}
+.marca{position:absolute;right:64px;top:62px;font:italic 900 40px Montserrat;letter-spacing:-.02em}.marca b{color:#C6F432}
+.cuerpo{position:absolute;left:64px;right:64px;top:560px}
+.tit{font:800 30px Montserrat;color:#C6F432;letter-spacing:.06em}
+.fila{display:flex;align-items:center;font:800 64px Montserrat;padding:16px 0;border-bottom:2px solid #2A3540}
+.fila span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fila b{width:100px;text-align:center;font-family:RC;color:#C6F432}
+.fila.pierde{color:#9AA5B1;border:0}.fila.pierde b{color:#9AA5B1}
+.bajada,.cita{margin:44px 0 0;font-size:38px;line-height:1.35;color:#C9D1D9}
+.cita{font-size:40px;color:#F2F4F5}.cita span{font-size:30px;color:#9AA5B1}
+.pie{position:absolute;left:64px;right:64px;bottom:56px;display:flex;justify-content:space-between;font-size:30px;color:#9AA5B1}.pie b{font:800 30px Montserrat;color:#F2F4F5}
+</style></head><body><div id="p">
+<div class="cancha"><svg width="1080" height="520"><g fill="none" stroke="#fff" stroke-width="5" opacity=".28"><path d="M160 520 350 200h380l190 320"/><path d="M235 420h610M540 420V200M290 310h500"/></g></svg></div>
+<div class="chip">${esc(n.categoria || n.torneo || 'Tenis')}</div><div class="marca">A Todo <b>Tenis</b></div>
+<div class="cuerpo">${sets.length && r.ganador ? `<div class="tit">RESULTADO</div>${fila(r.ganador.nombre, 0, true)}${fila(r.perdedor?.nombre, 1, false)}` : `<div class="fila" style="font-size:56px;white-space:normal;border:0">${esc(n.titulo)}</div>`}
+${frase}</div>
+<div class="pie"><span>La nota completa en el link de la bio</span><b>@${USUARIO}</b></div>
+</div></body></html>`;
+}
+
+async function preparar() {
+  const e = leerEstado();
+  if (e.pendiente) { log('Ya hay una publicación preparada:', e.pendiente.slug); return; }
+  const hecho = new Set(e.publicadas.map((p) => p.slug));
+  const limite = Date.now() - HORAS_NOTA * 3600e3;
+  const cand = notas().filter((n) => !hecho.has(n.slug) && new Date(n.fecha).getTime() > limite)
+    .sort((a, b) => (b.importancia || 0) - (a.importancia || 0) || new Date(b.fecha) - new Date(a.fecha));
+  if (!cand.length) { log('Sin notas nuevas para Instagram.'); return; }
+  const n = cand[0];
+  const { chromium } = await import('playwright-core');
+  const navegador = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' });
+  const p = await navegador.newPage({ viewport: { width: 1080, height: 1350 } });
+  const tmp = path.join(ROOT, 'node_modules', '.ig-tarjeta.html');
+  fs.writeFileSync(tmp, html(n));
+  await p.goto('file://' + tmp, { waitUntil: 'load' });
+  await p.evaluate(async () => { await Promise.all([...document.fonts].map((f) => f.load().catch(() => null))); await document.fonts.ready; });
+  fs.mkdirSync(DIR_IMG, { recursive: true });
+  await p.locator('#p').screenshot({ path: path.join(DIR_IMG, `${n.slug}.jpg`), type: 'jpeg', quality: 92 });
+  await navegador.close();
+  e.pendiente = { slug: n.slug, imagen: `${SITIO}/ig/${n.slug}.jpg`, texto: textoPublicacion(n), preparada: new Date().toISOString() };
+  guardarEstado(e);
+  log('Preparada para Instagram:', n.titulo);
+}
+
+async function api(ruta, opciones = {}) {
+  const r = await fetch(`${API}/${ruta}`, { ...opciones, headers: { Authorization: `Bearer ${process.env.INSTAGRAM_TOKEN}`, 'Content-Type': 'application/json', ...(opciones.headers || {}) }, signal: AbortSignal.timeout(60000) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || j.error) throw new Error(j.error?.message || `HTTP ${r.status}`);
+  return j;
+}
+
+async function publicar() {
+  const e = leerEstado();
+  if (!e.pendiente) { log('Nada para publicar en Instagram.'); return; }
+  if (!process.env.INSTAGRAM_TOKEN) { log('Falta el secreto INSTAGRAM_TOKEN: la publicación queda preparada.'); return; }
+  const hoy = new Date().toISOString().slice(0, 10);
+  const deHoy = e.publicadas.filter((p) => p.fecha.slice(0, 10) === hoy);
+  if (deHoy.length >= MAX_POR_DIA) { log('Ya se publicó lo de hoy en Instagram.'); return; }
+  const ultima = e.publicadas.at(-1);
+  if (ultima && Date.now() - new Date(ultima.fecha).getTime() < HORAS_ENTRE * 3600e3) { log('Muy poco tiempo desde la última publicación.'); return; }
+  // La imagen tiene que estar online (Vercel la publica después del commit)
+  const online = await fetch(e.pendiente.imagen, { method: 'HEAD' }).then((r) => r.ok && /image/.test(r.headers.get('content-type') || '')).catch(() => false);
+  if (!online) { log('La imagen todavía no está online; se publica en la próxima corrida.'); return; }
+  const yo = await api('me?fields=user_id,username');
+  const contenedor = await api(`${yo.user_id}/media`, { method: 'POST', body: JSON.stringify({ image_url: e.pendiente.imagen, caption: e.pendiente.texto, alt_text: e.pendiente.texto.split('\n')[0] }) });
+  for (let i = 0; i < 10; i++) {
+    const s = await api(`${contenedor.id}?fields=status_code`);
+    if (s.status_code === 'FINISHED') break;
+    if (s.status_code === 'ERROR') throw new Error('Instagram no pudo procesar la imagen');
+    await new Promise((r) => setTimeout(r, 5000));
+  }
+  const pub = await api(`${yo.user_id}/media_publish`, { method: 'POST', body: JSON.stringify({ creation_id: contenedor.id }) });
+  e.publicadas.push({ slug: e.pendiente.slug, id: pub.id, fecha: new Date().toISOString() });
+  e.publicadas = e.publicadas.slice(-200);
+  e.pendiente = null;
+  guardarEstado(e);
+  log(`Publicado en Instagram (@${yo.username}): ${pub.id}`);
+}
+
+const modo = process.argv[2];
+(modo === 'publicar' ? publicar() : preparar()).catch((err) => { log('Instagram:', err.message); process.exit(0); });
