@@ -8261,7 +8261,7 @@
  },
  "215402": {
   "id": 215402,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
@@ -8282,9 +8282,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-10T03:00:36.253Z",
+  "visto": "2026-11-10T04:00:34.311Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8295,25 +8295,27 @@
    "games": [
     [
      3,
-     1
+     6,
+     12
     ],
     [
      6,
-     0
+     1,
+     10
     ]
    ],
    "sets": [
-    0,
+    2,
     1
    ],
    "puntos": [
-    "15",
-    "40"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215403": {
   "id": 215403,
@@ -20517,7 +20519,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T03:00:36.433Z",
+  "visto": "2026-11-10T04:00:34.247Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -20527,21 +20529,25 @@
   "score": {
    "games": [
     [
-     3
+     3,
+     6,
+     2
     ],
     [
-     4
+     6,
+     3,
+     2
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "15",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -20893,7 +20899,7 @@
    "ranking": 232
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T03:00:36.433Z",
   "torneoClave": "challenger|Matsuyama",
@@ -20981,7 +20987,7 @@
    "ranking": 1042
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T03:00:36.433Z",
   "torneoClave": "challenger|Matsuyama",
@@ -21085,26 +21091,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T03:15:00Z",
+  "horario": "2026-11-10T03:40:00Z",
   "j1": {
-   "id": 475,
-   "nombre": "Kasidit Samrej",
-   "pais": "tha",
-   "ranking": 409
-  },
-  "j2": {
    "id": 78,
    "nombre": "Yuta Shimizu",
    "pais": "jpn",
    "ranking": 405
   },
+  "j2": {
+   "id": 475,
+   "nombre": "Kasidit Samrej",
+   "pais": "tha",
+   "ranking": 409
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T03:00:36.433Z",
+  "visto": "2026-11-10T04:00:34.247Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216443": {
   "id": 216443,
@@ -30095,7 +30125,7 @@
    "ranking": 401
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T03:00:36.433Z",
   "torneoClave": "challenger|Matsuyama",
@@ -30137,7 +30167,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T02:55:00Z",
+  "horario": "2026-11-10T03:45:00Z",
   "j1": {
    "id": 163,
    "nombre": "Rei Sakamoto",
@@ -30146,17 +30176,41 @@
   },
   "j2": {
    "id": 468,
-   "nombre": "R. Tokuda",
-   "pais": null,
-   "ranking": null
+   "nombre": "Renta Tokuda",
+   "pais": "jpn",
+   "ranking": 909
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T03:00:36.433Z",
+  "visto": "2026-11-10T04:00:34.247Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217597": {
   "id": 217597,
@@ -30181,7 +30235,7 @@
    "ranking": 377
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T03:00:36.433Z",
   "torneoClave": "challenger|Matsuyama",
@@ -30465,7 +30519,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T03:00:36.433Z",
+  "visto": "2026-11-10T04:00:34.247Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -30476,22 +30530,24 @@
    "games": [
     [
      6,
+     6,
      6
     ],
     [
      1,
+     7,
      6
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "7",
-    "7"
+    "5",
+    "4"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -31682,6 +31738,59 @@
   "confirmado": false,
   "ganador": null,
   "visto": "2026-11-10T02:00:33.958Z"
+ },
+ "218688": {
+  "id": 218688,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Brisbane 3",
+  "torneoId": "13459",
+  "ronda": "Round of 32",
+  "rondaCod": "R32",
+  "superficie": "hard",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-10T03:25:00Z",
+  "j1": {
+   "id": 1944,
+   "nombre": "Isaac Becroft",
+   "pais": "nzl",
+   "ranking": 533
+  },
+  "j2": {
+   "id": 6316,
+   "nombre": "Sebastian Gorzny",
+   "pais": "usa",
+   "ranking": 403
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-10T04:00:34.247Z"
  },
  "null": {
   "id": null,
