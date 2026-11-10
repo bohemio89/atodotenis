@@ -18558,9 +18558,9 @@
  },
  "216365": {
   "id": 216365,
-  "tour": "challenger_doubles",
-  "torneo": "Brisbane 3",
-  "ronda": "Brisbane 3 - 1/8-finals",
+  "tour": "challenger",
+  "torneo": "Brisbane 3, Australia, Doubles",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
@@ -18581,7 +18581,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T07:00:35.958Z",
+  "visto": "2026-11-10T08:00:36.600Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -18591,21 +18591,23 @@
   "score": {
    "games": [
     [
-     3
+     7,
+     5
     ],
     [
-     2
+     6,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "15",
-    "30"
+    "30",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -18975,7 +18977,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T07:00:35.957Z",
   "torneoClave": "challenger|Matsuyama",
@@ -20643,8 +20645,8 @@
  "216430": {
   "id": 216430,
   "tour": "challenger",
-  "torneo": "Brisbane 3",
-  "ronda": "Brisbane 3 - 1/16-finals",
+  "torneo": "Brisbane 3, Australia",
+  "ronda": "Round of 32",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -20665,7 +20667,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T07:00:35.958Z",
+  "visto": "2026-11-10T08:00:36.600Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -20676,20 +20678,22 @@
    "games": [
     [
      6,
-     3
+     4,
+     5
     ],
     [
      4,
+     6,
      4
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "15",
-    "15"
+    "40",
+    "40"
    ],
    "saca": 2
   },
@@ -20843,8 +20847,8 @@
  "216434": {
   "id": 216434,
   "tour": "challenger",
-  "torneo": "Brisbane 3",
-  "ronda": "Brisbane 3 - 1/16-finals",
+  "torneo": "Brisbane 3, Australia",
+  "ronda": "Round of 32",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -20865,7 +20869,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T07:00:35.957Z",
+  "visto": "2026-11-10T08:00:36.600Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -20875,21 +20879,23 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     3
     ],
     [
-     1
+     3,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "AD",
-    "40"
+    "30",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -21179,7 +21185,7 @@
    "ranking": 315
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T07:00:35.957Z",
   "torneoClave": "challenger|Matsuyama",
@@ -30223,7 +30229,7 @@
    "ranking": 668
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T07:00:35.957Z",
   "torneoClave": "challenger|Matsuyama",
@@ -30277,7 +30283,7 @@
    "ranking": 306
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T07:00:35.957Z",
   "torneoClave": "challenger|Matsuyama",
@@ -30611,7 +30617,7 @@
    "ranking": 1358
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T07:00:35.958Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -32436,6 +32442,57 @@
   "estado": "programado",
   "motivo": null,
   "visto": "2026-11-10T07:00:35.958Z"
+ },
+ "218707": {
+  "id": 218707,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Brisbane 3, Australia, Doubles",
+  "torneoId": null,
+  "ronda": "Round of 16",
+  "rondaCod": "R16",
+  "superficie": null,
+  "cubierto": false,
+  "dobles": true,
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-10T07:30:00Z",
+  "j1": {
+   "id": 35313,
+   "nombre": "Jake Delaney / Jesse Delaney",
+   "pais": null,
+   "ranking": null
+  },
+  "j2": {
+   "id": 44931,
+   "nombre": "Ayeni / Isomura",
+   "pais": null,
+   "ranking": null
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-10T08:00:36.600Z"
  },
  "null": {
   "id": null,
