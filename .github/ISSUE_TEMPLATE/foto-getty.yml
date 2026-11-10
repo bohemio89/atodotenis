@@ -1,0 +1,19 @@
+name: Foto de Getty para una nota
+description: Pegá el link de la nota y el código para incrustar de Getty Images. El sitio la pone solo.
+title: "Foto Getty"
+labels: ["foto-getty"]
+body:
+  - type: input
+    id: nota
+    attributes:
+      label: Link de la nota
+      description: El link de la nota en A Todo Tenis (por ejemplo https://atodotenis.vercel.app/nota/...)
+    validations:
+      required: true
+  - type: textarea
+    id: codigo
+    attributes:
+      label: Código para incrustar
+      description: En Getty Images, abrí la foto, tocá el botón "</>" (Embed) y pegá acá el código completo.
+    validations:
+      required: true

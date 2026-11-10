@@ -45,11 +45,13 @@ function cancha(sup) {
   // Ilustración de cancha (no es una foto): color según superficie
   return `<div class="fondo sup-${esc(sup || 'hard')}"><svg class="cancha" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="110" fill="#000" opacity=".18"/><g fill="none" stroke="#fff" stroke-width="3" opacity=".38"><path d="M40 300 120 150h160l80 150"/><path d="M75 235h250M200 235v-85M95 190h210"/></g><circle cx="300" cy="95" r="10" fill="#C6F432" opacity=".9"/></svg></div>`;
 }
-// Getty: solo se acepta su código oficial para incrustar (embed.gettyimages.com)
-function gettySrc(codigo) {
-  const m = String(codigo || '').match(/https:\/\/embed\.gettyimages\.com\/embed\/[^"'\s<>]+/);
-  return m ? m[0].replace(/&amp;/g, '&') : null;
+// Getty: solo se acepta su código oficial para incrustar (embed.gettyimages.com, con et y sig)
+function gettySrc(g) {
+  const v = typeof g === 'object' && g ? g.src : g;
+  const m = String(v || '').replace(/&amp;/g, '&').match(/^https:\/\/embed\.gettyimages\.com\/embed\/\d+\?[^"'\s<>]*/);
+  return m && /[?&]et=/.test(m[0]) && /[?&]sig=/.test(m[0]) ? m[0] : null;
 }
+const gettyRatio = (g) => (g && g.w && g.h ? `${g.w}/${g.h + 70}` : '3/2');
 const creditoCorto = (n) => n.imagen?.credito ? n.imagen.credito.replace(/, vía Wikimedia Commons$/, '') : '';
 // Tamaños intermedios de Commons para que el celular no baje la foto de 1920 px
 const srcsetCommons = (url) => /\/1920px-/.test(url)
@@ -495,7 +497,7 @@ for (const n of notas) {
     cuerpo: `<article class="nota"><span class="etiqueta">${esc(n.categoria)}</span>
 <h1>${esc(n.titulo)}</h1><p class="bajada">${esc(n.bajada)}</p>
 <div class="firma">${hora(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
-${gettySrc(n.getty) ? `<figure class="getty"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="width:100%;aspect-ratio:3/2;border:0"></iframe><figcaption>Crédito de la imagen: Getty Images</figcaption></figure>`
+${gettySrc(n.getty) ? `<figure class="getty"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="width:100%;aspect-ratio:${gettyRatio(n.getty)};border:0"></iframe><figcaption>Crédito de la imagen: Getty Images</figcaption></figure>`
   : `<figure><div class="img">${imagenNota(n, false)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: <a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>${n.imagen.fechaFoto ? ` · ${EN ? 'photo from' : 'foto del'} ${esc(fechaArg(n.imagen.fechaFoto, { day: 'numeric', month: 'long', year: 'numeric' }))}` : ''}${n.imagen.licenciaUrl ? ` · <a href="${esc(n.imagen.licenciaUrl)}" rel="noopener license">licencia</a>` : ''}</figcaption>` : ''}</figure>`}
 <div class="cuerpo">${n.cuerpo.map((x, i) => `<p>${esc(x)}</p>${i === 1 ? declaracionNota(n) : ''}`).join('')}</div>${videoNota(n)}${ficha}
 ${relacionadas.length ? `<div class="sec-tit sec"><h2>Más noticias</h2></div><div class="lista-notas">${relacionadas.map(cardNota).join('')}</div>` : ''}
