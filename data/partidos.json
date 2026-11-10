@@ -18579,7 +18579,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T08:00:36.600Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -20665,7 +20665,7 @@
    "ranking": 332
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T08:00:36.600Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -20847,8 +20847,8 @@
  "216434": {
   "id": 216434,
   "tour": "challenger",
-  "torneo": "Brisbane 3, Australia",
-  "ronda": "Round of 32",
+  "torneo": "Brisbane 3",
+  "ronda": "Brisbane 3 - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -20869,7 +20869,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T08:00:36.600Z",
+  "visto": "2026-11-10T09:00:37.211Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -20880,20 +20880,22 @@
    "games": [
     [
      6,
-     3
+     5,
+     4
     ],
     [
      3,
-     4
+     7,
+     5
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
    "saca": 1
   },
@@ -25046,26 +25048,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T08:00:00Z",
+  "horario": "2026-11-10T08:10:00Z",
   "j1": {
-   "id": 949,
-   "nombre": "Michael Geerts",
-   "pais": "bel",
-   "ranking": 356
-  },
-  "j2": {
    "id": 333,
    "nombre": "Juan Cruz Martin Manzano",
    "pais": "ita",
    "ranking": 383
   },
+  "j2": {
+   "id": 949,
+   "nombre": "Michael Geerts",
+   "pais": "bel",
+   "ranking": 356
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T07:00:35.958Z",
+  "visto": "2026-11-10T09:00:37.211Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216597": {
   "id": 216597,
@@ -25362,26 +25388,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T08:00:00Z",
+  "horario": "2026-11-10T08:10:00Z",
   "j1": {
-   "id": 1068,
-   "nombre": "Ioannis Xilas",
-   "pais": "gre",
-   "ranking": 502
-  },
-  "j2": {
    "id": 672,
    "nombre": "Sergey Fomin",
    "pais": "uzb",
-   "ranking": 293
+   "ranking": 333
+  },
+  "j2": {
+   "id": 1068,
+   "nombre": "Ioannis Xilas",
+   "pais": "gre",
+   "ranking": 499
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T07:00:35.958Z",
+  "visto": "2026-11-10T09:00:37.211Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216605": {
   "id": 216605,
@@ -30659,26 +30711,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T07:15:00Z",
+  "horario": "2026-11-10T08:35:00Z",
   "j1": {
-   "id": 458,
-   "nombre": "Hiroki Moriya",
-   "pais": "jpn",
-   "ranking": 455
-  },
-  "j2": {
    "id": 186,
    "nombre": "Alex Bolt",
    "pais": "aus",
-   "ranking": 174
+   "ranking": 171
+  },
+  "j2": {
+   "id": 458,
+   "nombre": "Hiroki Moriya",
+   "pais": "jpn",
+   "ranking": 450
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T07:00:35.957Z",
+  "visto": "2026-11-10T09:00:37.211Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217605": {
   "id": 217605,
@@ -30965,23 +31041,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T08:00:00Z",
+  "horario": "2026-11-10T08:10:00Z",
   "j1": {
-   "id": 1887,
-   "nombre": "Lorenzo Angelini",
-   "pais": "ita",
-   "ranking": 531
-  },
-  "j2": {
    "id": 1093,
    "nombre": "Robin Bertrand",
    "pais": "fra",
-   "ranking": 406
+   "ranking": 405
+  },
+  "j2": {
+   "id": 1887,
+   "nombre": "Lorenzo Angelini",
+   "pais": "ita",
+   "ranking": 534
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T07:00:35.958Z"
+  "visto": "2026-11-10T09:00:37.211Z",
+  "tier": null,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217723": {
   "id": 217723,
@@ -32469,7 +32572,7 @@
    "pais": null,
    "ranking": null
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "games": [
