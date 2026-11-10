@@ -20429,7 +20429,7 @@
    "ranking": 332
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T05:00:36.079Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -20615,7 +20615,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T04:30:00Z",
+  "horario": "2026-11-10T05:40:00Z",
   "j1": {
    "id": 470,
    "nombre": "August Holmgren",
@@ -20629,12 +20629,36 @@
    "ranking": 343
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T03:00:36.433Z",
+  "visto": "2026-11-10T06:00:35.785Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216431": {
   "id": 216431,
@@ -20659,7 +20683,7 @@
    "ranking": 448
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T05:00:36.079Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -21081,7 +21105,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T04:45:00Z",
+  "horario": "2026-11-10T05:55:00Z",
   "j1": {
    "id": 81,
    "nombre": "Rio Noguchi",
@@ -21095,12 +21119,36 @@
    "ranking": 305
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T03:00:36.433Z",
+  "visto": "2026-11-10T06:00:35.786Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216441": {
   "id": 216441,
@@ -21155,7 +21203,7 @@
    "ranking": 409
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T05:00:36.079Z",
   "torneoClave": "challenger|Matsuyama",
@@ -30059,7 +30107,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T05:00:36.079Z",
+  "visto": "2026-11-10T06:00:35.785Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
   "importante": false,
@@ -30069,21 +30117,25 @@
   "score": {
    "games": [
     [
-     6
+     7,
+     3,
+     2
     ],
     [
-     6
+     6,
+     6,
+     1
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "6",
-    "5"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -30127,12 +30179,12 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T04:25:00Z",
+  "horario": "2026-11-10T05:45:00Z",
   "j1": {
    "id": 607,
-   "nombre": "R. Matsuda",
-   "pais": null,
-   "ranking": null
+   "nombre": "Ryuki Matsuda",
+   "pais": "jpn",
+   "ranking": 646
   },
   "j2": {
    "id": 1041,
@@ -30141,12 +30193,36 @@
    "ranking": 313
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T03:00:36.433Z",
+  "visto": "2026-11-10T06:00:35.786Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217594": {
   "id": 217594,
@@ -30171,7 +30247,7 @@
    "ranking": 477
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T05:00:36.079Z",
   "torneoClave": "challenger|Matsuyama",
@@ -30435,7 +30511,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T05:00:00Z",
+  "horario": "2026-11-10T05:40:00Z",
   "j1": {
    "id": 600,
    "nombre": "Christian Langmo",
@@ -30444,17 +30520,41 @@
   },
   "j2": {
    "id": 12212,
-   "nombre": "Y. Ibraimi",
-   "pais": null,
-   "ranking": null
+   "nombre": "Ymerali Ibraimi",
+   "pais": "aus",
+   "ranking": 1404
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T03:00:36.433Z",
+  "visto": "2026-11-10T06:00:35.785Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217604": {
   "id": 217604,
@@ -31847,14 +31947,14 @@
   "tier": null,
   "torneo": "Matsuyama",
   "torneoId": "8222",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Round of 32",
+  "rondaCod": "R32",
   "superficie": "hard",
   "cubierto": false,
   "dobles": false,
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T05:15:00Z",
+  "horario": "2026-11-10T05:00:00Z",
   "j1": {
    "id": 75,
    "nombre": "Masamichi Imamura",
@@ -31872,25 +31972,27 @@
   "score": {
    "games": [
     [
+     4,
      0
     ],
     [
-     0
+     6,
+     3
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "0",
-    "40"
+    "15",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-10T05:00:36.079Z"
+  "visto": "2026-11-10T06:00:35.785Z"
  },
  "218688": {
   "id": 218688,
@@ -31918,7 +32020,7 @@
    "pais": "usa",
    "ranking": 403
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "games": [
