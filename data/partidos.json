@@ -8226,9 +8226,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-10T01:00:34.971Z",
+  "visto": "2026-11-10T02:00:34.128Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8239,25 +8239,25 @@
    "games": [
     [
      6,
-     1
+     7
     ],
     [
      3,
-     1
+     6
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
-    "15",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215402": {
   "id": 215402,
@@ -20649,7 +20649,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T01:00:34.971Z",
+  "visto": "2026-11-10T02:00:33.958Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -20660,20 +20660,22 @@
    "games": [
     [
      6,
-     2
+     5,
+     4
     ],
     [
      2,
+     7,
      3
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
     "0",
-    "0"
+    "15"
    ],
    "saca": 2
   },
@@ -20923,26 +20925,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T01:00:00Z",
+  "horario": "2026-11-10T01:20:00Z",
   "j1": {
-   "id": 831,
-   "nombre": "S. Nakagawa",
-   "pais": "jpn",
-   "ranking": null
-  },
-  "j2": {
    "id": 185,
    "nombre": "David Jorda Sanchis",
    "pais": "esp",
    "ranking": 199
   },
+  "j2": {
+   "id": 831,
+   "nombre": "Shunsuke Nakagawa",
+   "pais": "jpn",
+   "ranking": 1042
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T23:00:38.029Z",
+  "visto": "2026-11-10T02:00:33.959Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216440": {
   "id": 216440,
@@ -25963,7 +25991,7 @@
    "ranking": 1667
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T01:00:34.971Z",
   "torneoClave": "challenger|Knoxville",
@@ -26339,7 +26367,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T01:00:34.971Z",
+  "visto": "2026-11-10T02:00:33.958Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -26349,21 +26377,23 @@
   "score": {
    "games": [
     [
+     4,
      3
     ],
     [
-     1
+     6,
+     2
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -30007,7 +30037,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T01:00:00Z",
+  "horario": "2026-11-10T01:20:00Z",
   "j1": {
    "id": 131,
    "nombre": "Mili Poljicak",
@@ -30021,12 +30051,38 @@
    "ranking": 401
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T23:00:38.029Z",
+  "visto": "2026-11-10T02:00:33.959Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217596": {
   "id": 217596,
@@ -30067,12 +30123,12 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T01:00:00Z",
+  "horario": "2026-11-10T01:35:00Z",
   "j1": {
    "id": 818,
-   "nombre": "H. Shiraishi",
-   "pais": null,
-   "ranking": null
+   "nombre": "Hikaru Shiraishi",
+   "pais": "jpn",
+   "ranking": 680
   },
   "j2": {
    "id": 10956,
@@ -30081,12 +30137,36 @@
    "ranking": 377
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T23:00:38.029Z",
+  "visto": "2026-11-10T02:00:33.959Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217602": {
   "id": 217602,
@@ -30111,7 +30191,7 @@
    "ranking": 637
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T01:00:34.971Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -30227,7 +30307,7 @@
    "ranking": 488
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T01:00:34.971Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -30271,24 +30351,48 @@
   "genero": "men",
   "horario": "2026-11-10T01:30:00Z",
   "j1": {
-   "id": 673,
-   "nombre": "Moerani Bouzige",
-   "pais": "aus",
-   "ranking": 461
-  },
-  "j2": {
    "id": 236,
    "nombre": "Christopher O'Connell",
    "pais": "aus",
    "ranking": 117
   },
+  "j2": {
+   "id": 673,
+   "nombre": "Moerani Bouzige",
+   "pais": "aus",
+   "ranking": 461
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T23:00:38.029Z",
+  "visto": "2026-11-10T02:00:33.959Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217620": {
   "id": 217620,
@@ -30299,7 +30403,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T01:30:00Z",
+  "horario": "2026-11-10T01:35:00Z",
   "j1": {
    "id": 1011,
    "nombre": "Matthew Dellavedova",
@@ -30308,17 +30412,41 @@
   },
   "j2": {
    "id": 1701,
-   "nombre": "T. J. Fancutt",
-   "pais": null,
-   "ranking": null
+   "nombre": "Thomas Fancutt",
+   "pais": "aus",
+   "ranking": 691
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T23:00:38.029Z",
+  "visto": "2026-11-10T02:00:33.959Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217687": {
   "id": 217687,
@@ -30724,6 +30852,59 @@
   "estado": "programado",
   "motivo": null,
   "visto": "2026-11-09T23:00:38.029Z"
+ },
+ "218647": {
+  "id": 218647,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Matsuyama",
+  "torneoId": "8222",
+  "ronda": "Round of 32",
+  "rondaCod": "R32",
+  "superficie": "hard",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-10T01:10:00Z",
+  "j1": {
+   "id": 70,
+   "nombre": "Naoya Honda",
+   "pais": "jpn",
+   "ranking": 584
+  },
+  "j2": {
+   "id": 220,
+   "nombre": "Chun Hsin Tseng",
+   "pais": "tai",
+   "ranking": 230
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-10T02:00:33.958Z"
  },
  "null": {
   "id": null,
