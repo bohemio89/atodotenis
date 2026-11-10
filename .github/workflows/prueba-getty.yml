@@ -1,0 +1,15 @@
+name: Prueba Getty (temporal)
+on: workflow_dispatch
+permissions: { contents: read }
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probar acceso
+        run: |
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
+          echo "== robots"; curl -s -m 20 https://www.gettyimages.com/robots.txt | head -60
+          echo "== search"; curl -s -m 20 -A "$UA" -o s.html -w "%{http_code} %{size_download}\n" "https://www.gettyimages.com/search/2/image?phrase=carlos%20alcaraz%20paris%202026&family=editorial&sort=newest"
+          grep -o 'embed[^"]\{0,120\}' s.html | head -10; grep -o '/detail/news-photo/[^"?]*' s.html | head -5
+          echo "== embed sin firma"; curl -s -m 20 -A "$UA" -o e.html -w "%{http_code} %{size_download}\n" "https://embed.gettyimages.com/embed/2245106533"; head -c 600 e.html
