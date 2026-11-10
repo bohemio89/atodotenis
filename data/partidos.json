@@ -1681,7 +1681,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ita",
     null
    ]
   },
@@ -8217,13 +8217,21 @@
    "id": 1450,
    "nombre": "Gabriela Dabrowski / Luisa Stefani",
    "pais": null,
-   "ranking": 12
+   "ranking": 12,
+   "paises": [
+    "can",
+    "bra"
+   ]
   },
   "j2": {
    "id": 5678,
    "nombre": "Mertens / Zhang",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "bel",
+    "chn"
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -8273,13 +8281,21 @@
    "id": 1800,
    "nombre": "Kristina Mladenovic / Meiqi Guo",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "fra",
+    "chn"
+   ]
   },
   "j2": {
    "id": 14537,
    "nombre": "Hsieh S-W / Ostapenko",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "lat"
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -8664,7 +8680,7 @@
   "j1": {
    "id": 55,
    "nombre": "Aryna Sabalenka",
-   "pais": null,
+   "pais": "blr",
    "ranking": 2
   },
   "j2": {
@@ -18570,19 +18586,27 @@
    "id": 26058,
    "nombre": "Blake Bayldon / Thomas Fancutt",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44929,
    "nombre": "Broska / Kumstat",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "cze"
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-10T15:00:38.754Z",
-  "torneoClave": "challenger|Brisbane 3",
+  "torneoClave": "challenger|Brisbane 3, Australia, Doubles",
   "tier": null,
   "importante": false,
   "torneoId": "13458",
@@ -18968,13 +18992,21 @@
    "id": 6407,
    "nombre": "Kusuhara / Shunsuke Nakagawa",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "jpn"
+   ]
   },
   "j2": {
    "id": 43950,
    "nombre": "Takahata / Tange",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -19138,18 +19170,26 @@
    "id": 32988,
    "nombre": "Goransson / Robert Galloway",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 38429,
    "nombre": "Jan Zielinski / Polmans",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "pol",
+    "aus"
+   ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
+  "visto": "2026-11-10T17:00:43.491Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -19159,24 +19199,26 @@
   "score": {
    "games": [
     [
-     4
+     6,
+     6
     ],
     [
-     1
+     3,
+     4
     ]
    ],
    "sets": [
-    0,
+    2,
     0
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216386": {
   "id": 216386,
@@ -19719,7 +19761,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
+  "visto": "2026-11-10T17:00:40.883Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -19730,20 +19772,22 @@
    "games": [
     [
      7,
-     3
+     4,
+     5
     ],
     [
      6,
-     2
+     6,
+     4
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
     "40",
-    "0"
+    "30"
    ],
    "saca": 1
   },
@@ -20710,7 +20754,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-10T15:00:38.754Z",
-  "torneoClave": "challenger|Brisbane 3",
+  "torneoClave": "challenger|Brisbane 3, Australia",
   "tier": null,
   "importante": false,
   "torneoId": "13459",
@@ -21948,7 +21992,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ita",
     null
    ]
   },
@@ -21984,13 +22028,21 @@
    "id": 41514,
    "nombre": "Cornea / Wehnelt",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44951,
    "nombre": "Capitanio / Haddorff",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -22216,13 +22268,21 @@
    "id": 15783,
    "nombre": "Cervantes / Martinez",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44957,
    "nombre": "Catry / Ursu",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -22811,7 +22871,7 @@
   "j2": {
    "id": 1885,
    "nombre": "M. Janvier",
-   "pais": null,
+   "pais": "fra",
    "ranking": null
   },
   "dobles": false,
@@ -22985,7 +23045,7 @@
   "j2": {
    "id": 2002,
    "nombre": "N. Barsukov",
-   "pais": null,
+   "pais": "ger",
    "ranking": null
   },
   "dobles": false,
@@ -23004,26 +23064,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T16:05:00Z",
+  "horario": "2026-11-10T16:55:00Z",
   "j1": {
    "id": 99,
    "nombre": "Duje Ajdukovic",
    "pais": "cro",
-   "ranking": 381
+   "ranking": 408
   },
   "j2": {
    "id": 181,
    "nombre": "Moez Echargui",
    "pais": "tun",
-   "ranking": 349
+   "ranking": 360
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.754Z",
+  "visto": "2026-11-10T17:00:40.884Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216523": {
   "id": 216523,
@@ -23933,7 +24017,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "cze",
     "pol"
    ]
   },
@@ -24086,7 +24170,7 @@
    "ranking": null,
    "paises": [
     "esp",
-    null
+    "esp"
    ]
   },
   "dobles": true,
@@ -24275,7 +24359,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "esp",
     "esp"
    ]
   },
@@ -25188,8 +25272,8 @@
  "216595": {
   "id": 216595,
   "tour": "challenger",
-  "torneo": "Hersonissos 3, Greece",
-  "ronda": "Round of 32",
+  "torneo": "Hersonissos 3",
+  "ronda": "Hersonissos 3 - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -25210,7 +25294,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
+  "visto": "2026-11-10T17:00:40.883Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
   "importante": false,
@@ -25221,22 +25305,24 @@
    "games": [
     [
      6,
-     1
+     4,
+     3
     ],
     [
      3,
-     1
+     6,
+     2
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "0",
-    "15"
+    "30",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -25474,26 +25560,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T15:30:00Z",
+  "horario": "2026-11-10T16:20:00Z",
   "j1": {
-   "id": 5250,
-   "nombre": "Andrej Nedić",
-   "pais": "bih",
-   "ranking": 246
-  },
-  "j2": {
    "id": 122,
    "nombre": "Michele Ribecai",
    "pais": "ita",
-   "ranking": 284
+   "ranking": 281
+  },
+  "j2": {
+   "id": 5250,
+   "nombre": "Andrej Nedić",
+   "pais": "bih",
+   "ranking": 267
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.754Z",
+  "visto": "2026-11-10T17:00:40.884Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216601": {
   "id": 216601,
@@ -25504,26 +25616,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T16:40:00Z",
+  "horario": "2026-11-10T16:25:00Z",
   "j1": {
-   "id": 1025,
-   "nombre": "Radu Mihai Papoe",
-   "pais": "rou",
-   "ranking": 280
-  },
-  "j2": {
    "id": 919,
    "nombre": "Philip Henning",
    "pais": "rsa",
-   "ranking": 236
+   "ranking": 249
+  },
+  "j2": {
+   "id": 1025,
+   "nombre": "Radu Mihai Papoe",
+   "pais": "rou",
+   "ranking": 278
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.754Z",
+  "visto": "2026-11-10T17:00:40.884Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216602": {
   "id": 216602,
@@ -25604,10 +25740,10 @@
    "ranking": 985
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T16:00:40.416Z",
-  "torneoClave": "challenger|Hersonissos 3",
+  "torneoClave": "challenger|Hersonissos 3, Greece",
   "tier": null,
   "importante": false,
   "torneoId": "12861",
@@ -25706,26 +25842,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T15:45:00Z",
+  "horario": "2026-11-10T16:10:00Z",
   "j1": {
+   "id": 394,
+   "nombre": "Daniil Glinka",
+   "pais": "est",
+   "ranking": 163
+  },
+  "j2": {
    "id": 1615,
    "nombre": "Sebastián Báez",
    "pais": "arg",
    "ranking": 52
   },
-  "j2": {
-   "id": 394,
-   "nombre": "Daniil Glinka",
-   "pais": "est",
-   "ranking": 161
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.754Z",
+  "visto": "2026-11-10T17:00:40.884Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     3,
+     3
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "AD",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216606": {
   "id": 216606,
@@ -25839,7 +26001,7 @@
   "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T23:00:37.729Z",
-  "torneoClave": "challenger|Orleans",
+  "torneoClave": "challenger|Orleans, France",
   "tier": null,
   "importante": false,
   "torneoId": "2353",
@@ -26690,7 +26852,7 @@
   "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-09T23:00:37.729Z",
-  "torneoClave": "challenger|Knoxville",
+  "torneoClave": "challenger|Knoxville, USA",
   "tier": null,
   "importante": false,
   "torneoId": "2443",
@@ -29760,8 +29922,8 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
-  "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
+  "visto": "2026-11-10T17:00:40.884Z",
+  "torneoClave": "challenger|Sopo (Colombia) - Qualification",
   "tier": null,
   "importante": false,
   "torneoId": "14849",
@@ -29770,21 +29932,23 @@
   "score": {
    "games": [
     [
+     6,
      2
     ],
     [
+     7,
      4
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "0",
-    "15"
+    "15",
+    "30"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -29958,8 +30122,8 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
-  "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
+  "visto": "2026-11-10T17:00:40.884Z",
+  "torneoClave": "challenger|Sopo (Colombia) - Qualification",
   "tier": null,
   "importante": false,
   "torneoId": "14849",
@@ -29968,21 +30132,23 @@
   "score": {
    "games": [
     [
-     1
+     4,
+     3
     ],
     [
-     3
+     6,
+     2
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "AD",
-    "40"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -30156,8 +30322,8 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
-  "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
+  "visto": "2026-11-10T17:00:40.884Z",
+  "torneoClave": "challenger|Sopo (Colombia) - Qualification",
   "tier": null,
   "importante": false,
   "torneoId": "14849",
@@ -30166,21 +30332,23 @@
   "score": {
    "games": [
     [
-     1
+     3,
+     3
     ],
     [
+     6,
      4
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "AD",
-    "40"
+    "40",
+    "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -31365,7 +31533,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.458Z"
+  "visto": "2026-11-10T15:00:38.458Z",
+  "torneoClave": "atp|Stockholm",
+  "tier": null,
+  "importante": false
  },
  "217688": {
   "id": 217688,
@@ -31419,7 +31590,9 @@
    "saca": 2
   },
   "confirmado": true,
-  "ganador": 1
+  "ganador": 1,
+  "torneoClave": "atp|Stockholm",
+  "importante": false
  },
  "217720": {
   "id": 217720,
@@ -31473,7 +31646,9 @@
    "saca": 2
   },
   "confirmado": true,
-  "ganador": 1
+  "ganador": 1,
+  "torneoClave": "atp|Stockholm",
+  "importante": false
  },
  "217721": {
   "id": 217721,
@@ -31500,7 +31675,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.458Z"
+  "visto": "2026-11-10T15:00:38.458Z",
+  "torneoClave": "atp|Stockholm",
+  "tier": null,
+  "importante": false
  },
  "217722": {
   "id": 217722,
@@ -31556,7 +31734,9 @@
    "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Hersonissos 3",
+  "importante": false
  },
  "217723": {
   "id": 217723,
@@ -31610,7 +31790,9 @@
    "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Hersonissos 3",
+  "importante": false
  },
  "217724": {
   "id": 217724,
@@ -31664,7 +31846,9 @@
    "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Hersonissos 3",
+  "importante": false
  },
  "217725": {
   "id": 217725,
@@ -31718,7 +31902,9 @@
    "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Hersonissos 3",
+  "importante": false
  },
  "217726": {
   "id": 217726,
@@ -31743,7 +31929,7 @@
    "ranking": 584
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T16:00:40.416Z",
   "tier": null,
@@ -31772,7 +31958,9 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Hersonissos 3, Greece",
+  "importante": false
  },
  "218118": {
   "id": 218118,
@@ -31799,13 +31987,16 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.754Z"
+  "visto": "2026-11-10T15:00:38.754Z",
+  "torneoClave": "challenger|Monastir",
+  "tier": null,
+  "importante": false
  },
  "218119": {
   "id": 218119,
   "tour": "challenger",
-  "torneo": "Monastir, Tunisia",
-  "ronda": "Round of 32",
+  "torneo": "Monastir",
+  "ronda": "Monastir - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -31826,7 +32017,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
+  "visto": "2026-11-10T17:00:40.884Z",
   "tier": null,
   "torneoId": "13396",
   "cubierto": false,
@@ -31834,24 +32025,30 @@
   "score": {
    "games": [
     [
-     4
+     6,
+     2,
+     0
     ],
     [
-     1
+     2,
+     6,
+     0
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "40",
+    "15",
     "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Monastir",
+  "importante": false
  },
  "218120": {
   "id": 218120,
@@ -31876,7 +32073,7 @@
    "ranking": 525
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T16:00:40.416Z",
   "tier": null,
@@ -31905,7 +32102,9 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Monastir, Tunisia",
+  "importante": false
  },
  "218121": {
   "id": 218121,
@@ -31961,7 +32160,9 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Monastir",
+  "importante": false
  },
  "218122": {
   "id": 218122,
@@ -31988,13 +32189,16 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.754Z"
+  "visto": "2026-11-10T15:00:38.754Z",
+  "torneoClave": "challenger|Monastir",
+  "tier": null,
+  "importante": false
  },
  "218123": {
   "id": 218123,
   "tour": "challenger",
-  "torneo": "Monastir, Tunisia",
-  "ronda": "Round of 32",
+  "torneo": "Monastir",
+  "ronda": "Monastir - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -32015,7 +32219,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
+  "visto": "2026-11-10T17:00:40.883Z",
   "tier": null,
   "torneoId": "13396",
   "cubierto": false,
@@ -32024,25 +32228,29 @@
    "games": [
     [
      6,
-     3
+     7,
+     4
     ],
     [
      7,
+     6,
      2
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "40"
    ],
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Monastir",
+  "importante": false
  },
  "218227": {
   "id": 218227,
@@ -32096,7 +32304,9 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Orleans",
+  "importante": false
  },
  "218228": {
   "id": 218228,
@@ -32148,7 +32358,9 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Orleans",
+  "importante": false
  },
  "218229": {
   "id": 218229,
@@ -32202,13 +32414,15 @@
    "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Orleans",
+  "importante": false
  },
  "218230": {
   "id": 218230,
   "tour": "challenger",
-  "torneo": "Orleans, France",
-  "ronda": "Round of 32",
+  "torneo": "Orleans",
+  "ronda": "Orleans - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -32229,7 +32443,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
+  "visto": "2026-11-10T17:00:40.883Z",
   "tier": null,
   "torneoId": "2353",
   "cubierto": true,
@@ -32238,25 +32452,29 @@
    "games": [
     [
      6,
-     0
+     6,
+     2
     ],
     [
      7,
-     0
+     1,
+     2
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "40",
-    "30"
+    "30",
+    "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Orleans",
+  "importante": false
  },
  "218231": {
   "id": 218231,
@@ -32283,7 +32501,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Orleans",
+  "tier": null,
+  "importante": false
  },
  "218232": {
   "id": 218232,
@@ -32310,7 +32531,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Orleans",
+  "tier": null,
+  "importante": false
  },
  "218288": {
   "id": 218288,
@@ -32326,18 +32550,29 @@
    "id": 44941,
    "nombre": "Jebens/ Seggerman",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "ger",
+    "usa"
+   ]
   },
   "j2": {
    "id": 1725,
    "nombre": "Grevelius/ Heinonen",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "swe",
+    "swe"
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.458Z"
+  "visto": "2026-11-10T15:00:38.458Z",
+  "torneoClave": "atp|Stockholm",
+  "tier": null,
+  "importante": false
  },
  "218289": {
   "id": 218289,
@@ -32353,18 +32588,29 @@
    "id": 45345,
    "nombre": "Pankin/ Perego",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44953,
    "nombre": "Kelm/ Petkovic",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Monastir",
+  "tier": null,
+  "importante": false
  },
  "218290": {
   "id": 218290,
@@ -32391,7 +32637,10 @@
   "dobles": false,
   "estado": "cancelado",
   "motivo": "walkover",
-  "visto": "2026-11-10T15:00:38.458Z"
+  "visto": "2026-11-10T15:00:38.458Z",
+  "torneoClave": "atp|Stockholm",
+  "tier": null,
+  "importante": false
  },
  "218300": {
   "id": 218300,
@@ -32418,7 +32667,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Lima 2",
+  "tier": null,
+  "importante": false
  },
  "218301": {
   "id": 218301,
@@ -32445,7 +32697,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Lima 2",
+  "tier": null,
+  "importante": false
  },
  "218302": {
   "id": 218302,
@@ -32466,19 +32721,22 @@
   "j2": {
    "id": 13409,
    "nombre": "F. Misolic",
-   "pais": null,
+   "pais": "aut",
    "ranking": null
   },
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Lima 2",
+  "tier": null,
+  "importante": false
  },
  "218303": {
   "id": 218303,
   "tour": "challenger",
-  "torneo": "Lima, Peru",
-  "ronda": "Round of 32",
+  "torneo": "Lima 2",
+  "ronda": "Lima 2 - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "clay",
   "clasificacion": false,
@@ -32499,7 +32757,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
+  "visto": "2026-11-10T17:00:40.883Z",
   "tier": null,
   "torneoId": "4819",
   "cubierto": false,
@@ -32508,31 +32766,33 @@
    "games": [
     [
      3,
-     0
+     6
     ],
     [
      6,
-     1
+     7
     ]
    ],
    "sets": [
     0,
-    1
+    2
    ],
    "puntos": [
-    "30",
+    "0",
     "0"
    ],
    "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Lima 2",
+  "importante": false
  },
  "218304": {
   "id": 218304,
   "tour": "challenger",
-  "torneo": "Lima, Peru",
-  "ronda": "Round of 32",
+  "torneo": "Lima 2",
+  "ronda": "Lima 2 - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "clay",
   "clasificacion": false,
@@ -32553,7 +32813,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
+  "visto": "2026-11-10T17:00:40.884Z",
   "tier": null,
   "torneoId": "4819",
   "cubierto": false,
@@ -32561,24 +32821,28 @@
   "score": {
    "games": [
     [
-     6
+     7,
+     3
     ],
     [
-     5
+     6,
+     6
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "30",
-    "40"
+    "15",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Lima 2",
+  "importante": false
  },
  "218305": {
   "id": 218305,
@@ -32605,7 +32869,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Lima 2",
+  "tier": null,
+  "importante": false
  },
  "218306": {
   "id": 218306,
@@ -32616,7 +32883,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T16:30:00Z",
+  "horario": "2026-11-10T16:20:00Z",
   "j1": {
    "id": 412,
    "nombre": "Nikolas Sanchez Izquierdo",
@@ -32625,14 +32892,41 @@
   },
   "j2": {
    "id": 575,
-   "nombre": "N. Jarry",
-   "pais": null,
-   "ranking": null
+   "nombre": "Nicolas Jarry",
+   "pais": "chi",
+   "ranking": 790
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T17:00:40.884Z",
+  "tier": null,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "torneoClave": "challenger|Lima 2",
+  "importante": false
  },
  "218316": {
   "id": 218316,
@@ -32659,7 +32953,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.458Z"
+  "visto": "2026-11-10T15:00:38.458Z",
+  "torneoClave": "atp|Stockholm",
+  "tier": null,
+  "importante": false
  },
  "218322": {
   "id": 218322,
@@ -32686,7 +32983,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Orleans",
+  "tier": null,
+  "importante": false
  },
  "218329": {
   "id": 218329,
@@ -32713,7 +33013,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
+  "tier": null,
+  "importante": false
  },
  "218361": {
   "id": 218361,
@@ -32738,7 +33041,7 @@
    "ranking": 510
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T16:00:40.416Z",
   "tier": null,
@@ -32767,13 +33070,15 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Knoxville, USA",
+  "importante": false
  },
  "218362": {
   "id": 218362,
   "tour": "challenger",
-  "torneo": "Knoxville, USA",
-  "ronda": "Round of 32",
+  "torneo": "Knoxville",
+  "ronda": "Knoxville - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -32794,7 +33099,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T16:00:40.416Z",
+  "visto": "2026-11-10T17:00:40.883Z",
   "tier": null,
   "torneoId": "2443",
   "cubierto": true,
@@ -32802,24 +33107,30 @@
   "score": {
    "games": [
     [
-     6
+     7,
+     3,
+     0
     ],
     [
-     5
+     6,
+     6,
+     0
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
     "0",
-    "15"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Knoxville",
+  "importante": false
  },
  "218363": {
   "id": 218363,
@@ -32846,7 +33157,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Knoxville",
+  "tier": null,
+  "importante": false
  },
  "218364": {
   "id": 218364,
@@ -32873,7 +33187,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.754Z"
+  "visto": "2026-11-10T15:00:38.754Z",
+  "torneoClave": "challenger|Knoxville",
+  "tier": null,
+  "importante": false
  },
  "218365": {
   "id": 218365,
@@ -32900,7 +33217,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Knoxville",
+  "tier": null,
+  "importante": false
  },
  "218366": {
   "id": 218366,
@@ -32927,7 +33247,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Knoxville",
+  "tier": null,
+  "importante": false
  },
  "218367": {
   "id": 218367,
@@ -32954,7 +33277,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Knoxville",
+  "tier": null,
+  "importante": false
  },
  "218631": {
   "id": 218631,
@@ -32970,18 +33296,29 @@
    "id": 32275,
    "nombre": "Falck/ Suarez",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 45597,
    "nombre": "Jasika/ Sousou",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "aus",
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Brisbane 3",
+  "tier": null,
+  "importante": false
  },
  "218647": {
   "id": 218647,
@@ -33035,7 +33372,9 @@
   "confirmado": false,
   "ganador": null,
   "visto": "2026-11-10T15:00:38.755Z",
-  "motivo": null
+  "motivo": null,
+  "torneoClave": "challenger|Matsuyama",
+  "importante": false
  },
  "218656": {
   "id": 218656,
@@ -33062,7 +33401,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Brisbane 3",
+  "tier": null,
+  "importante": false
  },
  "218681": {
   "id": 218681,
@@ -33083,13 +33425,16 @@
   "j2": {
    "id": 70,
    "nombre": "N. Honda",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Matsuyama",
+  "tier": null,
+  "importante": false
  },
  "218683": {
   "id": 218683,
@@ -33143,7 +33488,9 @@
   "confirmado": false,
   "ganador": null,
   "visto": "2026-11-10T15:00:38.755Z",
-  "motivo": null
+  "motivo": null,
+  "torneoClave": "challenger|Matsuyama",
+  "importante": false
  },
  "218688": {
   "id": 218688,
@@ -33199,7 +33546,9 @@
   "confirmado": false,
   "ganador": null,
   "visto": "2026-11-10T15:00:38.755Z",
-  "motivo": null
+  "motivo": null,
+  "torneoClave": "challenger|Brisbane 3",
+  "importante": false
  },
  "218691": {
   "id": 218691,
@@ -33226,7 +33575,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Lima 2",
+  "tier": null,
+  "importante": false
  },
  "218693": {
   "id": 218693,
@@ -33253,7 +33605,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Matsuyama",
+  "tier": null,
+  "importante": false
  },
  "218694": {
   "id": 218694,
@@ -33274,13 +33629,16 @@
   "j2": {
    "id": 831,
    "nombre": "S. Nakagawa",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Matsuyama",
+  "tier": null,
+  "importante": false
  },
  "218695": {
   "id": 218695,
@@ -33307,7 +33665,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Brisbane 3",
+  "tier": null,
+  "importante": false
  },
  "218697": {
   "id": 218697,
@@ -33334,7 +33695,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Brisbane 3",
+  "tier": null,
+  "importante": false
  },
  "218698": {
   "id": 218698,
@@ -33361,7 +33725,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Brisbane 3",
+  "tier": null,
+  "importante": false
  },
  "218700": {
   "id": 218700,
@@ -33388,7 +33755,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Matsuyama",
+  "tier": null,
+  "importante": false
  },
  "218701": {
   "id": 218701,
@@ -33415,7 +33785,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Matsuyama",
+  "tier": null,
+  "importante": false
  },
  "218702": {
   "id": 218702,
@@ -33442,7 +33815,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Matsuyama",
+  "tier": null,
+  "importante": false
  },
  "218705": {
   "id": 218705,
@@ -33469,7 +33845,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Matsuyama",
+  "tier": null,
+  "importante": false
  },
  "218707": {
   "id": 218707,
@@ -33489,13 +33868,21 @@
    "id": 35313,
    "nombre": "Jake Delaney / Jesse Delaney",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "aus",
+    "aus"
+   ]
   },
   "j2": {
    "id": 44931,
    "nombre": "Ayeni / Isomura",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "estado": "por_confirmar",
   "resultado": null,
@@ -33520,7 +33907,9 @@
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-10T08:00:36.600Z"
+  "visto": "2026-11-10T08:00:36.600Z",
+  "torneoClave": "challenger|Brisbane 3, Australia, Doubles",
+  "importante": false
  },
  "218716": {
   "id": 218716,
@@ -33547,7 +33936,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Brisbane 3",
+  "tier": null,
+  "importante": false
  },
  "218717": {
   "id": 218717,
@@ -33574,7 +33966,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Brisbane 3",
+  "tier": null,
+  "importante": false
  },
  "218718": {
   "id": 218718,
@@ -33601,7 +33996,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Matsuyama",
+  "tier": null,
+  "importante": false
  },
  "218740": {
   "id": 218740,
@@ -33628,7 +34026,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Brisbane 3",
+  "tier": null,
+  "importante": false
  },
  "218741": {
   "id": 218741,
@@ -33655,7 +34056,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-10T15:00:38.755Z"
+  "visto": "2026-11-10T15:00:38.755Z",
+  "torneoClave": "challenger|Hersonissos 3",
+  "tier": null,
+  "importante": false
  },
  "null": {
   "id": null,
