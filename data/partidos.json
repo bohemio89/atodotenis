@@ -25002,7 +25002,7 @@
    "ranking": 264
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T11:00:39.507Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -25146,7 +25146,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.508Z",
+  "visto": "2026-11-10T12:00:39.530Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
   "importante": false,
@@ -25156,19 +25156,21 @@
   "score": {
    "games": [
     [
+     6,
      5
     ],
     [
-     3
+     4,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "15",
-    "15"
+    "30",
+    "0"
    ],
    "saca": 2
   },
@@ -25776,7 +25778,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.508Z",
+  "visto": "2026-11-10T12:00:39.529Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
   "importante": false,
@@ -25787,22 +25789,24 @@
    "games": [
     [
      6,
-     2
+     3,
+     5
     ],
     [
      2,
-     2
+     6,
+     5
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "0",
-    "40"
+    "30",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -25890,7 +25894,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.508Z",
+  "visto": "2026-11-10T12:00:39.530Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
   "importante": false,
@@ -25901,22 +25905,24 @@
    "games": [
     [
      1,
-     1
+     6,
+     5
     ],
     [
      6,
-     2
+     2,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "40",
-    "30"
+    "AD",
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -31208,18 +31214,45 @@
    "id": 206,
    "nombre": "Francesco Maestrelli",
    "pais": "ita",
-   "ranking": 176
+   "ranking": 168
   },
   "j2": {
    "id": 2013,
    "nombre": "Jack Loge",
    "pais": "bel",
-   "ranking": 402
+   "ranking": 401
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.508Z"
+  "visto": "2026-11-10T12:00:39.530Z",
+  "tier": null,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     4
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217724": {
   "id": 217724,
@@ -31230,23 +31263,48 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T12:15:00Z",
+  "horario": "2026-11-10T12:30:00Z",
   "j1": {
    "id": 93,
    "nombre": "Remy Bertola",
    "pais": "sui",
-   "ranking": 222
+   "ranking": 221
   },
   "j2": {
    "id": 310,
    "nombre": "Lorenzo Carboni",
    "pais": "ita",
-   "ranking": 552
+   "ranking": 550
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.508Z"
+  "visto": "2026-11-10T12:00:39.530Z",
+  "tier": null,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217725": {
   "id": 217725,
