@@ -8212,7 +8212,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-10T00:00:00Z",
+  "horario": "2026-11-10T00:10:00Z",
   "j1": {
    "id": 1450,
    "nombre": "Gabriela Dabrowski / Luisa Stefani",
@@ -8228,7 +8228,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T00:00:36.465Z",
+  "visto": "2026-11-10T01:00:34.971Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8238,21 +8238,23 @@
   "score": {
    "games": [
     [
-     0
+     6,
+     1
     ],
     [
-     0
+     3,
+     1
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "15",
+    "40"
    ],
-   "saca": null
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -20631,7 +20633,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T00:00:00Z",
+  "horario": "2026-11-10T00:10:00Z",
   "j1": {
    "id": 465,
    "nombre": "Carl Emil Overbeck",
@@ -20645,12 +20647,38 @@
    "ranking": 320
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T23:00:38.030Z",
+  "visto": "2026-11-10T01:00:34.971Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216434": {
   "id": 216434,
@@ -25937,7 +25965,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T00:00:36.465Z",
+  "visto": "2026-11-10T01:00:34.971Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -25947,18 +25975,20 @@
   "score": {
    "games": [
     [
-     3
+     7,
+     2
     ],
     [
+     6,
      3
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
+    "15",
     "30"
    ],
    "saca": 1
@@ -26293,12 +26323,12 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T00:00:00Z",
+  "horario": "2026-11-10T00:45:00Z",
   "j1": {
    "id": 354,
-   "nombre": "A. Huertas Del Pino Cordova",
-   "pais": null,
-   "ranking": null
+   "nombre": "Arklon Cordova Huertas Del Pino",
+   "pais": "per",
+   "ranking": 755
   },
   "j2": {
    "id": 424,
@@ -26307,12 +26337,36 @@
    "ranking": 185
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T23:00:38.029Z",
+  "visto": "2026-11-10T01:00:34.971Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216794": {
   "id": 216794,
@@ -26455,7 +26509,7 @@
    "ranking": 501
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T00:00:36.465Z",
   "torneoClave": "challenger|Lima 2",
@@ -30043,26 +30097,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T00:00:00Z",
+  "horario": "2026-11-10T00:10:00Z",
   "j1": {
-   "id": 14056,
-   "nombre": "C. Hoole",
-   "pais": null,
-   "ranking": null
+   "id": 2297,
+   "nombre": "Sam Ryan Ziegann",
+   "pais": "aus",
+   "ranking": 802
   },
   "j2": {
-   "id": 2297,
-   "nombre": "S. Ryan Ziegann",
-   "pais": null,
-   "ranking": null
+   "id": 14056,
+   "nombre": "Casey Hoole",
+   "pais": "aus",
+   "ranking": 637
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T23:00:38.029Z",
+  "visto": "2026-11-10T01:00:34.971Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     1
+    ],
+    [
+     6,
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217603": {
   "id": 217603,
@@ -30133,7 +30213,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T00:00:00Z",
+  "horario": "2026-11-10T00:10:00Z",
   "j1": {
    "id": 842,
    "nombre": "Dane Sweeny",
@@ -30147,12 +30227,38 @@
    "ranking": 488
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-09T23:00:38.029Z",
+  "visto": "2026-11-10T01:00:34.971Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     3
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217619": {
   "id": 217619,
