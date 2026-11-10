@@ -34,6 +34,19 @@
           "value": "same-origin"
         }
       ]
+    },
+    {
+      "source": "/ig/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cross-Origin-Resource-Policy",
+          "value": "cross-origin"
+        }
+      ]
     }
   ]
 }
