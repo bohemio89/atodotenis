@@ -8601,41 +8601,57 @@
  },
  "215410": {
   "id": 215410,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-10T23:35:00Z",
+  "horario": "2026-11-10T23:45:00Z",
   "j1": {
-   "id": 1834,
-   "nombre": "Siniakova/ Townsend",
+   "id": 1822,
+   "nombre": "Demi Schuurs / Georgina García Pérez",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "usa"
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 1822,
-   "nombre": "Perez/ Schuurs",
+   "id": 1834,
+   "nombre": "Katerina Siniakova / Taylor Townsend",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "aus",
-    "ned"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T22:45:22.965Z",
+  "visto": "2026-11-10T23:45:23.134Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Finals - Riyadh"
+  "torneoClave": "wta|Finals - Riyadh",
+  "torneoId": "3190",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": null
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215411": {
   "id": 215411,
@@ -8832,9 +8848,9 @@
    "ranking": 8
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-10T22:45:22.965Z",
+  "visto": "2026-11-10T23:45:23.388Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8844,15 +8860,17 @@
   "score": {
    "games": [
     [
+     3,
      3
     ],
     [
-     4
+     6,
+     6
     ]
    ],
    "sets": [
     0,
-    0
+    2
    ],
    "puntos": [
     "0",
@@ -8860,8 +8878,8 @@
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "215418": {
   "id": 215418,
@@ -26871,7 +26889,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T22:45:23.119Z",
+  "visto": "2026-11-10T23:45:23.134Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -26881,21 +26899,23 @@
   "score": {
    "games": [
     [
-     2
+     3,
+     5
     ],
     [
-     3
+     6,
+     4
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "AD"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -27493,7 +27513,7 @@
    "ranking": 190
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T22:45:22.677Z",
   "torneoClave": "challenger|Lima 2",
@@ -27723,7 +27743,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T22:45:23.119Z",
+  "visto": "2026-11-10T23:45:23.134Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -27733,21 +27753,23 @@
   "score": {
    "games": [
     [
+     6,
      0
     ],
     [
-     1
+     4,
+     2
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
     "40",
-    "30"
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -30412,7 +30434,7 @@
    "ranking": 287
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T22:45:22.677Z",
   "torneoClave": "challenger|Sopo (Colombia) - Qualification",
@@ -30724,7 +30746,7 @@
    "ranking": 919
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T22:45:22.677Z",
   "torneoClave": "challenger|Sopo (Colombia) - Qualification",
@@ -33521,7 +33543,7 @@
    "ranking": null
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T22:45:23.119Z",
   "torneoClave": "challenger|Lima 2",
@@ -34037,7 +34059,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T22:45:22.677Z",
+  "visto": "2026-11-10T23:45:23.134Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -34048,22 +34070,24 @@
    "games": [
     [
      6,
-     1
+     4,
+     2
     ],
     [
      2,
-     0
+     6,
+     2
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "30",
-    "30"
+    "40",
+    "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
