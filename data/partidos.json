@@ -21930,41 +21930,57 @@
  },
  "216469": {
   "id": 216469,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T12:00:00Z",
+  "horario": "2026-11-10T12:40:00Z",
   "j1": {
    "id": 41514,
-   "nombre": "Cornea/ Wehnelt",
+   "nombre": "Cornea / Wehnelt",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44951,
-   "nombre": "Capitanio/ Haddorff",
+   "nombre": "Capitanio / Haddorff",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.507Z",
+  "visto": "2026-11-10T13:00:36.479Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216470": {
   "id": 216470,
@@ -22960,26 +22976,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T12:00:00Z",
+  "horario": "2026-11-10T12:10:00Z",
   "j1": {
-   "id": 960,
-   "nombre": "Mert Alkaya",
-   "pais": "tur",
-   "ranking": 321
-  },
-  "j2": {
    "id": 102,
    "nombre": "Eliakim Coulibaly",
    "pais": "civ",
-   "ranking": 339
+   "ranking": 342
+  },
+  "j2": {
+   "id": 960,
+   "nombre": "Mert Alkaya",
+   "pais": "tur",
+   "ranking": 319
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.507Z",
+  "visto": "2026-11-10T13:00:36.479Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6
+    ],
+    [
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "3",
+    "4"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216524": {
   "id": 216524,
@@ -23020,26 +23060,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T12:00:00Z",
+  "horario": "2026-11-10T12:10:00Z",
   "j1": {
    "id": 123,
    "nombre": "Federico Bondioli",
    "pais": "ita",
-   "ranking": 326
+   "ranking": 324
   },
   "j2": {
    "id": 514,
    "nombre": "Jonas Forejtek",
    "pais": "cze",
-   "ranking": 308
+   "ranking": 303
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.508Z",
+  "visto": "2026-11-10T13:00:36.479Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     1
+    ],
+    [
+     6,
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216526": {
   "id": 216526,
@@ -25144,7 +25210,7 @@
    "ranking": 565
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T12:00:39.530Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -25776,7 +25842,7 @@
    "ranking": 112
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T12:00:39.529Z",
   "torneoClave": "challenger|Orleans",
@@ -25892,7 +25958,7 @@
    "ranking": 127
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T12:00:39.530Z",
   "torneoClave": "challenger|Orleans",
@@ -31072,7 +31138,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T12:00:00Z",
+  "horario": "2026-11-10T12:10:00Z",
   "j1": {
    "id": 36,
    "nombre": "Alex Michelsen",
@@ -31086,9 +31152,36 @@
    "ranking": 54
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.257Z"
+  "visto": "2026-11-10T13:00:36.479Z",
+  "tier": null,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     2
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217720": {
   "id": 217720,
@@ -31099,23 +31192,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T12:00:00Z",
+  "horario": "2026-11-10T12:05:00Z",
   "j1": {
-   "id": 508,
-   "nombre": "Adrian Mannarino",
-   "pais": "fra",
-   "ranking": 59
-  },
-  "j2": {
    "id": 12,
    "nombre": "Alexander Shevchenko",
    "pais": "kaz",
    "ranking": 107
   },
+  "j2": {
+   "id": 508,
+   "nombre": "Adrian Mannarino",
+   "pais": "fra",
+   "ranking": 61
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.257Z"
+  "visto": "2026-11-10T13:00:36.479Z",
+  "tier": null,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     4
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217721": {
   "id": 217721,
@@ -31223,7 +31343,7 @@
    "ranking": 401
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T12:00:39.530Z",
   "tier": null,
@@ -31263,7 +31383,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T12:30:00Z",
+  "horario": "2026-11-10T11:55:00Z",
   "j1": {
    "id": 93,
    "nombre": "Remy Bertola",
@@ -31279,7 +31399,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T12:00:39.530Z",
+  "visto": "2026-11-10T13:00:36.479Z",
   "tier": null,
   "torneoId": "12861",
   "cubierto": false,
@@ -31287,21 +31407,23 @@
   "score": {
    "games": [
     [
+     6,
      1
     ],
     [
-     0
+     7,
+     2
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -31315,23 +31437,48 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T12:45:00Z",
+  "horario": "2026-11-10T12:20:00Z",
   "j1": {
-   "id": 1245,
-   "nombre": "O. Paldanius",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 1001,
    "nombre": "Raul Brancaccio",
    "pais": "ita",
-   "ranking": 221
+   "ranking": 222
+  },
+  "j2": {
+   "id": 1245,
+   "nombre": "Oskari Paldanius",
+   "pais": "fin",
+   "ranking": 625
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.508Z"
+  "visto": "2026-11-10T13:00:36.479Z",
+  "tier": null,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217726": {
   "id": 217726,
@@ -31450,23 +31597,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T12:00:00Z",
+  "horario": "2026-11-10T12:10:00Z",
   "j1": {
    "id": 314,
    "nombre": "Manas Dhamne",
    "pais": "ind",
-   "ranking": 391
+   "ranking": 388
   },
   "j2": {
    "id": 406,
-   "nombre": "P. Vives Marcos",
-   "pais": null,
-   "ranking": null
+   "nombre": "Pedro Vives Marcos",
+   "pais": "esp",
+   "ranking": 585
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.508Z"
+  "visto": "2026-11-10T13:00:36.479Z",
+  "tier": null,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     1
+    ],
+    [
+     6,
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218122": {
   "id": 218122,
@@ -31531,23 +31705,48 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T11:45:00Z",
+  "horario": "2026-11-10T12:30:00Z",
   "j1": {
    "id": 225,
    "nombre": "Mattia Bellucci",
    "pais": "ita",
-   "ranking": 66
+   "ranking": 62
   },
   "j2": {
    "id": 8750,
-   "nombre": "C. Rolland de Ravel",
-   "pais": null,
-   "ranking": null
+   "nombre": "Cosme Rolland de Ravel",
+   "pais": "fra",
+   "ranking": 576
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.508Z"
+  "visto": "2026-11-10T13:00:36.479Z",
+  "tier": null,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218228": {
   "id": 218228,
@@ -31558,23 +31757,48 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T11:30:00Z",
+  "horario": "2026-11-10T12:30:00Z",
   "j1": {
    "id": 674,
    "nombre": "Buvaysar Gadamauri",
    "pais": "bel",
-   "ranking": 266
+   "ranking": 269
   },
   "j2": {
    "id": 6145,
    "nombre": "Dušan Lajović",
    "pais": "srb",
-   "ranking": 163
+   "ranking": 158
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T11:00:39.508Z"
+  "visto": "2026-11-10T13:00:36.479Z",
+  "tier": null,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218229": {
   "id": 218229,
