@@ -9,7 +9,7 @@ import { ROOT, leerJSON, log } from './lib/util.mjs';
 
 const CONFIG = leerJSON('config.json', {});
 const SITIO = (CONFIG.sitio?.url || 'https://atodotenis.vercel.app').replace(/\/$/, '');
-const USUARIO = 'atodotenis.web';
+const USUARIO = 'atodotenis_web';
 const ESTADO = path.join(ROOT, 'data/instagram.json');
 const DIR_IMG = path.join(ROOT, 'static/ig');
 const MAX_POR_DIA = 2;          // publicaciones automáticas por día (UTC)
@@ -42,10 +42,15 @@ function hashtags(n) {
   return [...t].slice(0, 5).join(' ');
 }
 
+// Foto de la nota (Wikimedia Commons, licencia libre): solo si es buena y grande
+const fotoNota = (n) => (n.imagen?.url && (n.imagen.ancho || 0) >= 1200 ? n.imagen : null);
+
 function textoPublicacion(n) {
   const partes = [n.titulo, n.bajada];
   if (n.declaracion?.texto) partes.push(`«${n.declaracion.texto}» — ${n.declaracion.jugador}`);
   partes.push('La nota completa, en el link de la bio.');
+  const f = fotoNota(n);
+  if (f) partes.push(`Foto: ${f.credito || 'Wikimedia Commons'}.`);
   partes.push(hashtags(n));
   return partes.join('\n\n');
 }
@@ -55,7 +60,7 @@ function html(n) {
   const r = n.resultado || {};
   const sets = Array.isArray(r.sets) ? r.sets : [];
   const fila = (nombre, idx, gana) => `<div class="fila${gana ? '' : ' pierde'}"><span>${esc(apellido(nombre))}</span>${sets.map((s) => `<b>${esc(s[idx])}</b>`).join('')}</div>`;
-  const frase = n.declaracion?.texto && n.declaracion.texto.length < 150
+  const frase = n.declaracion?.texto && n.declaracion.texto.length < (fotoNota(n) ? 120 : 150)
     ? `<p class="cita">«${esc(n.declaracion.texto)}»<br><span>— ${esc(n.declaracion.jugador)}</span></p>`
     : `<p class="bajada">${esc(n.bajada)}</p>`;
   return `<!doctype html><html><head><meta charset="utf-8"><style>
@@ -65,22 +70,25 @@ function html(n) {
 @font-face{font-family:RC;font-weight:700;src:url(${fuentes('roboto-condensed/files/roboto-condensed-latin-700-normal.woff2')})}
 body{margin:0}
 #p{width:1080px;height:1350px;background:#12161B;color:#F2F4F5;font-family:Inter;position:relative;overflow:hidden}
+.foto{position:absolute;inset:0 0 auto 0;height:760px;background-size:cover;background-position:center 22%}
+.foto::after{content:'';position:absolute;left:0;right:0;bottom:0;height:260px;background:linear-gradient(rgba(18,22,27,0),#12161B)}
+.credito{position:absolute;right:24px;top:716px;font-size:18px;color:rgba(255,255,255,.75);z-index:2;max-width:700px;text-align:right}
 .cancha{position:absolute;inset:0 0 auto 0;height:520px;background:${n.superficie === 'clay' ? '#A8502C' : n.superficie === 'grass' ? '#2F6B4A' : '#2B5C8A'}}
 .chip{position:absolute;left:64px;top:56px;background:#C6F432;color:#12161B;font:800 30px Montserrat;padding:12px 20px;border-radius:10px;letter-spacing:.04em;text-transform:uppercase;max-width:620px}
 .marca{position:absolute;right:64px;top:62px;font:italic 900 40px Montserrat;letter-spacing:-.02em}.marca b{color:#C6F432}
 .cuerpo{position:absolute;left:64px;right:64px;top:560px}
 .tit{font:800 30px Montserrat;color:#C6F432;letter-spacing:.06em}
-.fila{display:flex;align-items:center;font:800 64px Montserrat;padding:16px 0;border-bottom:2px solid #2A3540}
+.fila{display:flex;align-items:center;font:800 58px Montserrat;padding:12px 0;border-bottom:2px solid #2A3540}
 .fila span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fila b{width:100px;text-align:center;font-family:RC;color:#C6F432}
 .fila.pierde{color:#9AA5B1;border:0}.fila.pierde b{color:#9AA5B1}
-.bajada,.cita{margin:44px 0 0;font-size:38px;line-height:1.35;color:#C9D1D9}
+.bajada,.cita{margin:26px 0 0;font-size:34px;line-height:1.35;color:#C9D1D9}
 .cita{font-size:40px;color:#F2F4F5}.cita span{font-size:30px;color:#9AA5B1}
 .pie{position:absolute;left:64px;right:64px;bottom:56px;display:flex;justify-content:space-between;font-size:30px;color:#9AA5B1}.pie b{font:800 30px Montserrat;color:#F2F4F5}
 </style></head><body><div id="p">
-<div class="cancha"><svg width="1080" height="520"><g fill="none" stroke="#fff" stroke-width="5" opacity=".28"><path d="M160 520 350 200h380l190 320"/><path d="M235 420h610M540 420V200M290 310h500"/></g></svg></div>
+${fotoNota(n) ? `<div class="foto" style="background-image:url('${esc(fotoNota(n).url)}')"></div><div class="credito">Foto: ${esc(fotoNota(n).credito || 'Wikimedia Commons')}</div>` : `<div class="cancha"><svg width="1080" height="520"><g fill="none" stroke="#fff" stroke-width="5" opacity=".28"><path d="M160 520 350 200h380l190 320"/><path d="M235 420h610M540 420V200M290 310h500"/></g></svg></div>`}
 <div class="chip">${esc(n.categoria || n.torneo || 'Tenis')}</div><div class="marca">A Todo <b>Tenis</b></div>
-<div class="cuerpo">${sets.length && r.ganador ? `<div class="tit">RESULTADO</div>${fila(r.ganador.nombre, 0, true)}${fila(r.perdedor?.nombre, 1, false)}` : `<div class="fila" style="font-size:56px;white-space:normal;border:0">${esc(n.titulo)}</div>`}
+<div class="cuerpo" style="top:${fotoNota(n) ? 770 : 560}px">${sets.length && r.ganador ? `<div class="tit">RESULTADO</div>${fila(r.ganador.nombre, 0, true)}${fila(r.perdedor?.nombre, 1, false)}` : `<div class="fila" style="font-size:56px;white-space:normal;border:0">${esc(n.titulo)}</div>`}
 ${frase}</div>
 <div class="pie"><span>La nota completa en el link de la bio</span><b>@${USUARIO}</b></div>
 </div></body></html>`;
@@ -100,7 +108,7 @@ async function preparar() {
   const p = await navegador.newPage({ viewport: { width: 1080, height: 1350 } });
   const tmp = path.join(ROOT, 'node_modules', '.ig-tarjeta.html');
   fs.writeFileSync(tmp, html(n));
-  await p.goto('file://' + tmp, { waitUntil: 'load' });
+  await p.goto('file://' + tmp, { waitUntil: 'networkidle', timeout: 60000 }).catch(() => null);
   await p.evaluate(async () => { await Promise.all([...document.fonts].map((f) => f.load().catch(() => null))); await document.fonts.ready; });
   fs.mkdirSync(DIR_IMG, { recursive: true });
   await p.locator('#p').screenshot({ path: path.join(DIR_IMG, `${n.slug}.jpg`), type: 'jpeg', quality: 92 });
