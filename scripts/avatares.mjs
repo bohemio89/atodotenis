@@ -46,7 +46,7 @@ async function buscar(nombre) {
 
 async function main() {
   const top = ['atp', 'wta'].flatMap((t) => Object.values(jugadores.lista).filter((j) => j.tour === t).sort((a, b) => a.ranking - b.ranking).slice(0, TOP));
-  const pendientes = top.filter((j) => { const a = avatares[j.nombre]; return !a || Date.now() - new Date(a.revisado || 0).getTime() > RENOVAR_DIAS * 864e5; })
+  const pendientes = top.filter((j) => { const a = avatares[j.nombre]; if (a?.manual) return false; return !a || Date.now() - new Date(a.revisado || 0).getTime() > RENOVAR_DIAS * 864e5; })
     .slice(0, MAX_POR_CORRIDA);
   let con = 0;
   for (const j of pendientes) {

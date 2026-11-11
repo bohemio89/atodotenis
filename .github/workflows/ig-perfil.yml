@@ -1,4 +1,4 @@
-name: Instagram - revisar perfil y foto faltante
+name: Instagram - revisar perfil y bajar foto
 on: workflow_dispatch
 permissions: { contents: write }
 jobs:
@@ -12,9 +12,10 @@ jobs:
       - env:
           INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
         run: node scripts/instagram.mjs perfil
-      - name: Buscar foto de Mirra Andreeva en Wikimedia Commons
+      - name: Foto de Mirra Andreeva (Wikimedia Commons, Hameltion, CC BY-SA 4.0)
         run: |
-          node -e '
-          (async()=>{const u="https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrsearch=%22Mirra%20Andreeva%22&gsrlimit=20&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=1200";
-          const j=await (await fetch(u,{headers:{"User-Agent":"ATodoTenis/1.0 (https://atodotenis.vercel.app)"}})).json();
-          for(const p of Object.values(j.query?.pages||{})){const i=p.imageinfo[0];const m=i.extmetadata||{};console.log("FOTO",JSON.stringify({t:p.title,w:i.width,h:i.height,thumb:i.thumburl,lic:m.LicenseShortName?.value,autor:(m.Artist?.value||"").replace(/<[^>]+>/g,"").slice(0,60),fecha:(m.DateTimeOriginal?.value||"").replace(/<[^>]+>/g,"").slice(0,20)}));}})()'
+          UA="ATodoTenis/1.0 (https://atodotenis.vercel.app)"
+          curl -fsSL -A "$UA" -o static/ig/fotos/mirra-andreeva.jpg "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Mirra_Andreeva_%282023_US_Open%29_10_%28cropped%29.jpg/500px-Mirra_Andreeva_%282023_US_Open%29_10_%28cropped%29.jpg"
+          file static/ig/fotos/mirra-andreeva.jpg
+          git config user.name "A Todo Tenis" && git config user.email "actions@users.noreply.github.com"
+          git add static/ig/fotos && git commit -m "Foto de Mirra Andreeva" && git push || true
