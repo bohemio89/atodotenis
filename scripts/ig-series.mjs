@@ -35,7 +35,7 @@ async function ranking() {
   const atp = top('atp'), wta = top('wta');
   if (atp.length < 10 || wta.length < 10) { log('Ranking incompleto, no se arma.'); return null; }
   const fecha = `${ahora.getUTCDate()} de ${MESES[ahora.getUTCMonth()]}`;
-  const [f1, f2] = [await fotoJugador(atp[0].nombre), await fotoJugador(wta[0].nombre)];
+  const [f1, f2] = [await fotoJugador(atp[0].nombre, 1280), await fotoJugador(wta[0].nombre, 1280)];
   const mitad = (foto, tour, j) => `<div style="position:relative;flex:1;height:820px;border-radius:22px;overflow:hidden;background:#1B222A url('${foto}') ${focoJugador(j.nombre)}/cover">
     <div style="position:absolute;inset:auto 0 0 0;padding:120px 32px 30px;background:linear-gradient(rgba(18,22,27,0),#12161B 70%)">
     <div style="font:800 30px Montserrat" class="lima">N° 1 ${tour}</div><div style="font:800 52px/1.05 Montserrat">${esc(j.nombre)}</div>
@@ -83,7 +83,7 @@ async function efemeride() {
   const anio = e.fecha.slice(0, 4);
   const hace = ahora.getUTCFullYear() - Number(anio);
   const nombres = (e.texto.match(/[A-ZÁÉÍÓÚ][a-záéíóúñ]+ (?:[A-Z][a-z]+ )?[A-ZÁÉÍÓÚ][a-záéíóúñ]+/g) || []).slice(0, 2);
-  const foto = nombres[0] ? await fotoJugador(nombres[0]) : null;
+  const foto = nombres[0] ? await fotoJugador(nombres[0], 1280) : null;
   const fechaTxt = `${Number(e.fecha.slice(8))} de ${MESES[Number(e.fecha.slice(5, 7)) - 1]} de ${anio} · hace ${hace} años`;
   const placa = foto
     ? `<div class="s"><div style="position:absolute;inset:0 0 auto 0;height:860px;background:url('${foto}') ${focoJugador(nombres[0])}/cover"></div>
@@ -119,7 +119,7 @@ async function campeones() {
   if (!filas.length) return null;
   filas.sort((a, b) => (orden.indexOf(a.cat) + 99) % 99 - (orden.indexOf(b.cat) + 99) % 99);
   const elegidos = filas.slice(0, 6);
-  const fotosC = []; for (const f of elegidos) fotosC.push(await fotoJugador(f.campeon));
+  const fotosC = []; for (const f of elegidos) fotosC.push(await fotoJugador(f.campeon, 1280));
   const n = elegidos.length;
   const placas = [];
   for (const [k, f] of elegidos.entries()) {

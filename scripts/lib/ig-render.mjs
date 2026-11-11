@@ -15,8 +15,11 @@ const esJPEG = (b) => b && b.length > 8000 && b[0] === 0xff && b[1] === 0xd8;
 export function focoJugador(nombre) {
   try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/avatares.json'), 'utf8'))[nombre]?.foco || 'center 18%'; } catch { return 'center 18%'; }
 }
-export async function fotoJugador(nombre) {
-  const local = path.join(DIR_FOTOS, `${slug(nombre)}.jpg`);
+export async function fotoJugador(nombre, ancho = 500) {
+  if (ancho > 500) { const g = await fotoJugador(nombre + '\u0000' + ancho); if (g) return g; }
+  const [nom, px] = nombre.split('\u0000');
+  nombre = nom;
+  const local = path.join(DIR_FOTOS, `${slug(nombre)}${px ? '-' + px : ''}.jpg`);
   if (!fs.existsSync(local)) {
     const archivoAv = path.join(ROOT, 'data/avatares.json');
     let todos = {};
@@ -29,7 +32,7 @@ export async function fotoJugador(nombre) {
       av = todos[nombre] = { ...f, revisado: new Date().toISOString() };
       fs.writeFileSync(archivoAv, JSON.stringify(todos, null, 1) + '\n');
     }
-    const url = av.url.replace(/\/\d+px-/, '/500px-');
+    const url = av.url.replace(/\/\d+px-/, `/${px || 500}px-`);
     try {
       const r = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
       const b = r.ok ? Buffer.from(await r.arrayBuffer()) : null;
