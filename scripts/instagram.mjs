@@ -15,7 +15,10 @@ const DIR_IMG = path.join(ROOT, 'static/ig');
 const MAX_POR_DIA = 2;          // publicaciones automáticas por día (UTC)
 const HORAS_ENTRE = 4;          // separación mínima entre dos publicaciones
 const HORAS_NOTA = 30;          // solo notas recientes
-const API = 'https://graph.instagram.com/v25.0';
+// Token de Instagram (IGAA…) → graph.instagram.com; token de usuario del sistema de Meta (EAA…) → graph.facebook.com
+const TOKEN = (process.env.INSTAGRAM_TOKEN || '').trim();
+const API = TOKEN.startsWith('EAA') ? 'https://graph.facebook.com/v25.0' : 'https://graph.instagram.com/v25.0';
+const IG_ID = process.env.INSTAGRAM_ID || '17841445997391293'; // cuenta @atodotenis_web
 
 const leerEstado = () => { try { return JSON.parse(fs.readFileSync(ESTADO, 'utf8')); } catch { return { publicadas: [], pendiente: null }; } };
 const guardarEstado = (e) => fs.writeFileSync(ESTADO, JSON.stringify(e, null, 2) + '\n');
@@ -108,7 +111,7 @@ async function preparar() {
 }
 
 async function api(ruta, opciones = {}) {
-  const r = await fetch(`${API}/${ruta}`, { ...opciones, headers: { Authorization: `Bearer ${process.env.INSTAGRAM_TOKEN}`, 'Content-Type': 'application/json', ...(opciones.headers || {}) }, signal: AbortSignal.timeout(60000) });
+  const r = await fetch(`${API}/${ruta}`, { ...opciones, headers: { Authorization: `Bearer ${TOKEN}`, 'Content-Type': 'application/json', ...(opciones.headers || {}) }, signal: AbortSignal.timeout(60000) });
   const j = await r.json().catch(() => ({}));
   if (!r.ok || j.error) throw new Error(j.error?.message || `HTTP ${r.status}`);
   return j;
@@ -126,7 +129,7 @@ async function publicar() {
   // La imagen tiene que estar online (Vercel la publica después del commit)
   const online = await fetch(e.pendiente.imagen, { method: 'HEAD' }).then((r) => r.ok && /image/.test(r.headers.get('content-type') || '')).catch(() => false);
   if (!online) { log('La imagen todavía no está online; se publica en la próxima corrida.'); return; }
-  const yo = await api('me?fields=user_id,username');
+  const yo = await api(`${IG_ID}?fields=id,username`).then((x) => ({ user_id: x.id, username: x.username }));
   const contenedor = await api(`${yo.user_id}/media`, { method: 'POST', body: JSON.stringify({ image_url: e.pendiente.imagen, caption: e.pendiente.texto, alt_text: e.pendiente.texto.split('\n')[0] }) });
   for (let i = 0; i < 10; i++) {
     const s = await api(`${contenedor.id}?fields=status_code`);
