@@ -19804,41 +19804,57 @@
  },
  "216392": {
   "id": 216392,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Stockholm",
   "ronda": "ATP Stockholm - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T13:30:00Z",
+  "horario": "2026-11-11T13:40:00Z",
   "j1": {
    "id": 11266,
-   "nombre": "Rojer/ Winegar",
+   "nombre": "Rojer / Theodore Winegar",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "usa"
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44944,
-   "nombre": "Rejchtman Vinciguerra/ Wallin",
+   "nombre": "Wallin / William Rejchtman Vinciguerra",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "swe",
-    "swe"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:24.705Z",
+  "visto": "2026-11-11T13:45:23.722Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1686",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216398": {
   "id": 216398,
@@ -22104,41 +22120,57 @@
  },
  "216463": {
   "id": 216463,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T12:40:00Z",
+  "horario": "2026-11-11T13:40:00Z",
   "j1": {
    "id": 22193,
-   "nombre": "Bertola/ Geerts",
+   "nombre": "Bertola / Geerts",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 29141,
-   "nombre": "Kontopoulos/ Mitalas",
+   "nombre": "Kontopoulos / Mitalas",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T13:45:23.722Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216464": {
   "id": 216464,
@@ -22311,7 +22343,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T12:45:24.120Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -22702,41 +22734,57 @@
  },
  "216475": {
   "id": 216475,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Orleans",
   "ronda": "Orleans - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T13:00:00Z",
+  "horario": "2026-11-11T13:10:00Z",
   "j1": {
-   "id": 44958,
-   "nombre": "Latinovic/ Molchanov",
+   "id": 5266,
+   "nombre": "Andrew Paulson / Milos Karol",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 5266,
-   "nombre": "Karol/ Paulson",
+   "id": 44958,
+   "nombre": "Latinovic / Molchanov",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T13:45:23.722Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2424",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216476": {
   "id": 216476,
@@ -22955,7 +23003,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T12:45:24.120Z",
   "torneoClave": "challenger|Orleans",
@@ -23750,7 +23798,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T12:45:24.121Z",
+  "visto": "2026-11-11T13:45:23.722Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
   "importante": false,
@@ -23761,20 +23809,22 @@
    "games": [
     [
      6,
-     0
+     4,
+     3
     ],
     [
      3,
-     1
+     6,
+     2
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "15",
-    "15"
+    "40",
+    "30"
    ],
    "saca": 1
   },
@@ -31472,9 +31522,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-11T12:45:24.120Z",
+  "visto": "2026-11-11T13:45:23.896Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -31484,14 +31534,16 @@
   "score": {
    "games": [
     [
+     7,
      6
     ],
     [
-     6
+     6,
+     3
     ]
    ],
    "sets": [
-    0,
+    2,
     0
    ],
    "puntos": [
@@ -31500,8 +31552,8 @@
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "217226": {
   "id": 217226,
@@ -35924,7 +35976,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T12:45:24.121Z",
+  "visto": "2026-11-11T13:45:23.722Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -35934,21 +35986,23 @@
   "score": {
    "games": [
     [
+     7,
      4
     ],
     [
-     3
+     6,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "15",
-    "40"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -35978,7 +36032,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T12:45:24.120Z",
+  "visto": "2026-11-11T13:45:23.722Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
   "importante": false,
@@ -35988,21 +36042,23 @@
   "score": {
    "games": [
     [
+     5,
      4
     ],
     [
-     3
+     7,
+     6
     ]
    ],
    "sets": [
     0,
-    0
+    2
    ],
    "puntos": [
     "0",
-    "30"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -36234,26 +36290,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T11:30:00Z",
+  "horario": "2026-11-11T12:50:00Z",
   "j1": {
-   "id": 674,
-   "nombre": "Buvaysar Gadamauri",
-   "pais": "bel",
-   "ranking": 266
-  },
-  "j2": {
    "id": 104,
    "nombre": "Daniel Altmaier",
    "pais": "ger",
-   "ranking": 63
+   "ranking": 73
+  },
+  "j2": {
+   "id": 674,
+   "nombre": "Buvaysar Gadamauri",
+   "pais": "bel",
+   "ranking": 269
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T13:45:23.722Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     3
+    ],
+    [
+     6,
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218912": {
   "id": 218912,
@@ -36366,7 +36448,7 @@
    "ranking": 585
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T12:45:24.120Z",
   "torneoClave": "challenger|Monastir",
