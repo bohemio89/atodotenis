@@ -22071,7 +22071,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T11:45:25.708Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -22290,41 +22290,57 @@
  },
  "216467": {
   "id": 216467,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T11:10:00Z",
+  "horario": "2026-11-11T12:05:00Z",
   "j1": {
    "id": 1481,
-   "nombre": "Tsitsipas/ Tsitsipas",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "nombre": "Petros Tsitsipas / Stefanos Tsitsipas",
+   "pais": "grc",
+   "ranking": null
   },
   "j2": {
    "id": 44949,
-   "nombre": "Kravchenko/ Mashtakov",
+   "nombre": "Kravchenko / Mashtakov",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T12:45:24.120Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216468": {
   "id": 216468,
@@ -22349,7 +22365,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T11:45:25.708Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -22941,7 +22957,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T11:45:25.708Z",
+  "visto": "2026-11-11T12:45:24.120Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
   "importante": false,
@@ -22951,21 +22967,25 @@
   "score": {
    "games": [
     [
-     2
+     7,
+     4,
+     4
     ],
     [
-     5
+     6,
+     6,
+     1
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "30",
-    "15"
+    "4",
+    "1"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -23716,24 +23736,50 @@
   "genero": "men",
   "horario": "2026-11-11T12:10:00Z",
   "j1": {
-   "id": 586,
-   "nombre": "Kilian Feldbausch",
-   "pais": "sui",
-   "ranking": 262
-  },
-  "j2": {
    "id": 516,
    "nombre": "Tiago Pereira",
    "pais": "por",
-   "ranking": 318
+   "ranking": 317
+  },
+  "j2": {
+   "id": 586,
+   "nombre": "Kilian Feldbausch",
+   "pais": "sui",
+   "ranking": 238
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T12:45:24.121Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216527": {
   "id": 216527,
@@ -26644,7 +26690,7 @@
    "ranking": 118
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T11:45:25.708Z",
   "torneoClave": "challenger|Orleans",
@@ -31405,7 +31451,7 @@
  },
  "217225": {
   "id": 217225,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Stockholm",
   "ronda": "ATP Stockholm - Quarter-finals",
   "rondaCod": "QF",
@@ -31415,31 +31461,47 @@
   "horario": "2026-11-11T12:10:00Z",
   "j1": {
    "id": 1337,
-   "nombre": "Pavlasek/ Rikl",
+   "nombre": "Adam Pavlasek / Patrik Rikl",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "cze"
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 14236,
-   "nombre": "Arends/ Johnson",
+   "nombre": "Arends / Johnson",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "ned",
-    "usa"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:24.705Z",
+  "visto": "2026-11-11T12:45:24.120Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1686",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6
+    ],
+    [
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "217226": {
   "id": 217226,
@@ -35576,7 +35638,7 @@
    "ranking": 356
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T11:45:25.707Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -35848,24 +35910,48 @@
   "genero": "men",
   "horario": "2026-11-11T12:10:00Z",
   "j1": {
-   "id": 884,
-   "nombre": "Lorenzo Sonego",
-   "pais": "ita",
-   "ranking": 106
-  },
-  "j2": {
    "id": 35,
    "nombre": "Alejandro Tabilo",
    "pais": "chi",
-   "ranking": 30
+   "ranking": 31
+  },
+  "j2": {
+   "id": 884,
+   "nombre": "Lorenzo Sonego",
+   "pais": "ita",
+   "ranking": 115
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:24.705Z",
+  "visto": "2026-11-11T12:45:24.121Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218838": {
   "id": 218838,
@@ -35881,21 +35967,45 @@
    "id": 102,
    "nombre": "Eliakim Coulibaly",
    "pais": "civ",
-   "ranking": 339
+   "ranking": 342
   },
   "j2": {
    "id": 1259,
    "nombre": "Luka Mikrut",
    "pais": "cro",
-   "ranking": 251
+   "ranking": 255
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T12:45:24.120Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218839": {
   "id": 218839,
@@ -36247,21 +36357,47 @@
    "id": 217,
    "nombre": "Jay Clarke",
    "pais": "gbr",
-   "ranking": 241
+   "ranking": 243
   },
   "j2": {
    "id": 406,
-   "nombre": "P. Vives Marcos",
-   "pais": null,
-   "ranking": null
+   "nombre": "Pedro Vives Marcos",
+   "pais": "esp",
+   "ranking": 585
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T12:45:24.120Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218992": {
   "id": 218992,
