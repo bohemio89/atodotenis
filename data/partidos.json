@@ -8335,7 +8335,7 @@
  },
  "215403": {
   "id": 215403,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
@@ -8356,9 +8356,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-11T02:45:23.078Z",
+  "visto": "2026-11-11T03:45:23.608Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8369,25 +8369,27 @@
    "games": [
     [
      6,
-     0
+     2,
+     7
     ],
     [
      3,
-     2
+     6,
+     10
     ]
    ],
    "sets": [
     1,
-    0
+    2
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "215404": {
   "id": 215404,
@@ -18721,7 +18723,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T02:45:23.186Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -18815,7 +18817,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T02:45:23.186Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -18944,41 +18946,57 @@
  },
  "216371": {
   "id": 216371,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Brisbane 3",
   "ronda": "Brisbane 3 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T03:20:00Z",
+  "horario": "2026-11-11T03:25:00Z",
   "j1": {
    "id": 1654,
-   "nombre": "Santillan/ Zheng",
+   "nombre": "Akira Santillan / Michael Zheng",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 41808,
-   "nombre": "Ellis/ Tu",
+   "nombre": "Ellis / Tu",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T02:45:23.186Z",
+  "visto": "2026-11-11T03:45:23.184Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13458",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216372": {
   "id": 216372,
@@ -19003,7 +19021,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T02:45:23.186Z",
   "torneoClave": "challenger|Matsuyama",
@@ -19275,7 +19293,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T02:45:23.186Z",
   "torneoClave": "challenger|Matsuyama",
@@ -27331,7 +27349,7 @@
    "ranking": 305
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T02:45:23.186Z",
   "torneoClave": "challenger|Knoxville",
@@ -33445,7 +33463,7 @@
    "ranking": 328
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T02:45:23.186Z",
   "torneoClave": "challenger|Lima 2",
@@ -34457,7 +34475,7 @@
    "ranking": 256
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T02:45:23.186Z",
   "torneoClave": "challenger|Matsuyama",
@@ -34635,32 +34653,56 @@
  "218693": {
   "id": 218693,
   "tour": "challenger",
-  "torneo": "Matsuyama",
-  "ronda": "Matsuyama - 1/8-finals",
+  "torneo": "Matsuyama, Japan",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T03:30:00Z",
+  "horario": "2026-11-11T03:35:00Z",
   "j1": {
    "id": 211,
    "nombre": "Josef Schwaerzler Joel",
    "pais": "aut",
-   "ranking": 172
+   "ranking": 169
   },
   "j2": {
    "id": 469,
    "nombre": "Kaichi Uchida",
    "pais": "jpn",
-   "ranking": 401
+   "ranking": 431
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T02:45:23.186Z",
+  "visto": "2026-11-11T03:45:23.184Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218694": {
   "id": 218694,
@@ -34779,62 +34821,112 @@
  "218698": {
   "id": 218698,
   "tour": "challenger",
-  "torneo": "Brisbane 3",
-  "ronda": "Brisbane 3 - 1/8-finals",
+  "torneo": "Brisbane 3, Australia",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T02:35:00Z",
+  "horario": "2026-11-11T02:50:00Z",
   "j1": {
-   "id": 1104,
-   "nombre": "Bernard Tomic",
-   "pais": "aus",
-   "ranking": 181
-  },
-  "j2": {
    "id": 481,
    "nombre": "Omar Jasika",
    "pais": "aus",
-   "ranking": 329
+   "ranking": 301
+  },
+  "j2": {
+   "id": 1104,
+   "nombre": "Bernard Tomic",
+   "pais": "aus",
+   "ranking": 176
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T02:45:23.186Z",
+  "visto": "2026-11-11T03:45:23.184Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     7,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218700": {
   "id": 218700,
   "tour": "challenger",
-  "torneo": "Matsuyama",
-  "ronda": "Matsuyama - 1/8-finals",
+  "torneo": "Matsuyama, Japan",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T03:30:00Z",
+  "horario": "2026-11-11T03:45:00Z",
   "j1": {
    "id": 77,
    "nombre": "Yu-Hsiou Hsu",
    "pais": "tai",
-   "ranking": 304
+   "ranking": 312
   },
   "j2": {
    "id": 1255,
    "nombre": "Niels McDonald",
    "pais": "ger",
-   "ranking": 477
+   "ranking": 472
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T02:45:23.186Z",
+  "visto": "2026-11-11T03:45:23.184Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218701": {
   "id": 218701,
