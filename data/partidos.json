@@ -8335,41 +8335,57 @@
  },
  "215403": {
   "id": 215403,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-11T00:45:00Z",
+  "horario": "2026-11-11T01:50:00Z",
   "j1": {
    "id": 1430,
-   "nombre": "Bucsa/ Melichar-Martinez",
+   "nombre": "Cristina Bucsa / Nicole Melichar-Martinez",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "esp",
-    "usa"
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 10106,
-   "nombre": "Errani/ Paolini",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "sui",
-    "ita"
-   ]
+   "nombre": "Errani / Paolini",
+   "pais": "ita",
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T22:45:22.965Z",
+  "visto": "2026-11-11T01:45:21.423Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Finals - Riyadh"
+  "torneoClave": "wta|Finals - Riyadh",
+  "torneoId": "3190",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": null
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215404": {
   "id": 215404,
@@ -8622,9 +8638,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-11T00:45:23.434Z",
+  "visto": "2026-11-11T01:45:21.558Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8634,24 +8650,26 @@
   "score": {
    "games": [
     [
-     6
+     6,
+     3
     ],
     [
-     5
+     7,
+     6
     ]
    ],
    "sets": [
     0,
-    0
+    2
    ],
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "215411": {
   "id": 215411,
@@ -18853,7 +18871,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T00:45:23.434Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -26963,7 +26981,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T00:45:23.434Z",
+  "visto": "2026-11-11T01:45:21.423Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -26973,19 +26991,21 @@
   "score": {
    "games": [
     [
-     4
+     6,
+     2
     ],
     [
-     2
+     7,
+     1
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "30",
-    "15"
+    "40",
+    "40"
    ],
    "saca": 2
   },
@@ -27783,7 +27803,7 @@
    "ranking": 200
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T00:45:23.434Z",
   "torneoClave": "challenger|Lima 2",
@@ -33315,26 +33335,50 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T00:00:00Z",
+  "horario": "2026-11-11T01:25:00Z",
   "j1": {
    "id": 139,
    "nombre": "Gonzalo Bueno",
    "pais": "per",
-   "ranking": 198
+   "ranking": 184
   },
   "j2": {
    "id": 558,
    "nombre": "Carlos Sanchez Jover",
    "pais": "esp",
-   "ranking": 331
+   "ranking": 328
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T22:45:23.119Z",
+  "visto": "2026-11-11T01:45:21.423Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218301": {
   "id": 218301,
@@ -34577,7 +34621,7 @@
    "ranking": 403
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T00:45:23.434Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -35538,7 +35582,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T00:45:23.434Z",
+  "visto": "2026-11-11T01:45:21.423Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -35549,22 +35593,24 @@
    "games": [
     [
      1,
-     0
+     6,
+     2
     ],
     [
      6,
-     0
+     4,
+     3
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
