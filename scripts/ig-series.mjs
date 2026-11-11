@@ -70,7 +70,7 @@ async function ranking() {
     'El ranking completo, en el link de la bio.',
     ['#tenis', '#tennis', '#ranking', tag(atp[0].nombre), tag(wta[0].nombre)].join(' '),
   ].filter(Boolean).join('\n\n');
-  return { id: `ranking-${semanaISO(ahora)}`, placas, texto, vence: masDias(2) };
+  return { id: `ranking-${semanaISO(ahora)}`, placas, texto, vence: masDias(2), prioridad: 1 };
 }
 
 // ---------- Un día como hoy ----------
@@ -99,7 +99,7 @@ async function efemeride() {
       <p style="margin:0;font:800 58px/1.15 Montserrat;letter-spacing:-.01em">${esc(e.texto)}</p></div>
       ${pie('Efemérides del tenis', '@atodotenis_web')}</div>`;
   const texto = [`Un día como hoy, hace ${hace} años.`, e.texto, '¿Lo viste en vivo?', ['#tenis', '#tennis', '#undiacomohoy', ...nombres.map(tag)].slice(0, 5).join(' ')].join('\n\n');
-  return { id: `efemeride-${hoyISO}`, placas: [placa], texto, vence: `${hoyISO}T23:59:00Z` };
+  return { id: `efemeride-${hoyISO}`, placas: [placa], texto, vence: `${hoyISO}T23:59:00Z`, prioridad: 4 };
 }
 
 // ---------- Campeones de la semana ----------
@@ -143,7 +143,7 @@ async function campeones() {
     '¿Cuál de estos títulos te sorprendió?',
     ['#tenis', '#tennis', '#ATP', '#WTA', tag(primero.campeon)].join(' '),
   ].join('\n\n');
-  return { id: `campeones-${semanaISO(ahora)}`, placas, texto, vence: masDias(1) };
+  return { id: `campeones-${semanaISO(ahora)}`, placas, texto, vence: masDias(1), prioridad: 3 };
 }
 
 // ---------- Qué toca ahora ----------
@@ -177,7 +177,7 @@ for (const nombre of forzada ? [forzada] : tocan()) {
   const archivos = pieza.placas.map((_, i) => path.join(ROOT, PRUEBA ? 'static/ig/prueba' : 'static/ig/series', `${pieza.id}-${i + 1}.jpg`));
   if (!(await dibujar(pieza.placas, archivos))) { log('Serie descartada por imágenes:', pieza.id); continue; }
   if (PRUEBA) { log('Prueba dibujada:', pieza.id); continue; }
-  cola.push({ id: pieza.id, imagenes: archivos.map((a) => `${SITIO}/ig/series/${path.basename(a)}`), texto: pieza.texto, vence: pieza.vence });
+  cola.push({ id: pieza.id, prioridad: pieza.prioridad, imagenes: archivos.map((a) => `${SITIO}/ig/series/${path.basename(a)}`), texto: pieza.texto, vence: pieza.vence });
   fs.writeFileSync(COLA, JSON.stringify(cola, null, 1) + '\n');
   log('Serie lista para Instagram:', pieza.id);
 }

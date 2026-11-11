@@ -202,7 +202,8 @@ async function publicar() {
 async function carruseles() {
   if (!TOKEN) { log('Falta INSTAGRAM_TOKEN.'); return; }
   const archivo = path.join(ROOT, 'data/ig-carruseles.json');
-  const cola = JSON.parse(fs.readFileSync(archivo, 'utf8'));
+  // Orden de salida: lo más importante primero (ranking 1, carruseles especiales 2, campeones 3, efeméride 4)
+  const cola = JSON.parse(fs.readFileSync(archivo, 'utf8')).sort((a, b) => (a.prioridad ?? 2) - (b.prioridad ?? 2));
   const e = leerEstado();
   const yo = await api(`${IG_ID}?fields=id,username`);
   log('Cuenta:', yo.username);
