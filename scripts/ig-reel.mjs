@@ -53,6 +53,6 @@ guion.escenas.forEach((e, i) => {
 const lista = path.join(tmp, 'lista.txt');
 fs.writeFileSync(lista, partes.map((x) => `file '${x}'`).join('\n'));
 fs.mkdirSync(path.dirname(path.resolve(salida)), { recursive: true });
-execFileSync('ffmpeg', ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lista, '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-r', String(FPS), path.resolve(salida)]);
+execFileSync('ffmpeg', ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lista, '-c:v', 'libx264', '-preset', 'veryfast', '-crf', process.env.REEL_CRF || '20', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-r', String(FPS), path.resolve(salida)]);
 fs.rmSync(tmp, { recursive: true, force: true });
 log('Reel listo:', salida);

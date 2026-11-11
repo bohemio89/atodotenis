@@ -465,6 +465,23 @@ escribir('ranking.html', pagina({ titulo: 'Ranking ATP y WTA', descripcion: 'Ran
 <p class="meta" style="margin-top:10px">Fotos de los jugadores: Wikimedia Commons, con licencia libre (<a href="/creditos" style="text-decoration:underline">ver créditos</a>).</p></div>` }));
 
 const argRank = (tour) => rankingDe(tour).filter((j) => j.pais === ARG).slice(0, 30);
+// Bandeja de videos para TikTok (página interna, sin indexar y fuera del menú y del sitemap)
+if (!EN) {
+  const tt = leerJSON('data/tiktok.json', { videos: [] }).videos || [];
+  const items = tt.map((v, i) => `<section style="border-top:1px solid #2a323c;padding:18px 0">
+<p style="margin:0 0 8px;color:#9AA5B1;font-size:14px">${esc(new Date(v.fecha).toLocaleString('es-AR', { timeZone: 'Asia/Jerusalem', dateStyle: 'medium', timeStyle: 'short' }))} (hora de Israel)</p>
+<video src="/${esc(v.video)}" controls playsinline preload="metadata" style="width:100%;max-width:360px;border-radius:12px;background:#000"></video>
+<p><a href="/${esc(v.video)}" download style="display:inline-block;background:#C6F432;color:#12161B;font-weight:800;padding:10px 16px;border-radius:10px;text-decoration:none">Descargar video</a></p>
+<textarea id="t${i}" readonly rows="5" style="width:100%;max-width:520px;font:15px Inter,sans-serif;padding:10px;border-radius:10px">${esc(v.texto)}</textarea>
+<p><button type="button" data-copiar="t${i}" style="font-weight:700;padding:8px 14px;border-radius:10px">Copiar texto</button></p></section>`).join('');
+  fs.mkdirSync(DIST, { recursive: true });
+  fs.writeFileSync(path.join(DIST, 'tiktok.html'), `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Videos para TikTok · A Todo Tenis</title></head>
+<body style="margin:0;background:#12161B;color:#F2F4F5;font-family:Inter,system-ui,sans-serif"><main style="max-width:640px;margin:0 auto;padding:20px">
+<h1 style="font-size:24px">Videos para TikTok</h1><p style="color:#9AA5B1">Descargá el video, copiá el texto y programalo en TikTok Studio con un sonido en tendencia. Los videos se borran a los 10 días.</p>
+${items || '<p>Todavía no hay videos nuevos.</p>'}</main>
+<script>document.querySelectorAll('[data-copiar]').forEach(function(b){b.addEventListener('click',function(){var t=document.getElementById(b.getAttribute('data-copiar'));t.select();navigator.clipboard?navigator.clipboard.writeText(t.value):document.execCommand('copy');b.textContent='Copiado'})})</script></body></html>`);
+}
+
 escribir('acerca.html', pagina({ titulo: 'Acerca del sitio', ruta: '/acerca', cuerpo: `
 <article class="nota"><h1>Acerca de A Todo Tenis</h1><div class="cuerpo">${EN ? `
 <p>A Todo Tenis is a new site about world tennis. It follows the ATP, WTA and Challenger tours, the Davis Cup and the Billie Jean King Cup in real time.</p>
