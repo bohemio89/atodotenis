@@ -157,12 +157,14 @@ function tocan() {
 
 const cola = leer('data/ig-carruseles.json', []);
 const forzada = process.argv[2];
+const PRUEBA = process.argv[3] === 'prueba'; // dibuja en static/ig/prueba y no lo manda a la cola
 for (const nombre of forzada ? [forzada] : tocan()) {
   const pieza = await SERIES[nombre]?.();
   if (!pieza) continue;
   if (cola.some((c) => c.id === pieza.id)) continue;
-  const archivos = pieza.placas.map((_, i) => path.join(ROOT, 'static/ig/series', `${pieza.id}-${i + 1}.jpg`));
+  const archivos = pieza.placas.map((_, i) => path.join(ROOT, PRUEBA ? 'static/ig/prueba' : 'static/ig/series', `${pieza.id}-${i + 1}.jpg`));
   if (!(await dibujar(pieza.placas, archivos))) { log('Serie descartada por imágenes:', pieza.id); continue; }
+  if (PRUEBA) { log('Prueba dibujada:', pieza.id); continue; }
   cola.push({ id: pieza.id, imagenes: archivos.map((a) => `${SITIO}/ig/series/${path.basename(a)}`), texto: pieza.texto, vence: pieza.vence });
   fs.writeFileSync(COLA, JSON.stringify(cola, null, 1) + '\n');
   log('Serie lista para Instagram:', pieza.id);
