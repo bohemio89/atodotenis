@@ -25,6 +25,8 @@ export async function fotoJugador(nombre, ancho = 500) {
     let todos = {};
     try { todos = JSON.parse(fs.readFileSync(archivoAv, 'utf8')); } catch {}
     let av = todos[nombre] || {};
+    // Primero, la foto elegida a mano para Instagram (scripts/ig-fotos.json), si existe
+    try { const elegida = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/ig-fotos.json'), 'utf8'))[slug(nombre)]; if (elegida?.url) av = { ...av, url: elegida.url }; } catch {}
     // Sin foto conocida: se busca en Commons y se guarda con su crédito (aparece en /creditos del sitio)
     if (!av.url) {
       const f = await buscar(nombre).catch(() => null);
