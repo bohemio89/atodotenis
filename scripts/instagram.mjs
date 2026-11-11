@@ -190,5 +190,18 @@ async function perfil() {
   for (const x of m.data || []) log('PUB ' + JSON.stringify({ ...x, caption: (x.caption || '').slice(0, 80) }));
 }
 
+// Borra publicaciones por id (node scripts/instagram.mjs borrar id1,id2)
+async function borrar(ids) {
+  const e = leerEstado();
+  for (const id of ids.split(',').filter(Boolean)) {
+    try {
+      await api(id, { method: 'DELETE' });
+      log('BORRADA ' + id);
+      for (const p of e.publicadas) if (p.id === id) p.borrada = new Date().toISOString();
+    } catch (err) { log('NO SE PUDO BORRAR ' + id + ': ' + err.message); }
+  }
+  guardarEstado(e);
+}
+
 const modo = process.argv[2];
-(modo === 'publicar' ? publicar() : modo === 'carruseles' ? carruseles() : modo === 'perfil' ? perfil() : preparar()).catch((err) => { log('Instagram:', err.message); process.exit(0); });
+(modo === 'publicar' ? publicar() : modo === 'carruseles' ? carruseles() : modo === 'perfil' ? perfil() : modo === 'borrar' ? borrar(process.argv[3] || '') : preparar()).catch((err) => { log('Instagram:', err.message); process.exit(0); });

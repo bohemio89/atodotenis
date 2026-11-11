@@ -1,0 +1,20 @@
+name: Instagram - borrar publicaciones
+on:
+  workflow_dispatch:
+    inputs:
+      ids: { description: 'Ids separados por coma', required: true }
+permissions: { contents: write }
+jobs:
+  borrar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+        run: node scripts/instagram.mjs borrar "${{ inputs.ids }}"
+      - run: |
+          git config user.name "A Todo Tenis" && git config user.email "actions@users.noreply.github.com"
+          git add data/instagram.json && git commit -m "Instagram: publicaciones borradas" && git push || true
