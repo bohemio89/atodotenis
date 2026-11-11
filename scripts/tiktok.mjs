@@ -37,7 +37,8 @@ function conseguirFfmpeg() {
   if (process.env.FFMPEG_PATH) return true;
   try { execFileSync('ffmpeg', ['-version'], { stdio: 'ignore' }); return true; } catch {}
   try {
-    execFileSync('npm', ['i', '--no-save', '--no-audit', '--no-fund', '--silent', 'ffmpeg-static'], { cwd: ROOT, stdio: 'inherit' });
+    // npm --no-save borra los otros paquetes sin guardar: se reinstalan todos juntos
+    execFileSync('npm', ['i', '--no-save', '--no-audit', '--no-fund', '--silent', 'ffmpeg-static', 'playwright-core', '@fontsource/inter', '@fontsource/montserrat', '@fontsource/roboto-condensed'], { cwd: ROOT, stdio: 'inherit' });
     const ruta = path.join(ROOT, 'node_modules/ffmpeg-static/ffmpeg');
     if (fs.existsSync(ruta)) { process.env.FFMPEG_PATH = ruta; return true; }
   } catch {}
