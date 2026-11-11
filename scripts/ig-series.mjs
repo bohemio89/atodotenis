@@ -77,17 +77,27 @@ async function ranking() {
 async function efemeride() {
   const items = leer('content/efemerides.json', {}).items || [];
   const mmdd = hoyISO.slice(5);
-  const e = items.find((x) => x.fecha.slice(5) === mmdd && x.texto);
+  let e = items.find((x) => x.fecha.slice(5) === mmdd && x.texto);
+  if (!e && PRUEBA) e = items.filter((x) => x.fecha.slice(5) > mmdd).sort((a, b) => a.fecha.slice(5).localeCompare(b.fecha.slice(5)))[0]; // en prueba: la próxima
   if (!e) return null;
   const anio = e.fecha.slice(0, 4);
   const hace = ahora.getUTCFullYear() - Number(anio);
-  const placa = `<div class="s">${cabecera('UN DÍA COMO HOY')}
-    <div style="position:absolute;left:64px;right:64px;top:240px">
-      <div style="font:700 300px/0.9 RC;letter-spacing:-.02em" class="lima">${anio}</div>
-      <div style="font-size:34px;margin:18px 0 60px" class="gris">${Number(e.fecha.slice(8))} de ${MESES[Number(e.fecha.slice(5, 7)) - 1]} · hace ${hace} años</div>
+  const nombres = (e.texto.match(/[A-ZÁÉÍÓÚ][a-záéíóúñ]+ (?:[A-Z][a-z]+ )?[A-ZÁÉÍÓÚ][a-záéíóúñ]+/g) || []).slice(0, 2);
+  const foto = nombres[0] ? await fotoJugador(nombres[0]) : null;
+  const fechaTxt = `${Number(e.fecha.slice(8))} de ${MESES[Number(e.fecha.slice(5, 7)) - 1]} de ${anio} · hace ${hace} años`;
+  const placa = foto
+    ? `<div class="s"><div style="position:absolute;inset:0 0 auto 0;height:860px;background:url('${foto}') ${focoJugador(nombres[0])}/cover"></div>
+      <div style="position:absolute;inset:0 0 auto 0;height:860px;background:linear-gradient(rgba(18,22,27,.55),rgba(18,22,27,0) 25%,rgba(18,22,27,0) 50%,#12161B)"></div>
+      ${cabecera('UN DÍA COMO HOY')}
+      <div style="position:absolute;left:64px;right:64px;top:640px"><div style="font:700 150px/0.9 RC" class="lima">${anio}</div>
+      <div style="font-size:30px;margin:10px 0 26px" class="gris">${fechaTxt}</div>
+      <p style="margin:0;font:800 46px/1.18 Montserrat">${esc(e.texto)}</p></div>${CRED}
+      ${pie('Efemérides del tenis', '@atodotenis_web')}</div>`
+    : `<div class="s">${cabecera('UN DÍA COMO HOY')}
+      <div style="position:absolute;left:64px;right:64px;top:240px"><div style="font:700 300px/0.9 RC;letter-spacing:-.02em" class="lima">${anio}</div>
+      <div style="font-size:34px;margin:18px 0 60px" class="gris">${fechaTxt}</div>
       <p style="margin:0;font:800 58px/1.15 Montserrat;letter-spacing:-.01em">${esc(e.texto)}</p></div>
-    ${pie('Efemérides del tenis', '@atodotenis_web')}</div>`;
-  const nombres = (e.texto.match(/[A-ZÁÉÍÓÚ][a-záéíóúñ]+ [A-ZÁÉÍÓÚ][a-záéíóúñ]+/g) || []).slice(0, 2);
+      ${pie('Efemérides del tenis', '@atodotenis_web')}</div>`;
   const texto = [`Un día como hoy, hace ${hace} años.`, e.texto, '¿Lo viste en vivo?', ['#tenis', '#tennis', '#undiacomohoy', ...nombres.map(tag)].slice(0, 5).join(' ')].join('\n\n');
   return { id: `efemeride-${hoyISO}`, placas: [placa], texto, vence: `${hoyISO}T23:59:00Z` };
 }

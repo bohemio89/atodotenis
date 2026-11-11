@@ -195,9 +195,14 @@ async function carruseles() {
       if (!b || !/image\/jpeg/.test(r.headers.get('content-type') || '') || b.length < 20000 || b[0] !== 0xff || b[1] !== 0xd8) malas.push(url);
     }
     if (malas.length) { log('Imágenes que no cargan, no se publica:', c.id, malas.join(' ')); continue; }
-    const hijos = [];
-    for (const url of c.imagenes) hijos.push((await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ image_url: url, is_carousel_item: true }) })).id);
-    const cont = await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ media_type: 'CAROUSEL', children: hijos.join(','), caption: c.texto }) });
+    let cont;
+    if (c.imagenes.length === 1) {
+      cont = await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ image_url: c.imagenes[0], caption: c.texto }) });
+    } else {
+      const hijos = [];
+      for (const url of c.imagenes) hijos.push((await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ image_url: url, is_carousel_item: true }) })).id);
+      cont = await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ media_type: 'CAROUSEL', children: hijos.join(','), caption: c.texto }) });
+    }
     for (let i = 0; i < 12; i++) { const s = await api(`${cont.id}?fields=status_code`); if (s.status_code === 'FINISHED') break; if (s.status_code === 'ERROR') throw new Error('Instagram no pudo procesar el carrusel'); await new Promise((r) => setTimeout(r, 5000)); }
     const pub = await api(`${yo.id}/media_publish`, { method: 'POST', body: JSON.stringify({ creation_id: cont.id }) });
     e.publicadas.push({ slug: c.id, id: pub.id, tipo: 'carrusel', fecha: new Date().toISOString() });
