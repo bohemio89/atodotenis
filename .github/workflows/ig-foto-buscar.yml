@@ -1,0 +1,30 @@
+name: Buscar foto en Wikimedia Commons (temporal)
+on: workflow_dispatch
+permissions: { contents: write }
+concurrency: { group: actualizar, cancel-in-progress: false }
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node -e '
+          const fs=require("fs");const UA={"User-Agent":"ATodoTenis/1.0 (https://atodotenis.vercel.app)"};
+          (async()=>{
+            const q="https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=40&gsrsearch="+encodeURIComponent("Mirra Andreeva filetype:bitmap")+"&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=600";
+            const j=await (await fetch(q,{headers:UA})).json();
+            const c=Object.values(j.query?.pages||{}).map(p=>({t:p.title,i:p.imageinfo?.[0]})).filter(x=>x.i&&/andreeva/i.test(x.t)&&!/doubles|&|and /i.test(x.t)&&x.i.width>=900);
+            c.forEach(x=>{x.anio=+((x.i.extmetadata?.DateTimeOriginal?.value||"").match(/20\d\d/)||[0])[0];x.port=x.i.height>=x.i.width*0.9});
+            c.sort((a,b)=>(b.anio-a.anio)||(b.port-a.port));
+            for(const x of c.slice(0,8))console.log(x.anio,x.i.width+"x"+x.i.height,x.t);
+            const e=c[0]; if(!e){console.log("sin candidatas");return;}
+            const r=await fetch(e.i.thumburl,{headers:UA}); fs.writeFileSync("static/ig/fotos/mirra-andreeva.jpg",Buffer.from(await r.arrayBuffer()));
+            const m=e.i.extmetadata; const autor=(m.Artist?.value||"").replace(/<[^>]+>/g,"").trim();
+            const f=JSON.parse(fs.readFileSync("scripts/ig-fotos.json"));
+            f["mirra-andreeva"]={nombre:"Mirra Andreeva",url:e.i.thumburl,autor,licencia:m.LicenseShortName?.value,pagina:e.i.descriptionurl,foco:"center 20%"};
+            fs.writeFileSync("scripts/ig-fotos.json",JSON.stringify(f,null,1));
+            console.log("ELEGIDA",e.t,autor,m.LicenseShortName?.value);
+          })()'
+          git config user.name "A Todo Tenis bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add static/ig/fotos scripts/ig-fotos.json && git commit -m "Foto de Andreeva para Instagram" && git pull --rebase -q && git push || true
