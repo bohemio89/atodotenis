@@ -10,6 +10,7 @@ import { ROOT, log } from './lib/util.mjs';
 import { esc, fotoJugador, focoJugador, cabecera, pie, dibujar } from './lib/ig-render.mjs';
 
 const SITIO = 'https://atodotenis.vercel.app';
+const CRED = `<div style="position:absolute;left:64px;right:64px;bottom:100px;font-size:20px;color:#6B7785">Fotos: Wikimedia Commons, licencias libres. Autores en atodotenis.vercel.app/creditos</div>`;
 const COLA = path.join(ROOT, 'data/ig-carruseles.json');
 const leer = (f, d) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, f), 'utf8')); } catch { return d; } };
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
@@ -55,11 +56,11 @@ async function ranking() {
   const tabla = (tour, js, n, fotos) => `<div class="s">${cabecera(`RANKING ${tour}`)}
     <div style="position:absolute;left:64px;right:64px;top:170px">${js.map((j, i) => `<div style="display:flex;align-items:center;height:100px;border-bottom:${i < 9 ? '2px solid #232C36' : '0'}">
       <span style="width:84px;font:700 56px RC" class="${i ? '' : 'lima'}">${j.ranking}</span>
-      ${fotos ? `<span style="width:78px;height:78px;border-radius:50%;margin-right:22px;flex:none;background:#1B222A url('${fotos[i]}') ${focoJugador(j.nombre)}/cover"></span>` : ''}
+      ${fotos ? `<span style="width:78px;height:78px;border-radius:50%;margin-right:22px;flex:none;background:#1B222A url('${fotos[i]}') ${focoJugador(j.nombre)}/175% auto no-repeat"></span>` : ''}
       <span style="flex:1;font:800 40px Montserrat;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(j.nombre)} <small style="font:400 24px Inter" class="gris">${esc(pais(j.pais))}</small></span>
       <span style="width:150px;text-align:right;font:700 36px RC" class="gris">${esc(j.puntos?.toLocaleString('es-AR'))}</span>
       <span style="width:90px;text-align:right;font:700 34px RC">${flecha(j)}</span></div>`).join('')}</div>
-    ${pie('Puntos y movimiento de la semana', `${n}/3`)}</div>`;
+    ${n === 3 ? CRED : ''}${pie('Puntos y movimiento de la semana', `${n}/3`)}</div>`;
   const placas = [portada, tabla('ATP', atp, 2, carasATP), tabla('WTA', wta, 3, carasWTA)];
   const sube = [...atp, ...wta].filter((j) => j.cambio > 0).sort((a, b) => b.cambio - a.cambio)[0];
   const texto = [
@@ -108,10 +109,11 @@ async function campeones() {
   if (!filas.length) return null;
   filas.sort((a, b) => (orden.indexOf(a.cat) + 99) % 99 - (orden.indexOf(b.cat) + 99) % 99);
   const elegidos = filas.slice(0, 6);
+  const fotosC = []; for (const f of elegidos) fotosC.push(await fotoJugador(f.campeon));
   const n = elegidos.length;
   const placas = [];
   for (const [k, f] of elegidos.entries()) {
-    const foto = await fotoJugador(f.campeon);
+    const foto = fotosC[k];
     const datos = `<div style="font:800 28px Montserrat;letter-spacing:.06em" class="lima">${esc(f.etiqueta.toUpperCase())} · ${esc(f.torneo.toUpperCase())}</div>
       <div style="font:800 96px/1 Montserrat;letter-spacing:-.02em;margin:12px 0 18px">${esc(f.campeon)}</div>
       <div style="font-size:32px" class="gris">Campeón${/wta/.test(f.cat) ? 'a' : ''} · le ganó la final a ${esc(f.finalista)}</div>
@@ -119,7 +121,7 @@ async function campeones() {
     placas.push(foto
       ? `<div class="s"><div style="position:absolute;inset:0 0 auto 0;height:900px;background:url('${foto}') ${focoJugador(f.campeon)}/cover"></div>
         <div style="position:absolute;inset:0 0 auto 0;height:900px;background:linear-gradient(rgba(18,22,27,.55),rgba(18,22,27,0) 25%,rgba(18,22,27,0) 55%,#12161B)"></div>
-        ${cabecera('CAMPEONES DE LA SEMANA')}<div style="position:absolute;left:64px;right:64px;top:700px">${datos}</div>
+        ${cabecera('CAMPEONES DE LA SEMANA')}<div style="position:absolute;left:64px;right:64px;top:700px">${datos}</div>${k === n - 1 ? CRED : ''}
         ${pie(n > 1 && k < n - 1 ? 'DESLIZÁ →' : 'La nota completa, en el link de la bio', `${k + 1}/${n}`)}</div>`
       : `<div class="s">${cabecera('CAMPEONES DE LA SEMANA')}<div style="position:absolute;left:64px;right:64px;top:300px">
         <div style="font:700 200px/0.85 RC;letter-spacing:-.01em" class="lima">CAMPEÓN${/wta/.test(f.cat) ? 'A' : ''}</div><div style="margin-top:60px">${datos}</div></div>

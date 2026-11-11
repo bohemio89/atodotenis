@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, log } from './util.mjs';
+import { buscar } from './commons.mjs';
 
 const UA = 'ATodoTenis/1.0 (https://atodotenis.vercel.app)';
 const DIR_FOTOS = path.join(ROOT, 'static/ig/fotos');
@@ -17,9 +18,17 @@ export function focoJugador(nombre) {
 export async function fotoJugador(nombre) {
   const local = path.join(DIR_FOTOS, `${slug(nombre)}.jpg`);
   if (!fs.existsSync(local)) {
-    let av = {};
-    try { av = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/avatares.json'), 'utf8'))[nombre] || {}; } catch {}
-    if (!av.url) return null;
+    const archivoAv = path.join(ROOT, 'data/avatares.json');
+    let todos = {};
+    try { todos = JSON.parse(fs.readFileSync(archivoAv, 'utf8')); } catch {}
+    let av = todos[nombre] || {};
+    // Sin foto conocida: se busca en Commons y se guarda con su crédito (aparece en /creditos del sitio)
+    if (!av.url) {
+      const f = await buscar(nombre).catch(() => null);
+      if (!f) return null;
+      av = todos[nombre] = { ...f, revisado: new Date().toISOString() };
+      fs.writeFileSync(archivoAv, JSON.stringify(todos, null, 1) + '\n');
+    }
     const url = av.url.replace(/\/\d+px-/, '/500px-');
     try {
       const r = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
