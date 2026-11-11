@@ -139,7 +139,7 @@ ${extraHead}
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 <header class="cabecera"><div class="contenedor">
 <div class="cab-lado izq">
-<a class="icono-btn" href="https://www.instagram.com/atodotenis_web/" target="_blank" rel="noopener" aria-label="Instagram de A Todo Tenis"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a></div>
+<a class="icono-btn" href="https://www.instagram.com/atodotenis_web/" target="_blank" rel="noopener" aria-label="Instagram de A Todo Tenis"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a><a class="icono-btn" href="https://www.tiktok.com/@atodotenis.web" target="_blank" rel="noopener" aria-label="TikTok de A Todo Tenis"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.8 5.8 0 0 0-.8-.1 5.7 5.7 0 1 0 5.7 5.7V9a7.4 7.4 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.2-1.5z"/></svg></a></div>
 ${logo}
 <div class="cab-lado der"><nav class="idioma" aria-label="Idioma / Language"><a data-lang href="${ruta === '/404' ? '/' : ruta}" hreflang="es" lang="es"${EN ? '' : ' aria-current="true" class="on"'}>ES</a><a data-lang href="/en${ruta === '/' || ruta === '/404' ? '' : ruta}" hreflang="en" lang="en"${EN ? ' aria-current="true" class="on"' : ''}>EN</a></nav><a class="pill" href="/noticias">Noticias</a></div>
 </div></header>

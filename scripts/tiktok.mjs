@@ -62,7 +62,7 @@ for (const n of notas) {
       <div style="font-size:42px;margin-top:22px" class="gris">le ganó a ${esc(p)}</div>
       <div style="font:700 96px RC;margin-top:14px" class="lima">${esc(sets)}</div></div>` },
     { foto: null, segundos: 3.6, html: `${marca}<div style="position:absolute;left:72px;right:150px;top:470px">
-      <div style="font:800 34px Montserrat;letter-spacing:.06em" class="lima">${esc(ape(g).toUpperCase())}</div>
+      <div style="font:800 34px Montserrat;letter-spacing:.06em" class="lima">${esc(ape(n.declaracion?.texto && n.declaracion.texto.length < 130 ? n.declaracion.jugador || g : g).toUpperCase())}</div>
       <p style="margin:24px 0 0;font:800 64px/1.15 Montserrat">${esc(frase || n.titulo)}</p>
       <div style="font-size:36px;margin-top:50px" class="gris">La nota completa, en atodotenis.vercel.app</div></div>` },
     { foto: null, segundos: 2.2, html: `${marca}<div style="position:absolute;left:72px;right:150px;top:560px">
