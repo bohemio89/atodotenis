@@ -152,7 +152,7 @@ ${cuerpo}
 </main>
 <footer class="pie"><div class="contenedor">
 <div>${logo}<p style="color:#C9D1D9;font-size:14px;max-width:380px">Resultados, ranking y noticias de todo el circuito.</p></div>
-<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/calendario|Calendario', '/argentinos|Argentinos', '/acerca|Acerca del sitio', '/creditos|Créditos de imágenes'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
+<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/calendario|Calendario', '/acerca|Acerca del sitio', '/creditos|Créditos de imágenes'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)}</div></footer>
 <script>
 try{var fl={};document.querySelectorAll('time[data-local]').forEach(function(t){var o=JSON.parse(t.getAttribute('data-local'));var k=t.getAttribute('data-local');fl[k]=fl[k]||new Intl.DateTimeFormat('${LOCALE}',o);t.textContent=fl[k].format(new Date(t.getAttribute('datetime')));});}catch(e){}
@@ -465,16 +465,6 @@ escribir('ranking.html', pagina({ titulo: 'Ranking ATP y WTA', descripcion: 'Ran
 <p class="meta" style="margin-top:10px">Fotos de los jugadores: Wikimedia Commons, con licencia libre (<a href="/creditos" style="text-decoration:underline">ver créditos</a>).</p></div>` }));
 
 const argRank = (tour) => rankingDe(tour).filter((j) => j.pais === ARG).slice(0, 30);
-escribir('argentinos.html', pagina({ titulo: 'Argentinos en el circuito', ruta: '/argentinos', activo: 'argentinos', cuerpo: `
-<div class="tres sec" style="grid-template-columns:1.6fr 1fr">
-<section><div class="sec-tit"><h1>Argentinos en el circuito</h1></div>
-<div class="panel">${porTorneo([...visibles.filter((p) => conArg(p) && p.estado === 'en_vivo'), ...terminados.filter(conArg), ...proximos.filter(conArg)]) || '<div class="vacio" style="border:0">Sin partidos por ahora.</div>'}</div>
-${notas.filter((n) => n.argentina).length ? `<div class="sec-tit sec"><h2>Notas</h2></div><div class="notas2">${notas.filter((n) => n.argentina).slice(0, 8).map(cardNota).join('')}</div>` : ''}</section>
-<section><div class="sec-tit"><h2>Mejores rankeados</h2></div><div class="panel" data-tabs><div class="tabs" role="tablist"><button role="tab" id="ar-ta" aria-controls="ar-a" aria-selected="true">ATP</button><button role="tab" id="ar-tw" aria-controls="ar-w" aria-selected="false">WTA</button></div>
-<div id="ar-a" role="tabpanel" aria-labelledby="ar-ta">${argRank('atp').map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug"><span>${esc(j.nombre)}</span></span><span class="pts">${j.puntos?.toLocaleString(LOCALE) ?? ''}</span></div>`).join('') || '<div class="vacio">Sin datos.</div>'}</div>
-<div id="ar-w" role="tabpanel" aria-labelledby="ar-tw" class="oculto">${argRank('wta').map((j) => `<div class="rk"><span class="pos">${j.ranking}</span><span class="jug"><span>${esc(j.nombre)}</span></span><span class="pts">${j.puntos?.toLocaleString(LOCALE) ?? ''}</span></div>`).join('') || '<div class="vacio">Sin argentinas entre las primeras del listado.</div>'}</div></div></section>
-</div>` }));
-
 escribir('acerca.html', pagina({ titulo: 'Acerca del sitio', ruta: '/acerca', cuerpo: `
 <article class="nota"><h1>Acerca de A Todo Tenis</h1><div class="cuerpo">${EN ? `
 <p>A Todo Tenis is a new site about world tennis. It follows the ATP, WTA and Challenger tours, the Davis Cup and the Billie Jean King Cup in real time.</p>
@@ -511,7 +501,7 @@ escribir('creditos.html', pagina({ titulo: 'Créditos de imágenes', ruta: '/cre
 escribir('404.html', pagina({ titulo: 'Página no encontrada', ruta: '/404', cuerpo: '<article class="nota"><h1>Esta pelota se fue afuera</h1><p class="bajada">La página que buscás no existe. <a href="/" style="color:#C6F432">Volver al inicio</a>.</p></article>' }));
 
 // SEO: sitemap, RSS, robots
-const urls = ['/', '/noticias', '/resultados', '/torneos', '/grand-slams', ...GS.torneos.map((t) => `/grand-slam/${t.slug}`), '/ranking', '/calendario', '/argentinos', '/acerca', ...T.lista.map((t) => `/torneo/${t.slug}`), ...notas.map((n) => `/nota/${n.slug}`)];
+const urls = ['/', '/noticias', '/resultados', '/torneos', '/grand-slams', ...GS.torneos.map((t) => `/grand-slam/${t.slug}`), '/ranking', '/calendario', '/acerca', ...T.lista.map((t) => `/torneo/${t.slug}`), ...notas.map((n) => `/nota/${n.slug}`)];
 if (EN) {
   fs.writeFileSync(path.join(DIST, '.urls.json'), JSON.stringify(urls));
   console.log(`Versión en inglés: ${urls.length} páginas, ${notas.length} notas.`);

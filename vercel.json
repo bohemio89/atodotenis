@@ -48,5 +48,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/argentinos",
+      "destination": "/ranking",
+      "permanent": true
+    },
+    {
+      "source": "/en/argentinos",
+      "destination": "/en/ranking",
+      "permanent": true
+    }
   ]
 }
