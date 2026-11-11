@@ -116,9 +116,20 @@ async function preparar() {
   const navegador = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' });
   const p = await navegador.newPage({ viewport: { width: 1080, height: 1350 } });
   const tmp = path.join(ROOT, 'node_modules', '.ig-tarjeta.html');
-  fs.writeFileSync(tmp, html(n));
-  await p.goto('file://' + tmp, { waitUntil: 'networkidle', timeout: 60000 }).catch(() => null);
-  await p.evaluate(async () => { await Promise.all([...document.fonts].map((f) => f.load().catch(() => null))); await document.fonts.ready; });
+  const fotosRotas = () => p.evaluate(async () => {
+    const urls = [...document.querySelectorAll('*')].map((x) => getComputedStyle(x).backgroundImage).filter((b) => b.startsWith('url(')).map((b) => b.slice(5, -2));
+    const r = await Promise.all(urls.map((u) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i.naturalWidth > 0 ? 0 : 1); i.onerror = () => ok(1); i.src = u; })));
+    return r.reduce((a, b) => a + b, 0);
+  });
+  const dibujar = async () => {
+    fs.writeFileSync(tmp, html(n));
+    await p.goto('file://' + tmp, { waitUntil: 'networkidle', timeout: 60000 }).catch(() => null);
+    await p.evaluate(async () => { await Promise.all([...document.fonts].map((f) => f.load().catch(() => null))); await document.fonts.ready; });
+  };
+  await dibujar();
+  // Nunca una placa con la foto vacía: si no cargó, va la versión con la cancha.
+  if (await fotosRotas()) { log('La foto no cargó en la placa, va la cancha.'); n.imagen = null; await dibujar(); }
+  if (await fotosRotas()) { log('La placa tiene imágenes rotas, no se prepara.'); await navegador.close(); return; }
   fs.mkdirSync(DIR_IMG, { recursive: true });
   await p.locator('#p').screenshot({ path: path.join(DIR_IMG, `${n.slug}.jpg`), type: 'jpeg', quality: 92 });
   await navegador.close();
@@ -170,8 +181,20 @@ async function carruseles() {
   const e = leerEstado();
   const yo = await api(`${IG_ID}?fields=id,username`);
   log('Cuenta:', yo.username);
+  const vivas = new Set(((await api(`${yo.id}/media?fields=id&limit=50`)).data || []).map((m) => m.id));
   for (const c of cola) {
     if (e.publicadas.some((p) => p.slug === c.id)) continue;
+    if (c.vence && Date.now() > new Date(c.vence).getTime()) { log('Vencido, no se publica:', c.id); continue; }
+    const pendientes = (c.reemplaza || []).filter((id) => vivas.has(id));
+    if (pendientes.length) { log('Espera a que se borre la versión anterior:', c.id, pendientes.join(',')); continue; }
+    // Ninguna imagen puede faltar: si una no responde como JPEG válido, no se publica nada.
+    const malas = [];
+    for (const url of c.imagenes) {
+      const r = await fetch(url, { signal: AbortSignal.timeout(20000) }).catch(() => null);
+      const b = r?.ok ? Buffer.from(await r.arrayBuffer()) : null;
+      if (!b || !/image\/jpeg/.test(r.headers.get('content-type') || '') || b.length < 20000 || b[0] !== 0xff || b[1] !== 0xd8) malas.push(url);
+    }
+    if (malas.length) { log('Imágenes que no cargan, no se publica:', c.id, malas.join(' ')); continue; }
     const hijos = [];
     for (const url of c.imagenes) hijos.push((await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ image_url: url, is_carousel_item: true }) })).id);
     const cont = await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ media_type: 'CAROUSEL', children: hijos.join(','), caption: c.texto }) });
