@@ -48,8 +48,9 @@ async function buscar(jugador, fechaNota) {
     if (!LICENCIAS_OK.test(lic) || /non-?free|fair use/i.test(lic)) continue;
     const f = fechaFoto(meta);
     if (!f || f < limite || f > new Date(fechaNota)) continue; // solo fotos recientes
-    const texto = norm(`${p.title} ${limpiar(meta.ImageDescription?.value)}`);
-    if (!texto.includes(apellido)) continue;
+    // El apellido tiene que estar en el NOMBRE DEL ARCHIVO: la descripción a veces menciona a otro jugador
+    // (por ejemplo, la foto de un entrenador cuya descripción nombra a su jugadora).
+    if (!norm(p.title).includes(apellido)) continue;
     // Calidad: fotos grandes (no se estiran en pantalla) y sin compresión excesiva
     const apaisada = ii.width >= ii.height;
     if (apaisada ? (ii.width < 1600 || ii.height < 900) : ii.width < 1400) continue;

@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, leerJSON, log } from './lib/util.mjs';
+import { fotoJugador, focoJugador } from './lib/ig-render.mjs';
 
 const CONFIG = leerJSON('config.json', {});
 const SITIO = (CONFIG.sitio?.url || 'https://atodotenis.vercel.app').replace(/\/$/, '');
@@ -113,7 +114,7 @@ body{margin:0}
 .cita{font-size:40px;color:#F2F4F5}.cita span{font-size:30px;color:#9AA5B1}
 .pie{position:absolute;left:64px;right:64px;bottom:56px;display:flex;justify-content:space-between;font-size:30px;color:#9AA5B1}.pie b{font:800 30px Montserrat;color:#F2F4F5}
 </style></head><body><div id="p">
-${fotoNota(n) ? `<div class="foto" style="background-image:url('${esc(fotoNota(n).url)}')"></div><div class="credito">Foto: ${esc(fotoNota(n).credito || 'Wikimedia Commons')}</div>` : `<div class="cancha"><svg width="1080" height="520"><g fill="none" stroke="#fff" stroke-width="5" opacity=".28"><path d="M160 520 350 200h380l190 320"/><path d="M235 420h610M540 420V200M290 310h500"/></g></svg></div>`}
+${fotoNota(n) ? `<div class="foto" style="background-image:url('${esc(fotoNota(n).url)}');background-position:${esc(fotoNota(n).foco || 'center 20%')}"></div><div class="credito">Foto: ${esc(fotoNota(n).credito || 'Wikimedia Commons')}</div>` : `<div class="cancha"><svg width="1080" height="520"><g fill="none" stroke="#fff" stroke-width="5" opacity=".28"><path d="M160 520 350 200h380l190 320"/><path d="M235 420h610M540 420V200M290 310h500"/></g></svg></div>`}
 <div class="chip">${esc(n.categoria || n.torneo || 'Tenis')}</div><div class="marca">A Todo <b>Tenis</b></div>
 <div class="cuerpo" style="top:${fotoNota(n) ? 770 : 560}px">${sets.length && r.ganador ? `<div class="tit">RESULTADO</div>${fila(r.ganador.nombre, 0, true)}${fila(r.perdedor?.nombre, 1, false)}` : `<div class="fila" style="font-size:56px;white-space:normal;border:0">${esc(n.titulo)}</div>`}
 ${frase}</div>
@@ -130,13 +131,21 @@ async function preparar() {
     .sort((a, b) => (b.importancia || 0) - (a.importancia || 0) || new Date(b.fecha) - new Date(a.fecha));
   if (!cand.length) { log('Sin notas nuevas para Instagram.'); return; }
   const n = { ...cand[0] };
-  // La foto se baja antes de dibujar: si no llega, la tarjeta sale con la cancha y no con un hueco.
-  if (fotoNota(n)) {
-    try {
-      const r = await fetch(n.imagen.url, { headers: { 'User-Agent': 'ATodoTenis/1.0 (https://atodotenis.vercel.app)' }, signal: AbortSignal.timeout(20000) });
-      if (!r.ok || !/image/.test(r.headers.get('content-type') || '')) throw new Error('HTTP ' + r.status);
-      n.imagen = { ...n.imagen, url: `data:${r.headers.get('content-type')};base64,${Buffer.from(await r.arrayBuffer()).toString('base64')}` };
-    } catch (err) { log('Foto no disponible, va la cancha:', err.message); n.imagen = null; }
+  // La foto es SIEMPRE la del ganador, de la colección revisada (ig-fotos.json / avatares.json).
+  // No se usa la foto que trae la nota: la búsqueda automática a veces encuentra a otra persona.
+  // Si no hay foto del ganador, la placa sale con la cancha y no con un hueco.
+  n.imagen = null;
+  const ganador = (typeof n.resultado === 'object' && n.resultado?.ganador?.nombre) || n.jugadores?.[0];
+  if (ganador) {
+    const dato = await fotoJugador(ganador, 1280);
+    if (dato) {
+      const slugJ = ganador.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const elegida = leerJSON('scripts/ig-fotos.json', {})[slugJ];
+      const av = leerJSON('data/avatares.json', {})[ganador] || {};
+      const autor = elegida?.autor || av.autor;
+      const lic = elegida?.licencia || av.licencia;
+      n.imagen = { url: dato, ancho: 1280, foco: focoJugador(ganador), credito: autor ? `${autor} / ${lic || 'CC'}, Wikimedia Commons` : 'Wikimedia Commons' };
+    } else log('Sin foto revisada de', ganador, '- va la cancha.');
   }
   const { chromium } = await import('playwright-core');
   const navegador = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' });
