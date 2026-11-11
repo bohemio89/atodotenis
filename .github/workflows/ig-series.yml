@@ -1,0 +1,19 @@
+name: Instagram - series (a mano)
+on:
+  workflow_dispatch:
+    inputs:
+      serie: { description: 'fotos, ranking, efemeride o campeones', required: true, default: 'fotos' }
+permissions: { contents: write }
+jobs:
+  serie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed
+      - run: node scripts/ig-series.mjs ${{ inputs.serie }}
+      - run: |
+          git config user.name "A Todo Tenis" && git config user.email "actions@users.noreply.github.com"
+          git add static/ig data/ig-carruseles.json && git commit -m "Instagram: serie ${{ inputs.serie }}" && git pull --rebase -q && git push || true
