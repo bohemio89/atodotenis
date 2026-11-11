@@ -1,0 +1,16 @@
+name: Commons - buscar fotos
+on:
+  workflow_dispatch:
+    inputs:
+      q: { description: 'Búsqueda', required: true }
+permissions: { contents: read }
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: |
+          node -e '
+          (async()=>{const u="https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=40&gsrsearch="+encodeURIComponent(process.argv[1]+" filetype:bitmap")+"&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=1280";
+          const j=await (await fetch(u,{headers:{"User-Agent":"ATodoTenis/1.0 (https://atodotenis.vercel.app)"}})).json();
+          for(const p of Object.values(j.query?.pages||{})){const i=p.imageinfo[0];const m=i.extmetadata||{};console.log("FOTO",JSON.stringify({t:p.title,w:i.width,h:i.height,u:i.thumburl,lic:m.LicenseShortName?.value,autor:(m.Artist?.value||"").replace(/<[^>]+>/g,"").slice(0,40),pag:i.descriptionurl}));}})()' "${{ inputs.q }}"
