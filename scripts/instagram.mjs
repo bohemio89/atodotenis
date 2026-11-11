@@ -174,5 +174,12 @@ async function carruseles() {
   }
 }
 
+async function perfil() {
+  const yo = await api(`${IG_ID}?fields=id,username,name,biography,website,profile_picture_url,followers_count,follows_count,media_count`);
+  log('PERFIL ' + JSON.stringify({ ...yo, profile_picture_url: yo.profile_picture_url ? 'sí' : 'no' }));
+  const m = await api(`${IG_ID}/media?fields=id,caption,media_type,permalink,timestamp,like_count,comments_count&limit=10`);
+  for (const x of m.data || []) log('PUB ' + JSON.stringify({ ...x, caption: (x.caption || '').slice(0, 80) }));
+}
+
 const modo = process.argv[2];
-(modo === 'publicar' ? publicar() : modo === 'carruseles' ? carruseles() : preparar()).catch((err) => { log('Instagram:', err.message); process.exit(0); });
+(modo === 'publicar' ? publicar() : modo === 'carruseles' ? carruseles() : modo === 'perfil' ? perfil() : preparar()).catch((err) => { log('Instagram:', err.message); process.exit(0); });

@@ -1,0 +1,20 @@
+name: Instagram - revisar perfil y foto faltante
+on: workflow_dispatch
+permissions: { contents: write }
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+        run: node scripts/instagram.mjs perfil
+      - name: Buscar foto de Mirra Andreeva en Wikimedia Commons
+        run: |
+          node -e '
+          (async()=>{const u="https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrsearch=%22Mirra%20Andreeva%22&gsrlimit=20&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=1200";
+          const j=await (await fetch(u,{headers:{"User-Agent":"ATodoTenis/1.0 (https://atodotenis.vercel.app)"}})).json();
+          for(const p of Object.values(j.query?.pages||{})){const i=p.imageinfo[0];const m=i.extmetadata||{};console.log("FOTO",JSON.stringify({t:p.title,w:i.width,h:i.height,thumb:i.thumburl,lic:m.LicenseShortName?.value,autor:(m.Artist?.value||"").replace(/<[^>]+>/g,"").slice(0,60),fecha:(m.DateTimeOriginal?.value||"").replace(/<[^>]+>/g,"").slice(0,20)}));}})()'
