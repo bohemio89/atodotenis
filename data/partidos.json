@@ -22823,7 +22823,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T16:45:25.462Z",
+  "visto": "2026-11-11T17:45:27.044Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
   "importante": false,
@@ -22833,19 +22833,23 @@
   "score": {
    "games": [
     [
-     6
+     6,
+     7,
+     2
     ],
     [
-     6
+     7,
+     6,
+     1
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "5",
-    "6"
+    "2",
+    "1"
    ],
    "saca": 2
   },
@@ -22854,17 +22858,17 @@
  },
  "216473": {
   "id": 216473,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Orleans",
   "ronda": "Orleans - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T16:40:00Z",
+  "horario": "2026-11-11T17:30:00Z",
   "j1": {
-   "id": 44956,
-   "nombre": "Beauge/ Freire Da Silva",
+   "id": 36891,
+   "nombre": "Cukierman / Fernando Romboli",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -22873,8 +22877,8 @@
    ]
   },
   "j2": {
-   "id": 36891,
-   "nombre": "Cukierman/ Romboli",
+   "id": 44956,
+   "nombre": "Adan Freire Da Silva / Beauge",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -22883,12 +22887,36 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T14:45:25.900Z",
+  "visto": "2026-11-11T17:45:27.044Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2424",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216474": {
   "id": 216474,
@@ -23209,7 +23237,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T16:45:25.462Z",
   "torneoClave": "challenger|Orleans",
@@ -24972,7 +25000,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T16:45:25.462Z",
+  "visto": "2026-11-11T17:45:27.044Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -24982,21 +25010,25 @@
   "score": {
    "games": [
     [
+     7,
+     3,
      5
     ],
     [
-     5
+     6,
+     6,
+     4
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "0",
-    "0"
+    "5",
+    "4"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -25108,7 +25140,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T16:45:25.462Z",
   "torneoClave": "challenger|Lima 2",
@@ -25257,7 +25289,7 @@
  },
  "216563": {
   "id": 216563,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Lima 2",
   "ronda": "Lima 2 - 1/8-finals",
   "rondaCod": "R16",
@@ -25266,18 +25298,8 @@
   "genero": "men",
   "horario": "2026-11-11T17:30:00Z",
   "j1": {
-   "id": 22891,
-   "nombre": "Reis Da Silva/ Roncadelli",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "uru"
-   ]
-  },
-  "j2": {
    "id": 18598,
-   "nombre": "Rincon/ Roca Batalla",
+   "nombre": "Oriol Roca Batalla / Rincon",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -25285,13 +25307,47 @@
     "esp"
    ]
   },
+  "j2": {
+   "id": 22891,
+   "nombre": "Joao Lucas Reis Da Silva / Roncadelli",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "bra",
+    "uru"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T14:45:25.900Z",
+  "visto": "2026-11-11T17:45:27.044Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4820",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216564": {
   "id": 216564,
@@ -25364,7 +25420,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T16:45:25.462Z",
+  "visto": "2026-11-11T17:45:27.044Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -25374,21 +25430,23 @@
   "score": {
    "games": [
     [
-     1
+     6,
+     5
     ],
     [
-     0
+     4,
+     3
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
     "30",
-    "30"
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -27024,7 +27082,7 @@
    "ranking": 203
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T16:45:25.462Z",
   "torneoClave": "challenger|Orleans",
@@ -32933,7 +32991,7 @@
    "ranking": 53
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T16:45:25.462Z",
   "torneoClave": "atp|Stockholm",
@@ -34129,7 +34187,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T16:45:25.462Z",
+  "visto": "2026-11-11T17:45:27.044Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -34139,21 +34197,23 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     5
     ],
     [
-     1
+     4,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "15",
+    "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -34740,33 +34800,57 @@
  },
  "218329": {
   "id": 218329,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Sopo (Colombia) - Qualification",
   "ronda": "Sopo - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-11T16:30:00Z",
+  "horario": "2026-11-11T17:30:00Z",
   "j1": {
    "id": 241,
    "nombre": "Irene Burillo Escorihuela",
    "pais": "esp",
-   "ranking": 219
+   "ranking": 213
   },
   "j2": {
    "id": 646,
    "nombre": "Julia Grabher",
    "pais": "aut",
-   "ranking": 112
+   "ranking": 115
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T14:45:25.900Z",
-  "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
+  "visto": "2026-11-11T17:45:27.044Z",
+  "torneoClave": "challenger|Sopo (Colombia) - Qualification",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14849",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218361": {
   "id": 218361,
@@ -36356,7 +36440,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T17:00:00Z",
+  "horario": "2026-11-11T17:10:00Z",
   "j1": {
    "id": 12,
    "nombre": "Alexander Shevchenko",
@@ -36367,15 +36451,39 @@
    "id": 537,
    "nombre": "Casper Ruud",
    "pais": "nor",
-   "ranking": 23
+   "ranking": 18
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T14:45:25.513Z",
+  "visto": "2026-11-11T17:45:27.044Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218821": {
   "id": 218821,
@@ -36572,7 +36680,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T16:45:25.462Z",
+  "visto": "2026-11-11T17:45:27.044Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
   "importante": false,
@@ -36582,21 +36690,25 @@
   "score": {
    "games": [
     [
-     4
+     6,
+     4,
+     2
     ],
     [
-     3
+     4,
+     6,
+     0
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "15",
-    "40"
+    "40",
+    "AD"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -37129,33 +37241,57 @@
  },
  "218996": {
   "id": 218996,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Sopo (Colombia) - Qualification",
   "ronda": "Sopo - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-11T16:30:00Z",
+  "horario": "2026-11-11T17:00:00Z",
   "j1": {
-   "id": 811,
-   "nombre": "Lucia Bronzetti",
-   "pais": "ita",
-   "ranking": 134
-  },
-  "j2": {
    "id": 271,
    "nombre": "Elizabeth Mandlik",
    "pais": "usa",
-   "ranking": 221
+   "ranking": 237
+  },
+  "j2": {
+   "id": 811,
+   "nombre": "Lucia Bronzetti",
+   "pais": "ita",
+   "ranking": 136
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T14:45:25.900Z",
-  "torneoClave": "challenger_women|Sopo (Colombia) - Qualification",
+  "visto": "2026-11-11T17:45:27.044Z",
+  "torneoClave": "challenger|Sopo (Colombia) - Qualification",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14849",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218997": {
   "id": 218997,
@@ -37212,7 +37348,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T16:45:25.462Z",
+  "visto": "2026-11-11T17:45:27.044Z",
   "tier": null,
   "torneoId": "2443",
   "cubierto": true,
@@ -37220,18 +37356,20 @@
   "score": {
    "games": [
     [
+     7,
      3
     ],
     [
-     3
+     6,
+     2
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "40",
+    "15",
     "40"
    ],
    "saca": 2
@@ -37470,7 +37608,7 @@
    "ranking": 187
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T16:45:25.462Z",
   "tier": null,
@@ -37590,7 +37728,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T16:45:25.462Z",
+  "visto": "2026-11-11T17:45:27.044Z",
   "tier": null,
   "torneoId": "4819",
   "cubierto": false,
@@ -37599,20 +37737,22 @@
    "games": [
     [
      2,
-     4
+     7,
+     3
     ],
     [
      6,
-     5
+     6,
+     1
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "40",
-    "40"
+    "30",
+    "0"
    ],
    "saca": 1
   },
@@ -37824,7 +37964,7 @@
    "ranking": 119
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T16:45:25.462Z",
   "tier": null,
