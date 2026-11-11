@@ -139,7 +139,7 @@ ${extraHead}
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 <header class="cabecera"><div class="contenedor">
 <div class="cab-lado izq">
-<a class="icono-btn" href="#" aria-label="Instagram de A Todo Tenis"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a></div>
+<a class="icono-btn" href="https://www.instagram.com/atodotenis_web/" target="_blank" rel="noopener" aria-label="Instagram de A Todo Tenis"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a></div>
 ${logo}
 <div class="cab-lado der"><nav class="idioma" aria-label="Idioma / Language"><a data-lang href="${ruta === '/404' ? '/' : ruta}" hreflang="es" lang="es"${EN ? '' : ' aria-current="true" class="on"'}>ES</a><a data-lang href="/en${ruta === '/' || ruta === '/404' ? '' : ruta}" hreflang="en" lang="en"${EN ? ' aria-current="true" class="on"' : ''}>EN</a></nav><a class="pill" href="/noticias">Noticias</a></div>
 </div></header>
