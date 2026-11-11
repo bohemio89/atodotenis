@@ -11,6 +11,7 @@ import { CSS_BASE } from './lib/ig-render.mjs';
 const [guionArchivo, salida] = process.argv.slice(2);
 const guion = JSON.parse(fs.readFileSync(guionArchivo, 'utf8'));
 const W = 1080, H = 1920, FPS = 30;
+const FFMPEG = process.env.FFMPEG_PATH || 'ffmpeg';
 const tmp = fs.mkdtempSync(path.join(ROOT, 'node_modules', '.reel-'));
 
 for (const e of guion.escenas) if (e.foto && !fs.existsSync(path.join(ROOT, e.foto))) { console.error('Falta la foto', e.foto); process.exit(1); }
@@ -44,7 +45,7 @@ guion.escenas.forEach((e, i) => {
     ? `[0:v]scale=${W * 2}:${H * 2}:force_original_aspect_ratio=increase,crop=${W * 2}:${H * 2}:(iw-ow)/2:(ih-oh)*${y},zoompan=z='1+0.06*on/${n}':x='iw/2-(iw/zoom/2)':y='ih*${y}-(ih/zoom*${y})':d=${n}:s=${W}x${H}:fps=${FPS},format=yuv420p[f];`
     : '[0:v]format=yuv420p[f];';
   const filtro = `${zoom}[1:v]format=rgba,fade=t=in:st=0:d=0.35:alpha=1[t];[f][t]overlay=0:0:format=auto,format=yuv420p[v]`;
-  execFileSync('ffmpeg', ['-y', '-v', 'error', ...fondo, '-loop', '1', '-t', String(d), '-i', path.join(tmp, `t${i}.png`),
+  execFileSync(FFMPEG, ['-y', '-v', 'error', ...fondo, '-loop', '1', '-t', String(d), '-i', path.join(tmp, `t${i}.png`),
     '-filter_complex', filtro, '-map', '[v]', '-r', String(FPS), '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', out]);
   partes.push(out);
 });
@@ -53,6 +54,6 @@ guion.escenas.forEach((e, i) => {
 const lista = path.join(tmp, 'lista.txt');
 fs.writeFileSync(lista, partes.map((x) => `file '${x}'`).join('\n'));
 fs.mkdirSync(path.dirname(path.resolve(salida)), { recursive: true });
-execFileSync('ffmpeg', ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lista, '-c:v', 'libx264', '-preset', 'veryfast', '-crf', process.env.REEL_CRF || '20', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-r', String(FPS), path.resolve(salida)]);
+execFileSync(FFMPEG, ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lista, '-c:v', 'libx264', '-preset', 'veryfast', '-crf', process.env.REEL_CRF || '20', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-r', String(FPS), path.resolve(salida)]);
 fs.rmSync(tmp, { recursive: true, force: true });
 log('Reel listo:', salida);

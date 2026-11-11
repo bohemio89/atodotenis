@@ -32,8 +32,21 @@ const G = '<div style="position:absolute;inset:0;background:linear-gradient(rgba
 const marca = '<div class="marca" style="top:230px;right:150px">A Todo <b>Tenis</b></div>';
 const ape = (s) => String(s).trim().split(/\s+/).slice(-1)[0];
 
+// ffmpeg: el del sistema o, si no está (los servidores de GitHub ya no lo traen), ffmpeg-static, solo cuando hace falta
+function conseguirFfmpeg() {
+  if (process.env.FFMPEG_PATH) return true;
+  try { execFileSync('ffmpeg', ['-version'], { stdio: 'ignore' }); return true; } catch {}
+  try {
+    execFileSync('npm', ['i', '--no-save', '--no-audit', '--no-fund', '--silent', 'ffmpeg-static'], { cwd: ROOT, stdio: 'inherit' });
+    const ruta = path.join(ROOT, 'node_modules/ffmpeg-static/ffmpeg');
+    if (fs.existsSync(ruta)) { process.env.FFMPEG_PATH = ruta; return true; }
+  } catch {}
+  return false;
+}
+
 for (const n of notas) {
   if (deHoy >= MAX_POR_DIA) break;
+  if (!conseguirFfmpeg()) { log('TikTok: no hay ffmpeg, se reintenta en la próxima corrida'); break; }
   const r = n.resultado, g = r.ganador.nombre, p = r.perdedor?.nombre || '';
   // Foto revisada del ganador, guardada en grande. Sin foto buena, no hay video.
   if (!(await fotoJugador(g, 1280))) { log('TikTok: sin foto revisada de', g); continue; }
