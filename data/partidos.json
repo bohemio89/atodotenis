@@ -8608,7 +8608,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-10T23:45:00Z",
+  "horario": "2026-11-10T23:50:00Z",
   "j1": {
    "id": 1822,
    "nombre": "Demi Schuurs / Georgina García Pérez",
@@ -8624,7 +8624,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T23:45:23.134Z",
+  "visto": "2026-11-11T00:45:23.434Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8634,10 +8634,10 @@
   "score": {
    "games": [
     [
-     0
+     6
     ],
     [
-     0
+     5
     ]
    ],
    "sets": [
@@ -8645,10 +8645,10 @@
     0
    ],
    "puntos": [
-    "0",
-    "0"
+    "30",
+    "30"
    ],
-   "saca": null
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -18832,41 +18832,59 @@
  },
  "216370": {
   "id": 216370,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Brisbane 3",
   "ronda": "Brisbane 3 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T00:00:00Z",
+  "horario": "2026-11-11T00:10:00Z",
   "j1": {
    "id": 44934,
-   "nombre": "Hazawa/ Sueoka",
+   "nombre": "Hazawa / Sueoka",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44935,
-   "nombre": "Bouzige/ Hoole",
+   "nombre": "Bouzige / Hoole",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T22:45:23.119Z",
+  "visto": "2026-11-11T00:45:23.434Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13458",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     1
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216371": {
   "id": 216371,
@@ -26887,7 +26905,7 @@
    "ranking": 205
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T23:45:23.134Z",
   "torneoClave": "challenger|Knoxville",
@@ -26929,26 +26947,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T23:40:00Z",
+  "horario": "2026-11-11T00:20:00Z",
   "j1": {
-   "id": 990,
-   "nombre": "Marcos Giron",
-   "pais": "usa",
-   "ranking": 89
-  },
-  "j2": {
    "id": 485,
    "nombre": "Maks Kasnikowski",
    "pais": "pol",
-   "ranking": 211
+   "ranking": 207
+  },
+  "j2": {
+   "id": 990,
+   "nombre": "Marcos Giron",
+   "pais": "usa",
+   "ranking": 94
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T22:45:23.119Z",
+  "visto": "2026-11-11T00:45:23.434Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216783": {
   "id": 216783,
@@ -27743,7 +27785,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T23:45:23.134Z",
+  "visto": "2026-11-11T00:45:23.434Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -27754,20 +27796,22 @@
    "games": [
     [
      6,
-     0
+     3,
+     3
     ],
     [
      4,
+     6,
      2
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -34057,7 +34101,7 @@
    "ranking": 100
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-10T23:45:23.134Z",
   "torneoClave": "challenger|Knoxville",
@@ -34519,12 +34563,12 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T00:00:00Z",
+  "horario": "2026-11-11T00:10:00Z",
   "j1": {
    "id": 1011,
    "nombre": "Matthew Dellavedova",
    "pais": "aus",
-   "ranking": 235
+   "ranking": 224
   },
   "j2": {
    "id": 6316,
@@ -34533,12 +34577,36 @@
    "ranking": 403
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T22:45:23.119Z",
+  "visto": "2026-11-11T00:45:23.434Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218698": {
   "id": 218698,
@@ -35449,31 +35517,57 @@
   "id": 218990,
   "tour": "challenger",
   "torneo": "Knoxville",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Knoxville - 1/16-finals",
+  "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-10T23:45:00Z",
+  "horario": "2026-11-11T00:20:00Z",
   "j1": {
    "id": 482,
    "nombre": "Braden Shick",
    "pais": "usa",
-   "ranking": 205
+   "ranking": 206
   },
   "j2": {
    "id": 5846,
    "nombre": "Kenta Miyoshi",
    "pais": "jpn",
-   "ranking": 422
+   "ranking": 415
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-10T22:45:23.119Z",
+  "visto": "2026-11-11T00:45:23.434Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218991": {
   "id": 218991,
