@@ -1,8 +1,8 @@
 // Series fijas de Instagram. Cada corrida revisa si toca alguna; si toca, dibuja las placas
 // y las deja en data/ig-carruseles.json para que `instagram.mjs carruseles` las publique cuando estén online.
+//   Lunes 11 UTC    → Campeones de la semana (con las finales del domingo)
 //   Lunes 16 UTC    → El ranking del lunes (ATP y WTA)
-//   Todos los días  → Un día como hoy (solo si hay efeméride para la fecha), 15 UTC
-//   Domingo 21 UTC  → Campeones de la semana
+//   Todos los días  → Un día como hoy (solo si hay efeméride para la fecha), 16 UTC
 //   node scripts/ig-series.mjs [ranking|efemeride|campeones]  → fuerza una serie (pruebas)
 import fs from 'node:fs';
 import path from 'node:path';
@@ -161,9 +161,9 @@ const SERIES = { ranking, efemeride, campeones, fotos };
 function tocan() {
   const h = ahora.getUTCHours(), d = ahora.getUTCDay();
   const r = [];
-  if (h >= 15) r.push('efemeride');
-  if (d === 1 && h >= 16) r.push('ranking');
-  if (d === 0 && h >= 21) r.push('campeones');
+  if (d === 1 && h >= 9) r.push('campeones');   // lunes, para la tanda de las 11 UTC (incluye las finales del domingo)
+  if (d === 1 && h >= 14) r.push('ranking');    // lunes, para la tanda de las 16 UTC
+  if (h >= 14) r.push('efemeride');             // tanda de las 16 UTC (o la siguiente si está ocupada)
   return r;
 }
 

@@ -12,8 +12,34 @@ const SITIO = (CONFIG.sitio?.url || 'https://atodotenis.vercel.app').replace(/\/
 const USUARIO = 'atodotenis_web';
 const ESTADO = path.join(ROOT, 'data/instagram.json');
 const DIR_IMG = path.join(ROOT, 'static/ig');
-const MAX_POR_DIA = 2;          // publicaciones automáticas por día (UTC)
-const HORAS_ENTRE = 4;          // separación mínima entre dos publicaciones
+// Publicación por tandas: una sola publicación por tanda y como máximo 3 por día, para no saturar.
+//   A 11 UTC (13 Israel · 12 Madrid · 08 Buenos Aires): resultados de la noche
+//   B 16 UTC (18 Israel · 17 Madrid · 13 Buenos Aires): pieza fija (ranking, campeones, efeméride, carruseles)
+//   C 23 UTC (01 Israel · 00 Madrid · 20 Buenos Aires): resultados del día
+const TANDAS = [{ id: 'A', h: 11 }, { id: 'B', h: 16 }, { id: 'C', h: 23 }];
+const VENTANA_H = 2;            // cada tanda queda abierta 2 horas
+const MAX_POR_DIA = 3;
+const HORAS_VIGENCIA = 24;      // un resultado más viejo que esto ya no se publica
+const FORZAR = process.env.IG_FORZAR === '1';
+function tandaActual(d = new Date()) {
+  for (const t of TANDAS) {
+    const ini = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), t.h));
+    for (const base of [ini, new Date(ini.getTime() - 864e5)]) {
+      if (d >= base && d - base < VENTANA_H * 3600e3) return { id: t.id, clave: `${base.toISOString().slice(0, 10)}-${t.id}` };
+    }
+  }
+  return null;
+}
+// ¿Se puede publicar ahora? Devuelve la clave de la tanda o null (con el motivo en el log).
+function turno(e) {
+  if (FORZAR) return 'manual';
+  const t = tandaActual();
+  if (!t) { log('Fuera de tanda: se publica en la próxima (13, 18 o 01 h de Israel).'); return null; }
+  if (e.publicadas.some((p) => p.tanda === t.clave)) { log('La tanda', t.clave, 'ya tiene su publicación.'); return null; }
+  const hoy = new Date().toISOString().slice(0, 10);
+  if (e.publicadas.filter((p) => !p.cubierta && !p.borrada && p.fecha.slice(0, 10) === hoy).length >= MAX_POR_DIA) { log('Ya hay', MAX_POR_DIA, 'publicaciones hoy.'); return null; }
+  return t.clave;
+}
 const HORAS_NOTA = 30;          // solo notas recientes
 // Token de Instagram (IGAA…) → graph.instagram.com; token de usuario del sistema de Meta (EAA…) → graph.facebook.com
 const TOKEN = (process.env.INSTAGRAM_TOKEN || '').trim();
@@ -149,11 +175,10 @@ async function publicar() {
   const e = leerEstado();
   if (!e.pendiente) { log('Nada para publicar en Instagram.'); return; }
   if (!process.env.INSTAGRAM_TOKEN) { log('Falta el secreto INSTAGRAM_TOKEN: la publicación queda preparada.'); return; }
-  const hoy = new Date().toISOString().slice(0, 10);
-  const deHoy = e.publicadas.filter((p) => !p.tipo && !p.cubierta && p.fecha.slice(0, 10) === hoy);
-  if (deHoy.length >= MAX_POR_DIA) { log('Ya se publicó lo de hoy en Instagram.'); return; }
-  const ultima = e.publicadas.filter((p) => !p.cubierta).at(-1);
-  if (ultima && Date.now() - new Date(ultima.fecha).getTime() < HORAS_ENTRE * 3600e3) { log('Muy poco tiempo desde la última publicación.'); return; }
+  const n = notas().find((x) => x.slug === e.pendiente.slug);
+  if (n && Date.now() - new Date(n.fecha).getTime() > HORAS_VIGENCIA * 3600e3) { log('El resultado preparado ya es viejo, se descarta:', e.pendiente.slug); e.publicadas.push({ slug: e.pendiente.slug, cubierta: 'vencida', fecha: new Date().toISOString() }); e.pendiente = null; guardarEstado(e); return; }
+  const tanda = turno(e);
+  if (!tanda) return;
   // La imagen tiene que estar online (Vercel la publica después del commit)
   const online = await fetch(e.pendiente.imagen, { method: 'HEAD' }).then((r) => r.ok && /image/.test(r.headers.get('content-type') || '')).catch(() => false);
   if (!online) { log('La imagen todavía no está online; se publica en la próxima corrida.'); return; }
@@ -166,7 +191,7 @@ async function publicar() {
     await new Promise((r) => setTimeout(r, 5000));
   }
   const pub = await api(`${yo.user_id}/media_publish`, { method: 'POST', body: JSON.stringify({ creation_id: contenedor.id }) });
-  e.publicadas.push({ slug: e.pendiente.slug, id: pub.id, fecha: new Date().toISOString() });
+  e.publicadas.push({ slug: e.pendiente.slug, id: pub.id, tanda, fecha: new Date().toISOString() });
   e.publicadas = e.publicadas.slice(-200);
   e.pendiente = null;
   guardarEstado(e);
@@ -184,6 +209,9 @@ async function carruseles() {
   const vivas = new Set(((await api(`${yo.id}/media?fields=id&limit=50`)).data || []).map((m) => m.id));
   for (const c of cola) {
     if (e.publicadas.some((p) => p.slug === c.id)) continue;
+    if (c.vence && Date.now() > new Date(c.vence).getTime()) continue;
+    const tanda = turno(e);
+    if (!tanda) return;
     if (c.vence && Date.now() > new Date(c.vence).getTime()) { log('Vencido, no se publica:', c.id); continue; }
     const pendientes = (c.reemplaza || []).filter((id) => vivas.has(id));
     if (pendientes.length) { log('Espera a que se borre la versión anterior:', c.id, pendientes.join(',')); continue; }
@@ -205,7 +233,8 @@ async function carruseles() {
     }
     for (let i = 0; i < 12; i++) { const s = await api(`${cont.id}?fields=status_code`); if (s.status_code === 'FINISHED') break; if (s.status_code === 'ERROR') throw new Error('Instagram no pudo procesar el carrusel'); await new Promise((r) => setTimeout(r, 5000)); }
     const pub = await api(`${yo.id}/media_publish`, { method: 'POST', body: JSON.stringify({ creation_id: cont.id }) });
-    e.publicadas.push({ slug: c.id, id: pub.id, tipo: 'carrusel', fecha: new Date().toISOString() });
+    e.publicadas.push({ slug: c.id, id: pub.id, tipo: 'carrusel', tanda, fecha: new Date().toISOString() });
+    return; // una sola por tanda
     guardarEstado(e);
     log('Carrusel publicado:', c.id, pub.id);
   }
@@ -231,5 +260,12 @@ async function borrar(ids) {
   guardarEstado(e);
 }
 
+// Salida de cada corrida: en la tanda B va primero la pieza fija; en A y C, el resultado.
+async function salida() {
+  const t = tandaActual();
+  if (t?.id === 'B') { await carruseles().catch((x) => log('Carruseles:', x.message)); await publicar(); }
+  else { await publicar(); await carruseles().catch((x) => log('Carruseles:', x.message)); }
+}
+
 const modo = process.argv[2];
-(modo === 'publicar' ? publicar() : modo === 'carruseles' ? carruseles() : modo === 'perfil' ? perfil() : modo === 'borrar' ? borrar(process.argv[3] || '') : preparar()).catch((err) => { log('Instagram:', err.message); process.exit(0); });
+(modo === 'salida' ? salida() : modo === 'publicar' ? publicar() : modo === 'carruseles' ? carruseles() : modo === 'perfil' ? perfil() : modo === 'borrar' ? borrar(process.argv[3] || '') : preparar()).catch((err) => { log('Instagram:', err.message); process.exit(0); });

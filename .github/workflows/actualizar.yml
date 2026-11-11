@@ -66,8 +66,7 @@ jobs:
         run: |
           npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed
           node scripts/ig-series.mjs || echo "Series: error"
-          node scripts/instagram.mjs carruseles || echo "Carruseles: error, se reintenta en la próxima corrida"
-          node scripts/instagram.mjs publicar
+          node scripts/instagram.mjs salida
           node scripts/instagram.mjs preparar
 
       - name: Probar que el sitio se genera bien
