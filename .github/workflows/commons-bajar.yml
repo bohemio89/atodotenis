@@ -1,0 +1,24 @@
+name: Commons - bajar candidatos
+on:
+  workflow_dispatch:
+    inputs:
+      titulos: { description: 'Títulos de archivo separados por |', required: true }
+permissions: { contents: write }
+jobs:
+  bajar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p static/ig/candidatos
+          node -e '
+          const fs=require("fs");(async()=>{let k=0;for(const t of process.argv[1].split("|")){k++;
+          const u="https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1280&titles="+encodeURIComponent(t);
+          const j=await (await fetch(u,{headers:{"User-Agent":"ATodoTenis/1.0 (https://atodotenis.vercel.app)"}})).json();
+          const p=Object.values(j.query.pages)[0];const i=p.imageinfo[0];
+          const b=Buffer.from(await (await fetch(i.thumburl,{headers:{"User-Agent":"ATodoTenis/1.0"}})).arrayBuffer());
+          fs.writeFileSync("static/ig/candidatos/c"+k+".jpg",b);
+          console.log("CAND",k,JSON.stringify({t,url:i.thumburl,autor:(i.extmetadata.Artist?.value||"").replace(/<[^>]+>/g,"").trim(),lic:i.extmetadata.LicenseShortName?.value,pagina:i.descriptionurl}));}})()' "${{ inputs.titulos }}"
+          git config user.name "A Todo Tenis" && git config user.email "actions@users.noreply.github.com"
+          git add static/ig/candidatos && git commit -m "Candidatos de fotos" && git pull --rebase -q && git push || true
