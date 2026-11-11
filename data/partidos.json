@@ -9094,7 +9094,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T21:00:36.203Z",
+  "visto": "2026-11-11T22:00:35.513Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|WTA Tour Finals, Group B",
@@ -9105,20 +9105,22 @@
    "games": [
     [
      3,
-     0
+     6,
+     3
     ],
     [
      6,
-     0
+     2,
+     1
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
     "0",
-    "0"
+    "40"
    ],
    "saca": 2
   },
@@ -24824,7 +24826,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T21:00:36.203Z",
   "torneoClave": "challenger|Knoxville, USA, Doubles",
@@ -24899,41 +24901,57 @@
  },
  "216552": {
   "id": 216552,
-  "tour": "challenger_doubles",
-  "torneo": "Knoxville",
-  "ronda": "Knoxville - 1/8-finals",
+  "tour": "challenger",
+  "torneo": "Knoxville, USA, Doubles",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T21:05:00Z",
+  "horario": "2026-11-11T21:15:00Z",
   "j1": {
    "id": 24410,
-   "nombre": "Chopra/ Martin",
+   "nombre": "Andrej Martin / Keshav Chopra",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44965,
-   "nombre": "Azkara/ Chidekh",
+   "nombre": "Azkara / Chidekh",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "fra"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T18:41:08.144Z",
+  "visto": "2026-11-11T22:00:35.513Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2444",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216553": {
   "id": 216553,
@@ -25042,7 +25060,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T21:00:36.203Z",
   "torneoClave": "challenger|Knoxville, USA, Doubles",
@@ -25390,31 +25408,23 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T20:30:00Z",
+  "horario": "2026-11-11T20:45:00Z",
   "j1": {
    "id": 22530,
    "nombre": "Olivieri / Santiago De La Fuente",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "arg"
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44972,
    "nombre": "Bagnis / Mena",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "arg"
-   ]
+   "ranking": null
   },
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T21:00:36.203Z",
+  "visto": "2026-11-11T22:00:35.513Z",
   "torneoClave": "challenger|Lima, Peru, Doubles",
   "tier": null,
   "importante": false,
@@ -25424,21 +25434,25 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     4,
+     0
     ],
     [
-     2
+     3,
+     6,
+     0
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
     "0",
-    "15"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -26156,9 +26170,9 @@
   "horario": "2026-11-08T12:00:00Z",
   "j1": {
    "id": 8750,
-   "nombre": "C. Rolland de Ravel",
-   "pais": null,
-   "ranking": null
+   "nombre": "Cosme Rolland de Ravel",
+   "pais": "fra",
+   "ranking": 576
   },
   "j2": {
    "id": 402,
@@ -33151,7 +33165,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-11T18:41:07.975Z",
+  "visto": "2026-11-11T22:00:36.748Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -33162,7 +33176,7 @@
    "games": [
     [
      7,
-     4
+     6
     ],
     [
      5,
@@ -33170,17 +33184,17 @@
     ]
    ],
    "sets": [
-    1,
+    2,
     0
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "217688": {
   "id": 217688,
@@ -34314,7 +34328,7 @@
  },
  "218288": {
   "id": 218288,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Stockholm",
   "ronda": "ATP Stockholm - Quarter-finals",
   "rondaCod": "QF",
@@ -34326,26 +34340,18 @@
    "id": 1725,
    "nombre": "Adam Heinonen / Erik Grevelius",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "swe",
-    "swe"
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44941,
    "nombre": "Jebens / Seggerman",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "ger",
-    "usa"
-   ]
+   "ranking": null
   },
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-11T18:41:07.975Z",
+  "visto": "2026-11-11T22:00:36.917Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -34356,25 +34362,27 @@
    "games": [
     [
      6,
-     5
+     6,
+     10
     ],
     [
      4,
-     5
+     7,
+     6
     ]
    ],
    "sets": [
-    1,
-    0
+    2,
+    1
    ],
    "puntos": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "218289": {
   "id": 218289,
@@ -34949,7 +34957,7 @@
    "ranking": 91
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T21:00:36.203Z",
   "torneoClave": "challenger|Orleans, France",
@@ -36906,32 +36914,56 @@
  "218840": {
   "id": 218840,
   "tour": "challenger",
-  "torneo": "Orleans",
-  "ronda": "Orleans - 1/8-finals",
+  "torneo": "Orleans, France",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T20:50:00Z",
+  "horario": "2026-11-11T21:45:00Z",
   "j1": {
-   "id": 225,
-   "nombre": "Mattia Bellucci",
-   "pais": "ita",
-   "ranking": 66
-  },
-  "j2": {
    "id": 128,
    "nombre": "Sascha Gueymard Wayenburg",
    "pais": "fra",
-   "ranking": 187
+   "ranking": 202
+  },
+  "j2": {
+   "id": 225,
+   "nombre": "Mattia Bellucci",
+   "pais": "ita",
+   "ranking": 62
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T18:41:08.144Z",
+  "visto": "2026-11-11T22:00:35.513Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218841": {
   "id": 218841,
@@ -37534,9 +37566,9 @@
    "ranking": 406
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-11T21:00:36.203Z",
+  "visto": "2026-11-11T22:00:36.644Z",
   "torneoClave": "atp|Stockholm, Sweden",
   "tier": null,
   "importante": false,
@@ -37553,21 +37585,21 @@
     [
      2,
      6,
-     3
+     6
     ]
    ],
    "sets": [
     1,
-    1
+    2
    ],
    "puntos": [
     "0",
-    "30"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "219003": {
   "id": 219003,
@@ -37976,32 +38008,56 @@
  "219027": {
   "id": 219027,
   "tour": "challenger",
-  "torneo": "Knoxville",
-  "ronda": "Knoxville - 1/8-finals",
+  "torneo": "Knoxville, USA",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T21:20:00Z",
+  "horario": "2026-11-11T21:45:00Z",
   "j1": {
    "id": 187,
    "nombre": "Liam Draxl",
    "pais": "can",
-   "ranking": 168
+   "ranking": 165
   },
   "j2": {
    "id": 1310,
    "nombre": "Petr Nesterov",
    "pais": "bul",
-   "ranking": 286
+   "ranking": 282
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T18:41:08.144Z",
+  "visto": "2026-11-11T22:00:35.513Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219028": {
   "id": 219028,
