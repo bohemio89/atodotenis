@@ -22126,41 +22126,57 @@
  },
  "216464": {
   "id": 216464,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T08:00:00Z",
+  "horario": "2026-11-11T08:10:00Z",
   "j1": {
-   "id": 44946,
-   "nombre": "Fomin/ Krutykh",
+   "id": 30366,
+   "nombre": "Lorenzo Carboni / Uzhylovskyi",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 30366,
-   "nombre": "Carboni/ Uzhylovskyi",
+   "id": 44946,
+   "nombre": "Fomin / Krutykh",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T06:45:23.329Z",
+  "visto": "2026-11-11T08:45:24.043Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216465": {
   "id": 216465,
@@ -22202,41 +22218,59 @@
  },
  "216466": {
   "id": 216466,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T08:00:00Z",
+  "horario": "2026-11-11T08:05:00Z",
   "j1": {
    "id": 16740,
-   "nombre": "Efstathiou/ Neos",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "nombre": "Melios Efstathiou / Neos",
+   "pais": "cyp",
+   "ranking": null
   },
   "j2": {
    "id": 42963,
-   "nombre": "Hopper/ Whitehouse",
+   "nombre": "Hopper / Whitehouse",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T06:45:23.329Z",
+  "visto": "2026-11-11T08:45:24.043Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216467": {
   "id": 216467,
@@ -35222,7 +35256,7 @@
    "ranking": 265
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T07:45:22.962Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -35322,26 +35356,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T09:00:00Z",
+  "horario": "2026-11-11T08:40:00Z",
   "j1": {
-   "id": 360,
-   "nombre": "Alafia Ayeni",
-   "pais": "usa",
-   "ranking": 434
-  },
-  "j2": {
    "id": 186,
    "nombre": "Alex Bolt",
    "pais": "aus",
-   "ranking": 174
+   "ranking": 171
+  },
+  "j2": {
+   "id": 360,
+   "nombre": "Alafia Ayeni",
+   "pais": "usa",
+   "ranking": 428
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T06:45:23.329Z",
+  "visto": "2026-11-11T08:45:24.043Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "AD",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218741": {
   "id": 218741,
@@ -35352,26 +35410,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T08:00:00Z",
+  "horario": "2026-11-11T08:10:00Z",
   "j1": {
    "id": 1093,
    "nombre": "Robin Bertrand",
    "pais": "fra",
-   "ranking": 406
+   "ranking": 405
   },
   "j2": {
    "id": 1855,
    "nombre": "Henry Searle",
    "pais": "gbr",
-   "ranking": 217
+   "ranking": 231
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T06:45:23.329Z",
+  "visto": "2026-11-11T08:45:24.043Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218769": {
   "id": 218769,
