@@ -18779,7 +18779,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T04:45:21.570Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -19216,41 +19216,57 @@
  },
  "216376": {
   "id": 216376,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Matsuyama",
   "ronda": "Matsuyama - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T05:00:00Z",
+  "horario": "2026-11-11T05:40:00Z",
   "j1": {
    "id": 12069,
-   "nombre": "Imamura/ Noguchi",
+   "nombre": "Masakatsu Noguchi / Masamichi Imamura",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "jpn",
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44937,
-   "nombre": "Bittoun/ Poljak",
+   "nombre": "Constantin Bittoun Kouzmine / Poljak",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T02:45:23.186Z",
+  "visto": "2026-11-11T05:45:23.004Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8221",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216377": {
   "id": 216377,
@@ -19275,7 +19291,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T04:45:21.570Z",
   "torneoClave": "challenger|Matsuyama",
@@ -34713,7 +34729,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T04:45:21.570Z",
+  "visto": "2026-11-11T05:45:23.004Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
   "importante": false,
@@ -34724,22 +34740,24 @@
    "games": [
     [
      6,
-     1
+     7,
+     0
     ],
     [
      7,
-     1
+     5,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -34881,7 +34899,7 @@
    "ranking": 176
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T04:45:21.570Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -34937,7 +34955,7 @@
    "ranking": 472
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T04:45:21.570Z",
   "torneoClave": "challenger|Matsuyama",
@@ -35009,26 +35027,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T05:00:00Z",
+  "horario": "2026-11-11T05:15:00Z",
   "j1": {
    "id": 74,
    "nombre": "Fajing Sun",
    "pais": "chn",
-   "ranking": 287
+   "ranking": 297
   },
   "j2": {
    "id": 212,
    "nombre": "Billy Harris",
    "pais": "gbr",
-   "ranking": 232
+   "ranking": 227
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T02:45:23.186Z",
+  "visto": "2026-11-11T05:45:23.004Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1,
+     1
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218705": {
   "id": 218705,
