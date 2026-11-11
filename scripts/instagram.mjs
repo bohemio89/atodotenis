@@ -145,5 +145,26 @@ async function publicar() {
   log(`Publicado en Instagram (@${yo.username}): ${pub.id}`);
 }
 
+// Carruseles armados a mano (data/ig-carruseles.json): se publican una sola vez cada uno
+async function carruseles() {
+  if (!TOKEN) { log('Falta INSTAGRAM_TOKEN.'); return; }
+  const archivo = path.join(ROOT, 'data/ig-carruseles.json');
+  const cola = JSON.parse(fs.readFileSync(archivo, 'utf8'));
+  const e = leerEstado();
+  const yo = await api(`${IG_ID}?fields=id,username`);
+  log('Cuenta:', yo.username);
+  for (const c of cola) {
+    if (e.publicadas.some((p) => p.slug === c.id)) continue;
+    const hijos = [];
+    for (const url of c.imagenes) hijos.push((await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ image_url: url, is_carousel_item: true }) })).id);
+    const cont = await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ media_type: 'CAROUSEL', children: hijos.join(','), caption: c.texto }) });
+    for (let i = 0; i < 12; i++) { const s = await api(`${cont.id}?fields=status_code`); if (s.status_code === 'FINISHED') break; if (s.status_code === 'ERROR') throw new Error('Instagram no pudo procesar el carrusel'); await new Promise((r) => setTimeout(r, 5000)); }
+    const pub = await api(`${yo.id}/media_publish`, { method: 'POST', body: JSON.stringify({ creation_id: cont.id }) });
+    e.publicadas.push({ slug: c.id, id: pub.id, fecha: new Date().toISOString() });
+    guardarEstado(e);
+    log('Carrusel publicado:', c.id, pub.id);
+  }
+}
+
 const modo = process.argv[2];
-(modo === 'publicar' ? publicar() : preparar()).catch((err) => { log('Instagram:', err.message); process.exit(0); });
+(modo === 'publicar' ? publicar() : modo === 'carruseles' ? carruseles() : preparar()).catch((err) => { log('Instagram:', err.message); process.exit(0); });
