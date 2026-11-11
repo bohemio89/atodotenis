@@ -1,0 +1,15 @@
+name: TikTok - datos de un video (oEmbed oficial)
+on:
+  workflow_dispatch:
+    inputs:
+      url: { description: 'Link del video', required: true }
+permissions: { contents: read }
+jobs:
+  ver:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - run: |
+          final=$(curl -sIL -o /dev/null -w '%{url_effective}' -A "Mozilla/5.0" "${{ inputs.url }}")
+          echo "URL $final"
+          curl -s "https://www.tiktok.com/oembed?url=$(node -e 'console.log(encodeURIComponent(process.argv[1]))' "$final")" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const j=JSON.parse(s);console.log("OEMBED",JSON.stringify({title:j.title,author:j.author_name,author_url:j.author_url,thumb:j.thumbnail_url}))}catch{console.log("RESP",s.slice(0,300))}})'
