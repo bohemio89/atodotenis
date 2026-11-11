@@ -7,7 +7,7 @@ const EXACTO = {
   'Argentinos': 'Argentines', 'Acerca del sitio': 'About', 'Créditos de imágenes': 'Image credits', 'Saltar al contenido': 'Skip to content',
   'Buscar en el sitio': 'Search the site', 'Buscar': 'Search', 'Buscador': 'Search', 'A Todo Tenis, inicio': 'A Todo Tenis, home',
   'Instagram de A Todo Tenis': 'A Todo Tenis on Instagram', 'Principal': 'Main', 'Pie': 'Footer', 'Idioma / Language': 'Language',
-  'En la red desde 2007. Resultados, ranking y noticias de todo el circuito.': 'Online since 2007. Results, rankings and news from across the tour.',
+  'Resultados, ranking y noticias de todo el circuito.': 'Results, rankings and news from across the tour.',
   'Por definir': 'TBD', 'Resultado a confirmar': 'Result to be confirmed', 'Sin datos de este partido': 'No data for this match',
   'Octavos': 'R16', 'Cuartos': 'QF', 'Semis': 'SF', 'En juego': 'In progress', 'En vivo': 'Live', 'Próximos': 'Upcoming',
   'sin cambios': 'no change', 'subió': 'up', 'bajó': 'down', 'Campeón': 'Champion', 'Campeona': 'Champion', 'Finalizado': 'Completed',

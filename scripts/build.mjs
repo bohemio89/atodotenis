@@ -151,7 +151,7 @@ ${item('/', 'Inicio', 'inicio')}${item('/noticias', 'Noticias', 'noticias')}${it
 ${cuerpo}
 </main>
 <footer class="pie"><div class="contenedor">
-<div>${logo}<p style="color:#C9D1D9;font-size:14px;max-width:380px">En la red desde 2007. Resultados, ranking y noticias de todo el circuito.</p></div>
+<div>${logo}<p style="color:#C9D1D9;font-size:14px;max-width:380px">Resultados, ranking y noticias de todo el circuito.</p></div>
 <nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/calendario|Calendario', '/argentinos|Argentinos', '/acerca|Acerca del sitio', '/creditos|Créditos de imágenes'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)}</div></footer>
 <script>
@@ -477,11 +477,11 @@ ${notas.filter((n) => n.argentina).length ? `<div class="sec-tit sec"><h2>Notas<
 
 escribir('acerca.html', pagina({ titulo: 'Acerca del sitio', ruta: '/acerca', cuerpo: `
 <article class="nota"><h1>Acerca de A Todo Tenis</h1><div class="cuerpo">${EN ? `
-<p>A Todo Tenis was born in 2007 as an Argentine tennis website. It is back with a new version that follows the ATP, WTA and Challenger tours, the Davis Cup and the Billie Jean King Cup in real time.</p>
+<p>A Todo Tenis is a new site about world tennis. It follows the ATP, WTA and Challenger tours, the Davis Cup and the Billie Jean King Cup in real time.</p>
 <p>Results, calendar and rankings come from Live Tennis API and update automatically. Stories are always based on verified results, with no invented quotes.</p>
 <p>Images that accompany the stories are published with their credit. When a story has no photo, a graphic with the match result is shown instead.</p>
 <p>The site is available in Spanish and English.</p>` : `
-<p>A Todo Tenis nació en 2007 como un sitio argentino dedicado al tenis. Hoy vuelve con una nueva versión que sigue en tiempo real el circuito ATP, WTA, Challenger, la Copa Davis y la Billie Jean King Cup.</p>
+<p>A Todo Tenis es un sitio nuevo dedicado al tenis de todo el mundo. Sigue en tiempo real el circuito ATP, WTA, Challenger, la Copa Davis y la Billie Jean King Cup.</p>
 <p>Los resultados, el calendario y el ranking provienen de Live Tennis API y se actualizan automáticamente. Las notas se escriben siempre a partir de resultados verificados y sin declaraciones inventadas.</p>
 <p>Las imágenes que acompañan las notas se publican con su crédito correspondiente. Cuando una nota no tiene foto, se muestra una placa con el resultado del partido.</p>`}
 </div></article>` }));
