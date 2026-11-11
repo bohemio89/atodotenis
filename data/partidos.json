@@ -22050,41 +22050,57 @@
  },
  "216462": {
   "id": 216462,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T11:30:00Z",
+  "horario": "2026-11-11T11:25:00Z",
   "j1": {
    "id": 30363,
-   "nombre": "Angelini/ Caniato",
+   "nombre": "Carlo Alberto Caniato / Lorenzo Angelini",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44945,
-   "nombre": "Bertrand/ Raquillet",
+   "nombre": "Bertrand / Raquillet",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T11:45:25.708Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216463": {
   "id": 216463,
@@ -22312,41 +22328,59 @@
  },
  "216468": {
   "id": 216468,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T11:30:00Z",
+  "horario": "2026-11-11T11:10:00Z",
   "j1": {
    "id": 39333,
-   "nombre": "Ribecai/ Volpi",
+   "nombre": "Gabriele Volpi / Ribecai",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "ita",
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44950,
-   "nombre": "Caripi/ Pietri",
+   "nombre": "Caripi / Pietri",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T11:45:25.708Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216469": {
   "id": 216469,
@@ -22811,7 +22845,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T10:45:25.042Z",
   "torneoClave": "challenger|Orleans",
@@ -22884,41 +22918,57 @@
  },
  "216480": {
   "id": 216480,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Orleans",
   "ronda": "Orleans - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-11T11:30:00Z",
+  "horario": "2026-11-11T11:20:00Z",
   "j1": {
-   "id": 39324,
-   "nombre": "Kittay/ Yuzuki",
+   "id": 13246,
+   "nombre": "Jakub Paul / Matej Vocel",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 13246,
-   "nombre": "Paul/ Vocel",
+   "id": 39324,
+   "nombre": "Kittay / Takeru Yuzuki",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T11:45:25.708Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2424",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216482": {
   "id": 216482,
@@ -26574,8 +26624,8 @@
  "216611": {
   "id": 216611,
   "tour": "challenger",
-  "torneo": "Orleans, France",
-  "ronda": "Round of 32",
+  "torneo": "Orleans",
+  "ronda": "Orleans - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -26596,7 +26646,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T11:45:25.708Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
   "importante": false,
@@ -26606,21 +26656,23 @@
   "score": {
    "games": [
     [
+     6,
      4
     ],
     [
-     2
+     4,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -35412,7 +35464,7 @@
    "ranking": 428
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T10:45:25.042Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -35504,8 +35556,8 @@
  "218769": {
   "id": 218769,
   "tour": "challenger",
-  "torneo": "Hersonissos 3, Greece",
-  "ronda": "Round of 16",
+  "torneo": "Hersonissos 3",
+  "ronda": "Hersonissos 3 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
@@ -35526,7 +35578,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T10:45:25.042Z",
+  "visto": "2026-11-11T11:45:25.707Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
   "importante": false,
@@ -35536,21 +35588,23 @@
   "score": {
    "games": [
     [
-     6
+     7,
+     5
     ],
     [
-     6
+     6,
+     4
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "0",
-    "1"
+    "40",
+    "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -35578,7 +35632,7 @@
    "ranking": 369
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T10:45:25.042Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -35634,7 +35688,7 @@
    "ranking": 493
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T10:45:25.042Z",
   "torneoClave": "challenger|Hersonissos 3",
