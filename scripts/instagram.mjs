@@ -32,14 +32,16 @@ function notas() {
     .filter((n) => n.estado === 'publicada');
 }
 
+// Hasta 5 hashtags: el evento, tenis en español e inglés, el circuito y los protagonistas.
 function hashtags(n) {
-  const t = new Set(['#tenis']);
   const cat = `${n.categoria || ''} ${n.torneo || ''}`;
-  if (/WTA/i.test(cat)) t.add('#WTA');
-  if (/ATP|Masters|Challenger/i.test(cat)) t.add('#ATP');
-  if (/Finals/i.test(cat)) t.add(/WTA/i.test(cat) ? '#WTAFinals' : '#ATPFinals');
-  for (const j of (n.jugadores || []).slice(0, 2)) t.add('#' + apellido(j).normalize('NFD').replace(/[^A-Za-z]/g, ''));
-  return [...t].slice(0, 5).join(' ');
+  const t = [];
+  if (/Finals/i.test(cat)) t.push(/WTA/i.test(cat) ? '#WTAFinals' : '#ATPFinals');
+  else if (/Grand Slam|Australian Open|Roland|Wimbledon|US Open/i.test(cat)) t.push('#' + (n.torneo || '').replace(/[^A-Za-z]/g, ''));
+  t.push('#tenis', '#tennis');
+  if (t.length < 3) t.push(/WTA/i.test(cat) ? '#WTA' : '#ATP');
+  for (const j of n.jugadores || []) t.push('#' + apellido(j).normalize('NFD').replace(/[^A-Za-z]/g, ''));
+  return [...new Set(t)].filter((x) => x.length > 2).slice(0, 5).join(' ');
 }
 
 // Foto de la nota (Wikimedia Commons, licencia libre): solo si es buena y grande
@@ -47,10 +49,9 @@ const fotoNota = (n) => (n.imagen?.url && (n.imagen.ancho || 0) >= 1200 ? n.imag
 
 function textoPublicacion(n) {
   const partes = [n.titulo, n.bajada];
-  if (n.declaracion?.texto) partes.push(`«${n.declaracion.texto}» — ${n.declaracion.jugador}`);
+  if (n.declaracion?.texto) partes.push(`${n.declaracion.jugador}: «${n.declaracion.texto}»`);
   partes.push('La nota completa, en el link de la bio.');
-  const f = fotoNota(n);
-  if (f) partes.push(`Foto: ${f.credito || 'Wikimedia Commons'}.`);
+  // El crédito de la foto va impreso en la imagen; el texto queda limpio.
   partes.push(hashtags(n));
   return partes.join('\n\n');
 }
@@ -102,7 +103,15 @@ async function preparar() {
   const cand = notas().filter((n) => !hecho.has(n.slug) && new Date(n.fecha).getTime() > limite)
     .sort((a, b) => (b.importancia || 0) - (a.importancia || 0) || new Date(b.fecha) - new Date(a.fecha));
   if (!cand.length) { log('Sin notas nuevas para Instagram.'); return; }
-  const n = cand[0];
+  const n = { ...cand[0] };
+  // La foto se baja antes de dibujar: si no llega, la tarjeta sale con la cancha y no con un hueco.
+  if (fotoNota(n)) {
+    try {
+      const r = await fetch(n.imagen.url, { headers: { 'User-Agent': 'ATodoTenis/1.0 (https://atodotenis.vercel.app)' }, signal: AbortSignal.timeout(20000) });
+      if (!r.ok || !/image/.test(r.headers.get('content-type') || '')) throw new Error('HTTP ' + r.status);
+      n.imagen = { ...n.imagen, url: `data:${r.headers.get('content-type')};base64,${Buffer.from(await r.arrayBuffer()).toString('base64')}` };
+    } catch (err) { log('Foto no disponible, va la cancha:', err.message); n.imagen = null; }
+  }
   const { chromium } = await import('playwright-core');
   const navegador = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' });
   const p = await navegador.newPage({ viewport: { width: 1080, height: 1350 } });
@@ -130,9 +139,9 @@ async function publicar() {
   if (!e.pendiente) { log('Nada para publicar en Instagram.'); return; }
   if (!process.env.INSTAGRAM_TOKEN) { log('Falta el secreto INSTAGRAM_TOKEN: la publicación queda preparada.'); return; }
   const hoy = new Date().toISOString().slice(0, 10);
-  const deHoy = e.publicadas.filter((p) => p.fecha.slice(0, 10) === hoy);
+  const deHoy = e.publicadas.filter((p) => !p.tipo && !p.cubierta && p.fecha.slice(0, 10) === hoy);
   if (deHoy.length >= MAX_POR_DIA) { log('Ya se publicó lo de hoy en Instagram.'); return; }
-  const ultima = e.publicadas.at(-1);
+  const ultima = e.publicadas.filter((p) => !p.cubierta).at(-1);
   if (ultima && Date.now() - new Date(ultima.fecha).getTime() < HORAS_ENTRE * 3600e3) { log('Muy poco tiempo desde la última publicación.'); return; }
   // La imagen tiene que estar online (Vercel la publica después del commit)
   const online = await fetch(e.pendiente.imagen, { method: 'HEAD' }).then((r) => r.ok && /image/.test(r.headers.get('content-type') || '')).catch(() => false);
@@ -168,7 +177,7 @@ async function carruseles() {
     const cont = await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ media_type: 'CAROUSEL', children: hijos.join(','), caption: c.texto }) });
     for (let i = 0; i < 12; i++) { const s = await api(`${cont.id}?fields=status_code`); if (s.status_code === 'FINISHED') break; if (s.status_code === 'ERROR') throw new Error('Instagram no pudo procesar el carrusel'); await new Promise((r) => setTimeout(r, 5000)); }
     const pub = await api(`${yo.id}/media_publish`, { method: 'POST', body: JSON.stringify({ creation_id: cont.id }) });
-    e.publicadas.push({ slug: c.id, id: pub.id, fecha: new Date().toISOString() });
+    e.publicadas.push({ slug: c.id, id: pub.id, tipo: 'carrusel', fecha: new Date().toISOString() });
     guardarEstado(e);
     log('Carrusel publicado:', c.id, pub.id);
   }
