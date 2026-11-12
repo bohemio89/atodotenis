@@ -9032,9 +9032,9 @@
    "ranking": 3
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-11T23:00:39.592Z",
+  "visto": "2026-11-12T00:00:36.395Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -9044,24 +9044,26 @@
   "score": {
    "games": [
     [
-     4
+     4,
+     0
     ],
     [
-     1
+     6,
+     6
     ]
    ],
    "sets": [
     0,
-    0
+    2
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "215422": {
   "id": 215422,
@@ -24946,7 +24948,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T23:00:39.592Z",
   "torneoClave": "challenger|Knoxville",
@@ -24983,7 +24985,61 @@
  },
  "216553": {
   "id": 216553,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
+  "torneo": "Knoxville",
+  "ronda": "Knoxville - 1/8-finals",
+  "rondaCod": "R16",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-11T23:35:00Z",
+  "j1": {
+   "id": 36225,
+   "nombre": "Miguel Angel Reyes-Varela / Reese Stalder",
+   "pais": null,
+   "ranking": null
+  },
+  "j2": {
+   "id": 44967,
+   "nombre": "Lacides / Mitsui",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": true,
+  "estado": "en_vivo",
+  "motivo": null,
+  "visto": "2026-11-12T00:00:36.302Z",
+  "torneoClave": "challenger|Knoxville",
+  "tier": null,
+  "importante": false,
+  "torneoId": "2444",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
+ },
+ "216554": {
+  "id": 216554,
+  "tour": "challenger",
   "torneo": "Knoxville",
   "ronda": "Knoxville - 1/8-finals",
   "rondaCod": "R16",
@@ -24992,70 +25048,50 @@
   "genero": "men",
   "horario": "2026-11-11T23:25:00Z",
   "j1": {
-   "id": 44967,
-   "nombre": "Lacides/ Mitsui",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "j2": {
-   "id": 36225,
-   "nombre": "Reyes-Varela/ Stalder",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "dobles": true,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-11T23:00:39.869Z",
-  "torneoClave": "challenger|Knoxville",
-  "tier": null,
-  "importante": false
- },
- "216554": {
-  "id": 216554,
-  "tour": "challenger_doubles",
-  "torneo": "Knoxville",
-  "ronda": "Knoxville - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-11T23:15:00Z",
-  "j1": {
    "id": 12417,
-   "nombre": "Milavsky/ Shick",
+   "nombre": "Milavsky / Shick",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    "usa"
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 42979,
-   "nombre": "Barton/ Kasnikowski",
+   "nombre": "Barton / Kasnikowski",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "pol"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T23:00:39.869Z",
+  "visto": "2026-11-12T00:00:36.302Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2444",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     1
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216555": {
   "id": 216555,
@@ -25414,7 +25450,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T23:00:39.592Z",
+  "visto": "2026-11-12T00:00:36.301Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -25424,18 +25460,20 @@
   "score": {
    "games": [
     [
-     3
+     6,
+     5
     ],
     [
-     3
+     4,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "40",
+    "30",
     "0"
    ],
    "saca": 1
@@ -36978,7 +37016,7 @@
    "ranking": 62
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T23:00:39.592Z",
   "torneoClave": "challenger|Orleans",
@@ -38074,7 +38112,7 @@
    "ranking": 282
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-11T23:00:39.592Z",
   "torneoClave": "challenger|Knoxville",
