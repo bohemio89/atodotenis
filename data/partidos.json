@@ -37851,21 +37851,47 @@
    "id": 1027,
    "nombre": "Marvin Moeller",
    "pais": "ger",
-   "ranking": 227
+   "ranking": 229
   },
   "j2": {
    "id": 1256,
    "nombre": "Aziz Ouakaa",
    "pais": "tun",
-   "ranking": 515
+   "ranking": 483
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T11:00:42.278Z",
+  "visto": "2026-11-12T13:00:38.019Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218995": {
   "id": 218995,
@@ -38762,24 +38788,48 @@
   "genero": "men",
   "horario": "2026-11-12T12:10:00Z",
   "j1": {
-   "id": 329,
-   "nombre": "Dali Blanch",
-   "pais": "usa",
-   "ranking": 321
-  },
-  "j2": {
    "id": 89,
    "nombre": "Lorenzo Giustino",
    "pais": "ita",
    "ranking": 289
   },
+  "j2": {
+   "id": 329,
+   "nombre": "Dali Blanch",
+   "pais": "usa",
+   "ranking": 321
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T11:00:42.278Z",
+  "visto": "2026-11-12T13:00:38.019Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13396",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "AD",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219086": {
   "id": 219086,
@@ -39630,7 +39680,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T12:00:41.657Z",
+  "visto": "2026-11-12T13:00:38.018Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
   "importante": false,
@@ -39640,19 +39690,23 @@
   "score": {
    "games": [
     [
-     3
+     7,
+     3,
+     4
     ],
     [
-     3
+     5,
+     6,
+     6
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "15",
-    "40"
+    "4",
+    "6"
    ],
    "saca": 2
   },
@@ -39825,7 +39879,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T12:00:41.657Z",
+  "visto": "2026-11-12T13:00:38.019Z",
   "tier": null,
   "torneoId": "12863",
   "cubierto": false,
@@ -39833,19 +39887,23 @@
   "score": {
    "games": [
     [
-     2
+     6,
+     3,
+     4
     ],
     [
-     0
+     1,
+     6,
+     3
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "0",
-    "15"
+    "4",
+    "3"
    ],
    "saca": 1
   },
@@ -39854,30 +39912,57 @@
  },
  "219337": {
   "id": 219337,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Stockholm",
   "ronda": "ATP Stockholm - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T12:00:00Z",
+  "horario": "2026-11-12T12:05:00Z",
   "j1": {
-   "id": 44942,
-   "nombre": "Mektic/ Roger-Vasselin",
+   "id": 11266,
+   "nombre": "Rojer / Theodore Winegar",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 11266,
-   "nombre": "Rojer/ Winegar",
+   "id": 44942,
+   "nombre": "Edouard Roger-Vasselin / Mektic",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T11:00:42.070Z"
+  "visto": "2026-11-12T13:00:38.019Z",
+  "tier": null,
+  "torneoId": "1686",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2,
+     2
+    ],
+    [
+     6,
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219338": {
   "id": 219338,
@@ -39890,25 +39975,50 @@
   "genero": "men",
   "horario": "2026-11-12T12:10:00Z",
   "j1": {
-   "id": 36,
-   "nombre": "Alex Michelsen",
-   "pais": "usa",
-   "ranking": 35
-  },
-  "j2": {
    "id": 35,
    "nombre": "Alejandro Tabilo",
    "pais": "chi",
    "ranking": 31
   },
+  "j2": {
+   "id": 36,
+   "nombre": "Alex Michelsen",
+   "pais": "usa",
+   "ranking": 35
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T11:00:42.070Z"
+  "visto": "2026-11-12T13:00:38.019Z",
+  "tier": null,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219339": {
   "id": 219339,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Monastir",
   "ronda": "Monastir - Quarter-finals",
   "rondaCod": "QF",
@@ -39918,20 +40028,49 @@
   "horario": "2026-11-12T12:10:00Z",
   "j1": {
    "id": 44026,
-   "nombre": "Duda/ Pereira",
+   "nombre": "Duda / Pereira",
    "pais": null,
    "ranking": null
   },
   "j2": {
    "id": 44952,
-   "nombre": "Dalmasso/ Sahtali",
+   "nombre": "Dalmasso / Sahtali",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T11:00:42.278Z"
+  "visto": "2026-11-12T13:00:38.019Z",
+  "tier": null,
+  "torneoId": "13395",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     4,
+     1
+    ],
+    [
+     1,
+     6,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    1
+   ],
+   "puntos": [
+    "1",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219340": {
   "id": 219340,
@@ -40179,7 +40318,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T12:00:41.657Z",
   "tier": null,
