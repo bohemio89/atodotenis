@@ -78,7 +78,7 @@ for (const n of notas) {
   } catch { log('TikTok: no se pudo armar el video de', n.slug); continue; }
   const pregunta = n.torneo && /Finals/i.test(n.torneo) ? '¿Quién gana el título?' : '¿Lo viste?';
   const tags = ['#tenis', '#tennis', /WTA/i.test(`${n.categoria} ${n.torneo}`) ? '#WTA' : '#ATP', '#' + ape(g).normalize('NFD').replace(/[^A-Za-z]/g, ''), '#tenisentiktok'];
-  estado.videos.unshift({ slug: n.slug, video, fecha: new Date().toISOString(), texto: `${n.titulo} 🎾 ${sets}. ${pregunta}\n\n${tags.join(' ')}` });
+  estado.videos.unshift({ slug: n.slug, video, fecha: new Date().toISOString(), texto: `${n.titulo.replace(/\b(en|de)l? el (WTA|ATP) Finals/g, (m, a, b) => `${a === 'en' ? 'en' : 'de'} las ${b} Finals`).replace(/\bdel (WTA|ATP) Finals/g, 'de las $1 Finals')} 🎾 ${sets}. ${pregunta}\n\n${tags.join(' ')}` });
   deHoy++;
   log('TikTok: video listo', video);
 }
