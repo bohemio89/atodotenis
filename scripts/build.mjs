@@ -430,9 +430,10 @@ function recuadroEfemeride() {
   return `<div class="efem panel" id="efem" hidden><div class="efem-tit">Un día como hoy</div><p class="efem-txt"></p></div>
 <script type="application/json" id="efem-datos">${JSON.stringify(items).replace(/</g, '\\u003c')}</script>
 <script>(function(){try{var d=JSON.parse(document.getElementById('efem-datos').textContent),h=new Date(),hoy=new Date(h.getFullYear(),h.getMonth(),h.getDate()),el=document.getElementById('efem');
-var md=function(f){return f.slice(5)},cand=[],dias=0;
-for(;dias<7&&!cand.length;dias++){var x=new Date(hoy);x.setDate(x.getDate()-dias);var k=String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');cand=d.filter(function(e){return md(e.fecha)===k&&+e.fecha.slice(0,4)<hoy.getFullYear()});}
-if(!cand.length)return;var e=cand[(hoy.getDate()+hoy.getMonth())%cand.length],p=e.fecha.split('-'),f=new Date(+p[0],+p[1]-1,+p[2]),txt=${EN ? `f.toLocaleDateString('en-US',{month:'long',day:'numeric'})+', '+p[0]` : `f.toLocaleDateString('es-AR',{day:'numeric',month:'long'})+' de '+p[0]`};
+var md=function(f){return f.slice(5)},clave=function(x){return String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0')},pas=function(e){return +e.fecha.slice(0,4)<hoy.getFullYear()};
+var nDia=Math.floor((hoy-new Date(hoy.getFullYear(),0,0))/864e5),cand=d.filter(function(e){return md(e.fecha)===clave(hoy)&&pas(e)}),dias=cand.length?1:0;
+if(!cand.length){var ks=[];for(var i=-3;i<=3;i++){var x=new Date(hoy);x.setDate(x.getDate()+i);ks.push(clave(x));}cand=d.filter(function(e){return ks.indexOf(md(e.fecha))>=0&&pas(e)});}
+if(!cand.length)return;var e=cand[nDia%cand.length],p=e.fecha.split('-'),f=new Date(+p[0],+p[1]-1,+p[2]),txt=${EN ? `f.toLocaleDateString('en-US',{month:'long',day:'numeric'})+', '+p[0]` : `f.toLocaleDateString('es-AR',{day:'numeric',month:'long'})+' de '+p[0]`};
 el.querySelector('.efem-tit').textContent=dias===1?'${EN ? 'On this day' : 'Un día como hoy'}':'${EN ? 'This week in history' : 'Esta semana en la historia'}';
 el.querySelector('.efem-txt').textContent=${EN ? `'On '+txt+': '+e.texto` : `(dias===1?'Un día como hoy, ':'Un ')+txt+', '+e.texto`};
 el.hidden=false;}catch(_){}})();</script>`;
