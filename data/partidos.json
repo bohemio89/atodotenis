@@ -24812,9 +24812,9 @@
    "ranking": 10
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-12T21:00:38.164Z",
+  "visto": "2026-11-12T22:00:36.928Z",
   "torneoClave": "wta|Finals - Riyadh",
   "tier": null,
   "importante": true,
@@ -24824,24 +24824,26 @@
   "score": {
    "games": [
     [
-     5
+     6,
+     7
     ],
     [
-     4
+     4,
+     5
     ]
    ],
    "sets": [
-    0,
+    2,
     0
    ],
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "216549": {
   "id": 216549,
@@ -37539,7 +37541,7 @@
  },
  "218891": {
   "id": 218891,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Stockholm",
   "ronda": "ATP Stockholm - Quarter-finals",
   "rondaCod": "QF",
@@ -37551,26 +37553,18 @@
    "id": 32988,
    "nombre": "Goransson / Robert Galloway",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 44943,
    "nombre": "Frantzen / Stevens",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "ger",
-    "aus"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-12T19:00:39.078Z",
+  "visto": "2026-11-12T22:00:37.276Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -37585,21 +37579,21 @@
     ],
     [
      6,
-     5
+     7
     ]
    ],
    "sets": [
     0,
-    1
+    2
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "218892": {
   "id": 218892,
@@ -38300,7 +38294,7 @@
    "ranking": 510
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T21:00:38.164Z",
   "torneoClave": "challenger|Knoxville",
@@ -39034,7 +39028,7 @@
    "ranking": 85
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T21:00:38.164Z",
   "torneoClave": "challenger|Orleans",
@@ -39144,7 +39138,7 @@
    "ranking": 138
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T21:00:38.164Z",
   "torneoClave": "challenger|Lima 2",
@@ -40782,9 +40776,9 @@
    "ranking": 25
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-12T21:00:38.164Z",
+  "visto": "2026-11-12T22:00:37.170Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -40795,25 +40789,27 @@
    "games": [
     [
      6,
+     6,
      4
     ],
     [
      7,
-     2
+     3,
+     6
     ]
    ],
    "sets": [
-    0,
-    1
+    1,
+    2
    ],
    "puntos": [
     "0",
-    "15"
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "219358": {
   "id": 219358,
@@ -41964,41 +41960,57 @@
  },
  "219591": {
   "id": 219591,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Lima 2",
   "ronda": "Lima 2 - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T20:20:00Z",
+  "horario": "2026-11-12T21:20:00Z",
   "j1": {
-   "id": 44044,
-   "nombre": "Hidalgo/ Molteni",
+   "id": 18598,
+   "nombre": "Oriol Roca Batalla / Rincon",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 18598,
-   "nombre": "Rincon/ Roca Batalla",
+   "id": 44044,
+   "nombre": "Hidalgo / Molteni",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "esp",
-    "esp"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T19:00:39.349Z",
+  "visto": "2026-11-12T22:00:36.135Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4820",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219593": {
   "id": 219593,
@@ -42061,7 +42073,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T21:00:38.164Z",
   "torneoClave": "challenger|Lima 2",
