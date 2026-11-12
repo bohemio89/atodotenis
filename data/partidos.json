@@ -24798,26 +24798,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-12T20:00:00Z",
+  "horario": "2026-11-12T20:15:00Z",
   "j1": {
-   "id": 48,
-   "nombre": "Marta Kostyuk",
-   "pais": "ukr",
-   "ranking": 10
-  },
-  "j2": {
    "id": 42,
    "nombre": "Coco Gauff",
    "pais": "usa",
    "ranking": 4
   },
+  "j2": {
+   "id": 48,
+   "nombre": "Marta Kostyuk",
+   "pais": "ukr",
+   "ranking": 10
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T19:00:39.235Z",
+  "visto": "2026-11-12T21:00:38.164Z",
   "torneoClave": "wta|Finals - Riyadh",
   "tier": null,
-  "importante": true
+  "importante": true,
+  "torneoId": "3195",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216549": {
   "id": 216549,
@@ -38278,7 +38302,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T20:00:39.962Z",
+  "visto": "2026-11-12T21:00:38.164Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -38288,21 +38312,23 @@
   "score": {
    "games": [
     [
+     7,
      4
     ],
     [
-     4
+     6,
+     2
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "30",
-    "15"
+    "15",
+    "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -38994,7 +39020,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T19:30:00Z",
+  "horario": "2026-11-12T19:55:00Z",
   "j1": {
    "id": 447,
    "nombre": "Nishesh Basavareddy",
@@ -39008,12 +39034,38 @@
    "ranking": 85
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T19:00:39.350Z",
+  "visto": "2026-11-12T21:00:38.164Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     5
+    ],
+    [
+     6,
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219053": {
   "id": 219053,
@@ -39094,7 +39146,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T20:00:39.962Z",
+  "visto": "2026-11-12T21:00:38.164Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -39105,11 +39157,11 @@
    "games": [
     [
      6,
-     0
+     5
     ],
     [
      7,
-     0
+     4
     ]
    ],
    "sets": [
@@ -39120,7 +39172,7 @@
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -40732,7 +40784,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T20:00:39.962Z",
+  "visto": "2026-11-12T21:00:38.164Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
   "importante": false,
@@ -40742,19 +40794,21 @@
   "score": {
    "games": [
     [
-     3
+     6,
+     4
     ],
     [
-     4
+     7,
+     2
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "0",
-    "0"
+    "15"
    ],
    "saca": 1
   },
@@ -41145,7 +41199,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T20:00:39.962Z",
   "torneoClave": "challenger|Sopo (Colombia)",
@@ -41877,7 +41931,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T20:00:39.962Z",
   "torneoClave": "challenger|Knoxville",
@@ -42009,7 +42063,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T20:00:39.962Z",
+  "visto": "2026-11-12T21:00:38.164Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -42019,21 +42073,25 @@
   "score": {
    "games": [
     [
+     6,
+     4,
      3
     ],
     [
+     3,
+     6,
      2
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "15",
-    "0"
+    "3",
+    "2"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
