@@ -36598,26 +36598,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T07:45:00Z",
+  "horario": "2026-11-12T08:20:00Z",
   "j1": {
-   "id": 4872,
-   "nombre": "Cruz Hewitt",
-   "pais": "aus",
-   "ranking": 328
-  },
-  "j2": {
    "id": 1016,
    "nombre": "Akira Santillan",
    "pais": "jpn",
-   "ranking": 332
+   "ranking": 349
+  },
+  "j2": {
+   "id": 4872,
+   "nombre": "Cruz Hewitt",
+   "pais": "aus",
+   "ranking": 326
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T07:00:35.823Z",
+  "visto": "2026-11-12T09:00:37.472Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218718": {
   "id": 218718,
@@ -37336,26 +37360,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T08:00:00Z",
+  "horario": "2026-11-12T08:10:00Z",
   "j1": {
    "id": 310,
    "nombre": "Lorenzo Carboni",
    "pais": "ita",
-   "ranking": 552
+   "ranking": 550
   },
   "j2": {
    "id": 1068,
    "nombre": "Ioannis Xilas",
    "pais": "gre",
-   "ranking": 502
+   "ranking": 499
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T07:00:35.823Z",
+  "visto": "2026-11-12T09:00:37.472Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218891": {
   "id": 218891,
@@ -38202,26 +38250,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T08:00:00Z",
+  "horario": "2026-11-12T08:05:00Z",
   "j1": {
-   "id": 122,
-   "nombre": "Michele Ribecai",
-   "pais": "ita",
-   "ranking": 284
-  },
-  "j2": {
    "id": 90,
    "nombre": "Carlo Alberto Caniato",
    "pais": "ita",
-   "ranking": 306
+   "ranking": 323
+  },
+  "j2": {
+   "id": 122,
+   "nombre": "Michele Ribecai",
+   "pais": "ita",
+   "ranking": 281
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T07:00:35.823Z",
+  "visto": "2026-11-12T09:00:37.472Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2,
+     1
+    ],
+    [
+     6,
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219009": {
   "id": 219009,
@@ -39427,41 +39501,59 @@
  },
  "219264": {
   "id": 219264,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T08:00:00Z",
+  "horario": "2026-11-12T08:05:00Z",
   "j1": {
-   "id": 41514,
-   "nombre": "Cornea/ Wehnelt",
+   "id": 30657,
+   "nombre": "Ganchev / Maes",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 30657,
-   "nombre": "Ganchev/ Maes",
+   "id": 41514,
+   "nombre": "Cornea / Wehnelt",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T07:00:35.823Z",
+  "visto": "2026-11-12T09:00:37.472Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219265": {
   "id": 219265,
