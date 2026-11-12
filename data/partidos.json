@@ -8439,7 +8439,7 @@
  },
  "215405": {
   "id": 215405,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
@@ -8460,9 +8460,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-12T03:00:37.286Z",
+  "visto": "2026-11-12T04:00:36.400Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8472,24 +8472,26 @@
   "score": {
    "games": [
     [
+     5,
      3
     ],
     [
-     3
+     7,
+     6
     ]
    ],
    "sets": [
     0,
-    0
+    2
    ],
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "215406": {
   "id": 215406,
@@ -35549,7 +35551,7 @@
    "ranking": 241
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T03:00:37.396Z",
   "torneoClave": "challenger|Knoxville",
@@ -35717,7 +35719,7 @@
    "ranking": 636
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T03:00:37.396Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -36053,7 +36055,7 @@
    "ranking": 392
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T03:00:37.397Z",
   "torneoClave": "challenger|Matsuyama",
@@ -36296,21 +36298,45 @@
    "id": 163,
    "nombre": "Rei Sakamoto",
    "pais": "jpn",
-   "ranking": 123
+   "ranking": 122
   },
   "j2": {
    "id": 475,
    "nombre": "Kasidit Samrej",
    "pais": "tha",
-   "ranking": 409
+   "ranking": 375
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T03:00:37.397Z",
+  "visto": "2026-11-12T04:00:36.316Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218702": {
   "id": 218702,
@@ -36377,26 +36403,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T03:30:00Z",
+  "horario": "2026-11-12T03:45:00Z",
   "j1": {
-   "id": 1041,
-   "nombre": "Max Schoenhaus",
-   "pais": "ger",
-   "ranking": 313
-  },
-  "j2": {
    "id": 814,
    "nombre": "Taro Daniel",
    "pais": "jpn",
-   "ranking": 178
+   "ranking": 172
+  },
+  "j2": {
+   "id": 1041,
+   "nombre": "Max Schoenhaus",
+   "pais": "ger",
+   "ranking": 306
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T03:00:37.397Z",
+  "visto": "2026-11-12T04:00:36.316Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "AD",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218707": {
   "id": 218707,
@@ -36566,7 +36616,7 @@
    "ranking": 279
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T03:00:37.397Z",
   "torneoClave": "challenger|Matsuyama",
@@ -38842,7 +38892,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T03:00:37.397Z",
+  "visto": "2026-11-12T04:00:36.316Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -38852,21 +38902,25 @@
   "score": {
    "games": [
     [
-     2
+     2,
+     6,
+     0
     ],
     [
-     5
+     6,
+     4,
+     0
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -38924,7 +38978,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T03:00:37.397Z",
   "torneoClave": "challenger|Brisbane 3",
