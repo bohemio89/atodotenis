@@ -396,8 +396,8 @@ function hero() {
   if (!items.length) items.push(item('/resultados', cancha('clay'), '', 'Todo el tenis, en un solo lugar', 'Resultados, ranking y noticias del circuito ATP, WTA, Challenger, Copa Davis y Billie Jean King Cup.'));
   const relleno = [['hard', 'Todos los resultados del circuito', '/resultados'], ['clay', 'Cuadros de cada torneo', '/torneos'], ['grass', 'Los cuatro Grand Slam', '/grand-slams'], ['hard', 'Ranking ATP y WTA', '/ranking']];
   for (let k = 0; items.length < 5; k++) { const [sup, t, h] = relleno[k % relleno.length]; items.push(item(h, cancha(sup), '', t, '')); }
-  // La primera nota va al centro: el último elemento queda asomando a la izquierda
-  const orden = [items[items.length - 1], ...items.slice(0, -1)];
+  // La nota más reciente va primero, a la izquierda y en grande
+  const orden = items;
   const flecha = (dir, txt, d) => `<button type="button" class="hs-flecha ${dir}" data-hs="${dir === 'izq' ? -1 : 1}" aria-label="${txt}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="${d}"/></svg></button>`;
   return `<section class="hero2" aria-label="Destacadas" data-hero><div class="hs-fila">${orden.join('')}</div>${flecha('izq', 'Anterior', 'M15 18l-6-6 6-6')}${flecha('der', 'Siguiente', 'M9 18l6-6-6-6')}</section>`;
 }

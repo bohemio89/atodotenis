@@ -311,20 +311,20 @@ body{background:#0F1317}
 .hs .etiqueta{margin-bottom:10px}
 .hs h2{margin:0;font:800 20px/1.15 Montserrat,sans-serif;color:#fff}
 .hs p{display:none;margin:10px 0 0;color:#E6E9EC;font-size:15px;max-width:560px}
-.hs:nth-child(1),.hs:nth-child(5){flex:1 1 0}
-.hs:nth-child(2){flex:3.4 1 0}
+.hs:nth-child(1){flex:3.4 1 0}
+.hs:nth-child(2){flex:1.9 1 0}
 .hs:nth-child(3){flex:1.6 1 0}
-.hs:nth-child(4){flex:1.9 1 0}
-.hs:nth-child(n+6){display:none}
-.hs:nth-child(1) h2,.hs:nth-child(1) .etiqueta,.hs:nth-child(5) h2,.hs:nth-child(5) .etiqueta{display:none}
-.hs:nth-child(2) h2{font-size:clamp(26px,3vw,40px);font-weight:900;text-transform:uppercase;line-height:1.02;max-width:560px}
-.hs:nth-child(2) p{display:block}
+.hs:nth-child(4){flex:1 1 0}
+.hs:nth-child(n+5){display:none}
+.hs:nth-child(4) h2,.hs:nth-child(4) .etiqueta{display:none}
+.hs:nth-child(1) h2{font-size:clamp(26px,3vw,40px);font-weight:900;text-transform:uppercase;line-height:1.02;max-width:560px}
+.hs:nth-child(1) p{display:block}
 .hs-flecha{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#12161B;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.4);z-index:2}
 .hs-flecha.izq{left:calc(11.1% - 20px)}
 .hs-flecha.der{right:calc(11.1% - 20px)}
 .hs-flecha:hover{background:var(--lima)}
-@media (max-width:900px){.hs-fila{height:320px}.hs:nth-child(1),.hs:nth-child(5){display:none}.hs:nth-child(4){display:none}.hs-flecha.izq{left:8px}.hs-flecha.der{right:8px}}
-@media (max-width:600px){.hs-fila{height:260px}.hs:nth-child(3){display:none}.hs:nth-child(2) h2{font-size:24px}.hs p{font-size:13px}}
+@media (max-width:900px){.hs-fila{height:320px}.hs:nth-child(3),.hs:nth-child(4){display:none}.hs-flecha.izq{left:8px}.hs-flecha.der{right:8px}}
+@media (max-width:600px){.hs-fila{height:260px}.hs:nth-child(2){display:none}.hs:nth-child(1) h2{font-size:24px}.hs p{font-size:13px}}
 /* Tarjetas de notas */
 .card{background:linear-gradient(160deg,#1E2A27 0%,#232335 100%);border:1px solid #2A3540;border-radius:8px;transition:transform .15s ease,border-color .15s ease}
 .card:hover{transform:translateY(-2px);border-color:#3B4A57;color:var(--texto)}
@@ -354,7 +354,7 @@ body{background:#0F1317}
 /* Pie */
 .pie{background:#0B0E12}
 .tres .sec-tit h2{font-size:23px;white-space:nowrap}
-.hs:nth-child(2) h2{font-size:clamp(24px,2.5vw,34px)}
+.hs:nth-child(1) h2{font-size:clamp(24px,2.5vw,34px)}
 .rk,.rk-cab{grid-template-columns:26px minmax(0,1fr) 56px;padding:9px 12px;gap:8px}
 .rk .jug{gap:10px}
 .rk .jug .n{font-size:15px;overflow:hidden;text-overflow:ellipsis}
