@@ -8538,7 +8538,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T01:00:35.091Z",
+  "visto": "2026-11-12T02:00:38.421Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8548,21 +8548,25 @@
   "score": {
    "games": [
     [
-     5
+     7,
+     4,
+     1
     ],
     [
-     6
+     6,
+     6,
+     0
     ]
    ],
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "puntos": [
-    "30",
+    "1",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -24928,7 +24932,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T01:00:35.091Z",
+  "visto": "2026-11-12T02:00:38.421Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -24938,21 +24942,23 @@
   "score": {
    "games": [
     [
-     1
+     5,
+     3
     ],
     [
-     1
+     7,
+     2
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "40",
+    "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -25038,7 +25044,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T01:00:35.091Z",
   "torneoClave": "challenger|Knoxville",
@@ -35507,36 +35513,60 @@
  "218367": {
   "id": 218367,
   "tour": "challenger",
-  "torneo": "Knoxville",
-  "ronda": "Knoxville - 1/8-finals",
+  "torneo": "Knoxville, USA",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T00:35:00Z",
+  "horario": "2026-11-12T01:25:00Z",
   "j1": {
    "id": 132,
    "nombre": "Nicolas Mejia",
    "pais": "col",
-   "ranking": 115
+   "ranking": 114
   },
   "j2": {
    "id": 784,
    "nombre": "Max Hans Rehberg",
    "pais": "ger",
-   "ranking": 248
+   "ranking": 241
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T23:00:39.869Z",
+  "visto": "2026-11-12T02:00:38.421Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218631": {
   "id": 218631,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Brisbane 3",
   "ronda": "Brisbane 3 - 1/8-finals",
   "rondaCod": "R16",
@@ -35546,31 +35576,49 @@
   "horario": "2026-11-12T01:00:00Z",
   "j1": {
    "id": 32275,
-   "nombre": "Falck/ Suarez",
+   "nombre": "Billy Suarez / Reece Falck",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 45597,
-   "nombre": "Jasika/ Sousou",
+   "nombre": "Christopher Sousou / Jasika",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "aus",
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T23:00:39.869Z",
+  "visto": "2026-11-12T02:00:38.421Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13458",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     7,
+     0
+    ],
+    [
+     5,
+     1
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218647": {
   "id": 218647,
@@ -35631,8 +35679,8 @@
  "218656": {
   "id": 218656,
   "tour": "challenger",
-  "torneo": "Brisbane 3",
-  "ronda": "Brisbane 3 - 1/8-finals",
+  "torneo": "Brisbane 3, Australia",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
@@ -35642,21 +35690,47 @@
    "id": 842,
    "nombre": "Dane Sweeny",
    "pais": "aus",
-   "ranking": 114
+   "ranking": 116
   },
   "j2": {
    "id": 14056,
-   "nombre": "C. Hoole",
-   "pais": null,
-   "ranking": null
+   "nombre": "Casey Hoole",
+   "pais": "aus",
+   "ranking": 636
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T23:00:39.869Z",
+  "visto": "2026-11-12T02:00:38.421Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218681": {
   "id": 218681,
@@ -35849,7 +35923,7 @@
    "ranking": 180
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T01:00:35.091Z",
   "torneoClave": "challenger|Lima 2",
@@ -38773,7 +38847,7 @@
  },
  "219222": {
   "id": 219222,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Brisbane 3",
   "ronda": "Brisbane 3 - Quarter-finals",
   "rondaCod": "QF",
@@ -38783,31 +38857,49 @@
   "horario": "2026-11-12T01:00:00Z",
   "j1": {
    "id": 13220,
-   "nombre": "Cook/ Sach",
+   "nombre": "Ethan Cook / Tai Leonard Sach",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 41808,
-   "nombre": "Ellis/ Tu",
+   "nombre": "Ellis / Tu",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T23:00:39.869Z",
+  "visto": "2026-11-12T02:00:38.421Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13458",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     4
+    ],
+    [
+     6,
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219229": {
   "id": 219229,
