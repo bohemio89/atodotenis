@@ -37544,7 +37544,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T19:00:39.078Z",
   "torneoClave": "atp|Stockholm",
@@ -38262,26 +38262,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T19:15:00Z",
+  "horario": "2026-11-12T19:10:00Z",
   "j1": {
-   "id": 1974,
-   "nombre": "Filip Jeff Planinsek",
-   "pais": "slo",
-   "ranking": 539
-  },
-  "j2": {
    "id": 675,
    "nombre": "Alastair Gray",
    "pais": "gbr",
    "ranking": 270
   },
+  "j2": {
+   "id": 1974,
+   "nombre": "Filip Jeff Planinsek",
+   "pais": "slo",
+   "ranking": 510
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T19:00:39.349Z",
+  "visto": "2026-11-12T20:00:39.962Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219005": {
   "id": 219005,
@@ -38814,7 +38838,7 @@
    "ranking": 52
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T19:00:39.349Z",
   "torneoClave": "challenger|Orleans",
@@ -39070,7 +39094,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T19:00:39.350Z",
+  "visto": "2026-11-12T20:00:39.962Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -39080,19 +39104,21 @@
   "score": {
    "games": [
     [
-     1
+     6,
+     0
     ],
     [
+     7,
      0
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "15",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -39438,7 +39464,7 @@
    "ranking": 206
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T19:00:39.350Z",
   "torneoClave": "challenger|Knoxville",
@@ -40690,26 +40716,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T19:15:00Z",
+  "horario": "2026-11-12T19:30:00Z",
   "j1": {
-   "id": 664,
-   "nombre": "Lorenzo Musetti",
-   "pais": "ita",
-   "ranking": 25
-  },
-  "j2": {
    "id": 4,
    "nombre": "Ugo Humbert",
    "pais": "fra",
    "ranking": 39
   },
+  "j2": {
+   "id": 664,
+   "nombre": "Lorenzo Musetti",
+   "pais": "ita",
+   "ranking": 25
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T19:00:39.078Z",
+  "visto": "2026-11-12T20:00:39.962Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219358": {
   "id": 219358,
@@ -40967,7 +41017,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T19:00:39.350Z",
   "tier": null,
@@ -41066,27 +41116,17 @@
  },
  "219412": {
   "id": 219412,
-  "tour": "challenger_women_doubles",
+  "tour": "challenger",
   "torneo": "Sopo (Colombia)",
   "ronda": "Sopo - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-12T19:25:00Z",
+  "horario": "2026-11-12T19:35:00Z",
   "j1": {
-   "id": 44726,
-   "nombre": "Samson/ Zidansek",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "slo"
-   ]
-  },
-  "j2": {
    "id": 19632,
-   "nombre": "Mediorreal/ Perez Garcia",
+   "nombre": "Georgina García Pérez / Mediorreal",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -41094,13 +41134,49 @@
     null
    ]
   },
+  "j2": {
+   "id": 44726,
+   "nombre": "Samson / Zidansek",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "cze",
+    "slo"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T19:00:39.350Z",
-  "torneoClave": "challenger_women|Sopo (Colombia)",
+  "visto": "2026-11-12T20:00:39.962Z",
+  "torneoClave": "challenger|Sopo (Colombia)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14866",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1,
+     0
+    ],
+    [
+     6,
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219413": {
   "id": 219413,
@@ -41359,7 +41435,7 @@
    "ranking": 100
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T19:00:39.349Z",
   "tier": null,
@@ -41737,7 +41813,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T19:00:39.349Z",
   "tier": null,
@@ -41772,17 +41848,17 @@
  },
  "219578": {
   "id": 219578,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Knoxville",
   "ronda": "Knoxville - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T19:15:00Z",
+  "horario": "2026-11-12T19:35:00Z",
   "j1": {
    "id": 38341,
-   "nombre": "Jans/ Vliegen",
+   "nombre": "Jans / Joran Vliegen",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -41792,7 +41868,7 @@
   },
   "j2": {
    "id": 44965,
-   "nombre": "Azkara/ Chidekh",
+   "nombre": "Azkara / Chidekh",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -41801,12 +41877,36 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T19:00:39.349Z",
+  "visto": "2026-11-12T20:00:39.962Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2444",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219591": {
   "id": 219591,
@@ -41878,17 +41978,17 @@
  },
  "219623": {
   "id": 219623,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Lima 2",
   "ronda": "Lima 2 - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T19:45:00Z",
+  "horario": "2026-11-12T19:40:00Z",
   "j1": {
-   "id": 8948,
-   "nombre": "Oliveira/ Rodrigues",
+   "id": 1715,
+   "nombre": "Karol Drzewiecki / Piotr Matuszewski",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -41897,8 +41997,8 @@
    ]
   },
   "j2": {
-   "id": 1715,
-   "nombre": "Drzewiecki/ Matuszewski",
+   "id": 8948,
+   "nombre": "Bruno Oliveira / Natan Rodrigues",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -41907,12 +42007,36 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T19:00:39.349Z",
+  "visto": "2026-11-12T20:00:39.962Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4820",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219626": {
   "id": 219626,
@@ -42045,7 +42169,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T19:00:39.350Z",
   "tier": null,
