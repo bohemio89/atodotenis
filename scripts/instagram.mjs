@@ -244,9 +244,9 @@ async function carruseles() {
     for (let i = 0; i < 12; i++) { const s = await api(`${cont.id}?fields=status_code`); if (s.status_code === 'FINISHED') break; if (s.status_code === 'ERROR') throw new Error('Instagram no pudo procesar el carrusel'); await new Promise((r) => setTimeout(r, 5000)); }
     const pub = await api(`${yo.id}/media_publish`, { method: 'POST', body: JSON.stringify({ creation_id: cont.id }) });
     e.publicadas.push({ slug: c.id, id: pub.id, tipo: 'carrusel', tanda, fecha: new Date().toISOString() });
-    return; // una sola por tanda
     guardarEstado(e);
     log('Carrusel publicado:', c.id, pub.id);
+    return; // una sola por tanda
   }
 }
 
