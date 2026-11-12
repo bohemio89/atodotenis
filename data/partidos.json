@@ -8515,41 +8515,57 @@
  },
  "215407": {
   "id": 215407,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-11T23:55:00Z",
+  "horario": "2026-11-12T00:10:00Z",
   "j1": {
    "id": 1450,
-   "nombre": "Dabrowski/ Stefani",
+   "nombre": "Gabriela Dabrowski / Luisa Stefani",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "can",
-    "bra"
-   ]
+   "ranking": 12
   },
   "j2": {
    "id": 1800,
-   "nombre": "Guo/ Mladenovic",
+   "nombre": "Kristina Mladenovic / Meiqi Guo",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "chn",
-    "fra"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T23:00:39.784Z",
+  "visto": "2026-11-12T01:00:35.091Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Finals - Riyadh"
+  "torneoClave": "wta|Finals - Riyadh",
+  "torneoId": "3190",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215408": {
   "id": 215408,
@@ -24889,41 +24905,57 @@
  },
  "216551": {
   "id": 216551,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Knoxville",
   "ronda": "Knoxville - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T00:15:00Z",
+  "horario": "2026-11-12T00:55:00Z",
   "j1": {
-   "id": 44964,
-   "nombre": "Andrade/ Ingildsen",
+   "id": 12403,
+   "nombre": "Maginley / Poling",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "ecu",
-    null
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 12403,
-   "nombre": "Maginley/ Poling",
+   "id": 44964,
+   "nombre": "Andrade / Ingildsen",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T23:00:39.869Z",
+  "visto": "2026-11-12T01:00:35.091Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2444",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "216552": {
   "id": 216552,
@@ -25008,7 +25040,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T00:00:36.302Z",
+  "visto": "2026-11-12T01:00:35.091Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -25018,19 +25050,21 @@
   "score": {
    "games": [
     [
-     5
+     6,
+     4
     ],
     [
-     3
+     7,
+     5
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
     "0",
-    "0"
+    "15"
    ],
    "saca": 2
   },
@@ -25060,7 +25094,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T00:00:36.302Z",
   "torneoClave": "challenger|Knoxville",
@@ -25448,7 +25482,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T00:00:36.301Z",
   "torneoClave": "challenger|Lima 2",
@@ -35803,24 +35837,48 @@
   "genero": "men",
   "horario": "2026-11-12T02:10:00Z",
   "j1": {
-   "id": 424,
-   "nombre": "Lautaro Midon",
-   "pais": "arg",
-   "ranking": 185
-  },
-  "j2": {
    "id": 362,
    "nombre": "Miguel Tobon",
    "pais": "col",
    "ranking": 501
   },
+  "j2": {
+   "id": 424,
+   "nombre": "Lautaro Midon",
+   "pais": "arg",
+   "ranking": 180
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-11T23:00:39.869Z",
+  "visto": "2026-11-12T01:00:35.091Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "218693": {
   "id": 218693,
