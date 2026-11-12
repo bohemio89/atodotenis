@@ -37692,7 +37692,7 @@
    "ranking": 584
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T11:00:42.278Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -39607,41 +39607,57 @@
  },
  "219265": {
   "id": 219265,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Orleans",
   "ronda": "Orleans - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T11:30:00Z",
+  "horario": "2026-11-12T11:35:00Z",
   "j1": {
-   "id": 18193,
-   "nombre": "Behar/ Paris",
+   "id": 1348,
+   "nombre": "Sander Gille / Sem Verbeek",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 1348,
-   "nombre": "Gille/ Verbeek",
+   "id": 18193,
+   "nombre": "Ariel Behar / Joshua Paris",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T11:00:42.278Z",
+  "visto": "2026-11-12T12:00:41.657Z",
   "torneoClave": "challenger|Orleans",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2424",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219286": {
   "id": 219286,
@@ -39726,7 +39742,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T11:00:42.278Z",
   "tier": null,
@@ -39786,30 +39802,55 @@
  },
  "219330": {
   "id": 219330,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T11:20:00Z",
+  "horario": "2026-11-12T11:50:00Z",
   "j1": {
    "id": 1481,
-   "nombre": "Tsitsipas/ Tsitsipas",
-   "pais": null,
+   "nombre": "Petros Tsitsipas / Stefanos Tsitsipas",
+   "pais": "grc",
    "ranking": null
   },
   "j2": {
    "id": 44946,
-   "nombre": "Fomin/ Krutykh",
+   "nombre": "Fomin / Krutykh",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T11:00:42.278Z"
+  "visto": "2026-11-12T12:00:41.657Z",
+  "tier": null,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     0
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219337": {
   "id": 219337,
@@ -39915,7 +39956,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T11:00:42.278Z",
   "tier": null,
@@ -40117,30 +40158,57 @@
  },
  "219359": {
   "id": 219359,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T11:30:00Z",
+  "horario": "2026-11-12T11:35:00Z",
   "j1": {
    "id": 22193,
-   "nombre": "Bertola/ Geerts",
+   "nombre": "Bertola / Geerts",
    "pais": null,
    "ranking": null
   },
   "j2": {
    "id": 30363,
-   "nombre": "Angelini/ Caniato",
+   "nombre": "Carlo Alberto Caniato / Lorenzo Angelini",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T11:00:42.278Z"
+  "visto": "2026-11-12T12:00:41.657Z",
+  "tier": null,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3,
+     0
+    ],
+    [
+     6,
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219400": {
   "id": 219400,
