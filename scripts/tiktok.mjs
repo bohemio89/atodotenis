@@ -56,18 +56,32 @@ for (const n of notas) {
   const sets = r.sets.map((s) => `${s[0]}-${s[1]}`).join('  ');
   const torneo = String(n.torneo || n.categoria || '').toUpperCase();
   const frase = n.declaracion?.texto && n.declaracion.texto.length < 130 ? `«${n.declaracion.texto}»` : n.bajada;
+  // Gancho de los primeros 2 segundos: sale de los datos del partido (nunca inventado) y no revela el marcador
+  const ag = ape(g), ap = ape(p), rg = r.ganador.ranking, rp = r.perdedor?.ranking;
+  const s0 = r.sets[0] || [0, 0];
+  let gancho, sub;
+  if (rg && rp && rg - rp >= 5) { gancho = '¡Batacazo!'; sub = `La N° ${rg} contra la N° ${rp}`; }
+  else if (s0[0] < s0[1] && r.sets.length >= 3) { gancho = 'Lo dio vuelta'; sub = `${ag} perdió el primer set ante ${ap}`; }
+  else if (r.sets.some((x) => x[0] >= 6 && x[1] <= 1)) { gancho = '¡Paliza!'; sub = `${ag} contra ${ap}`; }
+  else if (r.sets.some((x) => (x[0] === 7 && x[1] === 6) || (x[0] === 6 && x[1] === 7))) { gancho = 'Al tiebreak'; sub = `${ag} contra ${ap}`; }
+  else { gancho = `${ag} vs ${ap}`; sub = '¿Quién ganó?'; }
+  if (/^La N°/.test(sub) && !/WTA/i.test(`${n.categoria} ${n.torneo}`)) sub = sub.replace(/La N°/g, 'El N°').replace('contra la', 'contra el');
+  const esFinals = /Finals/i.test(`${n.torneo} ${n.categoria}`);
+  const pregunta = esFinals ? '¿Quién gana el título?' : '¿Quién gana el torneo?';
   const guion = { escenas: [
-    { foto, foco: focoJugador(g), segundos: 3.4, html: `${G}${marca}<div class="chip" style="top:224px">RESULTADO · ${esc(torneo)}</div>
-      <div style="position:absolute;left:72px;right:150px;bottom:640px"><div style="font:800 120px/0.95 Montserrat;letter-spacing:-.03em">${esc(g.split(' ').slice(0, -1).join(' '))}<br>${esc(ape(g))}</div>
+    { foto, foco: focoJugador(g), segundos: 1.8, html: `<div style="position:absolute;inset:0;background:linear-gradient(rgba(18,22,27,.55),rgba(18,22,27,.15) 30%,rgba(18,22,27,.75) 60%,rgba(18,22,27,.95))"></div>${marca}<div class="chip" style="top:224px">${esc(torneo)}</div>
+      <div style="position:absolute;left:72px;right:150px;bottom:700px"><div style="font:900 150px/0.92 Montserrat;letter-spacing:-.04em" class="lima">${esc(gancho)}</div>
+      <div style="font:800 58px/1.1 Montserrat;margin-top:26px">${esc(sub)}</div></div>` },
+    { foto, foco: focoJugador(g), segundos: 2.8, html: `${G}${marca}<div class="chip" style="top:224px">RESULTADO · ${esc(torneo)}</div>
+      <div style="position:absolute;left:72px;right:150px;bottom:640px"><div style="font:800 120px/0.95 Montserrat;letter-spacing:-.03em">${esc(g.split(' ').slice(0, -1).join(' '))}<br>${esc(ag)}</div>
       <div style="font-size:42px;margin-top:22px" class="gris">le ganó a ${esc(p)}</div>
-      <div style="font:700 96px RC;margin-top:14px" class="lima">${esc(sets)}</div></div>` },
-    { foto: null, segundos: 3.6, html: `${marca}<div style="position:absolute;left:72px;right:150px;top:470px">
+      <div style="font:700 104px RC;margin-top:14px" class="lima">${esc(sets)}</div></div>` },
+    { foto: null, segundos: 3.2, html: `${marca}<div style="position:absolute;left:72px;right:150px;top:470px">
       <div style="font:800 34px Montserrat;letter-spacing:.06em" class="lima">${esc(ape(n.declaracion?.texto && n.declaracion.texto.length < 130 ? n.declaracion.jugador || g : g).toUpperCase())}</div>
-      <p style="margin:24px 0 0;font:800 64px/1.15 Montserrat">${esc(frase || n.titulo)}</p>
-      <div style="font-size:36px;margin-top:50px" class="gris">La nota completa, en atodotenis.vercel.app</div></div>` },
-    { foto: null, segundos: 2.2, html: `${marca}<div style="position:absolute;left:72px;right:150px;top:560px">
-      <div style="font:800 130px/0.95 Montserrat;letter-spacing:-.03em">¿Lo<br><span class="lima">viste?</span></div>
-      <div style="font-size:44px;margin-top:40px">Seguinos para más tenis.</div></div>
+      <p style="margin:24px 0 0;font:800 64px/1.15 Montserrat">${esc(frase || n.titulo)}</p></div>` },
+    { foto: null, segundos: 2, html: `${marca}<div style="position:absolute;left:72px;right:150px;top:560px">
+      <div style="font:800 120px/0.95 Montserrat;letter-spacing:-.03em">${esc(pregunta.replace(/^¿/, '¿').split(' ').slice(0, 2).join(' '))}<br><span class="lima">${esc(pregunta.split(' ').slice(2).join(' '))}</span></div>
+      <div style="font-size:46px;margin-top:40px">Dejalo en los comentarios</div></div>
       <div style="position:absolute;left:72px;right:150px;bottom:560px;font-size:24px;color:#6B7785">Foto: Wikimedia Commons, licencia libre. Autor en atodotenis.vercel.app/creditos</div>` },
   ] };
   const guionArch = path.join(ROOT, 'node_modules', '.tiktok-guion.json');
@@ -76,9 +90,9 @@ for (const n of notas) {
   try {
     execFileSync('node', [path.join(ROOT, 'scripts/ig-reel.mjs'), guionArch, path.join(ROOT, 'static', video)], { stdio: 'inherit', env: { ...process.env, REEL_CRF: '23' } });
   } catch { log('TikTok: no se pudo armar el video de', n.slug); continue; }
-  const pregunta = n.torneo && /Finals/i.test(n.torneo) ? '¿Quién gana el título?' : '¿Lo viste?';
-  const tags = ['#tenis', '#tennis', /WTA/i.test(`${n.categoria} ${n.torneo}`) ? '#WTA' : '#ATP', '#' + ape(g).normalize('NFD').replace(/[^A-Za-z]/g, ''), '#tenisentiktok'];
-  estado.videos.unshift({ slug: n.slug, video, fecha: new Date().toISOString(), texto: `${n.titulo.replace(/\b(en|de)l? el (WTA|ATP) Finals/g, (m, a, b) => `${a === 'en' ? 'en' : 'de'} las ${b} Finals`).replace(/\bdel (WTA|ATP) Finals/g, 'de las $1 Finals')} 🎾 ${sets}. ${pregunta}\n\n${tags.join(' ')}` });
+  const wta = /WTA/i.test(`${n.categoria} ${n.torneo}`);
+  const tags = ['#tenis', '#tennis', esFinals ? (wta ? '#WTAFinals' : '#ATPFinals') : (wta ? '#WTA' : '#ATP'), '#' + ape(g).normalize('NFD').replace(/[^A-Za-z]/g, ''), '#tenisentiktok'];
+  estado.videos.unshift({ slug: n.slug, video, fecha: new Date().toISOString(), texto: `${gancho.replace(/[¡!]/g, '')}: ${n.titulo.replace(/\b(en|de)l? el (WTA|ATP) Finals/g, (m, a, b) => `${a === 'en' ? 'en' : 'de'} las ${b} Finals`).replace(/\bdel (WTA|ATP) Finals/g, 'de las $1 Finals')} 🎾 ${sets}. ${pregunta}\n\n${tags.join(' ')}` });
   deHoy++;
   log('TikTok: video listo', video);
 }
