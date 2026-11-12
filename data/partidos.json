@@ -36614,7 +36614,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T09:00:37.472Z",
+  "visto": "2026-11-12T10:00:38.562Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -36624,19 +36624,21 @@
   "score": {
    "games": [
     [
+     7,
      5
     ],
     [
-     4
+     6,
+     3
     ]
    ],
    "sets": [
-    0,
+    1,
     0
    ],
    "puntos": [
-    "15",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -37374,7 +37376,7 @@
    "ranking": 499
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T09:00:37.472Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -38220,26 +38222,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T09:30:00Z",
+  "horario": "2026-11-12T09:40:00Z",
   "j1": {
    "id": 305,
    "nombre": "Cezar Cretu",
    "pais": "rou",
-   "ranking": 269
+   "ranking": 273
   },
   "j2": {
    "id": 919,
    "nombre": "Philip Henning",
    "pais": "rsa",
-   "ranking": 236
+   "ranking": 249
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T07:00:35.823Z",
+  "visto": "2026-11-12T10:00:38.562Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "12861",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     1
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "40",
+    "AD"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219008": {
   "id": 219008,
@@ -38264,7 +38290,7 @@
    "ranking": 281
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T09:00:37.472Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -39522,7 +39548,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T09:00:37.472Z",
   "torneoClave": "challenger|Hersonissos 3",
@@ -39655,30 +39681,55 @@
  },
  "219311": {
   "id": 219311,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 3",
   "ronda": "Hersonissos 3 - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T09:30:00Z",
+  "horario": "2026-11-12T09:55:00Z",
   "j1": {
-   "id": 44950,
-   "nombre": "Caripi/ Pietri",
-   "pais": null,
+   "id": 16740,
+   "nombre": "Melios Efstathiou / Neos",
+   "pais": "cyp",
    "ranking": null
   },
   "j2": {
-   "id": 16740,
-   "nombre": "Efstathiou/ Neos",
+   "id": 44950,
+   "nombre": "Caripi / Pietri",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T07:00:35.823Z"
+  "visto": "2026-11-12T10:00:38.562Z",
+  "tier": null,
+  "torneoId": "12863",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219316": {
   "id": 219316,
