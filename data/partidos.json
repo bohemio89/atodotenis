@@ -38426,7 +38426,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T16:00:39.065Z",
+  "visto": "2026-11-12T17:00:38.966Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
   "importante": false,
@@ -38437,11 +38437,11 @@
    "games": [
     [
      5,
-     0
+     6
     ],
     [
      7,
-     0
+     6
     ]
    ],
    "sets": [
@@ -38449,10 +38449,10 @@
     1
    ],
    "puntos": [
-    "30",
-    "0"
+    "8",
+    "9"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -38724,26 +38724,52 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T16:00:00Z",
+  "horario": "2026-11-12T16:10:00Z",
   "j1": {
-   "id": 437,
-   "nombre": "Alan Magadan",
-   "pais": "mex",
-   "ranking": 496
-  },
-  "j2": {
    "id": 118,
    "nombre": "Alex Barrena",
    "pais": "arg",
-   "ranking": 224
+   "ranking": 232
+  },
+  "j2": {
+   "id": 437,
+   "nombre": "Alan Magadan",
+   "pais": "mex",
+   "ranking": 491
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T15:00:43.843Z",
+  "visto": "2026-11-12T17:00:38.966Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219043": {
   "id": 219043,
@@ -39032,26 +39058,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T16:00:00Z",
+  "horario": "2026-11-12T16:10:00Z",
   "j1": {
-   "id": 5081,
-   "nombre": "Ozan Baris",
-   "pais": "usa",
-   "ranking": 397
-  },
-  "j2": {
    "id": 1253,
    "nombre": "Michael Zheng",
    "pais": "usa",
    "ranking": 100
   },
+  "j2": {
+   "id": 5081,
+   "nombre": "Ozan Baris",
+   "pais": "usa",
+   "ranking": 397
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T15:00:43.842Z",
+  "visto": "2026-11-12T17:00:38.966Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     2
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219186": {
   "id": 219186,
@@ -40207,7 +40259,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T16:00:39.064Z",
+  "visto": "2026-11-12T17:00:38.966Z",
   "tier": null,
   "torneoId": "13396",
   "cubierto": false,
@@ -40216,22 +40268,24 @@
    "games": [
     [
      5,
+     7,
      5
     ],
     [
      7,
-     3
+     5,
+     2
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "15",
-    "0"
+    "40",
+    "30"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -40265,30 +40319,55 @@
  },
  "219356": {
   "id": 219356,
-  "tour": "challenger_women",
-  "torneo": "Sopo (Colombia) - Qualification",
+  "tour": "challenger",
+  "torneo": "Sopo (Colombia)",
   "ronda": "Sopo - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-12T16:30:00Z",
+  "horario": "2026-11-12T16:55:00Z",
   "j1": {
-   "id": 1123,
-   "nombre": "Alice Tubello",
-   "pais": "fra",
-   "ranking": 146
-  },
-  "j2": {
    "id": 144,
    "nombre": "Polona Hercog",
    "pais": "slo",
    "ranking": 200
   },
+  "j2": {
+   "id": 1123,
+   "nombre": "Alice Tubello",
+   "pais": "fra",
+   "ranking": 146
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T15:00:43.843Z"
+  "visto": "2026-11-12T17:00:38.966Z",
+  "tier": null,
+  "torneoId": "14866",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219357": {
   "id": 219357,
@@ -40461,30 +40540,55 @@
  },
  "219409": {
   "id": 219409,
-  "tour": "challenger_women_doubles",
+  "tour": "challenger",
   "torneo": "Sopo (Colombia)",
   "ronda": "Sopo - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-12T16:30:00Z",
+  "horario": "2026-11-12T16:40:00Z",
   "j1": {
    "id": 27174,
-   "nombre": "Erjavec/ Kulambayeva",
+   "nombre": "Erjavec / Kulambayeva",
    "pais": null,
    "ranking": null
   },
   "j2": {
    "id": 44724,
-   "nombre": "McGiffin/ Osborne",
+   "nombre": "McGiffin / Osborne",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T15:00:43.842Z"
+  "visto": "2026-11-12T17:00:38.966Z",
+  "tier": null,
+  "torneoId": "14866",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219410": {
   "id": 219410,
@@ -40536,7 +40640,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T16:00:39.065Z",
   "tier": null,
@@ -40617,7 +40721,7 @@
    "ranking": 237
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T16:00:39.064Z",
   "tier": null,
@@ -40698,7 +40802,7 @@
    "ranking": 203
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T16:00:39.064Z",
   "tier": null,
@@ -40779,7 +40883,7 @@
    "ranking": 119
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-12T16:00:39.065Z",
   "tier": null,
@@ -40860,7 +40964,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T16:00:39.064Z",
+  "visto": "2026-11-12T17:00:38.966Z",
   "tier": null,
   "torneoId": "1681",
   "cubierto": true,
@@ -40869,22 +40973,24 @@
    "games": [
     [
      7,
+     6,
      4
     ],
     [
      6,
-     4
+     7,
+     2
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
     "0",
-    "15"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -40972,57 +41078,111 @@
  },
  "219497": {
   "id": 219497,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Lima 2",
   "ronda": "Lima 2 - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T16:00:00Z",
+  "horario": "2026-11-12T16:10:00Z",
   "j1": {
    "id": 16790,
-   "nombre": "Barrientos/ Gomez",
+   "nombre": "Barrientos / Juan Sebastian Gomez",
    "pais": null,
    "ranking": null
   },
   "j2": {
    "id": 25177,
-   "nombre": "Arias/ Carou",
+   "nombre": "Arias / Ignacio Carou",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T15:00:43.842Z"
+  "visto": "2026-11-12T17:00:38.966Z",
+  "tier": null,
+  "torneoId": "4820",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219498": {
   "id": 219498,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Knoxville",
   "ronda": "Knoxville - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T16:00:00Z",
+  "horario": "2026-11-12T16:10:00Z",
   "j1": {
-   "id": 44963,
-   "nombre": "Hussey/ Wendelken",
+   "id": 38376,
+   "nombre": "Hilderbrand / Pavel",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 38376,
-   "nombre": "Hilderbrand/ Pavel",
+   "id": 44963,
+   "nombre": "Hussey / Wendelken",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T15:00:43.842Z"
+  "visto": "2026-11-12T17:00:38.966Z",
+  "tier": null,
+  "torneoId": "2444",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219499": {
   "id": 219499,
