@@ -1832,7 +1832,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "jor"
    ]
   },
   "dobles": true,
@@ -9210,24 +9210,71 @@
   "genero": "women",
   "horario": "2026-11-13T21:30:00Z",
   "j1": {
-   "id": 55,
-   "nombre": "Aryna Sabalenka",
-   "pais": "blr",
-   "ranking": 2
-  },
-  "j2": {
    "id": 43,
    "nombre": "Elina Svitolina",
    "pais": "ukr",
    "ranking": 6
   },
+  "j2": {
+   "id": 55,
+   "nombre": "Aryna Sabalenka",
+   "pais": "blr",
+   "ranking": 2
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T19:45:24.412Z",
+  "visto": "2026-11-13T21:45:24.962Z",
   "importante": true,
   "tier": null,
-  "torneoClave": "wta|Finals - Riyadh"
+  "torneoClave": "wta|Finals - Riyadh",
+  "torneoId": "3195",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-13T21:45:12.200953Z",
+   "age_seconds": 12,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 10,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "30",
+    "30"
+   ],
+   "received_at": "2026-11-13T21:45:11.840440Z",
+   "sequence": 22,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-13T21:45:20.373507Z",
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215423": {
   "id": 215423,
@@ -11658,7 +11705,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "jor"
    ]
   },
   "j2": {
@@ -41740,7 +41787,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T20:45:23.386Z",
   "torneoClave": "challenger|Orleans",
@@ -43008,7 +43055,7 @@
    "ranking": 241
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T20:45:23.386Z",
   "torneoClave": "challenger|Knoxville",
@@ -45723,7 +45770,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T20:45:23.386Z",
+  "visto": "2026-11-13T21:45:24.961Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -45731,44 +45778,48 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-13T20:45:22.166241Z",
-   "age_seconds": 1,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-13T21:45:09.734896Z",
+   "age_seconds": 14,
+   "changing_sources_count": 3,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
-   "deciding_match_tiebreak_next": false,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": true,
    "deciding_set": {
-    "basis": "inferred",
+    "basis": "confirmed",
     "rule": "match_tiebreak"
    },
    "games": [
     [
-     6
+     6,
+     6,
+     7
     ],
     [
-     6
+     7,
+     3,
+     5
     ]
    ],
    "is_tiebreak": true,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 8,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "7",
+    "5"
    ],
-   "received_at": "2026-11-13T20:45:21.857441Z",
-   "sequence": 69,
+   "received_at": "2026-11-13T21:45:09.427152Z",
+   "sequence": 156,
    "server": 2,
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 4,
    "stale": false,
-   "timestamp": "2026-11-13T20:45:22.166235Z",
+   "timestamp": "2026-11-13T21:45:09.734893Z",
    "puntos": [
-    "0",
-    "0"
+    "7",
+    "5"
    ],
    "saca": 2
   },
@@ -46021,7 +46072,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T20:00:00Z",
+  "horario": "2026-11-13T21:45:00Z",
   "j1": {
    "id": 401,
    "nombre": "Abedallah Shelbayh",
@@ -46035,12 +46086,59 @@
    "ranking": 270
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T19:45:24.459Z",
+  "visto": "2026-11-13T21:45:24.962Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-13T21:44:50.198179Z",
+   "age_seconds": 34,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-13T21:44:49.846042Z",
+   "sequence": 6,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": false,
+   "timestamp": "2026-11-13T21:45:15.743338Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219982": {
   "id": 219982,
@@ -46591,7 +46689,7 @@
    "pais": "rus",
    "ranking": 11
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-13T20:43:31.161902Z",
