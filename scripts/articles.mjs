@@ -22,7 +22,7 @@ function resultadoParaNota(p) {
   const jug = (j) => ({ nombre: j?.nombre || '', pais: j?.pais || '', ranking: j?.ranking || null });
   const gs = p.score.games || [[], []];
   const setsG = (gs[0] || []).map((x, i) => p.ganador === 1 ? [x, gs[1][i]] : [gs[1][i], x]).filter(([a, b]) => a != null && b != null);
-  return { ganador: jug(g), perdedor: jug(pe), sets: setsG, ronda: p.rondaCod || null, resultado: p.resultado || null };
+  return { ganador: jug(g), perdedor: jug(pe), sets: setsG, tieBreaks: p.score.tiebreaks ?? p.score.tieBreaks ?? p.score.tie_breaks ?? p.score.tiebreak_scores ?? p.score.tiebreakScores ?? null, ronda: p.rondaCod || null, resultado: p.resultado || null };
 }
 for (const f of fs.readdirSync(path.join(ROOT, 'content/notas')).filter((x) => x.endsWith('.json'))) {
   const ruta = path.join(ROOT, 'content/notas', f);
@@ -176,7 +176,8 @@ QUÉ CONTAR:
 VOZ DE LA CASA (así escribe A Todo Tenis desde hace años):
 - Directo y con el dato adelante: primero quién le ganó a quién, el marcador y la instancia; después el contexto. Oraciones cortas.
 - Ranking siempre con "N°": "el N° 1 del mundo", "la N° 8 del ranking". Nunca "número uno" ni "top" en inglés.
-- Marcador completo con comas y una "y" antes del último set: "Fue 7-5, 5-7, 6-2 y 6-4." En dos sets parejos vale "por un doble 6-4".
+- Marcador completo desde el punto de vista del ganador, con comas y una "y" antes del último set: "Ganó 6-4, 3-6 y 7-6 (2)". Nunca separar sets solo con espacios ni dejar una lista de sets sin la "y" final.
+- Cuando un set termina 7-6, agregá los puntos del tie-break entre paréntesis (por ejemplo, "7-6 (2)") únicamente si ese dato aparece en los datos del partido. Si no está disponible, escribí "7-6" sin inventar el desempate ni reemplazarlo por una mención vaga al tie-break.
 - Si "sorpresa_por_ranking" es "grande", el primer párrafo arranca con "¡Batacazo!" seguido del hecho: "¡Batacazo! Fulano derrotó a Mengano, N° 1 del mundo." Es la única exclamación permitida y solo en ese caso.
 - Verbos de la casa: derrotó, venció, superó, se impuso, dejó en el camino, avanzó a, se metió en, se quedó con. En una final: "se consagró campeón" o "se quedó con el título".
 - Para el próximo rival: "En cuartos lo espera Fulano" o "Espera en semifinales por Fulano".
