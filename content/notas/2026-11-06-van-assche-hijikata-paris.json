@@ -1,66 +1,77 @@
 {
- "slug": "2026-11-06-van-assche-hijikata-paris",
- "estado": "publicada",
- "fecha": "2026-11-06T22:48:51.509Z",
- "fechaPartido": "2026-11-06T15:20:00Z",
- "titulo": "Luca van Assche superó a Rinky Hijikata y se metió en semifinales de París",
- "bajada": "El tenista francés necesitó de tres sets para vencer al australiano en el Masters 1000 de París.",
- "cuerpo": [
-  "Luca van Assche superó a Rinky Hijikata por 6-4, 6-7 y 7-5 en los cuartos de final del Masters 1000 de París. El N° 47 del mundo se quedó con el triunfo en la superficie de cemento bajo techo.",
-  "El francés arrancó mejor y conquistó el primer set por 6-4. El australiano, N° 83 del ranking, equilibró el encuentro al adjudicarse el segundo parcial por 7-6 en el tie-break. En el tercer set, Van Assche cerró el marcador con un 7-5 a su favor.",
-  "En otro resultado destacado del día, Carlos Alcaraz, N° 3 del ranking, venció a Taylor Fritz por 6-7, 7-5 y 6-3."
- ],
- "etiquetas": [
-  "Luca van Assche",
-  "Rinky Hijikata",
-  "Masters 1000 de París"
- ],
- "categoria": "Masters 1000",
- "argentina": false,
- "superficie": "hard",
- "partidoId": 216026,
- "jugadores": [
-  "Luca van Assche",
-  "Rinky Hijikata"
- ],
- "torneo": "París",
- "resultado": {
-  "ganador": {
-   "nombre": "Luca van Assche",
-   "pais": "fra",
-   "ranking": 47
-  },
-  "perdedor": {
-   "nombre": "Rinky Hijikata",
-   "pais": "aus",
-   "ranking": 83
-  },
-  "sets": [
-   [
-    6,
-    4
-   ],
-   [
-    6,
-    7
-   ],
-   [
-    7,
-    5
-   ]
+  "slug": "2026-11-06-van-assche-hijikata-paris",
+  "estado": "publicada",
+  "fecha": "2026-11-06T22:48:51.509Z",
+  "fechaPartido": "2026-11-06T15:20:00Z",
+  "titulo": "Luca van Assche superó a Rinky Hijikata y se metió en semifinales de París",
+  "bajada": "El tenista francés necesitó de tres sets para vencer al australiano en el Masters 1000 de París.",
+  "cuerpo": [
+    "Luca van Assche superó a Rinky Hijikata por 6-4, 6-7 y 7-5 en los cuartos de final del Masters 1000 de París. El N° 47 del mundo se quedó con el triunfo en la superficie de cemento bajo techo.",
+    "El francés arrancó mejor y conquistó el primer set por 6-4. El australiano, N° 83 del ranking, equilibró el encuentro al adjudicarse el segundo parcial por 7-6 en el tie-break. En el tercer set, Van Assche cerró el marcador con un 7-5 a su favor.",
+    "En otro resultado destacado del día, Carlos Alcaraz, N° 3 del ranking, venció a Taylor Fritz por 6-7, 7-5 y 6-3."
   ],
-  "ronda": "QF",
-  "resultado": null
- },
- "firma": "Redacción A Todo Tenis",
- "imagen": null,
- "generadoCon": "gemini-3.5-flash",
- "fotoBuscada": "2026-11-09T19:30:39.800Z",
- "importancia": 65,
- "video": {
-  "youtube": "KHxK2c8wSsI",
-  "titulo": "Luca Van Assche vs Rinky Hijikata Highlights | Paris 2026 Quarter-Finals",
-  "canal": "ATP Tour",
-  "publicado": "2026-11-06T18:40:01+00:00"
- }
+  "etiquetas": [
+    "Luca van Assche",
+    "Rinky Hijikata",
+    "Masters 1000 de París"
+  ],
+  "categoria": "Masters 1000",
+  "argentina": false,
+  "superficie": "hard",
+  "partidoId": 216026,
+  "jugadores": [
+    "Luca van Assche",
+    "Rinky Hijikata"
+  ],
+  "torneo": "París",
+  "resultado": {
+    "ganador": {
+      "nombre": "Luca van Assche",
+      "pais": "fra",
+      "ranking": 47
+    },
+    "perdedor": {
+      "nombre": "Rinky Hijikata",
+      "pais": "aus",
+      "ranking": 83
+    },
+    "sets": [
+      [
+        6,
+        4
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        5
+      ]
+    ],
+    "ronda": "QF",
+    "resultado": null
+  },
+  "firma": "Redacción A Todo Tenis",
+  "imagen": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luca_Van_Assche_(2023_US_Open)_01.jpg?width=1280",
+    "credito": "Hameltion / CC BY-SA 4.0, vía Wikimedia Commons",
+    "enlace": "https://commons.wikimedia.org/wiki/File:Luca_Van_Assche_(2023_US_Open)_01.jpg",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "fechaFoto": "2023-08-29",
+    "jugador": "Luca van Assche",
+    "alt": "Luca van Assche durante el US Open 2023",
+    "ancho": 4000,
+    "alto": 6000,
+    "calidad": 2
+  },
+  "generadoCon": "gemini-3.5-flash",
+  "fotoBuscada": "2026-11-09T19:30:39.800Z",
+  "importancia": 65,
+  "video": {
+    "youtube": "KHxK2c8wSsI",
+    "titulo": "Luca Van Assche vs Rinky Hijikata Highlights | Paris 2026 Quarter-Finals",
+    "canal": "ATP Tour",
+    "publicado": "2026-11-06T18:40:01+00:00"
+  }
 }
