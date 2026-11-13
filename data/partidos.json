@@ -9202,13 +9202,13 @@
  "215422": {
   "id": 215422,
   "tour": "wta",
-  "torneo": "Finals - Riyadh",
+  "torneo": "WTA Tour Finals, Group B",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-13T21:30:00Z",
+  "horario": "2026-11-13T21:35:00Z",
   "j1": {
    "id": 43,
    "nombre": "Elina Svitolina",
@@ -9224,7 +9224,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T21:45:24.962Z",
+  "visto": "2026-11-13T22:45:24.038Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -9232,11 +9232,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-13T21:45:12.200953Z",
-   "age_seconds": 12,
+   "accepted_at": "2026-11-13T22:45:19.639928Z",
+   "age_seconds": 2,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 10,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -9244,32 +9244,34 @@
    },
    "games": [
     [
-     0
+     6,
+     2
     ],
     [
-     2
+     3,
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-13T21:45:11.840440Z",
-   "sequence": 22,
+   "received_at": "2026-11-13T22:45:19.492368Z",
+   "sequence": 100,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-13T21:45:20.373507Z",
+   "timestamp": "2026-11-13T22:45:19.639927Z",
    "puntos": [
-    "30",
-    "30"
+    "15",
+    "15"
    ],
    "saca": 1
   },
@@ -43011,26 +43013,73 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T21:00:00Z",
+  "horario": "2026-11-13T22:05:00Z",
   "j1": {
-   "id": 412,
-   "nombre": "Nikolas Sanchez Izquierdo",
-   "pais": "esp",
-   "ranking": 151
-  },
-  "j2": {
    "id": 362,
    "nombre": "Miguel Tobon",
    "pais": "col",
    "ranking": 501
   },
+  "j2": {
+   "id": 412,
+   "nombre": "Nikolas Sanchez Izquierdo",
+   "pais": "esp",
+   "ranking": 151
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T19:45:24.459Z",
+  "visto": "2026-11-13T22:45:24.038Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-13T22:45:03.767993Z",
+   "age_seconds": 18,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-13T22:45:03.331861Z",
+   "sequence": 49,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-13T22:45:14.088889Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219670": {
   "id": 219670,
@@ -45768,7 +45817,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T21:45:24.961Z",
   "torneoClave": "challenger|Lima 2",
@@ -46066,8 +46115,8 @@
  "219959": {
   "id": 219959,
   "tour": "challenger",
-  "torneo": "Knoxville",
-  "ronda": "Knoxville - Quarter-finals",
+  "torneo": "Knoxville, USA",
+  "ronda": "Quarterfinals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
@@ -46088,7 +46137,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T21:45:24.962Z",
+  "visto": "2026-11-13T22:45:24.038Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
   "importante": false,
@@ -46096,11 +46145,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-13T21:44:50.198179Z",
-   "age_seconds": 34,
+   "accepted_at": "2026-11-13T22:44:18.046332Z",
+   "age_seconds": 64,
    "changing_sources_count": 1,
-   "corroborated": false,
-   "corroborated_age_seconds": null,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -46108,29 +46157,31 @@
    },
    "games": [
     [
-     0
+     6,
+     2
     ],
     [
-     1
+     4,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 8,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-13T21:44:49.846042Z",
-   "sequence": 6,
+   "received_at": "2026-11-13T22:44:17.908836Z",
+   "sequence": 92,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 1,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-13T21:45:15.743338Z",
+   "timestamp": "2026-11-13T22:44:27.833235Z",
    "puntos": [
     "0",
     "0"
@@ -46689,14 +46740,14 @@
    "pais": "rus",
    "ranking": 11
   },
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-13T20:43:31.161902Z",
-   "age_seconds": 112,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-13T21:08:41.926486Z",
+   "age_seconds": 5803,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 5795,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -46705,39 +46756,39 @@
    "games": [
     [
      6,
-     0
+     6
     ],
     [
      2,
-     0
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 5795,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-13T20:43:30.969291Z",
-   "sequence": 51,
-   "server": 2,
+   "received_at": "2026-11-13T21:08:41.715129Z",
+   "sequence": 87,
+   "server": 1,
    "sets": [
-    1,
+    2,
     0
    ],
-   "sources_count": 1,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-13T20:43:41.959984Z",
+   "timestamp": "2026-11-13T21:08:41.926480Z",
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null,
-  "visto": "2026-11-13T20:45:23.386Z",
+  "confirmado": true,
+  "ganador": 1,
+  "visto": "2026-11-13T22:45:25.365Z",
   "torneoClave": "wta|Finals - Riyadh",
   "importante": true
  },
