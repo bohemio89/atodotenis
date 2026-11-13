@@ -128,8 +128,14 @@ function videoNota(n) {
 <script>document.querySelectorAll('.yt').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';f.title='${EN ? 'Match highlights' : 'Highlights del partido'}';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.className='yt-frame';b.replaceWith(f);});});</script></section>`;
 }
 function imagenNota(n, conCredito = true) {
-  if (n.imagen?.url) return `<div class="fondo"><img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} alt="${esc(EN ? n.titulo : n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%">${conCredito ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
-  return placa(n) || cancha(n.superficie);
+  const respaldo = placa(n) || cancha(n.superficie);
+  if (n.imagen?.url) {
+    // Si falla el thumbnail de Wikimedia, probar el archivo original en upload.wikimedia.org.
+    const alternativa = n.imagen.url.replace(/^https:\/\/thumb\.wikimedia\.org\/wikipedia\/commons\/thumb\/(.+)\/[^/]+(?:\?.*)?$/, 'https://upload.wikimedia.org/wikipedia/commons/$1');
+    const fallback = alternativa !== n.imagen.url ? alternativa : '';
+    return `<div class="fondo"><img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} data-fallback="${esc(fallback)}" onerror="if(this.dataset.fallback){var f=this.dataset.fallback;this.dataset.fallback='';this.removeAttribute('srcset');this.src=f;}else{this.hidden=true;var p=this.nextElementSibling;if(p)p.hidden=false;}" alt="${esc(EN ? n.titulo : n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%"><div class="imagen-respaldo" hidden>${respaldo}</div>${conCredito ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
+  }
+  return respaldo;
 }
 
 function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
