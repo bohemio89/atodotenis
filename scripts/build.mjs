@@ -74,7 +74,7 @@ function normalizarMarcadorNota(n) {
   const r = resultadoNota(n);
   if (!r?.sets?.length || !Array.isArray(n.cuerpo) || !n.cuerpo.length) return n;
   const textoOriginal = n.cuerpo.join(' ');
-  const tbEncontrados = [...textoOriginal.matchAll(/7-6\\s*\\((\\d+)\\)/g)].map((m) => Number(m[1]));
+  const tbEncontrados = [...textoOriginal.matchAll(/7-6\s*\((\d+)\)/g)].map((m) => Number(m[1]));
   const tb = r.tieBreaks ?? r.tiebreaks ?? r.tie_breaks ?? [];
   const setsFormateados = r.sets.map(([a, b], i) => {
     let puntos = Array.isArray(tb) ? tb[i] : (tb && typeof tb === 'object' ? (tb[i] ?? tb[String(i + 1)]) : null);
@@ -84,9 +84,9 @@ function normalizarMarcadorNota(n) {
   });
   const marcador = setsFormateados.length < 2 ? setsFormateados.join('') : `${setsFormateados.slice(0, -1).join(', ')} y ${setsFormateados.at(-1)}`;
   const cuerpo = n.cuerpo.map((parrafo, i) => {
-    let t = String(parrafo).replace(/(7-6)\\s*\\((\\d+)\\)/g, '$1 ($2)');
-    t = t.replace(/(7-6(?:\\s*\\(\\d+\\))?)\\s+(?:en el )?(?:tie-break|tiebreak)/gi, '$1');
-    if (i === 0) t = t.replace(/\\b(por|by)\\s+(?:un doble\\s+)?(?:\\d{1,2}-\\d{1,2}(?:\\s*\\(\\d+\\))?)(?:(?:\\s*,\\s*|\\s+y\\s+)\\d{1,2}-\\d{1,2}(?:\\s*\\(\\d+\\))?)*/i, (_m, prep) => `${prep} ${marcador}`);
+    let t = String(parrafo).replace(/(7-6)\s*\((\d+)\)/g, '$1 ($2)');
+    t = t.replace(/(7-6(?:\s*\(\d+\))?)\s+(?:en el )?(?:tie-break|tiebreak)/gi, '$1');
+    if (i === 0) t = t.replace(/\b(por|by)\s+(?:un doble\s+)?(?:\d{1,2}-\d{1,2}(?:\s*\(\d+\))?)(?:(?:\s*,\s*|\s+y\s+)\d{1,2}-\d{1,2}(?:\s*\(\d+\))?)*/i, (_m, prep) => `${prep} ${marcador}`);
     return t;
   });
   return { ...n, cuerpo };
