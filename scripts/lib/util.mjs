@@ -106,7 +106,21 @@ export function ganador(score) {
 
 // Marcador visto desde el ganador: "6-4 3-6 10-7"
 export function marcadorTexto(score, desde = 1) {
-  return sets(score).map(([x, y]) => (desde === 1 ? `${x}-${y}` : `${y}-${x}`)).join(' ');
+  const tb = score?.tiebreaks ?? score?.tieBreaks ?? score?.tie_breaks ?? score?.tiebreak_scores ?? score?.tiebreakScores ?? [];
+  const valores = sets(score).map(([x, y], i) => {
+    const a = desde === 1 ? x : y, b = desde === 1 ? y : x;
+    let puntos = Array.isArray(tb) ? tb[i] : (tb && typeof tb === 'object' ? (tb[i] ?? tb[String(i + 1)]) : null);
+    if (puntos && typeof puntos === 'object') {
+      const p1 = Number(puntos.p1 ?? puntos.player1 ?? puntos[0]);
+      const p2 = Number(puntos.p2 ?? puntos.player2 ?? puntos[1]);
+      const ganadorSet = x > y ? 1 : 2;
+      const puntosGanador = (desde === 1 ? ganadorSet === 1 : ganadorSet === 2) ? p1 : p2;
+      puntos = Number.isFinite(puntosGanador) ? puntosGanador : null;
+    } else puntos = Number(puntos);
+    const desempate = (a === 7 && b === 6) && Number.isFinite(puntos) && puntos > 0 ? ` (${puntos})` : '';
+    return `${a}-${b}${desempate}`;
+  });
+  return valores.length < 2 ? valores.join('') : `${valores.slice(0, -1).join(', ')} y ${valores.at(-1)}`;
 }
 
 export function slugify(s) {
