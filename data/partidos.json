@@ -42385,14 +42385,14 @@
  },
  "219591": {
   "id": 219591,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Lima 2",
   "ronda": "Lima 2 - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T16:00:00Z",
+  "horario": "2026-11-13T16:30:00Z",
   "j1": {
    "id": 18598,
    "nombre": "Oriol Roca Batalla / Rincon",
@@ -42408,7 +42408,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T15:45:24.364Z",
+  "visto": "2026-11-13T16:45:24.839Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -42416,25 +42416,50 @@
   "cubierto": false,
   "resultado": null,
   "score": {
+   "accepted_at": "2026-11-13T16:44:04.023231Z",
+   "age_seconds": 80,
+   "changing_sources_count": 3,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": true,
+   "deciding_set": {
+    "basis": "confirmed",
+    "rule": "match_tiebreak"
+   },
    "games": [
     [
      6,
-     3
+     6,
+     7
     ],
     [
      7,
-     2
+     4,
+     5
     ]
    ],
+   "is_tiebreak": true,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "7",
+    "5"
+   ],
+   "received_at": "2026-11-13T16:44:03.883032Z",
+   "sequence": 150,
+   "server": 2,
    "sets": [
-    0,
+    1,
     1
    ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-13T16:45:19.966523Z",
    "puntos": [
-    "0",
-    "0"
+    "7",
+    "5"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -43657,30 +43682,78 @@
  },
  "219735": {
   "id": 219735,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Monastir",
   "ronda": "Monastir - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T16:05:00Z",
+  "horario": "2026-11-13T16:20:00Z",
   "j1": {
    "id": 44026,
-   "nombre": "Duda/ Pereira",
+   "nombre": "Duda / Pereira",
    "pais": null,
    "ranking": null
   },
   "j2": {
    "id": 45345,
-   "nombre": "Pankin/ Perego",
+   "nombre": "Pankin / Perego",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T15:45:24.364Z"
+  "visto": "2026-11-13T16:45:24.839Z",
+  "tier": null,
+  "torneoId": "13395",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-13T16:44:56.355854Z",
+   "age_seconds": 28,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "40",
+    "30"
+   ],
+   "received_at": "2026-11-13T16:44:55.758034Z",
+   "sequence": 42,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-13T16:45:19.395974Z",
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219736": {
   "id": 219736,
@@ -44347,7 +44420,7 @@
    "ranking": 119
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T15:45:24.365Z",
   "tier": null,
@@ -44403,30 +44476,80 @@
  },
  "219817": {
   "id": 219817,
-  "tour": "challenger_women_doubles",
+  "tour": "challenger",
   "torneo": "Sopo (Colombia)",
   "ronda": "Sopo - Semi-finals",
   "rondaCod": "SF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-13T16:00:00Z",
+  "horario": "2026-11-13T16:10:00Z",
   "j1": {
    "id": 27174,
-   "nombre": "Erjavec/ Kulambayeva",
+   "nombre": "Erjavec / Kulambayeva",
    "pais": null,
    "ranking": null
   },
   "j2": {
    "id": 36068,
-   "nombre": "McAdoo/ Rogers",
+   "nombre": "Rasheeda McAdoo / Rogers",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T15:45:24.364Z"
+  "visto": "2026-11-13T16:45:24.839Z",
+  "tier": null,
+  "torneoId": "14866",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-13T16:44:53.708255Z",
+   "age_seconds": 31,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-13T16:44:53.448582Z",
+   "sequence": 56,
+   "server": 1,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-13T16:45:18.672760Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219818": {
   "id": 219818,
@@ -44593,7 +44716,7 @@
    "ranking": 389
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T15:45:24.364Z",
   "tier": null,
@@ -44672,17 +44795,17 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T15:45:24.364Z",
+  "visto": "2026-11-13T16:45:24.838Z",
   "tier": null,
   "torneoId": "2353",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-13T15:45:20.620864Z",
-   "age_seconds": 2,
+   "accepted_at": "2026-11-13T16:45:10.082572Z",
+   "age_seconds": 14,
    "changing_sources_count": 1,
-   "corroborated": false,
-   "corroborated_age_seconds": null,
+   "corroborated": true,
+   "corroborated_age_seconds": 9,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -44690,34 +44813,36 @@
    },
    "games": [
     [
-     0
+     6,
+     1
     ],
     [
-     0
+     3,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "40",
+    "AD"
    ],
-   "received_at": "2026-11-13T15:45:20.368357Z",
-   "sequence": 5,
-   "server": 2,
+   "received_at": "2026-11-13T16:45:09.949706Z",
+   "sequence": 77,
+   "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-13T15:45:20.620856Z",
+   "timestamp": "2026-11-13T16:45:18.579209Z",
    "puntos": [
-    "30",
-    "30"
+    "40",
+    "AD"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -44785,7 +44910,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T16:00:00Z",
+  "horario": "2026-11-13T16:10:00Z",
   "j1": {
    "id": 18,
    "nombre": "Taylor Fritz",
@@ -44799,9 +44924,59 @@
    "ranking": 25
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T15:45:24.246Z"
+  "visto": "2026-11-13T16:45:24.839Z",
+  "tier": null,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-13T16:44:37.478018Z",
+   "age_seconds": 47,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-13T16:44:37.223132Z",
+   "sequence": 61,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-13T16:45:19.898044Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219917": {
   "id": 219917,
