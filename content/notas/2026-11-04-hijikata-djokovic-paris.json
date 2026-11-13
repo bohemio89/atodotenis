@@ -1,72 +1,72 @@
 {
-  "slug": "2026-11-04-hijikata-djokovic-paris",
-  "estado": "publicada",
-  "fecha": "2026-11-06T09:06:40.548Z",
-  "fechaPartido": "2026-11-04T14:45:00Z",
-  "titulo": "Hijikata superó a Djokovic en el Masters 1000 de París",
-  "bajada": "El australiano se recuperó tras caer en el primer set y venció al N° 11 del mundo en tres parciales.",
-  "cuerpo": [
-    "¡Batacazo! Rinky Hijikata derrotó a Novak Djokovic por 2-6, 6-3 y 6-3 en la ronda de 32 del Masters 1000 de París. El N° 83 del ranking dio vuelta el partido frente al serbio en el torneo que se disputa sobre cemento bajo techo.",
-    "Djokovic arrancó mejor y se quedó con el primer set por 6-2. Sin embargo, el australiano reaccionó a tiempo, igualó la historia con un 6-3 en la segunda manga y sentenció el triunfo con otro 6-3 en el parcial decisivo.",
-    "En los cuartos de final lo espera Luca van Assche. En otro resultado de la fecha, Lorenzo Musetti, N° 24 del ranking, venció a Alexander Zverev, N° 1 del mundo, por 7-6 y 6-2."
-  ],
-  "etiquetas": [
-    "Rinky Hijikata",
-    "Novak Djokovic",
-    "Masters 1000 de París",
-    "ATP"
-  ],
-  "categoria": "Masters 1000",
-  "argentina": false,
-  "superficie": "hard",
-  "partidoId": 215017,
-  "jugadores": [
-    "Rinky Hijikata",
-    "Novak Djokovic"
-  ],
-  "torneo": "París",
-  "firma": "Redacción A Todo Tenis",
-  "imagen": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rinky_Hijikata_(2023_Cary)_01a_(cropped).jpg?width=1280",
-    "credito": "Hameltion / CC BY-SA 4.0, vía Wikimedia Commons",
-    "enlace": "https://commons.wikimedia.org/wiki/File:Rinky_Hijikata_(2023_Cary)_01a_(cropped).jpg",
-    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "fechaFoto": "2023-08-10",
-    "jugador": "Rinky Hijikata",
-    "alt": "Rinky Hijikata tras disputar la segunda ronda de dobles del Cary Challenger 2023",
-    "ancho": 1899,
-    "alto": 2574,
-    "calidad": 2
+ "slug": "2026-11-04-hijikata-djokovic-paris",
+ "estado": "publicada",
+ "fecha": "2026-11-06T09:06:40.548Z",
+ "fechaPartido": "2026-11-04T14:45:00Z",
+ "titulo": "Hijikata superó a Djokovic en el Masters 1000 de París",
+ "bajada": "El australiano se recuperó tras caer en el primer set y venció al N° 11 del mundo en tres parciales.",
+ "cuerpo": [
+  "¡Batacazo! Rinky Hijikata derrotó a Novak Djokovic por 2-6, 6-3 y 6-3 en la ronda de 32 del Masters 1000 de París. El N° 83 del ranking dio vuelta el partido frente al serbio en el torneo que se disputa sobre cemento bajo techo.",
+  "Djokovic arrancó mejor y se quedó con el primer set por 6-2. Sin embargo, el australiano reaccionó a tiempo, igualó la historia con un 6-3 en la segunda manga y sentenció el triunfo con otro 6-3 en el parcial decisivo.",
+  "En los cuartos de final lo espera Luca van Assche. En otro resultado de la fecha, Lorenzo Musetti, N° 24 del ranking, venció a Alexander Zverev, N° 1 del mundo, por 7-6 y 6-2."
+ ],
+ "etiquetas": [
+  "Rinky Hijikata",
+  "Novak Djokovic",
+  "Masters 1000 de París",
+  "ATP"
+ ],
+ "categoria": "Masters 1000",
+ "argentina": false,
+ "superficie": "hard",
+ "partidoId": 215017,
+ "jugadores": [
+  "Rinky Hijikata",
+  "Novak Djokovic"
+ ],
+ "torneo": "París",
+ "firma": "Redacción A Todo Tenis",
+ "imagen": {
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rinky_Hijikata_(2023_Cary)_01a_(cropped).jpg?width=1280",
+  "credito": "Hameltion / CC BY-SA 4.0, vía Wikimedia Commons",
+  "enlace": "https://commons.wikimedia.org/wiki/File:Rinky_Hijikata_(2023_Cary)_01a_(cropped).jpg",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fechaFoto": "2023-08-10",
+  "jugador": "Rinky Hijikata",
+  "alt": "Rinky Hijikata tras disputar la segunda ronda de dobles del Cary Challenger 2023",
+  "ancho": 1899,
+  "alto": 2574,
+  "calidad": 2
+ },
+ "generadoCon": "gemini-3.5-flash",
+ "fotoBuscada": "2026-11-09T19:11:25.478Z",
+ "resultado": {
+  "ganador": {
+   "nombre": "Rinky Hijikata",
+   "pais": "aus",
+   "ranking": 83
   },
-  "generadoCon": "gemini-3.5-flash",
-  "fotoBuscada": "2026-11-09T19:11:25.478Z",
-  "resultado": {
-    "ganador": {
-      "nombre": "Rinky Hijikata",
-      "pais": "aus",
-      "ranking": 83
-    },
-    "perdedor": {
-      "nombre": "Novak Djokovic",
-      "pais": "srb",
-      "ranking": 11
-    },
-    "sets": [
-      [
-        2,
-        6
-      ],
-      [
-        6,
-        3
-      ],
-      [
-        6,
-        3
-      ]
-    ],
-    "ronda": "R32",
-    "resultado": null
+  "perdedor": {
+   "nombre": "Novak Djokovic",
+   "pais": "srb",
+   "ranking": 11
   },
-  "importancia": 45
+  "sets": [
+   [
+    2,
+    6
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    6,
+    3
+   ]
+  ],
+  "ronda": "R32",
+  "resultado": null
+ },
+ "importancia": 45
 }
