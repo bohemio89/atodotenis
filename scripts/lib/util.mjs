@@ -113,9 +113,8 @@ export function marcadorTexto(score, desde = 1) {
     if (puntos && typeof puntos === 'object') {
       const p1 = Number(puntos.p1 ?? puntos.player1 ?? puntos[0]);
       const p2 = Number(puntos.p2 ?? puntos.player2 ?? puntos[1]);
-      const ganadorSet = x > y ? 1 : 2;
-      const puntosGanador = (desde === 1 ? ganadorSet === 1 : ganadorSet === 2) ? p1 : p2;
-      puntos = Number.isFinite(puntosGanador) ? puntosGanador : null;
+      const puntosPerdedor = (a > b ? (desde === 1 ? p2 : p1) : (desde === 1 ? p1 : p2));
+      puntos = Number.isFinite(puntosPerdedor) ? puntosPerdedor : null;
     } else puntos = Number(puntos);
     const desempate = (a === 7 && b === 6) && Number.isFinite(puntos) && puntos > 0 ? ` (${puntos})` : '';
     return `${a}-${b}${desempate}`;
