@@ -62,7 +62,7 @@ const srcsetCommons = (url) => /\/1920px-/.test(url)
 const RONDA_PLACA = EN ? { R128: '1st round', R64: '2nd round', R32: '3rd round', R16: 'Round of 16', QF: 'Quarterfinal', SF: 'Semifinal', F: 'Final' } : { R128: '1° ronda', R64: '2° ronda', R32: '3° ronda', R16: 'Octavos de final', QF: 'Cuartos de final', SF: 'Semifinal', F: 'Final' };
 const partidosPorId = Object.fromEntries(partidos.map((p) => [String(p.id), p]));
 function resultadoNota(n) {
-  if (n.resultado) return n.resultado;
+  if (n.resultado && typeof n.resultado === 'object') return n.resultado;
   const p = partidosPorId[String(n.partidoId)];
   if (!p?.ganador || !p.score) return null;
   const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
@@ -70,6 +70,29 @@ function resultadoNota(n) {
   return { ganador: g, perdedor: pe, ronda: p.rondaCod, resultado: p.resultado,
     sets: (gs[0] || []).map((x, i) => p.ganador === 1 ? [x, gs[1][i]] : [gs[1][i], x]).filter(([a, b]) => a != null && b != null) };
 }
+function normalizarMarcadorNota(n) {
+  const r = resultadoNota(n);
+  if (!r?.sets?.length || !Array.isArray(n.cuerpo) || !n.cuerpo.length) return n;
+  const textoOriginal = n.cuerpo.join(' ');
+  const tbEncontrados = [...textoOriginal.matchAll(/7-6\\s*\\((\\d+)\\)/g)].map((m) => Number(m[1]));
+  const tb = r.tieBreaks ?? r.tiebreaks ?? r.tie_breaks ?? [];
+  const setsFormateados = r.sets.map(([a, b], i) => {
+    let puntos = Array.isArray(tb) ? tb[i] : (tb && typeof tb === 'object' ? (tb[i] ?? tb[String(i + 1)]) : null);
+    if (puntos && typeof puntos === 'object') puntos = puntos.p1 ?? puntos.player1 ?? puntos[0];
+    if (!Number.isFinite(Number(puntos)) || Number(puntos) <= 0) puntos = (a === 7 && b === 6) ? tbEncontrados.shift() : null;
+    return `${a}-${b}${a === 7 && b === 6 && Number.isFinite(Number(puntos)) ? ` (${Number(puntos)})` : ''}`;
+  });
+  const marcador = setsFormateados.length < 2 ? setsFormateados.join('') : `${setsFormateados.slice(0, -1).join(', ')} y ${setsFormateados.at(-1)}`;
+  const cuerpo = n.cuerpo.map((parrafo, i) => {
+    let t = String(parrafo).replace(/(7-6)\\s*\\((\\d+)\\)/g, '$1 ($2)');
+    t = t.replace(/(7-6(?:\\s*\\(\\d+\\))?)\\s+(?:en el )?(?:tie-break|tiebreak)/gi, '$1');
+    if (i === 0) t = t.replace(/\\b(por|by)\\s+(?:un doble\\s+)?(?:\\d{1,2}-\\d{1,2}(?:\\s*\\(\\d+\\))?)(?:(?:\\s*,\\s*|\\s+y\\s+)\\d{1,2}-\\d{1,2}(?:\\s*\\(\\d+\\))?)*/i, (_m, prep) => `${prep} ${marcador}`);
+    return t;
+  });
+  return { ...n, cuerpo };
+}
+notas.forEach((n, i) => { notas[i] = normalizarMarcadorNota(n); });
+
 function placa(n) {
   const r = resultadoNota(n);
   if (!r?.ganador?.nombre) return '';
