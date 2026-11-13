@@ -31,8 +31,6 @@ jobs:
         env:
           LIVE_TENNIS_API_KEY: ${{ secrets.LIVE_TENNIS_API_KEY }}
         run: node scripts/update.mjs
-      - name: Corregir datos WTA Finals
-        run: node scripts/fix-wta-finals-2026.mjs
       - name: Escribir notas con IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
