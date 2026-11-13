@@ -39898,7 +39898,7 @@
    "ranking": 256
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T04:45:23.658Z",
   "torneoClave": "challenger|Matsuyama",
@@ -39942,26 +39942,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T04:15:00Z",
+  "horario": "2026-11-13T05:05:00Z",
   "j1": {
-   "id": 469,
-   "nombre": "Kaichi Uchida",
-   "pais": "jpn",
-   "ranking": 431
-  },
-  "j2": {
    "id": 212,
    "nombre": "Billy Harris",
    "pais": "gbr",
    "ranking": 227
   },
+  "j2": {
+   "id": 469,
+   "nombre": "Kaichi Uchida",
+   "pais": "jpn",
+   "ranking": 431
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T03:45:24.839Z",
+  "visto": "2026-11-13T05:45:24.746Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219237": {
   "id": 219237,
@@ -40162,26 +40186,52 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T04:00:00Z",
+  "horario": "2026-11-13T05:10:00Z",
   "j1": {
-   "id": 1104,
-   "nombre": "Bernard Tomic",
-   "pais": "aus",
-   "ranking": 176
-  },
-  "j2": {
    "id": 470,
    "nombre": "August Holmgren",
    "pais": "den",
    "ranking": 265
   },
+  "j2": {
+   "id": 1104,
+   "nombre": "Bernard Tomic",
+   "pais": "aus",
+   "ranking": 176
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T03:45:24.839Z",
+  "visto": "2026-11-13T05:45:24.746Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219264": {
   "id": 219264,
@@ -42183,7 +42233,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T04:45:23.658Z",
   "torneoClave": "challenger|Lima 2",
@@ -42671,7 +42721,7 @@
    "ranking": 392
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T04:45:23.658Z",
   "torneoClave": "challenger|Matsuyama",
@@ -42727,7 +42777,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T04:45:23.658Z",
+  "visto": "2026-11-13T05:45:24.746Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -42738,22 +42788,24 @@
    "games": [
     [
      2,
-     5
+     7,
+     4
     ],
     [
      6,
-     6
+     6,
+     5
     ]
    ],
    "sets": [
-    0,
+    1,
     1
    ],
    "puntos": [
-    "15",
-    "0"
+    "30",
+    "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
