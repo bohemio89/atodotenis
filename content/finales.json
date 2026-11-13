@@ -1,83 +1,54 @@
 {
- "_ayuda": "Torneos de fin de temporada para la portada. Datos verificados en atptour.com, nittoatpfinals.com y wtatennis.com. Los grupos se completan cuando hay sorteo; si faltan, se deducen de los cruces del calendario. Las tablas se calculan con los resultados confirmados.",
- "eventos": [
-  {
-   "id": "wta-finals-2026",
-   "tour": "wta",
-   "nombre": "WTA Finals",
-   "sede": "Indian Wells, Estados Unidos",
-   "desde": "2026-11-08",
-   "hasta": "2026-11-15",
-   "regexTorneo": "finals",
-   "nota": "Elena Rybakina, N° 1 del mundo, se bajó por un problema médico. Su lugar lo ocupa Marta Kostyuk.",
-   "grupos": [
+  "_ayuda": "Torneos de fin de temporada para la portada. Datos verificados en atptour.com, nittoatpfinals.com y wtatennis.com. Los grupos se completan cuando hay sorteo; si faltan, se deducen de los cruces del calendario. Las tablas se calculan con los resultados confirmados.",
+  "eventos": [
     {
-     "nombre": "Grupo 1",
-     "jugadores": [
-      "Coco Gauff",
-      "Jessica Pegula",
-      "Linda Noskova",
-      "Marta Kostyuk"
-     ]
+      "id": "wta-finals-2026",
+      "tour": "wta",
+      "nombre": "WTA Finals",
+      "sede": "Indian Wells, Estados Unidos",
+      "desde": "2026-11-08",
+      "hasta": "2026-11-15",
+      "regexTorneo": "finals",
+      "nota": "Elena Rybakina, N° 1 del mundo, se bajó por un problema médico. Su lugar lo ocupa Marta Kostyuk.",
+      "grupos": [
+        {
+          "nombre": "Grupo 1",
+          "jugadores": ["Linda Noskova", "Jessica Pegula", "Coco Gauff", "Marta Kostyuk"]
+        },
+        {
+          "nombre": "Grupo 2",
+          "jugadores": ["Aryna Sabalenka", "Mirra Andreeva", "Elina Svitolina", "Karolina Muchova"]
+        }
+      ],
+      "fuente": "wtatennis.com",
+      "sede_en": "Indian Wells, United States",
+      "nota_en": "Elena Rybakina, the world No. 1, withdrew with a medical issue. Marta Kostyuk takes her place."
     },
     {
-     "nombre": "Grupo 2",
-     "jugadores": [
-      "Aryna Sabalenka",
-      "Mirra Andreeva",
-      "Elina Svitolina",
-      "Karolina Muchova"
-     ]
+      "id": "atp-finals-2026",
+      "tour": "atp",
+      "nombre": "ATP Finals",
+      "sede": "Turín, Italia",
+      "desde": "2026-11-15",
+      "hasta": "2026-11-22",
+      "regexTorneo": "finals",
+      "clasificados": ["Alexander Zverev", "Carlos Alcaraz", "Ben Shelton", "Daniil Medvedev", "Flavio Cobolli", "Arthur Fils", "Frances Tiafoe", "Rafael Jodar"],
+      "nota": "Jannik Sinner se pierde el torneo por lesión. Cuatro debutantes: Cobolli, Fils, Tiafoe y Jodar.",
+      "sorteo": "Grupo John McEnroe: Zverev (1), Shelton (3), Fils (6) y Jodar (8). Grupo Ivan Lendl: Alcaraz (2), Medvedev (4), Cobolli (5) y Tiafoe (7). Pasan los dos primeros de cada grupo a semifinales.",
+      "grupos": [
+        {
+          "nombre": "Grupo John McEnroe",
+          "jugadores": ["Alexander Zverev", "Ben Shelton", "Arthur Fils", "Rafael Jodar"]
+        },
+        {
+          "nombre": "Grupo Ivan Lendl",
+          "jugadores": ["Carlos Alcaraz", "Daniil Medvedev", "Flavio Cobolli", "Frances Tiafoe"]
+        }
+      ],
+      "fuente": "atptour.com y nittoatpfinals.com",
+      "sede_en": "Turin, Italy",
+      "nota_en": "Jannik Sinner misses the event through injury. Four debutants: Cobolli, Fils, Tiafoe and Jodar.",
+      "sorteo_en": "John McEnroe Group: Zverev (1), Shelton (3), Fils (6) and Jodar (8). Ivan Lendl Group: Alcaraz (2), Medvedev (4), Cobolli (5) and Tiafoe (7). The top two in each group reach the semi-finals."
     }
-   ],
-   "fuente": "wtatennis.com",
-   "sede_en": "Indian Wells, United States",
-   "nota_en": "Elena Rybakina, the world No. 1, withdrew with a medical issue. Marta Kostyuk takes her place."
-  },
-  {
-   "id": "atp-finals-2026",
-   "tour": "atp",
-   "nombre": "ATP Finals",
-   "sede": "Turín, Italia",
-   "desde": "2026-11-15",
-   "hasta": "2026-11-22",
-   "regexTorneo": "finals",
-   "clasificados": [
-    "Alexander Zverev",
-    "Carlos Alcaraz",
-    "Ben Shelton",
-    "Daniil Medvedev",
-    "Flavio Cobolli",
-    "Arthur Fils",
-    "Frances Tiafoe",
-    "Rafael Jodar"
-   ],
-   "nota": "Jannik Sinner se pierde el torneo por lesión. Cuatro debutantes: Cobolli, Fils, Tiafoe y Jodar.",
-   "sorteo": "Grupo John McEnroe: Zverev (1), Shelton (3), Fils (6) y Jodar (8). Grupo Ivan Lendl: Alcaraz (2), Medvedev (4), Cobolli (5) y Tiafoe (7). Pasan los dos primeros de cada grupo a semifinales.",
-   "grupos": [
-    {
-     "nombre": "Grupo John McEnroe",
-     "jugadores": [
-      "Alexander Zverev",
-      "Ben Shelton",
-      "Arthur Fils",
-      "Rafael Jodar"
-     ]
-    },
-    {
-     "nombre": "Grupo Ivan Lendl",
-     "jugadores": [
-      "Carlos Alcaraz",
-      "Daniil Medvedev",
-      "Flavio Cobolli",
-      "Frances Tiafoe"
-     ]
-    }
-   ],
-   "fuente": "atptour.com y nittoatpfinals.com",
-   "sede_en": "Turin, Italy",
-   "nota_en": "Jannik Sinner misses the event through injury. Four debutants: Cobolli, Fils, Tiafoe and Jodar.",
-   "sorteo_en": "John McEnroe Group: Zverev (1), Shelton (3), Fils (6) and Jodar (8). Ivan Lendl Group: Alcaraz (2), Medvedev (4), Cobolli (5) and Tiafoe (7). The top two in each group reach the semi-finals."
-  }
- ]
+  ]
 }
