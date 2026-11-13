@@ -8645,41 +8645,57 @@
  },
  "215409": {
   "id": 215409,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-12T23:40:00Z",
+  "horario": "2026-11-13T01:40:00Z",
   "j1": {
-   "id": 1834,
-   "nombre": "Siniakova/ Townsend",
+   "id": 1430,
+   "nombre": "Cristina Bucsa / Nicole Melichar-Martinez",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "usa"
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 1430,
-   "nombre": "Bucsa/ Melichar-Martinez",
+   "id": 1834,
+   "nombre": "Katerina Siniakova / Taylor Townsend",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "esp",
-    "usa"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T23:00:37.880Z",
+  "visto": "2026-11-13T01:45:23.600Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Finals - Riyadh"
+  "torneoClave": "wta|Finals - Riyadh",
+  "torneoId": "3190",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     0
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215410": {
   "id": 215410,
@@ -8996,9 +9012,9 @@
    "ranking": 8
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-13T00:45:23.984Z",
+  "visto": "2026-11-13T01:45:23.753Z",
   "importante": true,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -9010,26 +9026,26 @@
     [
      7,
      4,
-     3
+     7
     ],
     [
      6,
      6,
-     3
+     5
     ]
    ],
    "sets": [
-    1,
+    2,
     1
    ],
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215419": {
   "id": 215419,
@@ -39372,26 +39388,50 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T00:00:00Z",
+  "horario": "2026-11-13T01:00:00Z",
   "j1": {
-   "id": 622,
-   "nombre": "Genaro Alberto Olivieri",
-   "pais": "arg",
-   "ranking": 244
-  },
-  "j2": {
    "id": 119,
    "nombre": "Juan Pablo Varillas",
    "pais": "per",
    "ranking": 200
   },
+  "j2": {
+   "id": 622,
+   "nombre": "Genaro Alberto Olivieri",
+   "pais": "arg",
+   "ranking": 244
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T23:00:37.984Z",
+  "visto": "2026-11-13T01:45:23.600Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219191": {
   "id": 219191,
@@ -39720,7 +39760,7 @@
    "ranking": 94
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T00:45:23.984Z",
   "torneoClave": "challenger|Knoxville",
@@ -39778,7 +39818,7 @@
    "ranking": 190
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T00:45:23.984Z",
   "torneoClave": "challenger|Lima 2",
@@ -40230,26 +40270,50 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T01:00:00Z",
+  "horario": "2026-11-13T01:10:00Z",
   "j1": {
-   "id": 6316,
-   "nombre": "Sebastian Gorzny",
-   "pais": "usa",
-   "ranking": 403
-  },
-  "j2": {
    "id": 186,
    "nombre": "Alex Bolt",
    "pais": "aus",
    "ranking": 171
   },
+  "j2": {
+   "id": 6316,
+   "nombre": "Sebastian Gorzny",
+   "pais": "usa",
+   "ranking": 403
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T23:00:37.984Z",
+  "visto": "2026-11-13T01:45:23.600Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13459",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     3
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219287": {
   "id": 219287,
@@ -42194,41 +42258,59 @@
  },
  "219626": {
   "id": 219626,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Knoxville",
   "ronda": "Knoxville - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T23:30:00Z",
+  "horario": "2026-11-13T00:45:00Z",
   "j1": {
-   "id": 44968,
-   "nombre": "Lammons/ Smith",
+   "id": 42979,
+   "nombre": "Barton / Kasnikowski",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 42979,
-   "nombre": "Barton/ Kasnikowski",
+   "id": 44968,
+   "nombre": "Lammons / Smith",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "pol"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T23:00:37.984Z",
+  "visto": "2026-11-13T01:45:23.600Z",
   "torneoClave": "challenger|Knoxville",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2444",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4,
+     3
+    ],
+    [
+     6,
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    1
+   ],
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219661": {
   "id": 219661,
