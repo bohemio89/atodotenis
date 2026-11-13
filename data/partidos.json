@@ -8503,7 +8503,7 @@
  },
  "215406": {
   "id": 215406,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
@@ -8524,9 +8524,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-13T03:45:24.673Z",
+  "visto": "2026-11-13T04:45:23.811Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8537,25 +8537,25 @@
    "games": [
     [
      3,
-     0
+     4
     ],
     [
      6,
-     0
+     6
     ]
    ],
    "sets": [
     0,
-    1
+    2
    ],
    "puntos": [
     "0",
-    "30"
+    "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "215407": {
   "id": 215407,
@@ -39422,7 +39422,7 @@
    "ranking": 244
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T03:45:24.839Z",
   "torneoClave": "challenger|Lima 2",
@@ -39900,7 +39900,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T03:45:24.839Z",
+  "visto": "2026-11-13T04:45:23.658Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
   "importante": false,
@@ -39912,12 +39912,12 @@
     [
      6,
      2,
-     1
+     6
     ],
     [
      1,
      6,
-     2
+     6
     ]
    ],
    "sets": [
@@ -39925,10 +39925,10 @@
     1
    ],
    "puntos": [
-    "15",
-    "15"
+    "4",
+    "3"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -42169,7 +42169,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-12T21:20:00Z",
+  "horario": "2026-11-13T16:00:00Z",
   "j1": {
    "id": 18598,
    "nombre": "Oriol Roca Batalla / Rincon",
@@ -42183,9 +42183,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "por_confirmar",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-12T23:51:11.459Z",
+  "visto": "2026-11-13T04:45:23.658Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
   "importante": false,
@@ -42615,7 +42615,7 @@
    "ranking": 172
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T03:45:24.839Z",
   "torneoClave": "challenger|Matsuyama",
@@ -42657,7 +42657,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T04:00:00Z",
+  "horario": "2026-11-13T04:15:00Z",
   "j1": {
    "id": 163,
    "nombre": "Rei Sakamoto",
@@ -42671,12 +42671,36 @@
    "ranking": 392
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T03:45:24.839Z",
+  "visto": "2026-11-13T04:45:23.658Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219687": {
   "id": 219687,
@@ -42703,7 +42727,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T03:45:24.839Z",
+  "visto": "2026-11-13T04:45:23.658Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -42713,21 +42737,23 @@
   "score": {
    "games": [
     [
-     2
+     2,
+     5
     ],
     [
-     4
+     6,
+     6
     ]
    ],
    "sets": [
     0,
-    0
+    1
    ],
    "puntos": [
-    "0",
+    "15",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
