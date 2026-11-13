@@ -39956,7 +39956,7 @@
    "ranking": 431
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T05:45:24.746Z",
   "torneoClave": "challenger|Matsuyama",
@@ -40202,7 +40202,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T05:45:24.746Z",
+  "visto": "2026-11-13T06:45:35.054Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -40213,20 +40213,22 @@
    "games": [
     [
      6,
-     0
+     5,
+     1
     ],
     [
      2,
-     2
+     7,
+     3
     ]
    ],
    "sets": [
     1,
-    0
+    1
    ],
    "puntos": [
-    "30",
-    "30"
+    "40",
+    "40"
    ],
    "saca": 2
   },
@@ -42606,41 +42608,57 @@
  },
  "219674": {
   "id": 219674,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Brisbane 3",
   "ronda": "Brisbane 3 - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T05:00:00Z",
+  "horario": "2026-11-13T06:05:00Z",
   "j1": {
    "id": 26058,
-   "nombre": "Bayldon/ Fancutt",
+   "nombre": "Blake Bayldon / Thomas Fancutt",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 41808,
-   "nombre": "Ellis/ Tu",
+   "nombre": "Ellis / Tu",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T03:45:24.839Z",
+  "visto": "2026-11-13T06:45:35.054Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "13458",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     5
+    ],
+    [
+     5
+    ]
+   ],
+   "sets": [
+    0,
+    0
+   ],
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219678": {
   "id": 219678,
@@ -42775,7 +42793,7 @@
    "ranking": 252
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T05:45:24.746Z",
   "torneoClave": "challenger|Brisbane 3",
@@ -42812,41 +42830,59 @@
  },
  "219688": {
   "id": 219688,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Matsuyama",
   "ronda": "Matsuyama - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-13T05:30:00Z",
+  "horario": "2026-11-13T06:00:00Z",
   "j1": {
    "id": 4989,
-   "nombre": "Reynolds/ Watt",
+   "nombre": "Finn Reynolds / James Watt",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 6407,
-   "nombre": "Kusuhara/ Nakagawa",
+   "nombre": "Kusuhara / Shunsuke Nakagawa",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T03:45:24.839Z",
+  "visto": "2026-11-13T06:45:35.054Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8221",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "games": [
+    [
+     6,
+     3
+    ],
+    [
+     3,
+     3
+    ]
+   ],
+   "sets": [
+    1,
+    0
+   ],
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219691": {
   "id": 219691,
