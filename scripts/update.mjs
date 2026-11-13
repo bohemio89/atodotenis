@@ -134,7 +134,7 @@ function desdeMatch(m) {
     j1: p(m.players?.p1) || viejo.j1, j2: p(m.players?.p2) || viejo.j2,
     estado: final ? 'finalizado' : m.status === 'live' ? 'en_vivo' : m.status === 'upcoming' ? 'programado' : (m.outcome || m.status),
     resultado: m.outcome && m.outcome !== 'completed' ? m.outcome : (viejo.resultado || null),
-    score: m.score ? { games: m.score.games, sets: m.score.sets, puntos: m.score.points, saca: m.score.server } : viejo.score || null,
+    score: m.score ? { ...m.score, games: m.score.games, sets: m.score.sets, puntos: m.score.points, saca: m.score.server } : viejo.score || null,
     confirmado: final || viejo.confirmado || false,
     ganador: final ? ganador(m.score) : viejo.ganador || null,
     visto: new Date().toISOString()
