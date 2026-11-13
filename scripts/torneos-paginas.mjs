@@ -20,8 +20,15 @@ export function generarTorneos({ torneos, partidos, esc, paisTag, filaPartido, h
       const anio = String(new Date().getFullYear());
       const camp = t.campeones?.[anio]?.singles || null;
       const ultimoCamp = camp ? { anio, ...camp } : Object.entries(t.campeones || {}).sort((a, b) => b[0].localeCompare(a[0])).map(([a, c]) => c.singles && { anio: a, ...c.singles }).find(Boolean) || null;
-      const enJuego = ms.some((p) => ['en_vivo', 'programado'].includes(p.estado)) && !camp;
-      const reciente = t.ultimaVez && ahora - new Date(t.ultimaVez).getTime() < 10 * 86400e3;
+      // Un estado "en_vivo" solo es confiable si fue refrescado recientemente.
+      // Los partidos programados cuya hora ya pasó no deben mantener vivo un torneo.
+      const partidoVivo = (p) => p?.estado === 'en_vivo' && ahora - new Date(p.visto || 0).getTime() <= 90 * 60e3;
+      const partidoFuturo = (p) => p?.estado === 'programado' && Number.isFinite(Date.parse(p.horario)) && Date.parse(p.horario) > ahora;
+      const inicio = Date.parse(t.primeraVez || '');
+      const fin = Date.parse(t.ultimaVez || '');
+      const dentroDelCalendario = Number.isFinite(inicio) && Number.isFinite(fin) && inicio <= ahora && fin >= ahora;
+      const enJuego = !camp && (ms.some((p) => partidoVivo(p) || partidoFuturo(p)) || dentroDelCalendario);
+      const reciente = Number.isFinite(fin) && Number.isFinite(inicio) && inicio <= ahora && ahora - fin < 10 * 86400e3;
       const rondaActual = [...ORDEN].reverse().find((r) => singles.some((p) => p.rondaCod === r)) || (singles.some((p) => p.rondaCod === 'RR') ? 'RR' : null);
       return { ...t, ms, singles, dobles, cat, camp, ultimoCamp, enJuego, reciente, rondaActual,
         slug: finals ? slugify(nombreTorneo(t.nombre)) : slugify(`${nombreTorneo(t.nombre)} ${tourBase(t.tour) === 'challenger' ? (t.tour.includes('women') ? 'wta-125' : 'challenger') : t.tour}`),
@@ -82,7 +89,7 @@ export function generarTorneos({ torneos, partidos, esc, paisTag, filaPartido, h
     const a = m ? m.j1 : j1, b = m ? m.j2 : j2;
     const sv = m?.score?.games?.length === 2 ? m.score.games[0].map((x, i) => [x, m.score.games[1][i]]).filter(([x, y]) => x != null && y != null) : [];
     const fin = m?.confirmado && m?.ganador;
-    const vivo = m?.estado === 'en_vivo';
+    const vivo = m?.estado === 'en_vivo' && ahora - new Date(m.visto || 0).getTime() <= 90 * 60e3;
     const fila = (j, k) => {
       if (!j) return '<div class="cj tbd">Por definir</div>';
       const gana = fin && m.ganador === k, pierde = fin && m.ganador !== k;
@@ -146,8 +153,13 @@ ${!lista.length ? '<div class="panel sec"><div class="vacio" style="border:0">No
     const campeonHTML = t.ultimoCamp ? `<div class="campeon"><div class="campeon-lbl">${t.camp ? 'Campeón' : 'Último campeón registrado'} ${t.ultimoCamp.anio}</div>
 <div class="campeon-j">${paisTag({ pais: t.ultimoCamp.pais })}<strong>${esc(t.ultimoCamp.campeon)}</strong></div>
 <div class="campeon-f">Final: venció a ${esc(t.ultimoCamp.finalista)} · ${esc(t.ultimoCamp.marcador)}</div></div>`
-      : `<div class="campeon pend"><div class="campeon-lbl">Campeón</div><div class="campeon-f">Se conoce el día de la final${t.rondaActual ? ` · hoy: ${esc(nombreRonda(t.rondaActual).toLowerCase())}` : ''}.</div></div>`;
-    const hoy = t.ms.filter((p) => ['en_vivo', 'programado'].includes(p.estado)).sort((a, b) => String(a.horario).localeCompare(String(b.horario)));
+      : t.enJuego
+        ? `<div class="campeon pend"><div class="campeon-lbl">Campeón</div><div class="campeon-f">Se conoce el día de la final${t.rondaActual ? ` · hoy: ${esc(nombreRonda(t.rondaActual).toLowerCase())}` : ''}.</div></div>`
+        : `<div class="campeon pend"><div class="campeon-lbl">Edición finalizada</div><div class="campeon-f">El resultado final todavía no pudo confirmarse con la fuente de datos.</div></div>`;
+    const hoy = t.ms.filter((p) =>
+      (p.estado === 'en_vivo' && ahora - new Date(p.visto || 0).getTime() <= 90 * 60e3) ||
+      (p.estado === 'programado' && Number.isFinite(Date.parse(p.horario)) && Date.parse(p.horario) > ahora)
+    ).sort((a, b) => String(a.horario).localeCompare(String(b.horario)));
     const tabs = t.dobles.length ? `<div class="tabs cuadro-tabs" role="tablist"><button role="tab" id="t-s" aria-controls="cs" aria-selected="true">Singles</button><button role="tab" id="t-d" aria-controls="cd" aria-selected="false">Dobles</button></div>` : '';
     escribir(`torneo/${t.slug}.html`, pagina({
       titulo: `${nombre} ${t.ultimoCamp?.anio || new Date().getFullYear()}: ${LANG === 'en' ? 'draw and results' : 'cuadro y resultados'}`, descripcion: desc, ruta: `/torneo/${t.slug}`, activo: 'torneos',
