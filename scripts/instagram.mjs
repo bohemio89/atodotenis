@@ -32,8 +32,14 @@ function tandaActual(d = new Date()) {
   return null;
 }
 // ¿Se puede publicar ahora? Devuelve la clave de la tanda o null (con el motivo en el log).
-function turno(e) {
+function turno(e, inmediato = false) {
   if (FORZAR) return 'manual';
+  if (inmediato) {
+    const hoy = new Date().toISOString().slice(0, 10);
+    if (e.publicadas.some((p) => p.slug === e.pendiente?.slug)) { log('La nota ya figura publicada:', e.pendiente.slug); return null; }
+    if (e.publicadas.filter((p) => !p.cubierta && !p.borrada && p.fecha.slice(0, 10) === hoy).length >= MAX_POR_DIA) { log('Ya hay', MAX_POR_DIA, 'publicaciones hoy.'); return null; }
+    return `resultado-${e.pendiente.slug}`;
+  }
   const t = tandaActual();
   if (!t) { log('Fuera de tanda: se publica en la próxima (13, 18 o 01 h de Israel).'); return null; }
   if (e.publicadas.some((p) => p.tanda === t.clave)) { log('La tanda', t.clave, 'ya tiene su publicación.'); return null; }
@@ -180,13 +186,13 @@ async function api(ruta, opciones = {}) {
   return j;
 }
 
-async function publicar() {
+async function publicar(inmediato = false) {
   const e = leerEstado();
   if (!e.pendiente) { log('Nada para publicar en Instagram.'); return; }
   if (!process.env.INSTAGRAM_TOKEN) { log('Falta el secreto INSTAGRAM_TOKEN: la publicación queda preparada.'); return; }
   const n = notas().find((x) => x.slug === e.pendiente.slug);
   if (n && Date.now() - new Date(n.fecha).getTime() > HORAS_VIGENCIA * 3600e3) { log('El resultado preparado ya es viejo, se descarta:', e.pendiente.slug); e.publicadas.push({ slug: e.pendiente.slug, cubierta: 'vencida', fecha: new Date().toISOString() }); e.pendiente = null; guardarEstado(e); return; }
-  const tanda = turno(e);
+  const tanda = turno(e, inmediato);
   if (!tanda) return;
   // La imagen tiene que estar online (Vercel la publica después del commit)
   const online = await fetch(e.pendiente.imagen, { method: 'HEAD' }).then((r) => r.ok && /image/.test(r.headers.get('content-type') || '')).catch(() => false);
@@ -273,8 +279,8 @@ async function borrar(ids) {
 // Salida de cada corrida: en la tanda B va primero la pieza fija; en A y C, el resultado.
 async function salida() {
   const t = tandaActual();
-  if (t?.id === 'B') { await carruseles().catch((x) => log('Carruseles:', x.message)); await publicar(); }
-  else { await publicar(); await carruseles().catch((x) => log('Carruseles:', x.message)); }
+  if (t?.id === 'B') { await carruseles().catch((x) => log('Carruseles:', x.message)); await publicar(true); }
+  else { await publicar(true); await carruseles().catch((x) => log('Carruseles:', x.message)); }
 }
 
 const modo = process.argv[2];
