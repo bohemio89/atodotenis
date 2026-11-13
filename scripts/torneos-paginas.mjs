@@ -27,7 +27,8 @@ export function generarTorneos({ torneos, partidos, esc, paisTag, filaPartido, h
       const inicio = Date.parse(t.primeraVez || '');
       const fin = Date.parse(t.ultimaVez || '');
       const dentroDelCalendario = Number.isFinite(inicio) && Number.isFinite(fin) && inicio <= ahora && fin >= ahora;
-      const enJuego = !camp && (ms.some((p) => partidoVivo(p) || partidoFuturo(p)) || dentroDelCalendario);
+      const enJuego = !camp && Number.isFinite(inicio) && inicio <= ahora &&
+        (ms.some((p) => partidoVivo(p) || partidoFuturo(p)) || dentroDelCalendario);
       const reciente = Number.isFinite(fin) && Number.isFinite(inicio) && inicio <= ahora && ahora - fin < 10 * 86400e3;
       const rondaActual = [...ORDEN].reverse().find((r) => singles.some((p) => p.rondaCod === r)) || (singles.some((p) => p.rondaCod === 'RR') ? 'RR' : null);
       return { ...t, ms, singles, dobles, cat, camp, ultimoCamp, enJuego, reciente, rondaActual,
