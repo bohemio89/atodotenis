@@ -8634,7 +8634,7 @@
  "215408": {
   "id": 215408,
   "tour": "wta",
-  "torneo": "Finals - Riyadh",
+  "torneo": "WTA Tour Finals, Doubles, Group A",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
@@ -8656,7 +8656,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T00:45:22.997Z",
+  "visto": "2026-11-14T01:45:22.822Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8664,46 +8664,48 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T00:44:46.229548Z",
-   "age_seconds": 35,
+   "accepted_at": "2026-11-14T01:45:15.867910Z",
+   "age_seconds": 6,
    "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 3,
-   "deciding_match_tiebreak_next": false,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": true,
    "deciding_set": {
-    "basis": "inferred",
+    "basis": "confirmed",
     "rule": "match_tiebreak"
    },
    "games": [
     [
      2,
-     0
+     7,
+     9
     ],
     [
      6,
-     1
+     6,
+     2
     ]
    ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "is_tiebreak": true,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "9",
+    "2"
    ],
-   "received_at": "2026-11-14T00:44:46.169639Z",
-   "sequence": 58,
+   "received_at": "2026-11-14T01:45:15.802829Z",
+   "sequence": 137,
    "server": 2,
    "sets": [
-    0,
+    1,
     1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-14T00:45:19.187469Z",
+   "timestamp": "2026-11-14T01:45:15.867908Z",
    "puntos": [
-    "30",
-    "30"
+    "9",
+    "2"
    ],
    "saca": 2
   },
@@ -43070,7 +43072,7 @@
    "ranking": 151
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-14T00:45:22.997Z",
   "torneoClave": "challenger|Lima 2",
@@ -45581,7 +45583,7 @@
    "ranking": 100
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-14T00:45:22.997Z",
   "torneoClave": "challenger|Knoxville",
@@ -46375,32 +46377,81 @@
  "219992": {
   "id": 219992,
   "tour": "challenger",
-  "torneo": "Lima 2",
-  "ronda": "Lima 2 - Quarter-finals",
+  "torneo": "Lima, Peru",
+  "ronda": "Quarterfinals",
   "rondaCod": "QF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-14T00:00:00Z",
+  "horario": "2026-11-14T01:05:00Z",
   "j1": {
-   "id": 622,
-   "nombre": "Genaro Alberto Olivieri",
-   "pais": "arg",
-   "ranking": 244
-  },
-  "j2": {
    "id": 581,
    "nombre": "Joao Lucas Reis Da Silva",
    "pais": "bra",
    "ranking": 190
   },
+  "j2": {
+   "id": 622,
+   "nombre": "Genaro Alberto Olivieri",
+   "pais": "arg",
+   "ranking": 244
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T23:45:24.945Z",
+  "visto": "2026-11-14T01:45:22.822Z",
   "torneoClave": "challenger|Lima 2",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "4819",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T01:44:43.967427Z",
+   "age_seconds": 38,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-14T01:44:43.784548Z",
+   "sequence": 54,
+   "server": 1,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-14T01:45:17.506427Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219995": {
   "id": 219995,
