@@ -375,7 +375,7 @@ function bloqueFinales() {
     };
     const grupos = gruposDeEvento(e);
     const tabla = (gr) => {
-      const filas = gr.jugadores.map(fila).sort((a, b) => b.g - a.g || a.pe - b.pe);
+      const filas = gr.jugadores.map(fila).sort((a, b) => (gr.suplentes?.includes(a.j.nombre) ? 1 : 0) - (gr.suplentes?.includes(b.j.nombre) ? 1 : 0) || b.g - a.g || a.pe - b.pe);
       return `<div class="fin-grupo"><h4>${esc(gr.nombre)}</h4>${filas.map((f) => `<div class="fin-fila"><span class="fin-j">${paisTag(f.j)}${esc(f.j.nombre)}</span><span class="fin-r">${f.g}-${f.pe}</span></div>`).join('')}</div>`;
     };
     const cuerpo = grupos.length
