@@ -47691,7 +47691,7 @@
  },
  "220117": {
   "id": 220117,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Stockholm",
   "ronda": "ATP Stockholm - Final",
   "rondaCod": "F",
@@ -47712,19 +47712,19 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-14T15:45:25.184Z",
+  "visto": "2026-11-14T16:45:25.628Z",
   "tier": null,
   "torneoId": "1686",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T15:43:59.165863Z",
-   "age_seconds": 85,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-14T16:35:13.359090Z",
+   "age_seconds": 612,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 600,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -47732,37 +47732,39 @@
    },
    "games": [
     [
-     5
+     6,
+     6
     ],
     [
-     2
+     3,
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 600,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-14T15:43:58.905857Z",
-   "sequence": 39,
+   "received_at": "2026-11-14T16:35:12.905355Z",
+   "sequence": 106,
    "server": 2,
    "sets": [
-    0,
+    2,
     0
    ],
-   "sources_count": 1,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-14T15:44:09.872603Z",
+   "timestamp": "2026-11-14T16:35:13.359086Z",
    "puntos": [
     "0",
     "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "220118": {
   "id": 220118,
@@ -47858,7 +47860,7 @@
  },
  "220119": {
   "id": 220119,
-  "tour": "challenger_women_doubles",
+  "tour": "challenger",
   "torneo": "Sopo (Colombia)",
   "ronda": "Sopo - Final",
   "rondaCod": "F",
@@ -47881,50 +47883,54 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T15:45:25.392Z",
+  "visto": "2026-11-14T16:45:25.464Z",
   "tier": null,
   "torneoId": "14866",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T15:44:18.454754Z",
-   "age_seconds": 66,
+   "accepted_at": "2026-11-14T16:45:09.068154Z",
+   "age_seconds": 15,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
-   "deciding_match_tiebreak_next": false,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": true,
    "deciding_set": {
-    "basis": "inferred",
+    "basis": "confirmed",
     "rule": "match_tiebreak"
    },
    "games": [
     [
-     4
+     5,
+     6,
+     11
     ],
     [
-     5
+     7,
+     2,
+     11
     ]
    ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "is_tiebreak": true,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "11",
+    "11"
    ],
-   "received_at": "2026-11-14T15:44:18.274395Z",
-   "sequence": 52,
+   "received_at": "2026-11-14T16:45:08.962074Z",
+   "sequence": 134,
    "server": 1,
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-14T15:45:24.825841Z",
+   "timestamp": "2026-11-14T16:45:17.232361Z",
    "puntos": [
-    "0",
-    "0"
+    "11",
+    "11"
    ],
    "saca": 1
   },
@@ -47954,7 +47960,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-14T15:45:25.392Z",
   "tier": null,
@@ -48056,7 +48062,7 @@
    "ranking": 126
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-14T15:45:25.392Z",
   "tier": null,
@@ -48119,7 +48125,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-14T16:00:00Z",
+  "horario": "2026-11-14T16:15:00Z",
   "j1": {
    "id": 92,
    "nombre": "Pedro Martinez",
@@ -48133,9 +48139,57 @@
    "ranking": 127
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T15:45:25.392Z"
+  "visto": "2026-11-14T16:45:25.464Z",
+  "tier": null,
+  "torneoId": "2353",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T16:45:11.951935Z",
+   "age_seconds": 12,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     5
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "15",
+    "15"
+   ],
+   "received_at": "2026-11-14T16:45:11.649633Z",
+   "sequence": 41,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-14T16:45:22.812875Z",
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220161": {
   "id": 220161,
