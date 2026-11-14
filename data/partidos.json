@@ -48499,19 +48499,19 @@
    "ranking": 3
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-14T20:45:28.865Z",
+  "visto": "2026-11-14T22:45:23.669Z",
   "tier": null,
   "torneoId": "3195",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T20:45:11.731175Z",
-   "age_seconds": 16,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-14T21:38:37.415648Z",
+   "age_seconds": 4006,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 3989,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -48519,37 +48519,39 @@
    },
    "games": [
     [
-     3
+     3,
+     4
     ],
     [
-     3
+     6,
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 3989,
    "origin": "observed",
    "points": [
     "0",
-    "40"
+    "0"
    ],
-   "received_at": "2026-11-14T20:45:11.593961Z",
-   "sequence": 52,
-   "server": 2,
+   "received_at": "2026-11-14T21:38:37.177969Z",
+   "sequence": 130,
+   "server": 1,
    "sets": [
     0,
-    0
+    2
    ],
-   "sources_count": 3,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-14T20:45:20.243750Z",
+   "timestamp": "2026-11-14T21:38:37.415644Z",
    "puntos": [
     "0",
-    "40"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null,
+  "confirmado": true,
+  "ganador": 2,
   "torneoClave": "wta|Finals - Riyadh",
   "importante": true
  },
@@ -48728,26 +48730,75 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-14T21:30:00Z",
+  "horario": "2026-11-14T22:00:00Z",
   "j1": {
-   "id": 768,
-   "nombre": "Linda Noskova",
-   "pais": "cze",
-   "ranking": 8
-  },
-  "j2": {
    "id": 43,
    "nombre": "Elina Svitolina",
    "pais": "ukr",
    "ranking": 6
   },
+  "j2": {
+   "id": 768,
+   "nombre": "Linda Noskova",
+   "pais": "cze",
+   "ranking": 8
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.704Z",
+  "visto": "2026-11-14T22:45:23.083Z",
   "torneoClave": "wta|Finals - Riyadh",
   "tier": null,
-  "importante": true
+  "importante": true,
+  "torneoId": "3195",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T22:45:20.057017Z",
+   "age_seconds": 2,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "30",
+    "15"
+   ],
+   "received_at": "2026-11-14T22:45:19.890939Z",
+   "sequence": 65,
+   "server": 1,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-14T22:45:20.057014Z",
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220182": {
   "id": 220182,
@@ -49009,7 +49060,7 @@
   "j1": {
    "id": 13762,
    "nombre": "Jason Kubler",
-   "pais": null,
+   "pais": "aus",
    "ranking": 559
   },
   "j2": {
