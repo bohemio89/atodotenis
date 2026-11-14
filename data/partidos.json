@@ -47685,19 +47685,19 @@
    "ranking": 100
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-14T17:45:23.758Z",
+  "visto": "2026-11-14T18:45:23.059Z",
   "tier": null,
   "torneoId": "14866",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T17:45:11.998964Z",
-   "age_seconds": 11,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-14T18:34:37.992345Z",
+   "age_seconds": 645,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 625,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -47705,37 +47705,39 @@
    },
    "games": [
     [
-     2
+     3,
+     3
     ],
     [
-     4
+     6,
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 625,
    "origin": "observed",
    "points": [
     "0",
-    "15"
+    "0"
    ],
-   "received_at": "2026-11-14T17:45:11.801829Z",
-   "sequence": 51,
+   "received_at": "2026-11-14T18:34:37.836752Z",
+   "sequence": 128,
    "server": 2,
    "sets": [
     0,
-    0
+    2
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-14T17:45:20.628357Z",
+   "timestamp": "2026-11-14T18:34:37.992340Z",
    "puntos": [
     "0",
-    "15"
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "220117": {
   "id": 220117,
@@ -48241,30 +48243,78 @@
  },
  "220161": {
   "id": 220161,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Orleans",
   "ronda": "Orleans - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-14T17:30:00Z",
+  "horario": "2026-11-14T18:25:00Z",
   "j1": {
-   "id": 15783,
-   "nombre": "Cervantes/ Martinez",
+   "id": 5251,
+   "nombre": "Andrej Nedić / Ivan Liutarevich",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 5251,
-   "nombre": "Liutarevich/ Pieczonka",
+   "id": 15783,
+   "nombre": "Cervantes / Martinez",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T15:45:25.392Z"
+  "visto": "2026-11-14T18:45:22.964Z",
+  "tier": null,
+  "torneoId": "2424",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T18:45:08.848481Z",
+   "age_seconds": 12,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "30",
+    "40"
+   ],
+   "received_at": "2026-11-14T18:45:08.671031Z",
+   "sequence": 23,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-14T18:45:08.848375Z",
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220166": {
   "id": 220166,
@@ -48316,7 +48366,7 @@
    "ranking": 310
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-14T17:45:23.758Z",
   "tier": null,
@@ -48393,52 +48443,56 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T17:45:23.758Z",
+  "visto": "2026-11-14T18:45:22.964Z",
   "tier": null,
   "torneoId": "4820",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T17:43:25.555003Z",
-   "age_seconds": 118,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 0,
-   "deciding_match_tiebreak_next": false,
+   "accepted_at": "2026-11-14T18:45:19.735810Z",
+   "age_seconds": 1,
+   "changing_sources_count": 3,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": true,
    "deciding_set": {
-    "basis": "inferred",
+    "basis": "confirmed",
     "rule": "match_tiebreak"
    },
    "games": [
     [
-     5
+     6,
+     4,
+     1
     ],
     [
-     4
+     4,
+     6,
+     3
     ]
    ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "is_tiebreak": true,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "1",
+    "3"
    ],
-   "received_at": "2026-11-14T17:43:24.703801Z",
-   "sequence": 50,
-   "server": 1,
+   "received_at": "2026-11-14T18:45:19.160014Z",
+   "sequence": 124,
+   "server": 2,
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 4,
    "stale": false,
-   "timestamp": "2026-11-14T17:45:23.415753Z",
+   "timestamp": "2026-11-14T18:45:19.735808Z",
    "puntos": [
-    "0",
-    "0"
+    "1",
+    "3"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
