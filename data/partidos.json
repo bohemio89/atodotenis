@@ -47664,30 +47664,78 @@
  },
  "220116": {
   "id": 220116,
-  "tour": "challenger_women",
-  "torneo": "Sopo (Colombia) - Qualification",
+  "tour": "challenger",
+  "torneo": "Sopo (Colombia)",
   "ronda": "Sopo - Final",
   "rondaCod": "F",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-14T17:00:00Z",
+  "horario": "2026-11-14T17:15:00Z",
   "j1": {
-   "id": 289,
-   "nombre": "Bianca Andreescu",
-   "pais": "can",
-   "ranking": 100
-  },
-  "j2": {
    "id": 271,
    "nombre": "Elizabeth Mandlik",
    "pais": "usa",
    "ranking": 237
   },
+  "j2": {
+   "id": 289,
+   "nombre": "Bianca Andreescu",
+   "pais": "can",
+   "ranking": 100
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T15:45:25.392Z"
+  "visto": "2026-11-14T17:45:23.758Z",
+  "tier": null,
+  "torneoId": "14866",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T17:45:11.998964Z",
+   "age_seconds": 11,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-14T17:45:11.801829Z",
+   "sequence": 51,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-14T17:45:20.628357Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220117": {
   "id": 220117,
@@ -47881,7 +47929,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-14T16:45:25.464Z",
   "tier": null,
@@ -48139,7 +48187,7 @@
    "ranking": 127
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-14T16:45:25.464Z",
   "tier": null,
@@ -48254,7 +48302,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-14T16:30:00Z",
+  "horario": "2026-11-14T16:55:00Z",
   "j1": {
    "id": 401,
    "nombre": "Abedallah Shelbayh",
@@ -48268,36 +48316,132 @@
    "ranking": 310
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T15:45:25.392Z"
+  "visto": "2026-11-14T17:45:23.758Z",
+  "tier": null,
+  "torneoId": "2443",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T17:44:50.589199Z",
+   "age_seconds": 33,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 7,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-14T17:44:50.143884Z",
+   "sequence": 81,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-14T17:45:01.995699Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220170": {
   "id": 220170,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Lima 2",
   "ronda": "Lima 2 - Final",
   "rondaCod": "F",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-14T17:00:00Z",
+  "horario": "2026-11-14T17:10:00Z",
   "j1": {
-   "id": 44972,
-   "nombre": "Bagnis/ Mena",
+   "id": 1715,
+   "nombre": "Karol Drzewiecki / Piotr Matuszewski",
    "pais": null,
    "ranking": null
   },
   "j2": {
-   "id": 1715,
-   "nombre": "Drzewiecki/ Matuszewski",
+   "id": 44972,
+   "nombre": "Bagnis / Mena",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T15:45:25.392Z"
+  "visto": "2026-11-14T17:45:23.758Z",
+  "tier": null,
+  "torneoId": "4820",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T17:43:25.555003Z",
+   "age_seconds": 118,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-14T17:43:24.703801Z",
+   "sequence": 50,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-14T17:45:23.415753Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220181": {
   "id": 220181,
