@@ -47014,7 +47014,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T11:45:22.055Z",
+  "visto": "2026-11-14T12:45:30.177Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
   "importante": false,
@@ -47022,11 +47022,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T11:43:23.506540Z",
-   "age_seconds": 117,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-14T12:44:44.570580Z",
+   "age_seconds": 45,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -47036,36 +47036,36 @@
     [
      5,
      6,
-     0
+     6
     ],
     [
      7,
      3,
-     0
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "30",
+    "40"
    ],
-   "received_at": "2026-11-14T11:43:23.345242Z",
-   "sequence": 152,
-   "server": 2,
+   "received_at": "2026-11-14T12:44:44.150781Z",
+   "sequence": 227,
+   "server": 1,
    "sets": [
     1,
     1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-14T11:45:19.824724Z",
+   "timestamp": "2026-11-14T12:45:21.812982Z",
    "puntos": [
-    "0",
-    "0"
+    "30",
+    "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -47172,7 +47172,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T11:45:22.055Z",
+  "visto": "2026-11-14T12:45:30.177Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
   "importante": false,
@@ -47180,11 +47180,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T11:44:41.514050Z",
-   "age_seconds": 39,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-14T12:45:04.587804Z",
+   "age_seconds": 25,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -47192,34 +47192,36 @@
    },
    "games": [
     [
+     6,
      1
     ],
     [
+     7,
      2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "AD",
+    "0",
     "40"
    ],
-   "received_at": "2026-11-14T11:44:40.940227Z",
-   "sequence": 31,
-   "server": 2,
+   "received_at": "2026-11-14T12:45:04.305696Z",
+   "sequence": 112,
+   "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-14T11:44:52.607290Z",
+   "timestamp": "2026-11-14T12:45:29.367698Z",
    "puntos": [
-    "AD",
+    "0",
     "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -47426,7 +47428,7 @@
  },
  "220109": {
   "id": 220109,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Monastir",
   "ronda": "Monastir - Final",
   "rondaCod": "F",
@@ -47449,17 +47451,17 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T11:45:22.055Z",
+  "visto": "2026-11-14T12:45:30.177Z",
   "tier": null,
   "torneoId": "13395",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T11:45:13.121257Z",
-   "age_seconds": 7,
+   "accepted_at": "2026-11-14T12:45:03.441036Z",
+   "age_seconds": 26,
    "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -47467,32 +47469,34 @@
    },
    "games": [
     [
-     5
+     7,
+     6
     ],
     [
-     5
+     6,
+     6
     ]
    ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "is_tiebreak": true,
+   "observed_age_seconds": 15,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "4",
+    "2"
    ],
-   "received_at": "2026-11-14T11:45:12.419349Z",
-   "sequence": 58,
+   "received_at": "2026-11-14T12:45:02.876069Z",
+   "sequence": 154,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 1,
    "stale": false,
-   "timestamp": "2026-11-14T11:45:13.121255Z",
+   "timestamp": "2026-11-14T12:45:14.753707Z",
    "puntos": [
-    "0",
-    "0"
+    "4",
+    "2"
    ],
    "saca": 2
   },
@@ -47591,21 +47595,71 @@
   "genero": "men",
   "horario": "2026-11-14T12:10:00Z",
   "j1": {
-   "id": 18,
-   "nombre": "Taylor Fritz",
-   "pais": "usa",
-   "ranking": 10
-  },
-  "j2": {
    "id": 2,
    "nombre": "Thiago Agustin Tirante",
    "pais": "arg",
    "ranking": 51
   },
+  "j2": {
+   "id": 18,
+   "nombre": "Taylor Fritz",
+   "pais": "usa",
+   "ranking": 10
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T11:45:21.813Z"
+  "visto": "2026-11-14T12:45:30.177Z",
+  "tier": null,
+  "torneoId": "1681",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T12:45:02.780981Z",
+   "age_seconds": 27,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-14T12:45:02.329607Z",
+   "sequence": 51,
+   "server": 2,
+   "sets": [
+    0,
+    1
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-14T12:45:28.493239Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220119": {
   "id": 220119,
