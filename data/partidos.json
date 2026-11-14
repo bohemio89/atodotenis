@@ -2072,7 +2072,7 @@
    "ranking": null,
    "paises": [
     "fra",
-    null
+    "usa"
    ]
   },
   "dobles": true,
@@ -8413,13 +8413,21 @@
    "id": 1800,
    "nombre": "Kristina Mladenovic / Meiqi Guo",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "fra",
+    "chn"
+   ]
   },
   "j2": {
    "id": 5678,
    "nombre": "Mertens / Zhang",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "bel",
+    "chn"
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -8427,7 +8435,7 @@
   "visto": "2026-11-14T19:45:24.704Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Finals - Riyadh",
+  "torneoClave": "wta|WTA Tour Finals, Doubles, Group A",
   "torneoId": "3190",
   "cubierto": true,
   "resultado": null,
@@ -8701,13 +8709,21 @@
    "id": 1450,
    "nombre": "Gabriela Dabrowski / Luisa Stefani",
    "pais": null,
-   "ranking": 12
+   "ranking": 12,
+   "paises": [
+    "can",
+    "bra"
+   ]
   },
   "j2": {
    "id": 14537,
    "nombre": "Hsieh S-W / Ostapenko",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "lat"
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -12622,7 +12638,7 @@
    "ranking": null,
    "paises": [
     "fra",
-    null
+    "usa"
    ]
   },
   "dobles": true,
@@ -16270,7 +16286,7 @@
    "ranking": null,
    "paises": [
     "fra",
-    null
+    "usa"
    ]
   },
   "dobles": true,
@@ -44430,13 +44446,21 @@
    "id": 13246,
    "nombre": "Jakub Paul / Matej Vocel",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 18193,
    "nombre": "Ariel Behar / Joshua Paris",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -46343,7 +46367,7 @@
   "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-13T22:45:24.038Z",
-  "torneoClave": "challenger|Knoxville",
+  "torneoClave": "challenger|Knoxville, USA",
   "tier": null,
   "importante": false,
   "torneoId": "2443",
@@ -46507,7 +46531,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-14T19:45:24.806Z",
-  "torneoClave": "challenger|Lima 2",
+  "torneoClave": "challenger|Lima, Peru",
   "tier": null,
   "importante": false,
   "torneoId": "4819",
@@ -46665,7 +46689,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-14T19:45:24.806Z",
-  "torneoClave": "challenger|Brisbane 3",
+  "torneoClave": "challenger|Brisbane 3, Australia",
   "tier": null,
   "importante": false,
   "torneoId": "13459",
@@ -46809,13 +46833,21 @@
    "id": 41808,
    "nombre": "Ellis / Tu",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44931,
    "nombre": "Ayeni / Isomura",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -46888,13 +46920,21 @@
    "id": 4989,
    "nombre": "Finn Reynolds / James Watt",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44939,
    "nombre": "Pruchya Isaro / Shimizu",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "jpn"
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -47281,13 +47321,21 @@
    "id": 1481,
    "nombre": "Petros Tsitsipas / Stefanos Tsitsipas",
    "pais": "grc",
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "gre"
+   ]
   },
   "j2": {
    "id": 30657,
    "nombre": "Ganchev / Maes",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -47522,13 +47570,21 @@
    "id": 44026,
    "nombre": "Duda / Pereira",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 45935,
    "nombre": "James Mackinlay / Nedunchezhiyan",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -47583,7 +47639,9 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Monastir",
+  "importante": false
  },
  "220110": {
   "id": 220110,
@@ -47660,7 +47718,9 @@
    "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Monastir",
+  "importante": false
  },
  "220116": {
   "id": 220116,
@@ -47737,7 +47797,9 @@
    "saca": 2
   },
   "confirmado": true,
-  "ganador": 2
+  "ganador": 2,
+  "torneoClave": "challenger_women|Sopo (Colombia)",
+  "importante": true
  },
  "220117": {
   "id": 220117,
@@ -47753,13 +47815,21 @@
    "id": 1725,
    "nombre": "Adam Heinonen / Erik Grevelius",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "swe",
+    "swe"
+   ]
   },
   "j2": {
    "id": 44942,
    "nombre": "Edouard Roger-Vasselin / Mektic",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "fra",
+    "cro"
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -47814,7 +47884,9 @@
    "saca": 2
   },
   "confirmado": true,
-  "ganador": 1
+  "ganador": 1,
+  "torneoClave": "atp|Stockholm",
+  "importante": true
  },
  "220118": {
   "id": 220118,
@@ -47906,7 +47978,9 @@
    "saca": 1
   },
   "confirmado": true,
-  "ganador": 2
+  "ganador": 2,
+  "torneoClave": "atp|Stockholm",
+  "importante": true
  },
  "220119": {
   "id": 220119,
@@ -47922,13 +47996,21 @@
    "id": 27174,
    "nombre": "Erjavec / Kulambayeva",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "slo",
+    null
+   ]
   },
   "j2": {
    "id": 44726,
    "nombre": "Samson / Zidansek",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "cze",
+    "slo"
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -47985,7 +48067,9 @@
    "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger_women|Sopo (Colombia)",
+  "importante": false
  },
  "220120": {
   "id": 220120,
@@ -48001,13 +48085,21 @@
    "id": 38341,
    "nombre": "Jans / Joran Vliegen",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44964,
    "nombre": "Andrade / Ingildsen",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "ecu",
+    null
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -48060,7 +48152,9 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Knoxville",
+  "importante": false
  },
  "220127": {
   "id": 220127,
@@ -48087,14 +48181,14 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z",
+  "visto": "2026-11-14T20:45:28.865Z",
   "tier": null,
   "torneoId": "4819",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T19:45:09.100562Z",
-   "age_seconds": 15,
+   "accepted_at": "2026-11-14T20:44:31.012905Z",
+   "age_seconds": 57,
    "changing_sources_count": 2,
    "corroborated": true,
    "corroborated_age_seconds": 6,
@@ -48105,37 +48199,41 @@
    },
    "games": [
     [
-     2
+     6,
+     5
     ],
     [
-     1
+     1,
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-14T19:45:08.688230Z",
-   "sequence": 24,
-   "server": 2,
+   "received_at": "2026-11-14T20:44:30.521499Z",
+   "sequence": 89,
+   "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-14T19:45:21.041132Z",
+   "timestamp": "2026-11-14T20:44:41.222155Z",
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Lima 2",
+  "importante": false
  },
  "220128": {
   "id": 220128,
@@ -48212,7 +48310,9 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Orleans",
+  "importante": false
  },
  "220129": {
   "id": 220129,
@@ -48287,7 +48387,9 @@
    "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Orleans",
+  "importante": false
  },
  "220161": {
   "id": 220161,
@@ -48303,13 +48405,21 @@
    "id": 5251,
    "nombre": "Andrej Nedić / Ivan Liutarevich",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "bih",
+    null
+   ]
   },
   "j2": {
    "id": 15783,
    "nombre": "Cervantes / Martinez",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -48362,7 +48472,9 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Orleans",
+  "importante": false
  },
  "220166": {
   "id": 220166,
@@ -48373,7 +48485,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-14T20:00:00Z",
+  "horario": "2026-11-14T20:20:00Z",
   "j1": {
    "id": 50,
    "nombre": "Jessica Pegula",
@@ -48387,9 +48499,59 @@
    "ranking": 3
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.704Z"
+  "visto": "2026-11-14T20:45:28.865Z",
+  "tier": null,
+  "torneoId": "3195",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T20:45:11.731175Z",
+   "age_seconds": 16,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "0",
+    "40"
+   ],
+   "received_at": "2026-11-14T20:45:11.593961Z",
+   "sequence": 52,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-14T20:45:20.243750Z",
+   "puntos": [
+    "0",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "torneoClave": "wta|Finals - Riyadh",
+  "importante": true
  },
  "220167": {
   "id": 220167,
@@ -48464,7 +48626,9 @@
    "saca": 1
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Knoxville",
+  "importante": false
  },
  "220170": {
   "id": 220170,
@@ -48480,13 +48644,21 @@
    "id": 1715,
    "nombre": "Karol Drzewiecki / Piotr Matuszewski",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44972,
    "nombre": "Bagnis / Mena",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "arg"
+   ]
   },
   "dobles": true,
   "estado": "finalizado",
@@ -48543,7 +48715,9 @@
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Lima 2",
+  "importante": false
  },
  "220181": {
   "id": 220181,
@@ -48570,7 +48744,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.704Z"
+  "visto": "2026-11-14T19:45:24.704Z",
+  "torneoClave": "wta|Finals - Riyadh",
+  "tier": null,
+  "importante": true
  },
  "220182": {
   "id": 220182,
@@ -48597,17 +48774,17 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z",
+  "visto": "2026-11-14T20:45:28.865Z",
   "tier": null,
   "torneoId": "2443",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T19:44:23.007104Z",
-   "age_seconds": 61,
+   "accepted_at": "2026-11-14T20:45:21.346768Z",
+   "age_seconds": 7,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -48616,38 +48793,42 @@
    "games": [
     [
      3,
-     2
+     6,
+     3
     ],
     [
      6,
-     1
+     3,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "40",
+    "40"
    ],
-   "received_at": "2026-11-14T19:44:22.424478Z",
-   "sequence": 82,
+   "received_at": "2026-11-14T20:45:20.736957Z",
+   "sequence": 166,
    "server": 2,
    "sets": [
-    0,
+    1,
     1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-14T19:45:06.247768Z",
+   "timestamp": "2026-11-14T20:45:21.346760Z",
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "40"
    ],
    "saca": 2
   },
   "confirmado": false,
-  "ganador": null
+  "ganador": null,
+  "torneoClave": "challenger|Knoxville",
+  "importante": false
  },
  "220184": {
   "id": 220184,
@@ -48674,7 +48855,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Lima 2",
+  "tier": null,
+  "importante": false
  },
  "220185": {
   "id": 220185,
@@ -48690,18 +48874,29 @@
    "id": 1450,
    "nombre": "Dabrowski/ Stefani",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "can",
+    "bra"
+   ]
   },
   "j2": {
    "id": 1834,
    "nombre": "Siniakova/ Townsend",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "cze",
+    "usa"
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.704Z"
+  "visto": "2026-11-14T19:45:24.704Z",
+  "torneoClave": "wta|Finals - Riyadh",
+  "tier": null,
+  "importante": false
  },
  "220188": {
   "id": 220188,
@@ -48728,7 +48923,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Matsuyama",
+  "tier": null,
+  "importante": false
  },
  "220189": {
   "id": 220189,
@@ -48744,18 +48942,29 @@
    "id": 1800,
    "nombre": "Guo/ Mladenovic",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "chn",
+    "fra"
+   ]
   },
   "j2": {
    "id": 10106,
    "nombre": "Errani/ Paolini",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "sui",
+    "ita"
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.704Z"
+  "visto": "2026-11-14T19:45:24.704Z",
+  "torneoClave": "wta|Finals - Riyadh",
+  "tier": null,
+  "importante": false
  },
  "220193": {
   "id": 220193,
@@ -48782,7 +48991,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Brisbane 3",
+  "tier": null,
+  "importante": false
  },
  "220202": {
   "id": 220202,
@@ -48809,7 +49021,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220203": {
   "id": 220203,
@@ -48836,7 +49050,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220204": {
   "id": 220204,
@@ -48863,7 +49079,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220205": {
   "id": 220205,
@@ -48890,7 +49108,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220206": {
   "id": 220206,
@@ -48905,7 +49125,7 @@
   "j1": {
    "id": 11221,
    "nombre": "H. Satara",
-   "pais": null,
+   "pais": "aus",
    "ranking": null
   },
   "j2": {
@@ -48917,7 +49137,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220207": {
   "id": 220207,
@@ -48944,7 +49166,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220208": {
   "id": 220208,
@@ -48971,7 +49195,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220209": {
   "id": 220209,
@@ -48998,7 +49224,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220210": {
   "id": 220210,
@@ -49019,13 +49247,15 @@
   "j2": {
    "id": 12572,
    "nombre": "D. Pham",
-   "pais": null,
+   "pais": "aus",
    "ranking": null
   },
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220211": {
   "id": 220211,
@@ -49052,7 +49282,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220212": {
   "id": 220212,
@@ -49073,13 +49305,15 @@
   "j2": {
    "id": 633,
    "nombre": "P. Marinkov",
-   "pais": null,
+   "pais": "aus",
    "ranking": null
   },
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220213": {
   "id": 220213,
@@ -49106,7 +49340,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220220": {
   "id": 220220,
@@ -49133,7 +49369,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220221": {
   "id": 220221,
@@ -49160,7 +49398,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220222": {
   "id": 220222,
@@ -49187,7 +49427,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220223": {
   "id": 220223,
@@ -49214,7 +49456,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220224": {
   "id": 220224,
@@ -49241,7 +49485,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220225": {
   "id": 220225,
@@ -49268,7 +49514,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220226": {
   "id": 220226,
@@ -49295,7 +49543,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220227": {
   "id": 220227,
@@ -49322,7 +49572,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220228": {
   "id": 220228,
@@ -49349,7 +49601,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220229": {
   "id": 220229,
@@ -49376,7 +49630,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220230": {
   "id": 220230,
@@ -49397,13 +49653,15 @@
   "j2": {
    "id": 464,
    "nombre": "Y. Mochizuki",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220231": {
   "id": 220231,
@@ -49418,7 +49676,7 @@
   "j1": {
    "id": 462,
    "nombre": "Y. Kusuhara",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "j2": {
@@ -49430,7 +49688,9 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "tier": null,
+  "importante": false
  },
  "220232": {
   "id": 220232,
@@ -49445,7 +49705,7 @@
   "j1": {
    "id": 70,
    "nombre": "N. Honda",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "j2": {
@@ -49457,7 +49717,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220233": {
   "id": 220233,
@@ -49484,7 +49747,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220234": {
   "id": 220234,
@@ -49511,7 +49777,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220235": {
   "id": 220235,
@@ -49538,7 +49807,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220236": {
   "id": 220236,
@@ -49565,7 +49837,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220237": {
   "id": 220237,
@@ -49592,7 +49867,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220238": {
   "id": 220238,
@@ -49619,7 +49897,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220239": {
   "id": 220239,
@@ -49646,7 +49927,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220240": {
   "id": 220240,
@@ -49673,7 +49957,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220241": {
   "id": 220241,
@@ -49700,7 +49987,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220242": {
   "id": 220242,
@@ -49716,18 +50006,29 @@
    "id": 44936,
    "nombre": "Banthia/ Chandrasekar",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 12069,
    "nombre": "Imamura/ Noguchi",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "jpn",
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220243": {
   "id": 220243,
@@ -49743,18 +50044,29 @@
    "id": 5320,
    "nombre": "Bass/ Duncan",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 27600,
    "nombre": "Matsui/ Ramanathan",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220244": {
   "id": 220244,
@@ -49770,18 +50082,29 @@
    "id": 38373,
    "nombre": "Jecan/ Kielan",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 10162,
    "nombre": "Loof/ Uesugi",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220245": {
   "id": 220245,
@@ -49797,18 +50120,29 @@
    "id": 45969,
    "nombre": "Hsieh/ Smith",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44937,
    "nombre": "Bittoun/ Poljak",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220246": {
   "id": 220246,
@@ -49824,18 +50158,29 @@
    "id": 15436,
    "nombre": "Hsu/ Sun",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 28801,
    "nombre": "Ho/ Isaro",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220247": {
   "id": 220247,
@@ -49851,18 +50196,29 @@
    "id": 45970,
    "nombre": "Matsuda/ Tomida",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 1530,
    "nombre": "Dev S D/ Sinha",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Kobe",
+  "tier": null,
+  "importante": false
  },
  "220260": {
   "id": 220260,
@@ -49878,18 +50234,29 @@
    "id": 38460,
    "nombre": "Hoeyeraal/ Padgham",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 45972,
    "nombre": "Jones/ Pham",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "aus"
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220261": {
   "id": 220261,
@@ -49905,18 +50272,29 @@
    "id": 44006,
    "nombre": "Kubler/ Puttergill",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 13220,
    "nombre": "Cook/ Sach",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220262": {
   "id": 220262,
@@ -49932,18 +50310,29 @@
    "id": 45973,
    "nombre": "Bouzige/ Sekulic",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44932,
    "nombre": "Jung/ Rai",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220263": {
   "id": 220263,
@@ -49959,18 +50348,29 @@
    "id": 3140,
    "nombre": "Becroft/ Shepp",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "nzl",
+    null
+   ]
   },
   "j2": {
    "id": 32275,
    "nombre": "Falck/ Suarez",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220264": {
   "id": 220264,
@@ -49986,18 +50386,29 @@
    "id": 45974,
    "nombre": "Hewitt/ Sweeny",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 44934,
    "nombre": "Hazawa/ Sueoka",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220265": {
   "id": 220265,
@@ -50013,18 +50424,29 @@
    "id": 41808,
    "nombre": "Ellis/ Tu",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 1654,
    "nombre": "Santillan/ Zheng",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "usa"
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220266": {
   "id": 220266,
@@ -50040,18 +50462,29 @@
    "id": 7860,
    "nombre": "Hsu/ Zhu",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 26058,
    "nombre": "Bayldon/ Fancutt",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220267": {
   "id": 220267,
@@ -50067,18 +50500,29 @@
    "id": 1725,
    "nombre": "Grevelius/ Heinonen",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    "swe",
+    null
+   ]
   },
   "j2": {
    "id": 45975,
    "nombre": "Genov/ Kittay",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": null,
+  "importante": false
  },
  "220268": {
   "id": 220268,
@@ -50094,18 +50538,29 @@
    "id": 45935,
    "nombre": "MacKinlay/ Nedunchezhiyan",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 12397,
    "nombre": "Niklas-Salminen/ Vrbensky",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": null,
+  "importante": false
  },
  "220269": {
   "id": 220269,
@@ -50121,18 +50576,29 @@
    "id": 5251,
    "nombre": "Liutarevich/ Pieczonka",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 45976,
    "nombre": "Alopaeus/ Lagerbohm",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": null,
+  "importante": false
  },
  "220270": {
   "id": 220270,
@@ -50148,18 +50614,29 @@
    "id": 36891,
    "nombre": "Cukierman/ Romboli",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 45977,
    "nombre": "Durasovic/ Ursu",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": null,
+  "importante": false
  },
  "220271": {
   "id": 220271,
@@ -50175,18 +50652,29 @@
    "id": 41514,
    "nombre": "Cornea/ Wehnelt",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 45978,
    "nombre": "Johnson/ Venus",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "nzl"
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": null,
+  "importante": false
  },
  "220272": {
   "id": 220272,
@@ -50202,18 +50690,29 @@
    "id": 11266,
    "nombre": "Rojer/ Winegar",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    "usa"
+   ]
   },
   "j2": {
    "id": 45980,
    "nombre": "Ahti/ Ronkainen",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": null,
+  "importante": false
  },
  "220273": {
   "id": 220273,
@@ -50229,18 +50728,29 @@
    "id": 39344,
    "nombre": "Pereira/ Winter Lopez",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "j2": {
    "id": 45981,
    "nombre": "Agwi/ Sperle",
    "pais": null,
-   "ranking": null
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
   },
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": null,
+  "importante": false
  },
  "220279": {
   "id": 220279,
@@ -50267,7 +50777,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Hersonissos 3",
+  "tier": null,
+  "importante": false
  },
  "220280": {
   "id": 220280,
@@ -50294,7 +50807,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220281": {
   "id": 220281,
@@ -50315,13 +50831,16 @@
   "j2": {
    "id": 5390,
    "nombre": "M. E. Sik",
-   "pais": null,
+   "pais": "aus",
    "ranking": null
   },
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220282": {
   "id": 220282,
@@ -50348,7 +50867,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220283": {
   "id": 220283,
@@ -50375,7 +50897,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220284": {
   "id": 220284,
@@ -50402,7 +50927,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220285": {
   "id": 220285,
@@ -50429,7 +50957,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220286": {
   "id": 220286,
@@ -50456,7 +50987,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220287": {
   "id": 220287,
@@ -50483,7 +51017,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220288": {
   "id": 220288,
@@ -50510,7 +51047,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220289": {
   "id": 220289,
@@ -50537,7 +51077,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220290": {
   "id": 220290,
@@ -50564,7 +51107,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Sydney",
+  "tier": null,
+  "importante": false
  },
  "220303": {
   "id": 220303,
@@ -50591,7 +51137,10 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z"
+  "visto": "2026-11-14T19:45:24.806Z",
+  "torneoClave": "challenger|Monastir",
+  "tier": null,
+  "importante": false
  },
  "null": {
   "id": null,
