@@ -8401,41 +8401,80 @@
  },
  "215404": {
   "id": 215404,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-14T01:30:00Z",
+  "horario": "2026-11-14T02:10:00Z",
   "j1": {
    "id": 1800,
-   "nombre": "Guo/ Mladenovic",
+   "nombre": "Kristina Mladenovic / Meiqi Guo",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "chn",
-    "fra"
-   ]
+   "ranking": null
   },
   "j2": {
-   "id": 1819,
-   "nombre": "Mertens/ Zhang",
+   "id": 5678,
+   "nombre": "Mertens / Zhang",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "bel",
-    "chn"
-   ]
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T23:45:24.827Z",
+  "visto": "2026-11-14T02:45:23.975Z",
   "importante": false,
   "tier": null,
-  "torneoClave": "wta|Finals - Riyadh"
+  "torneoClave": "wta|Finals - Riyadh",
+  "torneoId": "3190",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T02:44:52.474199Z",
+   "age_seconds": 31,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "30",
+    "30"
+   ],
+   "received_at": "2026-11-14T02:44:52.379090Z",
+   "sequence": 50,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-14T02:45:17.083616Z",
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "215405": {
   "id": 215405,
@@ -8634,7 +8673,7 @@
  "215408": {
   "id": 215408,
   "tour": "wta",
-  "torneo": "WTA Tour Finals, Doubles, Group A",
+  "torneo": "Finals - Riyadh",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
@@ -8654,9 +8693,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-14T01:45:22.822Z",
+  "visto": "2026-11-14T02:45:24.191Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8664,53 +8703,63 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T01:45:15.867910Z",
-   "age_seconds": 6,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-14T01:46:57.055036Z",
+   "age_seconds": 3507,
+   "changing_sources_count": 0,
    "corroborated": false,
    "corroborated_age_seconds": null,
-   "deciding_match_tiebreak_next": true,
-   "deciding_set": {
-    "basis": "confirmed",
-    "rule": "match_tiebreak"
-   },
+   "deciding_match_tiebreak_next": null,
+   "deciding_set": null,
    "games": [
     [
      2,
      7,
-     9
+     10
     ],
     [
      6,
      6,
-     2
+     3
     ]
    ],
-   "is_tiebreak": true,
-   "observed_age_seconds": 6,
+   "is_tiebreak": false,
+   "observed_age_seconds": 3507,
    "origin": "observed",
    "points": [
-    "9",
-    "2"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-14T01:45:15.802829Z",
-   "sequence": 137,
+   "received_at": "2026-11-14T01:46:56.590818Z",
+   "sequence": 141,
    "server": 2,
    "sets": [
-    1,
+    2,
     1
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-14T01:45:15.867908Z",
+   "tiebreaks": [
+    null,
+    {
+     "p1": 7,
+     "p2": 2
+    },
+    null
+   ],
+   "tiebreaks_source": [
+    null,
+    "summary",
+    null
+   ],
+   "timestamp": "2026-11-14T01:46:57.055034Z",
    "puntos": [
-    "9",
-    "2"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215409": {
   "id": 215409,
@@ -46397,7 +46446,7 @@
    "ranking": 244
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-14T01:45:22.822Z",
   "torneoClave": "challenger|Lima 2",
@@ -46462,26 +46511,75 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-14T02:00:00Z",
+  "horario": "2026-11-14T02:05:00Z",
   "j1": {
-   "id": 81,
-   "nombre": "Rio Noguchi",
-   "pais": "jpn",
-   "ranking": 233
-  },
-  "j2": {
    "id": 77,
    "nombre": "Yu-Hsiou Hsu",
    "pais": "tai",
    "ranking": 312
   },
+  "j2": {
+   "id": 81,
+   "nombre": "Rio Noguchi",
+   "pais": "jpn",
+   "ranking": 233
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T23:45:24.945Z",
+  "visto": "2026-11-14T02:45:23.975Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T02:44:51.279041Z",
+   "age_seconds": 32,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-14T02:44:50.690838Z",
+   "sequence": 58,
+   "server": 1,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-14T02:45:00.136610Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220001": {
   "id": 220001,
@@ -46522,7 +46620,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-14T02:00:00Z",
+  "horario": "2026-11-14T02:05:00Z",
   "j1": {
    "id": 163,
    "nombre": "Rei Sakamoto",
@@ -46536,12 +46634,59 @@
    "ranking": 227
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-13T23:45:24.945Z",
+  "visto": "2026-11-14T02:45:23.975Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8222",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-14T02:43:46.917148Z",
+   "age_seconds": 97,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-14T02:43:46.467154Z",
+   "sequence": 53,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-14T02:45:18.612120Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220008": {
   "id": 220008,
