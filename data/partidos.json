@@ -8401,7 +8401,7 @@
  },
  "215404": {
   "id": 215404,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "WTA Tour Finals, Doubles, Group A",
   "ronda": null,
   "rondaCod": null,
@@ -8422,9 +8422,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-14T03:45:22.351Z",
+  "visto": "2026-11-14T04:45:22.874Z",
   "importante": false,
   "tier": null,
   "torneoClave": "wta|Finals - Riyadh",
@@ -8432,51 +8432,66 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T03:45:12.992843Z",
-   "age_seconds": 9,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "accepted_at": "2026-11-14T04:09:02.583842Z",
+   "age_seconds": 2180,
+   "changing_sources_count": 0,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
-    "basis": "inferred",
+    "basis": "confirmed",
     "rule": "match_tiebreak"
    },
    "games": [
     [
      6,
-     4
+     6,
+     1
     ],
     [
      7,
-     3
+     3,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 2180,
    "origin": "observed",
    "points": [
-    "30",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-14T03:45:12.910335Z",
-   "sequence": 131,
-   "server": 1,
+   "received_at": "2026-11-14T04:09:02.365566Z",
+   "sequence": 164,
+   "server": 2,
    "sets": [
-    0,
+    2,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-14T03:45:21.157085Z",
+   "tiebreaks": [
+    {
+     "p1": 4,
+     "p2": 7
+    },
+    null,
+    null
+   ],
+   "tiebreaks_source": [
+    "summary",
+    null,
+    null
+   ],
+   "timestamp": "2026-11-14T04:09:02.583838Z",
    "puntos": [
-    "30",
+    "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "215405": {
   "id": 215405,
@@ -46608,7 +46623,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T03:45:22.474Z",
+  "visto": "2026-11-14T04:45:22.757Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -46616,11 +46631,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-14T03:44:32.727451Z",
-   "age_seconds": 49,
+   "accepted_at": "2026-11-14T04:45:02.961217Z",
+   "age_seconds": 19,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -46628,32 +46643,34 @@
    },
    "games": [
     [
-     4
+     7,
+     5
     ],
     [
-     5
+     6,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 7,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
     "0",
-    "0"
+    "15"
    ],
-   "received_at": "2026-11-14T03:44:32.270059Z",
-   "sequence": 54,
+   "received_at": "2026-11-14T04:45:02.607745Z",
+   "sequence": 130,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-14T03:44:32.727444Z",
+   "timestamp": "2026-11-14T04:45:02.961215Z",
    "puntos": [
     "0",
-    "0"
+    "15"
    ],
    "saca": 1
   },
@@ -46798,7 +46815,7 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-14T03:45:22.474Z",
   "torneoClave": "challenger|Matsuyama",
