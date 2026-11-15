@@ -43860,7 +43860,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
@@ -43898,7 +43898,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
@@ -43936,14 +43936,14 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
  },
  "219725": {
   "id": 219725,
-  "tour": "atp",
+  "tour": "atp_doubles",
   "torneo": "Finals - Turin",
   "ronda": null,
   "rondaCod": null,
@@ -43966,7 +43966,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T10:45:22.348Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false,
@@ -43974,11 +43974,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T10:44:21.573628Z",
-   "age_seconds": 60,
+   "accepted_at": "2026-11-15T11:44:07.250752Z",
+   "age_seconds": 78,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -43986,34 +43986,36 @@
    },
    "games": [
     [
-     0
+     3,
+     5
     ],
     [
-     1
+     6,
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-15T10:44:20.843368Z",
-   "sequence": 8,
-   "server": 1,
+   "received_at": "2026-11-15T11:44:07.037101Z",
+   "sequence": 92,
+   "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 1,
    "stale": false,
-   "timestamp": "2026-11-15T10:45:17.209932Z",
+   "timestamp": "2026-11-15T11:44:19.250423Z",
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -44051,7 +44053,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
@@ -44089,7 +44091,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
@@ -44127,7 +44129,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
@@ -44165,7 +44167,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
@@ -44203,7 +44205,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
@@ -44241,7 +44243,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
@@ -44279,7 +44281,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
@@ -44317,7 +44319,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false
@@ -44637,7 +44639,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44667,7 +44669,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44697,7 +44699,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44727,7 +44729,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44757,7 +44759,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44787,7 +44789,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44817,7 +44819,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44847,7 +44849,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44877,7 +44879,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44907,7 +44909,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44937,7 +44939,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -44967,7 +44969,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:28.999Z",
+  "visto": "2026-11-15T11:45:26.016Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true
@@ -48785,7 +48787,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.130Z",
+  "visto": "2026-11-15T11:45:26.098Z",
   "torneoClave": "wta|Finals - Riyadh",
   "tier": null,
   "importante": true,
@@ -48975,7 +48977,7 @@
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.130Z",
+  "visto": "2026-11-15T11:45:26.098Z",
   "torneoClave": "wta|Finals - Riyadh",
   "tier": null,
   "importante": false,
@@ -49065,7 +49067,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.656Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
   "importante": false,
@@ -49159,7 +49161,7 @@
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.130Z",
+  "visto": "2026-11-15T11:45:26.098Z",
   "torneoClave": "wta|Finals - Riyadh",
   "tier": null,
   "importante": false,
@@ -49238,7 +49240,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -49328,7 +49330,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -49406,7 +49408,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -49482,7 +49484,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -49560,7 +49562,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -49638,7 +49640,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -49716,7 +49718,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -49792,7 +49794,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -49872,7 +49874,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -49950,7 +49952,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -50026,9 +50028,9 @@
    "ranking": 673
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -50108,7 +50110,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -50186,7 +50188,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -50266,7 +50268,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -50346,7 +50348,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -50422,7 +50424,7 @@
   "dobles": false,
   "estado": "cancelado",
   "motivo": "retired",
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -50500,7 +50502,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -50578,7 +50580,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -50656,7 +50658,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -50734,7 +50736,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -50812,7 +50814,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -50890,7 +50892,7 @@
   "dobles": false,
   "estado": "cancelado",
   "motivo": "cancelled",
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false
  },
@@ -50917,9 +50919,9 @@
    "ranking": 1056
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T09:45:32.211Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -50997,9 +50999,9 @@
    "ranking": 487
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -51075,9 +51077,9 @@
    "ranking": 592
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T09:45:32.211Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
@@ -51157,7 +51159,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51187,7 +51189,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51217,7 +51219,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51247,7 +51249,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51277,7 +51279,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51307,7 +51309,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51337,7 +51339,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51367,7 +51369,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.198Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51397,7 +51399,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51427,7 +51429,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.198Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51465,7 +51467,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51503,7 +51505,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51541,7 +51543,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51579,7 +51581,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51617,7 +51619,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -51655,7 +51657,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false
@@ -52217,7 +52219,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T10:45:22.348Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Hersonissos 3",
   "tier": null,
   "importante": false,
@@ -52225,11 +52227,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T10:44:57.588125Z",
-   "age_seconds": 24,
+   "accepted_at": "2026-11-15T11:45:12.922795Z",
+   "age_seconds": 12,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -52237,34 +52239,38 @@
    },
    "games": [
     [
-     3
+     4,
+     6,
+     2
     ],
     [
-     4
+     6,
+     2,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "40",
-    "40"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-15T10:44:57.145614Z",
-   "sequence": 53,
-   "server": 1,
+   "received_at": "2026-11-15T11:45:12.282986Z",
+   "sequence": 134,
+   "server": 2,
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-15T10:45:14.498721Z",
+   "timestamp": "2026-11-15T11:45:23.758663Z",
    "puntos": [
-    "40",
-    "40"
+    "15",
+    "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -52294,7 +52300,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52324,7 +52330,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.198Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52354,7 +52360,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.198Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52384,7 +52390,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52414,7 +52420,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.198Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52444,7 +52450,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.198Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52474,7 +52480,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.198Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52504,7 +52510,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52534,7 +52540,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.198Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52564,7 +52570,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.198Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52594,7 +52600,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.198Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false
@@ -52622,9 +52628,9 @@
    "ranking": 229
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T10:45:22.348Z",
+  "visto": "2026-11-15T11:45:26.310Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
   "importante": false,
@@ -52632,11 +52638,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T10:44:51.652695Z",
-   "age_seconds": 30,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-15T11:10:25.231158Z",
+   "age_seconds": 2101,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 2095,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -52645,38 +52651,38 @@
    "games": [
     [
      6,
-     1
+     6
     ],
     [
      1,
-     0
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 2095,
    "origin": "observed",
    "points": [
-    "15",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-15T10:44:51.123499Z",
-   "sequence": 49,
-   "server": 1,
+   "received_at": "2026-11-15T11:10:24.608057Z",
+   "sequence": 91,
+   "server": 2,
    "sets": [
-    1,
+    2,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-15T10:45:04.281241Z",
+   "timestamp": "2026-11-15T11:10:25.231154Z",
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "220341": {
   "id": 220341,
@@ -52703,7 +52709,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T03:45:24.625Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220342": {
   "id": 220342,
@@ -52730,7 +52736,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T03:45:24.625Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220343": {
   "id": 220343,
@@ -53297,7 +53303,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220370": {
   "id": 220370,
@@ -53324,7 +53330,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220371": {
   "id": 220371,
@@ -53351,7 +53357,34 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
+ },
+ "220381": {
+  "id": 220381,
+  "tour": "challenger_doubles",
+  "torneo": "Metz (France)",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-18T09:00:00Z",
+  "j1": {
+   "id": 15783,
+   "nombre": "Cervantes/ Martinez",
+   "pais": null,
+   "ranking": null
+  },
+  "j2": {
+   "id": 46002,
+   "nombre": "Duda/ Kalender",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220386": {
   "id": 220386,
@@ -53378,7 +53411,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.130Z"
+  "visto": "2026-11-15T11:45:26.098Z"
  },
  "220390": {
   "id": 220390,
@@ -53405,7 +53438,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220391": {
   "id": 220391,
@@ -53432,7 +53465,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220392": {
   "id": 220392,
@@ -53459,7 +53492,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220393": {
   "id": 220393,
@@ -53486,7 +53519,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220394": {
   "id": 220394,
@@ -53513,7 +53546,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220395": {
   "id": 220395,
@@ -53540,7 +53573,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220396": {
   "id": 220396,
@@ -53567,7 +53600,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220397": {
   "id": 220397,
@@ -53594,7 +53627,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220398": {
   "id": 220398,
@@ -53621,7 +53654,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220399": {
   "id": 220399,
@@ -53648,7 +53681,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220400": {
   "id": 220400,
@@ -53675,7 +53708,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220401": {
   "id": 220401,
@@ -53702,7 +53735,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220402": {
   "id": 220402,
@@ -53729,7 +53762,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220403": {
   "id": 220403,
@@ -53756,7 +53789,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220404": {
   "id": 220404,
@@ -53783,7 +53816,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220405": {
   "id": 220405,
@@ -53810,7 +53843,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220406": {
   "id": 220406,
@@ -53837,7 +53870,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220407": {
   "id": 220407,
@@ -53862,9 +53895,9 @@
    "ranking": 509
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T10:45:22.348Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "torneoId": "3200",
   "cubierto": true,
@@ -53925,7 +53958,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T09:00:00Z",
+  "horario": "2026-11-15T12:30:00Z",
   "j1": {
    "id": 2201,
    "nombre": "A. Funk",
@@ -53941,7 +53974,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220409": {
   "id": 220409,
@@ -53966,9 +53999,9 @@
    "ranking": 625
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T10:45:22.348Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "torneoId": "3200",
   "cubierto": true,
@@ -54031,7 +54064,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T10:30:00Z",
+  "horario": "2026-11-15T11:25:00Z",
   "j1": {
    "id": 217,
    "nombre": "Jay Clarke",
@@ -54040,14 +54073,62 @@
   },
   "j2": {
    "id": 1934,
-   "nombre": "A. Nordquist",
-   "pais": null,
-   "ranking": null
+   "nombre": "Arvid Nordquist",
+   "pais": "swe",
+   "ranking": 663
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z",
+  "tier": null,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T11:44:55.882310Z",
+   "age_seconds": 29,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "0",
+    "30"
+   ],
+   "received_at": "2026-11-15T11:44:55.163823Z",
+   "sequence": 28,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-15T11:45:22.177396Z",
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220411": {
   "id": 220411,
@@ -54058,7 +54139,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T10:30:00Z",
+  "horario": "2026-11-15T11:40:00Z",
   "j1": {
    "id": 305,
    "nombre": "Cezar Cretu",
@@ -54067,14 +54148,62 @@
   },
   "j2": {
    "id": 8110,
-   "nombre": "F. Alopaeus",
-   "pais": null,
+   "nombre": "Felix Alopaeus",
+   "pais": "fin",
    "ranking": null
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z",
+  "tier": null,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T11:45:04.369894Z",
+   "age_seconds": 21,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "40",
+    "30"
+   ],
+   "received_at": "2026-11-15T11:45:03.374538Z",
+   "sequence": 18,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-15T11:45:04.369893Z",
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220412": {
   "id": 220412,
@@ -54085,12 +54214,12 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T10:30:00Z",
+  "horario": "2026-11-15T11:05:00Z",
   "j1": {
    "id": 323,
-   "nombre": "M. Vrbensky",
-   "pais": null,
-   "ranking": null
+   "nombre": "Michael Vrbensky",
+   "pais": "cze",
+   "ranking": 737
   },
   "j2": {
    "id": 2111,
@@ -54099,9 +54228,57 @@
    "ranking": 443
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z",
+  "tier": null,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T11:14:41.784433Z",
+   "age_seconds": 1844,
+   "changing_sources_count": 0,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "30",
+    "0"
+   ],
+   "received_at": "2026-11-15T11:14:41.596784Z",
+   "sequence": 11,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": true,
+   "timestamp": "2026-11-15T11:45:18.334976Z",
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220413": {
   "id": 220413,
@@ -54112,7 +54289,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T12:00:00Z",
+  "horario": "2026-11-15T13:10:00Z",
   "j1": {
    "id": 1259,
    "nombre": "Luka Mikrut",
@@ -54128,7 +54305,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220414": {
   "id": 220414,
@@ -54139,7 +54316,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T12:00:00Z",
+  "horario": "2026-11-15T14:00:00Z",
   "j1": {
    "id": 396,
    "nombre": "Sumit Nagal",
@@ -54155,7 +54332,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220415": {
   "id": 220415,
@@ -54166,7 +54343,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T12:00:00Z",
+  "horario": "2026-11-15T12:55:00Z",
   "j1": {
    "id": 2164,
    "nombre": "J. Sperle",
@@ -54182,7 +54359,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220416": {
   "id": 220416,
@@ -54193,7 +54370,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T13:30:00Z",
+  "horario": "2026-11-15T14:25:00Z",
   "j1": {
    "id": 10214,
    "nombre": "M. Agwi",
@@ -54209,7 +54386,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220417": {
   "id": 220417,
@@ -54220,7 +54397,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T13:30:00Z",
+  "horario": "2026-11-15T14:40:00Z",
   "j1": {
    "id": 12400,
    "nombre": "Alexander Ritschard",
@@ -54236,7 +54413,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220418": {
   "id": 220418,
@@ -54247,7 +54424,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T13:30:00Z",
+  "horario": "2026-11-15T15:30:00Z",
   "j1": {
    "id": 927,
    "nombre": "K. Wehnelt",
@@ -54263,7 +54440,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220419": {
   "id": 220419,
@@ -54290,7 +54467,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220420": {
   "id": 220420,
@@ -54317,7 +54494,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220421": {
   "id": 220421,
@@ -54344,7 +54521,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220422": {
   "id": 220422,
@@ -54371,7 +54548,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220423": {
   "id": 220423,
@@ -54398,7 +54575,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220424": {
   "id": 220424,
@@ -54425,7 +54602,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220425": {
   "id": 220425,
@@ -54452,7 +54629,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220426": {
   "id": 220426,
@@ -54479,7 +54656,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220427": {
   "id": 220427,
@@ -54506,7 +54683,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220428": {
   "id": 220428,
@@ -54533,7 +54710,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.301Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220429": {
   "id": 220429,
@@ -54560,7 +54737,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220430": {
   "id": 220430,
@@ -54587,7 +54764,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220431": {
   "id": 220431,
@@ -54614,7 +54791,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220432": {
   "id": 220432,
@@ -54641,7 +54818,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220433": {
   "id": 220433,
@@ -54668,7 +54845,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220434": {
   "id": 220434,
@@ -54695,7 +54872,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220435": {
   "id": 220435,
@@ -54722,7 +54899,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220436": {
   "id": 220436,
@@ -54749,7 +54926,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220437": {
   "id": 220437,
@@ -54776,7 +54953,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220438": {
   "id": 220438,
@@ -54803,7 +54980,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220439": {
   "id": 220439,
@@ -54830,7 +55007,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220440": {
   "id": 220440,
@@ -54857,7 +55034,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220441": {
   "id": 220441,
@@ -54884,7 +55061,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220442": {
   "id": 220442,
@@ -54911,7 +55088,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220443": {
   "id": 220443,
@@ -54938,7 +55115,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220444": {
   "id": 220444,
@@ -54965,7 +55142,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220445": {
   "id": 220445,
@@ -54992,7 +55169,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220446": {
   "id": 220446,
@@ -55019,7 +55196,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220447": {
   "id": 220447,
@@ -55046,7 +55223,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220448": {
   "id": 220448,
@@ -55073,7 +55250,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220478": {
   "id": 220478,
@@ -55100,7 +55277,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220479": {
   "id": 220479,
@@ -55127,7 +55304,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220480": {
   "id": 220480,
@@ -55154,7 +55331,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220481": {
   "id": 220481,
@@ -55181,7 +55358,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220482": {
   "id": 220482,
@@ -55208,7 +55385,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220483": {
   "id": 220483,
@@ -55235,7 +55412,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220484": {
   "id": 220484,
@@ -55262,7 +55439,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220485": {
   "id": 220485,
@@ -55289,7 +55466,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220486": {
   "id": 220486,
@@ -55316,7 +55493,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220487": {
   "id": 220487,
@@ -55343,7 +55520,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220488": {
   "id": 220488,
@@ -55370,7 +55547,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220489": {
   "id": 220489,
@@ -55397,7 +55574,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220490": {
   "id": 220490,
@@ -55424,7 +55601,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220491": {
   "id": 220491,
@@ -55451,7 +55628,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220492": {
   "id": 220492,
@@ -55478,7 +55655,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220493": {
   "id": 220493,
@@ -55505,7 +55682,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220494": {
   "id": 220494,
@@ -55532,7 +55709,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220495": {
   "id": 220495,
@@ -55559,7 +55736,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220496": {
   "id": 220496,
@@ -55586,7 +55763,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220497": {
   "id": 220497,
@@ -55613,7 +55790,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220498": {
   "id": 220498,
@@ -55640,7 +55817,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220499": {
   "id": 220499,
@@ -55667,7 +55844,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220523": {
   "id": 220523,
@@ -55692,9 +55869,9 @@
    "ranking": 299
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T10:45:22.348Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "torneoId": "14868",
   "cubierto": true,
@@ -55769,9 +55946,9 @@
    "ranking": 263
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T09:45:32.211Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "torneoId": "14868",
   "cubierto": true,
@@ -55846,17 +56023,17 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T10:45:22.348Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "tier": null,
   "torneoId": "14868",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T10:45:04.155163Z",
-   "age_seconds": 18,
+   "accepted_at": "2026-11-15T11:45:17.311864Z",
+   "age_seconds": 8,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -55864,9 +56041,11 @@
    },
    "games": [
     [
-     0
+     6,
+     2
     ],
     [
+     7,
      1
     ]
    ],
@@ -55874,24 +56053,24 @@
    "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "AD",
+    "40"
    ],
-   "received_at": "2026-11-15T10:45:03.461831Z",
-   "sequence": 7,
-   "server": 1,
+   "received_at": "2026-11-15T11:45:17.092893Z",
+   "sequence": 101,
+   "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 4,
    "stale": false,
-   "timestamp": "2026-11-15T10:45:21.619384Z",
+   "timestamp": "2026-11-15T11:45:25.362329Z",
    "puntos": [
-    "0",
-    "0"
+    "AD",
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -55919,9 +56098,9 @@
    "ranking": 347
   },
   "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "estado": "cancelado",
+  "motivo": "cancelled",
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220527": {
   "id": 220527,
@@ -55932,7 +56111,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T12:00:00Z",
+  "horario": "2026-11-15T13:00:00Z",
   "j1": {
    "id": 674,
    "nombre": "Buvaysar Gadamauri",
@@ -55948,7 +56127,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220528": {
   "id": 220528,
@@ -55959,7 +56138,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T12:00:00Z",
+  "horario": "2026-11-15T12:15:00Z",
   "j1": {
    "id": 179,
    "nombre": "Hugo Grenier",
@@ -55975,7 +56154,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220529": {
   "id": 220529,
@@ -55986,7 +56165,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T13:30:00Z",
+  "horario": "2026-11-15T13:45:00Z",
   "j1": {
    "id": 611,
    "nombre": "Matisse Bobichon",
@@ -56002,7 +56181,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220530": {
   "id": 220530,
@@ -56027,9 +56206,9 @@
    "ranking": 505
   },
   "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "estado": "cancelado",
+  "motivo": "cancelled",
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220531": {
   "id": 220531,
@@ -56040,7 +56219,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T15:00:00Z",
+  "horario": "2026-11-15T15:15:00Z",
   "j1": {
    "id": 2261,
    "nombre": "L. Couturier",
@@ -56056,7 +56235,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220532": {
   "id": 220532,
@@ -56067,7 +56246,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T15:00:00Z",
+  "horario": "2026-11-15T16:00:00Z",
   "j1": {
    "id": 407,
    "nombre": "Alejandro Moro Canas",
@@ -56083,7 +56262,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220533": {
   "id": 220533,
@@ -56094,7 +56273,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T16:30:00Z",
+  "horario": "2026-11-15T16:45:00Z",
   "j1": {
    "id": 205,
    "nombre": "F. C. Jianu",
@@ -56110,7 +56289,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220534": {
   "id": 220534,
@@ -56121,7 +56300,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T16:30:00Z",
+  "horario": "2026-11-15T17:35:00Z",
   "j1": {
    "id": 313,
    "nombre": "F. Moroni",
@@ -56137,7 +56316,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220535": {
   "id": 220535,
@@ -56164,7 +56343,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220536": {
   "id": 220536,
@@ -56191,7 +56370,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220537": {
   "id": 220537,
@@ -56218,7 +56397,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220538": {
   "id": 220538,
@@ -56245,7 +56424,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.198Z"
  },
  "220539": {
   "id": 220539,
@@ -56272,7 +56451,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220540": {
   "id": 220540,
@@ -56299,7 +56478,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220541": {
   "id": 220541,
@@ -56326,7 +56505,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220542": {
   "id": 220542,
@@ -56353,7 +56532,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220543": {
   "id": 220543,
@@ -56380,7 +56559,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220544": {
   "id": 220544,
@@ -56407,7 +56586,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220545": {
   "id": 220545,
@@ -56434,7 +56613,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220546": {
   "id": 220546,
@@ -56508,7 +56687,7 @@
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "motivo": null
  },
  "220547": {
@@ -56536,7 +56715,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220548": {
   "id": 220548,
@@ -56563,7 +56742,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220549": {
   "id": 220549,
@@ -56590,7 +56769,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220550": {
   "id": 220550,
@@ -56617,7 +56796,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220551": {
   "id": 220551,
@@ -56644,7 +56823,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220552": {
   "id": 220552,
@@ -56671,7 +56850,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220553": {
   "id": 220553,
@@ -56698,7 +56877,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220554": {
   "id": 220554,
@@ -56725,7 +56904,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220555": {
   "id": 220555,
@@ -56752,7 +56931,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220556": {
   "id": 220556,
@@ -56779,7 +56958,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220557": {
   "id": 220557,
@@ -56806,7 +56985,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220558": {
   "id": 220558,
@@ -56833,7 +57012,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220559": {
   "id": 220559,
@@ -56860,7 +57039,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220560": {
   "id": 220560,
@@ -56887,7 +57066,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220561": {
   "id": 220561,
@@ -56914,7 +57093,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220562": {
   "id": 220562,
@@ -56941,7 +57120,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220563": {
   "id": 220563,
@@ -56968,7 +57147,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220564": {
   "id": 220564,
@@ -56995,7 +57174,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220565": {
   "id": 220565,
@@ -57022,7 +57201,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220566": {
   "id": 220566,
@@ -57049,7 +57228,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220567": {
   "id": 220567,
@@ -57076,7 +57255,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220568": {
   "id": 220568,
@@ -57103,7 +57282,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.130Z"
+  "visto": "2026-11-15T11:45:26.098Z"
  },
  "220569": {
   "id": 220569,
@@ -57112,7 +57291,7 @@
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
-  "clasificacion": false,
+  "clasificacion": true,
   "genero": "men",
   "horario": "2026-11-15T23:00:00Z",
   "j1": {
@@ -57130,7 +57309,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
  },
  "220570": {
   "id": 220570,
@@ -57139,7 +57318,7 @@
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
-  "clasificacion": false,
+  "clasificacion": true,
   "genero": "men",
   "horario": "2026-11-15T23:00:00Z",
   "j1": {
@@ -57157,7 +57336,298 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z"
+  "visto": "2026-11-15T11:45:26.197Z"
+ },
+ "220571": {
+  "id": 220571,
+  "tour": "challenger",
+  "torneo": "Kobe",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-16T02:00:00Z",
+  "j1": {
+   "id": 950,
+   "nombre": "Constantin Kouzmine Bittoun",
+   "pais": "fra",
+   "ranking": 492
+  },
+  "j2": {
+   "id": 820,
+   "nombre": "T. Kumasaka",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-15T11:45:26.197Z"
+ },
+ "220572": {
+  "id": 220572,
+  "tour": "challenger",
+  "torneo": "Kobe",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-16T02:00:00Z",
+  "j1": {
+   "id": 463,
+   "nombre": "Koki Matsuda",
+   "pais": "jpn",
+   "ranking": 484
+  },
+  "j2": {
+   "id": 5548,
+   "nombre": "K. Watanabe",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-15T11:45:26.197Z"
+ },
+ "220573": {
+  "id": 220573,
+  "tour": "challenger",
+  "torneo": "Sydney",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-16T00:30:00Z",
+  "j1": {
+   "id": 1944,
+   "nombre": "Isaac Becroft",
+   "pais": "nzl",
+   "ranking": 521
+  },
+  "j2": {
+   "id": 8048,
+   "nombre": "H. Jones",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-15T11:45:26.197Z"
+ },
+ "220574": {
+  "id": 220574,
+  "tour": "challenger",
+  "torneo": "Sydney",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-16T00:30:00Z",
+  "j1": {
+   "id": 12572,
+   "nombre": "D. Pham",
+   "pais": null,
+   "ranking": null
+  },
+  "j2": {
+   "id": 633,
+   "nombre": "P. Marinkov",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-15T11:45:26.197Z"
+ },
+ "220575": {
+  "id": 220575,
+  "tour": "challenger",
+  "torneo": "Kobe",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-16T03:30:00Z",
+  "j1": {
+   "id": 75,
+   "nombre": "Masamichi Imamura",
+   "pais": "jpn",
+   "ranking": 439
+  },
+  "j2": {
+   "id": 459,
+   "nombre": "Y. Takahashi",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-15T11:45:26.197Z"
+ },
+ "220580": {
+  "id": 220580,
+  "tour": "challenger",
+  "torneo": "Sydney",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-16T00:30:00Z",
+  "j1": {
+   "id": 828,
+   "nombre": "K. Isomura",
+   "pais": null,
+   "ranking": null
+  },
+  "j2": {
+   "id": 897,
+   "nombre": "J. Jung",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-15T11:45:26.197Z"
+ },
+ "221021": {
+  "id": 221021,
+  "tour": "challenger",
+  "torneo": "Metz (France) - Qualification",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-15T14:35:00Z",
+  "j1": {
+   "id": 954,
+   "nombre": "M. Neuchrist",
+   "pais": null,
+   "ranking": null
+  },
+  "j2": {
+   "id": 993,
+   "nombre": "Antoine Ghibaudo",
+   "pais": "fra",
+   "ranking": 505
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-15T11:45:26.197Z"
+ },
+ "221022": {
+  "id": 221022,
+  "tour": "challenger",
+  "torneo": "Montevideo",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-15T13:00:00Z",
+  "j1": {
+   "id": 46160,
+   "nombre": "T. Estramil",
+   "pais": null,
+   "ranking": null
+  },
+  "j2": {
+   "id": 495,
+   "nombre": "Alvaro Guillen Meza",
+   "pais": "ecu",
+   "ranking": 445
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-15T11:45:26.197Z"
+ },
+ "221027": {
+  "id": 221027,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Metz (France) - Qualification",
+  "torneoId": "14868",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "cubierto": true,
+  "dobles": false,
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-15T11:45:00Z",
+  "j1": {
+   "id": 1047,
+   "nombre": "Stefan Latinovic",
+   "pais": "srb",
+   "ranking": 1383
+  },
+  "j2": {
+   "id": 2113,
+   "nombre": "Cyril Vandermeersch",
+   "pais": "fra",
+   "ranking": 512
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T11:42:40.449064Z",
+   "age_seconds": 165,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-15T11:42:40.275105Z",
+   "sequence": 2,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": true,
+   "timestamp": "2026-11-15T11:45:23.707747Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-15T11:45:26.197Z",
+  "motivo": null
  },
  "null": {
   "id": null,
@@ -57168,7 +57638,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-17T23:00:00Z",
+  "horario": "2026-11-17T02:00:00Z",
   "j1": {
    "id": null,
    "nombre": "Delaney/ Delaney",
@@ -57192,7 +57662,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-15T07:45:29.302Z",
+  "visto": "2026-11-15T11:45:26.197Z",
   "importante": false,
   "tier": null,
   "torneoClave": "challenger|Taipei"
