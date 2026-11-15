@@ -366,7 +366,8 @@ async function main() {
   // 4) Confirmar resultados finales con el presupuesto que sobra
   const corridasRestantes = forecastRuns(horasHastaReinicio, intervaloActualizacion);
   const calendariosRestantes = forecastCalendarCalls(horasHastaReinicio, C.calendarioCadaHoras, C.toursCalendario.length);
-  const fijasFuturas = corridasRestantes + calendariosRestantes;
+  const rankingsFuturos = debeActualizarRanking && estado.semanaJugadores !== semanaActual ? C.jugadoresPaginas : 0;
+  const fijasFuturas = corridasRestantes + calendariosRestantes + rankingsFuturos;
   const disponibles = C.presupuestoDiario - estado.usadas - C.reserva - fijasFuturas;
   const cupo = Math.max(0, Math.min(C.maxDetallesPorCorrida, disponibles));
   const pendientes = Object.values(partidos)
