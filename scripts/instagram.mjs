@@ -81,12 +81,21 @@ function hashtags(n) {
 const fotoNota = (n) => (n.imagen?.url && (n.imagen.ancho || 0) >= 1200 ? n.imagen : null);
 
 function textoPublicacion(n) {
-  const partes = [n.titulo, n.bajada];
-  if (n.declaracion?.texto) partes.push(`${n.declaracion.jugador}: «${n.declaracion.texto}»`);
-  partes.push('La nota completa, en el link de la bio.');
-  // El crédito de la foto va impreso en la imagen; el texto queda limpio.
-  partes.push(hashtags(n));
-  return partes.join('\n\n');
+  const r = n.resultado || {};
+  const ganador = r.ganador?.nombre || '';
+  const perdedor = r.perdedor?.nombre || '';
+  const marcador = (r.sets || []).map((set) => `${set[0]}-${set[1]}`).join(' · ');
+  const ronda = String(r.ronda || '').toUpperCase();
+  const pregunta = ronda === 'SF' && /Finals/i.test(`${n.torneo} ${n.categoria}`)
+    ? '¿Quién se queda con el título?'
+    : '¿Qué te pareció este resultado?';
+  return [
+    `${n.titulo}.`,
+    marcador ? `Marcador: ${marcador}.` : n.bajada,
+    pregunta,
+    'Más información en atodotenis.vercel.app.',
+    hashtags(n),
+  ].filter(Boolean).join('\\n\\n');
 }
 
 function creditoJugador(nombre) {
@@ -150,7 +159,7 @@ function html(n, fotos) {
  <div class="divider"></div>
  <div class="brand"><span class="event">${esc(evento.toUpperCase())}</span><span>A Todo <b>Tenis</b></span></div>
  <div class="heroTitle">${esc(titularResultado(n))}</div>
- <div class="names"><div class="name">${esc(ganador)}<small>GANADOR/A</small></div><div class="name">${esc(perdedor)}<small>FINALISTA / RIVAL</small></div></div>
+ <div class="names"><div class="name">${esc(ganador)}<small>GANADOR/A</small></div><div class="name">${esc(perdedor)}<small>RIVAL</small></div></div>
 </div>
 <div class="bottom">
  <div class="eyebrow" style="text-align:center">MARCADOR FINAL</div>
