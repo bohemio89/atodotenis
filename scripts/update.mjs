@@ -198,9 +198,63 @@ function prioridad(m) {
 
 // ---------- Corrida ----------
 async function main() {
-  // GitHub corre esta tarea cada 15 minutos (porque a veces saltea corridas); la API se consulta como mucho una vez por hora
+  // La actualización completa se limita a una vez cada 50 minutos, pero no se debe
+  // dejar de vigilar partidos en directo: si no, un partido que termina entre corridas
+  // queda como "en_vivo" y el generador de notas nunca lo recibe como finalizado.
   if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < 50 && !process.env.FORZAR) {
-    log('Última consulta hace menos de 50 minutos: no se consulta la API en esta corrida.');
+    const ahoraMs = ahora.getTime();
+    const hayPartidosEnVentana = Object.values(partidos).some((p) => {
+      const inicio = new Date(p.horario || '').getTime();
+      return p.estado === 'en_vivo' || p.estado === 'por_confirmar' ||
+        (p.estado === 'programado' && Number.isFinite(inicio) &&
+          inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000);
+    });
+    const ultimaVigilancia = estado.ultimaConsultaEnVivo ? new Date(estado.ultimaConsultaEnVivo).getTime() : 0;
+    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 12 * 60000;
+    const hayPresupuesto = estado.usadas < C.presupuestoDiario - C.reserva - 1;
+    const apiEnPausa = estado.pausaHasta && new Date(estado.pausaHasta) > ahora;
+
+    if (tocaVigilar && hayPresupuesto && !apiEnPausa) {
+      log('Actualización completa reciente: se ejecuta vigilancia de partidos en directo.');
+      const enVivoIds = new Set();
+      const vivo = await api('matches?status=live&limit=200');
+      for (const m of vivo.data || []) {
+        if (!tourBase(m.tour)) continue;
+        partidos[m.id] = desdeMatch(m);
+        enVivoIds.add(m.id);
+      }
+      for (const p of Object.values(partidos)) {
+        if (p.estado === 'en_vivo' && !enVivoIds.has(p.id)) p.estado = 'por_confirmar';
+      }
+
+      // Los partidos que desaparecieron del listado en vivo se confirman individualmente.
+      // Se procesan de a pocos para respetar el presupuesto diario; los restantes esperan
+      // la próxima vigilancia de 15 minutos.
+      const pendientes = Object.values(partidos)
+        .filter((p) => p.estado === 'por_confirmar' && !p.confirmado && p.horario &&
+          ahoraMs - new Date(p.horario).getTime() <= 6 * 3600e3)
+        .sort((a, b) => prioridad(b) - prioridad(a) || String(b.horario).localeCompare(String(a.horario)));
+      const cupoVigilancia = Math.max(0, Math.min(2, C.maxDetallesPorCorrida,
+        C.presupuestoDiario - C.reserva - estado.usadas - 1));
+      let confirmadosVigilancia = 0;
+      for (const p of pendientes.slice(0, cupoVigilancia)) {
+        const m = await api(`matches/${p.id}`);
+        partidos[p.id] = desdeMatch(m);
+        if (m.status === 'live') partidos[p.id].estado = 'en_vivo';
+        confirmadosVigilancia++;
+      }
+
+      estado.ultimaConsultaEnVivo = ahora.toISOString();
+      guardarJSON('data/partidos.json', partidos);
+      guardarJSON('data/estado.json', estado);
+      log(`Vigilancia lista: ${enVivoIds.size} en vivo, ${confirmadosVigilancia} resultados confirmados, ${pendientes.length} pendientes`);
+    } else {
+      log(apiEnPausa
+        ? `API en pausa hasta ${estado.pausaHasta}: se conserva la última información`
+        : hayPartidosEnVentana && !hayPresupuesto
+          ? 'Vigilancia omitida para conservar el presupuesto diario de la API.'
+          : 'Sin partidos que requieran vigilancia; se mantiene el límite de una actualización completa por hora.');
+    }
     return;
   }
   if (estado.pausaHasta && new Date(estado.pausaHasta) > ahora && !process.env.FORZAR) {
@@ -212,6 +266,7 @@ async function main() {
   // 1) En vivo (todas las giras en una consulta)
   const enVivoIds = new Set();
   const vivo = await api('matches?status=live&limit=200');
+  estado.ultimaConsultaEnVivo = ahora.toISOString();
   for (const m of vivo.data || []) {
     if (!tourBase(m.tour)) continue;
     partidos[m.id] = desdeMatch(m); enVivoIds.add(m.id);
