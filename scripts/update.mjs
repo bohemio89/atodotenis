@@ -262,23 +262,35 @@ async function main() {
       (p.estado === 'programado' && Number.isFinite(inicio) &&
         inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000);
   });
-  const intervaloActualizacion = hayPartidosEnVentana ? 30 : 60;
+  // Durante el cierre de temporada, ATP Finals y WTA Finals tienen prioridad de actualización.
+  // Se consideran partidos en juego, pendientes de confirmar y programados dentro de la ventana.
+  const hayFinalesEnVentana = Object.values(partidos).some((p) => {
+    const torneo = (p.torneo || '').toLowerCase();
+    const inicio = new Date(p.horario || '').getTime();
+    return torneo.includes('finals') &&
+      (p.estado === 'en_vivo' || p.estado === 'por_confirmar' ||
+        (p.estado === 'programado' && Number.isFinite(inicio) &&
+          inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 4 * 3600e3));
+  });
+  const intervaloActualizacion = hayFinalesEnVentana ? 15 : hayPartidosEnVentana ? 30 : 60;
+  const reservaAPI = hayFinalesEnVentana ? 2 : C.reserva;
   const debeActualizarRanking = ventanaRanking && estado.semanaJugadores !== semanaActual;
   // No considerar el ranking actualizado por una sincronización diaria anterior
   // al lunes 18:00 UTC: la marca semanal solo se escribe tras la consulta programada.
   if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < intervaloActualizacion && !process.env.FORZAR) {
     const ultimaVigilancia = estado.ultimaConsultaEnVivo ? new Date(estado.ultimaConsultaEnVivo).getTime() : 0;
-    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 30 * 60000;
+    const intervaloVigilancia = hayFinalesEnVentana ? 15 : 30;
+    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= intervaloVigilancia * 60000;
     // Reservar primero las consultas de las próximas actualizaciones completas y calendarios.
     const corridasRestantesVigilancia = forecastRuns(horasHastaReinicio, intervaloActualizacion);
     const calendariosRestantesVigilancia = forecastCalendarCalls(horasHastaReinicio, C.calendarioCadaHoras, C.toursCalendario.length);
     const reservaFuturaVigilancia = corridasRestantesVigilancia + calendariosRestantesVigilancia + (debeActualizarRanking ? C.jugadoresPaginas : 0);
-    const presupuestoVigilancia = C.presupuestoDiario - C.reserva - estado.usadas - reservaFuturaVigilancia;
+    const presupuestoVigilancia = C.presupuestoDiario - reservaAPI - estado.usadas - reservaFuturaVigilancia;
     const hayPresupuesto = presupuestoVigilancia > 0;
     const apiEnPausa = estado.pausaHasta && new Date(estado.pausaHasta) > ahora;
 
     if (tocaVigilar && hayPresupuesto && !apiEnPausa) {
-      log('Actualización completa reciente: se ejecuta vigilancia de partidos en directo.');
+      log(hayFinalesEnVentana ? 'Prioridad ATP/WTA Finals: se ejecuta vigilancia de partidos en directo.' : 'Actualización completa reciente: se ejecuta vigilancia de partidos en directo.');
       const enVivoIds = new Set();
       const vivo = await api('matches?status=live&limit=200');
       for (const m of vivo.data || []) {
@@ -314,7 +326,7 @@ async function main() {
       log(apiEnPausa
         ? `API en pausa hasta ${estado.pausaHasta}: se conserva la última información`
         : hayPartidosEnVentana && !hayPresupuesto
-          ? 'Vigilancia omitida para conservar el presupuesto diario de la API.'
+          ? (hayFinalesEnVentana ? 'Vigilancia de Finals omitida: no hay margen seguro de consultas.' : 'Vigilancia omitida para conservar el presupuesto diario de la API.')
           : 'Sin partidos que requieran vigilancia; se mantiene el límite de una actualización completa por hora.');
     }
     return;
