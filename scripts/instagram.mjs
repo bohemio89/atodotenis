@@ -115,19 +115,34 @@ function titularResultado(n) {
   return 'GRAN VICTORIA';
 }
 
+function temaTorneo(nombre, esWTA) {
+  const t = String(nombre || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const temas = [
+    [/wta finals/, { fondo:'#17072D', panel:'#2A1048', primario:'#8B45D6', brillo:'#C17BFF', acento:'#D9FF42' }],
+    [/atp finals|nitto/, { fondo:'#06152E', panel:'#10294B', primario:'#087BFF', brillo:'#39B9FF', acento:'#D9FF42' }],
+    [/indian wells/, { fondo:'#24103B', panel:'#3B1D5A', primario:'#8F4BCB', brillo:'#F4A14D', acento:'#D9FF42' }],
+    [/roland garros|french open/, { fondo:'#291009', panel:'#4A2117', primario:'#D9572B', brillo:'#FF9C53', acento:'#F8E4BD' }],
+    [/wimbledon/, { fondo:'#071F18', panel:'#123D2B', primario:'#6C3D91', brillo:'#B58BDB', acento:'#E1EBAA' }],
+    [/us open/, { fondo:'#07152D', panel:'#142A4A', primario:'#D9364B', brillo:'#FF7180', acento:'#F4D36B' }],
+    [/australian open/, { fondo:'#061A43', panel:'#0B3470', primario:'#009DD8', brillo:'#4DEBFF', acento:'#D9FF42' }],
+    [/miami open/, { fondo:'#062B35', panel:'#07505B', primario:'#00AFA5', brillo:'#FF7A78', acento:'#F8E36A' }]
+  ];
+  const match = temas.find(([rx]) => rx.test(t));
+  if (match) return match[1];
+  return esWTA ? { fondo:'#17072D', panel:'#2A1048', primario:'#8B45D6', brillo:'#C17BFF', acento:'#D9FF42' }
+    : { fondo:'#06152E', panel:'#10294B', primario:'#087BFF', brillo:'#39B9FF', acento:'#D9FF42' };
+}
+
 function html(n, fotos) {
   const r = n.resultado || {};
   const sets = Array.isArray(r.sets) ? r.sets : [];
   const ganador = r.ganador?.nombre || '';
   const perdedor = r.perdedor?.nombre || '';
   const esWTA = /WTA/i.test(`${n.categoria || ''} ${n.torneo || ''}`);
-  const tema = esWTA
-    ? { fondo: '#160A2B', panel: '#24113F', primario: '#8B45D6', brillo: '#C17BFF', acento: '#D7FF3F' }
-    : { fondo: '#06162F', panel: '#0C2446', primario: '#087BFF', brillo: '#27B9FF', acento: '#D7FF3F' };
   const evento = n.torneo || n.categoria || 'TENIS';
+  const tema = temaTorneo(evento, esWTA);
   const credito = `Foto: ${creditoJugador(ganador)}`;
   const filas = sets.map((set) => `<span>${esc(set[0])}-${esc(set[1])}</span>`).join('');
-  const etiqueta = esWTA ? 'GANADORA' : 'GANADOR';
   const titulo = titularResultado(n);
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:Inter;font-weight:400;src:url(file://${path.join(ROOT, 'node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2')})}
@@ -137,14 +152,13 @@ function html(n, fotos) {
 *{box-sizing:border-box}body{margin:0}
 #p{width:1080px;height:1350px;position:relative;overflow:hidden;background:${tema.fondo};color:#fff;font-family:Inter}
 .hero{position:absolute;inset:0 0 auto;height:940px;background-image:linear-gradient(180deg,rgba(4,7,18,.15) 0%,rgba(4,7,18,.02) 38%,${tema.fondo} 100%),linear-gradient(115deg,${tema.primario}44,transparent 52%),url('${fotos.ganador}');background-size:cover;background-position:${esc(focoJugador(ganador))};}
-.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,${tema.fondo}55,transparent 55%);mix-blend-mode:multiply}
+.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(115deg,${tema.fondo}66 0%,transparent 60%);mix-blend-mode:multiply}.hero:after{content:'';position:absolute;right:-160px;top:210px;width:440px;height:440px;border:28px solid ${tema.primario}88;border-radius:50%;box-shadow:0 0 0 24px ${tema.brillo}22,0 0 70px ${tema.primario}66}
 .brand{position:absolute;top:52px;left:58px;right:58px;display:flex;justify-content:space-between;align-items:center;z-index:5;font:900 italic 38px Montserrat;text-shadow:0 2px 14px #000}
 .brand b{color:${tema.acento}}.event{font:800 24px Montserrat;letter-spacing:.08em;background:${tema.primario};color:#fff;padding:12px 18px;border-radius:8px;box-shadow:0 0 28px ${tema.brillo}88}
-.heroTitle{position:absolute;z-index:4;left:58px;right:58px;bottom:110px;font:900 italic 100px/.9 Montserrat;letter-spacing:-.05em;text-shadow:0 4px 26px rgba(0,0,0,.65)}
+.heroTitle{position:absolute;z-index:4;left:58px;right:58px;bottom:145px;font:900 italic 112px/.88 Montserrat;letter-spacing:-.055em;text-shadow:0 5px 30px rgba(0,0,0,.82);max-width:900px}
 .heroTitle span{display:block;color:${tema.acento};font-size:48px;letter-spacing:.08em;margin-top:20px}
-.winner{position:absolute;z-index:4;left:58px;right:58px;bottom:40px;font:900 38px Montserrat;text-shadow:0 3px 18px #000}
-.winner small{display:block;font:800 18px Inter;letter-spacing:.16em;color:${tema.acento};margin-top:8px}
-.bottom{position:absolute;left:0;right:0;bottom:0;height:430px;background:linear-gradient(180deg,${tema.panel},${tema.fondo});padding:34px 62px 28px;border-top:5px solid ${tema.primario}}
+.winner{position:absolute;z-index:4;left:58px;right:58px;bottom:48px;font:900 44px Montserrat;text-shadow:0 3px 22px #000;color:${tema.acento}
+.opponent{position:absolute;z-index:5;right:62px;bottom:28px;width:170px;height:220px;border:5px solid ${tema.acento};border-radius:14px;background-size:cover;background-position:center 18%;box-shadow:0 10px 30px #000b}.bottom{position:absolute;left:0;right:0;bottom:0;height:430px;background:linear-gradient(180deg,${tema.panel},${tema.fondo});padding:34px 62px 28px;border-top:5px solid ${tema.primario}}
 .eyebrow{font:800 24px Montserrat;letter-spacing:.12em;color:${tema.acento};text-align:center}
 .score{display:flex;align-items:center;justify-content:center;gap:16px;margin:22px 0 20px;font:700 68px RC}
 .score span{background:#ffffff12;border:1px solid ${tema.brillo}88;border-radius:12px;padding:8px 20px;min-width:112px;text-align:center}
@@ -156,8 +170,9 @@ function html(n, fotos) {
 <div class="hero">
  <div class="brand"><span class="event">${esc(evento.toUpperCase())}</span><span>A Todo <b>Tenis</b></span></div>
  <div class="heroTitle">${esc(titulo)}<span>${esc(esWTA ? 'WTA · TENIS FEMENINO' : 'ATP · TENIS MASCULINO')}</span></div>
- <div class="winner">${esc(ganador)}<small>${etiqueta}</small></div>
+ <div class="winner">${esc(ganador)}</div>
 </div>
+${fotos.perdedor ? `<div class="opponent" style="background-image:url('${fotos.perdedor}')"></div>` : ''}
 <div class="bottom">
  <div class="eyebrow">MARCADOR FINAL</div>
  <div class="score">${filas}</div>
@@ -184,6 +199,7 @@ async function preparar() {
   const claveFoto = slug(ganador);
   if (!fotosEditoriales[claveFoto]?.url) { log('Se posterga Instagram: falta una foto editorial seleccionada del ganador:', ganador); return; }
   const fotoG = await fotoJugador(ganador, 1280);
+  const fotoP = await fotoJugador(perdedor, 500);
   const archivoFoto = path.join(ROOT, 'static/ig/fotos', `${claveFoto}-1280.jpg`);
   if (!fotoG || !fs.existsSync(archivoFoto) || fs.statSync(archivoFoto).size < 20000) { log('Se posterga Instagram: la foto del ganador no supera el control de calidad:', ganador); return; }
   const { chromium } = await import('playwright-core');
@@ -191,7 +207,7 @@ async function preparar() {
   try {
     const p = await navegador.newPage({ viewport: { width: 1080, height: 1350 } });
     const tmp = path.join(ROOT, 'node_modules', '.ig-tarjeta.html');
-    fs.writeFileSync(tmp, html(n, { ganador: fotoG }));
+    fs.writeFileSync(tmp, html(n, { ganador: fotoG, perdedor: fotoP }));
     await p.goto('file://' + tmp, { waitUntil: 'networkidle', timeout: 60000 });
     await p.evaluate(async () => { await Promise.all([...document.fonts].map((f) => f.load().catch(() => null))); await document.fonts.ready; });
     const rotas = await p.evaluate(async () => {
