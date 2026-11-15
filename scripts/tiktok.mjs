@@ -50,39 +50,38 @@ for (const n of notas) {
   if (!conseguirFfmpeg()) { log('TikTok: no hay ffmpeg, se reintenta en la próxima corrida'); break; }
   const r = n.resultado, g = r.ganador.nombre, p = r.perdedor?.nombre || '';
   // Foto revisada del ganador, guardada en grande. Sin foto buena, no hay video.
-  if (!(await fotoJugador(g, 1280))) { log('TikTok: sin foto revisada de', g); continue; }
+  const [fotoG, fotoP] = await Promise.all([fotoJugador(g, 1280), fotoJugador(p, 1280)]);
+  if (!fotoG || !fotoP) { log('TikTok: se posterga, falta foto de calidad de ambos protagonistas:', g, '/', p); continue; }
   const foto = `static/ig/fotos/${slug(g)}-1280.jpg`;
-  if (!fs.existsSync(path.join(ROOT, foto))) { log('TikTok: falta la foto grande de', g); continue; }
+  const fotoRival = `static/ig/fotos/${slug(p)}-1280.jpg`;
+  if (!fs.existsSync(path.join(ROOT, foto)) || !fs.existsSync(path.join(ROOT, fotoRival))) { log('TikTok: faltan retratos grandes de ambos jugadores'); continue; }
   const sets = r.sets.map((s) => `${s[0]}-${s[1]}`).join('  ');
   const torneo = String(n.torneo || n.categoria || '').toUpperCase();
   const frase = n.declaracion?.texto && n.declaracion.texto.length < 130 ? `«${n.declaracion.texto}»` : n.bajada;
-  // Gancho de los primeros 2 segundos: sale de los datos del partido (nunca inventado) y no revela el marcador
+  // Gancho editorial basado en la ronda, sin exagerar el marcador ni etiquetar como paliza un 6-2, 6-1.
   const ag = ape(g), ap = ape(p), rg = r.ganador.ranking, rp = r.perdedor?.ranking;
-  const s0 = r.sets[0] || [0, 0];
-  let gancho, sub;
-  if (rg && rp && rg - rp >= 5) { gancho = '¡Batacazo!'; sub = `La N° ${rg} contra la N° ${rp}`; }
-  else if (s0[0] < s0[1] && r.sets.length >= 3) { gancho = 'Lo dio vuelta'; sub = `${ag} perdió el primer set ante ${ap}`; }
-  else if (r.sets.some((x) => x[0] >= 6 && x[1] <= 1)) { gancho = '¡Paliza!'; sub = `${ag} contra ${ap}`; }
-  else if (r.sets.some((x) => (x[0] === 7 && x[1] === 6) || (x[0] === 6 && x[1] === 7))) { gancho = 'Al tiebreak'; sub = `${ag} contra ${ap}`; }
-  else { gancho = `${ag} vs ${ap}`; sub = '¿Quién ganó?'; }
-  if (/^La N°/.test(sub) && !/WTA/i.test(`${n.categoria} ${n.torneo}`)) sub = sub.replace(/La N°/g, 'El N°').replace('contra la', 'contra el');
+  const ronda = String(r.ronda || '').toUpperCase();
+  const esWTA = /WTA/i.test(`${n.categoria} ${n.torneo}`);
   const esFinals = /Finals/i.test(`${n.torneo} ${n.categoria}`);
-  const pregunta = esFinals ? '¿Quién gana el título?' : '¿Quién gana el torneo?';
+  const genero = esWTA ? 'CAMPEONA' : 'CAMPEÓN';
+  const gancho = ronda === 'SF' ? '¡A LA FINAL!' : ronda === 'F' ? `¡${genero}!` : '¡GRAN VICTORIA!';
+  const sub = rg && rp ? `N° ${rg} vs N° ${rp}` : `${ag} superó a ${ap}`;
+  const pregunta = ronda === 'SF' && esFinals ? '¿Quién se queda con el título?' : '¿Qué te pareció este resultado?';
   const guion = { escenas: [
-    { foto, foco: focoJugador(g), segundos: 1.8, html: `<div style="position:absolute;inset:0;background:linear-gradient(rgba(18,22,27,.55),rgba(18,22,27,.15) 30%,rgba(18,22,27,.75) 60%,rgba(18,22,27,.95))"></div>${marca}<div class="chip" style="top:224px">${esc(torneo)}</div>
-      <div style="position:absolute;left:72px;right:150px;bottom:700px"><div style="font:900 150px/0.92 Montserrat;letter-spacing:-.04em" class="lima">${esc(gancho)}</div>
-      <div style="font:800 58px/1.1 Montserrat;margin-top:26px">${esc(sub)}</div></div>` },
-    { foto, foco: focoJugador(g), segundos: 2.8, html: `${G}${marca}<div class="chip" style="top:224px">RESULTADO · ${esc(torneo)}</div>
-      <div style="position:absolute;left:72px;right:150px;bottom:640px"><div style="font:800 120px/0.95 Montserrat;letter-spacing:-.03em">${esc(g.split(' ').slice(0, -1).join(' '))}<br>${esc(ag)}</div>
-      <div style="font-size:42px;margin-top:22px" class="gris">le ganó a ${esc(p)}</div>
-      <div style="font:700 104px RC;margin-top:14px" class="lima">${esc(sets)}</div></div>` },
-    { foto: null, segundos: 3.2, html: `${marca}<div style="position:absolute;left:72px;right:150px;top:470px">
-      <div style="font:800 34px Montserrat;letter-spacing:.06em" class="lima">${esc(ape(n.declaracion?.texto && n.declaracion.texto.length < 130 ? n.declaracion.jugador || g : g).toUpperCase())}</div>
-      <p style="margin:24px 0 0;font:800 64px/1.15 Montserrat">${esc(frase || n.titulo)}</p></div>` },
-    { foto: null, segundos: 2, html: `${marca}<div style="position:absolute;left:72px;right:150px;top:560px">
-      <div style="font:800 120px/0.95 Montserrat;letter-spacing:-.03em">${esc(pregunta.replace(/^¿/, '¿').split(' ').slice(0, 2).join(' '))}<br><span class="lima">${esc(pregunta.split(' ').slice(2).join(' '))}</span></div>
-      <div style="font-size:46px;margin-top:40px">Dejalo en los comentarios</div></div>
-      <div style="position:absolute;left:72px;right:150px;bottom:560px;font-size:24px;color:#6B7785">Foto: Wikimedia Commons, licencia libre. Autor en atodotenis.vercel.app/creditos</div>` },
+    { foto, foco: focoJugador(g), segundos: 2.2, html: `<div style="position:absolute;inset:0;background:linear-gradient(rgba(18,22,27,.18),rgba(18,22,27,.82))"></div>${marca}<div class="chip" style="top:224px">${esc(torneo)}</div>
+      <div style="position:absolute;left:72px;right:120px;bottom:620px"><div style="font:900 132px/.94 Montserrat;letter-spacing:-.04em" class="lima">${esc(gancho)}</div>
+      <div style="font:800 54px/1.1 Montserrat;margin-top:26px">${esc(ag)} avanzó tras vencer a ${esc(ap)}</div></div>` },
+    { foto: fotoRival, foco: focoJugador(p), segundos: 2.4, html: `<div style="position:absolute;inset:0;background:linear-gradient(rgba(18,22,27,.22),rgba(18,22,27,.88))"></div>${marca}<div class="chip" style="top:224px">EL PARTIDO</div>
+      <div style="position:absolute;left:72px;right:120px;bottom:620px"><div style="font:800 78px/.98 Montserrat">${esc(ap)}</div>
+      <div style="font:800 48px/1.1 Montserrat;margin-top:24px" class="gris">Fue el rival de ${esc(ag)}</div></div>` },
+    { foto, foco: focoJugador(g), segundos: 3.2, html: `${G}${marca}<div class="chip" style="top:224px">MARCADOR FINAL · ${esc(torneo)}</div>
+      <div style="position:absolute;left:72px;right:120px;bottom:620px"><div style="font:800 112px/.95 Montserrat">${esc(g)}</div>
+      <div style="font-size:42px;margin-top:22px" class="gris">superó a ${esc(p)}</div>
+      <div style="font:700 112px RC;margin-top:24px" class="lima">${esc(sets)}</div></div>` },
+    { foto: null, segundos: 3.2, html: `${marca}<div style="position:absolute;left:72px;right:120px;top:560px">
+      <div style="font:900 108px/.98 Montserrat;letter-spacing:-.04em">${esc(pregunta)}</div>
+      <div style="font-size:48px;margin-top:46px" class="lima">Te leemos en comentarios</div></div>
+      <div style="position:absolute;left:72px;right:120px;bottom:560px;font-size:24px;color:#6B7785">A Todo Tenis · ${esc(torneo)}</div>` },
   ] };
   const guionArch = path.join(ROOT, 'node_modules', '.tiktok-guion.json');
   fs.writeFileSync(guionArch, JSON.stringify(guion));
@@ -92,7 +91,7 @@ for (const n of notas) {
   } catch { log('TikTok: no se pudo armar el video de', n.slug); continue; }
   const wta = /WTA/i.test(`${n.categoria} ${n.torneo}`);
   const tags = ['#tenis', '#tennis', esFinals ? (wta ? '#WTAFinals' : '#ATPFinals') : (wta ? '#WTA' : '#ATP'), '#' + ape(g).normalize('NFD').replace(/[^A-Za-z]/g, ''), '#tenisentiktok'];
-  estado.videos.unshift({ slug: n.slug, video, fecha: new Date().toISOString(), texto: `${gancho.replace(/[¡!]/g, '')}: ${n.titulo.replace(/\b(en|de)l? el (WTA|ATP) Finals/g, (m, a, b) => `${a === 'en' ? 'en' : 'de'} las ${b} Finals`).replace(/\bdel (WTA|ATP) Finals/g, 'de las $1 Finals')} 🎾 ${sets}. ${pregunta}\n\n${tags.join(' ')}` });
+  estado.videos.unshift({ slug: n.slug, video, fecha: new Date().toISOString(), texto: `${gancho.replace(/[¡!]/g, '')} 🎾 ${n.titulo}. Marcador: ${sets}. ${pregunta}\n\n${tags.join(' ')}` });
   deHoy++;
   log('TikTok: video listo', video);
 }
