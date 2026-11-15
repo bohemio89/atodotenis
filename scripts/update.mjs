@@ -18,8 +18,38 @@ const horasHastaReinicio = (() => {
 })();
 
 const estado = leerJSON('data/estado.json', {});
+function semanaISO(fecha) {
+  const d = new Date(Date.UTC(fecha.getUTCFullYear(), fecha.getUTCMonth(), fecha.getUTCDate()));
+  d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+  const inicio = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  const semana = Math.ceil((((d - inicio) / 86400000) + 1) / 7);
+  return `${d.getUTCFullYear()}-W${String(semana).padStart(2, '0')}`;
+}
 if (estado.diaAPI !== diaAPI) {
   estado.diaAPI = diaAPI; estado.usadas = 0; estado.jugadoresHoy = false;
+}
+
+// GET /usage es gratuito y no consume cuota. Se usa para reconciliar el contador local.
+async function consultarUsoAPI() {
+  try {
+    const r = await fetch(`${BASE}/usage`, {
+      headers: { Authorization: `Bearer ${KEY}` },
+      signal: AbortSignal.timeout(15000)
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const uso = await r.json();
+    const llamadas = Number(uso.today?.calls);
+    if (Number.isFinite(llamadas)) estado.usadas = Math.max(estado.usadas || 0, llamadas);
+    estado.usoAPI = {
+      llamadas: Number.isFinite(llamadas) ? llamadas : null,
+      errores: Number.isFinite(Number(uso.today?.errors)) ? Number(uso.today.errors) : null,
+      restantes: Number.isFinite(Number(uso.today?.remaining_day)) ? Number(uso.today.remaining_day) : null,
+      consultado: uso.as_of || new Date().toISOString()
+    };
+    log(`Uso real API: ${estado.usoAPI.llamadas ?? 's/d'} llamadas, ${estado.usoAPI.restantes ?? 's/d'} disponibles; contador conservador ${estado.usadas}/${C.presupuestoDiario}`);
+  } catch (e) {
+    log('No se pudo consultar /usage; se mantiene el contador local:', e.message);
+  }
 }
 
 let esperoUnaVez = false;
@@ -198,22 +228,24 @@ function prioridad(m) {
 
 // ---------- Corrida ----------
 async function main() {
-  // La actualización completa se limita a una vez cada 50 minutos, pero no se debe
-  // dejar de vigilar partidos en directo: si no, un partido que termina entre corridas
-  // queda como "en_vivo" y el generador de notas nunca lo recibe como finalizado.
-  if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < 50 && !process.env.FORZAR) {
-    const ahoraMs = ahora.getTime();
-    const hayPartidosEnVentana = Object.values(partidos).some((p) => {
-      const inicio = new Date(p.horario || '').getTime();
-      return p.estado === 'en_vivo' || p.estado === 'por_confirmar' ||
-        (p.estado === 'programado' && Number.isFinite(inicio) &&
-          inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000);
-    });
+  await consultarUsoAPI();
+  guardarJSON('data/estado.json', estado);
+  const ahoraMs = ahora.getTime();
+  const semanaActual = semanaISO(ahora);
+  const hayPartidosEnVentana = Object.values(partidos).some((p) => {
+    const inicio = new Date(p.horario || '').getTime();
+    return p.estado === 'en_vivo' || p.estado === 'por_confirmar' ||
+      (p.estado === 'programado' && Number.isFinite(inicio) &&
+        inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000);
+  });
+  const intervaloActualizacion = hayPartidosEnVentana ? 30 : 60;
+  // Con partidos activos se consulta cada 30 min; sin actividad, cada 60 min.
+  if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < intervaloActualizacion && !process.env.FORZAR) {
     const ultimaVigilancia = estado.ultimaConsultaEnVivo ? new Date(estado.ultimaConsultaEnVivo).getTime() : 0;
-    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 20 * 60000;
-    // Reservar primero las consultas de las próximas actualizaciones completas y calendarios.
-    const corridasRestantesVigilancia = Math.max(0, horasHastaReinicio);
-    const calendariosRestantesVigilancia = Math.floor(corridasRestantesVigilancia / C.calendarioCadaHoras) * C.toursCalendario.length;
+    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 30 * 60000;
+    // Reservar primero las consultas futuras según la frecuencia dinámica y el calendario.
+    const corridasRestantesVigilancia = Math.ceil(horasHastaReinicio * 60 / intervaloActualizacion);
+    const calendariosRestantesVigilancia = Math.floor(horasHastaReinicio / C.calendarioCadaHoras) * C.toursCalendario.length;
     const reservaFuturaVigilancia = corridasRestantesVigilancia + calendariosRestantesVigilancia;
     const presupuestoVigilancia = C.presupuestoDiario - C.reserva - estado.usadas - reservaFuturaVigilancia;
     const hayPresupuesto = presupuestoVigilancia > 0;
@@ -292,8 +324,8 @@ async function main() {
     estado.calendario = ahora.toISOString();
   }
 
-  // 3) Jugadores y ranking, una vez por día API
-  if (!estado.jugadoresHoy) {
+  // 3) Jugadores y rankings: una vez por semana, después del cierre semanal de torneos
+  if (estado.semanaJugadores !== semanaActual) {
     const lista = {};
     for (let i = 0; i < C.jugadoresPaginas; i++) {
       const r = await api(`players?limit=200&offset=${i * 200}`);
@@ -310,6 +342,7 @@ async function main() {
     jugadores.lista = lista; jugadores.actualizado = ahora.toISOString();
     guardarJSON('data/jugadores.json', jugadores);
     estado.jugadoresHoy = true;
+    estado.semanaJugadores = semanaActual;
     // Completar país/ranking en partidos que vinieron del calendario
     for (const p of Object.values(partidos)) for (const k of ['j1', 'j2']) {
       const j = p[k] && lista[p[k].id];
@@ -319,8 +352,8 @@ async function main() {
   }
 
   // 4) Confirmar resultados finales con el presupuesto que sobra
-  const corridasRestantes = Math.max(0, horasHastaReinicio);
-  const calendariosRestantes = Math.floor(corridasRestantes / C.calendarioCadaHoras) * C.toursCalendario.length;
+  const corridasRestantes = Math.ceil(horasHastaReinicio * 60 / intervaloActualizacion);
+  const calendariosRestantes = Math.floor(horasHastaReinicio / C.calendarioCadaHoras) * C.toursCalendario.length;
   const fijasFuturas = corridasRestantes + calendariosRestantes;
   const disponibles = C.presupuestoDiario - estado.usadas - C.reserva - fijasFuturas;
   const cupo = Math.max(0, Math.min(C.maxDetallesPorCorrida, disponibles));
