@@ -8,7 +8,7 @@ import { execFileSync } from 'node:child_process';
 import { ROOT, leerJSON, log } from './lib/util.mjs';
 import { fotoJugador, focoJugador, esc, slug } from './lib/ig-render.mjs';
 
-const MAX_POR_DIA = 2, HORAS = 36, DIAS_GUARDAR = 10, IMPORTANCIA_MIN = 50;
+const MAX_POR_DIA = 2, HORAS = 36, DIAS_GUARDAR = 1, IMPORTANCIA_MIN = 50;
 const ESTADO = path.join(ROOT, 'data/tiktok.json');
 const estado = leerJSON('data/tiktok.json', { videos: [] });
 const hoy = new Date().toISOString().slice(0, 10);
