@@ -29,7 +29,7 @@ const notas = fs.readdirSync(path.join(ROOT, 'content/notas')).filter((f) => f.e
 
 let deHoy = estado.videos.filter((v) => v.fecha.slice(0, 10) === hoy).length;
 const G = '<div style="position:absolute;inset:0;background:linear-gradient(rgba(18,22,27,.5),rgba(18,22,27,0) 22%,rgba(18,22,27,0) 30%,rgba(18,22,27,.82) 50%,#12161B 68%)"></div>';
-const marca = '<div class="marca" style="top:230px;right:150px">A Todo <b>Tenis</b></div>';
+const marca = '<div class="marca" style="top:72px;right:120px">A Todo <b>Tenis</b></div>';
 const ape = (s) => String(s).trim().split(/\s+/).slice(-1)[0];
 
 // ffmpeg: el del sistema o, si no está (los servidores de GitHub ya no lo traen), ffmpeg-static, solo cuando hace falta
@@ -68,7 +68,7 @@ for (const n of notas) {
   const sub = rg && rp ? `N° ${rg} vs N° ${rp}` : `${ag} superó a ${ap}`;
   const pregunta = ronda === 'SF' && esFinals ? '¿Quién se queda con el título?' : '¿Qué te pareció este resultado?';
   const guion = { escenas: [
-    { foto, foco: focoJugador(g), segundos: 2.2, html: `<div style="position:absolute;inset:0;background:linear-gradient(rgba(18,22,27,.18),rgba(18,22,27,.82))"></div>${marca}<div class="chip" style="top:224px">${esc(torneo)}</div>
+    { foto, foco: focoJugador(g), segundos: 2.2, html: `<div style="position:absolute;inset:0;background:linear-gradient(rgba(18,22,27,.18),rgba(18,22,27,.82))"></div>${marca}<div class="chip" style="top:184px">${esc(torneo)}</div>
       <div style="position:absolute;left:72px;right:120px;bottom:620px"><div style="font:900 132px/.94 Montserrat;letter-spacing:-.04em" class="lima">${esc(gancho)}</div>
       <div style="font:800 54px/1.1 Montserrat;margin-top:26px">${esc(ag)} avanzó tras vencer a ${esc(ap)}</div></div>` },
     { foto: fotoRival, foco: focoJugador(p), segundos: 2.4, html: `<div style="position:absolute;inset:0;background:linear-gradient(rgba(18,22,27,.22),rgba(18,22,27,.88))"></div>${marca}<div class="chip" style="top:224px">EL PARTIDO</div>
