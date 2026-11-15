@@ -49040,7 +49040,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-15T01:45:00Z",
+  "horario": "2026-11-15T01:40:00Z",
   "j1": {
    "id": 1800,
    "nombre": "Kristina Mladenovic / Meiqi Guo",
@@ -49056,7 +49056,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T01:45:28.234Z",
+  "visto": "2026-11-15T02:45:24.795Z",
   "torneoClave": "wta|Finals - Riyadh",
   "tier": null,
   "importante": false,
@@ -49064,11 +49064,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T01:45:20.189605Z",
-   "age_seconds": 7,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-15T02:44:35.145313Z",
+   "age_seconds": 47,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -49076,34 +49076,36 @@
    },
    "games": [
     [
-     0
+     3,
+     4
     ],
     [
-     1
+     6,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "30",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-15T01:45:19.929096Z",
-   "sequence": 9,
-   "server": 1,
+   "received_at": "2026-11-15T02:44:34.753595Z",
+   "sequence": 90,
+   "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-15T01:45:20.189601Z",
+   "timestamp": "2026-11-15T02:45:11.779351Z",
    "puntos": [
-    "30",
+    "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -49393,7 +49395,7 @@
    "ranking": 1358
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-15T01:45:28.234Z",
   "tier": null,
@@ -49473,18 +49475,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T01:45:28.234Z",
+  "visto": "2026-11-15T02:45:24.795Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T01:45:07.761417Z",
-   "age_seconds": 20,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-15T02:44:42.170864Z",
+   "age_seconds": 40,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -49492,34 +49494,36 @@
    },
    "games": [
     [
-     4
+     6,
+     3
     ],
     [
+     4,
      3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
     "15",
     "0"
    ],
-   "received_at": "2026-11-15T01:45:07.608384Z",
-   "sequence": 48,
-   "server": 1,
+   "received_at": "2026-11-15T02:44:41.419493Z",
+   "sequence": 117,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-15T01:45:07.761409Z",
+   "timestamp": "2026-11-15T02:45:05.776733Z",
    "puntos": [
     "15",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -49547,7 +49551,7 @@
    "ranking": 1406
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-15T01:45:28.234Z",
   "tier": null,
@@ -49783,7 +49787,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T02:00:00Z",
+  "horario": "2026-11-15T02:10:00Z",
   "j1": {
    "id": 463,
    "nombre": "Koki Matsuda",
@@ -49792,16 +49796,63 @@
   },
   "j2": {
    "id": 2296,
-   "nombre": "S. Imai",
-   "pais": null,
-   "ranking": null
+   "nombre": "Shintaro Imai",
+   "pais": "jpn",
+   "ranking": 929
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T23:45:23.808Z",
+  "visto": "2026-11-15T02:45:24.795Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T02:45:16.812576Z",
+   "age_seconds": 6,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     5
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "15",
+    "0"
+   ],
+   "received_at": "2026-11-15T02:45:15.978571Z",
+   "sequence": 50,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-15T02:45:16.812568Z",
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220221": {
   "id": 220221,
@@ -49841,25 +49892,74 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T02:00:00Z",
+  "horario": "2026-11-15T02:15:00Z",
   "j1": {
-   "id": 14286,
-   "nombre": "M. Zhukov",
-   "pais": null,
-   "ranking": null
+   "id": 820,
+   "nombre": "Takuya Kumasaka",
+   "pais": "jpn",
+   "ranking": 668
   },
   "j2": {
-   "id": 820,
-   "nombre": "T. Kumasaka",
-   "pais": null,
-   "ranking": null
+   "id": 14286,
+   "nombre": "Maxim Zhukov",
+   "pais": "rus",
+   "ranking": 823
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T23:45:23.808Z",
+  "visto": "2026-11-15T02:45:24.795Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T02:43:39.676115Z",
+   "age_seconds": 103,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-15T02:43:39.454956Z",
+   "sequence": 43,
+   "server": 1,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-15T02:45:21.759855Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220223": {
   "id": 220223,
