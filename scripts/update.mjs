@@ -40,12 +40,14 @@ async function consultarUsoAPI() {
     const uso = await r.json();
     const llamadas = Number(uso.today?.calls);
     if (Number.isFinite(llamadas)) estado.usadas = Math.max(estado.usadas || 0, llamadas);
-    estado.usoAPI = {
+    const snapshot = {
       llamadas: Number.isFinite(llamadas) ? llamadas : null,
       errores: Number.isFinite(Number(uso.today?.errors)) ? Number(uso.today.errors) : null,
-      restantes: Number.isFinite(Number(uso.today?.remaining_day)) ? Number(uso.today.remaining_day) : null,
-      consultado: uso.as_of || new Date().toISOString()
+      restantes: Number.isFinite(Number(uso.today?.remaining_day)) ? Number(uso.today.remaining_day) : null
     };
+    // No guardar la hora de consulta: el workflow corre cada 15 min y eso generaría
+    // commits innecesarios aunque el consumo no haya cambiado.
+    if (JSON.stringify(snapshot) !== JSON.stringify(estado.usoAPI || null)) estado.usoAPI = snapshot;
     log(`Uso real API: ${estado.usoAPI.llamadas ?? 's/d'} llamadas, ${estado.usoAPI.restantes ?? 's/d'} disponibles; contador conservador ${estado.usadas}/${C.presupuestoDiario}`);
   } catch (e) {
     log('No se pudo consultar /usage; se mantiene el contador local:', e.message);
