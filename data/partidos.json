@@ -44952,7 +44952,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-15T13:00:00Z",
+  "horario": "2026-11-15T13:30:00Z",
   "j1": {
    "id": 6,
    "nombre": "Alexander Zverev",
@@ -44966,12 +44966,59 @@
    "ranking": 11
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T11:45:26.016Z",
+  "visto": "2026-11-15T13:45:24.383Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
-  "importante": true
+  "importante": true,
+  "torneoId": "2794",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T13:45:04.830054Z",
+   "age_seconds": 18,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "40",
+    "40"
+   ],
+   "received_at": "2026-11-15T13:45:04.157995Z",
+   "sequence": 29,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-15T13:45:17.204599Z",
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219775": {
   "id": 219775,
@@ -53414,30 +53461,78 @@
  },
  "220390": {
   "id": 220390,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Orleans",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Orleans - Final",
+  "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-15T13:30:00Z",
+  "horario": "2026-11-15T13:35:00Z",
   "j1": {
    "id": 5251,
-   "nombre": "Liutarevich/ Pieczonka",
+   "nombre": "Andrej Nedić / Ivan Liutarevich",
    "pais": null,
    "ranking": null
   },
   "j2": {
    "id": 13246,
-   "nombre": "Paul/ Vocel",
+   "nombre": "Jakub Paul / Matej Vocel",
    "pais": null,
    "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T11:45:26.197Z"
+  "visto": "2026-11-15T13:45:24.383Z",
+  "tier": null,
+  "torneoId": "2424",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T13:44:50.528902Z",
+   "age_seconds": 32,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 32,
+   "origin": "observed",
+   "points": [
+    "30",
+    "15"
+   ],
+   "received_at": "2026-11-15T13:44:34.316584Z",
+   "sequence": 4,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": false,
+   "timestamp": "2026-11-15T13:44:50.528901Z",
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220391": {
   "id": 220391,
@@ -54077,7 +54172,7 @@
    "ranking": 663
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-15T12:45:28.115Z",
   "tier": null,
@@ -54154,7 +54249,7 @@
    "ranking": null
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-15T12:45:28.115Z",
   "tier": null,
@@ -54233,14 +54328,14 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T12:45:28.115Z",
+  "visto": "2026-11-15T13:45:24.383Z",
   "tier": null,
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-15T12:37:24.542748Z",
-   "age_seconds": 483,
+   "age_seconds": 4078,
    "changing_sources_count": 0,
    "corroborated": false,
    "corroborated_age_seconds": null,
@@ -54260,7 +54355,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 112,
+   "observed_age_seconds": 120,
    "origin": "observed",
    "points": [
     "0",
@@ -54275,7 +54370,7 @@
    ],
    "sources_count": 0,
    "stale": true,
-   "timestamp": "2026-11-15T12:43:35.109193Z",
+   "timestamp": "2026-11-15T13:43:22.229388Z",
    "puntos": [
     "0",
     "0"
@@ -54294,23 +54389,71 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T13:10:00Z",
+  "horario": "2026-11-15T13:25:00Z",
   "j1": {
+   "id": 1210,
+   "nombre": "Iiro Vasa",
+   "pais": "fin",
+   "ranking": 927
+  },
+  "j2": {
    "id": 1259,
    "nombre": "Luka Mikrut",
    "pais": "cro",
    "ranking": 255
   },
-  "j2": {
-   "id": 1210,
-   "nombre": "I. Vasa",
-   "pais": null,
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T11:45:26.197Z"
+  "visto": "2026-11-15T13:45:24.383Z",
+  "tier": null,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T13:45:03.084042Z",
+   "age_seconds": 19,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "40",
+    "AD"
+   ],
+   "received_at": "2026-11-15T13:45:02.869218Z",
+   "sequence": 35,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-15T13:45:20.971525Z",
+   "puntos": [
+    "40",
+    "AD"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220414": {
   "id": 220414,
@@ -54321,7 +54464,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T14:00:00Z",
+  "horario": "2026-11-15T13:00:00Z",
   "j1": {
    "id": 396,
    "nombre": "Sumit Nagal",
@@ -54335,9 +54478,57 @@
    "ranking": 511
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T11:45:26.197Z"
+  "visto": "2026-11-15T13:45:24.383Z",
+  "tier": null,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T13:09:45.910352Z",
+   "age_seconds": 2137,
+   "changing_sources_count": 0,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-15T13:09:45.337141Z",
+   "sequence": 25,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": true,
+   "timestamp": "2026-11-15T13:45:17.187630Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220415": {
   "id": 220415,
@@ -54348,23 +54539,71 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T12:55:00Z",
+  "horario": "2026-11-15T13:50:00Z",
   "j1": {
-   "id": 2164,
-   "nombre": "J. Sperle",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 181,
    "nombre": "Moez Echargui",
    "pais": "tun",
    "ranking": 360
   },
+  "j2": {
+   "id": 2164,
+   "nombre": "John Sperle",
+   "pais": "ger",
+   "ranking": 660
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T11:45:26.197Z"
+  "visto": "2026-11-15T13:45:24.383Z",
+  "tier": null,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T13:41:58.508156Z",
+   "age_seconds": 204,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-15T13:41:58.224469Z",
+   "sequence": 2,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": true,
+   "timestamp": "2026-11-15T13:45:18.620911Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220416": {
   "id": 220416,
@@ -54456,7 +54695,7 @@
   "superficie": "clay",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T13:00:00Z",
+  "horario": "2026-11-15T13:10:00Z",
   "j1": {
    "id": 114,
    "nombre": "Felipe Meligeni Alves",
@@ -54465,14 +54704,62 @@
   },
   "j2": {
    "id": 351,
-   "nombre": "S. De La Fuente",
-   "pais": null,
-   "ranking": null
+   "nombre": "Santiago De La Fuente",
+   "pais": "arg",
+   "ranking": 756
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T11:45:26.197Z"
+  "visto": "2026-11-15T13:45:24.383Z",
+  "tier": null,
+  "torneoId": "2532",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T13:45:15.732403Z",
+   "age_seconds": 7,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     5
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "30",
+    "15"
+   ],
+   "received_at": "2026-11-15T13:45:15.396930Z",
+   "sequence": 45,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 4,
+   "stale": false,
+   "timestamp": "2026-11-15T13:45:15.732399Z",
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220420": {
   "id": 220420,
@@ -54483,23 +54770,71 @@
   "superficie": "clay",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T13:00:00Z",
+  "horario": "2026-11-15T13:10:00Z",
   "j1": {
-   "id": 1268,
-   "nombre": "B. Oliveira",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 340,
    "nombre": "Maximo Zeitune",
    "pais": "arg",
    "ranking": 514
   },
+  "j2": {
+   "id": 1268,
+   "nombre": "B. Oliveira",
+   "pais": "bra",
+   "ranking": null
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T11:45:26.197Z"
+  "visto": "2026-11-15T13:45:24.383Z",
+  "tier": null,
+  "torneoId": "2532",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T13:43:52.339208Z",
+   "age_seconds": 90,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-15T13:43:52.064751Z",
+   "sequence": 45,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-15T13:45:18.649019Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220421": {
   "id": 220421,
@@ -56159,17 +56494,17 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T12:45:28.115Z",
+  "visto": "2026-11-15T13:45:24.383Z",
   "tier": null,
   "torneoId": "14868",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T12:45:01.226679Z",
-   "age_seconds": 26,
+   "accepted_at": "2026-11-15T13:45:07.457495Z",
+   "age_seconds": 15,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 13,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -56177,32 +56512,34 @@
    },
    "games": [
     [
+     6,
      4
     ],
     [
-     1
+     2,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "AD",
+    "40"
    ],
-   "received_at": "2026-11-15T12:45:00.092078Z",
-   "sequence": 34,
+   "received_at": "2026-11-15T13:45:07.209915Z",
+   "sequence": 112,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-15T12:45:10.979196Z",
+   "timestamp": "2026-11-15T13:45:15.481461Z",
    "puntos": [
-    "30",
-    "30"
+    "AD",
+    "40"
    ],
    "saca": 2
   },
@@ -57584,28 +57921,78 @@
   "id": 221022,
   "tour": "challenger",
   "torneo": "Montevideo",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Montevideo - Semi-finals",
+  "rondaCod": "SF",
   "superficie": "clay",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T13:00:00Z",
+  "horario": "2026-11-15T13:10:00Z",
   "j1": {
-   "id": 46160,
-   "nombre": "T. Estramil",
-   "pais": null,
-   "ranking": null
-  },
-  "j2": {
    "id": 495,
    "nombre": "Alvaro Guillen Meza",
    "pais": "ecu",
    "ranking": 445
   },
+  "j2": {
+   "id": 46160,
+   "nombre": "Thiago Estramil",
+   "pais": "ury",
+   "ranking": null
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T11:45:26.197Z"
+  "visto": "2026-11-15T13:45:24.383Z",
+  "tier": null,
+  "torneoId": "2532",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T13:45:14.534478Z",
+   "age_seconds": 8,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     3
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 7,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-15T13:45:14.505683Z",
+   "sequence": 61,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-15T13:45:14.534476Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "221027": {
   "id": 221027,
@@ -57636,11 +58023,11 @@
   "estado": "en_vivo",
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T12:44:51.657131Z",
-   "age_seconds": 36,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-15T13:44:23.373161Z",
+   "age_seconds": 59,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -57649,39 +58036,41 @@
    "games": [
     [
      6,
-     1
+     3,
+     5
     ],
     [
      4,
-     1
+     6,
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "40",
-    "AD"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-15T12:44:51.126223Z",
-   "sequence": 98,
+   "received_at": "2026-11-15T13:44:23.180257Z",
+   "sequence": 190,
    "server": 2,
    "sets": [
     1,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-15T12:45:12.218540Z",
+   "timestamp": "2026-11-15T13:44:23.373160Z",
    "puntos": [
-    "40",
-    "AD"
+    "0",
+    "0"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-15T12:45:28.115Z",
+  "visto": "2026-11-15T13:45:24.383Z",
   "motivo": null
  },
  "null": {
