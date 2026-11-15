@@ -95,7 +95,7 @@ function textoPublicacion(n) {
     pregunta,
     'Más información en atodotenis.vercel.app.',
     hashtags(n),
-  ].filter(Boolean).join('\\n\\n');
+  ].filter(Boolean).join('\n\n');
 }
 
 function creditoJugador(nombre) {
