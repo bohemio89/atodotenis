@@ -6,7 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, leerJSON, log } from './lib/util.mjs';
-import { fotoJugador, focoJugador } from './lib/ig-render.mjs';
+import { fotoJugador, focoJugador, slug } from './lib/ig-render.mjs';
 
 const CONFIG = leerJSON('config.json', {});
 const SITIO = (CONFIG.sitio?.url || 'https://atodotenis.vercel.app').replace(/\/$/, '');
@@ -81,50 +81,104 @@ function hashtags(n) {
 const fotoNota = (n) => (n.imagen?.url && (n.imagen.ancho || 0) >= 1200 ? n.imagen : null);
 
 function textoPublicacion(n) {
-  const partes = [n.titulo, n.bajada];
-  if (n.declaracion?.texto) partes.push(`${n.declaracion.jugador}: «${n.declaracion.texto}»`);
-  partes.push('La nota completa, en el link de la bio.');
-  // El crédito de la foto va impreso en la imagen; el texto queda limpio.
-  partes.push(hashtags(n));
-  return partes.join('\n\n');
+  const r = n.resultado || {};
+  const ganador = r.ganador?.nombre || '';
+  const perdedor = r.perdedor?.nombre || '';
+  const marcador = (r.sets || []).map((set) => `${set[0]}-${set[1]}`).join(' · ');
+  const ronda = String(r.ronda || '').toUpperCase();
+  const pregunta = ronda === 'SF' && /Finals/i.test(`${n.torneo} ${n.categoria}`)
+    ? '¿Quién se queda con el título?'
+    : '¿Qué te pareció este resultado?';
+  return [
+    `${n.titulo}.`,
+    marcador ? `Marcador: ${marcador}.` : n.bajada,
+    pregunta,
+    'Más información en atodotenis.vercel.app.',
+    hashtags(n),
+  ].filter(Boolean).join('\n\n');
 }
 
-function html(n) {
-  const fuentes = (p) => `file://${path.join(ROOT, 'node_modules/@fontsource', p)}`;
+function creditoJugador(nombre) {
+  const slugJ = nombre.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const elegida = leerJSON('scripts/ig-fotos.json', {})[slugJ];
+  const av = leerJSON('data/avatares.json', {})[nombre] || {};
+  const autor = elegida?.autor || av.autor;
+  const lic = elegida?.licencia || av.licencia;
+  return autor ? `${autor} / ${lic || 'CC'}` : 'Wikimedia Commons';
+}
+
+function titularResultado(n) {
+  const ronda = String(n.resultado?.ronda || '').toUpperCase();
+  if (ronda === 'SF') return 'A LA FINAL';
+  if (ronda === 'F') return 'CAMPEÓN';
+  if (ronda === 'QF') return 'A SEMIFINALES';
+  return 'GRAN VICTORIA';
+}
+
+function temaTorneo(nombre, esWTA) {
+  const t = String(nombre || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const temas = [
+    [/wta finals/, { fondo:'#17072D', panel:'#2A1048', primario:'#8B45D6', brillo:'#C17BFF', acento:'#D9FF42' }],
+    [/atp finals|nitto/, { fondo:'#06152E', panel:'#10294B', primario:'#087BFF', brillo:'#39B9FF', acento:'#D9FF42' }],
+    [/indian wells/, { fondo:'#24103B', panel:'#3B1D5A', primario:'#8F4BCB', brillo:'#F4A14D', acento:'#D9FF42' }],
+    [/roland garros|french open/, { fondo:'#291009', panel:'#4A2117', primario:'#D9572B', brillo:'#FF9C53', acento:'#F8E4BD' }],
+    [/wimbledon/, { fondo:'#071F18', panel:'#123D2B', primario:'#6C3D91', brillo:'#B58BDB', acento:'#E1EBAA' }],
+    [/us open/, { fondo:'#07152D', panel:'#142A4A', primario:'#D9364B', brillo:'#FF7180', acento:'#F4D36B' }],
+    [/australian open/, { fondo:'#061A43', panel:'#0B3470', primario:'#009DD8', brillo:'#4DEBFF', acento:'#D9FF42' }],
+    [/miami open/, { fondo:'#062B35', panel:'#07505B', primario:'#00AFA5', brillo:'#FF7A78', acento:'#F8E36A' }]
+  ];
+  const match = temas.find(([rx]) => rx.test(t));
+  if (match) return match[1];
+  return esWTA ? { fondo:'#17072D', panel:'#2A1048', primario:'#8B45D6', brillo:'#C17BFF', acento:'#D9FF42' }
+    : { fondo:'#06152E', panel:'#10294B', primario:'#087BFF', brillo:'#39B9FF', acento:'#D9FF42' };
+}
+
+function html(n, fotos) {
   const r = n.resultado || {};
   const sets = Array.isArray(r.sets) ? r.sets : [];
-  const fila = (nombre, idx, gana) => `<div class="fila${gana ? '' : ' pierde'}"><span>${esc(apellido(nombre))}</span>${sets.map((s) => `<b>${esc(s[idx])}</b>`).join('')}</div>`;
-  const frase = n.declaracion?.texto && n.declaracion.texto.length < (fotoNota(n) ? 120 : 150)
-    ? `<p class="cita">«${esc(n.declaracion.texto)}»<br><span>— ${esc(n.declaracion.jugador)}</span></p>`
-    : `<p class="bajada">${esc(n.bajada)}</p>`;
+  const ganador = r.ganador?.nombre || '';
+  const perdedor = r.perdedor?.nombre || '';
+  const esWTA = /WTA/i.test(`${n.categoria || ''} ${n.torneo || ''}`);
+  const evento = n.torneo || n.categoria || 'TENIS';
+  const tema = temaTorneo(evento, esWTA);
+  const credito = `Foto: ${creditoJugador(ganador)}`;
+  const filas = sets.map((set) => `<span>${esc(set[0])}-${esc(set[1])}</span>`).join('');
+  const titulo = titularResultado(n);
   return `<!doctype html><html><head><meta charset="utf-8"><style>
-@font-face{font-family:Inter;font-weight:400;src:url(${fuentes('inter/files/inter-latin-400-normal.woff2')})}
-@font-face{font-family:Montserrat;font-weight:800;src:url(${fuentes('montserrat/files/montserrat-latin-800-normal.woff2')})}
-@font-face{font-family:Montserrat;font-weight:900;font-style:italic;src:url(${fuentes('montserrat/files/montserrat-latin-900-italic.woff2')})}
-@font-face{font-family:RC;font-weight:700;src:url(${fuentes('roboto-condensed/files/roboto-condensed-latin-700-normal.woff2')})}
-body{margin:0}
-#p{width:1080px;height:1350px;background:#12161B;color:#F2F4F5;font-family:Inter;position:relative;overflow:hidden}
-.foto{position:absolute;inset:0 0 auto 0;height:760px;background-size:cover;background-position:center 22%}
-.foto::after{content:'';position:absolute;left:0;right:0;bottom:0;height:260px;background:linear-gradient(rgba(18,22,27,0),#12161B)}
-.credito{position:absolute;right:24px;top:716px;font-size:18px;color:rgba(255,255,255,.75);z-index:2;max-width:700px;text-align:right}
-.cancha{position:absolute;inset:0 0 auto 0;height:520px;background:${n.superficie === 'clay' ? '#A8502C' : n.superficie === 'grass' ? '#2F6B4A' : '#2B5C8A'}}
-.chip{position:absolute;left:64px;top:56px;background:#C6F432;color:#12161B;font:800 30px Montserrat;padding:12px 20px;border-radius:10px;letter-spacing:.04em;text-transform:uppercase;max-width:620px}
-.marca{position:absolute;right:64px;top:62px;font:italic 900 40px Montserrat;letter-spacing:-.02em}.marca b{color:#C6F432}
-.cuerpo{position:absolute;left:64px;right:64px;top:560px}
-.tit{font:800 30px Montserrat;color:#C6F432;letter-spacing:.06em}
-.fila{display:flex;align-items:center;font:800 58px Montserrat;padding:12px 0;border-bottom:2px solid #2A3540}
-.fila span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fila b{width:100px;text-align:center;font-family:RC;color:#C6F432}
-.fila.pierde{color:#9AA5B1;border:0}.fila.pierde b{color:#9AA5B1}
-.bajada,.cita{margin:26px 0 0;font-size:34px;line-height:1.35;color:#C9D1D9}
-.cita{font-size:40px;color:#F2F4F5}.cita span{font-size:30px;color:#9AA5B1}
-.pie{position:absolute;left:64px;right:64px;bottom:56px;display:flex;justify-content:space-between;font-size:30px;color:#9AA5B1}.pie b{font:800 30px Montserrat;color:#F2F4F5}
+@font-face{font-family:Inter;font-weight:400;src:url(file://${path.join(ROOT, 'node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2')})}
+@font-face{font-family:Montserrat;font-weight:800;src:url(file://${path.join(ROOT, 'node_modules/@fontsource/montserrat/files/montserrat-latin-800-normal.woff2')})}
+@font-face{font-family:Montserrat;font-weight:900;font-style:italic;src:url(file://${path.join(ROOT, 'node_modules/@fontsource/montserrat/files/montserrat-latin-900-italic.woff2')})}
+@font-face{font-family:RC;font-weight:700;src:url(file://${path.join(ROOT, 'node_modules/@fontsource/roboto-condensed/files/roboto-condensed-latin-700-normal.woff2')})}
+*{box-sizing:border-box}body{margin:0}
+#p{width:1080px;height:1350px;position:relative;overflow:hidden;background:${tema.fondo};color:#fff;font-family:Inter}
+.hero{position:absolute;inset:0 0 auto;height:940px;background-image:linear-gradient(180deg,rgba(4,7,18,.15) 0%,rgba(4,7,18,.02) 38%,${tema.fondo} 100%),linear-gradient(115deg,${tema.primario}44,transparent 52%),url('${fotos.ganador}');background-size:cover;background-position:${esc(focoJugador(ganador))};}
+.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(115deg,${tema.fondo}66 0%,transparent 60%);mix-blend-mode:multiply}.hero:after{content:'';position:absolute;right:-160px;top:210px;width:440px;height:440px;border:28px solid ${tema.primario}88;border-radius:50%;box-shadow:0 0 0 24px ${tema.brillo}22,0 0 70px ${tema.primario}66}
+.brand{position:absolute;top:52px;left:58px;right:58px;display:flex;justify-content:space-between;align-items:center;z-index:5;font:900 italic 38px Montserrat;text-shadow:0 2px 14px #000}
+.brand b{color:${tema.acento}}.event{font:800 24px Montserrat;letter-spacing:.08em;background:${tema.primario};color:#fff;padding:12px 18px;border-radius:8px;box-shadow:0 0 28px ${tema.brillo}88}
+.heroTitle{position:absolute;z-index:4;left:58px;right:58px;bottom:145px;font:900 italic 112px/.88 Montserrat;letter-spacing:-.055em;text-shadow:0 5px 30px rgba(0,0,0,.82);max-width:900px}
+.heroTitle span{display:block;color:${tema.acento};font-size:48px;letter-spacing:.08em;margin-top:20px}
+.winner{position:absolute;z-index:4;left:58px;right:300px;bottom:48px;font:900 44px Montserrat;text-shadow:0 3px 22px #000;color:${tema.acento}}\n.opponent{position:absolute;z-index:5;right:62px;top:540px;width:220px;height:280px;border:5px solid ${tema.acento};border-radius:14px;background-size:cover;background-position:center 18%;box-shadow:0 10px 30px #000b}.bottom{position:absolute;left:0;right:0;bottom:0;height:430px;background:linear-gradient(180deg,${tema.panel},${tema.fondo});padding:34px 62px 28px;border-top:5px solid ${tema.primario}}
+.eyebrow{font:800 24px Montserrat;letter-spacing:.12em;color:${tema.acento};text-align:center}
+.score{display:flex;align-items:center;justify-content:center;gap:16px;margin:22px 0 20px;font:700 68px RC}
+.score span{background:#ffffff12;border:1px solid ${tema.brillo}88;border-radius:12px;padding:8px 20px;min-width:112px;text-align:center}
+.score span:first-child{background:${tema.acento};color:#10131a;border-color:${tema.acento}}
+.story{font:800 34px/1.12 Montserrat;text-align:center;max-width:920px;margin:0 auto;color:#f5f7fa}.story b{color:${tema.acento}}
+.question{margin-top:18px;text-align:center;font-size:24px;color:#d4dce8}
+.credit{position:absolute;left:62px;right:62px;bottom:12px;text-align:center;font-size:13px;color:#9AA5B1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 </style></head><body><div id="p">
-${fotoNota(n) ? `<div class="foto" style="background-image:url('${esc(fotoNota(n).url)}');background-position:${esc(fotoNota(n).foco || 'center 20%')}"></div><div class="credito">Foto: ${esc(fotoNota(n).credito || 'Wikimedia Commons')}</div>` : `<div class="cancha"><svg width="1080" height="520"><g fill="none" stroke="#fff" stroke-width="5" opacity=".28"><path d="M160 520 350 200h380l190 320"/><path d="M235 420h610M540 420V200M290 310h500"/></g></svg></div>`}
-<div class="chip">${esc(n.categoria || n.torneo || 'Tenis')}</div><div class="marca">A Todo <b>Tenis</b></div>
-<div class="cuerpo" style="top:${fotoNota(n) ? 770 : 560}px">${sets.length && r.ganador ? `<div class="tit">RESULTADO</div>${fila(r.ganador.nombre, 0, true)}${fila(r.perdedor?.nombre, 1, false)}` : `<div class="fila" style="font-size:56px;white-space:normal;border:0">${esc(n.titulo)}</div>`}
-${frase}</div>
-<div class="pie"><span>La nota completa en el link de la bio</span><b>@${USUARIO}</b></div>
+<div class="hero">
+ <div class="brand"><span class="event">${esc(evento.toUpperCase())}</span><span>A Todo <b>Tenis</b></span></div>
+ <div class="heroTitle">${esc(titulo)}<span>${esc(esWTA ? 'WTA · TENIS FEMENINO' : 'ATP · TENIS MASCULINO')}</span></div>
+ <div class="winner">${esc(ganador)}</div>
+</div>
+${fotos.perdedor ? `<div class="opponent" style="background-image:url('${fotos.perdedor}')"></div>` : ''}
+<div class="bottom">
+ <div class="eyebrow">MARCADOR FINAL</div>
+ <div class="score">${filas}</div>
+ <div class="story">${esc(ganador)} <b>se impuso</b> ante ${esc(perdedor)}</div>
+ <div class="question">¿Qué te pareció su actuación?</div>
+ <div class="credit">${esc(credito)} · A Todo Tenis</div>
+</div>
 </div></body></html>`;
 }
 
@@ -133,50 +187,41 @@ async function preparar() {
   if (e.pendiente) { log('Ya hay una publicación preparada:', e.pendiente.slug); return; }
   const hecho = new Set(e.publicadas.map((p) => p.slug));
   const limite = Date.now() - HORAS_NOTA * 3600e3;
-  const cand = notas().filter((n) => !hecho.has(n.slug) && new Date(n.fecha).getTime() > limite)
+  const cand = notas().filter((n) => !hecho.has(n.slug) && new Date(n.fecha).getTime() > limite &&
+      n.resultado?.ganador?.nombre && n.resultado?.perdedor?.nombre && n.resultado?.sets?.length)
     .sort((a, b) => (b.importancia || 0) - (a.importancia || 0) || new Date(b.fecha) - new Date(a.fecha));
-  if (!cand.length) { log('Sin notas nuevas para Instagram.'); return; }
+  if (!cand.length) { log('Sin resultados nuevos con datos completos para Instagram.'); return; }
   const n = { ...cand[0] };
-  // La foto es SIEMPRE la del ganador, de la colección revisada (ig-fotos.json / avatares.json).
-  // No se usa la foto que trae la nota: la búsqueda automática a veces encuentra a otra persona.
-  // Si no hay foto del ganador, la placa sale con la cancha y no con un hueco.
-  n.imagen = null;
-  const ganador = (typeof n.resultado === 'object' && n.resultado?.ganador?.nombre) || n.jugadores?.[0];
-  if (ganador) {
-    const dato = await fotoJugador(ganador, 1280);
-    if (dato) {
-      const slugJ = ganador.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-      const elegida = leerJSON('scripts/ig-fotos.json', {})[slugJ];
-      const av = leerJSON('data/avatares.json', {})[ganador] || {};
-      const autor = elegida?.autor || av.autor;
-      const lic = elegida?.licencia || av.licencia;
-      n.imagen = { url: dato, ancho: 1280, foco: focoJugador(ganador), credito: autor ? `${autor} / ${lic || 'CC'}, Wikimedia Commons` : 'Wikimedia Commons' };
-    } else log('Sin foto revisada de', ganador, '- va la cancha.');
-  }
+  const ganador = n.resultado.ganador.nombre, perdedor = n.resultado.perdedor.nombre;
+  // La imagen principal debe ser una foto editorial seleccionada del ganador. No usar una imagen aleatoria ni una foto del rival como sustituto.
+  const fotosEditoriales = leerJSON('scripts/ig-fotos.json', {});
+  const claveFoto = slug(ganador);
+  if (!fotosEditoriales[claveFoto]?.url) { log('Se posterga Instagram: falta una foto editorial seleccionada del ganador:', ganador); return; }
+  const fotoG = await fotoJugador(ganador, 1280);
+  const fotoP = await fotoJugador(perdedor, 500);
+  const archivoFoto = path.join(ROOT, 'static/ig/fotos', `${claveFoto}-1280.jpg`);
+  if (!fotoG || !fs.existsSync(archivoFoto) || fs.statSync(archivoFoto).size < 20000) { log('Se posterga Instagram: la foto del ganador no supera el control de calidad:', ganador); return; }
   const { chromium } = await import('playwright-core');
   const navegador = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' });
-  const p = await navegador.newPage({ viewport: { width: 1080, height: 1350 } });
-  const tmp = path.join(ROOT, 'node_modules', '.ig-tarjeta.html');
-  const fotosRotas = () => p.evaluate(async () => {
-    const urls = [...document.querySelectorAll('*')].map((x) => getComputedStyle(x).backgroundImage).filter((b) => b.startsWith('url(')).map((b) => b.slice(5, -2));
-    const r = await Promise.all(urls.map((u) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i.naturalWidth > 0 ? 0 : 1); i.onerror = () => ok(1); i.src = u; })));
-    return r.reduce((a, b) => a + b, 0);
-  });
-  const dibujar = async () => {
-    fs.writeFileSync(tmp, html(n));
-    await p.goto('file://' + tmp, { waitUntil: 'networkidle', timeout: 60000 }).catch(() => null);
+  try {
+    const p = await navegador.newPage({ viewport: { width: 1080, height: 1350 } });
+    const tmp = path.join(ROOT, 'node_modules', '.ig-tarjeta.html');
+    fs.writeFileSync(tmp, html(n, { ganador: fotoG, perdedor: fotoP }));
+    await p.goto('file://' + tmp, { waitUntil: 'networkidle', timeout: 60000 });
     await p.evaluate(async () => { await Promise.all([...document.fonts].map((f) => f.load().catch(() => null))); await document.fonts.ready; });
-  };
-  await dibujar();
-  // Nunca una placa con la foto vacía: si no cargó, va la versión con la cancha.
-  if (await fotosRotas()) { log('La foto no cargó en la placa, va la cancha.'); n.imagen = null; await dibujar(); }
-  if (await fotosRotas()) { log('La placa tiene imágenes rotas, no se prepara.'); await navegador.close(); return; }
-  fs.mkdirSync(DIR_IMG, { recursive: true });
-  await p.locator('#p').screenshot({ path: path.join(DIR_IMG, `${n.slug}.jpg`), type: 'jpeg', quality: 92 });
-  await navegador.close();
+    const rotas = await p.evaluate(async () => {
+      const u = getComputedStyle(document.querySelector('.hero')).backgroundImage;
+      const match = u.match(/url\(["']?(.*?)["']?\)/);
+      if (!match) return 1;
+      return await new Promise((ok) => { const i = new Image(); i.onload = () => ok(i.naturalWidth >= 1000 ? 0 : 1); i.onerror = () => ok(1); i.src = match[1]; });
+    });
+    if (rotas) { log('Se descarta la placa: una de las fotos no se pudo cargar.'); return; }
+    fs.mkdirSync(DIR_IMG, { recursive: true });
+    await p.locator('#p').screenshot({ path: path.join(DIR_IMG, `${n.slug}.jpg`), type: 'jpeg', quality: 95 });
+  } finally { await navegador.close(); }
   e.pendiente = { slug: n.slug, imagen: `${SITIO}/ig/${n.slug}.jpg`, texto: textoPublicacion(n), preparada: new Date().toISOString() };
   guardarEstado(e);
-  log('Preparada para Instagram:', n.titulo);
+  log('Preparada para Instagram con el ganador como protagonista:', n.titulo);
 }
 
 async function api(ruta, opciones = {}) {

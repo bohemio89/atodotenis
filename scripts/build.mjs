@@ -499,14 +499,15 @@ if (!EN) {
   const tt = leerJSON('data/tiktok.json', { videos: [] }).videos || [];
   const items = tt.map((v, i) => `<section style="border-top:1px solid #2a323c;padding:18px 0">
 <p style="margin:0 0 8px;color:#9AA5B1;font-size:14px">${esc(new Date(v.fecha).toLocaleString('es-AR', { timeZone: 'Asia/Jerusalem', dateStyle: 'medium', timeStyle: 'short' }))} (hora de Israel)</p>
+${(v.imagenes || (v.imagen ? [v.imagen] : [])).map((img, j) => `<div style="display:inline-block;vertical-align:top;margin:0 10px 12px 0"><img src="/${esc(img)}" alt="Diapositiva ${j + 1} del carrusel de A Todo Tenis para TikTok" loading="lazy" style="display:block;width:100%;max-width:300px;aspect-ratio:9/16;object-fit:cover;border-radius:12px;background:#000"><p><a href="/${esc(img)}" download style="display:inline-block;background:#C6F432;color:#12161B;font-weight:800;padding:10px 16px;border-radius:10px;text-decoration:none">Descargar diapositiva ${j + 1}</a></p></div>`).join('')}
 <video src="/${esc(v.video)}" controls playsinline preload="metadata" style="width:100%;max-width:360px;border-radius:12px;background:#000"></video>
-<p><a href="/${esc(v.video)}" download style="display:inline-block;background:#C6F432;color:#12161B;font-weight:800;padding:10px 16px;border-radius:10px;text-decoration:none">Descargar video</a></p>
+<p><a href="/${esc(v.video)}" download style="display:inline-block;background:#087BFF;color:#fff;font-weight:800;padding:10px 16px;border-radius:10px;text-decoration:none">Descargar video</a></p>
 <textarea id="t${i}" readonly rows="5" style="width:100%;max-width:520px;font:15px Inter,sans-serif;padding:10px;border-radius:10px">${esc(v.texto)}</textarea>
 <p><button type="button" data-copiar="t${i}" style="font-weight:700;padding:8px 14px;border-radius:10px">Copiar texto</button></p></section>`).join('');
   fs.mkdirSync(DIST, { recursive: true });
   fs.writeFileSync(path.join(DIST, 'tiktok.html'), `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Videos para TikTok · A Todo Tenis</title></head>
 <body style="margin:0;background:#12161B;color:#F2F4F5;font-family:Inter,system-ui,sans-serif"><main style="max-width:640px;margin:0 auto;padding:20px">
-<h1 style="font-size:24px">Videos para TikTok</h1><p style="color:#9AA5B1">Descargá el video, copiá el texto y programalo en TikTok Studio con un sonido en tendencia. Los videos se borran a los 10 días.</p>
+<h1 style="font-size:24px">Contenido para TikTok · A Todo Tenis</h1><p style="color:#9AA5B1">Descargá las diapositivas del carrusel o el video corto, copiá el texto y publicalo manualmente en TikTok. ATP y WTA tienen identidades visuales distintas. Los archivos se borran a los 10 días.</p>
 ${items || '<p>Todavía no hay videos nuevos.</p>'}</main>
 <script>document.querySelectorAll('[data-copiar]').forEach(function(b){b.addEventListener('click',function(){var t=document.getElementById(b.getAttribute('data-copiar'));t.select();navigator.clipboard?navigator.clipboard.writeText(t.value):document.execCommand('copy');b.textContent='Copiado'})})</script></body></html>`);
 }

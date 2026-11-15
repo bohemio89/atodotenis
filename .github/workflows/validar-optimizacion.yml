@@ -17,8 +17,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Verificar sintaxis del recolector
-        run: node --check scripts/update.mjs
+      - name: Verificar sintaxis de automatizaciones
+        run: |
+          node --check scripts/update.mjs
+          node --check scripts/instagram.mjs
+          node --check scripts/tiktok.mjs
+          node --check scripts/ig-reel.mjs
+          node --check scripts/lib/ig-render.mjs
       - name: Ejecutar pruebas de planificación
         run: npm test
       - name: Compilar sitio estático
