@@ -99,7 +99,7 @@ function textoPublicacion(n) {
 }
 
 function creditoJugador(nombre) {
-  const slugJ = nombre.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const slugJ = nombre.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
   const elegida = leerJSON('scripts/ig-fotos.json', {})[slugJ];
   const av = leerJSON('data/avatares.json', {})[nombre] || {};
   const autor = elegida?.autor || av.autor;
