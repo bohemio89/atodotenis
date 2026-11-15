@@ -70,10 +70,27 @@ async function api(ruta) {
       if (r.status === 429) {
         const w = Number(r.headers.get('retry-after') || 0);
         const info = ['retry-after', 'x-ratelimit-limit', 'x-ratelimit-remaining', 'x-ratelimit-reset'].map((h) => `${h}=${r.headers.get(h) ?? '-'}`).join(' ');
-        log('429 de la API:', info, '|', (await r.text().catch(() => '')).slice(0, 200));
-        // Límite por minuto: se espera una sola vez. Cupo diario agotado: se corta y no se insiste.
-        if (!esperoUnaVez && w > 0 && w <= 65) { esperoUnaVez = true; await new Promise((s) => setTimeout(s, w * 1000)); continue; }
-        const e = new Error('CUPO: la API rechazó por cupo agotado'); e.cupo = true; e.retryAfter = w; throw e;
+        const textoError = await r.text().catch(() => '');
+        let cuerpoError = {};
+        try { cuerpoError = JSON.parse(textoError); } catch {}
+        log('429 de la API:', info, '|', textoError.slice(0, 200));
+        // Solo reintentar límites por minuto. El cupo diario y el bloqueo anti-abuso
+        // traen el instante exacto de reanudación: respetarlo evita reintentos inútiles.
+        if (cuerpoError.scope !== 'day' && cuerpoError.error !== 'abuse_throttled' &&
+            !esperoUnaVez && w > 0 && w <= 65) {
+          esperoUnaVez = true;
+          await new Promise((s) => setTimeout(s, w * 1000));
+          continue;
+        }
+        const e = new Error('CUPO: la API rechazó por cupo o limitación temporal');
+        e.cupo = true;
+        e.retryAfter = w;
+        if (cuerpoError.resets_at && Number.isFinite(Date.parse(cuerpoError.resets_at))) {
+          e.pausaHasta = new Date(cuerpoError.resets_at).toISOString();
+        } else if (cuerpoError.retry_at_epoch && Number.isFinite(Number(cuerpoError.retry_at_epoch))) {
+          e.pausaHasta = new Date(Number(cuerpoError.retry_at_epoch) * 1000).toISOString();
+        }
+        throw e;
       }
       if (!r.ok) throw new Error(`HTTP ${r.status} en ${ruta}: ${(await r.text()).slice(0, 200)}`);
       return await r.json();
@@ -461,10 +478,15 @@ main().then(() => {
   estado.ultimaCorrida = new Date().toISOString();
   if (e.cupo) {
     // Pausa creciente: 1 h, 2 h, 4 h, hasta 8 h (o lo que pida la API), para no gastar el cupo con rechazos
-    estado.pausaHoras = Math.min(8, (estado.pausaHoras || 0.5) * 2);
-    const horas = Math.max(estado.pausaHoras, (e.retryAfter || 0) / 3600);
-    estado.pausaHasta = new Date(Date.now() + horas * 3600e3).toISOString();
-    console.log(`::warning::La API de resultados rechazó por cupo. Pausa de ${horas} h (hasta ${estado.pausaHasta}). El sitio se sigue publicando con los datos guardados.`);
+    if (e.pausaHasta) {
+      estado.pausaHasta = e.pausaHasta;
+      estado.pausaHoras = 0;
+    } else {
+      estado.pausaHoras = Math.min(8, (estado.pausaHoras || 0.5) * 2);
+      const horas = Math.max(estado.pausaHoras, (e.retryAfter || 0) / 3600);
+      estado.pausaHasta = new Date(Date.now() + horas * 3600e3).toISOString();
+    }
+    console.log(`::warning::La API de resultados rechazó por cupo. Pausa hasta ${estado.pausaHasta}. El sitio se sigue publicando con los datos guardados.`);
   } else {
     console.log(`::warning::Falló la consulta a la API: ${e.message}. El sitio se sigue publicando con los datos guardados.`);
   }
