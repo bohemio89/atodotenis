@@ -210,8 +210,13 @@ async function main() {
           inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000);
     });
     const ultimaVigilancia = estado.ultimaConsultaEnVivo ? new Date(estado.ultimaConsultaEnVivo).getTime() : 0;
-    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 12 * 60000;
-    const hayPresupuesto = estado.usadas < C.presupuestoDiario - C.reserva - 1;
+    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 20 * 60000;
+    // Reservar primero las consultas de las próximas actualizaciones completas y calendarios.
+    const corridasRestantesVigilancia = Math.max(0, horasHastaReinicio);
+    const calendariosRestantesVigilancia = Math.floor(corridasRestantesVigilancia / C.calendarioCadaHoras) * C.toursCalendario.length;
+    const reservaFuturaVigilancia = corridasRestantesVigilancia + calendariosRestantesVigilancia;
+    const presupuestoVigilancia = C.presupuestoDiario - C.reserva - estado.usadas - reservaFuturaVigilancia;
+    const hayPresupuesto = presupuestoVigilancia > 0;
     const apiEnPausa = estado.pausaHasta && new Date(estado.pausaHasta) > ahora;
 
     if (tocaVigilar && hayPresupuesto && !apiEnPausa) {
@@ -234,8 +239,7 @@ async function main() {
         .filter((p) => p.estado === 'por_confirmar' && !p.confirmado && p.horario &&
           ahoraMs - new Date(p.horario).getTime() <= 6 * 3600e3)
         .sort((a, b) => prioridad(b) - prioridad(a) || String(b.horario).localeCompare(String(a.horario)));
-      const cupoVigilancia = Math.max(0, Math.min(2, C.maxDetallesPorCorrida,
-        C.presupuestoDiario - C.reserva - estado.usadas - 1));
+      const cupoVigilancia = Math.max(0, Math.min(2, C.maxDetallesPorCorrida, presupuestoVigilancia - 1));
       let confirmadosVigilancia = 0;
       for (const p of pendientes.slice(0, cupoVigilancia)) {
         const m = await api(`matches/${p.id}`);
