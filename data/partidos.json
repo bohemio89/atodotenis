@@ -48934,9 +48934,9 @@
    "ranking": null
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-15T00:45:26.552Z",
+  "visto": "2026-11-15T01:45:28.481Z",
   "torneoClave": "wta|Finals - Riyadh",
   "tier": null,
   "importante": false,
@@ -48944,11 +48944,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T00:45:13.860661Z",
-   "age_seconds": 12,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-15T01:16:37.412871Z",
+   "age_seconds": 1730,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 1724,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -48957,38 +48957,49 @@
    "games": [
     [
      6,
-     1
+     3
     ],
     [
      7,
-     2
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 1724,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-15T00:45:13.702722Z",
-   "sequence": 94,
+   "received_at": "2026-11-15T01:16:37.296956Z",
+   "sequence": 134,
    "server": 2,
    "sets": [
     0,
-    1
+    2
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-15T00:45:22.108360Z",
+   "tiebreaks": [
+    {
+     "p1": 4,
+     "p2": 7
+    },
+    null
+   ],
+   "tiebreaks_source": [
+    "summary",
+    null
+   ],
+   "timestamp": "2026-11-15T01:16:37.412864Z",
    "puntos": [
     "0",
     "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "220188": {
   "id": 220188,
@@ -49022,41 +49033,80 @@
  },
  "220189": {
   "id": 220189,
-  "tour": "wta_doubles",
+  "tour": "wta",
   "torneo": "Finals - Riyadh",
   "ronda": "WTA Finals - Indian Wells - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-15T01:05:00Z",
+  "horario": "2026-11-15T01:45:00Z",
   "j1": {
    "id": 1800,
-   "nombre": "Guo/ Mladenovic",
+   "nombre": "Kristina Mladenovic / Meiqi Guo",
    "pais": null,
-   "ranking": null,
-   "paises": [
-    "chn",
-    "fra"
-   ]
+   "ranking": null
   },
   "j2": {
    "id": 10106,
-   "nombre": "Errani/ Paolini",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "sui",
-    "ita"
-   ]
+   "nombre": "Errani / Paolini",
+   "pais": "ita",
+   "ranking": null
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T23:45:23.707Z",
+  "visto": "2026-11-15T01:45:28.234Z",
   "torneoClave": "wta|Finals - Riyadh",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "3190",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T01:45:20.189605Z",
+   "age_seconds": 7,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "30",
+    "0"
+   ],
+   "received_at": "2026-11-15T01:45:19.929096Z",
+   "sequence": 9,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-15T01:45:20.189601Z",
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220193": {
   "id": 220193,
@@ -49111,7 +49161,7 @@
    "ranking": 559
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-15T00:45:26.552Z",
   "tier": null,
@@ -49265,7 +49315,7 @@
    "ranking": 683
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-15T00:45:26.552Z",
   "tier": null,
@@ -49329,25 +49379,74 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T01:00:00Z",
+  "horario": "2026-11-15T00:55:00Z",
   "j1": {
-   "id": 12212,
-   "nombre": "Y. Ibraimi",
-   "pais": null,
-   "ranking": null
+   "id": 1701,
+   "nombre": "Thomas Fancutt",
+   "pais": "aus",
+   "ranking": 690
   },
   "j2": {
-   "id": 1701,
-   "nombre": "T. J. Fancutt",
-   "pais": null,
-   "ranking": null
+   "id": 12212,
+   "nombre": "Ymerali Ibraimi",
+   "pais": "aus",
+   "ranking": 1358
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T23:45:23.808Z",
+  "visto": "2026-11-15T01:45:28.234Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2628",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T01:45:14.435647Z",
+   "age_seconds": 13,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "15",
+    "15"
+   ],
+   "received_at": "2026-11-15T01:45:14.131679Z",
+   "sequence": 75,
+   "server": 1,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-15T01:45:23.743015Z",
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220206": {
   "id": 220206,
@@ -49358,25 +49457,72 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T00:45:00Z",
+  "horario": "2026-11-15T01:10:00Z",
   "j1": {
-   "id": 11221,
-   "nombre": "H. Satara",
-   "pais": "aus",
-   "ranking": null
+   "id": 1251,
+   "nombre": "Dominik Palan",
+   "pais": "cze",
+   "ranking": 608
   },
   "j2": {
-   "id": 1251,
-   "nombre": "D. Palan",
-   "pais": null,
-   "ranking": null
+   "id": 11221,
+   "nombre": "Harrison Satara",
+   "pais": "aus",
+   "ranking": 1421
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T23:45:23.808Z",
+  "visto": "2026-11-15T01:45:28.234Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2628",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T01:45:07.761417Z",
+   "age_seconds": 20,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "15",
+    "0"
+   ],
+   "received_at": "2026-11-15T01:45:07.608384Z",
+   "sequence": 48,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-15T01:45:07.761409Z",
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220207": {
   "id": 220207,
@@ -49387,7 +49533,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T01:00:00Z",
+  "horario": "2026-11-15T01:10:00Z",
   "j1": {
    "id": 1012,
    "nombre": "Evan Zhu",
@@ -49396,16 +49542,63 @@
   },
   "j2": {
    "id": 5389,
-   "nombre": "D. Jovanovski",
-   "pais": null,
-   "ranking": null
+   "nombre": "Daniel Jovanovski",
+   "pais": "aus",
+   "ranking": 1406
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-14T23:45:23.808Z",
+  "visto": "2026-11-15T01:45:28.234Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2628",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T01:45:26.457073Z",
+   "age_seconds": 1,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "30",
+    "40"
+   ],
+   "received_at": "2026-11-15T01:45:26.308636Z",
+   "sequence": 55,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-15T01:45:26.457069Z",
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220208": {
   "id": 220208,
