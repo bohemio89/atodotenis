@@ -329,8 +329,9 @@ async function main() {
     estado.calendario = ahora.toISOString();
   }
 
-  // 3) Jugadores y rankings: una vez por semana, después del cierre semanal de torneos
-  if (estado.semanaJugadores !== semanaActual && (ahora.getUTCDay() !== 1 || ahora.getUTCHours() >= 12)) {
+  // 3) Jugadores y rankings: lunes desde las 18:00 UTC (13:00 ET / 20:00 Israel),
+  // con margen para que ATP/WTA publiquen y propaguen los rankings oficiales.
+  if (estado.semanaJugadores !== semanaActual && ahora.getUTCDay() === 1 && ahora.getUTCHours() >= 18) {
     const lista = {};
     for (let i = 0; i < C.jugadoresPaginas; i++) {
       const r = await api(`players?limit=200&offset=${i * 200}`);
