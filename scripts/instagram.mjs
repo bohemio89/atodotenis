@@ -81,50 +81,75 @@ function hashtags(n) {
 const fotoNota = (n) => (n.imagen?.url && (n.imagen.ancho || 0) >= 1200 ? n.imagen : null);
 
 function textoPublicacion(n) {
-  const partes = [n.titulo, n.bajada];
-  if (n.declaracion?.texto) partes.push(`${n.declaracion.jugador}: «${n.declaracion.texto}»`);
-  partes.push('La nota completa, en el link de la bio.');
-  // El crédito de la foto va impreso en la imagen; el texto queda limpio.
-  partes.push(hashtags(n));
-  return partes.join('\n\n');
+  const g = n.resultado?.ganador?.nombre || n.jugadores?.[0] || 'El ganador';
+  const rival = n.resultado?.perdedor?.nombre || n.jugadores?.[1] || 'su rival';
+  const ronda = n.resultado?.ronda || '';
+  const sets = (n.resultado?.sets || []).map((x) => `${x[0]}-${x[1]}`).join(' · ');
+  const gancho = /F/i.test(ronda) && !/SF/i.test(ronda)
+    ? '¡Tenemos campeón!'
+    : /SF/i.test(ronda) ? `${g} está en la final` : `${g} se quedó con el triunfo`;
+  const pregunta = /SF/i.test(ronda)
+    ? `¿Cómo ves a ${g} en la final?`
+    : /F/i.test(ronda) ? '¿Qué te pareció esta final?' : `¿Te sorprendió el resultado entre ${g} y ${rival}?`;
+  const partes = [
+    `🎾 ${gancho}`,
+    `${n.titulo}. ${sets ? `Marcador: ${sets}.` : ''}`,
+    n.bajada,
+    pregunta + ' Te leemos en los comentarios 👇',
+    'Seguí toda la actualidad del tenis en A Todo Tenis.',
+    hashtags(n)
+  ];
+  return partes.filter(Boolean).join('\\n\\n');
 }
 
 function html(n) {
   const fuentes = (p) => `file://${path.join(ROOT, 'node_modules/@fontsource', p)}`;
   const r = n.resultado || {};
   const sets = Array.isArray(r.sets) ? r.sets : [];
-  const fila = (nombre, idx, gana) => `<div class="fila${gana ? '' : ' pierde'}"><span>${esc(apellido(nombre))}</span>${sets.map((s) => `<b>${esc(s[idx])}</b>`).join('')}</div>`;
-  const frase = n.declaracion?.texto && n.declaracion.texto.length < (fotoNota(n) ? 120 : 150)
-    ? `<p class="cita">«${esc(n.declaracion.texto)}»<br><span>— ${esc(n.declaracion.jugador)}</span></p>`
-    : `<p class="bajada">${esc(n.bajada)}</p>`;
+  const ganador = r.ganador?.nombre || n.jugadores?.[0] || '';
+  const perdedor = r.perdedor?.nombre || n.jugadores?.[1] || '';
+  const fotoG = n.imagen?.url || '';
+  const fotoP = n.fotoRival?.url || '';
+  const creditos = [n.imagen?.credito, n.fotoRival?.credito].filter(Boolean);
+  const ronda = ({ SF: 'SEMIFINAL', F: 'FINAL', QF: 'CUARTOS DE FINAL' })[r.ronda] || (n.categoria || n.torneo || 'TENIS').toUpperCase();
+  const headline = r.ronda === 'SF' ? '¡A LA FINAL!' : r.ronda === 'F' ? '¡CAMPEÓN!' : '¡VICTORIA!';
+  const apellido = (x) => esc(String(x || '').trim().split(/\\s+/).slice(-1)[0]);
+  const fila = (nombre, idx, gana) => `<div class="score-row ${gana ? 'winner' : ''}"><span class="name">${apellido(nombre)}</span>${sets.map((set) => `<b>${esc(set[idx])}</b>`).join('')}</div>`;
+  const imagenes = fotoG && fotoP
+    ? `<div class="duo"><div class="portrait left" style="background-image:url('${fotoG}');background-position:${esc(n.imagen?.foco || 'center 18%')}"></div><div class="portrait right" style="background-image:url('${fotoP}');background-position:${esc(n.fotoRival?.foco || 'center 18%')}"></div><div class="duo-shade"></div></div>`
+    : fotoG ? `<div class="hero" style="background-image:url('${fotoG}');background-position:${esc(n.imagen?.foco || 'center 18%')}"></div><div class="hero-shade"></div>`
+      : `<div class="hero-fallback"></div>`;
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:Inter;font-weight:400;src:url(${fuentes('inter/files/inter-latin-400-normal.woff2')})}
 @font-face{font-family:Montserrat;font-weight:800;src:url(${fuentes('montserrat/files/montserrat-latin-800-normal.woff2')})}
 @font-face{font-family:Montserrat;font-weight:900;font-style:italic;src:url(${fuentes('montserrat/files/montserrat-latin-900-italic.woff2')})}
 @font-face{font-family:RC;font-weight:700;src:url(${fuentes('roboto-condensed/files/roboto-condensed-latin-700-normal.woff2')})}
-body{margin:0}
-#p{width:1080px;height:1350px;background:#12161B;color:#F2F4F5;font-family:Inter;position:relative;overflow:hidden}
-.foto{position:absolute;inset:0 0 auto 0;height:760px;background-size:cover;background-position:center 22%}
-.foto::after{content:'';position:absolute;left:0;right:0;bottom:0;height:260px;background:linear-gradient(rgba(18,22,27,0),#12161B)}
-.credito{position:absolute;right:24px;top:716px;font-size:18px;color:rgba(255,255,255,.75);z-index:2;max-width:700px;text-align:right}
-.cancha{position:absolute;inset:0 0 auto 0;height:520px;background:${n.superficie === 'clay' ? '#A8502C' : n.superficie === 'grass' ? '#2F6B4A' : '#2B5C8A'}}
-.chip{position:absolute;left:64px;top:56px;background:#C6F432;color:#12161B;font:800 30px Montserrat;padding:12px 20px;border-radius:10px;letter-spacing:.04em;text-transform:uppercase;max-width:620px}
-.marca{position:absolute;right:64px;top:62px;font:italic 900 40px Montserrat;letter-spacing:-.02em}.marca b{color:#C6F432}
-.cuerpo{position:absolute;left:64px;right:64px;top:560px}
-.tit{font:800 30px Montserrat;color:#C6F432;letter-spacing:.06em}
-.fila{display:flex;align-items:center;font:800 58px Montserrat;padding:12px 0;border-bottom:2px solid #2A3540}
-.fila span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fila b{width:100px;text-align:center;font-family:RC;color:#C6F432}
-.fila.pierde{color:#9AA5B1;border:0}.fila.pierde b{color:#9AA5B1}
-.bajada,.cita{margin:26px 0 0;font-size:34px;line-height:1.35;color:#C9D1D9}
-.cita{font-size:40px;color:#F2F4F5}.cita span{font-size:30px;color:#9AA5B1}
-.pie{position:absolute;left:64px;right:64px;bottom:56px;display:flex;justify-content:space-between;font-size:30px;color:#9AA5B1}.pie b{font:800 30px Montserrat;color:#F2F4F5}
+*{box-sizing:border-box}body{margin:0}#p{width:1080px;height:1350px;background:#10131A;color:#F6F7F8;font-family:Inter;position:relative;overflow:hidden}
+.duo,.hero{position:absolute;inset:0 0 auto;height:920px;display:flex;background:#202633}
+.portrait{position:absolute;top:0;bottom:0;width:50%;background-size:cover}
+.portrait.left{left:0}.portrait.right{right:0}
+.duo-shade,.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,20,.18) 0%,rgba(8,12,20,.02) 28%,rgba(8,12,20,.18) 50%,#10131A 100%),linear-gradient(90deg,rgba(8,12,20,.08),rgba(8,12,20,.0) 45%,rgba(8,12,20,.2))}
+.hero{background-size:cover;background-position:center 18%}.hero-fallback{position:absolute;inset:0 0 auto;height:760px;background:radial-gradient(circle at 50% 30%,#31506c,#10131A 72%)}
+.chip{position:absolute;left:56px;top:52px;background:#C6F432;color:#10131A;font:800 26px Montserrat;padding:12px 18px;border-radius:8px;letter-spacing:.06em;z-index:3}
+.marca{position:absolute;right:56px;top:58px;font:italic 900 36px Montserrat;z-index:3}.marca b{color:#C6F432}
+.headline{position:absolute;left:56px;right:56px;top:650px;z-index:3;font:900 104px/.95 Montserrat;letter-spacing:-.04em;text-shadow:0 4px 28px rgba(0,0,0,.55)}
+.sub{display:inline-block;margin-top:18px;font:800 30px Montserrat;letter-spacing:.08em;color:#C6F432}
+.score-card{position:absolute;left:48px;right:48px;top:870px;padding:28px 34px 26px;background:rgba(22,27,36,.97);border:1px solid rgba(255,255,255,.12);border-radius:22px;z-index:4;box-shadow:0 14px 50px rgba(0,0,0,.32)}
+.score-label{font:800 24px Montserrat;letter-spacing:.1em;color:#C6F432;margin-bottom:10px}
+.score-row{display:flex;align-items:center;min-height:70px;border-bottom:1px solid #34404D;font:800 40px Montserrat}
+.score-row:last-child{border:0}.score-row .name{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.score-row b{width:70px;text-align:center;font:700 40px RC;color:#AEB8C4}
+.score-row.winner .name,.score-row.winner b{color:#C6F432}
+.meta{position:absolute;left:58px;right:58px;bottom:62px;z-index:4;display:flex;justify-content:space-between;align-items:end}
+.torneo{font:800 22px Montserrat;letter-spacing:.08em;color:#AEB8C4}
+.credito{font-size:13px;color:#7D8998;text-align:right;max-width:65%}
+.pie{font:800 22px Montserrat;color:#F6F7F8;letter-spacing:.04em}
 </style></head><body><div id="p">
-${fotoNota(n) ? `<div class="foto" style="background-image:url('${esc(fotoNota(n).url)}');background-position:${esc(fotoNota(n).foco || 'center 20%')}"></div><div class="credito">Foto: ${esc(fotoNota(n).credito || 'Wikimedia Commons')}</div>` : `<div class="cancha"><svg width="1080" height="520"><g fill="none" stroke="#fff" stroke-width="5" opacity=".28"><path d="M160 520 350 200h380l190 320"/><path d="M235 420h610M540 420V200M290 310h500"/></g></svg></div>`}
-<div class="chip">${esc(n.categoria || n.torneo || 'Tenis')}</div><div class="marca">A Todo <b>Tenis</b></div>
-<div class="cuerpo" style="top:${fotoNota(n) ? 770 : 560}px">${sets.length && r.ganador ? `<div class="tit">RESULTADO</div>${fila(r.ganador.nombre, 0, true)}${fila(r.perdedor?.nombre, 1, false)}` : `<div class="fila" style="font-size:56px;white-space:normal;border:0">${esc(n.titulo)}</div>`}
-${frase}</div>
-<div class="pie"><span>La nota completa en el link de la bio</span><b>@${USUARIO}</b></div>
+${imagenes}
+<div class="chip">${esc(n.categoria || n.torneo || 'TENIS')}</div><div class="marca">A Todo <b>Tenis</b></div>
+<div class="headline">${esc(headline)}<br><span class="sub">${esc(ronda)} · ${esc(n.torneo || '')}</span></div>
+<div class="score-card"><div class="score-label">RESULTADO FINAL</div>${sets.length && ganador ? fila(ganador, 0, true) + fila(perdedor, 1, false) : `<div class="score-row">${esc(n.titulo)}</div>`}</div>
+<div class="meta"><div><div class="torneo">A TODO TENIS</div><div class="pie">@atodotenis_web</div></div><div class="credito">${creditos.map(esc).join(' · ')}</div></div>
 </div></body></html>`;
 }
 
@@ -150,7 +175,17 @@ async function preparar() {
       const av = leerJSON('data/avatares.json', {})[ganador] || {};
       const autor = elegida?.autor || av.autor;
       const lic = elegida?.licencia || av.licencia;
-      n.imagen = { url: dato, ancho: 1280, foco: focoJugador(ganador), credito: autor ? `${autor} / ${lic || 'CC'}, Wikimedia Commons` : 'Wikimedia Commons' };
+      n.imagen = { url: dato, ancho: 1280, foco: focoJugador(ganador), credito: autor ? `${autor} / ${lic || 'CC'}` : 'Wikimedia Commons' };
+      const rival = n.resultado?.perdedor?.nombre || n.jugadores?.find((j) => j !== ganador);
+      if (rival) {
+        const fotoRival = await fotoJugador(rival, 1280);
+        if (fotoRival) {
+          const slugR = rival.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          const elegidaR = leerJSON('scripts/ig-fotos.json', {})[slugR];
+          const avR = leerJSON('data/avatares.json', {})[rival] || {};
+          n.fotoRival = { url: fotoRival, foco: focoJugador(rival), credito: elegidaR?.autor || avR.autor ? `${elegidaR?.autor || avR.autor} / ${elegidaR?.licencia || avR.licencia || 'CC'}` : 'Wikimedia Commons' };
+        }
+      }
     } else log('Sin foto revisada de', ganador, '- va la cancha.');
   }
   const { chromium } = await import('playwright-core');
