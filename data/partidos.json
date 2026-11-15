@@ -53990,7 +53990,7 @@
    "ranking": 3
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-15T21:54:16.203Z",
   "torneoClave": "wta|Finals - Riyadh",
@@ -57133,9 +57133,9 @@
  "220480": {
   "id": 220480,
   "tour": "challenger",
-  "torneo": "Drummondville",
-  "ronda": "Drummondville - Semi-finals",
-  "rondaCod": "SF",
+  "torneo": "Drummondville, Canada, Qualifying",
+  "ronda": "Qualification Round 1",
+  "rondaCod": "Q1",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
@@ -57155,18 +57155,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T21:54:16.203Z",
+  "visto": "2026-11-15T22:15:22.450Z",
   "tier": null,
   "importante": false,
   "torneoId": "2445",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T21:53:51.440651Z",
-   "age_seconds": 24,
+   "accepted_at": "2026-11-15T22:15:01.191636Z",
+   "age_seconds": 20,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -57174,32 +57174,34 @@
    },
    "games": [
     [
-     6
+     7,
+     1
     ],
     [
-     5
+     6,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 7,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "30",
-    "40"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-15T21:53:51.173525Z",
-   "sequence": 89,
+   "received_at": "2026-11-15T22:15:01.019108Z",
+   "sequence": 113,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-15T21:54:02.462293Z",
+   "timestamp": "2026-11-15T22:15:10.843690Z",
    "puntos": [
-    "30",
-    "40"
+    "15",
+    "15"
    ],
    "saca": 2
   },
@@ -57628,7 +57630,7 @@
    "ranking": 959
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-15T21:54:16.203Z",
   "tier": null,
@@ -57902,7 +57904,7 @@
    "ranking": 371
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-15T21:54:16.203Z",
   "tier": null,
