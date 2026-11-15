@@ -49010,7 +49010,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-15T04:30:00Z",
+  "horario": "2026-11-15T04:40:00Z",
   "j1": {
    "id": 77,
    "nombre": "Yu-Hsiou Hsu",
@@ -49026,7 +49026,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T04:45:24.829Z",
+  "visto": "2026-11-15T05:45:22.617Z",
   "torneoClave": "challenger|Matsuyama",
   "tier": null,
   "importante": false,
@@ -49034,11 +49034,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T04:45:16.128303Z",
-   "age_seconds": 8,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-15T05:45:16.219203Z",
+   "age_seconds": 6,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -49046,32 +49046,34 @@
    },
    "games": [
     [
-     1
+     6,
+     0
     ],
     [
-     1
+     3,
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 7,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
-    "40",
-    "0"
+    "30",
+    "40"
    ],
-   "received_at": "2026-11-15T04:45:15.973960Z",
-   "sequence": 15,
+   "received_at": "2026-11-15T05:45:15.192414Z",
+   "sequence": 94,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-15T04:45:16.128301Z",
+   "timestamp": "2026-11-15T05:45:16.219201Z",
    "puntos": [
-    "40",
-    "0"
+    "30",
+    "40"
    ],
    "saca": 1
   },
@@ -49182,7 +49184,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T04:45:24.828Z",
+  "visto": "2026-11-15T05:45:22.617Z",
   "torneoClave": "challenger|Brisbane 3",
   "tier": null,
   "importante": false,
@@ -49190,11 +49192,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T04:44:53.034195Z",
-   "age_seconds": 31,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-15T05:45:01.850088Z",
+   "age_seconds": 20,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 6,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -49202,32 +49204,34 @@
    },
    "games": [
     [
-     5
+     7,
+     4
     ],
     [
-     4
+     6,
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "15",
+    "0"
    ],
-   "received_at": "2026-11-15T04:44:52.638534Z",
-   "sequence": 58,
+   "received_at": "2026-11-15T05:45:01.400293Z",
+   "sequence": 121,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-15T04:45:23.924572Z",
+   "timestamp": "2026-11-15T05:45:01.850082Z",
    "puntos": [
-    "30",
-    "30"
+    "15",
+    "0"
    ],
    "saca": 2
   },
@@ -49723,18 +49727,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T04:45:24.828Z",
+  "visto": "2026-11-15T05:45:22.617Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T04:45:14.027326Z",
-   "age_seconds": 10,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-15T05:44:54.792016Z",
+   "age_seconds": 27,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -49743,33 +49747,35 @@
    "games": [
     [
      6,
-     5
+     7,
+     2
     ],
     [
      7,
-     3
+     6,
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "30",
+    "40"
    ],
-   "received_at": "2026-11-15T04:45:13.525428Z",
-   "sequence": 136,
+   "received_at": "2026-11-15T05:44:53.994434Z",
+   "sequence": 215,
    "server": 2,
    "sets": [
-    0,
+    1,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-15T04:45:23.918650Z",
+   "timestamp": "2026-11-15T05:45:19.574637Z",
    "puntos": [
-    "0",
-    "0"
+    "30",
+    "40"
    ],
    "saca": 2
   },
@@ -49986,18 +49992,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T04:45:24.829Z",
+  "visto": "2026-11-15T05:45:22.617Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T04:44:58.441907Z",
-   "age_seconds": 26,
+   "accepted_at": "2026-11-15T05:45:08.714872Z",
+   "age_seconds": 13,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -50005,32 +50011,34 @@
    },
    "games": [
     [
+     6,
      4
     ],
     [
-     2
+     3,
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "15",
-    "40"
+    "30",
+    "0"
    ],
-   "received_at": "2026-11-15T04:44:57.925242Z",
-   "sequence": 41,
+   "received_at": "2026-11-15T05:45:08.073498Z",
+   "sequence": 116,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-15T04:45:19.872003Z",
+   "timestamp": "2026-11-15T05:45:19.746374Z",
    "puntos": [
-    "15",
-    "40"
+    "30",
+    "0"
    ],
    "saca": 1
   },
@@ -50046,7 +50054,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T04:55:00Z",
+  "horario": "2026-11-15T04:40:00Z",
   "j1": {
    "id": 828,
    "nombre": "Kokoro Isomura",
@@ -50062,18 +50070,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T04:45:24.829Z",
+  "visto": "2026-11-15T05:45:22.617Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T04:45:06.835124Z",
-   "age_seconds": 17,
+   "accepted_at": "2026-11-15T05:44:55.951398Z",
+   "age_seconds": 26,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 8,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -50081,32 +50089,32 @@
    },
    "games": [
     [
-     0
+     6
     ],
     [
-     0
+     6
     ]
    ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "is_tiebreak": true,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
-    "AD",
-    "40"
+    "3",
+    "0"
    ],
-   "received_at": "2026-11-15T04:45:06.379586Z",
-   "sequence": 9,
+   "received_at": "2026-11-15T05:44:55.012358Z",
+   "sequence": 102,
    "server": 2,
    "sets": [
     0,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-15T04:45:21.592638Z",
+   "timestamp": "2026-11-15T05:45:04.759825Z",
    "puntos": [
-    "AD",
-    "40"
+    "3",
+    "0"
    ],
    "saca": 2
   },
@@ -50370,7 +50378,7 @@
    "ranking": 867
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-15T04:45:24.828Z",
   "tier": null,
@@ -50450,18 +50458,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T04:45:24.829Z",
+  "visto": "2026-11-15T05:45:22.617Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-15T04:43:22.619150Z",
-   "age_seconds": 122,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-15T05:44:55.956440Z",
+   "age_seconds": 26,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -50469,32 +50477,34 @@
    },
    "games": [
     [
-     3
+     6,
+     4
     ],
     [
-     0
+     2,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
     "0",
-    "0"
+    "15"
    ],
-   "received_at": "2026-11-15T04:43:21.979576Z",
-   "sequence": 34,
+   "received_at": "2026-11-15T05:44:55.587182Z",
+   "sequence": 111,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
-   "stale": true,
-   "timestamp": "2026-11-15T04:45:23.817976Z",
+   "stale": false,
+   "timestamp": "2026-11-15T05:45:17.432414Z",
    "puntos": [
     "0",
-    "0"
+    "15"
    ],
    "saca": 2
   },
@@ -50510,25 +50520,74 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-15T04:40:00Z",
+  "horario": "2026-11-15T04:50:00Z",
   "j1": {
    "id": 459,
-   "nombre": "Y. Takahashi",
-   "pais": null,
-   "ranking": null
+   "nombre": "Yusuke Takahashi",
+   "pais": "jpn",
+   "ranking": 795
   },
   "j2": {
    "id": 2057,
-   "nombre": "K. Ogura",
-   "pais": null,
-   "ranking": null
+   "nombre": "Kosuke Ogura",
+   "pais": "jpn",
+   "ranking": 766
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T03:45:24.625Z",
+  "visto": "2026-11-15T05:45:22.617Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T05:37:17.281355Z",
+   "age_seconds": 485,
+   "changing_sources_count": 0,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-15T05:37:17.077850Z",
+   "sequence": 71,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": true,
+   "timestamp": "2026-11-15T05:45:16.157938Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220226": {
   "id": 220226,
@@ -50577,16 +50636,65 @@
   },
   "j2": {
    "id": 43639,
-   "nombre": "T. Ishikawa",
-   "pais": null,
+   "nombre": "Toya Ishikawa",
+   "pais": "jpn",
    "ranking": null
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T03:45:24.625Z",
+  "visto": "2026-11-15T05:45:22.617Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-15T05:45:14.357190Z",
+   "age_seconds": 8,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4,
+     2
+    ],
+    [
+     6,
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 7,
+   "origin": "observed",
+   "points": [
+    "30",
+    "0"
+   ],
+   "received_at": "2026-11-15T05:45:13.133255Z",
+   "sequence": 82,
+   "server": 1,
+   "sets": [
+    0,
+    1
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-15T05:45:14.357185Z",
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220228": {
   "id": 220228,
