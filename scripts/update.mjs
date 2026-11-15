@@ -18,8 +18,53 @@ const horasHastaReinicio = (() => {
 })();
 
 const estado = leerJSON('data/estado.json', {});
-if (estado.diaAPI !== diaAPI) {
-  estado.diaAPI = diaAPI; estado.usadas = 0; estado.jugadoresHoy = false;
+const semanaISO = (fecha) => {
+  const d = new Date(Date.UTC(fecha.getUTCFullYear(), fecha.getUTCMonth(), fecha.getUTCDate()));
+  d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+  const inicio = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  const n = Math.ceil((((d - inicio) / 86400000) + 1) / 7);
+  return `${d.getUTCFullYear()}-W${String(n).padStart(2, '0')}`;
+};
+const semanaActual = semanaISO(ahora);
+const ventanaRankingUTC = Date.UTC(ahora.getUTCFullYear(), ahora.getUTCMonth(), ahora.getUTCDate() - ((ahora.getUTCDay() + 6) % 7), 18, 0, 0);
+const ventanaRanking = ahora.getTime() >= ventanaRankingUTC;
+const reinicioAPI = estado.diaAPI !== diaAPI;
+if (reinicioAPI) {
+  estado.diaAPI = diaAPI;
+  estado.usadas = 0;
+  estado.jugadoresHoy = false;
+}
+
+async function consultarUsoAPI() {
+  try {
+    const r = await fetch(`${BASE}/usage`, {
+      headers: { Authorization: `Bearer ${KEY}` },
+      signal: AbortSignal.timeout(15000)
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const uso = await r.json();
+    const llamadas = Number(uso.today?.calls);
+    if (Number.isFinite(llamadas)) {
+      // El endpoint de uso es la fuente de verdad. Una bajada confirma el reinicio
+      // de la cuota, incluso si el estado del workflow quedó desfasado.
+      if (estado.usoAPI?.llamadas != null && llamadas < estado.usoAPI.llamadas) {
+        estado.usadas = llamadas;
+        estado.diaAPI = diaAPI;
+        estado.jugadoresHoy = false;
+      } else {
+        estado.usadas = Math.max(estado.usadas || 0, llamadas);
+      }
+    }
+    const snapshot = {
+      llamadas: Number.isFinite(llamadas) ? llamadas : null,
+      restantes: Number.isFinite(Number(uso.today?.remaining_day)) ? Number(uso.today.remaining_day) : null,
+      errores: Number.isFinite(Number(uso.today?.errors)) ? Number(uso.today.errors) : null
+    };
+    if (JSON.stringify(snapshot) !== JSON.stringify(estado.usoAPI || null)) estado.usoAPI = snapshot;
+    log(`Uso real API: ${snapshot.llamadas ?? 's/d'} llamadas, ${snapshot.restantes ?? 's/d'} restantes; contador local ${estado.usadas}/${C.presupuestoDiario}`);
+  } catch (e) {
+    log('No se pudo consultar /usage; se conserva el contador local:', e.message);
+  }
 }
 
 let esperoUnaVez = false;
@@ -198,21 +243,24 @@ function prioridad(m) {
 
 // ---------- Corrida ----------
 async function main() {
-  // La actualización completa se limita a una vez cada 50 minutos, pero no se debe
-  // dejar de vigilar partidos en directo: si no, un partido que termina entre corridas
-  // queda como "en_vivo" y el generador de notas nunca lo recibe como finalizado.
-  if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < 50 && !process.env.FORZAR) {
-    const ahoraMs = ahora.getTime();
-    const hayPartidosEnVentana = Object.values(partidos).some((p) => {
-      const inicio = new Date(p.horario || '').getTime();
-      return p.estado === 'en_vivo' || p.estado === 'por_confirmar' ||
-        (p.estado === 'programado' && Number.isFinite(inicio) &&
-          inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000);
-    });
+  await consultarUsoAPI();
+  guardarJSON('data/estado.json', estado);
+  const ahoraMs = ahora.getTime();
+  const hayPartidosEnVentana = Object.values(partidos).some((p) => {
+    const inicio = new Date(p.horario || '').getTime();
+    return p.estado === 'en_vivo' || p.estado === 'por_confirmar' ||
+      (p.estado === 'programado' && Number.isFinite(inicio) &&
+        inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000);
+  });
+  const intervaloActualizacion = hayPartidosEnVentana ? 30 : 60;
+  const debeActualizarRanking = ventanaRanking && estado.semanaJugadores !== semanaActual;
+  // No considerar el ranking actualizado por una sincronización diaria anterior
+  // al lunes 18:00 UTC: la marca semanal solo se escribe tras la consulta programada.
+  if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < intervaloActualizacion && !process.env.FORZAR) {
     const ultimaVigilancia = estado.ultimaConsultaEnVivo ? new Date(estado.ultimaConsultaEnVivo).getTime() : 0;
-    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 20 * 60000;
+    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 30 * 60000;
     // Reservar primero las consultas de las próximas actualizaciones completas y calendarios.
-    const corridasRestantesVigilancia = Math.max(0, horasHastaReinicio);
+    const corridasRestantesVigilancia = Math.ceil(horasHastaReinicio * 60 / intervaloActualizacion);
     const calendariosRestantesVigilancia = Math.floor(corridasRestantesVigilancia / C.calendarioCadaHoras) * C.toursCalendario.length;
     const reservaFuturaVigilancia = corridasRestantesVigilancia + calendariosRestantesVigilancia;
     const presupuestoVigilancia = C.presupuestoDiario - C.reserva - estado.usadas - reservaFuturaVigilancia;
@@ -234,7 +282,7 @@ async function main() {
 
       // Los partidos que desaparecieron del listado en vivo se confirman individualmente.
       // Se procesan de a pocos para respetar el presupuesto diario; los restantes esperan
-      // la próxima vigilancia de 15 minutos.
+      // la próxima vigilancia de 30 minutos.
       const pendientes = Object.values(partidos)
         .filter((p) => p.estado === 'por_confirmar' && !p.confirmado && p.horario &&
           ahoraMs - new Date(p.horario).getTime() <= 6 * 3600e3)
@@ -293,7 +341,7 @@ async function main() {
   }
 
   // 3) Jugadores y ranking, una vez por día API
-  if (!estado.jugadoresHoy) {
+  if (debeActualizarRanking) {
     const lista = {};
     for (let i = 0; i < C.jugadoresPaginas; i++) {
       const r = await api(`players?limit=200&offset=${i * 200}`);
@@ -310,6 +358,7 @@ async function main() {
     jugadores.lista = lista; jugadores.actualizado = ahora.toISOString();
     guardarJSON('data/jugadores.json', jugadores);
     estado.jugadoresHoy = true;
+    estado.semanaJugadores = semanaActual;
     // Completar país/ranking en partidos que vinieron del calendario
     for (const p of Object.values(partidos)) for (const k of ['j1', 'j2']) {
       const j = p[k] && lista[p[k].id];
@@ -319,7 +368,7 @@ async function main() {
   }
 
   // 4) Confirmar resultados finales con el presupuesto que sobra
-  const corridasRestantes = Math.max(0, horasHastaReinicio);
+  const corridasRestantes = Math.ceil(horasHastaReinicio * 60 / intervaloActualizacion);
   const calendariosRestantes = Math.floor(corridasRestantes / C.calendarioCadaHoras) * C.toursCalendario.length;
   const fijasFuturas = corridasRestantes + calendariosRestantes;
   const disponibles = C.presupuestoDiario - estado.usadas - C.reserva - fijasFuturas;
