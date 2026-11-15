@@ -325,7 +325,7 @@ async function main() {
   }
 
   // 3) Jugadores y rankings: una vez por semana, después del cierre semanal de torneos
-  if (estado.semanaJugadores !== semanaActual) {
+  if (estado.semanaJugadores !== semanaActual && (ahora.getUTCDay() !== 1 || ahora.getUTCHours() >= 12)) {
     const lista = {};
     for (let i = 0; i < C.jugadoresPaginas; i++) {
       const r = await api(`players?limit=200&offset=${i * 200}`);
