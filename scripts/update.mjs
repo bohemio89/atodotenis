@@ -234,6 +234,9 @@ async function main() {
   guardarJSON('data/estado.json', estado);
   const ahoraMs = ahora.getTime();
   const semanaActual = semanaISO(ahora);
+  // Migración sin repetir el ranking: si el estado anterior ya sincronizó jugadores
+  // esta semana, se adopta esa semana como última publicación conocida.
+  if (!estado.semanaJugadores && estado.jugadoresHoy) estado.semanaJugadores = semanaActual;
   const hayPartidosEnVentana = Object.values(partidos).some((p) => {
     const inicio = new Date(p.horario || '').getTime();
     return p.estado === 'en_vivo' || p.estado === 'por_confirmar' ||
