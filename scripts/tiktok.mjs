@@ -37,6 +37,24 @@ const marca = (acento) => `<div class="marca" style="top:72px;right:120px;color:
 const chip = (texto, top, tema) => `<div class="chip" style="top:${top}px;background:${tema.primario};color:#fff;box-shadow:0 0 24px ${tema.brillo}88">${esc(texto)}</div>`;
 const ape = (s) => String(s).trim().split(/\s+/).slice(-1)[0];
 
+function temaTorneo(nombre, esWTA) {
+  const t = String(nombre || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const temas = [
+    [/wta finals/, { fondo:'#17072D', panel:'#2A1048', primario:'#8B45D6', brillo:'#C17BFF', acento:'#D9FF42' }],
+    [/atp finals|nitto/, { fondo:'#06152E', panel:'#10294B', primario:'#087BFF', brillo:'#39B9FF', acento:'#D9FF42' }],
+    [/indian wells/, { fondo:'#24103B', panel:'#3B1D5A', primario:'#8F4BCB', brillo:'#F4A14D', acento:'#D9FF42' }],
+    [/roland garros|french open/, { fondo:'#291009', panel:'#4A2117', primario:'#D9572B', brillo:'#FF9C53', acento:'#F8E4BD' }],
+    [/wimbledon/, { fondo:'#071F18', panel:'#123D2B', primario:'#6C3D91', brillo:'#B58BDB', acento:'#E1EBAA' }],
+    [/us open/, { fondo:'#07152D', panel:'#142A4A', primario:'#D9364B', brillo:'#FF7180', acento:'#F4D36B' }],
+    [/australian open/, { fondo:'#061A43', panel:'#0B3470', primario:'#009DD8', brillo:'#4DEBFF', acento:'#D9FF42' }],
+    [/miami open/, { fondo:'#062B35', panel:'#07505B', primario:'#00AFA5', brillo:'#FF7A78', acento:'#F8E36A' }]
+  ];
+  const match = temas.find(([rx]) => rx.test(t));
+  if (match) return match[1];
+  return esWTA ? { fondo:'#17072D', panel:'#2A1048', primario:'#8B45D6', brillo:'#C17BFF', acento:'#D9FF42' }
+    : { fondo:'#06152E', panel:'#10294B', primario:'#087BFF', brillo:'#39B9FF', acento:'#D9FF42' };
+}
+
 async function crearPosterTikTok({ n, foto, tema, torneo, gancho, ag, ap, sets, pregunta }) {
   const { chromium } = await import('playwright-core');
   const navegador = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' });
@@ -52,17 +70,17 @@ async function crearPosterTikTok({ n, foto, tema, torneo, gancho, ag, ap, sets, 
     for (const slide of slides) {
       const contenido = slide.modo === 'hero'
         ? `<div class="heroTitle">${esc(slide.titulo)}<span>${esc(slide.subtitulo)}</span></div><div class="winner">${esc(slide.linea)}</div>`
-        : `<div class="scoreTitle">${esc(slide.titulo)}</div><div class="versus">${esc(slide.subtitulo)}</div><div class="score">${esc(slide.linea)}</div><div class="winner">${esc(n.resultado.ganador.nombre)} · GANADOR/A</div><div class="question">${esc(pregunta)}</div>`;
+        : `<div class="scoreTitle">${esc(slide.titulo)}</div><div class="versus">${esc(slide.subtitulo)}</div><div class="score">${esc(slide.linea)}</div><div class="winner">${esc(n.resultado.ganador.nombre)}</div><div class="question">${esc(pregunta)}</div>`;
       const html = `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:Inter;font-weight:400;src:url(file://${path.join(ROOT,'node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2')})}
 @font-face{font-family:Montserrat;font-weight:800;src:url(file://${path.join(ROOT,'node_modules/@fontsource/montserrat/files/montserrat-latin-800-normal.woff2')})}
 @font-face{font-family:Montserrat;font-weight:900;font-style:italic;src:url(file://${path.join(ROOT,'node_modules/@fontsource/montserrat/files/montserrat-latin-900-italic.woff2')})}
 @font-face{font-family:RC;font-weight:700;src:url(file://${path.join(ROOT,'node_modules/@fontsource/roboto-condensed/files/roboto-condensed-latin-700-normal.woff2')})}
 *{box-sizing:border-box}body{margin:0}#p{width:1080px;height:1920px;position:relative;overflow:hidden;background:${tema.fondo};color:#fff;font-family:Inter}
-.hero{position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(4,7,18,.06),rgba(4,7,18,.12) 35%,${tema.fondo} 100%),linear-gradient(115deg,${tema.primario}55,transparent 62%),url('${rutaFoto}');background-size:cover;background-position:center 18%}
+.hero{position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.10) 34%,${tema.fondo} 100%),linear-gradient(115deg,${tema.primario}77,transparent 65%),url('${rutaFoto}');background-size:cover;background-position:center 18%;filter:saturate(1.14) contrast(1.08)}.hero:after{content:'';position:absolute;right:-230px;top:430px;width:680px;height:680px;border:44px solid ${tema.primario}88;border-radius:50%;box-shadow:0 0 0 36px ${tema.brillo}22}
 .brand{position:absolute;top:82px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;font:900 italic 44px Montserrat;text-shadow:0 3px 18px #000}.brand b{color:${tema.acento}}
 .event{font:800 27px Montserrat;letter-spacing:.08em;background:${tema.primario};padding:15px 22px;border-radius:9px}
-.heroTitle{position:absolute;left:68px;right:68px;bottom:280px;font:900 italic 142px/.9 Montserrat;letter-spacing:-.05em;text-shadow:0 4px 24px #000}.heroTitle span{display:block;color:${tema.acento};font-size:56px;letter-spacing:.05em;margin-top:24px}
+.heroTitle{position:absolute;z-index:2;left:68px;right:68px;bottom:300px;font:900 italic 154px/.86 Montserrat;letter-spacing:-.06em;text-shadow:0 5px 30px #000;max-width:940px}.heroTitle span{display:block;color:${tema.acento};font-size:56px;letter-spacing:.05em;margin-top:24px}
 .winner{position:absolute;left:68px;right:68px;bottom:110px;font:900 50px Montserrat;text-shadow:0 3px 20px #000}
 .scoreTitle{position:absolute;left:68px;right:68px;top:520px;text-align:center;font:900 italic 94px Montserrat;color:${tema.acento}}
 .versus{position:absolute;left:68px;right:68px;top:690px;text-align:center;font:800 54px Montserrat}
@@ -106,9 +124,7 @@ for (const n of notas) {
   if (!conseguirFfmpeg()) { log('TikTok: no hay ffmpeg, se reintenta en la próxima corrida'); break; }
   const r = n.resultado, g = r.ganador.nombre, p = r.perdedor?.nombre || '';
   const esWTA = /WTA/i.test(`${n.categoria} ${n.torneo}`);
-  const tema = esWTA
-    ? { fondo: '#160A2B', panel: '#24113F', primario: '#8B45D6', brillo: '#C17BFF', acento: '#D7FF3F', etiqueta: 'WTA · TENIS FEMENINO' }
-    : { fondo: '#06162F', panel: '#0C2446', primario: '#087BFF', brillo: '#27B9FF', acento: '#D7FF3F', etiqueta: 'ATP · TENIS MASCULINO' };
+  const tema = { ...temaTorneo(torneo, esWTA), etiqueta: esWTA ? 'WTA' : 'ATP' };
   // Exigir una foto editorial elegida para el ganador; el rival es secundario y su foto es opcional.
   const fotosEditoriales = leerJSON('scripts/ig-fotos.json', {});
   if (!fotosEditoriales[slug(g)]?.url) { log('TikTok: se posterga, falta foto editorial seleccionada del ganador:', g); continue; }
