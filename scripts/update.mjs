@@ -1,6 +1,7 @@
 // Recolector: trae partidos en vivo, calendario, resultados y ranking desde Live Tennis API.
 // Respeta el límite gratuito (100 consultas por día, se reinicia a las 22:00 UTC).
 import { CONFIG, leerJSON, guardarJSON, log, ganador, tourBase, sets } from './lib/util.mjs';
+import { isoWeekKey, isRankingWindowOpen, forecastRuns, forecastCalendarCalls } from './lib/schedule.mjs';
 
 const KEY = process.env.LIVE_TENNIS_API_KEY;
 const BASE = 'https://api.livetennisapi.com/api/public/v1';
@@ -14,20 +15,12 @@ const diaAPI = new Date(ahora.getTime() + (24 - C.horaReinicioUTC) * 3600e3).toI
 const horasHastaReinicio = (() => {
   const r = new Date(ahora); r.setUTCHours(C.horaReinicioUTC, 0, 0, 0);
   if (r <= ahora) r.setUTCDate(r.getUTCDate() + 1);
-  return Math.floor((r - ahora) / 3600e3);
+  return Math.max(0, (r - ahora) / 3600e3);
 })();
 
 const estado = leerJSON('data/estado.json', {});
-const semanaISO = (fecha) => {
-  const d = new Date(Date.UTC(fecha.getUTCFullYear(), fecha.getUTCMonth(), fecha.getUTCDate()));
-  d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
-  const inicio = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-  const n = Math.ceil((((d - inicio) / 86400000) + 1) / 7);
-  return `${d.getUTCFullYear()}-W${String(n).padStart(2, '0')}`;
-};
-const semanaActual = semanaISO(ahora);
-const ventanaRankingUTC = Date.UTC(ahora.getUTCFullYear(), ahora.getUTCMonth(), ahora.getUTCDate() - ((ahora.getUTCDay() + 6) % 7), 18, 0, 0);
-const ventanaRanking = ahora.getTime() >= ventanaRankingUTC;
+const semanaActual = isoWeekKey(ahora);
+const ventanaRanking = isRankingWindowOpen(ahora);
 const reinicioAPI = estado.diaAPI !== diaAPI;
 if (reinicioAPI) {
   estado.diaAPI = diaAPI;
@@ -260,9 +253,9 @@ async function main() {
     const ultimaVigilancia = estado.ultimaConsultaEnVivo ? new Date(estado.ultimaConsultaEnVivo).getTime() : 0;
     const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 30 * 60000;
     // Reservar primero las consultas de las próximas actualizaciones completas y calendarios.
-    const corridasRestantesVigilancia = Math.ceil(horasHastaReinicio * 60 / intervaloActualizacion);
-    const calendariosRestantesVigilancia = Math.floor(corridasRestantesVigilancia / C.calendarioCadaHoras) * C.toursCalendario.length;
-    const reservaFuturaVigilancia = corridasRestantesVigilancia + calendariosRestantesVigilancia;
+    const corridasRestantesVigilancia = forecastRuns(horasHastaReinicio, intervaloActualizacion);
+    const calendariosRestantesVigilancia = forecastCalendarCalls(horasHastaReinicio, C.calendarioCadaHoras, C.toursCalendario.length);
+    const reservaFuturaVigilancia = corridasRestantesVigilancia + calendariosRestantesVigilancia + (debeActualizarRanking ? C.jugadoresPaginas : 0);
     const presupuestoVigilancia = C.presupuestoDiario - C.reserva - estado.usadas - reservaFuturaVigilancia;
     const hayPresupuesto = presupuestoVigilancia > 0;
     const apiEnPausa = estado.pausaHasta && new Date(estado.pausaHasta) > ahora;
@@ -340,8 +333,11 @@ async function main() {
     estado.calendario = ahora.toISOString();
   }
 
-  // 3) Jugadores y ranking, una vez por día API
-  if (debeActualizarRanking) {
+  // 3) Jugadores y ranking, una vez por semana después de la ventana oficial
+  const corridasFuturasAntesRanking = forecastRuns(horasHastaReinicio, intervaloActualizacion);
+  const calendariosFuturosAntesRanking = forecastCalendarCalls(horasHastaReinicio, C.calendarioCadaHoras, C.toursCalendario.length);
+  const presupuestoParaRanking = C.presupuestoDiario - estado.usadas - C.reserva - corridasFuturasAntesRanking - calendariosFuturosAntesRanking;
+  if (debeActualizarRanking && presupuestoParaRanking >= C.jugadoresPaginas) {
     const lista = {};
     for (let i = 0; i < C.jugadoresPaginas; i++) {
       const r = await api(`players?limit=200&offset=${i * 200}`);
@@ -368,8 +364,8 @@ async function main() {
   }
 
   // 4) Confirmar resultados finales con el presupuesto que sobra
-  const corridasRestantes = Math.ceil(horasHastaReinicio * 60 / intervaloActualizacion);
-  const calendariosRestantes = Math.floor(corridasRestantes / C.calendarioCadaHoras) * C.toursCalendario.length;
+  const corridasRestantes = forecastRuns(horasHastaReinicio, intervaloActualizacion);
+  const calendariosRestantes = forecastCalendarCalls(horasHastaReinicio, C.calendarioCadaHoras, C.toursCalendario.length);
   const fijasFuturas = corridasRestantes + calendariosRestantes;
   const disponibles = C.presupuestoDiario - estado.usadas - C.reserva - fijasFuturas;
   const cupo = Math.max(0, Math.min(C.maxDetallesPorCorrida, disponibles));
