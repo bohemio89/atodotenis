@@ -1,6 +1,7 @@
 // Recolector: trae partidos en vivo, calendario, resultados y ranking desde Live Tennis API.
 // Respeta el límite gratuito (100 consultas por día, se reinicia a las 22:00 UTC).
 import { CONFIG, leerJSON, guardarJSON, log, ganador, tourBase, sets } from './lib/util.mjs';
+import { isoWeekKey, isRankingWindowOpen, forecastRuns, forecastCalendarCalls } from './lib/schedule.mjs';
 
 const KEY = process.env.LIVE_TENNIS_API_KEY;
 const BASE = 'https://api.livetennisapi.com/api/public/v1';
@@ -14,12 +15,49 @@ const diaAPI = new Date(ahora.getTime() + (24 - C.horaReinicioUTC) * 3600e3).toI
 const horasHastaReinicio = (() => {
   const r = new Date(ahora); r.setUTCHours(C.horaReinicioUTC, 0, 0, 0);
   if (r <= ahora) r.setUTCDate(r.getUTCDate() + 1);
-  return Math.floor((r - ahora) / 3600e3);
+  return Math.max(0, (r - ahora) / 3600e3);
 })();
 
 const estado = leerJSON('data/estado.json', {});
-if (estado.diaAPI !== diaAPI) {
-  estado.diaAPI = diaAPI; estado.usadas = 0; estado.jugadoresHoy = false;
+const semanaActual = isoWeekKey(ahora);
+const ventanaRanking = isRankingWindowOpen(ahora);
+const reinicioAPI = estado.diaAPI !== diaAPI;
+if (reinicioAPI) {
+  estado.diaAPI = diaAPI;
+  estado.usadas = 0;
+  estado.jugadoresHoy = false;
+}
+
+async function consultarUsoAPI() {
+  try {
+    const r = await fetch(`${BASE}/usage`, {
+      headers: { Authorization: `Bearer ${KEY}` },
+      signal: AbortSignal.timeout(15000)
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const uso = await r.json();
+    const llamadas = Number(uso.today?.calls);
+    if (Number.isFinite(llamadas)) {
+      // El endpoint de uso es la fuente de verdad. Una bajada confirma el reinicio
+      // de la cuota, incluso si el estado del workflow quedó desfasado.
+      if (estado.usoAPI?.llamadas != null && llamadas < estado.usoAPI.llamadas) {
+        estado.usadas = llamadas;
+        estado.diaAPI = diaAPI;
+        estado.jugadoresHoy = false;
+      } else {
+        estado.usadas = Math.max(estado.usadas || 0, llamadas);
+      }
+    }
+    const snapshot = {
+      llamadas: Number.isFinite(llamadas) ? llamadas : null,
+      restantes: Number.isFinite(Number(uso.today?.remaining_day)) ? Number(uso.today.remaining_day) : null,
+      errores: Number.isFinite(Number(uso.today?.errors)) ? Number(uso.today.errors) : null
+    };
+    if (JSON.stringify(snapshot) !== JSON.stringify(estado.usoAPI || null)) estado.usoAPI = snapshot;
+    log(`Uso real API: ${snapshot.llamadas ?? 's/d'} llamadas, ${snapshot.restantes ?? 's/d'} restantes; contador local ${estado.usadas}/${C.presupuestoDiario}`);
+  } catch (e) {
+    log('No se pudo consultar /usage; se conserva el contador local:', e.message);
+  }
 }
 
 let esperoUnaVez = false;
@@ -32,10 +70,27 @@ async function api(ruta) {
       if (r.status === 429) {
         const w = Number(r.headers.get('retry-after') || 0);
         const info = ['retry-after', 'x-ratelimit-limit', 'x-ratelimit-remaining', 'x-ratelimit-reset'].map((h) => `${h}=${r.headers.get(h) ?? '-'}`).join(' ');
-        log('429 de la API:', info, '|', (await r.text().catch(() => '')).slice(0, 200));
-        // Límite por minuto: se espera una sola vez. Cupo diario agotado: se corta y no se insiste.
-        if (!esperoUnaVez && w > 0 && w <= 65) { esperoUnaVez = true; await new Promise((s) => setTimeout(s, w * 1000)); continue; }
-        const e = new Error('CUPO: la API rechazó por cupo agotado'); e.cupo = true; e.retryAfter = w; throw e;
+        const textoError = await r.text().catch(() => '');
+        let cuerpoError = {};
+        try { cuerpoError = JSON.parse(textoError); } catch {}
+        log('429 de la API:', info, '|', textoError.slice(0, 200));
+        // Solo reintentar límites por minuto. El cupo diario y el bloqueo anti-abuso
+        // traen el instante exacto de reanudación: respetarlo evita reintentos inútiles.
+        if (cuerpoError.scope !== 'day' && cuerpoError.error !== 'abuse_throttled' &&
+            !esperoUnaVez && w > 0 && w <= 65) {
+          esperoUnaVez = true;
+          await new Promise((s) => setTimeout(s, w * 1000));
+          continue;
+        }
+        const e = new Error('CUPO: la API rechazó por cupo o limitación temporal');
+        e.cupo = true;
+        e.retryAfter = w;
+        if (cuerpoError.resets_at && Number.isFinite(Date.parse(cuerpoError.resets_at))) {
+          e.pausaHasta = new Date(cuerpoError.resets_at).toISOString();
+        } else if (cuerpoError.retry_at_epoch && Number.isFinite(Number(cuerpoError.retry_at_epoch))) {
+          e.pausaHasta = new Date(Number(cuerpoError.retry_at_epoch) * 1000).toISOString();
+        }
+        throw e;
       }
       if (!r.ok) throw new Error(`HTTP ${r.status} en ${ruta}: ${(await r.text()).slice(0, 200)}`);
       return await r.json();
@@ -198,23 +253,26 @@ function prioridad(m) {
 
 // ---------- Corrida ----------
 async function main() {
-  // La actualización completa se limita a una vez cada 50 minutos, pero no se debe
-  // dejar de vigilar partidos en directo: si no, un partido que termina entre corridas
-  // queda como "en_vivo" y el generador de notas nunca lo recibe como finalizado.
-  if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < 50 && !process.env.FORZAR) {
-    const ahoraMs = ahora.getTime();
-    const hayPartidosEnVentana = Object.values(partidos).some((p) => {
-      const inicio = new Date(p.horario || '').getTime();
-      return p.estado === 'en_vivo' || p.estado === 'por_confirmar' ||
-        (p.estado === 'programado' && Number.isFinite(inicio) &&
-          inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000);
-    });
+  await consultarUsoAPI();
+  guardarJSON('data/estado.json', estado);
+  const ahoraMs = ahora.getTime();
+  const hayPartidosEnVentana = Object.values(partidos).some((p) => {
+    const inicio = new Date(p.horario || '').getTime();
+    return p.estado === 'en_vivo' || p.estado === 'por_confirmar' ||
+      (p.estado === 'programado' && Number.isFinite(inicio) &&
+        inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000);
+  });
+  const intervaloActualizacion = hayPartidosEnVentana ? 30 : 60;
+  const debeActualizarRanking = ventanaRanking && estado.semanaJugadores !== semanaActual;
+  // No considerar el ranking actualizado por una sincronización diaria anterior
+  // al lunes 18:00 UTC: la marca semanal solo se escribe tras la consulta programada.
+  if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < intervaloActualizacion && !process.env.FORZAR) {
     const ultimaVigilancia = estado.ultimaConsultaEnVivo ? new Date(estado.ultimaConsultaEnVivo).getTime() : 0;
-    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 20 * 60000;
+    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= 30 * 60000;
     // Reservar primero las consultas de las próximas actualizaciones completas y calendarios.
-    const corridasRestantesVigilancia = Math.max(0, horasHastaReinicio);
-    const calendariosRestantesVigilancia = Math.floor(corridasRestantesVigilancia / C.calendarioCadaHoras) * C.toursCalendario.length;
-    const reservaFuturaVigilancia = corridasRestantesVigilancia + calendariosRestantesVigilancia;
+    const corridasRestantesVigilancia = forecastRuns(horasHastaReinicio, intervaloActualizacion);
+    const calendariosRestantesVigilancia = forecastCalendarCalls(horasHastaReinicio, C.calendarioCadaHoras, C.toursCalendario.length);
+    const reservaFuturaVigilancia = corridasRestantesVigilancia + calendariosRestantesVigilancia + (debeActualizarRanking ? C.jugadoresPaginas : 0);
     const presupuestoVigilancia = C.presupuestoDiario - C.reserva - estado.usadas - reservaFuturaVigilancia;
     const hayPresupuesto = presupuestoVigilancia > 0;
     const apiEnPausa = estado.pausaHasta && new Date(estado.pausaHasta) > ahora;
@@ -234,7 +292,7 @@ async function main() {
 
       // Los partidos que desaparecieron del listado en vivo se confirman individualmente.
       // Se procesan de a pocos para respetar el presupuesto diario; los restantes esperan
-      // la próxima vigilancia de 15 minutos.
+      // la próxima vigilancia de 30 minutos.
       const pendientes = Object.values(partidos)
         .filter((p) => p.estado === 'por_confirmar' && !p.confirmado && p.horario &&
           ahoraMs - new Date(p.horario).getTime() <= 6 * 3600e3)
@@ -292,8 +350,11 @@ async function main() {
     estado.calendario = ahora.toISOString();
   }
 
-  // 3) Jugadores y ranking, una vez por día API
-  if (!estado.jugadoresHoy) {
+  // 3) Jugadores y ranking, una vez por semana después de la ventana oficial
+  const corridasFuturasAntesRanking = forecastRuns(horasHastaReinicio, intervaloActualizacion);
+  const calendariosFuturosAntesRanking = forecastCalendarCalls(horasHastaReinicio, C.calendarioCadaHoras, C.toursCalendario.length);
+  const presupuestoParaRanking = C.presupuestoDiario - estado.usadas - C.reserva - corridasFuturasAntesRanking - calendariosFuturosAntesRanking;
+  if (debeActualizarRanking && presupuestoParaRanking >= C.jugadoresPaginas) {
     const lista = {};
     for (let i = 0; i < C.jugadoresPaginas; i++) {
       const r = await api(`players?limit=200&offset=${i * 200}`);
@@ -310,6 +371,7 @@ async function main() {
     jugadores.lista = lista; jugadores.actualizado = ahora.toISOString();
     guardarJSON('data/jugadores.json', jugadores);
     estado.jugadoresHoy = true;
+    estado.semanaJugadores = semanaActual;
     // Completar país/ranking en partidos que vinieron del calendario
     for (const p of Object.values(partidos)) for (const k of ['j1', 'j2']) {
       const j = p[k] && lista[p[k].id];
@@ -319,9 +381,10 @@ async function main() {
   }
 
   // 4) Confirmar resultados finales con el presupuesto que sobra
-  const corridasRestantes = Math.max(0, horasHastaReinicio);
-  const calendariosRestantes = Math.floor(corridasRestantes / C.calendarioCadaHoras) * C.toursCalendario.length;
-  const fijasFuturas = corridasRestantes + calendariosRestantes;
+  const corridasRestantes = forecastRuns(horasHastaReinicio, intervaloActualizacion);
+  const calendariosRestantes = forecastCalendarCalls(horasHastaReinicio, C.calendarioCadaHoras, C.toursCalendario.length);
+  const rankingsFuturos = debeActualizarRanking && estado.semanaJugadores !== semanaActual ? C.jugadoresPaginas : 0;
+  const fijasFuturas = corridasRestantes + calendariosRestantes + rankingsFuturos;
   const disponibles = C.presupuestoDiario - estado.usadas - C.reserva - fijasFuturas;
   const cupo = Math.max(0, Math.min(C.maxDetallesPorCorrida, disponibles));
   const pendientes = Object.values(partidos)
@@ -415,10 +478,15 @@ main().then(() => {
   estado.ultimaCorrida = new Date().toISOString();
   if (e.cupo) {
     // Pausa creciente: 1 h, 2 h, 4 h, hasta 8 h (o lo que pida la API), para no gastar el cupo con rechazos
-    estado.pausaHoras = Math.min(8, (estado.pausaHoras || 0.5) * 2);
-    const horas = Math.max(estado.pausaHoras, (e.retryAfter || 0) / 3600);
-    estado.pausaHasta = new Date(Date.now() + horas * 3600e3).toISOString();
-    console.log(`::warning::La API de resultados rechazó por cupo. Pausa de ${horas} h (hasta ${estado.pausaHasta}). El sitio se sigue publicando con los datos guardados.`);
+    if (e.pausaHasta) {
+      estado.pausaHasta = e.pausaHasta;
+      estado.pausaHoras = 0;
+    } else {
+      estado.pausaHoras = Math.min(8, (estado.pausaHoras || 0.5) * 2);
+      const horas = Math.max(estado.pausaHoras, (e.retryAfter || 0) / 3600);
+      estado.pausaHasta = new Date(Date.now() + horas * 3600e3).toISOString();
+    }
+    console.log(`::warning::La API de resultados rechazó por cupo. Pausa hasta ${estado.pausaHasta}. El sitio se sigue publicando con los datos guardados.`);
   } else {
     console.log(`::warning::Falló la consulta a la API: ${e.message}. El sitio se sigue publicando con los datos guardados.`);
   }
