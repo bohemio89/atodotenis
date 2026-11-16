@@ -45,6 +45,10 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PRUEBA_PARTIDOS: ${{ github.event.inputs.prueba_partidos }}
         run: node scripts/articles.mjs
+      - name: Fotos de Getty Images para las notas nuevas
+        continue-on-error: true
+        timeout-minutes: 3
+        run: 'node scripts/getty.mjs || echo "Getty, se reintentara en la proxima corrida"'
       - name: Buscar fotos recientes con licencia libre
         run: node scripts/fotos.mjs
       - name: Países de las jugadoras (ranking oficial WTA)
@@ -67,14 +71,14 @@ jobs:
         continue-on-error: true
         timeout-minutes: 4
         run: |
-          npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed
+          npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed @fontsource/anton @fontsource/dm-serif-display
           node scripts/tiktok.mjs || echo "TikTok: se reintentará en la próxima corrida"
       - name: Instagram (publicar y preparar la siguiente)
         timeout-minutes: 3
         env:
           INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
         run: |
-          npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed
+          npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed @fontsource/anton @fontsource/dm-serif-display
           node scripts/ig-series.mjs || echo "Series: error"
           node scripts/instagram.mjs preparar
           node scripts/instagram.mjs salida
