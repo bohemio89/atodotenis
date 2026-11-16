@@ -51058,7 +51058,7 @@
   "j2": {
    "id": 841,
    "nombre": "Y. Chung",
-   "pais": null,
+   "pais": "kor",
    "ranking": null
   },
   "dobles": false,
@@ -51468,7 +51468,7 @@
    "ranking": 661
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-16T06:00:37.158Z",
   "torneoClave": "challenger|Kobe",
@@ -52780,7 +52780,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T06:00:37.158Z",
+  "visto": "2026-11-16T06:30:38.740Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false,
@@ -52788,11 +52788,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T05:59:24.222543Z",
-   "age_seconds": 71,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-16T06:29:59.480585Z",
+   "age_seconds": 39,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -52801,35 +52801,37 @@
    "games": [
     [
      6,
-     3
+     3,
+     2
     ],
     [
      4,
-     4
+     6,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "0",
+    "30",
     "0"
    ],
-   "received_at": "2026-11-16T05:59:23.258513Z",
-   "sequence": 114,
-   "server": 1,
+   "received_at": "2026-11-16T06:29:59.135128Z",
+   "sequence": 151,
+   "server": 2,
    "sets": [
     1,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-16T06:00:35.649108Z",
+   "timestamp": "2026-11-16T06:30:33.708318Z",
    "puntos": [
-    "0",
+    "30",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -61330,7 +61332,7 @@
    "ranking": 901
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-16T06:00:37.158Z",
   "tier": null,
@@ -61570,16 +61572,16 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T06:00:37.158Z",
+  "visto": "2026-11-16T06:30:38.740Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T06:00:27.453201Z",
-   "age_seconds": 8,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-16T06:25:53.108131Z",
+   "age_seconds": 285,
+   "changing_sources_count": 1,
    "corroborated": true,
    "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
@@ -61590,33 +61592,35 @@
    "games": [
     [
      7,
-     1
+     4,
+     0
     ],
     [
      6,
-     1
+     6,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-16T06:00:26.786401Z",
-   "sequence": 112,
+   "received_at": "2026-11-16T06:25:52.763430Z",
+   "sequence": 151,
    "server": 1,
    "sets": [
     1,
-    0
+    1
    ],
    "sources_count": 2,
-   "stale": false,
-   "timestamp": "2026-11-16T06:00:35.652041Z",
+   "stale": true,
+   "timestamp": "2026-11-16T06:30:31.470037Z",
    "puntos": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
    "saca": 1
   },
@@ -61882,7 +61886,7 @@
    "ranking": 487
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-16T06:00:37.158Z",
   "tier": null,
@@ -62084,26 +62088,73 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-16T05:00:00Z",
+  "horario": "2026-11-16T06:10:00Z",
   "j1": {
+   "id": 841,
+   "nombre": "Yun Seong Chung",
+   "pais": "kor",
+   "ranking": 623
+  },
+  "j2": {
    "id": 1234,
    "nombre": "Benjamin Hassan",
    "pais": "lbn",
    "ranking": 454
   },
-  "j2": {
-   "id": 841,
-   "nombre": "Y. Chung",
-   "pais": null,
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T03:30:31.778Z",
+  "visto": "2026-11-16T06:30:38.740Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-16T06:30:28.082725Z",
+   "age_seconds": 10,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "0",
+    "30"
+   ],
+   "received_at": "2026-11-16T06:30:26.509919Z",
+   "sequence": 47,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-16T06:30:28.082723Z",
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "221046": {
   "id": 221046,
