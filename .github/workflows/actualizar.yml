@@ -39,7 +39,7 @@ jobs:
           LIVE_TENNIS_API_KEY: ${{ secrets.LIVE_TENNIS_API_KEY }}
         run: node scripts/update.mjs
       - name: Ranking oficial ATP y WTA
-        run: node scripts/ranking-oficial.mjs || echo "Ranking oficial: se reintentará"
+        run: 'node scripts/ranking-oficial.mjs || echo "Ranking oficial, se reintentara"'
       - name: Escribir notas con IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
