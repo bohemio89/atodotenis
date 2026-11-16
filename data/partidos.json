@@ -62327,9 +62327,9 @@
  "221058": {
   "id": 221058,
   "tour": "challenger",
-  "torneo": "Helsinki, Finland, Qualifying",
-  "ronda": "Qualification Final",
-  "rondaCod": "Q",
+  "torneo": "Helsinki",
+  "ronda": "Helsinki - Final",
+  "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
@@ -62349,7 +62349,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T12:18:47.796Z",
+  "visto": "2026-11-16T12:19:44.877Z",
   "torneoClave": "challenger|Helsinki",
   "tier": null,
   "importante": false,
@@ -62357,8 +62357,8 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T12:18:31.293348Z",
-   "age_seconds": 15,
+   "accepted_at": "2026-11-16T12:19:27.201721Z",
+   "age_seconds": 16,
    "changing_sources_count": 2,
    "corroborated": true,
    "corroborated_age_seconds": 5,
@@ -62382,10 +62382,10 @@
    "origin": "observed",
    "points": [
     "30",
-    "0"
+    "30"
    ],
-   "received_at": "2026-11-16T12:18:30.658416Z",
-   "sequence": 98,
+   "received_at": "2026-11-16T12:19:26.788068Z",
+   "sequence": 100,
    "server": 2,
    "sets": [
     1,
@@ -62393,10 +62393,10 @@
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-16T12:18:31.293346Z",
+   "timestamp": "2026-11-16T12:19:35.304449Z",
    "puntos": [
     "30",
-    "0"
+    "30"
    ],
    "saca": 2
   },
@@ -62595,9 +62595,9 @@
  "221087": {
   "id": 221087,
   "tour": "challenger",
-  "torneo": "Helsinki, Finland, Qualifying",
-  "ronda": "Qualification Final",
-  "rondaCod": "Q",
+  "torneo": "Helsinki",
+  "ronda": "Helsinki - Final",
+  "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
@@ -62617,18 +62617,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T12:18:47.796Z",
+  "visto": "2026-11-16T12:19:44.877Z",
   "tier": null,
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T12:18:15.028472Z",
-   "age_seconds": 32,
+   "accepted_at": "2026-11-16T12:19:38.795222Z",
+   "age_seconds": 4,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -62645,14 +62645,14 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-16T12:18:14.668460Z",
-   "sequence": 97,
+   "received_at": "2026-11-16T12:19:38.574981Z",
+   "sequence": 99,
    "server": 1,
    "sets": [
     0,
@@ -62660,10 +62660,10 @@
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-16T12:18:42.273786Z",
+   "timestamp": "2026-11-16T12:19:38.795219Z",
    "puntos": [
-    "0",
-    "0"
+    "15",
+    "15"
    ],
    "saca": 1
   },
@@ -62702,9 +62702,9 @@
  "221089": {
   "id": 221089,
   "tour": "challenger",
-  "torneo": "Metz, France, Qualifying",
-  "ronda": "Qualification Final",
-  "rondaCod": "Q",
+  "torneo": "Metz (France) - Qualification",
+  "ronda": "Metz - Final",
+  "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
@@ -62724,18 +62724,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T12:18:47.796Z",
+  "visto": "2026-11-16T12:19:44.877Z",
   "tier": null,
   "importante": false,
   "torneoId": "14868",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T12:18:09.527776Z",
-   "age_seconds": 37,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-16T12:19:36.776862Z",
+   "age_seconds": 6,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -62750,25 +62750,25 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
     "15",
-    "0"
+    "30"
    ],
-   "received_at": "2026-11-16T12:18:09.038854Z",
-   "sequence": 3,
+   "received_at": "2026-11-16T12:19:36.293327Z",
+   "sequence": 5,
    "server": 2,
    "sets": [
     0,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-16T12:18:46.252954Z",
+   "timestamp": "2026-11-16T12:19:36.776857Z",
    "puntos": [
     "15",
-    "0"
+    "30"
    ],
    "saca": 2
   },
@@ -63001,9 +63001,9 @@
  "221101": {
   "id": 221101,
   "tour": "challenger",
-  "torneo": "Helsinki, Finland, Qualifying",
-  "ronda": "Qualification Final",
-  "rondaCod": "Q",
+  "torneo": "Helsinki",
+  "ronda": "Helsinki - Final",
+  "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
@@ -63023,18 +63023,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T12:18:47.796Z",
+  "visto": "2026-11-16T12:19:44.877Z",
   "tier": null,
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T12:18:42.326550Z",
-   "age_seconds": 4,
+   "accepted_at": "2026-11-16T12:19:30.467326Z",
+   "age_seconds": 13,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -63051,14 +63051,14 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "15",
+    "40",
     "0"
    ],
-   "received_at": "2026-11-16T12:18:41.744635Z",
-   "sequence": 92,
+   "received_at": "2026-11-16T12:19:29.679725Z",
+   "sequence": 94,
    "server": 1,
    "sets": [
     0,
@@ -63066,9 +63066,9 @@
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-16T12:18:42.326543Z",
+   "timestamp": "2026-11-16T12:19:30.467319Z",
    "puntos": [
-    "15",
+    "40",
     "0"
    ],
    "saca": 1
@@ -63311,9 +63311,9 @@
  "221110": {
   "id": 221110,
   "tour": "challenger",
-  "torneo": "Metz, France, Qualifying",
-  "ronda": "Qualification Final",
-  "rondaCod": "Q",
+  "torneo": "Metz (France) - Qualification",
+  "ronda": "Metz - Final",
+  "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
@@ -63333,18 +63333,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T12:18:47.796Z",
+  "visto": "2026-11-16T12:19:44.877Z",
   "tier": null,
   "importante": false,
   "torneoId": "14868",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T12:18:36.627891Z",
-   "age_seconds": 10,
+   "accepted_at": "2026-11-16T12:18:59.707772Z",
+   "age_seconds": 43,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 9,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -63363,10 +63363,10 @@
    "origin": "observed",
    "points": [
     "0",
-    "15"
+    "30"
    ],
-   "received_at": "2026-11-16T12:18:35.901313Z",
-   "sequence": 9,
+   "received_at": "2026-11-16T12:18:59.318512Z",
+   "sequence": 10,
    "server": 2,
    "sets": [
     0,
@@ -63374,10 +63374,10 @@
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-16T12:18:46.119043Z",
+   "timestamp": "2026-11-16T12:19:41.839631Z",
    "puntos": [
     "0",
-    "15"
+    "30"
    ],
    "saca": 2
   },
