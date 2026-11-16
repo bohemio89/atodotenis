@@ -52619,7 +52619,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T08:15:23.767Z",
+  "visto": "2026-11-16T08:30:30.906Z",
   "torneoClave": "challenger|Sydney",
   "tier": null,
   "importante": false,
@@ -52627,11 +52627,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T08:14:30.886673Z",
-   "age_seconds": 52,
+   "accepted_at": "2026-11-16T08:29:49.767030Z",
+   "age_seconds": 41,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 8,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -52640,32 +52640,32 @@
    "games": [
     [
      6,
-     2
+     3
     ],
     [
      7,
-     3
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
-    "15",
+    "0",
     "15"
    ],
-   "received_at": "2026-11-16T08:14:30.776075Z",
-   "sequence": 121,
+   "received_at": "2026-11-16T08:29:49.126783Z",
+   "sequence": 138,
    "server": 2,
    "sets": [
     0,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-16T08:15:18.954469Z",
+   "timestamp": "2026-11-16T08:30:00.206578Z",
    "puntos": [
-    "15",
+    "0",
     "15"
    ],
    "saca": 2
