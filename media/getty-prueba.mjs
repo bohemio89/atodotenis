@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const r = await fetch('https://embed.gettyimages.com/oembed?url=https%3A%2F%2Fgty.im%2F2305389420');
+console.log('oembed', r.status, (await r.text()).slice(0, 700));
+const nav = await chromium.launch();
+const pg = await nav.newPage({ userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', locale: 'en-US' });
+const resp = await pg.goto('https://www.gettyimages.com/search/2/image?phrase=daniil%20medvedev%20turin&sort=newest&family=editorial', { waitUntil: 'domcontentloaded', timeout: 60000 });
+await pg.waitForTimeout(5000);
+console.log('busqueda', resp?.status(), await pg.title());
+const ids = await pg.$$eval('a[href*="/detail/"]', (as) => as.slice(0, 6).map((a) => a.getAttribute('href')));
+console.log(ids.join('\n'));
+await nav.close();
