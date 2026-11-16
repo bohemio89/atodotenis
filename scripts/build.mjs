@@ -294,7 +294,9 @@ function avatar(j) {
   const foto = a?.url ? `<img src="${esc(a.url)}" alt="" loading="lazy" style="object-position:${esc(a.foco || 'center 20%')}">` : `<span class="av-ini">${ini}</span>`;
   return `<span class="av">${foto}<span class="av-flag">${paisTag(j)}</span></span>`;
 }
-const rankingDe = (tour) => Object.values(jugadores.lista).filter((j) => j.tour === tour).sort((a, b) => a.ranking - b.ranking);
+const rankingDe = (tour) => Object.values(jugadores.lista)
+  .filter((j) => j.tour === tour && Number.isInteger(Number(j.ranking)) && Number(j.ranking) > 0)
+  .sort((a, b) => Number(a.ranking) - Number(b.ranking));
 // Flecha y puestos que subió o bajó (si coincide con la dirección que informa la API)
 function movimiento(j) {
   const c = Number(j.cambio) || 0;
