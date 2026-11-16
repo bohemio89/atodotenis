@@ -1,0 +1,26 @@
+name: Ranking oficial ATP y WTA
+on:
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'probar o vacío para actualizar'
+        required: false
+        default: ''
+permissions:
+  contents: write
+jobs:
+  ranking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/ranking-oficial.mjs ${{ inputs.modo }}
+      - if: ${{ inputs.modo == '' }}
+        run: |
+          git config user.name "A Todo Tenis"
+          git config user.email "bot@atodotenis"
+          git add data/jugadores.json
+          git diff --cached --quiet || git commit -m "Ranking oficial ATP y WTA"
+          git pull --rebase && git push
