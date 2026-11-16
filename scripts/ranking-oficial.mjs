@@ -86,7 +86,7 @@ for (const tour of ['atp', 'wta']) {
     lista[id] = { ...v, nombre: v.nombre || o.nombre, pais: v.pais || o.pais, tour, ranking: o.ranking, puntos: o.puntos, cambio: o.cambio || null, rankAnterior: o.cambio ? o.ranking + o.cambio : null, mov: o.cambio > 0 ? 'up' : o.cambio < 0 ? 'down' : null, fuente: tour === 'atp' ? 'atptour.com' : 'wtatennis.com' };
     vistos.add(id); cambios++;
   }
-  for (const [id, j] of Object.entries(lista)) if (j.tour === tour && !vistos.has(id) && j.ranking && j.ranking <= 200) lista[id] = { ...j, ranking: null, cambio: null };
+  for (const [id, j] of Object.entries(lista)) if (j.tour === tour && !vistos.has(id) && (j.ranking === null || (j.ranking && j.ranking <= 200))) { const { ranking, cambio, rankAnterior, mov, ...resto } = j; lista[id] = resto; }
 }
 if (cambios) { jug.lista = lista; jug.actualizado = new Date().toISOString(); jug.fuenteRanking = 'oficial'; jug.oficialActualizado = new Date().toISOString(); fs.writeFileSync(ARCH, JSON.stringify(jug, null, 1) + '\n'); }
 log('Actualizados:', cambios);
