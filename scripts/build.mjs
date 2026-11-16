@@ -254,7 +254,7 @@ function filaPartido(p) {
   return `<div class="partido"><div class="ronda">${info}</div>${fila(p.j1, 1)}${fila(p.j2, 2)}</div>`;
 }
 
-function porTorneo(lista, max = 999) {
+function porTorneo(lista, max = 999, ordenarPorFecha = false) {
   const grupos = new Map();
   for (const p of lista) {
     const k = p.torneo || 'Otros';
@@ -264,7 +264,10 @@ function porTorneo(lista, max = 999) {
   const NIVEL = { grand_slam: 0, atp_finals: 0, wta_finals: 0, davis_cup: 1, bjk_cup: 1, atp_1000: 2, wta_1000: 2, atp_500: 3, wta_500: 3, atp_250: 4, wta_250: 4 };
   const orden = (ps) => { const p = ps[0]; const n = NIVEL[p.tier] ?? (['atp', 'wta'].includes(tourBase(p.tour)) ? 5 : 8); return n * 10 + (ps.every((x) => x.dobles) ? 5 : 0); };
   let total = 0;
-  return [...grupos.values()].sort((a, b) => orden(a) - orden(b)).map((ps) => {
+  const fechaMasReciente = (ps) => ps.reduce((maxFecha, p) => Math.max(maxFecha, Date.parse(p.horario || '') || 0), 0);
+  return [...grupos.values()].sort((a, b) => ordenarPorFecha
+    ? fechaMasReciente(b) - fechaMasReciente(a)
+    : orden(a) - orden(b)).map((ps) => {
     if (total >= max) return '';
     const vis = ps.slice(0, Math.max(0, max - total)); total += vis.length;
     const p = ps[0];
@@ -281,7 +284,7 @@ const conArg = (p) => [p.j1, p.j2].some((j) => j?.pais === ARG);
 
 function panelResultados(id, max) {
   const tab = (k, t, sel) => `<button role="tab" id="${id}-t-${k}" aria-controls="${id}-${k}" aria-selected="${sel}">${t}</button>`;
-  const cont = (k, lista, vacio, sel) => `<div id="${id}-${k}" role="tabpanel" aria-labelledby="${id}-t-${k}"${sel ? '' : ' class="oculto"'}>${lista.length ? porTorneo(lista, max) : `<div class="vacio">${vacio}</div>`}</div>`;
+  const cont = (k, lista, vacio, sel) => `<div id="${id}-${k}" role="tabpanel" aria-labelledby="${id}-t-${k}"${sel ? '' : ' class="oculto"'}>${lista.length ? porTorneo(lista, max, k === 'r') : `<div class="vacio">${vacio}</div>`}</div>`;
   const hayVivo = enVivo.length > 0;
   return `<div class="panel" data-tabs><div class="tabs" role="tablist">${tab('v', 'En vivo', hayVivo)}${tab('r', 'Resultados', !hayVivo)}${tab('p', 'Próximos', false)}</div>
 ${cont('v', enVivo, 'No hay partidos en juego en este momento.', hayVivo)}${cont('r', terminados, 'Todavía no hay resultados confirmados.', !hayVivo)}${cont('p', proximos, 'No hay partidos programados.', false)}</div>`;
