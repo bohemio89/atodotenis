@@ -17,7 +17,9 @@ jobs:
         with:
           node-version: 22
       - if: ${{ inputs.modo == 'atp' }}
-        run: node scripts/probar-atp.mjs
+        run: |
+          npm i --no-save playwright-core@1.48.2
+          node scripts/probar-atp.mjs
       - if: ${{ inputs.modo != 'atp' }}
         run: node scripts/ranking-oficial.mjs ${{ inputs.modo }}
       - if: ${{ inputs.modo == '' }}
