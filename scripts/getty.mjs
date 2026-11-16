@@ -67,6 +67,7 @@ try {
         await pg.goto(`https://www.gettyimages.com/search/2/image?phrase=${encodeURIComponent(frase.trim())}&sort=newest&family=editorial`, { waitUntil: 'domcontentloaded', timeout: 45000 });
         await pg.waitForTimeout(3500);
         const enlaces = await pg.$$eval('a[href*="/detail/news-photo/"]', (as) => as.slice(0, 40).map((a) => a.getAttribute('href')));
+        if (process.env.DEPURAR) log('Getty: búsqueda', frase, '|', await pg.title(), '|', enlaces.length, 'enlaces', enlaces.slice(0, 3).join(' '));
         elegida = elegir(enlaces, ganador, perdedor);
       } catch (e) { log('Getty: falló la búsqueda', frase, e.message); }
       if (elegida) break;
