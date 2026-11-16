@@ -267,7 +267,8 @@ img{max-width:100%;display:block}
 .credito-mini{position:absolute;right:0;bottom:0;max-width:80%;background:rgba(0,0,0,.55);color:#E6E9EC;font-size:9px;line-height:1.3;padding:2px 6px;border-top-left-radius:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;z-index:1}
 .card .img .credito-mini{bottom:auto;top:0;border-radius:0 0 0 4px}
 .tarjeta-foto .credito-mini{bottom:auto;top:0}
-.nota figure.getty iframe{border-radius:6px;background:#0D1014}
+.nota figure.getty iframe{border-radius:6px;background:transparent}
+.nota figure.getty figcaption{text-align:left}
 .nota figcaption a{color:var(--suave);text-decoration:underline}
 @media (max-width:1000px){.car-track{grid-auto-columns:calc((100% - 14px)/2)}}
 @media (max-width:700px){.car-track{grid-auto-columns:82%}.car-track .card .img{height:150px}}
