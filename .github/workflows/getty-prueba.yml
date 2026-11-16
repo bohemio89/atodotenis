@@ -9,5 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: media }
-      - run: npm i --no-save playwright@1 && npx playwright install --with-deps chromium >/dev/null
-      - run: node media/getty-prueba.mjs || true
+      - run: npm i --no-save --silent playwright-core
+      - run: SLUGS="2026-11-15-zverev-jodar-finals-turin,2026-11-15-shelton-fils-finals-turin" node scripts/getty.mjs
+      - run: grep -h -A6 '"getty"' content/notas/2026-11-15-zverev-jodar-finals-turin.json content/notas/2026-11-15-shelton-fils-finals-turin.json || true
