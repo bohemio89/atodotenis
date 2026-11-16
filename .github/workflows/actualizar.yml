@@ -2,6 +2,13 @@ name: Actualizar sitio
 
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'data/**'
+      - 'scripts/**'
+      - '.github/workflows/actualizar.yml'
   schedule:
     - cron: '7,22,37,52 * * * *'   # cada 15 minutos; la API se consulta como mucho una vez por hora
   workflow_dispatch:
