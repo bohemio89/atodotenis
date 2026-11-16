@@ -1,6 +1,5 @@
-// Videos para TikTok: cada resultado importante con foto revisada del ganador se convierte en un video vertical
-// de ~9 segundos, con los textos dentro de la zona libre de TikTok. Quedan en /tiktok (página sin indexar)
-// para descargarlos y programarlos. TikTok no permite publicar por API sin app aprobada.
+// Videos TikTok: edición vertical 9:16, gancho visual, marcador protagonista y cierre interactivo.
+// Duración objetivo: 9.5 segundos. Los videos quedan en /tiktok para descarga y publicación manual.
 //   node scripts/tiktok.mjs
 import fs from 'node:fs';
 import path from 'node:path';
@@ -145,21 +144,26 @@ for (const n of notas) {
   const gancho = ronda === 'SF' ? '¡A LA FINAL!' : ronda === 'F' ? `¡${genero}!` : '¡GRAN VICTORIA!';
   const sub = rg && rp ? `N° ${rg} vs N° ${rp}` : `${ag} superó a ${ap}`;
   const pregunta = ronda === 'SF' && esFinals ? '¿Quién se queda con el título?' : '¿Qué te pareció este resultado?';
+  const esCampeona = ronda === 'F' && esWTA;
+  const hook = esCampeona ? '¡LA REINA DE LAS FINALS!' : ronda === 'F' ? '¡CAMPEÓN!' : '¡DEBUT GANADOR!';
+  const bajadaHook = esCampeona ? 'Andreeva cerró una semana perfecta' : ag + ' se impuso en un partidazo';
+  const cierre = esCampeona ? '¿QUIÉN PODRÁ FRENARLA?' : '¿HASTA DÓNDE LLEGA ' + ag.toUpperCase() + '?';
   const guion = { escenas: [
-    { foto, foco: focoJugador(g), segundos: 2.2, html: `<div style="position:absolute;inset:0;background:linear-gradient(rgba(4,8,20,.16),${tema.fondo}dd)"></div>${marca(tema.acento)}${chip(torneo,184,tema)}
-      <div style="position:absolute;left:72px;right:120px;bottom:620px"><div style="font:900 132px/.94 Montserrat;letter-spacing:-.04em" class="lima">${esc(gancho)}</div>
-      <div style="font:800 54px/1.1 Montserrat;margin-top:26px">${esc(ag)} avanzó tras vencer a ${esc(ap)}</div></div>` },
-    { foto: fotoRival, foco: focoJugador(p), segundos: 2.4, html: `<div style="position:absolute;inset:0;background:linear-gradient(rgba(4,8,20,.18),${tema.fondo}ee)"></div>${marca(tema.acento)}${chip('EL PARTIDO',224,tema)}
-      <div style="position:absolute;left:72px;right:120px;bottom:620px"><div style="font:800 78px/.98 Montserrat">${esc(ap)}</div>
-      <div style="font:800 48px/1.1 Montserrat;margin-top:24px" class="gris">Fue el rival de ${esc(ag)}</div></div>` },
-    { foto, foco: focoJugador(g), segundos: 3.2, html: `${overlay(tema.fondo)}${marca(tema.acento)}${chip(`MARCADOR FINAL · ${torneo}`,224,tema)}
-      <div style="position:absolute;left:72px;right:120px;bottom:620px"><div style="font:800 112px/.95 Montserrat">${esc(g)}</div>
-      <div style="font-size:42px;margin-top:22px" class="gris">superó a ${esc(p)}</div>
-      <div style="font:700 112px RC;margin-top:24px" class="lima">${esc(sets)}</div></div>` },
-    { foto: null, segundos: 3.2, html: `${marca(tema.acento)}<div style="position:absolute;left:72px;right:120px;top:560px">
-      <div style="font:900 108px/.98 Montserrat;letter-spacing:-.04em">${esc(pregunta)}</div>
-      <div style="font-size:48px;margin-top:46px" class="lima">Te leemos en comentarios</div></div>
-      <div style="position:absolute;left:72px;right:120px;bottom:560px;font-size:24px;color:#6B7785">A Todo Tenis · ${esc(torneo)}</div>` },
+    { foto, foco: focoJugador(g), segundos: 2.7, html:
+      '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,20,.12),rgba(3,8,20,.04) 38%,' + tema.fondo + ' 100%)"></div>' +
+      '<div style="position:absolute;top:150px;left:70px;right:70px;display:flex;justify-content:space-between;align-items:center"><div style="font:900 34px Montserrat;letter-spacing:.08em">A TODO <span style="color:' + tema.acento + '">TENIS</span></div><div style="font:800 25px Montserrat;background:' + tema.primario + ';padding:15px 22px;border-radius:8px">' + esc(torneo) + '</div></div>' +
+      '<div style="position:absolute;left:68px;right:68px;bottom:350px"><div style="font:900 italic 112px/.88 Montserrat;letter-spacing:-.045em;text-shadow:0 5px 25px #000">' + esc(hook) + '</div><div style="font:800 43px/1.12 Montserrat;margin-top:26px;color:' + tema.acento + '">' + esc(bajadaHook) + '</div></div>' },
+    { foto: fotoRival, foco: focoJugador(p), segundos: 3.2, html:
+      '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,20,.22),' + tema.fondo + ' 82%)"></div>' +
+      '<div style="position:absolute;top:180px;left:70px;right:70px;text-align:center;font:900 42px Montserrat;color:' + tema.acento + ';letter-spacing:.12em">MARCADOR FINAL</div>' +
+      '<div style="position:absolute;top:390px;left:55px;right:55px;text-align:center"><div style="font:900 66px Montserrat">' + esc(ag) + ' <span style="color:' + tema.acento + '">VS</span> ' + esc(ap) + '</div>' +
+      '<div style="margin-top:70px;padding:45px 12px;border-top:5px solid ' + tema.primario + ';border-bottom:5px solid ' + tema.primario + ';font:900 118px/.95 RC;color:' + tema.acento + ';letter-spacing:.03em">' + esc(sets) + '</div>' +
+      '<div style="margin-top:45px;font:800 42px Montserrat">GANÓ ' + esc(ag.toUpperCase()) + '</div></div>' +
+      '<div style="position:absolute;bottom:160px;left:70px;right:70px;text-align:center;font:700 28px Montserrat;color:#d8dfeb">A TODO TENIS · ' + esc(torneo) + '</div>' },
+    { foto, foco: focoJugador(g), segundos: 3.6, html:
+      '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,20,.12),' + tema.fondo + ' 88%)"></div>' +
+      '<div style="position:absolute;top:180px;left:70px;right:70px;font:900 italic 86px/.95 Montserrat;letter-spacing:-.04em;text-align:center">' + esc(cierre) + '</div>' +
+      '<div style="position:absolute;bottom:285px;left:70px;right:70px;text-align:center"><div style="font:900 42px Montserrat;color:' + tema.acento + '">TE LEEMOS EN COMENTARIOS</div><div style="font:800 31px Montserrat;margin-top:26px">A TODO TENIS</div></div>' },
   ] };
   const duracionTotal = guion.escenas.reduce((total, escena) => total + (escena.segundos || 0), 0);
   if (duracionTotal > 15) { log('TikTok: video descartado, supera los 15 segundos:', duracionTotal); continue; }
