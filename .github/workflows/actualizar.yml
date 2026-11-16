@@ -23,7 +23,7 @@ permissions:
 
 concurrency:
   group: actualizar
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   actualizar:
@@ -48,9 +48,11 @@ jobs:
       - name: Países de las jugadoras (ranking oficial WTA)
         run: node scripts/paises-wta.mjs
       - name: Buscar declaraciones oficiales
+        continue-on-error: true
+        timeout-minutes: 1
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node scripts/declaraciones.mjs
+        run: timeout 50s node scripts/declaraciones.mjs || echo "Se omiten declaraciones para no bloquear la actualización del sitio."
       - name: Traducir notas al inglés
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
