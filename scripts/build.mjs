@@ -238,7 +238,7 @@ const nombreCorto = (j) => esc(j?.nombre || 'A confirmar');
 
 function filaPartido(p) {
   const sv = sets(p.score);
-  const vivo = p.estado === 'en_vivo';
+  const vivo = p.estado === 'en_vivo' && p.score?.stale !== true && p.score?.corroborated === true;
   const fin = p.confirmado && p.ganador;
   const fila = (j, k) => {
     const gana = fin && p.ganador === k;
@@ -274,7 +274,7 @@ function porTorneo(lista, max = 999) {
 
 // Los dobles de Challenger no se muestran (decisión editorial)
 const visibles = partidos.filter((p) => !p.clasificacion && tourBase(p.tour) && !(p.dobles && tourBase(p.tour) === 'challenger'));
-const enVivo = visibles.filter((p) => p.estado === 'en_vivo');
+const enVivo = visibles.filter((p) => p.estado === 'en_vivo' && p.score?.stale !== true && p.score?.corroborated === true);
 const terminados = visibles.filter((p) => p.confirmado && p.ganador).sort((a, b) => String(b.horario).localeCompare(String(a.horario)));
 const proximos = visibles.filter((p) => p.estado === 'programado' && p.horario && new Date(p.horario).getTime() >= Date.now()).sort((a, b) => String(a.horario).localeCompare(String(b.horario)));
 const conArg = (p) => [p.j1, p.j2].some((j) => j?.pais === ARG);
