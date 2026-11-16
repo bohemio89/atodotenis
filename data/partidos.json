@@ -21105,7 +21105,7 @@
   "j1": {
    "id": 1935,
    "nombre": "T. Ichikawa",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "j2": {
@@ -51454,26 +51454,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-16T03:30:00Z",
+  "horario": "2026-11-16T03:40:00Z",
   "j1": {
-   "id": 607,
-   "nombre": "R. Matsuda",
-   "pais": "jpn",
-   "ranking": null
-  },
-  "j2": {
    "id": 74,
    "nombre": "Fajing Sun",
    "pais": "chn",
    "ranking": 297
   },
+  "j2": {
+   "id": 607,
+   "nombre": "Ryuki Matsuda",
+   "pais": "jpn",
+   "ranking": 661
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T03:30:31.777Z",
+  "visto": "2026-11-16T04:00:36.248Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-16T04:00:06.756635Z",
+   "age_seconds": 29,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "40",
+    "AD"
+   ],
+   "received_at": "2026-11-16T04:00:06.433140Z",
+   "sequence": 33,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-16T04:00:29.703639Z",
+   "puntos": [
+    "40",
+    "AD"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220236": {
   "id": 220236,
@@ -51824,7 +51871,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "chn"
    ]
   },
   "j2": {
@@ -58755,7 +58802,7 @@
    "ranking": 1253
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-16T03:30:31.778Z",
   "tier": null,
@@ -60918,7 +60965,7 @@
    "ranking": 690
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-16T03:30:31.778Z",
   "tier": null,
@@ -61076,7 +61123,7 @@
    "ranking": 492
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-16T03:30:31.778Z",
   "tier": null,
@@ -61341,18 +61388,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T03:30:31.778Z",
+  "visto": "2026-11-16T04:00:36.248Z",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T03:30:08.895139Z",
-   "age_seconds": 22,
+   "accepted_at": "2026-11-16T04:00:25.139418Z",
+   "age_seconds": 11,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -61360,34 +61407,34 @@
    },
    "games": [
     [
-     0
+     3
     ],
     [
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "30",
-    "0"
+    "40",
+    "40"
    ],
-   "received_at": "2026-11-16T03:30:08.703167Z",
-   "sequence": 4,
-   "server": 1,
+   "received_at": "2026-11-16T04:00:23.915248Z",
+   "sequence": 45,
+   "server": 2,
    "sets": [
     0,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-16T03:30:18.986587Z",
+   "timestamp": "2026-11-16T04:00:25.139410Z",
    "puntos": [
-    "30",
-    "0"
+    "40",
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -61697,23 +61744,70 @@
   "genero": "men",
   "horario": "2026-11-16T03:30:00Z",
   "j1": {
+   "id": 1935,
+   "nombre": "Taisei Ichikawa",
+   "pais": "jpn",
+   "ranking": 759
+  },
+  "j2": {
    "id": 2149,
    "nombre": "Dimitris Sakellaridis",
    "pais": "gre",
    "ranking": 537
   },
-  "j2": {
-   "id": 1935,
-   "nombre": "T. Ichikawa",
-   "pais": null,
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T03:30:31.778Z",
+  "visto": "2026-11-16T04:00:36.248Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-16T04:00:00.432617Z",
+   "age_seconds": 35,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-16T03:59:59.500806Z",
+   "sequence": 3,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-16T04:00:35.352526Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "221039": {
   "id": 221039,
