@@ -124,6 +124,7 @@ for (const n of notas) {
   if (!conseguirFfmpeg()) { log('TikTok: no hay ffmpeg, se reintenta en la próxima corrida'); break; }
   const r = n.resultado, g = r.ganador.nombre, p = r.perdedor?.nombre || '';
   const esWTA = /WTA/i.test(`${n.categoria} ${n.torneo}`);
+  const torneo = String(n.torneo || n.categoria || '').toUpperCase();
   const tema = { ...temaTorneo(torneo, esWTA), etiqueta: esWTA ? 'WTA' : 'ATP' };
   // Exigir una foto editorial elegida para el ganador; el rival es secundario y su foto es opcional.
   const fotosEditoriales = leerJSON('scripts/ig-fotos.json', {});
@@ -135,7 +136,6 @@ for (const n of notas) {
   const fotoRival = fotoP && fs.existsSync(path.join(ROOT, `static/ig/fotos/${slug(p)}-1280.jpg`)) ? `static/ig/fotos/${slug(p)}-1280.jpg` : foto;
   if (!fs.existsSync(path.join(ROOT, foto)) || !fs.existsSync(path.join(ROOT, fotoRival))) { log('TikTok: faltan retratos grandes de ambos jugadores'); continue; }
   const sets = r.sets.map((s) => `${s[0]}-${s[1]}`).join('  ');
-  const torneo = String(n.torneo || n.categoria || '').toUpperCase();
   const frase = n.declaracion?.texto && n.declaracion.texto.length < 130 ? `«${n.declaracion.texto}»` : n.bajada;
   // Gancho editorial basado en la ronda, sin exagerar el marcador ni etiquetar como paliza un 6-2, 6-1.
   const ag = ape(g), ap = ape(p), rg = r.ganador.ranking, rp = r.perdedor?.ranking;
