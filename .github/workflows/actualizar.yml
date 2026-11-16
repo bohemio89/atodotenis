@@ -92,6 +92,8 @@ jobs:
           IMPORTANTE=$(git diff --cached --name-only | grep -E '^(content/|static/|data/instagram.json|data/ig-carruseles.json|data/tiktok.json)' || true)
           ULTIMA=$(git log -1 --format=%ct --author="A Todo Tenis bot" 2>/dev/null || echo 0)
           ULTIMA=${ULTIMA:-0}
+          # Con partidos importantes en vivo, el marcador se publica en cada corrida
+          if git diff --cached --name-only | grep -q '^data/partidos.json$' && node -e "const d=require('./data/partidos.json');process.exit(Object.values(d).some(p=>p&&p.estado==='en_vivo'&&p.importante)?0:1)"; then IMPORTANTE=si; fi
           if [ -z "$IMPORTANTE" ] && [ $(( $(date +%s) - ULTIMA )) -lt 1740 ]; then echo "Solo datos y la última publicación fue hace menos de 30 minutos: se espera"; exit 0; fi
           git commit -m "Actualización automática $(date -u +'%Y-%m-%d %H:%M') UTC"
           git pull --rebase -X ours origin main || true
