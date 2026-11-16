@@ -1,72 +1,85 @@
 {
- "slug": "2026-11-06-shelton-paul-paris",
- "estado": "publicada",
- "fecha": "2026-11-06T22:51:06.755Z",
- "fechaPartido": "2026-11-06T13:10:00Z",
- "titulo": "Ben Shelton venció a Tommy Paul y se metió en las semifinales de París",
- "bajada": "El N° 4 del ranking necesitó de tres sets para superar a su compatriota en el Masters 1000 de París.",
- "cuerpo": [
-  "Ben Shelton derrotó a Tommy Paul por 6-4, 4-6 y 6-3 en los cuartos de final del Masters 1000 de París. El N° 4 del mundo prevaleció en el cruce entre estadounidenses sobre cemento bajo techo y avanzó a la siguiente ronda.",
-  "Shelton arrancó mejor y se adjudicó la primera manga por 6-4. El N° 14 del ranking reaccionó en el segundo parcial y equilibró el marcador con un 6-4, pero el zurdo recuperó el control en el tercer set y selló la victoria por 6-3.",
-  "En otro resultado del día, Carlos Alcaraz, N° 3 del ranking, se impuso ante el estadounidense Taylor Fritz por 6-7, 7-5 y 6-3."
- ],
- "etiquetas": [
-  "Ben Shelton",
-  "Tommy Paul",
-  "Masters 1000 de París",
-  "ATP"
- ],
- "categoria": "Masters 1000",
- "argentina": false,
- "superficie": "hard",
- "partidoId": 215934,
- "jugadores": [
-  "Ben Shelton",
-  "Tommy Paul"
- ],
- "torneo": "París",
- "resultado": {
-  "ganador": {
-   "nombre": "Ben Shelton",
-   "pais": "usa",
-   "ranking": 4
-  },
-  "perdedor": {
-   "nombre": "Tommy Paul",
-   "pais": "usa",
-   "ranking": 14
-  },
-  "sets": [
-   [
-    6,
-    4
-   ],
-   [
-    4,
-    6
-   ],
-   [
-    6,
-    3
-   ]
+  "slug": "2026-11-06-shelton-paul-paris",
+  "estado": "publicada",
+  "fecha": "2026-11-06T22:51:06.755Z",
+  "fechaPartido": "2026-11-06T13:10:00Z",
+  "titulo": "Ben Shelton venció a Tommy Paul y se metió en las semifinales de París",
+  "bajada": "El N° 4 del ranking necesitó de tres sets para superar a su compatriota en el Masters 1000 de París.",
+  "cuerpo": [
+    "Ben Shelton derrotó a Tommy Paul por 6-4, 4-6 y 6-3 en los cuartos de final del Masters 1000 de París. El N° 4 del mundo prevaleció en el cruce entre estadounidenses sobre cemento bajo techo y avanzó a la siguiente ronda.",
+    "Shelton arrancó mejor y se adjudicó la primera manga por 6-4. El N° 14 del ranking reaccionó en el segundo parcial y equilibró el marcador con un 6-4, pero el zurdo recuperó el control en el tercer set y selló la victoria por 6-3.",
+    "En otro resultado del día, Carlos Alcaraz, N° 3 del ranking, se impuso ante el estadounidense Taylor Fritz por 6-7, 7-5 y 6-3."
   ],
-  "ronda": "QF",
-  "resultado": null
- },
- "firma": "Redacción A Todo Tenis",
- "imagen": {
-  "url": "/ig/fotos/ben-shelton-1280.jpg",
-  "credito": "LHC88 / CC BY 4.0, vía Wikimedia Commons",
-  "enlace": "https://commons.wikimedia.org/wiki/File:Ben_Shelton_forehand.png",
-  "licenciaUrl": "https://creativecommons.org/licenses/by/4.0",
-  "fechaFoto": "2025-10-23",
-  "jugador": "Ben Shelton",
-  "alt": "Ben Shelton",
-  "ancho": 1920,
-  "alto": 1353,
-  "calidad": 2
- },
- "generadoCon": "gemini-3.5-flash",
- "fotoBuscada": "2026-11-06T22:51:13.731Z",
- "importancia": 65
+  "etiquetas": [
+    "Ben Shelton",
+    "Tommy Paul",
+    "Masters 1000 de París",
+    "ATP"
+  ],
+  "categoria": "Masters 1000",
+  "argentina": false,
+  "superficie": "hard",
+  "partidoId": 215934,
+  "jugadores": [
+    "Ben Shelton",
+    "Tommy Paul"
+  ],
+  "torneo": "París",
+  "resultado": {
+    "ganador": {
+      "nombre": "Ben Shelton",
+      "pais": "usa",
+      "ranking": 4
+    },
+    "perdedor": {
+      "nombre": "Tommy Paul",
+      "pais": "usa",
+      "ranking": 14
+    },
+    "sets": [
+      [
+        6,
+        4
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        6,
+        3
+      ]
+    ],
+    "ronda": "QF",
+    "resultado": null
+  },
+  "firma": "Redacción A Todo Tenis",
+  "imagen": {
+    "url": "/ig/fotos/ben-shelton-1280.jpg",
+    "credito": "LHC88 / CC BY 4.0, vía Wikimedia Commons",
+    "enlace": "https://commons.wikimedia.org/wiki/File:Ben_Shelton_forehand.png",
+    "licenciaUrl": "https://creativecommons.org/licenses/by/4.0",
+    "fechaFoto": "2025-10-23",
+    "jugador": "Ben Shelton",
+    "alt": "Ben Shelton",
+    "ancho": 1920,
+    "alto": 1353,
+    "calidad": 2
+  },
+  "generadoCon": "gemini-3.5-flash",
+  "fotoBuscada": "2026-11-06T22:51:13.731Z",
+  "importancia": 65,
+  "en": {
+    "categoria": "Masters 1000",
+    "titulo": "Ben Shelton beats Tommy Paul to reach the Paris semifinals",
+    "bajada": "The world No. 4 needed three sets to get past his compatriot at the Paris Masters.",
+    "cuerpo": [
+      "Ben Shelton defeated Tommy Paul 6-4, 4-6, 6-3 in the quarterfinals of the Paris Masters. The world No. 4 came out on top in the all-American clash on the indoor hard court and advanced to the next round.",
+      "Shelton started better and took the first set 6-4. The world No. 14 responded in the second and leveled the match 6-4, but the left-hander regained control in the third set and sealed the win 6-3.",
+      "In another result on the day, Carlos Alcaraz, ranked No. 3, beat American Taylor Fritz 6-7, 7-5, 6-3."
+    ],
+    "modelo": "manual",
+    "huella": "5e47d171c008",
+    "fecha": "2026-11-16T20:59:04.761Z"
+  }
 }
