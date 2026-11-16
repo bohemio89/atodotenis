@@ -133,7 +133,7 @@ function imagenNota(n, conCredito = true) {
     // Si falla el thumbnail de Wikimedia, probar el archivo original en upload.wikimedia.org.
     const alternativa = n.imagen.url.replace(/^https:\/\/thumb\.wikimedia\.org\/wikipedia\/commons\/thumb\/(.+)\/[^/]+(?:\?.*)?$/, 'https://upload.wikimedia.org/wikipedia/commons/$1');
     const fallback = alternativa !== n.imagen.url ? alternativa : '';
-    return `<div class="fondo"><img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} data-fallback="${esc(fallback)}" onerror="if(this.dataset.fallback){var f=this.dataset.fallback;this.dataset.fallback='';this.removeAttribute('srcset');this.src=f;}else{this.hidden=true;var p=this.nextElementSibling;if(p)p.hidden=false;}" alt="${esc(EN ? n.titulo : n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%"><div class="imagen-respaldo" hidden>${respaldo}</div>${conCredito ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
+    return `<div class="fondo"><img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} data-fallback="${esc(fallback)}" onerror="if(this.dataset.fallback){var f=this.dataset.fallback;this.dataset.fallback='';this.removeAttribute('srcset');this.src=f;}else{this.hidden=true;var p=this.nextElementSibling;if(p)p.hidden=false;}" alt="${esc(EN ? n.titulo : n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%"><div class="imagen-respaldo" hidden>${respaldo}</div>${conCredito && !n.imagen.propia ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
   }
   return respaldo;
 }
@@ -541,7 +541,7 @@ for (const n of notas) {
 <div class="firma"><time datetime="${esc(n.fecha)}">${fechaArg(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</time></div>
 ${gettySrc(n.getty) ? `<figure class="getty"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="width:100%;aspect-ratio:${gettyRatio(n.getty)};border:0"></iframe><figcaption>Crédito de la imagen: Getty Images</figcaption></figure>`
   : `<figure><div class="img">${imagenNota(n, false)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: <a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>${n.imagen.fechaFoto ? ` · ${EN ? 'photo from' : 'foto del'} ${esc(fechaArg(n.imagen.fechaFoto, { day: 'numeric', month: 'long', year: 'numeric' }))}` : ''}${n.imagen.licenciaUrl ? ` · <a href="${esc(n.imagen.licenciaUrl)}" rel="noopener license">licencia</a>` : ''}</figcaption>` : ''}</figure>`}
-<div class="cuerpo">${n.cuerpo.map((x, i) => `<p>${esc(x)}</p>${i === 1 ? declaracionNota(n) : ''}`).join('')}</div>${videoNota(n)}${ficha}
+<div class="cuerpo">${n.cuerpo.map((x, i) => `<p>${esc(x)}</p>${i === 1 ? declaracionNota(n) : ''}${(n.galeria || []).filter((g) => g.despuesDe === i).map((g) => `<figure style="margin:26px auto;max-width:560px"><img src="${esc(g.url)}" alt="${esc(g.alt || '')}" loading="lazy" style="width:100%;height:auto;border-radius:8px">${g.epigrafe ? `<figcaption>${esc(g.epigrafe)}</figcaption>` : ''}</figure>`).join('')}`).join('')}</div>${videoNota(n)}${ficha}
 ${relacionadas.length ? `<div class="sec-tit sec"><h2>Más noticias</h2></div><div class="lista-notas">${relacionadas.map(cardNota).join('')}</div>` : ''}
 </article>`
   }));

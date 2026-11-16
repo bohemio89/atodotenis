@@ -65,7 +65,21 @@ async function buscar(jugador, fechaNota) {
     });
   }
   candidatas.sort((a, b) => b.puntaje - a.puntaje);
-  return candidatas[0] || null;
+  return candidatas;
+}
+
+// Rotación: cuántas veces se usó cada foto en las notas de los últimos 30 días, para no repetir siempre la misma
+function usosRecientes() {
+  const usos = new Map(), desde = Date.now() - 30 * 864e5;
+  for (const f of notas) {
+    try { const n = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); if (n.imagen?.url && new Date(n.fecha || 0).getTime() > desde) { const k = n.imagen.enlace || n.imagen.url; usos.set(k, (usos.get(k) || 0) + 1); } } catch {}
+  }
+  return usos;
+}
+function elegir(cands, usos) {
+  if (!cands.length) return null;
+  // La foto menos usada; ante empate, la mejor puntuada (más reciente y apaisada)
+  return [...cands].sort((a, b) => (usos.get(a.pagina) || 0) - (usos.get(b.pagina) || 0) || b.puntaje - a.puntaje)[0];
 }
 
 async function main() {
@@ -83,7 +97,7 @@ async function main() {
     const jugadores = n.jugadores || (p ? [p.ganador === 2 ? p.j2 : p.j1, p.ganador === 2 ? p.j1 : p.j2].filter(Boolean).map((j) => j.nombre) : []);
     let foto = null;
     for (const nombre of jugadores.filter((x) => x && !x.includes('/'))) {
-      try { foto = await buscar(nombre, n.fechaPartido || n.fecha); } catch (e) { log('Commons falló:', e.message); }
+      try { foto = elegir(await buscar(nombre, n.fechaPartido || n.fecha), usosRecientes()); } catch (e) { log('Commons falló:', e.message); }
       if (foto) { foto.jugador = nombre; break; }
       await new Promise((s) => setTimeout(s, 1000));
     }
