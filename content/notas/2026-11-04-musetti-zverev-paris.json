@@ -1,81 +1,81 @@
 {
-  "slug": "2026-11-04-musetti-zverev-paris",
-  "estado": "publicada",
-  "fecha": "2026-11-05T11:11:40.140Z",
-  "fechaPartido": "2026-11-04T12:40:00Z",
-  "titulo": "Musetti sorprende al número uno Zverev en el Masters 1000 de París",
-  "bajada": "El italiano se impuso por 7-6 y 6-2 ante el alemán para instalarse en los octavos de final.",
-  "cuerpo": [
-    "Lorenzo Musetti firmó un triunfo de alto impacto en el Masters 1000 de París tras superar a Alexander Zverev por 7-6 6-2. El italiano, número 24 del mundo, despidió al líder del ranking en la ronda de 32 del torneo sobre cemento bajo techo.",
-    "El primer set presentó extrema paridad y necesitó de un tie-break para volcar la balanza en favor de Musetti. Con la ventaja inicial, el tenista europeo sostuvo la efectividad en el segundo parcial y selló el resultado por 6-2 en dos sets.",
-    "El próximo partido del ganador será en octavos de final ante Luca van Assche. En los resultados disputados este 4 de noviembre de 2026, también se produjo la caída de Daniil Medvedev, número 5 del mundo, ante Ignacio Buse por 6-4 6-4."
+ "slug": "2026-11-04-musetti-zverev-paris",
+ "estado": "publicada",
+ "fecha": "2026-11-05T11:11:40.140Z",
+ "fechaPartido": "2026-11-04T12:40:00Z",
+ "titulo": "Musetti sorprende al número uno Zverev en el Masters 1000 de París",
+ "bajada": "El italiano se impuso por 7-6 y 6-2 ante el alemán para instalarse en los octavos de final.",
+ "cuerpo": [
+  "Lorenzo Musetti firmó un triunfo de alto impacto en el Masters 1000 de París tras superar a Alexander Zverev por 7-6 6-2. El italiano, número 24 del mundo, despidió al líder del ranking en la ronda de 32 del torneo sobre cemento bajo techo.",
+  "El primer set presentó extrema paridad y necesitó de un tie-break para volcar la balanza en favor de Musetti. Con la ventaja inicial, el tenista europeo sostuvo la efectividad en el segundo parcial y selló el resultado por 6-2 en dos sets.",
+  "El próximo partido del ganador será en octavos de final ante Luca van Assche. En los resultados disputados este 4 de noviembre de 2026, también se produjo la caída de Daniil Medvedev, número 5 del mundo, ante Ignacio Buse por 6-4 6-4."
+ ],
+ "etiquetas": [
+  "Lorenzo Musetti",
+  "Alexander Zverev",
+  "Masters 1000 de París",
+  "ATP"
+ ],
+ "categoria": "Masters 1000",
+ "argentina": false,
+ "superficie": "hard",
+ "partidoId": 214267,
+ "jugadores": [
+  "Lorenzo Musetti",
+  "Alexander Zverev"
+ ],
+ "torneo": "París",
+ "firma": "Redacción A Todo Tenis",
+ "generadoCon": "gemini-3.5-flash",
+ "fotoBuscada": "2026-11-09T19:11:30.902Z",
+ "resultado": {
+  "ganador": {
+   "nombre": "Lorenzo Musetti",
+   "pais": "ita",
+   "ranking": 24
+  },
+  "perdedor": {
+   "nombre": "Alexander Zverev",
+   "pais": "ger",
+   "ranking": 1
+  },
+  "sets": [
+   [
+    7,
+    6
+   ],
+   [
+    6,
+    2
+   ]
   ],
-  "etiquetas": [
-    "Lorenzo Musetti",
-    "Alexander Zverev",
-    "Masters 1000 de París",
-    "ATP"
-  ],
+  "ronda": "R32",
+  "resultado": null
+ },
+ "importancia": 50,
+ "imagen": {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Lorenzo_Musetti_%282025_DC_Open%29_02.jpg/1920px-Lorenzo_Musetti_%282025_DC_Open%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "credito": "Hameltion / CC BY-SA 4.0, vía Wikimedia Commons",
+  "enlace": "https://commons.wikimedia.org/wiki/File:Lorenzo_Musetti_(2025_DC_Open)_02.jpg",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fechaFoto": "2025-07-22",
+  "jugador": "Lorenzo Musetti",
+  "alt": "Lorenzo Musetti",
+  "ancho": 1920,
+  "alto": 1280,
+  "calidad": 2
+ },
+ "en": {
   "categoria": "Masters 1000",
-  "argentina": false,
-  "superficie": "hard",
-  "partidoId": 214267,
-  "jugadores": [
-    "Lorenzo Musetti",
-    "Alexander Zverev"
+  "titulo": "Musetti stuns world No. 1 Zverev at the Paris Masters",
+  "bajada": "The Italian beat the German 7-6, 6-2 to reach the round of 16.",
+  "cuerpo": [
+   "Lorenzo Musetti claimed a high-impact win at the Paris Masters, beating Alexander Zverev 7-6 6-2. The Italian, ranked 24th in the world, knocked out the No. 1 in the round of 32 of the indoor hard-court event.",
+   "The first set was extremely tight and needed a tiebreak to tip the balance Musetti's way. With that lead, the European stayed efficient in the second set and sealed the straight-sets win 6-2.",
+   "The winner's next match is in the round of 16 against Luca van Assche. Among the results played on November 4, 2026, world No. 5 Daniil Medvedev also fell to Ignacio Buse 6-4 6-4."
   ],
-  "torneo": "París",
-  "firma": "Redacción A Todo Tenis",
-  "generadoCon": "gemini-3.5-flash",
-  "fotoBuscada": "2026-11-09T19:11:30.902Z",
-  "resultado": {
-    "ganador": {
-      "nombre": "Lorenzo Musetti",
-      "pais": "ita",
-      "ranking": 24
-    },
-    "perdedor": {
-      "nombre": "Alexander Zverev",
-      "pais": "ger",
-      "ranking": 1
-    },
-    "sets": [
-      [
-        7,
-        6
-      ],
-      [
-        6,
-        2
-      ]
-    ],
-    "ronda": "R32",
-    "resultado": null
-  },
-  "importancia": 50,
-  "imagen": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Lorenzo_Musetti_%282025_DC_Open%29_02.jpg/1920px-Lorenzo_Musetti_%282025_DC_Open%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "credito": "Hameltion / CC BY-SA 4.0, vía Wikimedia Commons",
-    "enlace": "https://commons.wikimedia.org/wiki/File:Lorenzo_Musetti_(2025_DC_Open)_02.jpg",
-    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "fechaFoto": "2025-07-22",
-    "jugador": "Lorenzo Musetti",
-    "alt": "Lorenzo Musetti",
-    "ancho": 1920,
-    "alto": 1280,
-    "calidad": 2
-  },
-  "en": {
-    "categoria": "Masters 1000",
-    "titulo": "Musetti stuns world No. 1 Zverev at the Paris Masters",
-    "bajada": "The Italian beat the German 7-6, 6-2 to reach the round of 16.",
-    "cuerpo": [
-      "Lorenzo Musetti claimed a high-impact win at the Paris Masters, beating Alexander Zverev 7-6 6-2. The Italian, ranked 24th in the world, knocked out the No. 1 in the round of 32 of the indoor hard-court event.",
-      "The first set was extremely tight and needed a tiebreak to tip the balance Musetti's way. With that lead, the European stayed efficient in the second set and sealed the straight-sets win 6-2.",
-      "The winner's next match is in the round of 16 against Luca van Assche. Among the results played on November 4, 2026, world No. 5 Daniil Medvedev also fell to Ignacio Buse 6-4 6-4."
-    ],
-    "modelo": "manual",
-    "huella": "b287ff84d266",
-    "fecha": "2026-11-16T20:59:04.757Z"
-  }
+  "modelo": "manual",
+  "huella": "b287ff84d266",
+  "fecha": "2026-11-16T20:59:04.757Z"
+ }
 }
