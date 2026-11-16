@@ -61,13 +61,20 @@ jobs:
         run: node scripts/videos.mjs
       - name: Fotos para el ranking
         run: node scripts/avatares.mjs
-      - name: Instagram (publicar lo preparado y preparar la próxima)
+      - name: TikTok (generar videos para descarga)
+        continue-on-error: true
+        timeout-minutes: 4
+        run: |
+          npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed
+          node scripts/tiktok.mjs || echo "TikTok: se reintentará en la próxima corrida"
+      - name: Instagram (publicar y preparar la siguiente)
+        timeout-minutes: 3
         env:
           INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
         run: |
           npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed
           node scripts/ig-series.mjs || echo "Series: error"
-          node scripts/tiktok.mjs || echo "TikTok: error"
+          node scripts/instagram.mjs preparar
           node scripts/instagram.mjs salida
           node scripts/instagram.mjs preparar
       - name: Probar que el sitio se genera bien
