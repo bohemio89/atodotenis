@@ -380,7 +380,7 @@ async function main() {
         registrar(j.id, j.name, j.country, j.tour);
       }
     }
-    jugadores.lista = lista; jugadores.actualizado = ahora.toISOString();
+    jugadores.lista = lista; jugadores.actualizado = ahora.toISOString(); jugadores.fuenteRanking = 'api';
     guardarJSON('data/jugadores.json', jugadores);
     estado.jugadoresHoy = true;
     estado.semanaJugadores = semanaActual;

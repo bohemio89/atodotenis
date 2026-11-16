@@ -37,7 +37,13 @@ async function atp() {
     const d = JSON.parse(t);
     if (Array.isArray(d) && d.length) return d.map((x) => ({ nombre: `${x.FirstName} ${x.LastName}`, pais: (x.PlayerCountry || x.NatlId || '').toLowerCase(), ranking: x.RankNo, puntos: x.Points, cambio: x.Movement ?? (x.PrvRankNo ? x.PrvRankNo - x.RankNo : null), tour: 'atp' }));
   } catch (e) { log('ATP JSON:', e.message); }
-  // 2) Página HTML del ranking
+  // 2) Listado oficial guardado (atptour.com bloquea las consultas automáticas): vale si es de esta semana
+  try {
+    const g = JSON.parse(fs.readFileSync('data/ranking-atp.json', 'utf8'));
+    if (Date.now() - new Date(g.fecha + 'T00:00:00Z') < 7 * 864e5) { log('ATP: listado oficial guardado del', g.fecha); return g.lista.map((x) => ({ ...x, tour: 'atp' })); }
+    log('ATP: el listado guardado es viejo:', g.fecha);
+  } catch (e) { log('ATP guardado:', e.message); }
+  // 3) Página HTML del ranking
   const h = await traer('https://www.atptour.com/en/rankings/singles?rankRange=1-200');
   const out = [];
   const filas = h.split(/<tr[\s>]/).slice(1);
@@ -53,6 +59,8 @@ async function atp() {
 }
 
 const probar = process.argv[2] === 'probar';
+const previo = JSON.parse(fs.readFileSync(ARCH, 'utf8'));
+if (!probar && !process.env.FORZAR && previo.oficialActualizado && Date.now() - new Date(previo.oficialActualizado) < 6 * 3600e3 && previo.fuenteRanking === 'oficial') { log('Ranking oficial reciente, no se repite.'); process.exit(0); }
 const res = {};
 for (const [k, fn] of [['atp', atp], ['wta', wta]]) {
   try { res[k] = await fn(); log(k, res[k].length, 'jugadores', JSON.stringify(res[k].slice(0, 3))); }
@@ -80,5 +88,5 @@ for (const tour of ['atp', 'wta']) {
   }
   for (const [id, j] of Object.entries(lista)) if (j.tour === tour && !vistos.has(id) && j.ranking && j.ranking <= 200) lista[id] = { ...j, ranking: null, cambio: null };
 }
-if (cambios) { jug.lista = lista; jug.actualizado = new Date().toISOString(); jug.fuenteRanking = 'oficial'; fs.writeFileSync(ARCH, JSON.stringify(jug, null, 1) + '\n'); }
+if (cambios) { jug.lista = lista; jug.actualizado = new Date().toISOString(); jug.fuenteRanking = 'oficial'; jug.oficialActualizado = new Date().toISOString(); fs.writeFileSync(ARCH, JSON.stringify(jug, null, 1) + '\n'); }
 log('Actualizados:', cambios);

@@ -16,12 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - if: ${{ inputs.modo == 'atp' }}
-        run: |
-          npm i --no-save playwright-core@1.48.2
-          node scripts/probar-atp.mjs
-      - if: ${{ inputs.modo != 'atp' }}
-        run: node scripts/ranking-oficial.mjs ${{ inputs.modo }}
+      - run: FORZAR=1 node scripts/ranking-oficial.mjs ${{ inputs.modo }}
       - if: ${{ inputs.modo == '' }}
         run: |
           git config user.name "A Todo Tenis"
