@@ -3,6 +3,12 @@
   "outputDirectory": "dist",
   "installCommand": "echo sin dependencias",
   "framework": null,
+  "git": {
+    "deploymentEnabled": {
+      "*": false,
+      "main": true
+    }
+  },
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
