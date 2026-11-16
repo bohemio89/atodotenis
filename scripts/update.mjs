@@ -277,7 +277,7 @@ async function main() {
   const debeActualizarRanking = ventanaRanking && estado.semanaJugadores !== semanaActual;
   // No considerar el ranking actualizado por una sincronización diaria anterior
   // al lunes 18:00 UTC: la marca semanal solo se escribe tras la consulta programada.
-  if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < intervaloActualizacion && !process.env.FORZAR) {
+  if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < intervaloActualizacion && !process.env.FORZAR && !debeActualizarRanking) {
     const ultimaVigilancia = estado.ultimaConsultaEnVivo ? new Date(estado.ultimaConsultaEnVivo).getTime() : 0;
     const intervaloVigilancia = hayFinalesEnVentana ? 15 : 30;
     const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= intervaloVigilancia * 60000;
