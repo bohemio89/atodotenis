@@ -1,0 +1,27 @@
+name: Fotos HD para videos
+# Corre solo en la rama "media": no toca main ni publica nada en Vercel.
+on:
+  push:
+    branches: [media]
+    paths: [media/pedido.txt]
+permissions:
+  contents: write
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: media
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Descargar fotos
+        run: JUGADORES="$(cat media/pedido.txt)" node scripts/fotos-hd.mjs
+      - name: Guardar
+        run: |
+          git config user.name "A Todo Tenis bot"
+          git config user.email "bot@atodotenis.local"
+          git add media/hd
+          git commit -m "Fotos HD descargadas" || echo "sin cambios"
+          git push
