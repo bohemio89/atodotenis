@@ -243,14 +243,36 @@
  },
  "wta|Finals - Riyadh": {
   "clave": "wta|Finals - Riyadh",
-  "nombre": "Finals - Riyadh",
+  "nombre": "WTA Finals",
   "tour": "wta",
   "id": "3190",
-  "meta": null,
-  "campeones": {},
+  "meta": {
+   "ciudad": "Indian Wells",
+   "pais": "US",
+   "categoria": "wta_finals",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "women"
+  },
+  "campeones": {
+   "2026": {
+    "singles": {
+     "campeon": "Mirra Andreeva",
+     "pais": "rus",
+     "paises": null,
+     "finalista": "Elina Svitolina",
+     "paisFinalista": "ukr",
+     "paisesFinalista": null,
+     "marcador": "7-5 6-3",
+     "partidoId": "manual-wta-finals-2026",
+     "fecha": "2026-11-15T20:00:00Z"
+    }
+   }
+  },
   "primeraVez": "2026-11-08T20:00:00Z",
   "ultimaVez": "2026-11-15T23:05:00Z",
-  "superficie": "hard"
+  "superficie": "hard",
+  "tier": "wta_finals"
  },
  "challenger_women|Taipei": {
   "clave": "challenger_women|Taipei",
