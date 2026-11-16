@@ -21111,7 +21111,7 @@
   "j2": {
    "id": 607,
    "nombre": "R. Matsuda",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "dobles": false,
@@ -21198,7 +21198,7 @@
   "j2": {
    "id": 820,
    "nombre": "T. Kumasaka",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "dobles": false,
@@ -51315,12 +51315,12 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-16T02:00:00Z",
+  "horario": "2026-11-16T02:10:00Z",
   "j1": {
    "id": 70,
-   "nombre": "N. Honda",
+   "nombre": "Naoya Honda",
    "pais": "jpn",
-   "ranking": null
+   "ranking": 588
   },
   "j2": {
    "id": 71,
@@ -51329,12 +51329,59 @@
    "ranking": 215
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T21:30:30.112Z",
+  "visto": "2026-11-16T02:15:23.223Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-16T02:15:06.496039Z",
+   "age_seconds": 15,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "40"
+   ],
+   "received_at": "2026-11-16T02:15:06.175340Z",
+   "sequence": 11,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-16T02:15:17.547364Z",
+   "puntos": [
+    "0",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220233": {
   "id": 220233,
@@ -51409,7 +51456,7 @@
   "j1": {
    "id": 607,
    "nombre": "R. Matsuda",
-   "pais": null,
+   "pais": "jpn",
    "ranking": null
   },
   "j2": {
@@ -51812,7 +51859,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "jpn",
     null
    ]
   },
@@ -53073,7 +53120,7 @@
    "ranking": null,
    "paises": [
     "fra",
-    null
+    "aus"
    ]
   },
   "dobles": true,
@@ -57623,18 +57670,18 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T01:56:33.842Z",
+  "visto": "2026-11-16T02:15:23.223Z",
   "tier": null,
   "importante": false,
   "torneoId": "2445",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T01:56:20.486035Z",
-   "age_seconds": 13,
+   "accepted_at": "2026-11-16T02:14:31.577589Z",
+   "age_seconds": 49,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -57644,23 +57691,23 @@
     [
      6,
      6,
-     2
+     5
     ],
     [
      7,
      2,
-     2
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
     "40",
-    "0"
+    "AD"
    ],
-   "received_at": "2026-11-16T01:56:20.001486Z",
-   "sequence": 184,
+   "received_at": "2026-11-16T02:14:31.323721Z",
+   "sequence": 214,
    "server": 1,
    "sets": [
     1,
@@ -57668,10 +57715,10 @@
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-16T01:56:20.486029Z",
+   "timestamp": "2026-11-16T02:15:18.403002Z",
    "puntos": [
     "40",
-    "0"
+    "AD"
    ],
    "saca": 1
   },
@@ -58502,25 +58549,72 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-16T00:45:00Z",
+  "horario": "2026-11-16T02:05:00Z",
   "j1": {
-   "id": 46013,
-   "nombre": "Z. Viiala",
-   "pais": null,
-   "ranking": null
+   "id": 373,
+   "nombre": "Samuel Heredia",
+   "pais": "col",
+   "ranking": 629
   },
   "j2": {
-   "id": 373,
-   "nombre": "S. Heredia",
-   "pais": null,
-   "ranking": null
+   "id": 46013,
+   "nombre": "Zack Viiala",
+   "pais": "aus",
+   "ranking": 1253
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T21:30:30.112Z",
+  "visto": "2026-11-16T02:15:23.223Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2477",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-16T02:15:06.499447Z",
+   "age_seconds": 15,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "30",
+    "30"
+   ],
+   "received_at": "2026-11-16T02:15:05.789001Z",
+   "sequence": 21,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-16T02:15:17.521190Z",
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220499": {
   "id": 220499,
@@ -60630,7 +60724,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T01:56:33.842Z",
+  "visto": "2026-11-16T02:15:23.223Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -60638,10 +60732,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-16T01:51:54.490867Z",
-   "age_seconds": 279,
-   "changing_sources_count": 1,
+   "age_seconds": 1407,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 756,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -60658,7 +60752,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
     "15",
@@ -60671,9 +60765,9 @@
     1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-16T01:56:30.641158Z",
+   "timestamp": "2026-11-16T02:15:14.041773Z",
    "puntos": [
     "15",
     "30"
@@ -60708,7 +60802,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T01:56:33.842Z",
+  "visto": "2026-11-16T02:15:23.223Z",
   "tier": null,
   "importante": false,
   "torneoId": "2628",
@@ -60716,10 +60810,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-16T01:54:20.736530Z",
-   "age_seconds": 133,
-   "changing_sources_count": 2,
+   "age_seconds": 1260,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 30,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -60736,7 +60830,7 @@
     ]
    ],
    "is_tiebreak": true,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
     "0",
@@ -60751,7 +60845,7 @@
    ],
    "sources_count": 2,
    "stale": true,
-   "timestamp": "2026-11-16T01:56:30.638436Z",
+   "timestamp": "2026-11-16T02:15:14.064651Z",
    "puntos": [
     "0",
     "0"
@@ -60770,25 +60864,72 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-16T02:00:00Z",
+  "horario": "2026-11-16T02:05:00Z",
   "j1": {
+   "id": 820,
+   "nombre": "Takuya Kumasaka",
+   "pais": "jpn",
+   "ranking": 668
+  },
+  "j2": {
    "id": 950,
    "nombre": "Constantin Kouzmine Bittoun",
    "pais": "fra",
    "ranking": 492
   },
-  "j2": {
-   "id": 820,
-   "nombre": "T. Kumasaka",
-   "pais": null,
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T21:30:30.112Z",
+  "visto": "2026-11-16T02:15:23.223Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-16T02:14:36.706503Z",
+   "age_seconds": 44,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-16T02:14:36.103666Z",
+   "sequence": 6,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-16T02:14:46.190788Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220572": {
   "id": 220572,
@@ -60799,7 +60940,7 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-16T02:00:00Z",
+  "horario": "2026-11-16T02:10:00Z",
   "j1": {
    "id": 463,
    "nombre": "Koki Matsuda",
@@ -60808,16 +60949,63 @@
   },
   "j2": {
    "id": 5548,
-   "nombre": "K. Watanabe",
-   "pais": null,
-   "ranking": null
+   "nombre": "Kanta Watanabe",
+   "pais": "jpn",
+   "ranking": 2005
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-15T21:30:30.112Z",
+  "visto": "2026-11-16T02:15:23.223Z",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-16T02:15:02.052457Z",
+   "age_seconds": 19,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "40",
+    "0"
+   ],
+   "received_at": "2026-11-16T02:15:01.963091Z",
+   "sequence": 11,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-16T02:15:17.530097Z",
+   "puntos": [
+    "40",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220573": {
   "id": 220573,
@@ -60871,7 +61059,7 @@
    "ranking": 1188
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-16T01:56:33.842Z",
   "tier": null,
@@ -61511,7 +61699,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-16T01:56:33.842Z",
+  "visto": "2026-11-16T02:15:23.223Z",
   "torneoClave": "challenger|Champaign",
   "tier": null,
   "importante": false,
@@ -61519,11 +61707,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-16T01:55:24.986972Z",
-   "age_seconds": 68,
+   "accepted_at": "2026-11-16T02:14:59.739003Z",
+   "age_seconds": 21,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -61532,35 +61720,35 @@
    "games": [
     [
      7,
-     0
+     2
     ],
     [
      6,
-     0
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
     "0",
-    "0"
+    "30"
    ],
-   "received_at": "2026-11-16T01:55:23.598776Z",
-   "sequence": 85,
-   "server": 1,
+   "received_at": "2026-11-16T02:14:59.455801Z",
+   "sequence": 113,
+   "server": 2,
    "sets": [
     1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-16T01:56:32.297005Z",
+   "timestamp": "2026-11-16T02:15:20.558579Z",
    "puntos": [
     "0",
-    "0"
+    "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
