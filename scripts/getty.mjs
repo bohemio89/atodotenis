@@ -4,6 +4,7 @@
 //   node scripts/getty.mjs            (SLUGS="a,b" para forzar notas puntuales)
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { ROOT, log } from './lib/util.mjs';
 
 const DIR = path.join(ROOT, 'content/notas');
@@ -54,8 +55,14 @@ async function embed(id) {
   return { src: `https://embed.gettyimages.com/embed/${id}?et=${et}&tld=com&sig=${encodeURIComponent(sig)}&caption=true&ver=1`, w, h, id, fecha: new Date().toISOString() };
 }
 
-const { chromium } = await import('playwright-core');
-const nav = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' });
+// Getty frena al Chrome del sistema en modo oculto; con el Chromium de Playwright la búsqueda pasa.
+// Se instala solo cuando hay notas pendientes, para no demorar las demás corridas.
+try { await import('playwright'); } catch {
+  execFileSync('npm', ['i', '--no-save', '--no-audit', '--no-fund', '--silent', 'playwright@1', 'playwright-core', '@fontsource/inter', '@fontsource/montserrat', '@fontsource/roboto-condensed', '@fontsource/anton', '@fontsource/dm-serif-display'], { cwd: ROOT, stdio: 'inherit' });
+}
+execFileSync('npx', ['playwright', 'install', 'chromium'], { cwd: ROOT, stdio: 'ignore' });
+const { chromium } = await import('playwright');
+const nav = await chromium.launch();
 try {
   const pg = await nav.newPage({ userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', locale: 'en-US' });
   for (const { f, n } of pendientes) {
@@ -65,7 +72,8 @@ try {
     for (const frase of [`${ganador} ${lugar(n)}`, `${ganador} ${perdedor || ''}`, ganador]) {
       try {
         await pg.goto(`https://www.gettyimages.com/search/2/image?phrase=${encodeURIComponent(frase.trim())}&sort=newest&family=editorial`, { waitUntil: 'domcontentloaded', timeout: 45000 });
-        await pg.waitForTimeout(3500);
+        for (let i = 0; i < 10 && /just a moment/i.test(await pg.title()); i++) await pg.waitForTimeout(2000);
+        await pg.waitForTimeout(2500);
         const enlaces = await pg.$$eval('a[href*="/detail/news-photo/"]', (as) => as.slice(0, 40).map((a) => a.getAttribute('href')));
         if (process.env.DEPURAR) log('Getty: búsqueda', frase, '|', await pg.title(), '|', enlaces.length, 'enlaces', enlaces.slice(0, 3).join(' '));
         elegida = elegir(enlaces, ganador, perdedor);
