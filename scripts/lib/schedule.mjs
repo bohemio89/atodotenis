@@ -11,7 +11,7 @@ export function rankingWindowStart(fecha) {
   const offsetDesdeLunes = (fecha.getUTCDay() + 6) % 7;
   return new Date(Date.UTC(
     fecha.getUTCFullYear(), fecha.getUTCMonth(),
-    fecha.getUTCDate() - offsetDesdeLunes, 18, 0, 0
+    fecha.getUTCDate() - offsetDesdeLunes, 8, 0, 0
   ));
 }
 
