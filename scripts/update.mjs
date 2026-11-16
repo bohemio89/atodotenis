@@ -363,9 +363,9 @@ async function main() {
   }
 
   // 3) Jugadores y ranking, una vez por semana después de la ventana oficial
-  const corridasFuturasAntesRanking = forecastRuns(horasHastaReinicio, intervaloActualizacion);
-  const calendariosFuturosAntesRanking = forecastCalendarCalls(horasHastaReinicio, C.calendarioCadaHoras, C.toursCalendario.length);
-  const presupuestoParaRanking = C.presupuestoDiario - estado.usadas - C.reserva - corridasFuturasAntesRanking - calendariosFuturosAntesRanking;
+  // El ranking oficial semanal tiene prioridad el lunes: reservar solo el margen fijo
+  // de seguridad evita que la previsión conservadora de vigilancia en vivo lo postergue.
+  const presupuestoParaRanking = C.presupuestoDiario - estado.usadas - C.reserva;
   if (debeActualizarRanking && presupuestoParaRanking >= C.jugadoresPaginas) {
     const lista = {};
     for (let i = 0; i < C.jugadoresPaginas; i++) {
