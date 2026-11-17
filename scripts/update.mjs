@@ -398,10 +398,16 @@ async function main() {
   const rankingsFuturos = debeActualizarRanking && estado.semanaJugadores !== semanaActual ? C.jugadoresPaginas : 0;
   const fijasFuturas = corridasRestantes + calendariosRestantes + rankingsFuturos;
   const disponibles = C.presupuestoDiario - estado.usadas - C.reserva - fijasFuturas;
-  const cupo = Math.max(0, Math.min(C.maxDetallesPorCorrida, disponibles));
   const pendientes = Object.values(partidos)
-    .filter((p) => !p.confirmado && ['por_confirmar', 'finalizado'].includes(p.estado))
+    .filter((p) => !p.confirmado && ['por_confirmar', 'finalizado'].includes(p.estado) &&
+      ahora - new Date(p.horario || 0) < 7 * 864e5)
     .sort((a, b) => prioridad(b) - prioridad(a) || String(b.horario).localeCompare(String(a.horario)));
+  // Los resultados de partidos importantes de las últimas 24 h se confirman siempre (2 consultas por corrida
+  // como máximo), aunque la previsión de corridas futuras no deje margen: sin esto quedaban sin resultado final.
+  const importantesRecientes = pendientes.filter((p) => p.importante && ahora - new Date(p.horario || 0) < 864e5).length;
+  const margenReal = C.presupuestoDiario - estado.usadas - C.reserva;
+  const garantizado = Math.min(2, importantesRecientes, Math.max(0, margenReal));
+  const cupo = Math.max(garantizado, Math.min(C.maxDetallesPorCorrida, disponibles));
   let confirmados = 0;
   for (const p of pendientes.slice(0, cupo)) {
     const m = await api(`matches/${p.id}`);

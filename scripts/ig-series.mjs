@@ -70,7 +70,7 @@ async function ranking() {
     'El ranking completo, en el link de la bio.',
     ['#tenis', '#tennis', '#ranking', tag(atp[0].nombre), tag(wta[0].nombre)].join(' '),
   ].filter(Boolean).join('\n\n');
-  return { id: `ranking-${semanaISO(ahora)}`, placas, texto, vence: masDias(2), prioridad: 1 };
+  return { id: `ranking-${semanaISO(ahora)}`, placas, texto, vence: masDias(2), prioridad: 1, claves: ["ranking"] };
 }
 
 // ---------- Un día como hoy ----------
@@ -143,7 +143,7 @@ async function campeones() {
     '¿Cuál de estos títulos te sorprendió?',
     ['#tenis', '#tennis', '#ATP', '#WTA', tag(primero.campeon)].join(' '),
   ].join('\n\n');
-  return { id: `campeones-${semanaISO(ahora)}`, placas, texto, vence: masDias(1), prioridad: 3 };
+  return { id: `campeones-${semanaISO(ahora)}`, placas, texto, vence: masDias(1), prioridad: 3, claves: ["campeon"] };
 }
 
 // ---------- Qué toca ahora ----------
@@ -177,7 +177,7 @@ for (const nombre of forzada ? [forzada] : tocan()) {
   const archivos = pieza.placas.map((_, i) => path.join(ROOT, PRUEBA ? 'static/ig/prueba' : 'static/ig/series', `${pieza.id}-${i + 1}.jpg`));
   if (!(await dibujar(pieza.placas, archivos))) { log('Serie descartada por imágenes:', pieza.id); continue; }
   if (PRUEBA) { log('Prueba dibujada:', pieza.id); continue; }
-  cola.push({ id: pieza.id, prioridad: pieza.prioridad, imagenes: archivos.map((a) => `${SITIO}/ig/series/${path.basename(a)}`), texto: pieza.texto, vence: pieza.vence });
+  cola.push({ id: pieza.id, prioridad: pieza.prioridad, imagenes: archivos.map((a) => `${SITIO}/ig/series/${path.basename(a)}`), texto: pieza.texto, vence: pieza.vence, ...(pieza.claves ? { claves: pieza.claves } : {}) });
   fs.writeFileSync(COLA, JSON.stringify(cola, null, 1) + '\n');
   log('Serie lista para Instagram:', pieza.id);
 }

@@ -231,6 +231,32 @@ async function api(ruta, opciones = {}) {
   return j;
 }
 
+// Antes de publicar: revisar lo que ya está en la cuenta (también lo subido a mano) para no duplicar.
+const normTxt = (t) => String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+const apellidoDe = (nombre) => normTxt(String(nombre).trim().split(/\s+/).slice(-1)[0]);
+let recientesCache = null;
+async function recientes(horas = 48) {
+  if (!recientesCache) {
+    const m = await api(`${IG_ID}/media?fields=id,caption,timestamp&limit=30`).catch(() => ({ data: [] }));
+    recientesCache = m.data || [];
+  }
+  const limite = Date.now() - horas * 3600e3;
+  return recientesCache.filter((x) => new Date(x.timestamp).getTime() > limite);
+}
+async function yaEstaEnLaCuenta({ apellidos = [], claves = [], texto = '', propios = new Set() }) {
+  for (const x of await recientes()) {
+    if (propios.has(x.id)) continue;
+    const cap = normTxt(x.caption);
+    if (apellidos.length && apellidos.every((a) => cap.includes(apellidoDe(a)))) return x;
+    if (claves.length && claves.every((k) => cap.includes(normTxt(k)))) return x;
+    if (texto) {
+      const palabras = [...new Set(normTxt(texto).split('\n').slice(0, 3).join(' ').match(/[a-z0-9]{5,}/g) || [])];
+      if (palabras.length >= 4 && palabras.filter((w) => cap.includes(w)).length / palabras.length >= 0.6) return x;
+    }
+  }
+  return null;
+}
+
 async function publicar(inmediato = false) {
   const e = leerEstado();
   if (!e.pendiente) { log('Nada para publicar en Instagram.'); return; }
@@ -239,6 +265,11 @@ async function publicar(inmediato = false) {
   if (n && Date.now() - new Date(n.fecha).getTime() > HORAS_VIGENCIA * 3600e3) { log('El resultado preparado ya es viejo, se descarta:', e.pendiente.slug); e.publicadas.push({ slug: e.pendiente.slug, cubierta: 'vencida', fecha: new Date().toISOString() }); e.pendiente = null; guardarEstado(e); return; }
   const tanda = turno(e, inmediato);
   if (!tanda) return;
+  if (n?.resultado?.ganador?.nombre && n?.resultado?.perdedor?.nombre) {
+    const propios = new Set(e.publicadas.map((p) => p.id).filter(Boolean));
+    const dup = await yaEstaEnLaCuenta({ apellidos: [n.resultado.ganador.nombre, n.resultado.perdedor.nombre], propios });
+    if (dup) { log('Ya está en la cuenta (subido a mano), no se duplica:', e.pendiente.slug, dup.id); e.publicadas.push({ slug: e.pendiente.slug, cubierta: 'manual', id: dup.id, fecha: new Date().toISOString() }); e.pendiente = null; guardarEstado(e); return; }
+  }
   // La imagen tiene que estar online (Vercel la publica después del commit)
   const online = await fetch(e.pendiente.imagen, { method: 'HEAD' }).then((r) => r.ok && /image/.test(r.headers.get('content-type') || '')).catch(() => false);
   if (!online) { log('La imagen todavía no está online; se publica en la próxima corrida.'); return; }
@@ -274,6 +305,8 @@ async function carruseles() {
     const tanda = turno(e);
     if (!tanda) return;
     if (c.vence && Date.now() > new Date(c.vence).getTime()) { log('Vencido, no se publica:', c.id); continue; }
+    const dup = await yaEstaEnLaCuenta({ claves: c.claves || [], texto: c.texto, propios: new Set(e.publicadas.map((p) => p.id).filter(Boolean)) });
+    if (dup) { log('Ya está en la cuenta (subido a mano), no se duplica:', c.id, dup.id); e.publicadas.push({ slug: c.id, cubierta: 'manual', id: dup.id, tipo: 'carrusel', fecha: new Date().toISOString() }); guardarEstado(e); continue; }
     const pendientes = (c.reemplaza || []).filter((id) => vivas.has(id));
     if (pendientes.length) { log('Espera a que se borre la versión anterior:', c.id, pendientes.join(',')); continue; }
     // Ninguna imagen puede faltar: si una no responde como JPEG válido, no se publica nada.
