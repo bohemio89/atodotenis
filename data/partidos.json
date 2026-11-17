@@ -43703,17 +43703,27 @@
  },
  "219722": {
   "id": 219722,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Finals - Turin",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-17T17:00:00Z",
+  "horario": "2026-11-17T17:05:00Z",
   "j1": {
+   "id": 1388,
+   "nombre": "Orlando Luz / Rafael Matos",
+   "pais": null,
+   "ranking": 97,
+   "paises": [
+    "bra",
+    "bra"
+   ]
+  },
+  "j2": {
    "id": 1400,
-   "nombre": "Arribage/ Olivetti",
+   "nombre": "Albano Olivetti / Theo Arribage",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -43721,23 +43731,60 @@
     "fra"
    ]
   },
-  "j2": {
-   "id": 1388,
-   "nombre": "Luz/ Matos",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "bra",
-    "bra"
-   ]
-  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T15:00:41.643Z",
+  "visto": "2026-11-17T17:09:21.645Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2795",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-17T17:05:48.544959Z",
+   "age_seconds": 211,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-17T17:05:48.357411Z",
+   "sequence": 2,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": true,
+   "timestamp": "2026-11-17T17:09:19.152307Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219723": {
   "id": 219723,
@@ -55456,7 +55503,7 @@
    "observed_age_seconds": 14,
    "origin": "observed",
    "points": [
-    "0",
+    "30",
     "0"
    ],
    "received_at": "2026-11-17T17:00:17.197174Z",
@@ -55466,11 +55513,11 @@
     1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
    "timestamp": "2026-11-17T17:00:33.832079Z",
    "puntos": [
-    "0",
+    "30",
     "0"
    ],
    "saca": 2
@@ -56105,7 +56152,7 @@
    "age_seconds": 90,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -56122,7 +56169,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
     "0",
@@ -56430,7 +56477,7 @@
     0,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 4,
    "stale": false,
    "timestamp": "2026-11-17T17:00:46.835526Z",
    "puntos": [
@@ -63406,7 +63453,7 @@
    "ranking": 775
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-17T17:00:49.440Z",
   "torneoClave": "challenger|Champaign",
@@ -69354,7 +69401,7 @@
    "server": 1,
    "sets": [
     1,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
@@ -69696,7 +69743,7 @@
    "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "0",
+    "30",
     "0"
    ],
    "received_at": "2026-11-17T17:00:04.950298Z",
@@ -69710,7 +69757,7 @@
    "stale": false,
    "timestamp": "2026-11-17T17:00:42.441234Z",
    "puntos": [
-    "0",
+    "30",
     "0"
    ],
    "saca": 1
