@@ -1,0 +1,20 @@
+name: Fotos de festejo (prueba)
+on:
+  push:
+    branches: [media]
+    paths: [media/festejos-pedido.txt]
+permissions: { contents: write }
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - run: JUGADORES="$(cat media/festejos-pedido.txt)" node media/festejos.mjs
+      - name: Recortar fondo (rembg, gratuito)
+        run: |
+          pip install -q "rembg[cpu]" pillow >/dev/null 2>&1
+          for f in media/festejos/*/*.jpg; do rembg i -m u2net_human_seg "$f" "${f%.jpg}.png" || true; done
+      - run: |
+          git config user.name "A Todo Tenis bot" && git config user.email "bot@atodotenis.local"
+          git add media/festejos && git commit -m "Fotos de festejo" && git push || true
