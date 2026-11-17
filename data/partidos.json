@@ -43741,7 +43741,7 @@
  },
  "219723": {
   "id": 219723,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Finals - Turin",
   "ronda": null,
   "rondaCod": null,
@@ -43750,18 +43750,8 @@
   "genero": "men",
   "horario": "2026-11-17T10:30:00Z",
   "j1": {
-   "id": 1788,
-   "nombre": "Heliovaara/ Patten",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fin",
-    "gbr"
-   ]
-  },
-  "j2": {
    "id": 1761,
-   "nombre": "Arevalo/ Pavic",
+   "nombre": "Marcelo Arevalo / Mate Pavic",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -43769,13 +43759,70 @@
     "cro"
    ]
   },
+  "j2": {
+   "id": 1788,
+   "nombre": "Harri Heliovaara / Henry Patten",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "fin",
+    "gbr"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T09:00:42.026Z",
+  "visto": "2026-11-17T10:30:46.723Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2795",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-17T10:18:41.950735Z",
+   "age_seconds": 724,
+   "changing_sources_count": 0,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-17T10:18:39.907896Z",
+   "sequence": 1,
+   "server": null,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": true,
+   "timestamp": "2026-11-17T10:30:38.545334Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": null
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219724": {
   "id": 219724,
@@ -55372,7 +55419,7 @@
    "ranking": null,
    "paises": [
     "fra",
-    null
+    "fra"
    ]
   },
   "dobles": true,
@@ -61842,32 +61889,79 @@
  "220543": {
   "id": 220543,
   "tour": "challenger",
-  "torneo": "Metz (France) - Qualification",
+  "torneo": "Metz (France)",
   "ronda": "Metz - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-17T10:00:00Z",
+  "horario": "2026-11-17T10:05:00Z",
   "j1": {
    "id": 318,
    "nombre": "Arthur Nagel",
    "pais": "fra",
-   "ranking": 363
+   "ranking": 366
   },
   "j2": {
    "id": 6145,
    "nombre": "Dušan Lajović",
    "pais": "srb",
-   "ranking": 158
+   "ranking": 159
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T09:00:42.301Z",
-  "torneoClave": "challenger|Metz (France) - Qualification",
+  "visto": "2026-11-17T10:30:46.723Z",
+  "torneoClave": "challenger|Metz (France)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14867",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-17T10:30:25.199034Z",
+   "age_seconds": 21,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-17T10:30:23.647996Z",
+   "sequence": 37,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-17T10:30:25.199029Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220544": {
   "id": 220544,
@@ -61902,32 +61996,79 @@
  "220545": {
   "id": 220545,
   "tour": "challenger",
-  "torneo": "Metz (France) - Qualification",
+  "torneo": "Metz (France)",
   "ronda": "Metz - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-17T10:00:00Z",
+  "horario": "2026-11-17T10:05:00Z",
   "j1": {
    "id": 120,
    "nombre": "Vitaliy Sachko",
    "pais": "ukr",
-   "ranking": 247
+   "ranking": 248
   },
   "j2": {
    "id": 146,
    "nombre": "Soonwoo Kwon",
    "pais": "kor",
-   "ranking": 155
+   "ranking": 156
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T09:00:42.301Z",
-  "torneoClave": "challenger|Metz (France) - Qualification",
+  "visto": "2026-11-17T10:30:46.723Z",
+  "torneoClave": "challenger|Metz (France)",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "14867",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-17T10:30:38.582816Z",
+   "age_seconds": 8,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "AD",
+    "40"
+   ],
+   "received_at": "2026-11-17T10:30:37.918587Z",
+   "sequence": 35,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-17T10:30:38.582813Z",
+   "puntos": [
+    "AD",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220546": {
   "id": 220546,
@@ -67831,7 +67972,7 @@
    "ranking": 668
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-17T10:00:41.994Z",
   "torneoClave": "challenger|Kobe, Japan",
