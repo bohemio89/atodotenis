@@ -7,7 +7,4 @@ jobs:
   prueba:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with: { ref: media }
-      - run: DEPURAR=1 SLUGS="2026-11-17-zverev-shelton-finals-turin" node scripts/getty.mjs
-      - run: grep -h -A6 '"getty"' content/notas/2026-11-17-zverev-shelton-finals-turin.json || true
+      - run: curl -s "https://embed.gettyimages.com/oembed?url=https%3A%2F%2Fgty.im%2F2305229260"
