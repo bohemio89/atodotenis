@@ -111,8 +111,11 @@ function titularResultado(n) {
   const ronda = String(n.resultado?.ronda || '').toUpperCase();
   if (ronda === 'SF') return 'A LA FINAL';
   if (ronda === 'F') return 'CAMPEÓN';
-  if (ronda === 'QF') return 'A SEMIFINALES';
-  return 'GRAN VICTORIA';
+  if (ronda === 'QF') return 'A SEMIS';
+  // Sin adjetivos: el titular describe el partido con datos del marcador
+  const sets = n.resultado?.sets || [];
+  if (sets[0] && sets[0][1] > sets[0][0]) return 'REMONTADA';
+  return sets.length >= 3 ? 'EN 3 SETS' : 'EN 2 SETS';
 }
 
 function temaTorneo(nombre, esWTA) {
@@ -155,7 +158,7 @@ function html(n, fotos) {
 .hero:before{content:'';position:absolute;inset:0;background:linear-gradient(115deg,${tema.fondo}66 0%,transparent 60%);mix-blend-mode:multiply}.hero:after{content:'';position:absolute;right:-160px;top:210px;width:440px;height:440px;border:28px solid ${tema.primario}88;border-radius:50%;box-shadow:0 0 0 24px ${tema.brillo}22,0 0 70px ${tema.primario}66}
 .brand{position:absolute;top:52px;left:58px;right:58px;display:flex;justify-content:space-between;align-items:center;z-index:5;font:900 italic 38px Montserrat;text-shadow:0 2px 14px #000}
 .brand b{color:${tema.acento}}.event{font:800 24px Montserrat;letter-spacing:.08em;background:${tema.primario};color:#fff;padding:12px 18px;border-radius:8px;box-shadow:0 0 28px ${tema.brillo}88}
-.heroTitle{position:absolute;z-index:4;left:58px;right:58px;bottom:145px;font:900 italic 112px/.88 Montserrat;letter-spacing:-.055em;text-shadow:0 5px 30px rgba(0,0,0,.82);max-width:900px}
+.heroTitle{position:absolute;z-index:4;left:58px;right:320px;bottom:145px;font:900 italic ${Math.min(112, Math.floor(1000 / Math.max(1, titulo.length)))}px/.88 Montserrat;letter-spacing:-.055em;text-shadow:0 5px 30px rgba(0,0,0,.82);max-width:900px}
 .heroTitle span{display:block;color:${tema.acento};font-size:48px;letter-spacing:.08em;margin-top:20px}
 .winner{position:absolute;z-index:4;left:58px;right:300px;bottom:48px;font:900 44px Montserrat;text-shadow:0 3px 22px #000;color:${tema.acento}}\n.opponent{position:absolute;z-index:5;right:62px;top:540px;width:220px;height:280px;border:5px solid ${tema.acento};border-radius:14px;background-size:cover;background-position:center 18%;box-shadow:0 10px 30px #000b}.bottom{position:absolute;left:0;right:0;bottom:0;height:430px;background:linear-gradient(180deg,${tema.panel},${tema.fondo});padding:34px 62px 28px;border-top:5px solid ${tema.primario}}
 .eyebrow{font:800 24px Montserrat;letter-spacing:.12em;color:${tema.acento};text-align:center}

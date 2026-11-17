@@ -416,9 +416,8 @@ function calendario2027() {
 // Las 5 notas más importantes: primero la jornada más reciente, ordenadas por importancia; si faltan, la jornada anterior
 function destacadas(max = 5) {
   const jornada = (n) => new Date(new Date(n.fechaPartido || n.fecha).getTime() - 3 * 3600e3).toISOString().slice(0, 10);
-  const propias = notas.filter((n) => n.manual).slice(0, max);
-  const auto = notas.filter((n) => !n.manual).sort((a, b) => jornada(b).localeCompare(jornada(a)) || (b.importancia ?? 0) - (a.importancia ?? 0));
-  return [...propias, ...auto].slice(0, max);
+  // Primero la jornada más reciente (notas propias y automáticas por igual), dentro de ella la más nueva
+  return [...notas].sort((a, b) => jornada(b).localeCompare(jornada(a)) || String(b.fecha).localeCompare(String(a.fecha))).slice(0, max);
 }
 function hero() {
   const item = (href, fondo, cat, titulo, bajada) => `<a class="hs" href="${href}">${fondo}${cat ? `<span class="etiqueta">${esc(cat)}</span>` : ''}<h2>${esc(titulo)}</h2>${bajada ? `<p>${esc(bajada)}</p>` : ''}</a>`;
