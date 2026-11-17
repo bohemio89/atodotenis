@@ -56112,7 +56112,7 @@
     "40",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -56462,7 +56462,7 @@
    "age_seconds": 49,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -56479,11 +56479,11 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "15",
+    "30"
    ],
    "received_at": "2026-11-17T15:30:15.413675Z",
    "sequence": 108,
@@ -56496,8 +56496,8 @@
    "stale": false,
    "timestamp": "2026-11-17T15:30:57.927215Z",
    "puntos": [
-    "0",
-    "0"
+    "15",
+    "30"
    ],
    "saca": 2
   },
@@ -62080,8 +62080,8 @@
  "220541": {
   "id": 220541,
   "tour": "challenger",
-  "torneo": "Metz (France)",
-  "ronda": "Metz - 1/16-finals",
+  "torneo": "Metz, France",
+  "ronda": "Round of 32",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -62146,7 +62146,7 @@
     1,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
    "timestamp": "2026-11-17T15:30:48.997606Z",
    "puntos": [
@@ -68784,8 +68784,8 @@
  "221635": {
   "id": 221635,
   "tour": "challenger",
-  "torneo": "Helsinki",
-  "ronda": "Helsinki - 1/16-finals",
+  "torneo": "Helsinki, Finland",
+  "ronda": "Round of 32",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -69166,8 +69166,8 @@
  "221641": {
   "id": 221641,
   "tour": "challenger",
-  "torneo": "Metz (France)",
-  "ronda": "Metz - 1/16-finals",
+  "torneo": "Metz, France",
+  "ronda": "Round of 32",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -69230,7 +69230,7 @@
     1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
    "timestamp": "2026-11-17T15:31:02.327525Z",
    "puntos": [
@@ -69584,8 +69584,8 @@
  "222103": {
   "id": 222103,
   "tour": "challenger",
-  "torneo": "Drummondville",
-  "ronda": "Drummondville - 1/16-finals",
+  "torneo": "Drummondville, Canada",
+  "ronda": "Round of 32",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -69661,8 +69661,8 @@
  "222104": {
   "id": 222104,
   "tour": "challenger",
-  "torneo": "Drummondville",
-  "ronda": "Drummondville - 1/16-finals",
+  "torneo": "Drummondville, Canada",
+  "ronda": "Round of 32",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
