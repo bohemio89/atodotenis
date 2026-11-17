@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   CONFIG, ROOT, leerJSON, tourBase, nombreRonda, nombreCategoria, sets, marcadorTexto, apellido, fechaArg, nombrePais, nombreTorneo, IOC_ISO2, NEUTRALES, LANG, LOCALE
-} from './lib/util.mjs';
+  , conGrafia } from './lib/util.mjs';
 import { generarTorneos } from './torneos-paginas.mjs';
 import { generarGrandSlams } from './grand-slams-paginas.mjs';
 import { traducirHTML } from './lib/i18n.mjs';
@@ -440,7 +440,7 @@ function hero() {
   return `<section class="hero2" aria-label="Destacadas" data-hero><div class="hs-fila">${orden.join('')}</div>${flecha('izq', 'Anterior', 'M15 18l-6-6 6-6')}${flecha('der', 'Siguiente', 'M9 18l6-6-6-6')}</section>`;
 }
 
-function escribir(rel, html) { if (EN && rel.endsWith('.html')) html = traducirHTML(html); const p = path.join(DIST, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
+function escribir(rel, html) { if (EN && rel.endsWith('.html')) html = traducirHTML(html); if (rel.endsWith('.html') || rel.endsWith('.xml')) html = conGrafia(html); const p = path.join(DIST, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
 
 // ---------- Páginas ----------
 const T = generarTorneos({ torneos, partidos: visibles, esc, paisTag, filaPartido, hora, pagina, escribir: (rel, html) => escribir(rel, html), cancha, ARG });

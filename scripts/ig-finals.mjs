@@ -2,7 +2,7 @@
 // Jugador recortado (foto libre de Commons, recorte en scripts/ig-recortes), titular con datos, sin adjetivos.
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT, leerJSON, IOC_ISO2 } from './lib/util.mjs';
+import { ROOT, leerJSON, IOC_ISO2, conGrafia } from './lib/util.mjs';
 
 const F = (p) => `file://${p}`;
 const esc = (t) => String(t ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -43,7 +43,8 @@ export function datosFinals(n) {
   };
 }
 
-export function htmlFinals(d) {
+export function htmlFinals(d0) {
+  const d = Object.fromEntries(Object.entries(d0).map(([k, v]) => [k, typeof v === 'string' && !/^\//.test(v) ? conGrafia(v) : v]));
   const tam = Math.min(116, Math.floor(1450 / d.titular.length));
   return `<!doctype html><meta charset="utf-8"><style>
 @font-face{font-family:M;font-weight:900;font-style:italic;src:url(${F(ROOT + '/node_modules/@fontsource/montserrat/files/montserrat-latin-900-italic.woff2')})}

@@ -212,7 +212,7 @@ async function preparar() {
       fs.mkdirSync(DIR_IMG, { recursive: true });
       await p.locator('#p').screenshot({ path: path.join(DIR_IMG, `${n.slug}.jpg`), type: 'jpeg', quality: 94 });
     } finally { await navegador.close(); }
-    e.pendiente = { slug: n.slug, imagen: `${SITIO}/ig/${n.slug}.jpg`, texto: textoPublicacion(n), preparada: new Date().toISOString() };
+    e.pendiente = { slug: n.slug, imagen: `${SITIO}/ig/${n.slug}.jpg`, texto: conGrafia(textoPublicacion(n)), preparada: new Date().toISOString() };
     guardarEstado(e);
     log('Preparada para Instagram (formato ATP Finals):', n.titulo);
     return;
@@ -243,7 +243,7 @@ async function preparar() {
     fs.mkdirSync(DIR_IMG, { recursive: true });
     await p.locator('#p').screenshot({ path: path.join(DIR_IMG, `${n.slug}.jpg`), type: 'jpeg', quality: 95 });
   } finally { await navegador.close(); }
-  e.pendiente = { slug: n.slug, imagen: `${SITIO}/ig/${n.slug}.jpg`, texto: textoPublicacion(n), preparada: new Date().toISOString() };
+  e.pendiente = { slug: n.slug, imagen: `${SITIO}/ig/${n.slug}.jpg`, texto: conGrafia(textoPublicacion(n)), preparada: new Date().toISOString() };
   guardarEstado(e);
   log('Preparada para Instagram con el ganador como protagonista:', n.titulo);
 }
