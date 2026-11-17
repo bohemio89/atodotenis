@@ -44871,24 +44871,71 @@
   "genero": "men",
   "horario": "2026-11-17T13:00:00Z",
   "j1": {
+   "id": 23,
+   "nombre": "Rafael Jodar",
+   "pais": "esp",
+   "ranking": 10
+  },
+  "j2": {
    "id": 27,
    "nombre": "Arthur Fils",
    "pais": "fra",
    "ranking": 7
   },
-  "j2": {
-   "id": 23,
-   "nombre": "Rafael Jodar",
-   "pais": "esp",
-   "ranking": 11
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T09:00:42.026Z",
+  "visto": "2026-11-17T13:00:41.523Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
-  "importante": true
+  "importante": true,
+  "torneoId": "2794",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-17T12:45:31.894426Z",
+   "age_seconds": 907,
+   "changing_sources_count": 0,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-17T12:45:31.099641Z",
+   "sequence": 1,
+   "server": null,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": true,
+   "timestamp": "2026-11-17T13:00:30.361480Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": null
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219747": {
   "id": 219747,
@@ -58535,26 +58582,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-17T13:00:00Z",
+  "horario": "2026-11-17T13:15:00Z",
   "j1": {
    "id": 399,
    "nombre": "Dalibor Svrcina",
    "pais": "cze",
-   "ranking": 112
+   "ranking": 113
   },
   "j2": {
    "id": 5685,
-   "nombre": "L. Borg",
+   "nombre": "Leo Borg",
    "pais": "swe",
-   "ranking": null
+   "ranking": 596
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T09:00:42.301Z",
+  "visto": "2026-11-17T13:00:41.523Z",
   "torneoClave": "challenger|Helsinki",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-17T13:00:37.029580Z",
+   "age_seconds": 2,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "15",
+    "0"
+   ],
+   "received_at": "2026-11-17T13:00:36.679065Z",
+   "sequence": 3,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": false,
+   "timestamp": "2026-11-17T13:00:37.029574Z",
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220438": {
   "id": 220438,
@@ -68267,7 +68361,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T12:30:34.707Z",
+  "visto": "2026-11-17T13:00:41.523Z",
   "torneoClave": "challenger|Helsinki",
   "tier": null,
   "importante": false,
@@ -68275,11 +68369,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-17T12:30:27.166169Z",
-   "age_seconds": 7,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-17T12:58:59.979042Z",
+   "age_seconds": 99,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 6,
+   "corroborated_age_seconds": 9,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68288,32 +68382,32 @@
    "games": [
     [
      7,
-     1
+     3
     ],
     [
      5,
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 8,
    "origin": "observed",
    "points": [
-    "15",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-17T12:30:27.002636Z",
-   "sequence": 79,
+   "received_at": "2026-11-17T12:58:59.551791Z",
+   "sequence": 119,
    "server": 2,
    "sets": [
     1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-17T12:30:27.166166Z",
+   "timestamp": "2026-11-17T13:00:30.491590Z",
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
    "saca": 2
@@ -68344,7 +68438,7 @@
    "ranking": 841
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-17T12:30:34.707Z",
   "torneoClave": "challenger|Helsinki",
@@ -68423,7 +68517,7 @@
    "ranking": 253
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-17T12:30:34.707Z",
   "torneoClave": "challenger|Helsinki",
@@ -68624,7 +68718,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T12:30:34.708Z",
+  "visto": "2026-11-17T13:00:41.523Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": null,
   "importante": false,
@@ -68632,11 +68726,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-17T12:30:32.816427Z",
-   "age_seconds": 1,
+   "accepted_at": "2026-11-17T13:00:23.567748Z",
+   "age_seconds": 15,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68644,34 +68738,36 @@
    },
    "games": [
     [
-     3
+     4,
+     2
     ],
     [
-     2
+     6,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-17T12:30:32.458376Z",
-   "sequence": 34,
-   "server": 2,
+   "received_at": "2026-11-17T13:00:22.674240Z",
+   "sequence": 77,
+   "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 4,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-17T12:30:32.816426Z",
+   "timestamp": "2026-11-17T13:00:34.614358Z",
    "puntos": [
-    "30",
-    "30"
+    "15",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -68701,7 +68797,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T12:30:34.707Z",
+  "visto": "2026-11-17T13:00:41.523Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": null,
   "importante": false,
@@ -68709,11 +68805,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-17T12:30:04.049987Z",
+   "accepted_at": "2026-11-17T13:00:08.632336Z",
    "age_seconds": 30,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68721,32 +68817,34 @@
    },
    "games": [
     [
-     6
+     7,
+     4
     ],
     [
-     6
+     6,
+     4
     ]
    ],
-   "is_tiebreak": true,
-   "observed_age_seconds": 4,
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "7",
-    "6"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-17T12:30:03.862787Z",
-   "sequence": 81,
+   "received_at": "2026-11-17T13:00:08.231850Z",
+   "sequence": 134,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-17T12:30:30.054256Z",
+   "timestamp": "2026-11-17T13:00:30.652150Z",
    "puntos": [
-    "7",
-    "6"
+    "0",
+    "0"
    ],
    "saca": 2
   },
