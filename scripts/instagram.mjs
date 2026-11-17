@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, leerJSON, log } from './lib/util.mjs';
 import { fotoJugador, focoJugador, slug } from './lib/ig-render.mjs';
+import { esATPFinals, tieneRecorte, datosFinals, htmlFinals } from './ig-finals.mjs';
 
 const CONFIG = leerJSON('config.json', {});
 const SITIO = (CONFIG.sitio?.url || 'https://atodotenis.vercel.app').replace(/\/$/, '');
@@ -196,6 +197,26 @@ async function preparar() {
   if (!cand.length) { log('Sin resultados nuevos con datos completos para Instagram.'); return; }
   const n = { ...cand[0] };
   const ganador = n.resultado.ganador.nombre, perdedor = n.resultado.perdedor.nombre;
+  // ATP Finals: placa estilo estadio (aprobada), con el ganador recortado.
+  if (esATPFinals(n) && tieneRecorte(ganador)) {
+    const { chromium } = await import('playwright-core');
+    const navegador = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome', args: ['--allow-file-access-from-files'] });
+    try {
+      const p = await navegador.newPage({ viewport: { width: 1080, height: 1080 } });
+      const tmp = path.join(ROOT, 'node_modules', '.ig-finals.html');
+      fs.writeFileSync(tmp, htmlFinals(datosFinals(n)));
+      await p.goto('file://' + tmp, { waitUntil: 'networkidle', timeout: 60000 });
+      await p.evaluate(async () => { await Promise.all([...document.fonts].map((f) => f.load().catch(() => null))); await document.fonts.ready; });
+      const ok = await p.evaluate(() => [...document.images].every((i) => i.complete && i.naturalWidth > 50));
+      if (!ok) { log('Se descarta la placa de Finals: una imagen no cargó.'); return; }
+      fs.mkdirSync(DIR_IMG, { recursive: true });
+      await p.locator('#p').screenshot({ path: path.join(DIR_IMG, `${n.slug}.jpg`), type: 'jpeg', quality: 94 });
+    } finally { await navegador.close(); }
+    e.pendiente = { slug: n.slug, imagen: `${SITIO}/ig/${n.slug}.jpg`, texto: textoPublicacion(n), preparada: new Date().toISOString() };
+    guardarEstado(e);
+    log('Preparada para Instagram (formato ATP Finals):', n.titulo);
+    return;
+  }
   // La imagen principal debe ser una foto editorial seleccionada del ganador. No usar una imagen aleatoria ni una foto del rival como sustituto.
   const fotosEditoriales = leerJSON('scripts/ig-fotos.json', {});
   const claveFoto = slug(ganador);
