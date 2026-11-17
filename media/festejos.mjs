@@ -21,7 +21,7 @@ for (const j of process.env.JUGADORES.split(',')) {
     const f = limpiar(m.DateTimeOriginal?.value || m.DateTime?.value).match(/(\d{4})/); const anio = f ? +f[1] : 0; if (anio < 2024) continue;
     if (Math.min(ii.width, ii.height) < 1500) continue;
     const t = norm(limpiar(m.ImageDescription?.value) + ' ' + p.title);
-    if (/\b(and|vs|doubles|team|crowd|fans|press conference)\b/.test(t)) continue;
+    if (/\b(and|vs|doubles|team|crowd|fans|press conference)\b/.test(t) || /gonzalez/.test(t)) continue;
     const festejo = /(celebrat|fist|reacts|jubel|trophy|victory|winning|wins)/.test(t);
     c.push({ titulo: p.title, url: ii.thumburl || ii.url, ancho: ii.width, alto: ii.height, anio, festejo, autor: limpiar(m.Artist?.value).slice(0, 60), licencia: lic, puntaje: (festejo ? 100 : 0) + anio + (ii.height > ii.width ? 2 : 0) });
   }

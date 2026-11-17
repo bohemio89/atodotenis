@@ -13,7 +13,7 @@ jobs:
       - run: JUGADORES="$(cat media/festejos-pedido.txt)" node media/festejos.mjs
       - name: Recortar fondo (rembg, gratuito)
         run: |
-          pip install -q "rembg[cpu]" pillow >/dev/null 2>&1
+          pip install -q filetype "rembg[cpu,cli]" pillow >/dev/null 2>&1
           for f in media/festejos/*/*.jpg; do rembg i -m u2net_human_seg "$f" "${f%.jpg}.png" || true; done
       - run: |
           git config user.name "A Todo Tenis bot" && git config user.email "bot@atodotenis.local"
