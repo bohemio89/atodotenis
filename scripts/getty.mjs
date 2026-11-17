@@ -8,7 +8,7 @@ import { execFileSync } from 'node:child_process';
 import { ROOT, log } from './lib/util.mjs';
 
 const DIR = path.join(ROOT, 'content/notas');
-const DIAS = 3, MAX = 4;
+const DIAS = 3, MAX = 2; // pocas búsquedas por corrida: Getty frena si son muchas seguidas
 const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
 const ape = (s) => norm(String(s).trim().split(/\s+/).slice(-1)[0]);
 const forzar = String(process.env.SLUGS || '').split(',').map((s) => s.trim()).filter(Boolean);
@@ -68,23 +68,27 @@ try {
   for (const { f, n } of pendientes) {
     const ganador = n.resultado?.ganador?.nombre || n.jugadores[0];
     const perdedor = n.resultado?.perdedor?.nombre || n.jugadores?.[1];
-    let elegida = null;
+    let elegida = null, frenado = false;
     for (const frase of [`${ganador} ${lugar(n)}`, `${ganador} ${perdedor || ''}`, ganador]) {
       try {
         await pg.goto(`https://www.gettyimages.com/search/2/image?phrase=${encodeURIComponent(frase.trim())}&sort=newest&family=editorial`, { waitUntil: 'domcontentloaded', timeout: 45000 });
         for (let i = 0; i < 10 && /just a moment/i.test(await pg.title()); i++) await pg.waitForTimeout(2000);
         await pg.waitForTimeout(2500);
         const enlaces = await pg.$$eval('a[href*="/detail/news-photo/"]', (as) => as.slice(0, 40).map((a) => a.getAttribute('href')));
+        if (/attention required|just a moment/i.test(await pg.title())) { frenado = true; break; }
         if (process.env.DEPURAR) log('Getty: búsqueda', frase, '|', await pg.title(), '|', enlaces.length, 'enlaces', enlaces.slice(0, 3).join(' '));
         elegida = elegir(enlaces, ganador, perdedor);
       } catch (e) { log('Getty: falló la búsqueda', frase, e.message); }
       if (elegida) break;
+      await pg.waitForTimeout(6000);
     }
+    if (frenado) { log('Getty: la búsqueda quedó frenada, se sigue en la próxima corrida'); break; }
     if (!elegida) { log('Getty: sin foto adecuada para', n.slug); continue; }
     const g = await embed(elegida.id).catch(() => null);
     if (!g) { log('Getty: no se obtuvo el código para', elegida.id); continue; }
     n.getty = g;
     fs.writeFileSync(path.join(DIR, f), JSON.stringify(n, null, 2) + '\n');
     log(`Getty: ${n.slug} → ${elegida.id} (${elegida.slug})`);
+    await pg.waitForTimeout(8000);
   }
 } finally { await nav.close(); }

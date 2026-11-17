@@ -175,3 +175,7 @@ export const IOC_ISO2 = {
 };
 // Jugadores que compiten sin bandera (atletas neutrales)
 export const NEUTRALES = new Set(['wor']);
+
+// Grafías correctas de nombres que la fuente de datos trae sin tilde (se aplican al mostrar, no a los datos)
+export const GRAFIAS = [['Rafael Jodar', 'Rafael Jódar'], ['Jodar', 'Jódar'], ['JODAR', 'JÓDAR']];
+export const conGrafia = (t) => GRAFIAS.reduce((s, [a, b]) => s.replace(new RegExp(`\\b${a}\\b(?!-)`, 'g'), b), String(t ?? ''));

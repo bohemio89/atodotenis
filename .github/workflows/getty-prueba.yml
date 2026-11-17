@@ -9,5 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: media }
-      - run: DEPURAR=1 SLUGS="2026-11-15-zverev-jodar-finals-turin,2026-11-15-shelton-fils-finals-turin" node scripts/getty.mjs
-      - run: grep -h -A6 '"getty"' content/notas/2026-11-15-zverev-jodar-finals-turin.json content/notas/2026-11-15-shelton-fils-finals-turin.json || true
+      - run: DEPURAR=1 SLUGS="2026-11-17-zverev-shelton-finals-turin" node scripts/getty.mjs
+      - run: grep -h -A6 '"getty"' content/notas/2026-11-17-zverev-shelton-finals-turin.json || true
