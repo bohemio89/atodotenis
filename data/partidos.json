@@ -52250,7 +52250,7 @@
  },
  "220245": {
   "id": 220245,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Kobe",
   "ronda": "Kobe - 1/8-finals",
   "rondaCod": "R16",
@@ -52281,7 +52281,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T09:00:42.301Z",
+  "visto": "2026-11-17T09:30:41.708Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false,
@@ -52289,11 +52289,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-17T09:00:14.540415Z",
-   "age_seconds": 21,
+   "accepted_at": "2026-11-17T09:30:28.903348Z",
+   "age_seconds": 10,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 9,
+   "corroborated_age_seconds": 8,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -52301,34 +52301,36 @@
    },
    "games": [
     [
-     3
+     6,
+     0
     ],
     [
-     3
+     7,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 8,
    "origin": "observed",
    "points": [
     "15",
-    "0"
+    "30"
    ],
-   "received_at": "2026-11-17T09:00:14.264333Z",
-   "sequence": 34,
-   "server": 1,
+   "received_at": "2026-11-17T09:30:28.495979Z",
+   "sequence": 82,
+   "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-17T09:00:31.685482Z",
+   "timestamp": "2026-11-17T09:30:28.903344Z",
    "puntos": [
     "15",
-    "0"
+    "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -67831,7 +67833,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T09:00:42.301Z",
+  "visto": "2026-11-17T09:30:41.708Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false,
@@ -67839,11 +67841,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-17T08:59:33.647358Z",
-   "age_seconds": 62,
+   "accepted_at": "2026-11-17T09:30:28.895559Z",
+   "age_seconds": 10,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -67851,31 +67853,33 @@
    },
    "games": [
     [
-     4
+     6,
+     2
     ],
     [
-     1
+     3,
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "0",
+    "15",
     "0"
    ],
-   "received_at": "2026-11-17T08:59:33.135321Z",
-   "sequence": 36,
+   "received_at": "2026-11-17T09:30:28.271022Z",
+   "sequence": 82,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-17T08:59:49.067661Z",
+   "timestamp": "2026-11-17T09:30:38.039013Z",
    "puntos": [
-    "0",
+    "15",
     "0"
    ],
    "saca": 2
