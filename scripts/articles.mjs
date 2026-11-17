@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   CONFIG, ROOT, leerJSON, guardarJSON, log, nombreRonda, nombreCategoria, SUPERFICIES,
-  nombrePais, sets, marcadorTexto, slugify, apellido, fechaArg, nombreTorneo
+  nombrePais, sets, marcadorTexto, slugify, apellido, fechaArg, nombreTorneo, conGrafia
 } from './lib/util.mjs';
 
 const KEY = process.env.GEMINI_API_KEY;
@@ -304,7 +304,7 @@ async function main() {
   for (const p of candidatos) {
     if (!PRUEBA.length && !entraEnJornada(p)) { log(`Fuera de las ${MAX_JORNADA} más importantes de su jornada: ${p.j1?.nombre} - ${p.j2?.nombre}`); registro[p.id] = 'omitida'; continue; }
     const datos = datosDelPartido(p);
-    let prompt = `${ESTILO}\n\nDATOS DEL PARTIDO:\n${JSON.stringify(datos, null, 2)}`;
+    let prompt = `${ESTILO}\n\nDATOS DEL PARTIDO:\n${conGrafia(JSON.stringify(datos, null, 2))}`;
     let nota, modelo, problemas = ['sin intentar'];
     for (let intento = 1; intento <= 2 && problemas.length; intento++) {
       try {
@@ -321,7 +321,7 @@ async function main() {
       // Si Gemini no responde y el partido terminó hace más de una hora, la nota sale igual con los datos del resultado
       const terminado = new Date(p.score?.received_at || p.score?.timestamp || p.horario).getTime();
       if (errorGemini && !PRUEBA.length && Date.now() - terminado > 60 * 60e3) {
-        nota = notaDeRespaldo(p); modelo = 'plantilla'; problemas = [];
+        nota = JSON.parse(conGrafia(JSON.stringify(notaDeRespaldo(p)))); modelo = 'plantilla'; problemas = [];
         log(`Gemini no respondió: nota con los datos del resultado para ${p.id}`);
       } else {
         // Si fue un error de Gemini (no de contenido) se reintenta en la próxima corrida
