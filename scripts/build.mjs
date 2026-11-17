@@ -129,26 +129,18 @@ function videoNota(n) {
 }
 function imagenNota(n, conCredito = true) {
   const respaldo = placa(n) || cancha(n.superficie);
-  // En portada y tarjetas nunca va el visor de Getty (se ve su barra y no llena el recuadro): ahí va una foto libre.
-  // La foto de Getty queda solo dentro de la nota.
+  // Foto de Getty (embed oficial): la misma foto de la nota en tarjetas y portada, completa y centrada
+  if (gettySrc(n.getty) && n.getty.w && n.getty.h) {
+    const { w, h } = n.getty;
+    return `<div class="fondo" style="background:#0B0E12;container-type:size;overflow:hidden"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" tabindex="-1" aria-hidden="true" style="position:absolute;left:50%;top:0;transform:translateX(-50%);border:0;pointer-events:none;width:min(100cqw, calc((100cqh - 70px) * ${w} / ${h}));height:calc(min(100cqw, calc((100cqh - 70px) * ${w} / ${h})) * ${h} / ${w} + 70px)"></iframe></div>`;
+  }
   if (n.imagen?.url) {
     // Si falla el thumbnail de Wikimedia, probar el archivo original en upload.wikimedia.org.
     const alternativa = n.imagen.url.replace(/^https:\/\/thumb\.wikimedia\.org\/wikipedia\/commons\/thumb\/(.+)\/[^/]+(?:\?.*)?$/, 'https://upload.wikimedia.org/wikipedia/commons/$1');
     const fallback = alternativa !== n.imagen.url ? alternativa : '';
     return `<div class="fondo"><img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} data-fallback="${esc(fallback)}" onerror="if(this.dataset.fallback){var f=this.dataset.fallback;this.dataset.fallback='';this.removeAttribute('srcset');this.src=f;}else{this.hidden=true;var p=this.nextElementSibling;if(p)p.hidden=false;}" alt="${esc(EN ? n.titulo : n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 25%"><div class="imagen-respaldo" hidden>${respaldo}</div>${conCredito && !n.imagen.propia ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
   }
-  // Sin foto libre en la nota: la foto libre del ganador que ya usamos en el sitio (con su crédito)
-  const local = fotoLocalJugador(n.jugadores?.[0]);
-  if (local) return `<div class="fondo"><img src="${esc(local.url)}" alt="${esc(n.titulo)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:${esc(local.foco)}">${conCredito ? `<span class="credito-mini">Foto: ${esc(local.autor)} / ${esc(local.licencia)}</span>` : ''}</div>`;
   return respaldo;
-}
-function fotoLocalJugador(nombre) {
-  if (!nombre) return null;
-  const s = String(nombre).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  if (!fs.existsSync(path.join(ROOT, 'static/ig/fotos', `${s}-1280.jpg`))) return null;
-  let c = {}; try { c = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/ig-fotos.json'), 'utf8'))[s] || {}; } catch {}
-  if (!c.autor) return null; // sin crédito conocido no se usa
-  return { url: `/ig/fotos/${s}-1280.jpg`, autor: c.autor, licencia: c.licencia || '', foco: c.foco || 'center 20%' };
 }
 
 function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
