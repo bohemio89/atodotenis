@@ -129,10 +129,11 @@ function videoNota(n) {
 }
 function imagenNota(n, conCredito = true) {
   const respaldo = placa(n) || cancha(n.superficie);
-  // Foto de Getty (embed oficial): la misma foto de la nota en tarjetas y portada, completa y centrada
+  // Foto de Getty (embed oficial): la misma foto de la nota en tarjetas y portada. Cubre todo el recuadro;
+  // la barra gris de Getty queda debajo, fuera de la vista (dentro de la nota se ve completa).
   if (gettySrc(n.getty) && n.getty.w && n.getty.h) {
     const { w, h } = n.getty;
-    return `<div class="fondo" style="background:#0B0E12;container-type:size;overflow:hidden"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" tabindex="-1" aria-hidden="true" style="position:absolute;left:50%;top:0;transform:translateX(-50%);border:0;pointer-events:none;width:min(100cqw, calc((100cqh - 70px) * ${w} / ${h}));height:calc(min(100cqw, calc((100cqh - 70px) * ${w} / ${h})) * ${h} / ${w} + 70px)"></iframe></div>`;
+    return `<div class="fondo" style="background:#0B0E12;container-type:size;overflow:hidden"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" tabindex="-1" aria-hidden="true" style="position:absolute;left:50%;top:calc((100cqh - max(100cqw, calc(100cqh * ${w} / ${h})) * ${h} / ${w}) * 0.3);transform:translateX(-50%);border:0;pointer-events:none;width:max(100cqw, calc(100cqh * ${w} / ${h}));height:calc(max(100cqw, calc(100cqh * ${w} / ${h})) * ${h} / ${w} + 70px)"></iframe></div>`;
   }
   if (n.imagen?.url) {
     // Si falla el thumbnail de Wikimedia, probar el archivo original en upload.wikimedia.org.
