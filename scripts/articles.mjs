@@ -274,6 +274,31 @@ function validar(nota, datos) {
   return problemas;
 }
 
+// Nota corta y verificable armada solo con los datos del partido, para cuando Gemini no responde.
+function notaDeRespaldo(p) {
+  const r = resultadoParaNota(p);
+  const g = r.ganador.nombre, pe = r.perdedor.nombre, ag = apellido(g), ap = apellido(pe);
+  const torneo = /finals/i.test(nombreTorneo(p.torneo)) ? `las ${nombreTorneo(p.torneo)}` : nombreTorneo(p.torneo);
+  const marcador = r.sets.map(([a, b]) => `${a}-${b}`).join(', ').replace(/, ([^,]+)$/, ' y $1');
+  const remonto = r.sets[0] && r.sets[0][1] > r.sets[0][0];
+  const tres = r.sets.length >= 3;
+  // Sin ranking: en estos datos a veces viene el número de siembra del torneo y no el del ranking oficial.
+  const rk = () => '';
+  const ronda = p.rondaCod === 'RR' ? 'la fase de grupos' : (nombreRonda(p.rondaCod, p.ronda) || '');
+  const titulo = remonto ? `${ag} dio vuelta el partido ante ${ap} en ${torneo}` : `${ag} venció a ${ap} en ${torneo}`;
+  const bajada = `${remonto ? 'Perdió el primer set y se impuso' : 'Se impuso'} por ${marcador}${ronda ? ` en ${ronda.toLowerCase()}` : ''}.`;
+  const desarrollo = remonto
+    ? `${ap} se quedó con el primer set ${r.sets[0][1]}-${r.sets[0][0]}, pero ${ag} reaccionó y ganó los siguientes ${r.sets.slice(1).map(([a, b]) => `${a}-${b}`).join(' y ')}.`
+    : tres
+      ? `El partido se definió en tres sets: ${ag} ganó el primero ${r.sets[0][0]}-${r.sets[0][1]}, ${ap} igualó con un ${r.sets[1][1]}-${r.sets[1][0]} y ${ag} cerró el tercero ${r.sets[2][0]}-${r.sets[2][1]}.`
+      : `${ag} resolvió el partido en sets corridos: ${r.sets.map(([a, b]) => `${a}-${b}`).join(' y ')}.`;
+  return {
+    titulo, bajada,
+    cuerpo: [`${g}${rk(r.ganador)} le ganó a ${pe}${rk(r.perdedor)} por ${marcador} en ${torneo}.`.replace(/,, /g, ', '), desarrollo],
+    etiquetas: [nombreTorneo(p.torneo), g, pe],
+  };
+}
+
 async function main() {
   log(`Notas candidatas: ${candidatos.length}`);
   for (const p of candidatos) {
@@ -292,9 +317,17 @@ async function main() {
       }
     }
     if (problemas.length) {
-      // Si fue un error de Gemini (no de contenido) se reintenta en la próxima corrida
-      if (!problemas.some((x) => /Gemini|429|fetch|timeout/i.test(x))) registro[p.id] = 'descartada';
-      continue;
+      const errorGemini = problemas.some((x) => /Gemini|429|503|fetch|timeout|abort/i.test(x));
+      // Si Gemini no responde y el partido terminó hace más de una hora, la nota sale igual con los datos del resultado
+      const terminado = new Date(p.score?.received_at || p.score?.timestamp || p.horario).getTime();
+      if (errorGemini && !PRUEBA.length && Date.now() - terminado > 60 * 60e3) {
+        nota = notaDeRespaldo(p); modelo = 'plantilla'; problemas = [];
+        log(`Gemini no respondió: nota con los datos del resultado para ${p.id}`);
+      } else {
+        // Si fue un error de Gemini (no de contenido) se reintenta en la próxima corrida
+        if (!errorGemini) registro[p.id] = 'descartada';
+        continue;
+      }
     }
     const g = p.ganador === 1 ? p.j1 : p.j2, pe = p.ganador === 1 ? p.j2 : p.j1;
     const slug = slugify(`${(p.horario || '').slice(0, 10)} ${apellido(g.nombre)} ${apellido(pe.nombre)} ${p.torneo}`);
