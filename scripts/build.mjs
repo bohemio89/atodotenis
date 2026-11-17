@@ -78,7 +78,8 @@ function normalizarMarcadorNota(n) {
   const tb = r.tieBreaks ?? r.tiebreaks ?? r.tie_breaks ?? [];
   const setsFormateados = r.sets.map(([a, b], i) => {
     let puntos = Array.isArray(tb) ? tb[i] : (tb && typeof tb === 'object' ? (tb[i] ?? tb[String(i + 1)]) : null);
-    if (puntos && typeof puntos === 'object') puntos = puntos.p1 ?? puntos.player1 ?? puntos[0];
+    // Entre paréntesis van los puntos de quien perdió el tie-break (el menor de los dos), no los del ganador
+    if (puntos && typeof puntos === 'object') { const v = [puntos.p1 ?? puntos.player1 ?? puntos[0], puntos.p2 ?? puntos.player2 ?? puntos[1]].map(Number).filter(Number.isFinite); puntos = v.length === 2 ? Math.min(...v) : v[0]; }
     if (!Number.isFinite(Number(puntos)) || Number(puntos) <= 0) puntos = (a === 7 && b === 6) ? tbEncontrados.shift() : null;
     return `${a}-${b}${a === 7 && b === 6 && Number.isFinite(Number(puntos)) ? ` (${Number(puntos)})` : ''}`;
   });
