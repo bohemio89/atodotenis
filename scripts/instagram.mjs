@@ -308,7 +308,7 @@ async function carruseles() {
     const tanda = turno(e);
     if (!tanda) return;
     if (c.vence && Date.now() > new Date(c.vence).getTime()) { log('Vencido, no se publica:', c.id); continue; }
-    const dup = await yaEstaEnLaCuenta({ claves: c.claves || [], texto: c.texto, propios: new Set(e.publicadas.map((p) => p.id).filter(Boolean)) });
+    const dup = c.forzar ? null : await yaEstaEnLaCuenta({ claves: c.claves || [], texto: c.texto, propios: new Set(e.publicadas.map((p) => p.id).filter(Boolean)) });
     if (dup) { log('Ya está en la cuenta (subido a mano), no se duplica:', c.id, dup.id); e.publicadas.push({ slug: c.id, cubierta: 'manual', id: dup.id, tipo: 'carrusel', fecha: new Date().toISOString() }); guardarEstado(e); continue; }
     const pendientes = (c.reemplaza || []).filter((id) => vivas.has(id));
     if (pendientes.length) { log('Espera a que se borre la versión anterior:', c.id, pendientes.join(',')); continue; }
