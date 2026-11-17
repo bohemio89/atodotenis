@@ -52279,7 +52279,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-17T09:30:41.708Z",
   "torneoClave": "challenger|Kobe",
@@ -67811,8 +67811,8 @@
  "221447": {
   "id": 221447,
   "tour": "challenger",
-  "torneo": "Kobe",
-  "ronda": "Kobe - 1/16-finals",
+  "torneo": "Kobe, Japan",
+  "ronda": "Round of 32",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -67833,56 +67833,53 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-17T09:30:41.708Z",
-  "torneoClave": "challenger|Kobe",
+  "visto": "2026-11-17T10:00:41.994Z",
+  "torneoClave": "challenger|Kobe, Japan",
   "tier": null,
   "importante": false,
   "torneoId": "2524",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-17T09:30:28.895559Z",
-   "age_seconds": 10,
+   "accepted_at": "2026-11-17T10:00:40.337687Z",
+   "age_seconds": 1,
    "changing_sources_count": 2,
-   "corroborated": true,
-   "corroborated_age_seconds": 2,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "default",
-    "rule": "full_set"
-   },
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": null,
+   "deciding_set": null,
    "games": [
     [
      6,
-     2
+     5
     ],
     [
      3,
-     2
+     6
     ]
    ],
    "is_tiebreak": false,
    "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "15",
-    "0"
+    "0",
+    "15"
    ],
-   "received_at": "2026-11-17T09:30:28.271022Z",
-   "sequence": 82,
-   "server": 2,
+   "received_at": "2026-11-17T10:00:39.554025Z",
+   "sequence": 121,
+   "server": 1,
    "sets": [
     1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-17T09:30:38.039013Z",
+   "timestamp": "2026-11-17T10:00:40.337684Z",
    "puntos": [
-    "15",
-    "0"
+    "0",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
