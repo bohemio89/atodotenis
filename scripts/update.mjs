@@ -399,7 +399,10 @@ async function main() {
   const fijasFuturas = corridasRestantes + calendariosRestantes + rankingsFuturos;
   const disponibles = C.presupuestoDiario - estado.usadas - C.reserva - fijasFuturas;
   const pendientes = Object.values(partidos)
-    .filter((p) => !p.confirmado && ['por_confirmar', 'finalizado'].includes(p.estado) &&
+    .filter((p) => !p.confirmado && (['por_confirmar', 'finalizado'].includes(p.estado) ||
+      // partidos importantes que el robot nunca vio en vivo (p. ej. con el cupo de la API agotado) y que por horario ya
+      // tendrían que haber terminado: también se consultan, si no quedaban como "programados" para siempre
+      (p.estado === 'programado' && p.importante && ahora - new Date(p.horario || 0) > 2.5 * 3600e3)) &&
       ahora - new Date(p.horario || 0) < 7 * 864e5)
     .sort((a, b) => prioridad(b) - prioridad(a) || String(b.horario).localeCompare(String(a.horario)));
   // Los resultados de partidos importantes de los últimos 3 días se confirman siempre (3 consultas por corrida
