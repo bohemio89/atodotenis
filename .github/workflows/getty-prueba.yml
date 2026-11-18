@@ -7,17 +7,5 @@ jobs:
   prueba:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with: { ref: main }
-      - uses: actions/checkout@v4
-        with: { ref: media, path: m }
-      - uses: actions/setup-node@v4
-        with: { node-version: 22 }
-      - name: Probar buscador nuevo
-        run: |
-          cp m/media/getty-nuevo.mjs scripts/getty.mjs
-          for s in 2026-11-18-alcaraz-medvedev-finals-turin 2026-11-17-zverev-shelton-finals-turin 2026-11-17-fils-jodar-finals-turin 2026-11-14-andreeva-pegula-finals-riyadh; do
-            node -e "const fs=require('fs');const p='content/notas/$s.json';const n=JSON.parse(fs.readFileSync(p));delete n.getty;fs.writeFileSync(p,JSON.stringify(n))"
-          done
-          DEPURAR=1 SLUGS=2026-11-17-zverev-shelton-finals-turin,2026-11-17-fils-jodar-finals-turin node scripts/getty.mjs
-          cat data/getty-uso.json
+      - run: |
+          for id in 2305110895 2305169093 2305552799 2305719110; do echo "== $id"; curl -s -w ' HTTP%{http_code}' "https://embed.gettyimages.com/oembed?url=https%3A%2F%2Fgty.im%2F$id" | head -c 300; echo; done
