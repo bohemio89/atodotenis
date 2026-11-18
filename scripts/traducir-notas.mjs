@@ -23,11 +23,12 @@ Return ONLY JSON with the same keys: {"titulo": "...", "bajada": "...", "cuerpo"
 
 ${JSON.stringify(fuente)}`;
   let cupos = 0;
-  const modelos = CONFIG.notas?.modelos || ['gemini-flash-latest'];
+  // Si los modelos principales están saturados (503) o tardan, se prueba con otros modelos gratuitos.
+  const modelos = [...new Set([...(CONFIG.notas?.modelos || ['gemini-flash-latest']), 'gemini-2.5-flash', 'gemini-flash-lite-latest', 'gemini-2.5-pro'])];
   for (const modelo of modelos) {
     try {
       const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
-        method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': KEY }, signal: AbortSignal.timeout(50000),
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': KEY }, signal: AbortSignal.timeout(35000),
         body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.2, responseMimeType: 'application/json' } })
       });
       if (!r.ok) { log(`Gemini ${modelo} HTTP ${r.status}`); if (r.status === 429 && ++cupos === modelos.length) return 'cupo'; continue; }
