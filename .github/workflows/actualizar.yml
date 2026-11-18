@@ -47,7 +47,9 @@ jobs:
         run: node scripts/articles.mjs
       - name: Fotos de Getty Images para las notas nuevas
         continue-on-error: true
-        timeout-minutes: 3
+        timeout-minutes: 4
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
         run: 'node scripts/getty.mjs || echo "Getty, se reintentara en la proxima corrida"'
       - name: Buscar fotos recientes con licencia libre
         run: node scripts/fotos.mjs
