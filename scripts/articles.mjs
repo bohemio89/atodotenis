@@ -1,6 +1,7 @@
 // Redactor: escribe notas con Gemini a partir de resultados reales confirmados.
 // Nunca inventa: solo usa los datos del partido y valida que los números del texto existan en los datos.
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import {
   CONFIG, ROOT, leerJSON, guardarJSON, log, nombreRonda, nombreCategoria, SUPERFICIES,
@@ -213,7 +214,9 @@ async function modelosDisponibles() {
     log('Modelos disponibles:', nombres.join(', '));
     const flash = nombres.filter((n) => /flash/.test(n) && !/(lite|omni|image|tts|audio|live|thinking|exp|embedding|vision|transcribe)/.test(n))
       .sort((a, b) => (/lite/.test(a) - /lite/.test(b)) || (/preview/.test(a) - /preview/.test(b)) || b.localeCompare(a, undefined, { numeric: true }));
-    MODELOS = [...new Set([...N.modelos.filter((m) => nombres.includes(m)), ...flash])].slice(0, 4);
+    // Si los "flash" nuevos están saturados (503), se prueba con otros modelos gratuitos: 2.5 flash/pro y Gemma.
+    const extra = ['gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-flash-lite-latest', 'gemma-4-31b-it', 'gemma-4-26b-a4b-it'].filter((m) => nombres.includes(m));
+    MODELOS = [...new Set([...N.modelos.filter((m) => nombres.includes(m)), ...flash.slice(0, 4), ...extra])].slice(0, 9);
   } catch (e) { log('No se pudo listar modelos:', e.message); MODELOS = N.modelos; }
   log('Modelos a usar:', MODELOS.join(', '));
   return MODELOS;
@@ -230,16 +233,18 @@ async function gemini(prompt) {
           signal: AbortSignal.timeout(60000),
           body: JSON.stringify({
             contents: [{ role: 'user', parts: [{ text: prompt }] }],
-            generationConfig: { temperature: 0.85, responseMimeType: 'application/json' }
+            // Gemma no acepta responseMimeType: se le pide JSON en el texto y se limpia la respuesta
+            generationConfig: /^gemma/.test(modelo) ? { temperature: 0.85 } : { temperature: 0.85, responseMimeType: 'application/json' }
           })
         });
-        if (r.status === 503) { ultimoError = new Error(`Gemini ${modelo} saturado (503)`); log(ultimoError.message); break; }
+        if (r.status === 503 || r.status === 500) { ultimoError = new Error(`Gemini ${modelo} saturado (${r.status})`); log(ultimoError.message); if (intento === 1) { await new Promise((s) => setTimeout(s, 4000)); continue; } break; }
         if (r.status === 429) { ultimoError = new Error('429 límite de Gemini'); await new Promise((s) => setTimeout(s, 20000)); continue; }
         if ([400, 403, 404].includes(r.status)) { ultimoError = new Error(`Gemini ${modelo} HTTP ${r.status}: ${(await r.text()).replace(/\s+/g, ' ').slice(0, 200)}`); log(ultimoError.message); MODELOS = MODELOS.filter((x) => x !== modelo); break; }
         if (!r.ok) throw new Error(`Gemini ${modelo} HTTP ${r.status}: ${(await r.text()).replace(/\s+/g, ' ').slice(0, 300)}`);
         const j = await r.json();
         const texto = j.candidates?.[0]?.content?.parts?.map((x) => x.text).join('') || '';
-        return { modelo, nota: JSON.parse(texto.replace(/^```json\s*|```\s*$/g, '')) };
+        const json = (texto.match(/\{[\s\S]*\}/) || [texto])[0]; // tolera ```json ... ``` o texto alrededor
+        return { modelo, nota: JSON.parse(json) };
       } catch (e) { ultimoError = e; log('Gemini falló:', e.message); }
     }
   }
@@ -274,32 +279,161 @@ function validar(nota, datos) {
   return problemas;
 }
 
-// Nota corta y verificable armada solo con los datos del partido, para cuando Gemini no responde.
+// ---------- Nota de respaldo (cuando Gemini no responde) ----------
+// Nota completa armada SOLO con datos verificados del partido y del torneo: resultado set por set, ranking oficial,
+// recorrido de los dos en el torneo, situación del grupo (Finals) y próximo partido. Sale en español y en inglés.
+// No inventa nada: si un dato no está, el párrafo no se escribe.
+const huellaNota = (n) => crypto.createHash('sha1').update(JSON.stringify([n.titulo, n.bajada, n.cuerpo, n.categoria])).digest('hex').slice(0, 12);
+const normNombre = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z]+/g, ' ').trim();
+const RANKING_OFICIAL = (() => {
+  const m = new Map();
+  for (const j of Object.values(leerJSON('data/jugadores.json', {}).lista || {})) if (j?.ranking && j.nombre) m.set(`${j.tour}|${normNombre(j.nombre)}`, j.ranking);
+  return m;
+})();
+const rankingOficial = (nombre, tour) => RANKING_OFICIAL.get(`${tour}|${normNombre(nombre)}`) ?? null;
+const GRUPOS_FINALS = (leerJSON('content/finales.json', {}).eventos || []).flatMap((e) => (e.grupos || []).map((g) => ({ tour: e.tour, nombre: g.nombre, jugadores: g.jugadores.map(normNombre) })));
+
 function notaDeRespaldo(p) {
   const r = resultadoParaNota(p);
-  const g = r.ganador.nombre, pe = r.perdedor.nombre, ag = apellido(g), ap = apellido(pe);
-  const torneo = /finals/i.test(nombreTorneo(p.torneo)) ? `las ${nombreTorneo(p.torneo)}` : nombreTorneo(p.torneo);
-  const marcador = r.sets.map(([a, b]) => `${a}-${b}`).join(', ').replace(/, ([^,]+)$/, ' y $1');
+  const tour = /wta|women/i.test(`${p.tour} ${p.genero}`) ? 'wta' : 'atp';
+  const G = r.ganador.nombre, P = r.perdedor.nombre, ag = apellido(G), ap = apellido(P);
+  const gId = (p.ganador === 1 ? p.j1 : p.j2)?.id, pId = (p.ganador === 1 ? p.j2 : p.j1)?.id;
+  const rkG = rankingOficial(G, tour), rkP = rankingOficial(P, tour);
+  const nomT = nombreTorneo(p.torneo), esFinals = /finals/i.test(nomT);
+  const torneoEs = esFinals ? `las ${nomT}` : nomT, torneoEn = esFinals ? `the ${nomT}` : nomT;
+  const grupo = esFinals && GRUPOS_FINALS.find((g) => g.tour === tour && g.jugadores.includes(normNombre(G)) && g.jugadores.includes(normNombre(P)));
+  const grupoEn = grupo && grupo.nombre.replace(/^Grupo (\d+)$/, 'Group $1').replace(/^Grupo /, '') + (/^Grupo \d/.test(grupo.nombre) ? '' : ' Group');
+  const rondaEs = grupo ? `la fase de grupos` : (p.rondaCod || p.ronda ? `${/^(la|el) /i.test(nombreRonda(p.rondaCod, p.ronda)) ? '' : 'la '}${String(nombreRonda(p.rondaCod, p.ronda)).toLowerCase()}` : '');
+  const RONDAS_EN = { F: 'the final', SF: 'the semifinals', QF: 'the quarterfinals', R16: 'the round of 16', R32: 'the third round', R64: 'the second round', R128: 'the first round' };
+  const rondaEn = grupo ? 'the group stage' : (RONDAS_EN[p.rondaCod] || '');
+
+  // Sets desde el ganador, con el puntaje del tie-break (el del que lo perdió)
+  const tbs = Array.isArray(r.tieBreaks) ? r.tieBreaks : [];
+  const tbPerdedor = (i) => { let t = tbs[i]; if (t == null) return null; if (typeof t === 'object') { const v = [t.p1 ?? t.player1 ?? t[0], t.p2 ?? t.player2 ?? t[1]].map(Number).filter(Number.isFinite); t = v.length === 2 ? Math.min(...v) : v[0]; } return Number.isFinite(+t) ? +t : null; };
+  const setTxt = ([a, b], i) => { const tb = (a === 7 && b === 6) || (a === 6 && b === 7) ? tbPerdedor(i) : null; return `${a}-${b}${tb != null ? ` (${tb})` : ''}`; };
+  const sets = r.sets.map(setTxt);
+  const marcadorEs = sets.join(', ').replace(/, ([^,]+)$/, ' y $1'), marcadorEn = sets.join(', ');
   const remonto = r.sets[0] && r.sets[0][1] > r.sets[0][0];
-  const tres = r.sets.length >= 3;
-  // Sin ranking: en estos datos a veces viene el número de siembra del torneo y no el del ranking oficial.
-  const rk = () => '';
-  const ronda = p.rondaCod === 'RR' ? 'la fase de grupos' : (nombreRonda(p.rondaCod, p.ronda) || '');
-  const titulo = remonto ? `${ag} dio vuelta el partido ante ${ap} en ${torneo}` : `${ag} venció a ${ap} en ${torneo}`;
-  const bajada = `${remonto ? 'Perdió el primer set y se impuso' : 'Se impuso'} por ${marcador}${ronda ? ` en ${ronda.toLowerCase()}` : ''}.`;
-  const desarrollo = remonto
-    ? `${ap} se quedó con el primer set ${r.sets[0][1]}-${r.sets[0][0]}, pero ${ag} reaccionó y ganó los siguientes ${r.sets.slice(1).map(([a, b]) => `${a}-${b}`).join(' y ')}.`
-    : tres
-      ? `El partido se definió en tres sets: ${ag} ganó el primero ${r.sets[0][0]}-${r.sets[0][1]}, ${ap} igualó con un ${r.sets[1][1]}-${r.sets[1][0]} y ${ag} cerró el tercero ${r.sets[2][0]}-${r.sets[2][1]}.`
-      : `${ag} resolvió el partido en sets corridos: ${r.sets.map(([a, b]) => `${a}-${b}`).join(' y ')}.`;
+  const setsCorridos = r.sets.every(([a, b]) => a > b);
+
+  // Recorrido en el torneo (partidos anteriores confirmados) y récord
+  const previos = (id) => Object.values(PARTIDOS_TODOS)
+    .filter((o) => o.id !== p.id && o.torneo === p.torneo && o.confirmado && o.ganador && !o.dobles && [o.j1?.id, o.j2?.id].includes(id) && String(o.horario) < String(p.horario))
+    .sort((x, y) => String(x.horario).localeCompare(String(y.horario)))
+    .map((o) => { const rr = resultadoParaNota(o); const gano = (o.ganador === 1 ? o.j1 : o.j2)?.id === id; return { gano, rival: (o.j1?.id === id ? o.j2 : o.j1)?.nombre, marcador: rr ? rr.sets.map(([a, b]) => gano ? `${a}-${b}` : `${b}-${a}`) : [] }; });
+  const prevG = previos(gId), prevP = previos(pId);
+  const recG = { g: prevG.filter((x) => x.gano).length + 1, p: prevG.filter((x) => !x.gano).length };
+  const recP = { g: prevP.filter((x) => x.gano).length, p: prevP.filter((x) => !x.gano).length + 1 };
+  const proximo = (id) => Object.values(PARTIDOS_TODOS).filter((o) => o.estado === 'programado' && o.torneo === p.torneo && [o.j1?.id, o.j2?.id].includes(id) && String(o.horario) > String(p.horario))
+    .sort((x, y) => String(x.horario).localeCompare(String(y.horario)))[0];
+  const proxG = proximo(gId), proxP = proximo(pId);
+  const rivalDe = (o, id) => (o.j1?.id === id ? o.j2 : o.j1)?.nombre;
+  const diaEs = (o) => new Intl.DateTimeFormat('es-AR', { weekday: 'long', day: 'numeric', timeZone: 'Europe/Rome' }).format(new Date(o.horario));
+  const diaEn = (o) => new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'Europe/Rome' }).format(new Date(o.horario));
+  const vecesEs = (n) => ['ninguna', 'una', 'dos', 'tres', 'cuatro', 'cinco'][n] ?? String(n), vecesEn = (n) => ['no', 'one', 'two', 'three', 'four', 'five'][n] ?? String(n);
+  const victoriasEs = (n) => `${vecesEs(n)} ${n === 1 ? 'victoria' : 'victorias'}`, derrotasEs = (n) => `${vecesEs(n)} ${n === 1 ? 'derrota' : 'derrotas'}`;
+  const winsEn = (n) => `${vecesEn(n)} ${n === 1 ? 'win' : 'wins'}`, lossesEn = (n) => `${vecesEn(n)} ${n === 1 ? 'loss' : 'losses'}`;
+  const invicto = grupo && recG.p === 0 && recG.g >= 2;
+
+  // ---- Español ----
+  const quienEs = (nombre, rk) => rk ? `${nombre}, número ${rk} del ranking,` : nombre;
+  const titulo = remonto ? `${ag} dio vuelta el partido ante ${ap} en ${torneoEs}`
+    : invicto ? `${ag} le ganó a ${ap} y sigue ${/women/.test(p.genero || '') || tour === 'wta' ? 'invicta' : 'invicto'} en ${torneoEs}`
+    : `${ag} le ganó a ${ap} en ${torneoEs}`;
+  const bajada = `${rkG ? `El número ${rkG} del mundo` : ag} se impuso ${marcadorEs}${grupo ? ` en el ${grupo.nombre.replace(/^Grupo /, 'grupo ')}` : rondaEs ? ` en ${rondaEs}` : ''}${grupo ? ` y suma ${victoriasEs(recG.g)}${recG.p ? ` y ${derrotasEs(recG.p)}` : ''}` : ''}.`;
+  const cuerpo = [];
+  cuerpo.push(`${quienEs(G, rkG)} venció a ${P}${rkP ? ` (${rkP}°)` : ''} por ${marcadorEs} en ${rondaEs ? `${rondaEs} de ` : ''}${torneoEs}.`);
+  const tbEs = (i) => { const t = tbPerdedor(i); return t != null ? ` en el tie-break por ${Math.max(7, t + 2)}-${t}` : ' en el tie-break'; };
+  const tbEsPerd = (i) => { const t = tbPerdedor(i); return t != null ? ` en el tie-break (${Math.max(7, t + 2)}-${t})` : ' en el tie-break'; };
+  const descSet = ([a, b], i) => {
+    const n = ['El primer set', 'El segundo', 'El tercero', 'El cuarto', 'El quinto'][i];
+    const tb = (a === 7 && b === 6) || (a === 6 && b === 7);
+    if (a > b) return `${n} fue para ${ag}, ${tb ? `que lo ganó${tbEs(i)}` : `que lo cerró ${a}-${b}`}`;
+    return `${n} se lo llevó ${ap}, ${tb ? `que lo ganó${tbEsPerd(i)}` : `por ${b}-${a}`}`;
+  };
+  const sinTb = r.sets.every(([a, b]) => !((a === 7 && b === 6) || (a === 6 && b === 7)));
+  cuerpo.push(setsCorridos && sinTb
+    ? `${ag} ganó el primer set ${sets[0]}${sets.length > 2 ? `, el segundo ${sets[1]} y el tercero ${sets[2]}` : ` y el segundo ${sets[1]}`}, sin ceder sets.`
+    : `${r.sets.map(descSet).join('. ')}.${remonto ? ` ${ag} perdió el primer set y dio vuelta el partido.` : setsCorridos ? ` ${ag} ganó el partido sin ceder sets.` : ''}`);
+  const recorridoEs = (prev, quien, ap2) => prev.length ? `${quien} venía de ${prev.map((x) => `${x.gano ? 'ganarle' : 'perder con'} ${x.gano ? 'a ' : ''}${apellido(x.rival)} por ${x.marcador.join(', ').replace(/, ([^,]+)$/, ' y $1')}`).join(' y de ')}` : '';
+  const ctxEs = [recorridoEs(prevG, ag), recorridoEs(prevP, ap)].filter(Boolean);
+  if (ctxEs.length || grupo) {
+    let t = ctxEs.length ? `${ctxEs.join('. ')}.` : '';
+    if (grupo) t += ` En el ${grupo.nombre.replace(/^Grupo /, 'grupo ')}, ${ag} suma ${victoriasEs(recG.g)}${recG.p ? ` y ${derrotasEs(recG.p)}` : ''}, y ${ap} tiene ${recP.g ? `${victoriasEs(recP.g)} y ` : ''}${derrotasEs(recP.p)}.${esFinals ? ' A las semifinales avanzan los dos primeros de cada grupo.' : ''}`;
+    cuerpo.push(t.trim());
+  }
+  const proxEs = [proxG && `${ag} jugará el ${diaEs(proxG)} ante ${rivalDe(proxG, gId)}`, proxP && `${ap} se medirá con ${rivalDe(proxP, pId)}`].filter(Boolean);
+  const ultima = grupo && recG.g + recG.p >= 2;
+  if (proxEs.length) cuerpo.push(`${grupo ? (ultima ? 'En la última fecha del grupo, ' : 'En la próxima fecha del grupo, ') : 'En su próximo partido, '}${proxEs.join(', mientras que ')}.`);
+
+  // ---- English (mismo contenido) ----
+  const whoEn = (nombre, rk) => rk ? `World No. ${rk} ${nombre}` : nombre;
+  const tituloEn = remonto ? `${ag} comes back to beat ${ap} at ${torneoEn}`
+    : invicto ? `${ag} beats ${ap} to stay unbeaten at ${torneoEn}`
+    : `${ag} beats ${ap} at ${torneoEn}`;
+  const bajadaEn = `${rkG ? `The world No. ${rkG}` : ag} won ${marcadorEn}${grupo ? ` in the ${grupoEn}` : rondaEn ? ` in ${rondaEn}` : ''}${grupo ? ` and now has ${winsEn(recG.g)}${recG.p ? ` and ${lossesEn(recG.p)}` : ''}` : ''}.`;
+  const cuerpoEn = [];
+  cuerpoEn.push(`${whoEn(G, rkG)} beat ${P}${rkP ? ` (No. ${rkP})` : ''} ${marcadorEn} in ${rondaEn ? `${rondaEn} of ` : ''}${torneoEn}.`);
+  const descSetEn = ([a, b], i) => {
+    const n = ['The first set', 'The second', 'The third', 'The fourth', 'The fifth'][i];
+    const tb = (a === 7 && b === 6) || (a === 6 && b === 7), t = tbPerdedor(i);
+    const tbTxt = t != null ? `the tiebreak ${Math.max(7, t + 2)}-${t}` : 'the tiebreak';
+    if (a > b) return `${n} went to ${ag}, ${tb ? `who won ${tbTxt}` : `${a}-${b}`}`;
+    return `${n} went to ${ap}, ${tb ? `who won ${tbTxt}` : `${b}-${a}`}`;
+  };
+  cuerpoEn.push(setsCorridos && sinTb
+    ? `${ag} took the first set ${sets[0]}${sets.length > 2 ? `, the second ${sets[1]} and the third ${sets[2]}` : ` and the second ${sets[1]}`}, without dropping a set.`
+    : `${r.sets.map(descSetEn).join('. ')}.${remonto ? ` ${ag} lost the first set and came back to win.` : setsCorridos ? ` ${ag} won without dropping a set.` : ''}`);
+  const recorridoEn = (prev, quien) => prev.length ? `${quien} had ${prev.map((x) => `${x.gano ? 'beaten' : 'lost to'} ${apellido(x.rival)} ${x.marcador.join(', ')}`).join(' and ')}` : '';
+  const ctxEn = [recorridoEn(prevG, ag), recorridoEn(prevP, ap)].filter(Boolean);
+  if (ctxEn.length || grupo) {
+    let t = ctxEn.length ? `${ctxEn.join('. ')}.` : '';
+    if (grupo) t += ` In the ${grupoEn}, ${ag} has ${winsEn(recG.g)}${recG.p ? ` and ${lossesEn(recG.p)}` : ''}, while ${ap} has ${recP.g ? `${winsEn(recP.g)} and ` : ''}${lossesEn(recP.p)}.${esFinals ? ' The top two in each group advance to the semifinals.' : ''}`;
+    cuerpoEn.push(t.trim());
+  }
+  const proxEn = [proxG && `${ag} will play ${rivalDe(proxG, gId)} on ${diaEn(proxG)}`, proxP && `${ap} will face ${rivalDe(proxP, pId)}`].filter(Boolean);
+  if (proxEn.length) cuerpoEn.push(`${grupo ? (ultima ? 'On the final day of the group, ' : 'In the next round of group matches, ') : 'Next, '}${proxEn.join(', while ')}.`);
+
   return {
-    titulo, bajada,
-    cuerpo: [`${g}${rk(r.ganador)} le ganó a ${pe}${rk(r.perdedor)} por ${marcador} en ${torneo}.`.replace(/,, /g, ', '), desarrollo],
-    etiquetas: [nombreTorneo(p.torneo), g, pe],
+    titulo, bajada, cuerpo, etiquetas: [nomT, G, P],
+    en: { categoria: nombreCategoria(p.tier, p.tour, p.torneo) || 'Tenis', titulo: tituloEn, bajada: bajadaEn, cuerpo: cuerpoEn },
   };
 }
 
+// Cuando Gemini vuelve a responder, las notas que salieron con la plantilla (últimas 12 horas) se reescriben
+// con el estilo de redacción completo. Se mantienen el slug, la foto y todo lo demás.
+async function mejorarPlantillas() {
+  if (PRUEBA.length) return;
+  for (const f of fs.readdirSync(path.join(ROOT, 'content/notas')).filter((x) => x.endsWith('.json'))) {
+    const ruta = path.join(ROOT, 'content/notas', f);
+    const n = JSON.parse(fs.readFileSync(ruta, 'utf8'));
+    if (n.generadoCon !== 'plantilla' || n.estado !== 'publicada' || Date.now() - new Date(n.fecha).getTime() > 12 * 3600e3) continue;
+    if (n.reintentoGemini && Date.now() - new Date(n.reintentoGemini).getTime() < 25 * 60e3) continue;
+    const p = PARTIDOS_TODOS[n.partidoId]; if (!p) continue;
+    const datos = datosDelPartido(p);
+    let prompt = `${ESTILO}\n\nDATOS DEL PARTIDO:\n${conGrafia(JSON.stringify(datos, null, 2))}`;
+    try {
+      let nota, modelo, problemas = ['sin intentar'];
+      for (let intento = 1; intento <= 2 && problemas.length; intento++) {
+        ({ nota, modelo } = await gemini(prompt));
+        problemas = validar(nota, datos);
+        if (problemas.length) prompt += `\n\nTu versión anterior tenía estos problemas, corregilos: ${problemas.join('; ')}`;
+      }
+      if (problemas.length) { log(`Plantilla ${n.slug}: Gemini respondió con problemas, queda la plantilla`); n.reintentoGemini = new Date().toISOString(); fs.writeFileSync(ruta, JSON.stringify(n, null, 1) + '\n'); continue; }
+      const limpia = JSON.parse(conGrafia(JSON.stringify(nota)));
+      n.titulo = limpia.titulo.trim(); n.bajada = (limpia.bajada || '').trim(); n.cuerpo = limpia.cuerpo.map((x) => String(x).trim()).filter(Boolean);
+      n.generadoCon = modelo; delete n.reintentoGemini; // el inglés se rehace solo en el paso de traducción (cambia la huella)
+      fs.writeFileSync(ruta, JSON.stringify(n, null, 1) + '\n');
+      log(`Nota mejorada con Gemini: ${n.slug}`);
+    } catch (e) {
+      n.reintentoGemini = new Date().toISOString(); fs.writeFileSync(ruta, JSON.stringify(n, null, 1) + '\n');
+      log(`Plantilla ${n.slug}: Gemini sigue sin responder (${e.message})`); break;
+    }
+  }
+}
+
 async function main() {
+  await mejorarPlantillas().catch((e) => log('mejorarPlantillas:', e.message));
   log(`Notas candidatas: ${candidatos.length}`);
   for (const p of candidatos) {
     if (!PRUEBA.length && !entraEnJornada(p)) { log(`Fuera de las ${MAX_JORNADA} más importantes de su jornada: ${p.j1?.nombre} - ${p.j2?.nombre}`); registro[p.id] = 'omitida'; continue; }
@@ -318,9 +452,10 @@ async function main() {
     }
     if (problemas.length) {
       const errorGemini = problemas.some((x) => /Gemini|429|503|fetch|timeout|abort/i.test(x));
-      // Si Gemini no responde y el partido terminó hace más de una hora, la nota sale igual con los datos del resultado
+      // Si Gemini no responde y el partido terminó hace más de 20 minutos, la nota sale igual, completa, con los datos
+      // verificados del partido (también en inglés). Cuando Gemini vuelva, se reescribe (mejorarPlantillas).
       const terminado = new Date(p.score?.received_at || p.score?.timestamp || p.horario).getTime();
-      if (errorGemini && !PRUEBA.length && Date.now() - terminado > 60 * 60e3) {
+      if (errorGemini && !PRUEBA.length && Date.now() - terminado > 20 * 60e3) {
         nota = JSON.parse(conGrafia(JSON.stringify(notaDeRespaldo(p)))); modelo = 'plantilla'; problemas = [];
         log(`Gemini no respondió: nota con los datos del resultado para ${p.id}`);
       } else {
@@ -352,6 +487,7 @@ async function main() {
       imagen: null, // { url, credito, enlace } cuando se sume una fuente de imágenes con licencia
       generadoCon: modelo
     };
+    if (modelo === 'plantilla' && nota.en) doc.en = { ...nota.en, huella: huellaNota(doc), modelo: 'plantilla', fecha: new Date().toISOString() };
     fs.writeFileSync(path.join(ROOT, 'content/notas', `${slug}.json`), JSON.stringify(doc, null, 1) + '\n');
     if (!PRUEBA.length) registro[p.id] = slug;
     log(`Nota escrita: ${doc.titulo}`);
