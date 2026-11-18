@@ -48817,7 +48817,7 @@
  },
  "220243": {
   "id": 220243,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Kobe",
   "ronda": "Kobe - 1/8-finals",
   "rondaCod": "R16",
@@ -48827,7 +48827,7 @@
   "horario": "2026-11-18T05:15:00Z",
   "j1": {
    "id": 5320,
-   "nombre": "Bass/ Duncan",
+   "nombre": "Finn Bass / Scott Duncan",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -48837,7 +48837,7 @@
   },
   "j2": {
    "id": 27600,
-   "nombre": "Matsui/ Ramanathan",
+   "nombre": "Ramkumar Ramanathan / Toshihide Matsui",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -48846,12 +48846,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T04:00:41.103Z",
+  "visto": "2026-11-18T05:45:27.136Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8255",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-18T05:45:01.579018Z",
+   "age_seconds": 25,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "15",
+    "0"
+   ],
+   "received_at": "2026-11-18T05:45:01.396413Z",
+   "sequence": 43,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-18T05:45:26.298290Z",
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220244": {
   "id": 220244,
@@ -48884,7 +48931,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-18T05:15:28.346Z",
   "torneoClave": "challenger|Kobe",
@@ -60734,7 +60781,7 @@
    "ranking": 614
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-18T05:15:28.346Z",
   "torneoClave": "challenger|Drummondville",
@@ -69430,7 +69477,7 @@
    "ranking": 442
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-18T05:15:28.346Z",
   "torneoClave": "challenger|Sydney",
@@ -69509,7 +69556,7 @@
    "ranking": 512
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-18T05:15:28.346Z",
   "torneoClave": "challenger|Kobe",
@@ -71392,6 +71439,90 @@
   "ganador": null,
   "visto": "2026-11-18T04:30:32.418Z",
   "torneoClave": "challenger|Sydney",
+  "importante": false
+ },
+ "222527": {
+  "id": 222527,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Kobe",
+  "torneoId": "8255",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "cubierto": true,
+  "dobles": true,
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-18T05:40:00Z",
+  "j1": {
+   "id": 4989,
+   "nombre": "Finn Reynolds / James Watt",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 6407,
+   "nombre": "Kusuhara / Shunsuke Nakagawa",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "jpn",
+    "jpn"
+   ]
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-18T05:45:05.230963Z",
+   "age_seconds": 21,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "40",
+    "0"
+   ],
+   "received_at": "2026-11-18T05:45:04.946617Z",
+   "sequence": 10,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-18T05:45:14.528546Z",
+   "puntos": [
+    "40",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-18T05:45:27.136Z",
+  "torneoClave": "challenger|Kobe",
   "importante": false
  },
  "null": {
