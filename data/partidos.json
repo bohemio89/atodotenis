@@ -49109,7 +49109,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T06:45:27.231Z",
+  "visto": "2026-11-18T07:15:35.800Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false,
@@ -49117,8 +49117,8 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T06:44:38.213478Z",
-   "age_seconds": 48,
+   "accepted_at": "2026-11-18T07:15:31.992085Z",
+   "age_seconds": 3,
    "changing_sources_count": 2,
    "corroborated": true,
    "corroborated_age_seconds": 2,
@@ -49129,61 +49129,53 @@
    },
    "games": [
     [
-     3
+     6,
+     0
     ],
     [
-     3
+     7,
+     0
     ]
    ],
    "is_tiebreak": false,
    "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "40",
+    "30"
    ],
-   "received_at": "2026-11-18T06:44:37.627625Z",
-   "sequence": 35,
-   "server": 2,
+   "received_at": "2026-11-18T07:15:31.270089Z",
+   "sequence": 86,
+   "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-18T06:45:07.688936Z",
+   "timestamp": "2026-11-18T07:15:31.992081Z",
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "30"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
  },
  "220247": {
   "id": 220247,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Kobe",
   "ronda": "Kobe - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T06:45:00Z",
+  "horario": "2026-11-18T07:00:00Z",
   "j1": {
-   "id": 45970,
-   "nombre": "Matsuda/ Tomida",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "jpn",
-    "jpn"
-   ]
-  },
-  "j2": {
    "id": 1530,
-   "nombre": "Dev S D/ Sinha",
+   "nombre": "Nitin Kumar Sinha / S D Prajwal Dev",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -49191,13 +49183,70 @@
     null
    ]
   },
+  "j2": {
+   "id": 45970,
+   "nombre": "Matsuda / Tomida",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "jpn",
+    "jpn"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T04:00:41.103Z",
+  "visto": "2026-11-18T07:15:35.800Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8255",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-18T07:15:15.301307Z",
+   "age_seconds": 19,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-18T07:15:15.171478Z",
+   "sequence": 34,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-18T07:15:31.779723Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220260": {
   "id": 220260,
@@ -49317,7 +49366,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-18T06:45:27.231Z",
   "torneoClave": "challenger|Sydney",
@@ -71573,7 +71622,7 @@
     "jpn"
    ]
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-18T06:45:03.770804Z",
