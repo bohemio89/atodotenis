@@ -161,7 +161,8 @@ function datosDelPartido(p) {
     el_perdedor_era_el_campeon_defensor: defensor && defensor === pe.nombre ? 'sí' : 'no',
     el_ganador_es_el_campeon_defensor: defensor && defensor === g.nombre ? 'sí' : 'no',
     otros_resultados_destacados_del_dia: contexto,
-    proximo_partido_del_ganador: rival ? `${nombreRonda(proximo.rondaCod, proximo.ronda)} ante ${rival.nombre}` : 'todavía no confirmado'
+    proximo_partido_del_ganador: rival ? `${nombreRonda(proximo.rondaCod, proximo.ronda)} ante ${rival.nombre}` : 'todavía no confirmado',
+    ...situacionDeGrupo(p, g, pe)
   };
 }
 
@@ -260,7 +261,9 @@ function validar(nota, datos) {
   if (/[!¡]/.test(nota.titulo)) problemas.push('el título no lleva exclamaciones');
   const exclam = [nota.bajada, ...nota.cuerpo].join(' ').match(/¡[^!]*!/g) || [];
   if (exclam.some((e) => e !== '¡Batacazo!') || (exclam.length && datos.sorpresa_por_ranking !== 'grande')) problemas.push('exclamación fuera de lugar');
-  if (nota.cuerpo.length < 3 || nota.cuerpo.length > 7) problemas.push('cantidad de párrafos fuera de rango');
+  if (nota.cuerpo.length < 4 || nota.cuerpo.length > 7) problemas.push('la nota tiene que tener entre 4 y 7 párrafos');
+  if (nota.cuerpo.join(' ').length < 650) problemas.push('nota demasiado corta: usá todos los datos (desarrollo set por set, recorrido de los dos en el torneo, situación del grupo si la hay y próximo partido)');
+  if (/\b(el|del) (ATP|WTA) Finals\b/.test([nota.titulo, nota.bajada, ...nota.cuerpo].join(' '))) problemas.push('se dice "las ATP Finals" / "las WTA Finals" (femenino plural)');
   const texto = [nota.titulo, nota.bajada, ...nota.cuerpo].join(' ');
   const permitidos = new Set(JSON.stringify(datos).match(/\d+/g) || []);
   ['1', '2', '3', '4', '5'].forEach((n) => permitidos.add(n)); // "dos sets", "tercer set", etc.
@@ -292,6 +295,25 @@ const RANKING_OFICIAL = (() => {
 })();
 const rankingOficial = (nombre, tour) => RANKING_OFICIAL.get(`${tour}|${normNombre(nombre)}`) ?? null;
 const GRUPOS_FINALS = (leerJSON('content/finales.json', {}).eventos || []).flatMap((e) => (e.grupos || []).map((g) => ({ tour: e.tour, nombre: g.nombre, jugadores: g.jugadores.map(normNombre) })));
+
+// Finals: nombre del grupo y récord de cada uno después de este partido (para que la nota cuente cómo quedó el grupo)
+function situacionDeGrupo(p, g, pe) {
+  const tour = /wta|women/i.test(`${p.tour} ${p.genero}`) ? 'wta' : 'atp';
+  const grupo = /finals/i.test(nombreTorneo(p.torneo)) && GRUPOS_FINALS.find((x) => x.tour === tour && x.jugadores.includes(normNombre(g.nombre)) && x.jugadores.includes(normNombre(pe.nombre)));
+  if (!grupo) return {};
+  const tabla = {};
+  for (const o of Object.values(PARTIDOS_TODOS)) {
+    if (o.torneo !== p.torneo || !o.confirmado || !o.ganador || o.dobles || String(o.horario) > String(p.horario)) continue;
+    const og = o.ganador === 1 ? o.j1 : o.j2, op = o.ganador === 1 ? o.j2 : o.j1;
+    if (!grupo.jugadores.includes(normNombre(og?.nombre)) || !grupo.jugadores.includes(normNombre(op?.nombre))) continue;
+    (tabla[og.nombre] ||= { ganados: 0, perdidos: 0 }).ganados++; (tabla[op.nombre] ||= { ganados: 0, perdidos: 0 }).perdidos++;
+  }
+  return {
+    grupo: grupo.nombre,
+    tabla_del_grupo_tras_este_partido: Object.entries(tabla).sort((a, b) => b[1].ganados - a[1].ganados || a[1].perdidos - b[1].perdidos).map(([n, r]) => `${n}: ${r.ganados} ganados, ${r.perdidos} perdidos`),
+    formato: 'fase de grupos (round robin) de 4 jugadores; a las semifinales avanzan los dos primeros de cada grupo. No afirmes que alguien ya se clasificó o quedó eliminado: eso depende de otros resultados.'
+  };
+}
 
 function notaDeRespaldo(p) {
   const r = resultadoParaNota(p);
@@ -455,9 +477,9 @@ async function main() {
       // Si Gemini no responde y el partido terminó hace más de 20 minutos, la nota sale igual, completa, con los datos
       // verificados del partido (también en inglés). Cuando Gemini vuelva, se reescribe (mejorarPlantillas).
       const terminado = new Date(p.score?.received_at || p.score?.timestamp || p.horario).getTime();
-      if (errorGemini && !PRUEBA.length && Date.now() - terminado > 20 * 60e3) {
+      if (!PRUEBA.length && (!errorGemini || Date.now() - terminado > 20 * 60e3)) {
+        log(`${errorGemini ? 'Gemini no respondió' : `La nota de Gemini no pasó los controles (${problemas.join('; ')})`}: nota completa con los datos verificados para ${p.id}`);
         nota = JSON.parse(conGrafia(JSON.stringify(notaDeRespaldo(p)))); modelo = 'plantilla'; problemas = [];
-        log(`Gemini no respondió: nota con los datos del resultado para ${p.id}`);
       } else {
         // Si fue un error de Gemini (no de contenido) se reintenta en la próxima corrida
         if (!errorGemini) registro[p.id] = 'descartada';
