@@ -37156,17 +37156,27 @@
  },
  "219729": {
   "id": 219729,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Finals - Turin",
   "ronda": null,
   "rondaCod": null,
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T10:30:00Z",
+  "horario": "2026-11-18T10:35:00Z",
   "j1": {
+   "id": 1340,
+   "nombre": "Andrea Vavassori / Simone Bolelli",
+   "pais": "ita",
+   "ranking": null,
+   "paises": [
+    "ita",
+    "ita"
+   ]
+  },
+  "j2": {
    "id": 1391,
-   "nombre": "Harrison/ Skupski",
+   "nombre": "Christian Harrison / Neal Skupski",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -37174,23 +37184,60 @@
     "gbr"
    ]
   },
-  "j2": {
-   "id": 1340,
-   "nombre": "Bolelli/ Vavassori",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "ita",
-    "ita"
-   ]
-  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T10:15:28.708Z",
+  "visto": "2026-11-18T10:45:35.056Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2795",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-18T10:45:19.894318Z",
+   "age_seconds": 15,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 13,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "30",
+    "0"
+   ],
+   "received_at": "2026-11-18T10:45:19.337394Z",
+   "sequence": 9,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-18T10:45:28.965354Z",
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219730": {
   "id": 219730,
@@ -49373,14 +49420,14 @@
  },
  "220382": {
   "id": 220382,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Metz (France)",
   "ronda": "Metz - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T10:05:00Z",
+  "horario": "2026-11-18T10:10:00Z",
   "j1": {
    "id": 46003,
    "nombre": "Karol / Paris",
@@ -49404,7 +49451,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T10:15:28.971Z",
+  "visto": "2026-11-18T10:45:35.056Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": null,
   "importante": false,
@@ -49412,11 +49459,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T10:14:01.447319Z",
-   "age_seconds": 86,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-18T10:45:02.170763Z",
+   "age_seconds": 32,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 16,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -49424,21 +49471,21 @@
    },
    "games": [
     [
-     2
+     6
     ],
     [
-     1
+     6
     ]
    ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "is_tiebreak": true,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "3",
+    "3"
    ],
-   "received_at": "2026-11-18T10:14:01.189564Z",
-   "sequence": 5,
+   "received_at": "2026-11-18T10:44:59.908398Z",
+   "sequence": 59,
    "server": 2,
    "sets": [
     0,
@@ -49446,10 +49493,10 @@
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T10:15:26.337093Z",
+   "timestamp": "2026-11-18T10:45:02.170755Z",
    "puntos": [
-    "0",
-    "0"
+    "3",
+    "3"
    ],
    "saca": 2
   },
@@ -49496,14 +49543,14 @@
  },
  "220384": {
   "id": 220384,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Metz (France)",
   "ronda": "Metz - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T10:05:00Z",
+  "horario": "2026-11-18T10:10:00Z",
   "j1": {
    "id": 1564,
    "nombre": "Sergio Martos Gornes / Walkow",
@@ -49527,7 +49574,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T10:15:28.971Z",
+  "visto": "2026-11-18T10:45:35.056Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": null,
   "importante": false,
@@ -49535,46 +49582,43 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T10:15:10.812230Z",
-   "age_seconds": 17,
+   "accepted_at": "2026-11-18T10:45:34.303328Z",
+   "age_seconds": 0,
    "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 8,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "inferred",
-    "rule": "match_tiebreak"
-   },
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": null,
+   "deciding_set": null,
    "games": [
     [
-     1
+     5
     ],
     [
-     1
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
     "15",
-    "0"
+    "40"
    ],
-   "received_at": "2026-11-18T10:15:10.017996Z",
-   "sequence": 11,
-   "server": 2,
+   "received_at": "2026-11-18T10:45:33.238226Z",
+   "sequence": 56,
+   "server": 1,
    "sets": [
     0,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T10:15:21.685660Z",
+   "timestamp": "2026-11-18T10:45:34.303325Z",
    "puntos": [
     "15",
-    "0"
+    "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
