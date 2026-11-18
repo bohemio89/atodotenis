@@ -1,200 +1,4 @@
 {
- "213021": {
-  "id": 213021,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-04T14:00:00Z",
-  "j1": {
-   "id": 12022,
-   "nombre": "Hao-Ching Chan / Kato",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "tai",
-    "jpn"
-   ]
-  },
-  "j2": {
-   "id": 17527,
-   "nombre": "Dalayna Hewitt / Harrison",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    null
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:13:07.051Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "8694",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4,
-     6,
-     12
-    ],
-    [
-     6,
-     3,
-     10
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "wta|Hong Kong"
- },
- "213024": {
-  "id": 213024,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-04T11:55:00Z",
-  "j1": {
-   "id": 6068,
-   "nombre": "Cho / Cho I-",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "tai",
-    null
-   ]
-  },
-  "j2": {
-   "id": 43995,
-   "nombre": "Gorgodze / Timofeeva",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "geo",
-    "uzb"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:20:26.432Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "8694",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     7
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "wta|Hong Kong"
- },
- "213026": {
-  "id": 213026,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-04T13:25:00Z",
-  "j1": {
-   "id": 41491,
-   "nombre": "Lee / Wu",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "sgp",
-    null
-   ]
-  },
-  "j2": {
-   "id": 43997,
-   "nombre": "Williams / Xu",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    "gbr"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:20:25.267Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "8694",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     3,
-     4
-    ],
-    [
-     4,
-     6,
-     10
-    ]
-   ],
-   "sets": [
-    1,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "wta|Hong Kong"
- },
  "213029": {
   "id": 213029,
   "tour": "challenger_doubles",
@@ -384,92 +188,6 @@
   "importante": false,
   "tier": null,
   "torneoClave": "challenger|Taipei"
- },
- "213037": {
-  "id": 213037,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-04T06:10:00Z",
-  "j1": {
-   "id": 49,
-   "nombre": "Leylah Fernandez",
-   "pais": "can",
-   "ranking": 18
-  },
-  "j2": {
-   "id": 505,
-   "nombre": "Sofia Kenin",
-   "pais": "usa",
-   "ranking": 187
-  },
-  "dobles": false,
-  "estado": "cancelado",
-  "motivo": "cancelled",
-  "visto": "2026-11-04T19:53:19.242Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "wta|Hong Kong"
- },
- "213043": {
-  "id": 213043,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-04T06:10:00Z",
-  "j1": {
-   "id": 148,
-   "nombre": "Alina Charaeva",
-   "pais": "arm",
-   "ranking": 82
-  },
-  "j2": {
-   "id": 715,
-   "nombre": "Antonia Ruzic",
-   "pais": "cro",
-   "ranking": 81
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:10:11.308Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     4
-    ],
-    [
-     7,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "wta|Hong Kong"
  },
  "213074": {
   "id": 213074,
@@ -2623,62 +2341,6 @@
   "tier": null,
   "torneoClave": "challenger|Villa Maria"
  },
- "214210": {
-  "id": 214210,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-04T08:45:00Z",
-  "j1": {
-   "id": 644,
-   "nombre": "Katie Boulter",
-   "pais": "gbr",
-   "ranking": 49
-  },
-  "j2": {
-   "id": 973,
-   "nombre": "Claire Liu",
-   "pais": "usa",
-   "ranking": 102
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:10:10.740Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     5,
-     4
-    ],
-    [
-     7,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "wta|Hong Kong"
- },
  "214266": {
   "id": 214266,
   "tour": "atp",
@@ -3435,122 +3097,6 @@
   "tier": null,
   "torneoClave": "challenger|Taipei"
  },
- "214873": {
-  "id": 214873,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-04T08:35:00Z",
-  "j1": {
-   "id": 52,
-   "nombre": "Talia Gibson",
-   "pais": "aus",
-   "ranking": 36
-  },
-  "j2": {
-   "id": 548,
-   "nombre": "Aliaksandra Sasnovich",
-   "pais": "sin",
-   "ranking": 101
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:10:11.045Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     1,
-     7,
-     6
-    ],
-    [
-     6,
-     5,
-     7
-    ]
-   ],
-   "sets": [
-    1,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "wta|Hong Kong"
- },
- "214889": {
-  "id": 214889,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-04T10:50:00Z",
-  "j1": {
-   "id": 509,
-   "nombre": "Maria Sakkari",
-   "pais": "gre",
-   "ranking": 30
-  },
-  "j2": {
-   "id": 1216,
-   "nombre": "Maya Joint",
-   "pais": "aus",
-   "ranking": 90
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:09:28.146Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4,
-     6,
-     6
-    ],
-    [
-     6,
-     3,
-     3
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "wta|Hong Kong"
- },
  "214890": {
   "id": 214890,
   "tour": "challenger",
@@ -4006,118 +3552,6 @@
   "confirmado": true,
   "ganador": 1,
   "torneoClave": "wta|Chennai"
- },
- "214925": {
-  "id": 214925,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-05T13:30:00Z",
-  "j1": {
-   "id": 63,
-   "nombre": "Sorana Cirstea",
-   "pais": "rou",
-   "ranking": 15
-  },
-  "j2": {
-   "id": 262,
-   "nombre": "Mary Stoiana",
-   "pais": "usa",
-   "ranking": 114
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:20.317Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "wta|Hong Kong",
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     6
-    ],
-    [
-     5,
-     1
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
- },
- "214926": {
-  "id": 214926,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-05T11:15:00Z",
-  "j1": {
-   "id": 62,
-   "nombre": "Alexandra Eala",
-   "pais": "phi",
-   "ranking": 17
-  },
-  "j2": {
-   "id": 985,
-   "nombre": "Tereza Valentova",
-   "pais": "cze",
-   "ranking": 85
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T00:11:32.112Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "wta|Hong Kong",
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     7
-    ],
-    [
-     4,
-     6
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
  },
  "214927": {
   "id": 214927,
@@ -4619,44 +4053,6 @@
   "importante": false,
   "torneoClave": "challenger|Bratislava 2"
  },
- "215015": {
-  "id": 215015,
-  "tour": "wta_doubles",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-05T09:15:00Z",
-  "j1": {
-   "id": 26829,
-   "nombre": "Gibson/ Inglis",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "aus",
-    "aus"
-   ]
-  },
-  "j2": {
-   "id": 43999,
-   "nombre": "Tang/ Ye",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "wta|Hong Kong"
- },
  "215016": {
   "id": 215016,
   "tour": "atp",
@@ -4912,64 +4308,6 @@
   "confirmado": true,
   "ganador": 2,
   "torneoClave": "wta|Chennai"
- },
- "215035": {
-  "id": 215035,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-05T06:10:00Z",
-  "j1": {
-   "id": 681,
-   "nombre": "Elena Pridankina",
-   "pais": "rus",
-   "ranking": 206
-  },
-  "j2": {
-   "id": 1905,
-   "nombre": "Alexandra Shubladze",
-   "pais": "rus",
-   "ranking": 136
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     1,
-     3
-    ],
-    [
-     6,
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    1,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "wta|Hong Kong"
  },
  "215046": {
   "id": 215046,
@@ -8001,64 +7339,6 @@
   "confirmado": false,
   "ganador": null
  },
- "215435": {
-  "id": 215435,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-04T06:10:00Z",
-  "j1": {
-   "id": 505,
-   "nombre": "Sofia Kenin",
-   "pais": "usa",
-   "ranking": 187
-  },
-  "j2": {
-   "id": 758,
-   "nombre": "Mika Stojsavljevic",
-   "pais": "gbr",
-   "ranking": 411
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:13:05.834Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3,
-     6,
-     4
-    ],
-    [
-     6,
-     4,
-     6
-    ]
-   ],
-   "sets": [
-    1,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "wta|Hong Kong"
- },
  "215438": {
   "id": 215438,
   "tour": "atp",
@@ -8162,120 +7442,6 @@
   "importante": false,
   "tier": null,
   "torneoClave": "challenger|Taipei"
- },
- "215449": {
-  "id": 215449,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-05T06:10:00Z",
-  "j1": {
-   "id": 715,
-   "nombre": "Antonia Ruzic",
-   "pais": "cro",
-   "ranking": 81
-  },
-  "j2": {
-   "id": 791,
-   "nombre": "Xinyu Wang",
-   "pais": "chn",
-   "ranking": 38
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     4,
-     6
-    ],
-    [
-     3,
-     6,
-     2
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "wta|Hong Kong"
- },
- "215450": {
-  "id": 215450,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-05T08:50:00Z",
-  "j1": {
-   "id": 758,
-   "nombre": "Mika Stojsavljevic",
-   "pais": "gbr",
-   "ranking": 411
-  },
-  "j2": {
-   "id": 806,
-   "nombre": "Zeynep Sonmez",
-   "pais": "tur",
-   "ranking": 67
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T07:02:15.598Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "wta|Hong Kong",
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     4
-    ],
-    [
-     7,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2
  },
  "215461": {
   "id": 215461,
@@ -8975,62 +8141,6 @@
   "tier": null,
   "torneoClave": "challenger|Taranto (Italy)"
  },
- "215506": {
-  "id": 215506,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-06T10:40:00Z",
-  "j1": {
-   "id": 509,
-   "nombre": "Maria Sakkari",
-   "pais": "gre",
-   "ranking": 30
-  },
-  "j2": {
-   "id": 548,
-   "nombre": "Aliaksandra Sasnovich",
-   "pais": "blr",
-   "ranking": 101
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T00:00:41.728Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "wta|Hong Kong",
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6
-    ],
-    [
-     2,
-     3
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
- },
  "215507": {
   "id": 215507,
   "tour": "challenger",
@@ -9241,68 +8351,6 @@
   "confirmado": true,
   "ganador": 2
  },
- "215531": {
-  "id": 215531,
-  "tour": "wta_doubles",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-05T10:45:00Z",
-  "j1": {
-   "id": 6068,
-   "nombre": "Cho / Cho I-",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "tai",
-    null
-   ]
-  },
-  "j2": {
-   "id": 43996,
-   "nombre": "Hong Yi Cody Wong / Jiang",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "hkg",
-    "chn"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.384Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "wta|Hong Kong",
-  "torneoId": "8694",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     1
-    ],
-    [
-     4
-    ]
-   ],
-   "sets": [
-    0,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null
- },
  "215532": {
   "id": 215532,
   "tour": "atp_doubles",
@@ -9366,72 +8414,6 @@
   },
   "confirmado": false,
   "ganador": null
- },
- "215533": {
-  "id": 215533,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-05T12:25:00Z",
-  "j1": {
-   "id": 1425,
-   "nombre": "Jesika Maleckova / Miriam Skoch",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "cze"
-   ]
-  },
-  "j2": {
-   "id": 43997,
-   "nombre": "Williams / Xu",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    "gbr"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T07:02:15.938Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "wta|Hong Kong",
-  "torneoId": "8694",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4,
-     6,
-     10
-    ],
-    [
-     6,
-     2,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
  },
  "215535": {
   "id": 215535,
@@ -9738,72 +8720,6 @@
   "tier": "atp_1000",
   "importante": false,
   "torneoClave": "atp|Paris"
- },
- "215565": {
-  "id": 215565,
-  "tour": "wta_doubles",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-06T06:35:00Z",
-  "j1": {
-   "id": 12022,
-   "nombre": "Hao-Ching Chan / Kato",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "tai",
-    "jpn"
-   ]
-  },
-  "j2": {
-   "id": 44001,
-   "nombre": "Ninomiya / Zhang",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "jpn",
-    "chn"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T19:45:20.385Z",
-  "tier": null,
-  "importante": false,
-  "torneoClave": "wta|Hong Kong",
-  "torneoId": "8694",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     1,
-     6,
-     10
-    ],
-    [
-     6,
-     3,
-     7
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
  },
  "215566": {
   "id": 215566,
@@ -11319,62 +10235,6 @@
   "confirmado": false,
   "ganador": null
  },
- "215910": {
-  "id": 215910,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-06T06:10:00Z",
-  "j1": {
-   "id": 806,
-   "nombre": "Zeynep Sonmez",
-   "pais": "tur",
-   "ranking": 67
-  },
-  "j2": {
-   "id": 973,
-   "nombre": "Claire Liu",
-   "pais": "usa",
-   "ranking": 102
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T19:45:20.385Z",
-  "torneoClave": "wta|Hong Kong",
-  "tier": null,
-  "importante": false,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     1,
-     4
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2
- },
  "215916": {
   "id": 215916,
   "tour": "atp",
@@ -11495,62 +10355,6 @@
     "0"
    ],
    "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
- },
- "215918": {
-  "id": 215918,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-06T12:40:00Z",
-  "j1": {
-   "id": 62,
-   "nombre": "Alexandra Eala",
-   "pais": "phi",
-   "ranking": 17
-  },
-  "j2": {
-   "id": 715,
-   "nombre": "Antonia Ruzic",
-   "pais": "cro",
-   "ranking": 81
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T22:45:24.787Z",
-  "torneoClave": "wta|Hong Kong",
-  "tier": null,
-  "importante": false,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     7
-    ],
-    [
-     6,
-     5
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "40",
-    "15"
-   ],
-   "saca": 2
   },
   "confirmado": true,
   "ganador": 1
@@ -11788,68 +10592,6 @@
   },
   "confirmado": true,
   "ganador": 1
- },
- "215937": {
-  "id": 215937,
-  "tour": "wta_doubles",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-06T10:10:00Z",
-  "j1": {
-   "id": 1425,
-   "nombre": "Jesika Maleckova / Miriam Skoch",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "cze"
-   ]
-  },
-  "j2": {
-   "id": 26829,
-   "nombre": "Gibson / Inglis",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "aus",
-    "aus"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T19:45:20.385Z",
-  "torneoClave": "wta|Hong Kong",
-  "tier": null,
-  "importante": false,
-  "torneoId": "8694",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4
-    ],
-    [
-     5
-    ]
-   ],
-   "sets": [
-    0,
-    0
-   ],
-   "puntos": [
-    "0",
-    "30"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null
  },
  "215938": {
   "id": 215938,
@@ -12270,62 +11012,6 @@
   },
   "confirmado": false,
   "ganador": null
- },
- "215977": {
-  "id": 215977,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-06T09:00:00Z",
-  "j1": {
-   "id": 63,
-   "nombre": "Sorana Cirstea",
-   "pais": "rou",
-   "ranking": 15
-  },
-  "j2": {
-   "id": 1905,
-   "nombre": "Alexandra Shubladze",
-   "pais": "rus",
-   "ranking": 136
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T19:45:20.385Z",
-  "torneoClave": "wta|Hong Kong",
-  "tier": null,
-  "importante": true,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     2,
-     3
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2
  },
  "215978": {
   "id": 215978,
@@ -13481,126 +12167,6 @@
   "confirmado": false,
   "ganador": null
  },
- "216184": {
-  "id": 216184,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-07T06:10:00Z",
-  "j1": {
-   "id": 973,
-   "nombre": "Claire Liu",
-   "pais": "usa",
-   "ranking": 102
-  },
-  "j2": {
-   "id": 1905,
-   "nombre": "Alexandra Shubladze",
-   "pais": "rus",
-   "ranking": 136
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T22:00:36.294Z",
-  "torneoClave": "wta|Hong Kong",
-  "tier": null,
-  "importante": true,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     6
-    ],
-    [
-     5,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
- },
- "216185": {
-  "id": 216185,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-07T12:15:00Z",
-  "j1": {
-   "id": 12022,
-   "nombre": "Hao-Ching Chan / Kato",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "tai",
-    "jpn"
-   ]
-  },
-  "j2": {
-   "id": 43996,
-   "nombre": "Hong Yi Cody Wong / Jiang",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "hkg",
-    "chn"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-08T00:00:38.305Z",
-  "torneoClave": "wta|Hong Kong",
-  "tier": null,
-  "importante": false,
-  "torneoId": "8694",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6
-    ],
-    [
-     1,
-     1
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
- },
  "216186": {
   "id": 216186,
   "tour": "challenger_doubles",
@@ -13902,64 +12468,6 @@
   },
   "confirmado": false,
   "ganador": null
- },
- "216234": {
-  "id": 216234,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-07T08:30:00Z",
-  "j1": {
-   "id": 62,
-   "nombre": "Alexandra Eala",
-   "pais": "phi",
-   "ranking": 17
-  },
-  "j2": {
-   "id": 509,
-   "nombre": "Maria Sakkari",
-   "pais": "gre",
-   "ranking": 30
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T22:00:36.173Z",
-  "torneoClave": "wta|Hong Kong",
-  "tier": null,
-  "importante": true,
-  "torneoId": "2241",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     3,
-     6
-    ],
-    [
-     5,
-     6,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
  },
  "216235": {
   "id": 216235,
@@ -18897,36 +17405,6 @@
   "tier": null,
   "importante": false
  },
- "216454": {
-  "id": 216454,
-  "tour": "wta",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Final",
-  "rondaCod": "F",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-08T08:00:00Z",
-  "j1": {
-   "id": 973,
-   "nombre": "Claire Liu",
-   "pais": "usa",
-   "ranking": 102
-  },
-  "j2": {
-   "id": 62,
-   "nombre": "Alexandra Eala",
-   "pais": "phi",
-   "ranking": 17
-  },
-  "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-08T00:00:37.542Z",
-  "torneoClave": "wta|Hong Kong",
-  "tier": null,
-  "importante": true
- },
  "216455": {
   "id": 216455,
   "tour": "wta_doubles",
@@ -20142,44 +18620,6 @@
   },
   "confirmado": false,
   "ganador": null
- },
- "216487": {
-  "id": 216487,
-  "tour": "wta_doubles",
-  "torneo": "Hong Kong",
-  "ronda": "WTA Hong Kong - Final",
-  "rondaCod": "F",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-08T05:30:00Z",
-  "j1": {
-   "id": 26829,
-   "nombre": "Gibson/ Inglis",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "aus",
-    "aus"
-   ]
-  },
-  "j2": {
-   "id": 12022,
-   "nombre": "Chan H-/Kato",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "jpn"
-   ]
-  },
-  "dobles": true,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-08T00:00:37.542Z",
-  "torneoClave": "wta|Hong Kong",
-  "tier": null,
-  "importante": true
  },
  "216489": {
   "id": 216489,
@@ -49107,7 +47547,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-18T07:45:26.431Z",
   "torneoClave": "challenger|Kobe",
@@ -49196,7 +47636,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T07:45:26.431Z",
+  "visto": "2026-11-18T08:15:31.008Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false,
@@ -49204,48 +47644,50 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T07:45:18.793072Z",
+   "accepted_at": "2026-11-18T08:15:22.676026Z",
    "age_seconds": 7,
    "changing_sources_count": 2,
-   "corroborated": true,
-   "corroborated_age_seconds": 7,
-   "deciding_match_tiebreak_next": false,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": true,
    "deciding_set": {
-    "basis": "inferred",
+    "basis": "confirmed",
     "rule": "match_tiebreak"
    },
    "games": [
     [
      6,
-     3
+     4,
+     9
     ],
     [
      2,
-     3
+     6,
+     8
     ]
    ],
-   "is_tiebreak": false,
+   "is_tiebreak": true,
    "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "15",
-    "0"
+    "9",
+    "8"
    ],
-   "received_at": "2026-11-18T07:45:18.530376Z",
-   "sequence": 78,
-   "server": 1,
+   "received_at": "2026-11-18T08:15:22.455158Z",
+   "sequence": 141,
+   "server": 2,
    "sets": [
     1,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T07:45:18.793071Z",
+   "timestamp": "2026-11-18T08:15:22.676022Z",
    "puntos": [
-    "15",
-    "0"
+    "9",
+    "8"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
