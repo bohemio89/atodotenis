@@ -30781,26 +30781,86 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T19:30:00Z",
+  "horario": "2026-11-18T19:40:00Z",
   "j1": {
-   "id": 652,
-   "nombre": "Flavio Cobolli",
-   "pais": "ita",
-   "ranking": 6
-  },
-  "j2": {
    "id": 9,
    "nombre": "Frances Tiafoe",
    "pais": "usa",
    "ranking": 8
   },
+  "j2": {
+   "id": 652,
+   "nombre": "Flavio Cobolli",
+   "pais": "ita",
+   "ranking": 6
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-18T16:00:41.079Z",
+  "visto": "2026-11-18T23:00:41.792Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
-  "importante": true
+  "importante": true,
+  "torneoId": "2794",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-18T21:12:36.248818Z",
+   "age_seconds": 6485,
+   "changing_sources_count": 0,
+   "corroborated": true,
+   "corroborated_age_seconds": 6479,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     7,
+     6
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6479,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-18T21:12:35.036991Z",
+   "sequence": 126,
+   "server": 2,
+   "sets": [
+    2,
+    0
+   ],
+   "sources_count": 0,
+   "stale": false,
+   "tiebreaks": [
+    {
+     "p1": 8,
+     "p2": 6
+    },
+    null
+   ],
+   "tiebreaks_source": [
+    "summary",
+    null
+   ],
+   "timestamp": "2026-11-18T21:12:36.248811Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "219746": {
   "id": 219746,
@@ -61921,7 +61981,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T22:30:42.588Z",
+  "visto": "2026-11-18T23:00:41.594Z",
   "torneoClave": "challenger|Champaign, USA",
   "tier": null,
   "importante": false,
@@ -61929,11 +61989,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T22:30:21.499946Z",
-   "age_seconds": 21,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-18T22:59:49.738350Z",
+   "age_seconds": 50,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -61941,32 +62001,34 @@
    },
    "games": [
     [
-     5
+     7,
+     0
     ],
     [
-     5
+     6,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
     "40",
-    "30"
+    "40"
    ],
-   "received_at": "2026-11-18T22:30:21.330947Z",
-   "sequence": 81,
+   "received_at": "2026-11-18T22:59:49.582217Z",
+   "sequence": 119,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T22:30:39.859333Z",
+   "timestamp": "2026-11-18T23:00:21.110638Z",
    "puntos": [
     "40",
-    "30"
+    "40"
    ],
    "saca": 1
   },
@@ -62400,33 +62462,80 @@
  },
  "222466": {
   "id": 222466,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Colina",
   "ronda": "Colina - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-18T22:30:00Z",
+  "horario": "2026-11-18T22:45:00Z",
   "j1": {
-   "id": 12164,
-   "nombre": "Ariana Geerlings Martinez",
-   "pais": "esp",
-   "ranking": 299
-  },
-  "j2": {
    "id": 680,
    "nombre": "Laura Samson",
    "pais": "cze",
    "ranking": 107
   },
+  "j2": {
+   "id": 12164,
+   "nombre": "Ariana Geerlings Martinez",
+   "pais": "esp",
+   "ranking": 296
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T22:00:40.905Z",
-  "torneoClave": "challenger_women|Colina",
+  "visto": "2026-11-18T23:00:41.594Z",
+  "torneoClave": "challenger|Colina",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "8223",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-18T22:56:26.430985Z",
+   "age_seconds": 253,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-18T22:56:26.013793Z",
+   "sequence": 2,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": true,
+   "timestamp": "2026-11-18T23:00:36.496217Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222471": {
   "id": 222471,
@@ -62483,7 +62592,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T22:30:42.588Z",
+  "visto": "2026-11-18T23:00:41.594Z",
   "torneoClave": "challenger|Montevideo",
   "tier": null,
   "importante": false,
@@ -62491,11 +62600,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T22:29:27.185441Z",
-   "age_seconds": 75,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-18T23:00:20.499654Z",
+   "age_seconds": 19,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 6,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -62503,34 +62612,36 @@
    },
    "games": [
     [
+     2,
      1
     ],
     [
-     4
+     6,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "40",
+    "40"
    ],
-   "received_at": "2026-11-18T22:29:26.755934Z",
-   "sequence": 40,
-   "server": 1,
+   "received_at": "2026-11-18T23:00:20.345229Z",
+   "sequence": 80,
+   "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 1,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-18T22:29:37.168691Z",
+   "timestamp": "2026-11-18T23:00:31.016402Z",
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -62704,7 +62815,7 @@
    "ranking": 663
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-18T22:30:42.588Z",
   "torneoClave": "challenger|Champaign, USA",
@@ -64250,7 +64361,7 @@
     "and"
    ]
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-18T22:30:19.870491Z",
