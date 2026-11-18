@@ -7,5 +7,8 @@ jobs:
   prueba:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          for id in 2268828450 2268826684 2268833292 2268833850 2305603116 2305603096 2295291532 2295291540; do echo "OE $id $(curl -s https://embed.gettyimages.com/oembed?url=https%3A%2F%2Fgty.im%2F$id | head -c 900)"; done
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node media/oembed.mjs 2268828450 2268826684 2268833292 2268833850 2268838637 2305603116 2305603096 2295291532 2295291540
