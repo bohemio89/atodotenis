@@ -49109,7 +49109,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T07:15:35.800Z",
+  "visto": "2026-11-18T07:45:26.431Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false,
@@ -49117,7 +49117,7 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T07:15:31.992085Z",
+   "accepted_at": "2026-11-18T07:45:23.280634Z",
    "age_seconds": 3,
    "changing_sources_count": 2,
    "corroborated": true,
@@ -49130,35 +49130,35 @@
    "games": [
     [
      6,
-     0
+     5
     ],
     [
      7,
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
    "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "40",
-    "30"
+    "15",
+    "0"
    ],
-   "received_at": "2026-11-18T07:15:31.270089Z",
-   "sequence": 86,
-   "server": 1,
+   "received_at": "2026-11-18T07:45:22.849720Z",
+   "sequence": 134,
+   "server": 2,
    "sets": [
     0,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T07:15:31.992081Z",
+   "timestamp": "2026-11-18T07:45:23.280628Z",
    "puntos": [
-    "40",
-    "30"
+    "15",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -49196,7 +49196,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T07:15:35.800Z",
+  "visto": "2026-11-18T07:45:26.431Z",
   "torneoClave": "challenger|Kobe",
   "tier": null,
   "importante": false,
@@ -49204,11 +49204,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T07:15:15.301307Z",
-   "age_seconds": 19,
+   "accepted_at": "2026-11-18T07:45:18.793072Z",
+   "age_seconds": 7,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 6,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -49216,31 +49216,33 @@
    },
    "games": [
     [
-     4
+     6,
+     3
     ],
     [
-     2
+     2,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "0",
+    "15",
     "0"
    ],
-   "received_at": "2026-11-18T07:15:15.171478Z",
-   "sequence": 34,
+   "received_at": "2026-11-18T07:45:18.530376Z",
+   "sequence": 78,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T07:15:31.779723Z",
+   "timestamp": "2026-11-18T07:45:18.793071Z",
    "puntos": [
-    "0",
+    "15",
     "0"
    ],
    "saca": 1
