@@ -50721,7 +50721,7 @@
    "ranking": 1068
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-18T22:00:40.596Z",
   "torneoClave": "challenger|Drummondville",
@@ -61899,8 +61899,8 @@
  "222400": {
   "id": 222400,
   "tour": "challenger",
-  "torneo": "Champaign",
-  "ronda": "Champaign - 1/8-finals",
+  "torneo": "Champaign, USA",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
@@ -61921,19 +61921,19 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T22:00:40.596Z",
-  "torneoClave": "challenger|Champaign",
+  "visto": "2026-11-18T22:30:42.588Z",
+  "torneoClave": "challenger|Champaign, USA",
   "tier": null,
   "importante": false,
   "torneoId": "2477",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T22:00:16.260821Z",
-   "age_seconds": 23,
+   "accepted_at": "2026-11-18T22:30:21.499946Z",
+   "age_seconds": 21,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -61941,21 +61941,21 @@
    },
    "games": [
     [
-     2
+     5
     ],
     [
-     2
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
     "40",
-    "40"
+    "30"
    ],
-   "received_at": "2026-11-18T22:00:15.932311Z",
-   "sequence": 34,
+   "received_at": "2026-11-18T22:30:21.330947Z",
+   "sequence": 81,
    "server": 1,
    "sets": [
     0,
@@ -61963,10 +61963,10 @@
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-18T22:00:28.118624Z",
+   "timestamp": "2026-11-18T22:30:39.859333Z",
    "puntos": [
     "40",
-    "40"
+    "30"
    ],
    "saca": 1
   },
@@ -62467,12 +62467,12 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T21:00:00Z",
+  "horario": "2026-11-18T22:00:00Z",
   "j1": {
    "id": 622,
    "nombre": "Genaro Alberto Olivieri",
    "pais": "arg",
-   "ranking": 244
+   "ranking": 240
   },
   "j2": {
    "id": 1140,
@@ -62481,12 +62481,59 @@
    "ranking": 200
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T16:00:41.283Z",
+  "visto": "2026-11-18T22:30:42.588Z",
   "torneoClave": "challenger|Montevideo",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "2532",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-18T22:29:27.185441Z",
+   "age_seconds": 75,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-18T22:29:26.755934Z",
+   "sequence": 40,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": false,
+   "timestamp": "2026-11-18T22:29:37.168691Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222473": {
   "id": 222473,
@@ -62637,8 +62684,8 @@
  "222504": {
   "id": 222504,
   "tour": "challenger",
-  "torneo": "Champaign",
-  "ronda": "Champaign - 1/8-finals",
+  "torneo": "Champaign, USA",
+  "ronda": "Round of 16",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
@@ -62659,17 +62706,17 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T22:00:40.596Z",
-  "torneoClave": "challenger|Champaign",
+  "visto": "2026-11-18T22:30:42.588Z",
+  "torneoClave": "challenger|Champaign, USA",
   "tier": null,
   "importante": false,
   "torneoId": "2477",
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T22:00:10.899004Z",
+   "accepted_at": "2026-11-18T22:30:14.276805Z",
    "age_seconds": 28,
-   "changing_sources_count": 2,
+   "changing_sources_count": 1,
    "corroborated": true,
    "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
@@ -62680,33 +62727,33 @@
    "games": [
     [
      3,
-     0
+     2
     ],
     [
      6,
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
    "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-18T22:00:10.370519Z",
-   "sequence": 57,
+   "received_at": "2026-11-18T22:30:13.818954Z",
+   "sequence": 90,
    "server": 1,
    "sets": [
     0,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T22:00:36.214521Z",
+   "timestamp": "2026-11-18T22:30:37.569795Z",
    "puntos": [
-    "30",
-    "30"
+    "15",
+    "15"
    ],
    "saca": 1
   },
@@ -64117,7 +64164,7 @@
     null
    ]
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-18T22:00:19.825725Z",
@@ -64173,7 +64220,7 @@
   "id": 222795,
   "tour": "challenger",
   "tier": null,
-  "torneo": "Colina",
+  "torneo": "Colina, Chile, Doubles",
   "torneoId": "8224",
   "ronda": "Quarterfinals",
   "rondaCod": "QF",
@@ -64206,11 +64253,11 @@
   "estado": "en_vivo",
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T21:59:24.784160Z",
-   "age_seconds": 74,
+   "accepted_at": "2026-11-18T22:30:19.870491Z",
+   "age_seconds": 22,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 8,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -64219,40 +64266,40 @@
    "games": [
     [
      7,
-     0
+     4
     ],
     [
      5,
-     1
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "30",
+    "15"
    ],
-   "received_at": "2026-11-18T21:59:24.498911Z",
-   "sequence": 37,
-   "server": 2,
+   "received_at": "2026-11-18T22:30:19.647723Z",
+   "sequence": 80,
+   "server": 1,
    "sets": [
     1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T22:00:32.823413Z",
+   "timestamp": "2026-11-18T22:30:36.469103Z",
    "puntos": [
-    "0",
-    "0"
+    "30",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-18T22:00:40.596Z",
-  "torneoClave": "challenger|Colina",
+  "visto": "2026-11-18T22:30:42.588Z",
+  "torneoClave": "challenger|Colina, Chile, Doubles",
   "importante": false
  },
  "null": {
