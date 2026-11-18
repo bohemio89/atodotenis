@@ -37163,7 +37163,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T10:35:00Z",
+  "horario": "2026-11-18T10:40:00Z",
   "j1": {
    "id": 1340,
    "nombre": "Andrea Vavassori / Simone Bolelli",
@@ -37187,7 +37187,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T10:45:35.056Z",
+  "visto": "2026-11-18T11:15:25.215Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false,
@@ -37195,11 +37195,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T10:45:19.894318Z",
-   "age_seconds": 15,
+   "accepted_at": "2026-11-18T11:15:12.092439Z",
+   "age_seconds": 13,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 13,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -37207,29 +37207,31 @@
    },
    "games": [
     [
+     3,
      0
     ],
     [
-     1
+     6,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
     "30",
     "0"
    ],
-   "received_at": "2026-11-18T10:45:19.337394Z",
-   "sequence": 9,
+   "received_at": "2026-11-18T11:15:11.329203Z",
+   "sequence": 50,
    "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-18T10:45:28.965354Z",
+   "timestamp": "2026-11-18T11:15:12.092437Z",
    "puntos": [
     "30",
     "0"
@@ -49451,7 +49453,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T10:45:35.056Z",
+  "visto": "2026-11-18T11:15:25.215Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": null,
   "importante": false,
@@ -49459,11 +49461,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T10:45:02.170763Z",
-   "age_seconds": 32,
+   "accepted_at": "2026-11-18T11:15:14.877658Z",
+   "age_seconds": 10,
    "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -49471,34 +49473,36 @@
    },
    "games": [
     [
-     6
+     7,
+     3
     ],
     [
-     6
+     6,
+     4
     ]
    ],
-   "is_tiebreak": true,
-   "observed_age_seconds": 0,
+   "is_tiebreak": false,
+   "observed_age_seconds": 10,
    "origin": "observed",
    "points": [
-    "3",
-    "3"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-18T10:44:59.908398Z",
-   "sequence": 59,
-   "server": 2,
+   "received_at": "2026-11-18T11:15:13.992166Z",
+   "sequence": 106,
+   "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T10:45:02.170755Z",
+   "timestamp": "2026-11-18T11:15:14.877655Z",
    "puntos": [
-    "3",
-    "3"
+    "15",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -49574,7 +49578,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T10:45:35.056Z",
+  "visto": "2026-11-18T11:15:25.215Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": null,
   "importante": false,
@@ -49582,8 +49586,8 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T10:45:34.303328Z",
-   "age_seconds": 0,
+   "accepted_at": "2026-11-18T11:15:23.579882Z",
+   "age_seconds": 1,
    "changing_sources_count": 1,
    "corroborated": false,
    "corroborated_age_seconds": null,
@@ -49591,34 +49595,36 @@
    "deciding_set": null,
    "games": [
     [
-     5
+     7,
+     3
     ],
     [
-     4
+     6,
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "15",
+    "0",
     "40"
    ],
-   "received_at": "2026-11-18T10:45:33.238226Z",
-   "sequence": 56,
-   "server": 1,
+   "received_at": "2026-11-18T11:15:19.072656Z",
+   "sequence": 102,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T10:45:34.303325Z",
+   "timestamp": "2026-11-18T11:15:23.579877Z",
    "puntos": [
-    "15",
+    "0",
     "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
