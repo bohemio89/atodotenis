@@ -119,6 +119,29 @@ function declaracionNota(n) {
   return `<blockquote class="decl"><p>«${esc(d.texto)}»</p><footer>${esc(d.jugador)}, en declaraciones publicadas por ${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.fuente)}</a>` : esc(d.fuente)}</footer></blockquote>`;
 }
 // Highlights oficiales de YouTube: miniatura + botón; el reproductor (sin cookies) carga solo al tocar
+// ---------- Bloques visuales dentro de la nota (gráficos con datos, fotos extra, posteos) ----------
+// n.bloques = [{ despuesDe: <índice de párrafo>, tipo: 'datos'|'barras'|'linea'|'tarjetas'|'getty'|'instagram', ... }]
+// Los textos pueden ser { es, en } para que la versión en inglés muestre lo mismo traducido.
+const tx = (v) => (v && typeof v === 'object' && !Array.isArray(v)) ? (EN ? (v.en ?? v.es) : (v.es ?? v.en)) : (v ?? '');
+function bloqueNota(b) {
+  const tit = b.titulo ? `<h3 class="bq-tit">${esc(tx(b.titulo))}</h3>` : '';
+  const pie = b.fuente ? `<p class="bq-fuente">${EN ? 'Source' : 'Fuente'}: ${esc(tx(b.fuente))}</p>` : '';
+  if (b.tipo === 'datos') return `<section class="bq bq-datos">${tit}<div class="bq-grid">${b.items.map((x) => `<div class="bq-dato"><strong>${esc(tx(x.valor))}</strong><span>${esc(tx(x.texto))}</span></div>`).join('')}</div>${pie}</section>`;
+  if (b.tipo === 'barras') {
+    const max = Math.max(...b.items.map((x) => +x.valor || 0)) || 1;
+    return `<section class="bq bq-barras">${tit}${b.items.map((x) => `<div class="bq-fila${x.destacado ? ' dest' : ''}"><span class="bq-nom">${esc(tx(x.nombre))}</span><span class="bq-barra"><i style="width:${Math.max(4, Math.round((+x.valor || 0) / max * 100))}%"></i></span><span class="bq-val">${esc(tx(x.etiqueta ?? Number(x.valor).toLocaleString(EN ? 'en-US' : 'es-AR')))}</span></div>`).join('')}${pie}</section>`;
+  }
+  if (b.tipo === 'linea') return `<section class="bq bq-linea">${tit}<ol>${b.items.map((x) => `<li class="${x.estado || ''}"><span class="bq-cuando">${esc(tx(x.cuando))}</span><span class="bq-que">${esc(tx(x.que))}</span></li>`).join('')}</ol>${pie}</section>`;
+  if (b.tipo === 'tarjetas') return `<section class="bq bq-tarjetas">${tit}<div class="bq-grid">${b.items.map((x) => `<div class="bq-tarj"><span class="bq-sup">${esc(tx(x.arriba))}</span><strong>${esc(tx(x.titulo))}</strong><span>${esc(tx(x.texto))}</span></div>`).join('')}</div>${pie}</section>`;
+  if (b.tipo === 'getty' && gettySrc(b)) { const w = b.w || 594, h = b.h || 396; return `<figure class="getty bq-foto"><div><iframe src="${esc(gettySrc(b))}" title="${EN ? 'Getty Images photo' : 'Foto de Getty Images'}" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="width:min(100%, ${w}px);aspect-ratio:${w}/${h + Math.round(w * 40 / 594)};display:block;margin:0 auto;border:0;background:transparent"></iframe></div>${b.epigrafe ? `<figcaption>${esc(tx(b.epigrafe))}</figcaption>` : ''}</figure>`; }
+  if (b.tipo === 'instagram') {
+    const cod = String(b.url || '').match(/instagram\.com\/(?:[\w.]+\/)?(?:p|reel)\/([\w-]+)/)?.[1];
+    if (!cod) return '';
+    return `<figure class="bq-ig"><iframe src="https://www.instagram.com/p/${esc(cod)}/embed/captioned/" title="${EN ? 'Instagram post' : 'Posteo de Instagram'}" loading="lazy" scrolling="no" frameborder="0" allowtransparency="true"></iframe>${b.epigrafe ? `<figcaption>${esc(tx(b.epigrafe))}</figcaption>` : ''}</figure>`;
+  }
+  return '';
+}
+
 function videoNota(n) {
   const id = n.video?.youtube;
   if (!id || !/^[\w-]{6,20}$/.test(id)) return '';
@@ -547,7 +570,7 @@ for (const n of notas) {
 <div class="firma"><time datetime="${esc(n.fecha)}">${fechaArg(n.fecha, { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</time></div>
 ${gettySrc(n.getty) ? `<figure class="getty"><div><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="${(() => { const w = n.getty?.w || 594, h = n.getty?.h || 396; return `width:min(100%, ${w}px);aspect-ratio:${w}/${h + Math.round(w * 40 / 594)};display:block;margin:0 auto;border:0;background:transparent`; })()}"></iframe></div><figcaption>Crédito de la imagen: Getty Images</figcaption></figure>`
   : `<figure><div class="img">${imagenNota(n, false)}</div>${n.imagen?.credito ? `<figcaption>Crédito de la imagen: <a href="${esc(n.imagen.enlace)}" rel="noopener">${esc(n.imagen.credito)}</a>${n.imagen.fechaFoto ? ` · ${EN ? 'photo from' : 'foto del'} ${esc(fechaArg(n.imagen.fechaFoto, { day: 'numeric', month: 'long', year: 'numeric' }))}` : ''}${n.imagen.licenciaUrl ? ` · <a href="${esc(n.imagen.licenciaUrl)}" rel="noopener license">licencia</a>` : ''}</figcaption>` : ''}</figure>`}
-<div class="cuerpo">${n.cuerpo.map((x, i) => `<p>${esc(x)}</p>${i === 1 ? declaracionNota(n) : ''}${(n.galeria || []).filter((g) => g.despuesDe === i).map((g) => `<figure style="margin:26px auto;max-width:560px"><img src="${esc(g.url)}" alt="${esc(g.alt || '')}" loading="lazy" style="width:100%;height:auto;border-radius:8px">${g.epigrafe ? `<figcaption>${esc(g.epigrafe)}</figcaption>` : ''}</figure>`).join('')}`).join('')}</div>${videoNota(n)}${ficha}
+<div class="cuerpo">${n.cuerpo.map((x, i) => `<p>${esc(x)}</p>${i === 1 ? declaracionNota(n) : ''}${(n.bloques || []).filter((b) => b.despuesDe === i).map(bloqueNota).join('')}${(n.galeria || []).filter((g) => g.despuesDe === i).map((g) => `<figure style="margin:26px auto;max-width:560px"><img src="${esc(g.url)}" alt="${esc(g.alt || '')}" loading="lazy" style="width:100%;height:auto;border-radius:8px">${g.epigrafe ? `<figcaption>${esc(g.epigrafe)}</figcaption>` : ''}</figure>`).join('')}`).join('')}</div>${videoNota(n)}${ficha}
 ${relacionadas.length ? `<div class="sec-tit sec"><h2>Más noticias</h2></div><div class="lista-notas">${relacionadas.map(cardNota).join('')}</div>` : ''}
 </article>`
   }));

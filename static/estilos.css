@@ -455,3 +455,31 @@ body{background:#0F1317}
 .idioma a:hover{color:#fff}
 .idioma a.on{background:rgba(255,255,255,.14);color:#fff}
 @media (max-width:640px){.idioma{height:30px}.idioma a{padding:0 8px;font-size:12px}.cab-lado.der .pill{display:none}}
+/* Bloques visuales dentro de las notas */
+.bq{margin:28px 0;padding:20px 22px;background:var(--panel);border:1px solid var(--linea);border-radius:10px}
+.bq-tit{font:800 15px/1.2 Montserrat,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--lima);margin:0 0 14px}
+.bq-fuente{font-size:12px;color:var(--tenue);margin:12px 0 0}
+.bq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.bq-dato{background:var(--panel2);border-radius:8px;padding:14px 12px;text-align:center}
+.bq-dato strong{display:block;font:900 34px/1 Montserrat,sans-serif;color:var(--lima)}
+.bq-dato span{display:block;font-size:13px;color:var(--suave);margin-top:6px;line-height:1.3}
+.bq-fila{display:grid;grid-template-columns:minmax(90px,30%) 1fr auto;align-items:center;gap:10px;margin:8px 0;font-size:14px}
+.bq-nom{color:var(--texto);font-weight:600}
+.bq-barra{height:14px;background:var(--panel2);border-radius:7px;overflow:hidden}
+.bq-barra i{display:block;height:100%;background:#5d6b78;border-radius:7px}
+.bq-fila.dest .bq-barra i{background:var(--lima)}
+.bq-val{font:700 14px Montserrat,sans-serif;color:var(--suave);min-width:44px;text-align:right}
+.bq-linea ol{list-style:none;margin:0;padding:0 0 0 16px;border-left:2px solid var(--linea)}
+.bq-linea li{position:relative;margin:0 0 14px;padding-left:10px}
+.bq-linea li::before{content:"";position:absolute;left:-23px;top:5px;width:12px;height:12px;border-radius:50%;background:#5d6b78}
+.bq-linea li.gano::before{background:var(--lima)}
+.bq-linea li.perdio::before{background:#e5484d}
+.bq-cuando{display:block;font:700 12px Montserrat,sans-serif;color:var(--tenue);text-transform:uppercase;letter-spacing:.04em}
+.bq-que{display:block;font-size:15px;color:var(--texto);line-height:1.45}
+.bq-tarj{background:var(--panel2);border-radius:8px;padding:14px;border-top:3px solid var(--lima)}
+.bq-tarj .bq-sup{display:block;font-size:12px;color:var(--tenue);text-transform:uppercase;letter-spacing:.04em}
+.bq-tarj strong{display:block;font:800 18px/1.2 Montserrat,sans-serif;margin:6px 0 4px}
+.bq-tarj span:last-child{font-size:13px;color:var(--suave)}
+.bq-foto{margin:28px 0}
+.bq-ig{margin:28px auto;max-width:540px}
+.bq-ig iframe{width:100%;height:760px;border:0;border-radius:10px;background:#fff}
