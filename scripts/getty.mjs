@@ -13,7 +13,9 @@ const ape = (s) => norm(String(s).trim().split(/\s+/).slice(-1)[0]);
 const forzar = String(process.env.SLUGS || '').split(',').map((s) => s.trim()).filter(Boolean);
 
 const pendientes = fs.readdirSync(DIR).filter((f) => f.endsWith('.json')).map((f) => ({ f, n: JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')) }))
-  .filter(({ n }) => forzar.length ? forzar.includes(n.slug) : (n.estado === 'publicada' && !n.getty && !n.manual && Date.now() - new Date(n.fecha).getTime() < DIAS * 864e5))
+  .filter(({ n }) => forzar.length ? forzar.includes(n.slug) : (n.estado === 'publicada' && !n.getty && !n.manual && Date.now() - new Date(n.fecha).getTime() < DIAS * 864e5
+      // si no hubo foto buena, se reintenta cada 2 horas y hasta 8 veces (cuida el cupo gratuito)
+      && (n.gettyIntentos?.veces || 0) < 8 && Date.now() - new Date(n.gettyIntentos?.ultimo || 0).getTime() > 2 * 3600e3))
   .filter(({ n }) => n.resultado?.ganador?.nombre || n.jugadores?.length)
   .sort((a, b) => new Date(b.n.fecha) - new Date(a.n.fecha)).slice(0, MAX);
 
@@ -85,8 +87,9 @@ async function embed(id) {
 }
 
 for (const { f, n } of pendientes) {
-  const ganador = n.resultado?.ganador?.nombre || n.jugadores[0];
-  const perdedor = n.resultado?.perdedor?.nombre || n.jugadores?.[1];
+  const uno = (x) => String(x || '').split('/')[0].trim(); // en dobles, el primer jugador de cada pareja
+  const ganador = uno(n.resultado?.ganador?.nombre || n.jugadores[0]);
+  const perdedor = uno(n.resultado?.perdedor?.nombre || n.jugadores?.[1]);
   let elegida = null;
   try {
     for (const frase of [`${ganador} ${perdedor || ''}`.trim(), `${ganador} ${lugar(n)}`]) {
@@ -102,8 +105,13 @@ for (const { f, n } of pendientes) {
       if (elegida && !elegida.vertical) break;
     }
   } catch (e) { log('Getty: búsqueda no disponible,', e.message, '- se reintenta en la próxima corrida'); break; }
-  if (!elegida) { log('Getty: todavía no hay una foto buena del ganador para', n.slug, '- se reintenta luego'); continue; }
-  n.getty = elegida.g;
+  if (!elegida) {
+    n.gettyIntentos = { veces: (n.gettyIntentos?.veces || 0) + 1, ultimo: new Date().toISOString() };
+    fs.writeFileSync(path.join(DIR, f), JSON.stringify(n, null, 2) + '\n');
+    log('Getty: todavía no hay una foto buena del ganador para', n.slug, '- se reintenta en 2 horas');
+    continue;
+  }
+  n.getty = elegida.g; delete n.gettyIntentos;
   fs.writeFileSync(path.join(DIR, f), JSON.stringify(n, null, 2) + '\n');
   log(`Getty: ${n.slug} → ${elegida.id}: ${elegida.caption.slice(0, 110)}`);
 }
