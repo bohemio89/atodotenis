@@ -23,7 +23,7 @@ function fechaFoto(meta) {
   return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +(m[3] || 1))) : null;
 }
 
-async function buscar(jugador, fechaNota) {
+async function buscar(jugador, fechaNota, meses = MESES_MAX) {
   // Varias búsquedas: por año (para que las fotos recientes no queden tapadas por las viejas) y general
   const y = new Date(fechaNota).getFullYear();
   const paginas = {};
@@ -38,7 +38,7 @@ async function buscar(jugador, fechaNota) {
     Object.assign(paginas, jj.query?.pages || {});
   }
   const j = { query: { pages: paginas } };
-  const limite = new Date(fechaNota); limite.setMonth(limite.getMonth() - MESES_MAX);
+  const limite = new Date(fechaNota); limite.setMonth(limite.getMonth() - meses);
   const apellido = norm(jugador).split(' ').pop();
   const candidatas = [];
   for (const p of Object.values(j.query?.pages || {})) {
@@ -109,8 +109,14 @@ async function main() {
     const p = partidos[n.partidoId];
     const jugadores = n.jugadores || (p ? [p.ganador === 2 ? p.j2 : p.j1, p.ganador === 2 ? p.j1 : p.j2].filter(Boolean).map((j) => j.nombre) : []);
     let foto = null;
-    for (const nombre of jugadores.filter((x) => x && !x.includes('/'))) {
-      try { foto = elegir(await buscar(nombre, n.fechaPartido || n.fecha), usosRecientes()); } catch (e) { log('Commons falló:', e.message); }
+    // La foto es del protagonista de la nota (el ganador). Primero fotos recientes, después de los últimos 5 años;
+    // el rival solo como último recurso, para que la nota nunca quede sin foto.
+    const ganador = (n.resultado?.ganador?.nombre || jugadores[0] || '').split('/')[0].trim();
+    const otros = jugadores.map((x) => String(x || '').split('/')[0].trim()).filter((x) => x && x !== ganador);
+    const intentos = [[ganador, MESES_MAX], [ganador, 60], ...(anterior ? [] : otros.map((o) => [o, MESES_MAX]))];
+    for (const [nombre, meses] of intentos) {
+      if (!nombre) continue;
+      try { foto = elegir(await buscar(nombre, n.fechaPartido || n.fecha, meses), usosRecientes()); } catch (e) { log('Commons falló:', e.message); }
       if (foto) { foto.jugador = nombre; break; }
       await new Promise((s) => setTimeout(s, 1000));
     }
