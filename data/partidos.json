@@ -37187,7 +37187,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T11:15:25.215Z",
+  "visto": "2026-11-18T11:45:26.775Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": false,
@@ -37195,11 +37195,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T11:15:12.092439Z",
-   "age_seconds": 13,
+   "accepted_at": "2026-11-18T11:44:26.519973Z",
+   "age_seconds": 59,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -37208,35 +37208,35 @@
    "games": [
     [
      3,
-     0
+     4
     ],
     [
      6,
-     0
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "30",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-18T11:15:11.329203Z",
-   "sequence": 50,
-   "server": 1,
+   "received_at": "2026-11-18T11:44:25.568431Z",
+   "sequence": 94,
+   "server": 2,
    "sets": [
     0,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T11:15:12.092437Z",
+   "timestamp": "2026-11-18T11:44:52.050962Z",
    "puntos": [
-    "30",
+    "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -49453,7 +49453,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T11:15:25.215Z",
+  "visto": "2026-11-18T11:45:26.774Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": null,
   "importante": false,
@@ -49461,46 +49461,48 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T11:15:14.877658Z",
-   "age_seconds": 10,
+   "accepted_at": "2026-11-18T11:43:36.823234Z",
+   "age_seconds": 109,
    "changing_sources_count": 1,
    "corroborated": false,
    "corroborated_age_seconds": null,
-   "deciding_match_tiebreak_next": false,
+   "deciding_match_tiebreak_next": true,
    "deciding_set": {
-    "basis": "inferred",
+    "basis": "confirmed",
     "rule": "match_tiebreak"
    },
    "games": [
     [
      7,
-     3
+     6,
+     6
     ],
     [
      6,
-     4
+     7,
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 10,
+   "observed_age_seconds": 98,
    "origin": "observed",
    "points": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-18T11:15:13.992166Z",
-   "sequence": 106,
+   "received_at": "2026-11-18T11:43:36.694050Z",
+   "sequence": 151,
    "server": 1,
    "sets": [
     1,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-18T11:15:14.877655Z",
+   "timestamp": "2026-11-18T11:43:47.614780Z",
    "puntos": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
    "saca": 1
   },
@@ -49576,7 +49578,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-18T11:15:25.215Z",
   "torneoClave": "challenger|Metz (France)",
@@ -52829,26 +52831,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T11:30:00Z",
+  "horario": "2026-11-18T11:35:00Z",
   "j1": {
    "id": 394,
    "nombre": "Daniil Glinka",
    "pais": "est",
-   "ranking": 163
+   "ranking": 205
   },
   "j2": {
    "id": 447,
    "nombre": "Nishesh Basavareddy",
    "pais": "usa",
-   "ranking": 126
+   "ranking": 117
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T10:15:28.971Z",
+  "visto": "2026-11-18T11:45:26.775Z",
   "torneoClave": "challenger|Helsinki",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-18T11:45:16.087936Z",
+   "age_seconds": 9,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-18T11:45:15.629737Z",
+   "sequence": 7,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-18T11:45:25.163854Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "220433": {
   "id": 220433,
@@ -65089,7 +65138,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T11:30:00Z",
+  "horario": "2026-11-18T11:35:00Z",
   "j1": {
    "id": 105,
    "nombre": "Andrea Guerrieri",
@@ -65103,12 +65152,59 @@
    "ranking": 92
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T10:15:28.971Z",
+  "visto": "2026-11-18T11:45:26.775Z",
   "torneoClave": "challenger|Helsinki",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-18T11:45:06.459234Z",
+   "age_seconds": 19,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "40",
+    "0"
+   ],
+   "received_at": "2026-11-18T11:45:05.706968Z",
+   "sequence": 11,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-18T11:45:25.178716Z",
+   "puntos": [
+    "40",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "221880": {
   "id": 221880,
@@ -67209,12 +67305,12 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T11:30:00Z",
+  "horario": "2026-11-18T11:35:00Z",
   "j1": {
    "id": 89,
    "nombre": "Lorenzo Giustino",
    "pais": "ita",
-   "ranking": 289
+   "ranking": 286
   },
   "j2": {
    "id": 550,
@@ -67223,12 +67319,59 @@
    "ranking": 407
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T10:15:28.971Z",
+  "visto": "2026-11-18T11:45:26.775Z",
   "torneoClave": "challenger|Helsinki",
   "tier": null,
-  "importante": false
+  "importante": false,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-18T11:44:03.671137Z",
+   "age_seconds": 82,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "40",
+    "40"
+   ],
+   "received_at": "2026-11-18T11:44:03.183537Z",
+   "sequence": 8,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-18T11:45:25.133401Z",
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222179": {
   "id": 222179,
