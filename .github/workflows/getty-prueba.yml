@@ -9,13 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
-      - uses: actions/checkout@v4
-        with: { ref: media, path: m }
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - name: Probar fotos provisorias (sin Getty) en las notas de la última semana
+      - name: Nota de prueba con Gemini (no se publica)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PRUEBA_PARTIDOS: '219742'
         run: |
-          cp m/media/fotos-nuevo.mjs scripts/fotos.mjs
-          node -e "const fs=require('fs');for(const f of fs.readdirSync('content/notas').filter(x=>x.endsWith('.json'))){const p='content/notas/'+f;const n=JSON.parse(fs.readFileSync(p));if(Date.now()-new Date(n.fecha)<7*864e5){n.antes=n.imagen?.enlace||'-';delete n.getty;n.fotoBuscada=null;if(n.imagen)n.imagen.calidad=2;fs.writeFileSync(p,JSON.stringify(n))}}"
-          node scripts/fotos.mjs | tail -40
-          node -e "const fs=require('fs');for(const f of fs.readdirSync('content/notas').filter(x=>x.endsWith('.json'))){const n=JSON.parse(fs.readFileSync('content/notas/'+f));if(n.antes)console.log('RES',n.slug,'|',n.antes.split('File:')[1]||'-','=>',(n.imagen?.enlace||'SIN FOTO').split('File:')[1])}"
+          node scripts/articles.mjs
+          f=$(ls -t content/notas/*.json | head -1); node -e "const n=require('./'+process.argv[1]);console.log('RESULTADO',n.generadoCon,'|',n.titulo,'|',n.cuerpo.length,'párrafos');console.log(n.cuerpo.join('\n'))" "$f"
