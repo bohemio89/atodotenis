@@ -16,6 +16,6 @@ jobs:
       - name: Probar fotos provisorias (sin Getty) en las notas de la última semana
         run: |
           cp m/media/fotos-nuevo.mjs scripts/fotos.mjs
-          node -e "const fs=require('fs');for(const f of fs.readdirSync('content/notas')){const p='content/notas/'+f;const n=JSON.parse(fs.readFileSync(p));if(Date.now()-new Date(n.fecha)<7*864e5){n.antes=n.imagen?.enlace||'-';delete n.getty;n.fotoBuscada=null;if(n.imagen)n.imagen.calidad=2;fs.writeFileSync(p,JSON.stringify(n))}}"
+          node -e "const fs=require('fs');for(const f of fs.readdirSync('content/notas').filter(x=>x.endsWith('.json'))){const p='content/notas/'+f;const n=JSON.parse(fs.readFileSync(p));if(Date.now()-new Date(n.fecha)<7*864e5){n.antes=n.imagen?.enlace||'-';delete n.getty;n.fotoBuscada=null;if(n.imagen)n.imagen.calidad=2;fs.writeFileSync(p,JSON.stringify(n))}}"
           node scripts/fotos.mjs | tail -40
-          node -e "const fs=require('fs');for(const f of fs.readdirSync('content/notas')){const n=JSON.parse(fs.readFileSync('content/notas/'+f));if(n.antes)console.log('RES',n.slug,'|',n.antes.split('File:')[1]||'-','=>',(n.imagen?.enlace||'SIN FOTO').split('File:')[1])}"
+          node -e "const fs=require('fs');for(const f of fs.readdirSync('content/notas').filter(x=>x.endsWith('.json'))){const n=JSON.parse(fs.readFileSync('content/notas/'+f));if(n.antes)console.log('RES',n.slug,'|',n.antes.split('File:')[1]||'-','=>',(n.imagen?.enlace||'SIN FOTO').split('File:')[1])}"
