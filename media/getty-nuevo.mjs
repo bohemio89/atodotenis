@@ -93,8 +93,9 @@ for (const { f, n } of pendientes) {
       const lista = candidatas(await buscar(frase), n, ganador, perdedor);
       if (process.env.DEPURAR) log('Getty:', frase, '→', lista.slice(0, 3).map((x) => `${x.id}(${x.s})`).join(' '));
       // Entre las mejores, la primera apaisada (en las tarjetas de la portada una foto vertical queda recortada).
-      for (const c of lista.slice(0, 4)) {
+      for (const c of lista.slice(0, 12)) {
         const g = await embed(c.id).catch(() => null);
+        if (!g && process.env.DEPURAR) log('Getty: no se puede incrustar', c.id);
         if (g && g.w >= g.h) { elegida = { ...c, g }; break; }
         if (g && !elegida?.g) elegida = { ...c, g, vertical: true };
       }
