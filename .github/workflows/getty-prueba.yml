@@ -7,14 +7,8 @@ jobs:
   prueba:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with: { ref: main }
-      - uses: actions/setup-node@v4
-        with: { node-version: 22 }
-      - name: Nota de prueba con Gemini (no se publica)
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          PRUEBA_PARTIDOS: '219742'
-        run: |
-          node scripts/articles.mjs
-          f=$(ls -t content/notas/*.json | head -1); node -e "const n=require('./'+process.argv[1]);console.log('RESULTADO',n.generadoCon,'|',n.titulo,'|',n.cuerpo.length,'párrafos');console.log(n.cuerpo.join('\n'))" "$f"
+      - run: |
+          for id in 2268828450 2268826684 2268833292 2268833850 2305603116 2305603096 2295291532 2295291540; do printf "OE $id "; curl -s "https://embed.gettyimages.com/oembed?url=https%3A%2F%2Fgty.im%2F$id" | python3 -c "import json,sys,re
+          try:
+            d=json.load(sys.stdin); h=d.get('html',''); print('et='+re.search(r'et=([^&\"]+)',h).group(1),'sig='+re.search(r'sig=([^&\"]+)',h).group(1),'w=%s h=%s'%(d.get('width'),d.get('height')), d.get('title','')[:80])
+          except Exception as e: print('NO')"; done
