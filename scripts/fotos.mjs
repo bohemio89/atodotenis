@@ -23,7 +23,7 @@ function fechaFoto(meta) {
   return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +(m[3] || 1))) : null;
 }
 
-async function buscar(jugador, fechaNota) {
+async function buscar(jugador, fechaNota, meses = MESES_MAX) {
   // Varias búsquedas: por año (para que las fotos recientes no queden tapadas por las viejas) y general
   const y = new Date(fechaNota).getFullYear();
   const paginas = {};
@@ -38,7 +38,7 @@ async function buscar(jugador, fechaNota) {
     Object.assign(paginas, jj.query?.pages || {});
   }
   const j = { query: { pages: paginas } };
-  const limite = new Date(fechaNota); limite.setMonth(limite.getMonth() - MESES_MAX);
+  const limite = new Date(fechaNota); limite.setMonth(limite.getMonth() - meses);
   const apellido = norm(jugador).split(' ').pop();
   const candidatas = [];
   for (const p of Object.values(j.query?.pages || {})) {
@@ -51,6 +51,18 @@ async function buscar(jugador, fechaNota) {
     // El apellido tiene que estar en el NOMBRE DEL ARCHIVO: la descripción a veces menciona a otro jugador
     // (por ejemplo, la foto de un entrenador cuya descripción nombra a su jugadora).
     if (!norm(p.title).includes(apellido)) continue;
+    // Tiene que ser ESA persona y sola en la foto (pedido de Jonathan: "que siempre sea del tenista en cuestión"):
+    const archivo = norm(p.title).replace(/^file:/, '').replace(/\.(jpe?g|png|webp|tiff?)$/, '');
+    const palabras = norm(jugador).split(/\s+/), nombre = palabras[0];
+    const descripcion = norm(limpiar(meta.ImageDescription?.value) + ' ' + limpiar(meta.ObjectName?.value));
+    //  - el nombre de pila también aparece (en el archivo o la descripción): evita a otro con el mismo apellido
+    if (nombre !== apellido && !archivo.includes(nombre) && !descripcion.includes(nombre)) continue;
+    //  - el archivo no empieza con el apellido de otra persona (ej. "Sinner_Alcaraz_...")
+    const primera = archivo.split(/[^a-z0-9]+/)[0];
+    if (/^[a-z]{4,}$/.test(primera) && !palabras.includes(primera) && !['file', 'tennis', 'portrait', 'img', 'dsc', 'photo'].includes(primera)) continue;
+    //  - nada de fotos grupales, de otra gente o de lugares
+    if (/(^|[^a-z])(and|y|vs|versus|with|con|doubles|dobles|trophy|ceremony|team|coach|entrenador|mother|father|wife|husband|girlfriend|boyfriend|fans|crowd|autograph|signature|statue|mural|stadium|court|arena|poster|ball-?kid)([^a-z]|$)/.test(archivo)) continue;
+    if (/\b(coach of|mother of|father of|wife of|husband of|girlfriend of|boyfriend of)\b/.test(descripcion)) continue;
     // Calidad: fotos grandes (no se estiran en pantalla) y sin compresión excesiva
     const apaisada = ii.width >= ii.height;
     if (apaisada ? (ii.width < 1600 || ii.height < 900) : ii.width < 1400) continue;
@@ -88,16 +100,23 @@ async function main() {
     const ruta = path.join(dir, f);
     const n = JSON.parse(fs.readFileSync(ruta, 'utf8'));
     if (n.getty) continue;
-    if (n.imagen?.url && n.imagen.calidad === 2) continue;
+    // calidad 3 = foto revisada con el control de "es el tenista y está solo"; las notas de la última semana con fotos anteriores se revisan de nuevo
+    if (n.imagen?.url && (n.imagen.calidad === 3 || (n.imagen.calidad === 2 && Date.now() - new Date(n.fecha).getTime() > 7 * 864e5))) continue;
     const anterior = n.imagen?.url ? n.imagen : null; // foto elegida con el criterio viejo: se vuelve a evaluar
     if (anterior) { delete n.imagen; n.fotoBuscada = null; }
     // reintentar como mucho una vez por semana
-    if (n.fotoBuscada && n.fotoBuscada > '2026-11-09T19:30' && Date.now() - new Date(n.fotoBuscada).getTime() < 7 * 864e5 && !process.env.FORZAR_FOTOS) continue;
+    if (n.fotoBuscada && n.fotoBuscada > '2026-11-18T16:00' && Date.now() - new Date(n.fotoBuscada).getTime() < 7 * 864e5 && !process.env.FORZAR_FOTOS) continue;
     const p = partidos[n.partidoId];
     const jugadores = n.jugadores || (p ? [p.ganador === 2 ? p.j2 : p.j1, p.ganador === 2 ? p.j1 : p.j2].filter(Boolean).map((j) => j.nombre) : []);
     let foto = null;
-    for (const nombre of jugadores.filter((x) => x && !x.includes('/'))) {
-      try { foto = elegir(await buscar(nombre, n.fechaPartido || n.fecha), usosRecientes()); } catch (e) { log('Commons falló:', e.message); }
+    // La foto es del protagonista de la nota (el ganador). Primero fotos recientes, después de los últimos 5 años;
+    // el rival solo como último recurso, para que la nota nunca quede sin foto.
+    const ganador = (n.resultado?.ganador?.nombre || jugadores[0] || '').split('/')[0].trim();
+    const otros = jugadores.map((x) => String(x || '').split('/')[0].trim()).filter((x) => x && x !== ganador);
+    const intentos = [[ganador, MESES_MAX], [ganador, 60], ...(anterior ? [] : otros.map((o) => [o, MESES_MAX]))];
+    for (const [nombre, meses] of intentos) {
+      if (!nombre) continue;
+      try { foto = elegir(await buscar(nombre, n.fechaPartido || n.fecha, meses), usosRecientes()); } catch (e) { log('Commons falló:', e.message); }
       if (foto) { foto.jugador = nombre; break; }
       await new Promise((s) => setTimeout(s, 1000));
     }
@@ -106,10 +125,11 @@ async function main() {
       n.imagen = {
         url: foto.url, credito: `${foto.autor} / ${foto.licencia}, vía Wikimedia Commons`, enlace: foto.pagina,
         licenciaUrl: foto.licenciaUrl, fechaFoto: foto.fecha, jugador: foto.jugador, alt: `${foto.jugador}`,
-        ancho: foto.ancho, alto: foto.alto, calidad: 2
+        ancho: foto.ancho, alto: foto.alto, calidad: 3
       };
       log(`Foto para "${n.titulo}": ${foto.jugador}, ${foto.fecha}, ${foto.licencia}`);
-    } else log(`Sin foto reciente de buena calidad para "${n.titulo}"${anterior ? ' (se quita la anterior)' : ''}`);
+    } else if (anterior) { n.imagen = anterior; log(`Sin una foto mejor para "${n.titulo}": se mantiene la actual (nunca dejar una nota sin foto)`); }
+    else log(`Sin foto reciente de buena calidad para "${n.titulo}"`);
     fs.writeFileSync(ruta, JSON.stringify(n, null, 1) + '\n');
     cambios++;
   }
