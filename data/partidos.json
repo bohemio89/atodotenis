@@ -189,174 +189,6 @@
   "tier": null,
   "torneoClave": "challenger|Taipei"
  },
- "213074": {
-  "id": 213074,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T11:25:00Z",
-  "j1": {
-   "id": 1337,
-   "nombre": "Adam Pavlasek / Patrik Rikl",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "cze"
-   ]
-  },
-  "j2": {
-   "id": 1384,
-   "nombre": "Guido Andreozzi / Manuel Guinard",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "arg",
-    "fra"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:20:26.987Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     7
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "atp|Paris"
- },
- "213080": {
-  "id": 213080,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T10:10:00Z",
-  "j1": {
-   "id": 1400,
-   "nombre": "Albano Olivetti / Theo Arribage",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "fra"
-   ]
-  },
-  "j2": {
-   "id": 1620,
-   "nombre": "Lloyd Glasspool / Robert Cash",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "gbr",
-    "usa"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:28:22.134Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6,
-     1
-    ],
-    [
-     7,
-     3,
-     0
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "atp|Paris"
- },
- "213081": {
-  "id": 213081,
-  "tour": "atp_doubles",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T09:00:00Z",
-  "j1": {
-   "id": 1408,
-   "nombre": "Nys/ Roger-Vasselin",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "mon",
-    "fra"
-   ]
-  },
-  "j2": {
-   "id": 42956,
-   "nombre": "Doumbia/ Pel",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "ned"
-   ]
-  },
-  "dobles": true,
-  "estado": "cancelado",
-  "motivo": "cancelled",
-  "visto": "2026-11-04T19:53:19.011Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris"
- },
  "213086": {
   "id": 213086,
   "tour": "wta",
@@ -1257,158 +1089,6 @@
   "tier": null,
   "torneoClave": "challenger|Costa do Sauipe"
  },
- "213211": {
-  "id": 213211,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T14:00:00Z",
-  "j1": {
-   "id": 44051,
-   "nombre": "Basel/ Farjat",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "j2": {
-   "id": 37865,
-   "nombre": "Loureiro/  Remondy Pagotto",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "dobles": true,
-  "estado": "cancelado",
-  "motivo": "cancelled",
-  "visto": "2026-11-04T19:53:19.484Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
- },
- "213212": {
-  "id": 213212,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T17:00:00Z",
-  "j1": {
-   "id": 7476,
-   "nombre": "Aboian/ Fernandez",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "arg",
-    null
-   ]
-  },
-  "j2": {
-   "id": 7446,
-   "nombre": "Aguilar Cardozo/ De La Fuente",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "uru",
-    "arg"
-   ]
-  },
-  "dobles": true,
-  "estado": "cancelado",
-  "motivo": "cancelled",
-  "visto": "2026-11-04T19:53:19.484Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
- },
- "213213": {
-  "id": 213213,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T17:25:00Z",
-  "j1": {
-   "id": 36905,
-   "nombre": "Garay/ Pagani",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "j2": {
-   "id": 44052,
-   "nombre": "Del Pino/ Zeitune",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "arg"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T19:53:19.484Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
- },
- "213218": {
-  "id": 213218,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T14:10:00Z",
-  "j1": {
-   "id": 44059,
-   "nombre": "Bagnis/ Villanueva",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "arg"
-   ]
-  },
-  "j2": {
-   "id": 43959,
-   "nombre": "Hollender/ Olivieri",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "arg",
-    null
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T19:53:19.484Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
- },
  "213333": {
   "id": 213333,
   "tour": "challenger",
@@ -1611,500 +1291,6 @@
   "tier": null,
   "torneoClave": "challenger|Costa do Sauipe"
  },
- "213341": {
-  "id": 213341,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T14:10:00Z",
-  "j1": {
-   "id": 408,
-   "nombre": "Franco Agamenone",
-   "pais": "ita",
-   "ranking": 364
-  },
-  "j2": {
-   "id": 1172,
-   "nombre": "I. Monzon",
-   "pais": "arg",
-   "ranking": null
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T19:53:19.484Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
- },
- "213342": {
-  "id": 213342,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T14:05:00Z",
-  "j1": {
-   "id": 423,
-   "nombre": "Joaquin Aguilar Cardozo",
-   "pais": "uru",
-   "ranking": 288
-  },
-  "j2": {
-   "id": 141,
-   "nombre": "Juan Pablo Ficovich",
-   "pais": "arg",
-   "ranking": 370
-  },
-  "dobles": false,
-  "estado": "cancelado",
-  "motivo": "cancelled",
-  "visto": "2026-11-04T19:53:19.484Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
- },
- "214266": {
-  "id": 214266,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T14:00:00Z",
-  "j1": {
-   "id": 37,
-   "nombre": "Daniil Medvedev",
-   "pais": "rus",
-   "ranking": 5
-  },
-  "j2": {
-   "id": 228,
-   "nombre": "Ignacio Buse",
-   "pais": "per",
-   "ranking": 33
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:08:28.677Z",
-  "importante": true,
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4,
-     4
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "atp|Paris"
- },
- "214267": {
-  "id": 214267,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T12:40:00Z",
-  "j1": {
-   "id": 6,
-   "nombre": "Alexander Zverev",
-   "pais": "ger",
-   "ranking": 1
-  },
-  "j2": {
-   "id": 664,
-   "nombre": "Lorenzo Musetti",
-   "pais": "ita",
-   "ranking": 24
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:09:27.487Z",
-  "importante": true,
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     2
-    ],
-    [
-     7,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "atp|Paris"
- },
- "214277": {
-  "id": 214277,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T10:10:00Z",
-  "j1": {
-   "id": 1388,
-   "nombre": "Orlando Luz / Rafael Matos",
-   "pais": null,
-   "ranking": 97,
-   "paises": [
-    "bra",
-    "bra"
-   ]
-  },
-  "j2": {
-   "id": 32615,
-   "nombre": "Navone / Tabilo",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "arg",
-    "chi"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:28:22.410Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6
-    ],
-    [
-     4,
-     3
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "atp|Paris"
- },
- "214278": {
-  "id": 214278,
-  "tour": "atp_doubles",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T13:00:00Z",
-  "j1": {
-   "id": 36826,
-   "nombre": "Miedler/ Oberleitner",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "aut",
-    "aut"
-   ]
-  },
-  "j2": {
-   "id": 44282,
-   "nombre": "Arends/ Bergs",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "ned",
-    "bel"
-   ]
-  },
-  "dobles": true,
-  "estado": "cancelado",
-  "motivo": "cancelled",
-  "visto": "2026-11-04T19:53:19.011Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris"
- },
- "214280": {
-  "id": 214280,
-  "tour": "atp_doubles",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T09:00:00Z",
-  "j1": {
-   "id": 14164,
-   "nombre": "Cerundolo/ Etcheverry",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "arg",
-    null
-   ]
-  },
-  "j2": {
-   "id": 1391,
-   "nombre": "Harrison/ Skupski",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    "gbr"
-   ]
-  },
-  "dobles": true,
-  "estado": "cancelado",
-  "motivo": "walkover",
-  "visto": "2026-11-05T19:05:19.185Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris"
- },
- "214281": {
-  "id": 214281,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T14:40:00Z",
-  "j1": {
-   "id": 1342,
-   "nombre": "Federico Zeballos / Marcel Granollers",
-   "pais": null,
-   "ranking": 35,
-   "paises": [
-    "bol",
-    "esp"
-   ]
-  },
-  "j2": {
-   "id": 1743,
-   "nombre": "Pierre-Hugues Herbert / Quentin Halys",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "fra"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T07:02:15.831Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris",
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     3,
-     7
-    ],
-    [
-     4,
-     6,
-     10
-    ]
-   ],
-   "sets": [
-    1,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2
- },
- "214375": {
-  "id": 214375,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T20:20:00Z",
-  "j1": {
-   "id": 27,
-   "nombre": "Arthur Fils",
-   "pais": "fra",
-   "ranking": 7
-  },
-  "j2": {
-   "id": 507,
-   "nombre": "Tomas Machac",
-   "pais": "cze",
-   "ranking": 69
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T00:56:32.901Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     7
-    ],
-    [
-     3,
-     6
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "atp|Paris"
- },
- "214451": {
-  "id": 214451,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T00:15:00Z",
-  "j1": {
-   "id": 1574,
-   "nombre": "F. Coria",
-   "pais": "arg",
-   "ranking": null
-  },
-  "j2": {
-   "id": 10925,
-   "nombre": "I. Dreycopp",
-   "pais": "arg",
-   "ranking": null
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T19:53:19.484Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
- },
- "214452": {
-  "id": 214452,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T15:30:00Z",
-  "j1": {
-   "id": 417,
-   "nombre": "Juan Bautista Torres",
-   "pais": "arg",
-   "ranking": 314
-  },
-  "j2": {
-   "id": 2176,
-   "nombre": "N. Bruna",
-   "pais": "chi",
-   "ranking": null
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T19:53:19.484Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
- },
  "214804": {
   "id": 214804,
   "tour": "challenger",
@@ -2134,62 +1320,6 @@
   "importante": false,
   "tier": null,
   "torneoClave": "challenger|Costa do Sauipe"
- },
- "214839": {
-  "id": 214839,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T22:10:00Z",
-  "j1": {
-   "id": 337,
-   "nombre": "Carlos Maria Zarate",
-   "pais": "arg",
-   "ranking": 341
-  },
-  "j2": {
-   "id": 353,
-   "nombre": "Lucio Ratti",
-   "pais": "arg",
-   "ranking": 371
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.550Z",
-  "importante": false,
-  "tier": null,
-  "torneoId": "7863",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6
-    ],
-    [
-     4,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "challenger|Villa Maria"
  },
  "214859": {
   "id": 214859,
@@ -2481,176 +1611,6 @@
   "ganador": 1,
   "torneoClave": "wta|Chennai"
  },
- "214920": {
-  "id": 214920,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T10:10:00Z",
-  "j1": {
-   "id": 225,
-   "nombre": "Mattia Bellucci",
-   "pais": "ita",
-   "ranking": 66
-  },
-  "j2": {
-   "id": 538,
-   "nombre": "Arthur Rinderknech",
-   "pais": "fra",
-   "ranking": 68
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:10:10.106Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4,
-     1
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "atp|Paris"
- },
- "214921": {
-  "id": 214921,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T13:10:00Z",
-  "j1": {
-   "id": 24,
-   "nombre": "Tomas Martin Etcheverry",
-   "pais": "arg",
-   "ranking": 31
-  },
-  "j2": {
-   "id": 653,
-   "nombre": "Alex De Minaur",
-   "pais": "aus",
-   "ranking": 9
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T19:53:20.810Z",
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     6
-    ],
-    [
-     6,
-     3
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "importante": true,
-  "torneoClave": "atp|Paris"
- },
- "214922": {
-  "id": 214922,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T10:15:00Z",
-  "j1": {
-   "id": 9,
-   "nombre": "Frances Tiafoe",
-   "pais": "usa",
-   "ranking": 8
-  },
-  "j2": {
-   "id": 29,
-   "nombre": "Quentin Halys",
-   "pais": "fra",
-   "ranking": 46
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:09:28.343Z",
-  "importante": true,
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3,
-     6,
-     6
-    ],
-    [
-     6,
-     1,
-     7
-    ]
-   ],
-   "sets": [
-    1,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "atp|Paris"
- },
  "214923": {
   "id": 214923,
   "tour": "wta",
@@ -2763,70 +1723,6 @@
   "ganador": 1,
   "torneoClave": "wta|Chennai"
  },
- "214965": {
-  "id": 214965,
-  "tour": "atp_doubles",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T10:10:00Z",
-  "j1": {
-   "id": 1761,
-   "nombre": "Marcelo Arevalo / Mate Pavic",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "esa",
-    "cro"
-   ]
-  },
-  "j2": {
-   "id": 38426,
-   "nombre": "Nouza / Venus",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "nzl"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.185Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris",
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3,
-     4
-    ],
-    [
-     6,
-     3
-    ]
-   ],
-   "sets": [
-    0,
-    1
-   ],
-   "puntos": [
-    "15",
-    "40"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null
- },
  "214966": {
   "id": 214966,
   "tour": "challenger_doubles",
@@ -2865,62 +1761,6 @@
   "tier": null,
   "torneoClave": "challenger|Taipei"
  },
- "214967": {
-  "id": 214967,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T16:05:00Z",
-  "j1": {
-   "id": 16,
-   "nombre": "Karen Khachanov",
-   "pais": "rus",
-   "ranking": 25
-  },
-  "j2": {
-   "id": 503,
-   "nombre": "Nuno Borges",
-   "pais": "por",
-   "ranking": 49
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:08:27.745Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3,
-     4
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "atp|Paris"
- },
  "214968": {
   "id": 214968,
   "tour": "challenger",
@@ -2950,62 +1790,6 @@
   "importante": false,
   "tier": null,
   "torneoClave": "challenger|Taipei"
- },
- "214976": {
-  "id": 214976,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T11:35:00Z",
-  "j1": {
-   "id": 232,
-   "nombre": "Luca van Assche",
-   "pais": "fra",
-   "ranking": 47
-  },
-  "j2": {
-   "id": 511,
-   "nombre": "Learner Tien",
-   "pais": "usa",
-   "ranking": 19
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:09:27.978Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     6
-    ],
-    [
-     6,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "atp|Paris"
  },
  "214978": {
   "id": 214978,
@@ -3063,176 +1847,6 @@
   "confirmado": true,
   "ganador": 1
  },
- "215016": {
-  "id": 215016,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T17:35:00Z",
-  "j1": {
-   "id": 4,
-   "nombre": "Ugo Humbert",
-   "pais": "fra",
-   "ranking": 38
-  },
-  "j2": {
-   "id": 25,
-   "nombre": "Matteo Berrettini",
-   "pais": "ita",
-   "ranking": 43
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T19:53:24.110Z",
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     5
-    ],
-    [
-     7,
-     7
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "importante": false,
-  "torneoClave": "atp|Paris"
- },
- "215017": {
-  "id": 215017,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T14:45:00Z",
-  "j1": {
-   "id": 190,
-   "nombre": "Rinky Hijikata",
-   "pais": "aus",
-   "ranking": 83
-  },
-  "j2": {
-   "id": 1218,
-   "nombre": "Novak Djokovic",
-   "pais": "srb",
-   "ranking": 11
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:08:28.456Z",
-  "importante": true,
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     2,
-     6,
-     6
-    ],
-    [
-     6,
-     3,
-     3
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "atp|Paris"
- },
- "215018": {
-  "id": 215018,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T12:00:00Z",
-  "j1": {
-   "id": 19,
-   "nombre": "Tommy Paul",
-   "pais": "usa",
-   "ranking": 14
-  },
-  "j2": {
-   "id": 214,
-   "nombre": "Daniel Merida Aguilar",
-   "pais": "esp",
-   "ranking": 42
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:09:27.680Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6
-    ],
-    [
-     1,
-     1
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "atp|Paris"
- },
  "215034": {
   "id": 215034,
   "tour": "wta",
@@ -3288,164 +1902,6 @@
   "confirmado": true,
   "ganador": 2,
   "torneoClave": "wta|Chennai"
- },
- "215051": {
-  "id": 215051,
-  "tour": "challenger",
-  "tier": null,
-  "torneo": "Villa Maria",
-  "torneoId": "7863",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "cubierto": false,
-  "dobles": false,
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T19:05:00Z",
-  "j1": {
-   "id": 626,
-   "nombre": "Nicolas Kicker",
-   "pais": "arg",
-   "ranking": 340
-  },
-  "j2": {
-   "id": 11761,
-   "nombre": "Federico Aguilar Cardozo",
-   "pais": "uru",
-   "ranking": 1063
-  },
-  "estado": "finalizado",
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6
-    ],
-    [
-     1,
-     2
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "visto": "2026-11-04T20:28:23.228Z",
-  "motivo": null,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria"
- },
- "215135": {
-  "id": 215135,
-  "tour": "atp_doubles",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T16:20:00Z",
-  "j1": {
-   "id": 10961,
-   "nombre": "Bonzi/ Rinderknech",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "fra"
-   ]
-  },
-  "j2": {
-   "id": 1406,
-   "nombre": "Krawietz/ Puetz",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "ger",
-    "ger"
-   ]
-  },
-  "dobles": true,
-  "estado": "cancelado",
-  "motivo": "walkover",
-  "visto": "2026-11-05T19:05:19.185Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris"
- },
- "215136": {
-  "id": 215136,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T16:15:00Z",
-  "j1": {
-   "id": 1340,
-   "nombre": "Andrea Vavassori / Simone Bolelli",
-   "pais": "ita",
-   "ranking": null,
-   "paises": [
-    "ita",
-    "ita"
-   ]
-  },
-  "j2": {
-   "id": 31278,
-   "nombre": "Nakashima / Robert Cash",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    "usa"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:13:06.095Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     1,
-     6
-    ],
-    [
-     6,
-     7
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "atp|Paris"
  },
  "215141": {
   "id": 215141,
@@ -3560,356 +2016,6 @@
   },
   "confirmado": true,
   "ganador": 1
- },
- "215143": {
-  "id": 215143,
-  "tour": "atp",
-  "tier": "atp_1000",
-  "torneo": "Paris",
-  "torneoId": "1725",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "cubierto": true,
-  "dobles": false,
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T18:15:00Z",
-  "j1": {
-   "id": 13,
-   "nombre": "Carlos Alcaraz",
-   "pais": "esp",
-   "ranking": 3
-  },
-  "j2": {
-   "id": 36,
-   "nombre": "Alex Michelsen",
-   "pais": "usa",
-   "ranking": 35
-  },
-  "estado": "finalizado",
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     6
-    ],
-    [
-     6,
-     3
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "visto": "2026-11-04T20:08:27.518Z",
-  "motivo": null,
-  "importante": false,
-  "torneoClave": "atp|Paris"
- },
- "215144": {
-  "id": 215144,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T15:25:00Z",
-  "j1": {
-   "id": 18,
-   "nombre": "Taylor Fritz",
-   "pais": "usa",
-   "ranking": 12
-  },
-  "j2": {
-   "id": 6147,
-   "nombre": "Alex Molčan",
-   "pais": "svk",
-   "ranking": 78
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:08:28.036Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     7,
-     7
-    ],
-    [
-     7,
-     5,
-     6
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "torneoClave": "atp|Paris"
- },
- "215150": {
-  "id": 215150,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T16:05:00Z",
-  "j1": {
-   "id": 422,
-   "nombre": "Juan Manuel La Serna",
-   "pais": "arg",
-   "ranking": 254
-  },
-  "j2": {
-   "id": 667,
-   "nombre": "Hernan Casanova",
-   "pais": "arg",
-   "ranking": 438
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T19:53:21.550Z",
-  "tier": null,
-  "torneoId": "7863",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     4,
-     6
-    ],
-    [
-     6,
-     6,
-     3
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria"
- },
- "215151": {
-  "id": 215151,
-  "tour": "challenger",
-  "tier": null,
-  "torneo": "Villa Maria",
-  "torneoId": "7863",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "cubierto": false,
-  "dobles": false,
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T19:00:00Z",
-  "j1": {
-   "id": 555,
-   "nombre": "Oriol Roca Batalla",
-   "pais": "esp",
-   "ranking": 290
-  },
-  "j2": {
-   "id": 630,
-   "nombre": "Ryo Tabata",
-   "pais": "jpn",
-   "ranking": 934
-  },
-  "estado": "finalizado",
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6
-    ],
-    [
-     1,
-     3
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1,
-  "visto": "2026-11-05T04:08:11.392Z",
-  "motivo": null,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria"
- },
- "215179": {
-  "id": 215179,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T14:45:00Z",
-  "j1": {
-   "id": 1564,
-   "nombre": "Sergio Martos Gornes / Walkow",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "esp",
-    "pol"
-   ]
-  },
-  "j2": {
-   "id": 42956,
-   "nombre": "Pel / Sadio Doumbia",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "ned",
-    "fra"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:13:06.465Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4,
-     4
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "atp|Paris"
- },
- "215181": {
-  "id": 215181,
-  "tour": "atp",
-  "tier": "atp_1000",
-  "torneo": "Paris",
-  "torneoId": "1725",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "cubierto": true,
-  "dobles": false,
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T18:15:00Z",
-  "j1": {
-   "id": 2,
-   "nombre": "Thiago Agustin Tirante",
-   "pais": "arg",
-   "ranking": 53
-  },
-  "j2": {
-   "id": 525,
-   "nombre": "Jan-Lennard Struff",
-   "pais": "ger",
-   "ranking": 39
-  },
-  "estado": "finalizado",
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     3,
-     6
-    ],
-    [
-     6,
-     6,
-     7
-    ]
-   ],
-   "sets": [
-    1,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "visto": "2026-11-05T00:56:33.175Z",
-  "motivo": null,
-  "importante": false,
-  "torneoClave": "atp|Paris"
  },
  "215184": {
   "id": 215184,
@@ -4055,44 +2161,6 @@
   "tier": null,
   "torneoClave": "challenger|Costa do Sauipe"
  },
- "215237": {
-  "id": 215237,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T19:30:00Z",
-  "j1": {
-   "id": 32867,
-   "nombre": "Cigarran/ Ratti",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "arg",
-    null
-   ]
-  },
-  "j2": {
-   "id": 44057,
-   "nombre": "Nijboer/ Roca Batalla",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "ned",
-    "esp"
-   ]
-  },
-  "dobles": true,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.550Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
- },
  "215344": {
   "id": 215344,
   "tour": "challenger",
@@ -4148,36 +2216,6 @@
   "motivo": null,
   "importante": false,
   "torneoClave": "challenger|Costa do Sauipe"
- },
- "215383": {
-  "id": 215383,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T21:05:00Z",
-  "j1": {
-   "id": 1574,
-   "nombre": "F. Coria",
-   "pais": "arg",
-   "ranking": null
-  },
-  "j2": {
-   "id": 427,
-   "nombre": "Valerio Aboian",
-   "pais": "arg",
-   "ranking": 258
-  },
-  "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.551Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
  },
  "215384": {
   "id": 215384,
@@ -5969,72 +4007,6 @@
   "confirmado": false,
   "ganador": null
  },
- "215438": {
-  "id": 215438,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/16-finals",
-  "rondaCod": "R32",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T13:15:00Z",
-  "j1": {
-   "id": 1469,
-   "nombre": "Arthur Reymond / Diego Augusto Barreto Sanchez",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "esp"
-   ]
-  },
-  "j2": {
-   "id": 36826,
-   "nombre": "Miedler / Oberleitner",
-   "pais": null,
-   "ranking": 219,
-   "paises": [
-    "aut",
-    "aut"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T20:20:25.762Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     2,
-     3
-    ],
-    [
-     5,
-     6,
-     10
-    ]
-   ],
-   "sets": [
-    1,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "atp|Paris"
- },
  "215439": {
   "id": 215439,
   "tour": "challenger_doubles",
@@ -6136,64 +4108,6 @@
   "confirmado": true,
   "ganador": 2,
   "torneoClave": "wta|Chennai"
- },
- "215465": {
-  "id": 215465,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T12:10:00Z",
-  "j1": {
-   "id": 11,
-   "nombre": "Ben Shelton",
-   "pais": "usa",
-   "ranking": 4
-  },
-  "j2": {
-   "id": 538,
-   "nombre": "Arthur Rinderknech",
-   "pais": "fra",
-   "ranking": 68
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:20.757Z",
-  "importante": true,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3,
-     6,
-     7
-    ],
-    [
-     6,
-     4,
-     6
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
  },
  "215466": {
   "id": 215466,
@@ -6297,100 +4211,6 @@
   "ganador": null,
   "torneoClave": "challenger|Taipei"
  },
- "215491": {
-  "id": 215491,
-  "tour": "atp_doubles",
-  "torneo": "Paris",
-  "ronda": null,
-  "rondaCod": null,
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T11:50:00Z",
-  "j1": {
-   "id": 1337,
-   "nombre": "Pavlasek/ Rikl",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "cze"
-   ]
-  },
-  "j2": {
-   "id": 1400,
-   "nombre": "Arribage/ Olivetti",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "fra"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.185Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris"
- },
- "215492": {
-  "id": 215492,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T10:10:00Z",
-  "j1": {
-   "id": 19,
-   "nombre": "Tommy Paul",
-   "pais": "usa",
-   "ranking": 14
-  },
-  "j2": {
-   "id": 29,
-   "nombre": "Quentin Halys",
-   "pais": "fra",
-   "ranking": 46
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T00:11:32.244Z",
-  "importante": true,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     6
-    ],
-    [
-     6,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
- },
  "215500": {
   "id": 215500,
   "tour": "challenger_doubles",
@@ -6457,36 +4277,6 @@
   "confirmado": false,
   "ganador": null
  },
- "215529": {
-  "id": 215529,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": null,
-  "rondaCod": null,
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-04T14:15:00Z",
-  "j1": {
-   "id": 349,
-   "nombre": "F. Ribero",
-   "pais": "arg",
-   "ranking": null
-  },
-  "j2": {
-   "id": 141,
-   "nombre": "Juan Pablo Ficovich",
-   "pais": "arg",
-   "ranking": 370
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-04T19:53:19.484Z",
-  "importante": false,
-  "tier": null,
-  "torneoClave": "challenger|Villa Maria"
- },
  "215530": {
   "id": 215530,
   "tour": "wta",
@@ -6550,128 +4340,6 @@
   },
   "confirmado": true,
   "ganador": 2
- },
- "215532": {
-  "id": 215532,
-  "tour": "atp_doubles",
-  "torneo": "Paris",
-  "ronda": "Round of 16",
-  "rondaCod": null,
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T10:10:00Z",
-  "j1": {
-   "id": 1388,
-   "nombre": "Orlando Luz / Rafael Matos",
-   "pais": null,
-   "ranking": 97,
-   "paises": [
-    "bra",
-    "bra"
-   ]
-  },
-  "j2": {
-   "id": 36826,
-   "nombre": "Miedler / Oberleitner",
-   "pais": null,
-   "ranking": 219,
-   "paises": [
-    "aut",
-    "aut"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.185Z",
-  "importante": false,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris",
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3,
-     6
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    1
-   ],
-   "puntos": [
-    "3",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null
- },
- "215538": {
-  "id": 215538,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T14:35:00Z",
-  "j1": {
-   "id": 232,
-   "nombre": "Luca van Assche",
-   "pais": "fra",
-   "ranking": 47
-  },
-  "j2": {
-   "id": 664,
-   "nombre": "Lorenzo Musetti",
-   "pais": "ita",
-   "ranking": 24
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.940Z",
-  "importante": true,
-  "tier": "atp_1000",
-  "torneoClave": "atp|Paris",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     3,
-     6
-    ],
-    [
-     5,
-     6,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
  },
  "215544": {
   "id": 215544,
@@ -6769,102 +4437,6 @@
   "importante": false,
   "torneoClave": "challenger|Costa do Sauipe"
  },
- "215564": {
-  "id": 215564,
-  "tour": "atp_doubles",
-  "torneo": "Paris",
-  "ronda": null,
-  "rondaCod": null,
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T11:35:00Z",
-  "j1": {
-   "id": 1788,
-   "nombre": "Heliovaara/ Patten",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fin",
-    "gbr"
-   ]
-  },
-  "j2": {
-   "id": 42956,
-   "nombre": "Doumbia/ Pel",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "ned"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.185Z",
-  "tier": "atp_1000",
-  "importante": false,
-  "torneoClave": "atp|Paris"
- },
- "215566": {
-  "id": 215566,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T13:45:00Z",
-  "j1": {
-   "id": 24,
-   "nombre": "Tomas Martin Etcheverry",
-   "pais": "arg",
-   "ranking": 31
-  },
-  "j2": {
-   "id": 190,
-   "nombre": "Rinky Hijikata",
-   "pais": "aus",
-   "ranking": 83
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:20.122Z",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoClave": "atp|Paris",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     3,
-     5
-    ],
-    [
-     2,
-     6,
-     7
-    ]
-   ],
-   "sets": [
-    1,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2
- },
  "215570": {
   "id": 215570,
   "tour": "wta",
@@ -6917,186 +4489,6 @@
     "0"
    ],
    "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
- },
- "215596": {
-  "id": 215596,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T16:45:00Z",
-  "j1": {
-   "id": 141,
-   "nombre": "Juan Pablo Ficovich",
-   "pais": "arg",
-   "ranking": 370
-  },
-  "j2": {
-   "id": 418,
-   "nombre": "Murkel Alejandro Dellien Velasco",
-   "pais": "bol",
-   "ranking": 450
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.550Z",
-  "tier": null,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria"
- },
- "215597": {
-  "id": 215597,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T17:35:00Z",
-  "j1": {
-   "id": 622,
-   "nombre": "Genaro Alberto Olivieri",
-   "pais": "arg",
-   "ranking": 257
-  },
-  "j2": {
-   "id": 1172,
-   "nombre": "Ignacio Monzon",
-   "pais": "arg",
-   "ranking": 578
-  },
-  "dobles": false,
-  "estado": "por_confirmar",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.550Z",
-  "tier": null,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria",
-  "torneoId": "7863",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     5
-    ],
-    [
-     3,
-     1
-    ]
-   ],
-   "sets": [
-    1,
-    0
-   ],
-   "puntos": [
-    "15",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null
- },
- "215598": {
-  "id": 215598,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T15:10:00Z",
-  "j1": {
-   "id": 417,
-   "nombre": "Juan Bautista Torres",
-   "pais": "arg",
-   "ranking": 314
-  },
-  "j2": {
-   "id": 1053,
-   "nombre": "Ryan Nijboer",
-   "pais": "ned",
-   "ranking": 384
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.550Z",
-  "tier": null,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria"
- },
- "215675": {
-  "id": 215675,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T13:10:00Z",
-  "j1": {
-   "id": 1391,
-   "nombre": "Christian Harrison / Neal Skupski",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    "gbr"
-   ]
-  },
-  "j2": {
-   "id": 31278,
-   "nombre": "Nakashima / Robert Cash",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    "usa"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T02:00:37.454Z",
-  "tier": "atp_1000",
-  "importante": false,
-  "torneoClave": "atp|Paris",
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     6
-    ],
-    [
-     6,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
   },
   "confirmado": true,
   "ganador": 1
@@ -7161,396 +4553,6 @@
     "0"
    ],
    "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
- },
- "215677": {
-  "id": 215677,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T16:10:00Z",
-  "j1": {
-   "id": 228,
-   "nombre": "Ignacio Buse",
-   "pais": "per",
-   "ranking": 33
-  },
-  "j2": {
-   "id": 503,
-   "nombre": "Nuno Borges",
-   "pais": "por",
-   "ranking": 49
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.785Z",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoClave": "atp|Paris",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     0,
-     2
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2
- },
- "215678": {
-  "id": 215678,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T23:45:00Z",
-  "j1": {
-   "id": 7476,
-   "nombre": "Aboian / Bruno Fernandez",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "arg",
-    "bra"
-   ]
-  },
-  "j2": {
-   "id": 27479,
-   "nombre": "Arklon Huertas Del Pino Cordova / Murkel Alejandro Dellien Velasco",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "bol"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T19:45:20.624Z",
-  "tier": null,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria",
-  "torneoId": "7858",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     1,
-     0
-    ],
-    [
-     6,
-     0
-    ]
-   ],
-   "sets": [
-    0,
-    1
-   ],
-   "puntos": [
-    "0",
-    "30"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null
- },
- "215679": {
-  "id": 215679,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T22:05:00Z",
-  "j1": {
-   "id": 44054,
-   "nombre": "Casanova/ Ribero",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "arg"
-   ]
-  },
-  "j2": {
-   "id": 44052,
-   "nombre": "Del Pino/ Zeitune",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "arg"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T19:45:20.624Z",
-  "tier": null,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria"
- },
- "215720": {
-  "id": 215720,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T19:45:00Z",
-  "j1": {
-   "id": 525,
-   "nombre": "Jan-Lennard Struff",
-   "pais": "ger",
-   "ranking": 39
-  },
-  "j2": {
-   "id": 537,
-   "nombre": "Casper Ruud",
-   "pais": "nor",
-   "ranking": 23
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-13T20:38:18Z",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoClave": "atp|Paris",
-  "resultado": "completed",
-  "score": {
-   "games": [
-    [
-     3,
-     3
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2
- },
- "215721": {
-  "id": 215721,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T18:00:00Z",
-  "j1": {
-   "id": 25,
-   "nombre": "Matteo Berrettini",
-   "pais": "ita",
-   "ranking": 43
-  },
-  "j2": {
-   "id": 13,
-   "nombre": "Carlos Alcaraz",
-   "pais": "esp",
-   "ranking": 3
-  },
-  "dobles": false,
-  "estado": "cancelado",
-  "motivo": "walkover",
-  "visto": "2026-11-05T19:05:19.185Z",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoClave": "atp|Paris"
- },
- "215725": {
-  "id": 215725,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T15:10:00Z",
-  "j1": {
-   "id": 44059,
-   "nombre": "Bagnis/ Villanueva",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "arg"
-   ]
-  },
-  "j2": {
-   "id": 37865,
-   "nombre": "Loureiro/  Remondy Pagotto",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-05T19:05:19.550Z",
-  "tier": null,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria"
- },
- "215732": {
-  "id": 215732,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T14:10:00Z",
-  "j1": {
-   "id": 555,
-   "nombre": "Oriol Roca Batalla",
-   "pais": "esp",
-   "ranking": 290
-  },
-  "j2": {
-   "id": 626,
-   "nombre": "Nicolas Kicker",
-   "pais": "arg",
-   "ranking": 340
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T19:45:20.624Z",
-  "tier": null,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria",
-  "torneoId": "7863",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3
-    ],
-    [
-     4
-    ]
-   ],
-   "sets": [
-    0,
-    0
-   ],
-   "puntos": [
-    "15",
-    "15"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null
- },
- "215769": {
-  "id": 215769,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-05T18:20:00Z",
-  "j1": {
-   "id": 18,
-   "nombre": "Taylor Fritz",
-   "pais": "usa",
-   "ranking": 12
-  },
-  "j2": {
-   "id": 27,
-   "nombre": "Arthur Fils",
-   "pais": "fra",
-   "ranking": 7
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T00:11:31.954Z",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoClave": "atp|Paris",
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6
-    ],
-    [
-     3,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
   },
   "confirmado": true,
   "ganador": 1
@@ -7710,62 +4712,6 @@
   "tier": null,
   "importante": false,
   "torneoClave": "challenger|Costa do Sauipe"
- },
- "215864": {
-  "id": 215864,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T15:45:00Z",
-  "j1": {
-   "id": 337,
-   "nombre": "Carlos Maria Zarate",
-   "pais": "arg",
-   "ranking": 341
-  },
-  "j2": {
-   "id": 422,
-   "nombre": "Juan Manuel La Serna",
-   "pais": "arg",
-   "ranking": 254
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T19:45:20.624Z",
-  "tier": null,
-  "importante": false,
-  "torneoClave": "challenger|Villa Maria",
-  "torneoId": "7863",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3,
-     1
-    ],
-    [
-     6,
-     2
-    ]
-   ],
-   "sets": [
-    0,
-    1
-   ],
-   "puntos": [
-    "40",
-    "30"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null
  },
  "215871": {
   "id": 215871,
@@ -8105,72 +5051,6 @@
   "confirmado": false,
   "ganador": null
  },
- "215916": {
-  "id": 215916,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T14:50:00Z",
-  "j1": {
-   "id": 36826,
-   "nombre": "Miedler / Oberleitner",
-   "pais": null,
-   "ranking": 219,
-   "paises": [
-    "aut",
-    "aut"
-   ]
-  },
-  "j2": {
-   "id": 38426,
-   "nombre": "Nouza / Venus",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "nzl"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T02:00:37.292Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": false,
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6,
-     1
-    ],
-    [
-     7,
-     4,
-     0
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
- },
  "215917": {
   "id": 215917,
   "tour": "wta",
@@ -8282,64 +5162,6 @@
   },
   "confirmado": false,
   "ganador": null
- },
- "215934": {
-  "id": 215934,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T13:10:00Z",
-  "j1": {
-   "id": 11,
-   "nombre": "Ben Shelton",
-   "pais": "usa",
-   "ranking": 4
-  },
-  "j2": {
-   "id": 19,
-   "nombre": "Tommy Paul",
-   "pais": "usa",
-   "ranking": 14
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T22:45:24.428Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     4,
-     6
-    ],
-    [
-     4,
-     6,
-     3
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
  },
  "215936": {
   "id": 215936,
@@ -8461,134 +5283,6 @@
   "confirmado": false,
   "ganador": null
  },
- "215973": {
-  "id": 215973,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T16:45:00Z",
-  "j1": {
-   "id": 1400,
-   "nombre": "Albano Olivetti / Theo Arribage",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "fra"
-   ]
-  },
-  "j2": {
-   "id": 1743,
-   "nombre": "Pierre-Hugues Herbert / Quentin Halys",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "fra"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T00:00:42.224Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": false,
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     5,
-     3
-    ],
-    [
-     7,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2
- },
- "215974": {
-  "id": 215974,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T18:15:00Z",
-  "j1": {
-   "id": 1788,
-   "nombre": "Harri Heliovaara / Henry Patten",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fin",
-    "gbr"
-   ]
-  },
-  "j2": {
-   "id": 10961,
-   "nombre": "Bonzi / Rinderknech",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "fra"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T00:00:42.073Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": false,
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     7,
-     6
-    ],
-    [
-     5,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
- },
  "215975": {
   "id": 215975,
   "tour": "wta_doubles",
@@ -8649,232 +5343,6 @@
     "40"
    ],
    "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null
- },
- "216026": {
-  "id": 216026,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T15:20:00Z",
-  "j1": {
-   "id": 190,
-   "nombre": "Rinky Hijikata",
-   "pais": "aus",
-   "ranking": 83
-  },
-  "j2": {
-   "id": 232,
-   "nombre": "Luca van Assche",
-   "pais": "fra",
-   "ranking": 47
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T22:45:24.278Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4,
-     7,
-     5
-    ],
-    [
-     6,
-     6,
-     7
-    ]
-   ],
-   "sets": [
-    1,
-    2
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2
- },
- "216038": {
-  "id": 216038,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T17:25:00Z",
-  "j1": {
-   "id": 417,
-   "nombre": "Juan Bautista Torres",
-   "pais": "arg",
-   "ranking": 314
-  },
-  "j2": {
-   "id": 622,
-   "nombre": "Genaro Alberto Olivieri",
-   "pais": "arg",
-   "ranking": 257
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T19:45:20.624Z",
-  "torneoClave": "challenger|Villa Maria",
-  "tier": null,
-  "importante": false,
-  "torneoId": "7863",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4,
-     1
-    ],
-    [
-     6,
-     4
-    ]
-   ],
-   "sets": [
-    0,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null
- },
- "216051": {
-  "id": 216051,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T19:05:00Z",
-  "j1": {
-   "id": 13,
-   "nombre": "Carlos Alcaraz",
-   "pais": "esp",
-   "ranking": 3
-  },
-  "j2": {
-   "id": 18,
-   "nombre": "Taylor Fritz",
-   "pais": "usa",
-   "ranking": 12
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T22:45:24.097Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     7,
-     6
-    ],
-    [
-     7,
-     5,
-     3
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
- },
- "216071": {
-  "id": 216071,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T20:10:00Z",
-  "j1": {
-   "id": 141,
-   "nombre": "Juan Pablo Ficovich",
-   "pais": "arg",
-   "ranking": 370
-  },
-  "j2": {
-   "id": 1574,
-   "nombre": "Federico Coria",
-   "pais": "arg",
-   "ranking": 831
-  },
-  "dobles": false,
-  "estado": "por_confirmar",
-  "motivo": null,
-  "visto": "2026-11-06T20:45:21.981Z",
-  "torneoClave": "challenger|Villa Maria",
-  "tier": null,
-  "importante": false,
-  "torneoId": "7863",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     2
-    ],
-    [
-     4
-    ]
-   ],
-   "sets": [
-    0,
-    0
-   ],
-   "puntos": [
-    "40",
-    "40"
-   ],
-   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -8940,62 +5408,6 @@
   },
   "confirmado": false,
   "ganador": null
- },
- "216082": {
-  "id": 216082,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T22:15:00Z",
-  "j1": {
-   "id": 503,
-   "nombre": "Nuno Borges",
-   "pais": "por",
-   "ranking": 49
-  },
-  "j2": {
-   "id": 537,
-   "nombre": "Casper Ruud",
-   "pais": "nor",
-   "ranking": 23
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T20:00:33.991Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     4
-    ],
-    [
-     7,
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    2
-   ],
-   "puntos": [
-    "40",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 2
  },
  "216128": {
   "id": 216128,
@@ -9113,106 +5525,6 @@
     "15"
    ],
    "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null
- },
- "216130": {
-  "id": 216130,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T17:35:00Z",
-  "j1": {
-   "id": 44052,
-   "nombre": "Del Pino/ Zeitune",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "arg"
-   ]
-  },
-  "j2": {
-   "id": 44057,
-   "nombre": "Nijboer/ Roca Batalla",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "ned",
-    "esp"
-   ]
-  },
-  "dobles": true,
-  "estado": "cancelado",
-  "motivo": "walkover",
-  "visto": "2026-11-06T19:45:20.624Z",
-  "torneoClave": "challenger|Villa Maria",
-  "tier": null,
-  "importante": false
- },
- "216134": {
-  "id": 216134,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-06T16:10:00Z",
-  "j1": {
-   "id": 27479,
-   "nombre": "Arklon Huertas Del Pino Cordova / Murkel Alejandro Dellien Velasco",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "bol"
-   ]
-  },
-  "j2": {
-   "id": 44059,
-   "nombre": "Bagnis / Villanueva",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "arg"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-06T19:45:20.624Z",
-  "torneoClave": "challenger|Villa Maria",
-  "tier": null,
-  "importante": false,
-  "torneoId": "7858",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4
-    ],
-    [
-     5
-    ]
-   ],
-   "sets": [
-    0,
-    0
-   ],
-   "puntos": [
-    "15",
-    "40"
-   ],
-   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -9503,70 +5815,6 @@
   "confirmado": true,
   "ganador": 2
  },
- "216235": {
-  "id": 216235,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-07T11:10:00Z",
-  "j1": {
-   "id": 1391,
-   "nombre": "Christian Harrison / Neal Skupski",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    "gbr"
-   ]
-  },
-  "j2": {
-   "id": 36826,
-   "nombre": "Miedler / Oberleitner",
-   "pais": null,
-   "ranking": 219,
-   "paises": [
-    "aut",
-    "aut"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-08T00:00:38.428Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": false,
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6
-    ],
-    [
-     4,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
- },
  "216236": {
   "id": 216236,
   "tour": "wta",
@@ -9697,62 +5945,6 @@
   "confirmado": true,
   "ganador": 2
  },
- "216239": {
-  "id": 216239,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-07T14:10:00Z",
-  "j1": {
-   "id": 422,
-   "nombre": "Juan Manuel La Serna",
-   "pais": "arg",
-   "ranking": 254
-  },
-  "j2": {
-   "id": 626,
-   "nombre": "Nicolas Kicker",
-   "pais": "arg",
-   "ranking": 340
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T20:00:34.174Z",
-  "torneoClave": "challenger|Villa Maria",
-  "tier": null,
-  "importante": false,
-  "torneoId": "7863",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     0
-    ],
-    [
-     4,
-     1
-    ]
-   ],
-   "sets": [
-    1,
-    0
-   ],
-   "puntos": [
-    "30",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null
- },
  "216269": {
   "id": 216269,
   "tour": "wta",
@@ -9796,102 +5988,6 @@
      6,
      2,
      3
-    ]
-   ],
-   "sets": [
-    2,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
- },
- "216270": {
-  "id": 216270,
-  "tour": "challenger_doubles",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Final",
-  "rondaCod": "F",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-07T20:00:00Z",
-  "j1": {
-   "id": 44057,
-   "nombre": "Nijboer/ Roca Batalla",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "ned",
-    "esp"
-   ]
-  },
-  "j2": {
-   "id": 44059,
-   "nombre": "Bagnis/ Villanueva",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "arg"
-   ]
-  },
-  "dobles": true,
-  "estado": "cancelado",
-  "motivo": "walkover",
-  "visto": "2026-11-07T20:00:34.174Z",
-  "torneoClave": "challenger|Villa Maria",
-  "tier": null,
-  "importante": false
- },
- "216279": {
-  "id": 216279,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-07T13:45:00Z",
-  "j1": {
-   "id": 11,
-   "nombre": "Ben Shelton",
-   "pais": "usa",
-   "ranking": 4
-  },
-  "j2": {
-   "id": 232,
-   "nombre": "Luca van Assche",
-   "pais": "fra",
-   "ranking": 47
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T22:00:35.894Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     5,
-     6,
-     6
-    ],
-    [
-     7,
-     3,
-     4
     ]
    ],
    "sets": [
@@ -10349,70 +6445,6 @@
   "confirmado": true,
   "ganador": 1
  },
- "216294": {
-  "id": 216294,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-07T18:20:00Z",
-  "j1": {
-   "id": 1743,
-   "nombre": "Pierre-Hugues Herbert / Quentin Halys",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "fra"
-   ]
-  },
-  "j2": {
-   "id": 1788,
-   "nombre": "Harri Heliovaara / Henry Patten",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fin",
-    "gbr"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-08T00:00:38.177Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": false,
-  "torneoId": "1726",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     7
-    ],
-    [
-     4,
-     6
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": true,
-  "ganador": 1
- },
  "216305": {
   "id": 216305,
   "tour": "challenger",
@@ -10468,120 +6500,6 @@
   },
   "confirmado": false,
   "ganador": null
- },
- "216311": {
-  "id": 216311,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-07T16:15:00Z",
-  "j1": {
-   "id": 622,
-   "nombre": "Genaro Alberto Olivieri",
-   "pais": "arg",
-   "ranking": 257
-  },
-  "j2": {
-   "id": 1574,
-   "nombre": "Federico Coria",
-   "pais": "arg",
-   "ranking": 831
-  },
-  "dobles": false,
-  "estado": "cancelado",
-  "motivo": "retired",
-  "visto": "2026-11-07T20:00:34.174Z",
-  "torneoClave": "challenger|Villa Maria",
-  "tier": null,
-  "importante": false,
-  "torneoId": "7863",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3,
-     6,
-     0
-    ],
-    [
-     6,
-     3,
-     0
-    ]
-   ],
-   "sets": [
-    1,
-    1
-   ],
-   "puntos": [
-    "40",
-    "40"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null
- },
- "216324": {
-  "id": 216324,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-07T16:30:00Z",
-  "j1": {
-   "id": 13,
-   "nombre": "Carlos Alcaraz",
-   "pais": "esp",
-   "ranking": 3
-  },
-  "j2": {
-   "id": 537,
-   "nombre": "Casper Ruud",
-   "pais": "nor",
-   "ranking": 23
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-07T22:00:35.663Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": true,
-  "torneoId": "1725",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     6
-    ],
-    [
-     4,
-     4
-    ]
-   ],
-   "sets": [
-    2,
-    0
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 1
  },
  "216325": {
   "id": 216325,
@@ -16307,36 +12225,6 @@
   "confirmado": false,
   "ganador": null
  },
- "216535": {
-  "id": 216535,
-  "tour": "atp",
-  "torneo": "Paris",
-  "ronda": "ATP Paris - Final",
-  "rondaCod": "F",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-08T14:00:00Z",
-  "j1": {
-   "id": 11,
-   "nombre": "Ben Shelton",
-   "pais": "usa",
-   "ranking": 4
-  },
-  "j2": {
-   "id": 13,
-   "nombre": "Carlos Alcaraz",
-   "pais": "esp",
-   "ranking": 3
-  },
-  "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-08T00:00:37.448Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
-  "importante": true
- },
  "216536": {
   "id": 216536,
   "tour": "atp",
@@ -16395,44 +12283,6 @@
   "visto": "2026-11-08T00:00:37.448Z",
   "torneoClave": "atp|Stockholm",
   "tier": null,
-  "importante": false
- },
- "216545": {
-  "id": 216545,
-  "tour": "atp_doubles",
-  "torneo": "Paris",
-  "ronda": null,
-  "rondaCod": null,
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-08T11:30:00Z",
-  "j1": {
-   "id": 1743,
-   "nombre": "Halys/ Herbert",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    null
-   ]
-  },
-  "j2": {
-   "id": 1391,
-   "nombre": "Harrison/ Skupski",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    "gbr"
-   ]
-  },
-  "dobles": true,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-08T00:00:37.448Z",
-  "torneoClave": "atp|Paris",
-  "tier": "atp_1000",
   "importante": false
  },
  "216546": {
@@ -18318,36 +14168,6 @@
   "visto": "2026-11-08T00:00:37.671Z",
   "tier": null,
   "importante": false
- },
- "216591": {
-  "id": 216591,
-  "tour": "challenger",
-  "torneo": "Villa Maria",
-  "ronda": "Villa Maria - Final",
-  "rondaCod": "F",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-08T14:00:00Z",
-  "j1": {
-   "id": 422,
-   "nombre": "Juan Manuel La Serna",
-   "pais": "arg",
-   "ranking": 254
-  },
-  "j2": {
-   "id": 622,
-   "nombre": "Genaro Alberto Olivieri",
-   "pais": "arg",
-   "ranking": 257
-  },
-  "dobles": false,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-08T00:00:37.671Z",
-  "torneoClave": "challenger|Villa Maria",
-  "tier": null,
-  "importante": true
  },
  "216594": {
   "id": 216594,
@@ -36364,7 +32184,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T13:45:37.356Z",
+  "visto": "2026-11-18T14:00:40.970Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": null,
   "importante": true,
@@ -36372,11 +32192,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T13:44:47.356248Z",
-   "age_seconds": 49,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-18T13:57:05.304839Z",
+   "age_seconds": 215,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -36385,35 +32205,35 @@
    "games": [
     [
      6,
-     0
+     2
     ],
     [
      2,
-     0
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-18T13:44:46.768421Z",
-   "sequence": 45,
-   "server": 2,
+   "received_at": "2026-11-18T13:57:03.971624Z",
+   "sequence": 63,
+   "server": 1,
    "sets": [
     1,
     0
    ],
-   "sources_count": 2,
-   "stale": false,
-   "timestamp": "2026-11-18T13:45:30.795441Z",
+   "sources_count": 1,
+   "stale": true,
+   "timestamp": "2026-11-18T13:58:10.427819Z",
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -51774,7 +47594,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T13:45:37.356Z",
+  "visto": "2026-11-18T14:00:40.970Z",
   "torneoClave": "challenger|Helsinki",
   "tier": null,
   "importante": false,
@@ -51782,11 +47602,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T13:45:12.168090Z",
-   "age_seconds": 25,
+   "accepted_at": "2026-11-18T14:00:35.773041Z",
+   "age_seconds": 4,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -51794,31 +47614,31 @@
    },
    "games": [
     [
-     2
+     4
     ],
     [
-     0
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "30",
+    "40",
     "15"
    ],
-   "received_at": "2026-11-18T13:45:11.967243Z",
-   "sequence": 15,
+   "received_at": "2026-11-18T14:00:35.269818Z",
+   "sequence": 42,
    "server": 1,
    "sets": [
     0,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 4,
    "stale": false,
-   "timestamp": "2026-11-18T13:45:28.459707Z",
+   "timestamp": "2026-11-18T14:00:35.773040Z",
    "puntos": [
-    "30",
+    "40",
     "15"
    ],
    "saca": 1
@@ -66109,7 +61929,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T13:45:37.356Z",
+  "visto": "2026-11-18T14:00:40.970Z",
   "torneoClave": "challenger|Helsinki",
   "tier": null,
   "importante": false,
@@ -66117,11 +61937,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T13:45:17.312181Z",
-   "age_seconds": 19,
+   "accepted_at": "2026-11-18T14:00:32.119105Z",
+   "age_seconds": 8,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 8,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -66129,34 +61949,34 @@
    },
    "games": [
     [
-     4
+     5
     ],
     [
-     4
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 8,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
-    "15",
-    "30"
+    "40",
+    "40"
    ],
-   "received_at": "2026-11-18T13:45:16.127709Z",
-   "sequence": 50,
-   "server": 2,
+   "received_at": "2026-11-18T14:00:30.907822Z",
+   "sequence": 71,
+   "server": 1,
    "sets": [
     0,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T13:45:26.560975Z",
+   "timestamp": "2026-11-18T14:00:32.119104Z",
    "puntos": [
-    "15",
-    "30"
+    "40",
+    "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -66170,7 +61990,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-18T13:30:00Z",
+  "horario": "2026-11-18T13:40:00Z",
   "j1": {
    "id": 991,
    "nombre": "Laslo Djere",
@@ -66186,7 +62006,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T13:45:37.356Z",
+  "visto": "2026-11-18T14:00:40.970Z",
   "torneoClave": "challenger|Helsinki",
   "tier": null,
   "importante": false,
@@ -66194,11 +62014,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T13:45:26.112435Z",
-   "age_seconds": 11,
+   "accepted_at": "2026-11-18T13:59:48.422133Z",
+   "age_seconds": 52,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 9,
+   "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -66206,32 +62026,32 @@
    },
    "games": [
     [
-     1
+     4
     ],
     [
-     0
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "40",
-    "30"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-18T13:45:25.807774Z",
-   "sequence": 12,
+   "received_at": "2026-11-18T13:59:47.955319Z",
+   "sequence": 33,
    "server": 2,
    "sets": [
     0,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-18T13:45:35.103022Z",
+   "timestamp": "2026-11-18T14:00:33.791391Z",
    "puntos": [
-    "40",
-    "30"
+    "15",
+    "15"
    ],
    "saca": 2
   },
@@ -67933,11 +63753,11 @@
   "estado": "en_vivo",
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-18T13:44:51.406781Z",
-   "age_seconds": 45,
+   "accepted_at": "2026-11-18T14:00:17.127295Z",
+   "age_seconds": 23,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -67947,40 +63767,40 @@
     [
      6,
      2,
-     1
+     4
     ],
     [
      3,
      6,
-     1
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "40",
-    "0"
+    "30",
+    "15"
    ],
-   "received_at": "2026-11-18T13:44:51.286762Z",
-   "sequence": 148,
+   "received_at": "2026-11-18T14:00:16.759701Z",
+   "sequence": 170,
    "server": 2,
    "sets": [
     1,
     1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-18T13:45:35.047550Z",
+   "timestamp": "2026-11-18T14:00:33.743245Z",
    "puntos": [
-    "40",
-    "0"
+    "30",
+    "15"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-18T13:45:37.356Z",
+  "visto": "2026-11-18T14:00:40.970Z",
   "torneoClave": "challenger|Metz (France) - Qualification",
   "importante": false
  },
