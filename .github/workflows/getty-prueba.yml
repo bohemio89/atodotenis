@@ -7,4 +7,8 @@ jobs:
   prueba:
     runs-on: ubuntu-latest
     steps:
-      - run: curl -s "https://embed.gettyimages.com/oembed?url=https%3A%2F%2Fgty.im%2F2305719110"
+      - name: Firecrawl sin clave
+        run: |
+          curl -s -X POST https://api.firecrawl.dev/v2/scrape -H 'Content-Type: application/json' \
+            -d '{"url":"https://www.gettyimages.com/search/2/image?phrase=alcaraz%20medvedev&sort=newest&family=editorial","formats":["links"],"onlyMainContent":false}' \
+            | python3 -c "import json,sys;d=json.load(sys.stdin);print('success',d.get('success'),d.get('error'),str(d)[:300]);m=(d.get('data') or {}).get('metadata',{});print('captions',len(m.get('caption',[])),(m.get('caption') or [''])[:2]);print('links',(m.get('acquireLicensePage') or [''])[:2])"
