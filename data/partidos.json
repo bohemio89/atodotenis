@@ -40990,7 +40990,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T03:15:31.990Z",
   "torneoClave": "challenger|Champaign",
@@ -60828,7 +60828,7 @@
    "ranking": 439
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T03:15:31.990Z",
   "torneoClave": "challenger|Kobe",
@@ -60907,7 +60907,7 @@
    "ranking": 451
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T03:15:31.990Z",
   "torneoClave": "challenger|Kobe",
@@ -61417,7 +61417,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T03:15:31.990Z",
+  "visto": "2026-11-19T03:45:26.346Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -61425,8 +61425,8 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T03:15:18.118460Z",
-   "age_seconds": 13,
+   "accepted_at": "2026-11-19T03:44:55.483354Z",
+   "age_seconds": 30,
    "changing_sources_count": 2,
    "corroborated": true,
    "corroborated_age_seconds": 4,
@@ -61438,35 +61438,37 @@
    "games": [
     [
      4,
-     4
+     6,
+     1
     ],
     [
      6,
+     2,
      2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "30",
-    "15"
+    "15",
+    "0"
    ],
-   "received_at": "2026-11-19T03:15:17.276389Z",
-   "sequence": 110,
-   "server": 1,
+   "received_at": "2026-11-19T03:44:55.254721Z",
+   "sequence": 149,
+   "server": 2,
    "sets": [
-    0,
+    1,
     1
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-19T03:15:27.368402Z",
+   "timestamp": "2026-11-19T03:45:25.421344Z",
    "puntos": [
-    "30",
-    "15"
+    "15",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -61684,7 +61686,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T03:15:31.990Z",
+  "visto": "2026-11-19T03:45:26.346Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
   "importante": false,
@@ -61692,11 +61694,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T03:14:33.873330Z",
-   "age_seconds": 57,
+   "accepted_at": "2026-11-19T03:45:02.087557Z",
+   "age_seconds": 24,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 15,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -61704,34 +61706,36 @@
    },
    "games": [
     [
-     0
+     6,
+     1
     ],
     [
-     1
+     1,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-19T03:14:33.054086Z",
-   "sequence": 10,
-   "server": 1,
+   "received_at": "2026-11-19T03:45:01.748845Z",
+   "sequence": 49,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-19T03:15:25.489108Z",
+   "timestamp": "2026-11-19T03:45:25.422674Z",
    "puntos": [
-    "0",
-    "0"
+    "15",
+    "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -64048,17 +64052,17 @@
  },
  "222535": {
   "id": 222535,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Sydney",
   "ronda": "Sydney - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T03:30:00Z",
+  "horario": "2026-11-19T03:45:00Z",
   "j1": {
    "id": 32275,
-   "nombre": "Falck/ Suarez",
+   "nombre": "Billy Suarez / Reece Falck",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -64068,7 +64072,7 @@
   },
   "j2": {
    "id": 44932,
-   "nombre": "Jung/ Rai",
+   "nombre": "Jung / Rai",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -64077,12 +64081,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T22:00:40.905Z",
+  "visto": "2026-11-19T03:45:26.346Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8162",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T03:44:45.719059Z",
+   "age_seconds": 40,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-19T03:44:45.532399Z",
+   "sequence": 3,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-19T03:45:19.163842Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222536": {
   "id": 222536,
@@ -64191,7 +64242,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T03:30:00Z",
+  "horario": "2026-11-19T03:40:00Z",
   "j1": {
    "id": 212,
    "nombre": "Billy Harris",
@@ -64202,15 +64253,62 @@
    "id": 1041,
    "nombre": "Max Schoenhaus",
    "pais": "ger",
-   "ranking": 306
+   "ranking": 299
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-18T22:00:40.904Z",
+  "visto": "2026-11-19T03:45:26.346Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T03:45:16.886137Z",
+   "age_seconds": 9,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 7,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-19T03:45:16.384162Z",
+   "sequence": 15,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-19T03:45:16.886134Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222540": {
   "id": 222540,
@@ -64499,7 +64597,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T03:15:31.990Z",
   "torneoClave": "challenger|Sydney",
