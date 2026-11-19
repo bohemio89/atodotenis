@@ -10,7 +10,7 @@ import { execFileSync } from 'node:child_process';
 const KEY = process.env.LIVE_TENNIS_API_KEY;
 const BASE = 'https://api.livetennisapi.com/api/public/v1';
 const CADA_MIN = Number(process.env.VIVO_CADA_MIN || 6);       // minutos entre consultas
-const RESERVA = 8;                                              // consultas que siempre quedan para el robot principal
+const RESERVA = Number(process.env.VIVO_RESERVA || 8);                                              // consultas que siempre quedan para el robot principal
 const MAX_MIN = 340;                                            // GitHub corta los trabajos a las 6 horas
 const SIN_PARTIDOS_MIN = 25;                                    // si no hay Finals en juego ni por empezar, termina
 const log = (...a) => console.log(new Date().toISOString().slice(11, 19), ...a);

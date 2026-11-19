@@ -4,6 +4,15 @@ name: Seguimiento en vivo (Finals)
 # Consulta el marcador cada pocos minutos y lo deja en la rama "vivo" (no publica en Vercel).
 on:
   workflow_dispatch:
+    inputs:
+      cada:
+        description: 'Minutos entre consultas'
+        required: false
+        default: '6'
+      reserva:
+        description: 'Consultas que se dejan sin usar'
+        required: false
+        default: '8'
 
 permissions:
   contents: write
@@ -26,4 +35,6 @@ jobs:
         env:
           LIVE_TENNIS_API_KEY: ${{ secrets.LIVE_TENNIS_API_KEY }}
           GH_TOKEN: ${{ github.token }}
+          VIVO_CADA_MIN: ${{ github.event.inputs.cada || '6' }}
+          VIVO_RESERVA: ${{ github.event.inputs.reserva || '8' }}
         run: node scripts/vivo.mjs
