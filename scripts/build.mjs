@@ -294,7 +294,7 @@ f[0].querySelector('.sets').innerHTML=c(x.sets,0);f[1].querySelector('.sets').in
 if(x.estado==='en_vivo')r.innerHTML='<span class="vivo-dot"></span>'+(EN?'Live':'En vivo')+' · '+n;
 else if(x.estado==='terminado'){r.textContent=n+' · '+(EN?'Final':'Finalizado');if(x.ganador)f[x.ganador-1].classList.add('gana')}})}).catch(function(){})}
 t();setInterval(t,90000)})()</script>
-<script>(function(){var m=document.getElementById('contenido');if(!m||location.pathname.replace(/\/(en\/?)?$/,'')!=='')return;var EN=${EN ? 1 : 0};
+<script>(function(){var m=document.getElementById('contenido');if(!m||['/','/en','/en/','/index.html','/en/index.html'].indexOf(location.pathname)<0)return;var EN=${EN ? 1 : 0};
 function c(s,k){return s.map(function(x){var a=k?x[1]:x[0],o=k?x[0]:x[1];return '<i style="display:inline-block;min-width:22px;text-align:center;font-style:normal;'+(a>o?'color:#C6F432;font-weight:800':'')+'">'+a+'</i>'}).join('')}
 function e(t){return String(t||'').replace(/[&<>]/g,function(x){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[x]})}
 function t(){if(document.hidden)return;fetch('https://api.github.com/repos/bohemio89/atodotenis/contents/vivo.json?ref=vivo',{headers:{Accept:'application/vnd.github.raw+json'},cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
