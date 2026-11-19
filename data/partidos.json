@@ -29374,7 +29374,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T13:00:00Z",
+  "horario": "2026-11-19T13:10:00Z",
   "j1": {
    "id": 11,
    "nombre": "Ben Shelton",
@@ -29385,15 +29385,62 @@
    "id": 23,
    "nombre": "Rafael Jodar",
    "pais": "esp",
-   "ranking": 11
+   "ranking": 10
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:26.939Z",
+  "visto": "2026-11-19T13:15:38.834Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": "atp_finals",
-  "importante": true
+  "importante": true,
+  "torneoId": "2794",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T13:15:14.751895Z",
+   "age_seconds": 23,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-19T13:15:14.416196Z",
+   "sequence": 7,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-19T13:15:31.515726Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219751": {
   "id": 219751,
@@ -60258,26 +60305,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T13:00:00Z",
+  "horario": "2026-11-19T12:55:00Z",
   "j1": {
-   "id": 399,
-   "nombre": "Dalibor Svrcina",
-   "pais": "cze",
-   "ranking": 113
-  },
-  "j2": {
    "id": 219,
    "nombre": "Stefano Travaglia",
    "pais": "ita",
    "ranking": 175
   },
+  "j2": {
+   "id": 399,
+   "nombre": "Dalibor Svrcina",
+   "pais": "cze",
+   "ranking": 113
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:27.276Z",
+  "visto": "2026-11-19T13:15:38.834Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
-  "importante": false
+  "importante": false,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T13:15:29.864960Z",
+   "age_seconds": 8,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 7,
+   "origin": "observed",
+   "points": [
+    "15",
+    "0"
+   ],
+   "received_at": "2026-11-19T13:15:29.678548Z",
+   "sequence": 34,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-19T13:15:29.864957Z",
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222225": {
   "id": 222225,
@@ -63624,7 +63718,7 @@
    "ranking": 117
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T12:45:26.947Z",
   "torneoClave": "challenger|Helsinki",
@@ -63781,7 +63875,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T12:45:26.947Z",
   "torneoClave": "challenger|Metz (France)",
@@ -63839,17 +63933,17 @@
  },
  "222637": {
   "id": 222637,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Metz (France)",
   "ronda": "Metz - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T13:05:00Z",
+  "horario": "2026-11-19T13:10:00Z",
   "j1": {
    "id": 15783,
-   "nombre": "Cervantes/ Martinez",
+   "nombre": "Cervantes / Martinez",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -63859,7 +63953,7 @@
   },
   "j2": {
    "id": 37606,
-   "nombre": "Gonzalez/ Jebens",
+   "nombre": "Jebens / Santiago Gonzalez",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -63868,12 +63962,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:27.276Z",
+  "visto": "2026-11-19T13:15:38.834Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": "challenger_125",
-  "importante": false
+  "importante": false,
+  "torneoId": "14867",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T13:15:03.613505Z",
+   "age_seconds": 34,
+   "changing_sources_count": 3,
+   "corroborated": true,
+   "corroborated_age_seconds": 9,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 9,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-19T13:15:00.855058Z",
+   "sequence": 7,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-19T13:15:15.059456Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222652": {
   "id": 222652,
@@ -63900,7 +64041,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T12:45:26.947Z",
+  "visto": "2026-11-19T13:15:38.834Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": "challenger_125",
   "importante": false,
@@ -63908,8 +64049,8 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T12:45:01.281607Z",
-   "age_seconds": 24,
+   "accepted_at": "2026-11-19T13:14:46.066499Z",
+   "age_seconds": 52,
    "changing_sources_count": 2,
    "corroborated": true,
    "corroborated_age_seconds": 6,
@@ -63921,11 +64062,11 @@
    "games": [
     [
      6,
-     3
+     4
     ],
     [
      4,
-     1
+     5
     ]
    ],
    "is_tiebreak": false,
@@ -63935,21 +64076,21 @@
     "0",
     "0"
    ],
-   "received_at": "2026-11-19T12:45:00.260706Z",
-   "sequence": 99,
-   "server": 2,
+   "received_at": "2026-11-19T13:14:45.307388Z",
+   "sequence": 149,
+   "server": 1,
    "sets": [
     1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-19T12:45:12.597972Z",
+   "timestamp": "2026-11-19T13:15:01.134946Z",
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
