@@ -60908,7 +60908,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T15:30:38.260Z",
+  "visto": "2026-11-19T15:54:21.397Z",
   "torneoClave": "challenger|Colina",
   "tier": "wta_125",
   "importante": false,
@@ -60916,11 +60916,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T15:29:30.167044Z",
-   "age_seconds": 67,
-   "changing_sources_count": 2,
-   "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "accepted_at": "2026-11-19T15:54:17.671872Z",
+   "age_seconds": 2,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -60929,7 +60929,7 @@
    "games": [
     [
      4,
-     0
+     2
     ],
     [
      6,
@@ -60937,14 +60937,14 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "0",
+    "40",
     "0"
    ],
-   "received_at": "2026-11-19T15:29:29.822143Z",
-   "sequence": 74,
+   "received_at": "2026-11-19T15:54:16.956556Z",
+   "sequence": 99,
    "server": 1,
    "sets": [
     0,
@@ -60952,9 +60952,9 @@
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-19T15:29:42.889615Z",
+   "timestamp": "2026-11-19T15:54:17.671867Z",
    "puntos": [
-    "0",
+    "40",
     "0"
    ],
    "saca": 1
@@ -61270,26 +61270,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T15:30:00Z",
+  "horario": "2026-11-19T15:45:00Z",
   "j1": {
-   "id": 12400,
-   "nombre": "Alexander Ritschard",
-   "pais": "sui",
-   "ranking": 280
-  },
-  "j2": {
    "id": 501,
    "nombre": "Otto Virtanen",
    "pais": "fin",
    "ranking": 107
   },
+  "j2": {
+   "id": 12400,
+   "nombre": "Alexander Ritschard",
+   "pais": "sui",
+   "ranking": 278
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:27.276Z",
+  "visto": "2026-11-19T15:54:21.397Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
-  "importante": false
+  "importante": false,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T15:54:14.532247Z",
+   "age_seconds": 5,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "15",
+    "30"
+   ],
+   "received_at": "2026-11-19T15:54:14.157512Z",
+   "sequence": 29,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-19T15:54:14.532246Z",
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222404": {
   "id": 222404,
@@ -61553,7 +61600,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T15:30:38.260Z",
+  "visto": "2026-11-19T15:54:21.397Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": "challenger_125",
   "importante": false,
@@ -61561,11 +61608,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T15:30:07.869992Z",
-   "age_seconds": 30,
+   "accepted_at": "2026-11-19T15:54:11.821677Z",
+   "age_seconds": 8,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 10,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -61573,34 +61620,34 @@
    },
    "games": [
     [
-     0
+     5
     ],
     [
-     0
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-19T15:30:07.472117Z",
-   "sequence": 4,
-   "server": 2,
+   "received_at": "2026-11-19T15:54:10.979512Z",
+   "sequence": 45,
+   "server": 1,
    "sets": [
     0,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-19T15:30:32.397426Z",
+   "timestamp": "2026-11-19T15:54:11.821672Z",
    "puntos": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -64557,17 +64604,17 @@
  },
  "222732": {
   "id": 222732,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Helsinki",
   "ronda": "Helsinki - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T16:00:00Z",
+  "horario": "2026-11-19T15:40:00Z",
   "j1": {
    "id": 11266,
-   "nombre": "Rojer/ Winegar",
+   "nombre": "Rojer / Theodore Winegar",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -64577,7 +64624,7 @@
   },
   "j2": {
    "id": 45975,
-   "nombre": "Genov/ Kittay",
+   "nombre": "Genov / Kittay",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -64586,12 +64633,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:27.276Z",
+  "visto": "2026-11-19T15:54:21.397Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
-  "importante": false
+  "importante": false,
+  "torneoId": "2663",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T15:54:00.659309Z",
+   "age_seconds": 19,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "15",
+    "40"
+   ],
+   "received_at": "2026-11-19T15:53:59.469426Z",
+   "sequence": 27,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-19T15:54:11.786617Z",
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222733": {
   "id": 222733,
