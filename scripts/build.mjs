@@ -155,7 +155,7 @@ function imagenNota(n, conCredito = true) {
   const respaldo = placa(n) || cancha(n.superficie);
   // Foto de Getty (embed oficial): la misma foto de la nota en tarjetas y portada. Cubre todo el recuadro;
   // la barra gris de Getty queda debajo, fuera de la vista (dentro de la nota se ve completa).
-  if (gettySrc(n.getty) && n.getty.w && n.getty.h) {
+  if (gettySrc(n.getty) && n.getty.w && n.getty.h && !n.imagen?.portada) {
     const { w, h } = n.getty;
     return `<div class="fondo" style="background:#0B0E12;container-type:size;overflow:hidden"><iframe src="${esc(gettySrc(n.getty))}" title="Foto de Getty Images" loading="lazy" scrolling="no" frameborder="0" tabindex="-1" aria-hidden="true" style="position:absolute;left:50%;top:calc((100cqh - max(100cqw, calc(100cqh * ${w} / ${h})) * ${h} / ${w}) * 0.3);transform:translateX(-50%);border:0;pointer-events:none;width:max(100cqw, calc(100cqh * ${w} / ${h}));height:calc(max(100cqw, calc(100cqh * ${w} / ${h})) * ${h} / ${w} + 70px)"></iframe></div>`;
   }
