@@ -59668,7 +59668,7 @@
    "ranking": 168
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T06:15:28.748Z",
   "torneoClave": "challenger|Kobe",
@@ -62815,17 +62815,17 @@
  },
  "222559": {
   "id": 222559,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Kobe",
   "ronda": "Kobe - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T05:30:00Z",
+  "horario": "2026-11-19T06:20:00Z",
   "j1": {
-   "id": 44936,
-   "nombre": "Banthia/ Chandrasekar",
+   "id": 5320,
+   "nombre": "Finn Bass / Scott Duncan",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -62834,22 +62834,69 @@
    ]
   },
   "j2": {
-   "id": 5320,
-   "nombre": "Bass/ Duncan",
+   "id": 44936,
+   "nombre": "Anirudh Chandrasekar / Banthia",
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ind",
     null
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T04:15:27.238Z",
+  "visto": "2026-11-19T06:45:37.109Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8255",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T06:44:57.439458Z",
+   "age_seconds": 39,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "15",
+    "40"
+   ],
+   "received_at": "2026-11-19T06:44:57.246773Z",
+   "sequence": 46,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-19T06:45:31.335239Z",
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222560": {
   "id": 222560,
@@ -63007,7 +63054,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T06:15:28.748Z",
   "torneoClave": "challenger|Kobe",
