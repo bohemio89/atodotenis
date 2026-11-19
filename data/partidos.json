@@ -61482,12 +61482,12 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T04:15:00Z",
+  "horario": "2026-11-19T04:45:00Z",
   "j1": {
    "id": 75,
    "nombre": "Masamichi Imamura",
    "pais": "jpn",
-   "ranking": 439
+   "ranking": 434
   },
   "j2": {
    "id": 814,
@@ -61496,12 +61496,59 @@
    "ranking": 168
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T04:15:27.238Z",
+  "visto": "2026-11-19T05:15:26.291Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T05:15:12.579206Z",
+   "age_seconds": 13,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "15",
+    "40"
+   ],
+   "received_at": "2026-11-19T05:15:12.414786Z",
+   "sequence": 37,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-19T05:15:12.579201Z",
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222154": {
   "id": 222154,
@@ -64170,7 +64217,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T04:45:26.619Z",
+  "visto": "2026-11-19T05:15:26.291Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
   "importante": false,
@@ -64178,11 +64225,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T04:45:20.877006Z",
-   "age_seconds": 5,
+   "accepted_at": "2026-11-19T05:15:17.130728Z",
+   "age_seconds": 9,
    "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -64190,32 +64237,34 @@
    },
    "games": [
     [
+     3,
      1
     ],
     [
-     1
+     6,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 9,
    "origin": "observed",
    "points": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-19T04:45:20.617639Z",
-   "sequence": 13,
+   "received_at": "2026-11-19T05:15:16.770216Z",
+   "sequence": 59,
    "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-19T04:45:20.877004Z",
+   "timestamp": "2026-11-19T05:15:17.130726Z",
    "puntos": [
-    "15",
-    "15"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -64305,7 +64354,7 @@
    "ranking": 299
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T04:45:26.619Z",
   "torneoClave": "challenger|Kobe",
@@ -64386,7 +64435,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T04:45:26.619Z",
+  "visto": "2026-11-19T05:15:26.291Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -64394,9 +64443,9 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T04:44:51.014331Z",
-   "age_seconds": 35,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-19T05:15:08.278356Z",
+   "age_seconds": 17,
+   "changing_sources_count": 1,
    "corroborated": true,
    "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
@@ -64406,10 +64455,12 @@
    },
    "games": [
     [
-     4
+     5,
+     1
     ],
     [
-     4
+     7,
+     0
     ]
    ],
    "is_tiebreak": false,
@@ -64419,21 +64470,21 @@
     "AD",
     "40"
    ],
-   "received_at": "2026-11-19T04:44:50.731784Z",
-   "sequence": 69,
-   "server": 1,
+   "received_at": "2026-11-19T05:15:07.821883Z",
+   "sequence": 107,
+   "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-19T04:45:13.554114Z",
+   "timestamp": "2026-11-19T05:15:18.095676Z",
    "puntos": [
     "AD",
     "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
