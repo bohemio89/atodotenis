@@ -79,6 +79,8 @@ async function main() {
       const g = m.score?.games || [[], []];
       salida.partidos[m.id] = {
         estado: 'en_vivo',
+        j1: m.players?.p1?.name || partidos[m.id]?.j1?.nombre || '', j2: m.players?.p2?.name || partidos[m.id]?.j2?.nombre || '',
+        torneo: /wta/i.test(`${m.tier} ${m.tournament}`) ? 'WTA Finals' : 'ATP Finals',
         sets: (g[0] || []).map((a, i) => [a, (g[1] || [])[i] ?? 0]),
         puntos: m.score?.points || null,
         saca: m.score?.server || null,

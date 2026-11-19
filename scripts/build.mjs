@@ -293,6 +293,17 @@ if(!d||Date.now()-Date.parse(d.actualizado)>20*60e3)return;ps.forEach(function(e
 f[0].querySelector('.sets').innerHTML=c(x.sets,0);f[1].querySelector('.sets').innerHTML=c(x.sets,1);
 if(x.estado==='en_vivo')r.innerHTML='<span class="vivo-dot"></span>'+(EN?'Live':'En vivo')+' · '+n;
 else if(x.estado==='terminado'){r.textContent=n+' · '+(EN?'Final':'Finalizado');if(x.ganador)f[x.ganador-1].classList.add('gana')}})}).catch(function(){})}
+t();setInterval(t,90000)})()</script>
+<script>(function(){var m=document.getElementById('contenido');if(!m||location.pathname.replace(/\/(en\/?)?$/,'')!=='')return;var EN=${EN ? 1 : 0};
+function c(s,k){return s.map(function(x){var a=k?x[1]:x[0],o=k?x[0]:x[1];return '<i style="display:inline-block;min-width:22px;text-align:center;font-style:normal;'+(a>o?'color:#C6F432;font-weight:800':'')+'">'+a+'</i>'}).join('')}
+function e(t){return String(t||'').replace(/[&<>]/g,function(x){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[x]})}
+function t(){if(document.hidden)return;fetch('https://api.github.com/repos/bohemio89/atodotenis/contents/vivo.json?ref=vivo',{headers:{Accept:'application/vnd.github.raw+json'},cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
+var b=document.getElementById('vivo-finals');if(!d||Date.now()-Date.parse(d.actualizado)>40*60e3){if(b)b.remove();return}
+var ids=Object.keys(d.partidos).filter(function(k){var x=d.partidos[k];return x.sets&&x.j1&&(x.estado==='en_vivo'||x.estado==='terminado')});if(!ids.length){if(b)b.remove();return}
+if(!b){b=document.createElement('section');b.id='vivo-finals';b.style.cssText='margin:18px 0;padding:16px 18px;border:1px solid #2b3540;border-radius:10px;background:#1a2028';m.insertBefore(b,m.firstChild)}
+b.innerHTML=ids.map(function(k){var x=d.partidos[k],v=x.estado==='en_vivo';return '<div style="font:800 12px Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:'+(v?'#ff4d4f':'#9aa5b1')+';margin-bottom:8px">'+(v?'● '+(EN?'Live':'En vivo'):(EN?'Final':'Finalizado'))+' · '+e(x.torneo)+'</div>'+
+[[x.j1,0],[x.j2,1]].map(function(j){return '<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:16px'+(x.ganador===j[1]+1?';font-weight:800':'')+'"><span>'+e(j[0])+(v&&x.saca===j[1]+1?' <span style="color:#C6F432">●</span>':'')+'</span><span>'+c(x.sets,j[1])+(v&&x.puntos?'<i style="display:inline-block;min-width:34px;text-align:right;font-style:normal;color:#9aa5b1">'+e(x.puntos[j[1]])+'</i>':'')+'</span></div>'}).join('')}).join('<hr style="border:0;border-top:1px solid #2b3540;margin:10px 0">')+
+'<div style="font-size:12px;color:#9aa5b1;margin-top:8px">'+(EN?'Updated every few minutes':'Se actualiza cada pocos minutos')+'</div>'}).catch(function(){})}
 t();setInterval(t,90000)})()</script>`;
 
 function porTorneo(lista, max = 999, ordenarPorFecha = false) {
