@@ -59670,7 +59670,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T05:45:26.722Z",
+  "visto": "2026-11-19T06:15:28.748Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -59678,11 +59678,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T05:45:05.061199Z",
-   "age_seconds": 21,
-   "changing_sources_count": 2,
-   "corroborated": true,
-   "corroborated_age_seconds": 15,
+   "accepted_at": "2026-11-19T06:14:55.488685Z",
+   "age_seconds": 33,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -59691,33 +59691,33 @@
    "games": [
     [
      2,
-     2
+     4
     ],
     [
      6,
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "AD",
+    "40"
    ],
-   "received_at": "2026-11-19T05:45:04.952917Z",
-   "sequence": 73,
+   "received_at": "2026-11-19T06:14:55.139471Z",
+   "sequence": 118,
    "server": 1,
    "sets": [
     0,
     1
    ],
-   "sources_count": 2,
+   "sources_count": 1,
    "stale": false,
-   "timestamp": "2026-11-19T05:45:19.677664Z",
+   "timestamp": "2026-11-19T06:15:26.275162Z",
    "puntos": [
-    "0",
-    "0"
+    "AD",
+    "40"
    ],
    "saca": 1
   },
@@ -62607,7 +62607,7 @@
    "ranking": 273
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T05:45:26.722Z",
   "torneoClave": "challenger|Kobe",
@@ -63009,7 +63009,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T05:45:26.722Z",
+  "visto": "2026-11-19T06:15:28.748Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -63017,11 +63017,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T05:45:02.108687Z",
-   "age_seconds": 24,
+   "accepted_at": "2026-11-19T06:15:15.559925Z",
+   "age_seconds": 13,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 6,
+   "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -63029,32 +63029,34 @@
    },
    "games": [
     [
-     3
+     6,
+     0
     ],
     [
-     2
+     7,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "30",
-    "40"
+    "40",
+    "30"
    ],
-   "received_at": "2026-11-19T05:45:01.909461Z",
-   "sequence": 34,
+   "received_at": "2026-11-19T06:15:15.072429Z",
+   "sequence": 84,
    "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-19T05:45:24.139159Z",
+   "timestamp": "2026-11-19T06:15:15.559920Z",
    "puntos": [
-    "30",
-    "40"
+    "40",
+    "30"
    ],
    "saca": 2
   },
