@@ -5,7 +5,8 @@
 // Secreto necesario en GitHub: INSTAGRAM_TOKEN (token de larga duración de la cuenta).
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT, leerJSON, log } from './lib/util.mjs';
+import { ROOT, leerJSON, log, conGrafia } from './lib/util.mjs';
+import { gruposCerrados, recortesListos, htmlClasificados, textoClasificados } from './ig-clasificados.mjs';
 import { fotoJugador, focoJugador, slug } from './lib/ig-render.mjs';
 import { esATPFinals, tieneRecorte, datosFinals, htmlFinals } from './ig-finals.mjs';
 
@@ -20,7 +21,7 @@ const DIR_IMG = path.join(ROOT, 'static/ig');
 //   C 23 UTC (01 Israel · 00 Madrid · 20 Buenos Aires): resultados del día
 const TANDAS = [{ id: 'A', h: 11 }, { id: 'B', h: 16 }, { id: 'C', h: 23 }];
 const VENTANA_H = 2;            // cada tanda queda abierta 2 horas
-const MAX_POR_DIA = 3;
+const MAX_POR_DIA = 4;           // en días de Finals: resultado + clasificados del grupo
 const HORAS_VIGENCIA = 24;      // un resultado más viejo que esto ya no se publica
 const FORZAR = process.env.IG_FORZAR === '1';
 function tandaActual(d = new Date()) {
@@ -267,9 +268,11 @@ async function recientes(horas = 48) {
   const limite = Date.now() - horas * 3600e3;
   return recientesCache.filter((x) => new Date(x.timestamp).getTime() > limite);
 }
-async function yaEstaEnLaCuenta({ apellidos = [], claves = [], texto = '', propios = new Set() }) {
+async function yaEstaEnLaCuenta({ apellidos = [], claves = [], texto = '', propios = new Set(), desde = null }) {
   for (const x of await recientes()) {
     if (propios.has(x.id)) continue;
+    // solo cuenta lo subido después de que empezó el partido (una tabla del grupo con los dos nombres no es el resultado)
+    if (desde && new Date(x.timestamp).getTime() < new Date(desde).getTime()) continue;
     const cap = normTxt(x.caption);
     if (apellidos.length && apellidos.every((a) => cap.includes(apellidoDe(a)))) return x;
     if (claves.length && claves.every((k) => cap.includes(normTxt(k)))) return x;
@@ -291,7 +294,7 @@ async function publicar(inmediato = false) {
   if (!tanda) return;
   if (n?.resultado?.ganador?.nombre && n?.resultado?.perdedor?.nombre) {
     const propios = new Set(e.publicadas.map((p) => p.id).filter(Boolean));
-    const dup = await yaEstaEnLaCuenta({ apellidos: [n.resultado.ganador.nombre, n.resultado.perdedor.nombre], propios });
+    const dup = await yaEstaEnLaCuenta({ apellidos: [n.resultado.ganador.nombre, n.resultado.perdedor.nombre], propios, desde: n.fechaPartido || null });
     if (dup) { log('Ya está en la cuenta (subido a mano), no se duplica:', e.pendiente.slug, dup.id); e.publicadas.push({ slug: e.pendiente.slug, cubierta: 'manual', id: dup.id, fecha: new Date().toISOString() }); e.pendiente = null; guardarEstado(e); return; }
   }
   // La imagen tiene que estar online (Vercel la publica después del commit)
@@ -311,6 +314,56 @@ async function publicar(inmediato = false) {
   e.pendiente = null;
   guardarEstado(e);
   log(`Publicado en Instagram (@${yo.username}): ${pub.id}`);
+}
+
+// ATP Finals: cuando se cierra un grupo, placa "¡CLASIFICADOS!" con los dos que pasan a semifinales.
+// Se prepara apenas el último partido del grupo queda confirmado y se publica después del resultado de ese partido.
+const slugClas = (c) => `clasificados-atp-${c.grupo.normalize('NFD').replace(/[^A-Za-z0-9]+/g, '-').toLowerCase()}-${new Date().getUTCFullYear()}`;
+async function prepararClasificados() {
+  const e = leerEstado();
+  if (e.clasificados) return;
+  for (const c of gruposCerrados()) {
+    const slug = slugClas(c);
+    if (e.publicadas.some((p) => p.slug === slug)) continue;
+    if (Date.now() - new Date(c.ultimo).getTime() > 30 * 3600e3) continue; // grupo cerrado hace mucho
+    if (!recortesListos(c)) { log('Clasificados: falta el recorte de algún jugador para', c.grupo); continue; }
+    const { chromium } = await import('playwright-core');
+    const nav = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome', args: ['--allow-file-access-from-files'] });
+    try {
+      const p = await nav.newPage({ viewport: { width: 1080, height: 1080 } });
+      const tmp = path.join(ROOT, 'node_modules', '.ig-clasificados.html');
+      fs.writeFileSync(tmp, htmlClasificados(c));
+      await p.goto('file://' + tmp, { waitUntil: 'networkidle', timeout: 60000 });
+      await p.evaluate(async () => { await document.fonts.ready; });
+      const ok = await p.evaluate(() => [...document.images].every((i) => i.complete && i.naturalWidth > 50));
+      if (!ok) { log('Clasificados: una imagen no cargó, se reintenta.'); return; }
+      fs.mkdirSync(DIR_IMG, { recursive: true });
+      await p.locator('#p').screenshot({ path: path.join(DIR_IMG, `${slug}.jpg`), type: 'jpeg', quality: 94 });
+    } finally { await nav.close(); }
+    e.clasificados = { slug, imagen: `${SITIO}/ig/${slug}.jpg`, texto: textoClasificados(c), apellidos: c.clasificados.map((x) => x.nombre), preparada: new Date().toISOString() };
+    guardarEstado(e);
+    log('Placa de clasificados preparada:', slug);
+    return;
+  }
+}
+async function publicarClasificados() {
+  const e = leerEstado();
+  const c = e.clasificados;
+  if (!c || !TOKEN) return;
+  if (e.pendiente) { log('Clasificados: primero sale el resultado del partido.'); return; }
+  const hoy = new Date().toISOString().slice(0, 10);
+  if (e.publicadas.filter((p) => !p.cubierta && !p.borrada && p.fecha.slice(0, 10) === hoy).length >= MAX_POR_DIA) { log('Clasificados: ya hay', MAX_POR_DIA, 'publicaciones hoy.'); return; }
+  const dup = await yaEstaEnLaCuenta({ claves: ['clasificad', 'mcenroe'], texto: c.texto, propios: new Set(e.publicadas.map((p) => p.id).filter(Boolean)) });
+  if (dup) { log('Clasificados: ya está en la cuenta (subido a mano), no se duplica.', dup.id); e.publicadas.push({ slug: c.slug, cubierta: 'manual', id: dup.id, fecha: new Date().toISOString() }); e.clasificados = null; guardarEstado(e); return; }
+  const online = await fetch(c.imagen, { method: 'HEAD' }).then((r) => r.ok && /image/.test(r.headers.get('content-type') || '')).catch(() => false);
+  if (!online) { log('Clasificados: la imagen todavía no está online; se publica en la próxima corrida.'); return; }
+  const yo = await api(`${IG_ID}?fields=id,username`);
+  const cont = await api(`${yo.id}/media`, { method: 'POST', body: JSON.stringify({ image_url: c.imagen, caption: c.texto, alt_text: c.texto.split('\n')[0] }) });
+  for (let i = 0; i < 10; i++) { const s = await api(`${cont.id}?fields=status_code`); if (s.status_code === 'FINISHED') break; if (s.status_code === 'ERROR') throw new Error('Instagram no pudo procesar la imagen'); await new Promise((r) => setTimeout(r, 5000)); }
+  const pub = await api(`${yo.id}/media_publish`, { method: 'POST', body: JSON.stringify({ creation_id: cont.id }) });
+  e.publicadas.push({ slug: c.slug, id: pub.id, tanda: c.slug, fecha: new Date().toISOString() });
+  e.clasificados = null; guardarEstado(e);
+  log('Clasificados publicados en Instagram:', pub.id);
 }
 
 // Carruseles armados a mano (data/ig-carruseles.json): se publican una sola vez cada uno
@@ -383,7 +436,8 @@ async function salida() {
   const t = tandaActual();
   if (t?.id === 'B') { await carruseles().catch((x) => log('Carruseles:', x.message)); await publicar(true); }
   else { await publicar(true); await carruseles().catch((x) => log('Carruseles:', x.message)); }
+  await publicarClasificados().catch((x) => log('Clasificados:', x.message));
 }
 
 const modo = process.argv[2];
-(modo === 'salida' ? salida() : modo === 'publicar' ? publicar() : modo === 'carruseles' ? carruseles() : modo === 'perfil' ? perfil() : modo === 'borrar' ? borrar(process.argv[3] || '') : preparar()).catch((err) => { log('Instagram:', err.message); process.exit(0); });
+(modo === 'salida' ? salida() : modo === 'publicar' ? publicar() : modo === 'carruseles' ? carruseles() : modo === 'perfil' ? perfil() : modo === 'borrar' ? borrar(process.argv[3] || '') : preparar().then(() => prepararClasificados().catch((x) => log('Clasificados:', x.message)))).catch((err) => { log('Instagram:', err.message); process.exit(0); });
