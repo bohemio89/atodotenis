@@ -1,0 +1,20 @@
+name: Recorte de Zverev (prueba)
+on:
+  push:
+    branches: [media]
+    paths: [media/zverev-recorte.txt]
+permissions: { contents: write }
+jobs:
+  recortar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - run: |
+          curl -sL -A "ATodoTenis/1.0 (https://atodotenis.vercel.app)" -o /tmp/orig.png "https://upload.wikimedia.org/wikipedia/commons/3/31/Golf_open_compsoite.png"
+          pip install -q filetype "rembg[cpu,cli]" pillow >/dev/null 2>&1
+          python3 -c "from PIL import Image;im=Image.open('/tmp/orig.png').convert('RGB');w,h=im.size;im.crop((w//2,0,w,h)).save('/tmp/zv.jpg',quality=95);print(im.size)"
+          rembg i -m u2net_human_seg /tmp/zv.jpg media/zverev-cara.png
+      - run: |
+          git config user.name "A Todo Tenis bot" && git config user.email "bot@atodotenis.local"
+          git add media/zverev-cara.png && git commit -m "Recorte de Zverev" && git push || true
