@@ -1,0 +1,211 @@
+{
+ "slug": "2026-11-19-zverev-fils-escenarios-grupo-mcenroe",
+ "estado": "publicada",
+ "fecha": "2026-11-19T15:59:54.543Z",
+ "categoria": "ATP Finals",
+ "firma": "Redacción A Todo Tenis",
+ "generadoCon": "manual",
+ "manual": true,
+ "importancia": 80,
+ "etiquetas": [
+  "ATP Finals",
+  "Alexander Zverev",
+  "Arthur Fils",
+  "Ben Shelton"
+ ],
+ "jugadores": [
+  "Alexander Zverev",
+  "Arthur Fils",
+  "Ben Shelton"
+ ],
+ "tour": "atp",
+ "torneo": "ATP Finals",
+ "titulo": "Zverev–Fils: el partido que define al último semifinalista del grupo John McEnroe",
+ "bajada": "Shelton terminó la fase de grupos con un 2-1 y espera. A Fils solo le sirve ganarle a Zverev en dos sets: cualquier otro resultado clasifica al estadounidense.",
+ "cuerpo": [
+  "El grupo John McEnroe de las ATP Finals se cierra esta noche en Turín con Alexander Zverev ante Arthur Fils. El alemán, número 1 del mundo, ya está en semifinales como primero del grupo, así que lo que está en juego es el segundo lugar. Ben Shelton hizo su parte por la tarde: le ganó a Rafael Jódar 7-6 (8) y 7-5 y terminó con dos victorias y una derrota. Jódar se despidió con tres derrotas.",
+  "A Fils, que tiene un triunfo y una derrota, solo le sirve una cosa: ganarle a Zverev en dos sets. Si lo logra, Zverev, Shelton y él terminarían empatados con un 2-1, y en un triple empate el reglamento ordena por porcentaje de sets ganados. Con un 2-0, Fils quedaría con un 62,5 %, por encima del 57,1 % de Shelton, y Zverev se mantendría primero con un 66,7 %.",
+  "Si Fils gana en tres sets, en cambio, el porcentaje no le alcanza: quedaría con un 55,6 %, por debajo de Shelton. Y si gana Zverev, Fils termina 1-2 y queda eliminado. En los dos casos, el que avanza es Shelton.",
+  "Zverev llega lanzado: ganó sus dos partidos sin ceder sets, ante Jódar y Shelton, y busca su tercer título en el torneo después de los de 2018 y 2021. Fils, número 7 del ranking, juega las ATP Finals por primera vez; perdió su estreno con Shelton y se recuperó ante Jódar.",
+  "El que termine segundo enfrentará en semifinales al ganador del grupo Ivan Lendl, que se define el viernes. Carlos Alcaraz ya está clasificado en ese grupo."
+ ],
+ "imagen": {
+  "url": "/notas/zverev-fils-vs-2026-11-19.jpg",
+  "alt": "Zverev vs. Fils",
+  "credito": "Hameltion y Rick Munroe (CC BY 4.0) y Kuberzog (CC BY-SA 4.0), vía Wikimedia Commons; montaje: A Todo Tenis",
+  "enlace": "https://commons.wikimedia.org/wiki/File:Golf_open_compsoite.png",
+  "calidad": 3,
+  "jugador": "Alexander Zverev"
+ },
+ "bloques": [
+  {
+   "despuesDe": 0,
+   "tipo": "datos",
+   "titulo": {
+    "es": "Así está el grupo John McEnroe",
+    "en": "John McEnroe Group standings"
+   },
+   "fuente": {
+    "es": "ATP",
+    "en": "ATP"
+   },
+   "items": [
+    {
+     "valor": "2-0",
+     "texto": {
+      "es": "Zverev (ya clasificado, 1.º)",
+      "en": "Zverev (qualified, 1st)"
+     }
+    },
+    {
+     "valor": "2-1",
+     "texto": {
+      "es": "Shelton (terminó su fase de grupos)",
+      "en": "Shelton (group stage finished)"
+     }
+    },
+    {
+     "valor": "1-1",
+     "texto": {
+      "es": "Fils (juega con Zverev)",
+      "en": "Fils (plays Zverev)"
+     }
+    },
+    {
+     "valor": "0-3",
+     "texto": {
+      "es": "Jódar (eliminado)",
+      "en": "Jódar (eliminated)"
+     }
+    }
+   ]
+  },
+  {
+   "despuesDe": 1,
+   "tipo": "tarjetas",
+   "titulo": {
+    "es": "Quién clasifica según el resultado",
+    "en": "Who qualifies, result by result"
+   },
+   "fuente": {
+    "es": "ATP",
+    "en": "ATP"
+   },
+   "items": [
+    {
+     "arriba": {
+      "es": "Fils gana 2-0",
+      "en": "Fils wins in 2 sets"
+     },
+     "titulo": {
+      "es": "Clasifica Fils",
+      "en": "Fils qualifies"
+     },
+     "texto": {
+      "es": "Zverev 1.º y Fils 2.º por porcentaje de sets",
+      "en": "Zverev 1st, Fils 2nd on percentage of sets"
+     }
+    },
+    {
+     "arriba": {
+      "es": "Fils gana 2-1",
+      "en": "Fils wins in 3 sets"
+     },
+     "titulo": {
+      "es": "Clasifica Shelton",
+      "en": "Shelton qualifies"
+     },
+     "texto": {
+      "es": "A Fils no le alcanza el porcentaje de sets",
+      "en": "Fils falls short on percentage of sets"
+     }
+    },
+    {
+     "arriba": {
+      "es": "Gana Zverev",
+      "en": "Zverev wins"
+     },
+     "titulo": {
+      "es": "Clasifica Shelton",
+      "en": "Shelton qualifies"
+     },
+     "texto": {
+      "es": "Fils termina 1-2 y queda eliminado",
+      "en": "Fils finishes 1-2 and is out"
+     }
+    }
+   ]
+  },
+  {
+   "despuesDe": 1,
+   "tipo": "barras",
+   "titulo": {
+    "es": "Si Fils gana 2-0: porcentaje de sets ganados",
+    "en": "If Fils wins in 2 sets: percentage of sets won"
+   },
+   "items": [
+    {
+     "nombre": "Zverev",
+     "valor": 66.7,
+     "etiqueta": "66,7 %"
+    },
+    {
+     "nombre": "Fils",
+     "valor": 62.5,
+     "etiqueta": "62,5 %",
+     "destacado": true
+    },
+    {
+     "nombre": "Shelton",
+     "valor": 57.1,
+     "etiqueta": "57,1 %"
+    }
+   ]
+  },
+  {
+   "despuesDe": 2,
+   "tipo": "barras",
+   "titulo": {
+    "es": "Si Fils gana 2-1: porcentaje de sets ganados",
+    "en": "If Fils wins in 3 sets: percentage of sets won"
+   },
+   "fuente": {
+    "es": "ATP",
+    "en": "ATP"
+   },
+   "items": [
+    {
+     "nombre": "Zverev",
+     "valor": 71.4,
+     "etiqueta": "71,4 %"
+    },
+    {
+     "nombre": "Shelton",
+     "valor": 57.1,
+     "etiqueta": "57,1 %",
+     "destacado": true
+    },
+    {
+     "nombre": "Fils",
+     "valor": 55.6,
+     "etiqueta": "55,6 %"
+    }
+   ]
+  }
+ ],
+ "en": {
+  "categoria": "ATP Finals",
+  "titulo": "Zverev vs. Fils: the match that decides the John McEnroe Group’s last semi-finalist",
+  "bajada": "Shelton finished the group stage at 2-1 and now waits. Only a straight-sets win over Zverev works for Fils: any other result sends the American through.",
+  "cuerpo": [
+   "The John McEnroe Group at the ATP Finals wraps up tonight in Turin with Alexander Zverev against Arthur Fils. The German, world No. 1, is already into the semi-finals as group winner, so second place is what is at stake. Ben Shelton did his part in the afternoon: he beat Rafael Jódar 7-6 (8), 7-5 to finish with two wins and one loss. Jódar leaves with three losses.",
+   "Fils, who has one win and one loss, needs just one thing: to beat Zverev in straight sets. If he does, he, Zverev and Shelton would finish level at 2-1, and in a three-way tie the rules rank players by percentage of sets won. With a 2-0 win, Fils would finish at 62.5 %, ahead of Shelton’s 57.1 %, while Zverev would stay first at 66.7 %.",
+   "If Fils wins in three sets, however, the percentage is not enough: he would finish at 55.6 %, below Shelton. And if Zverev wins, Fils ends up 1-2 and is eliminated. In both cases, Shelton goes through.",
+   "Zverev arrives in top form: he won both his matches without dropping a set, against Jódar and Shelton, and is chasing his third title at the event after 2018 and 2021. Fils, ranked No. 7, is playing the ATP Finals for the first time; he lost his opener to Shelton and bounced back against Jódar.",
+   "Whoever finishes second will face the winner of the Ivan Lendl Group in the semi-finals, which will be decided on Friday. Carlos Alcaraz has already qualified from that group."
+  ],
+  "modelo": "manual",
+  "fecha": "2026-11-19T15:58:45.243Z",
+  "huella": "53a27ad5f144"
+ }
+}
