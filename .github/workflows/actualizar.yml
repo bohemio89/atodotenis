@@ -17,9 +17,14 @@ on:
         description: 'Solo para pruebas: IDs de partidos (separados por coma) para escribir notas sin publicarlas'
         required: false
         default: ''
+      forzar:
+        description: 'Actualizar ya, aunque la última actualización sea reciente (lo usa el seguimiento en vivo al terminar un partido)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: actualizar
@@ -37,7 +42,12 @@ jobs:
       - name: Traer datos de tenis
         env:
           LIVE_TENNIS_API_KEY: ${{ secrets.LIVE_TENNIS_API_KEY }}
-        run: node scripts/update.mjs
+          FORZAR: ${{ github.event.inputs.forzar }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Si el seguimiento en vivo de las Finals está corriendo, el marcador lo mueve él: acá no hace falta consultar tan seguido
+          export VIVO_ACTIVO=$(gh run list -w vivo.yml --status in_progress --json databaseId --jq 'length' 2>/dev/null || echo 0)
+          node scripts/update.mjs
       - name: Ranking oficial ATP y WTA
         run: 'node scripts/ranking-oficial.mjs || echo "Ranking oficial, se reintentara"'
       - name: Escribir notas con IA
@@ -87,6 +97,15 @@ jobs:
           node scripts/instagram.mjs preparar
       - name: Probar que el sitio se genera bien
         run: node scripts/build.mjs
+      - name: Seguimiento en vivo de las Finals
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Si hay un partido de ATP/WTA Finals en juego o por empezar (20 min), se lanza el seguimiento cada pocos minutos
+          if node -e "const d=require('./data/partidos.json');const a=Date.now();process.exit(Object.values(d).some(p=>p&&!p.dobles&&/finals/i.test((p.tier||'')+' '+(p.torneo||''))&&!/next ?gen/i.test(p.torneo||'')&&(p.estado==='en_vivo'||(p.estado==='programado'&&p.horario&&Date.parse(p.horario)-a<20*60e3&&a-Date.parse(p.horario)<4*3600e3)))?0:1)"; then
+            ACTIVOS=$(gh run list -w vivo.yml --json status --jq '[.[]|select(.status=="in_progress" or .status=="queued")]|length' 2>/dev/null || echo 0)
+            if [ "$ACTIVOS" = "0" ]; then gh workflow run vivo.yml && echo "Seguimiento en vivo lanzado"; else echo "Seguimiento en vivo ya activo"; fi
+          fi
       - name: Guardar cambios
         run: |
           git config user.name "A Todo Tenis bot"

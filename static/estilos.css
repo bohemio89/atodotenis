@@ -458,8 +458,8 @@ body{background:#0F1317}
 /* Bloques visuales dentro de las notas */
 .bq{margin:28px 0;padding:20px 22px;background:var(--panel);border:1px solid var(--linea);border-radius:10px}
 .bq-tit{font:800 15px/1.2 Montserrat,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--lima);margin:0 0 14px}
-.bq-fuente{font-size:12px;color:var(--tenue);margin:12px 0 0}
-.bq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.bq-fuente,.nota .cuerpo .bq-fuente{font-size:12px;line-height:1.4;color:var(--tenue);margin:12px 0 0}
+.bq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:12px}
 .bq-dato{background:var(--panel2);border-radius:8px;padding:14px 12px;text-align:center}
 .bq-dato strong{display:block;font:900 34px/1 Montserrat,sans-serif;color:var(--lima)}
 .bq-dato span{display:block;font-size:13px;color:var(--suave);margin-top:6px;line-height:1.3}

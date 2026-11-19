@@ -272,7 +272,11 @@ async function main() {
         (p.estado === 'programado' && Number.isFinite(inicio) &&
           inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 4 * 3600e3));
   });
-  const intervaloActualizacion = hayFinalesEnVentana ? 15 : hayPartidosEnVentana ? 30 : 60;
+  // Semana de Finals: el cupo diario de la API se reserva para los partidos de Turín y Riad/Indian Wells.
+  // Fuera de esos partidos se actualiza una vez por hora; si el seguimiento en vivo está activo, él mueve el marcador.
+  const semanaFinals = C.prioridadFinalsHasta && ahora < new Date(C.prioridadFinalsHasta);
+  const intervaloActualizacion = hayFinalesEnVentana ? (process.env.VIVO_ACTIVO > 0 ? 30 : 15)
+    : semanaFinals ? 60 : hayPartidosEnVentana ? 30 : 60;
   const reservaAPI = hayFinalesEnVentana ? 2 : C.reserva;
   const debeActualizarRanking = ventanaRanking && estado.semanaJugadores !== semanaActual;
   // No considerar el ranking actualizado por una sincronización diaria anterior
@@ -280,7 +284,7 @@ async function main() {
   if (estado.ultimaCorrida && (ahora - new Date(estado.ultimaCorrida)) / 60000 < intervaloActualizacion && !process.env.FORZAR && !debeActualizarRanking) {
     const ultimaVigilancia = estado.ultimaConsultaEnVivo ? new Date(estado.ultimaConsultaEnVivo).getTime() : 0;
     const intervaloVigilancia = hayFinalesEnVentana ? 15 : 30;
-    const tocaVigilar = hayPartidosEnVentana && ahoraMs - ultimaVigilancia >= intervaloVigilancia * 60000;
+    const tocaVigilar = (semanaFinals ? hayFinalesEnVentana && !(process.env.VIVO_ACTIVO > 0) : hayPartidosEnVentana) && ahoraMs - ultimaVigilancia >= intervaloVigilancia * 60000;
     // Reservar primero las consultas de las próximas actualizaciones completas y calendarios.
     const corridasRestantesVigilancia = forecastRuns(horasHastaReinicio, intervaloActualizacion);
     const calendariosRestantesVigilancia = forecastCalendarCalls(horasHastaReinicio, C.calendarioCadaHoras, C.toursCalendario.length);

@@ -1,0 +1,29 @@
+name: Seguimiento en vivo (Finals)
+
+# Lo lanza "Actualizar sitio" cuando hay un partido de ATP/WTA Finals en juego o por empezar.
+# Consulta el marcador cada pocos minutos y lo deja en la rama "vivo" (no publica en Vercel).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: vivo
+  cancel-in-progress: false
+
+jobs:
+  vivo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Seguir los partidos de las Finals
+        env:
+          LIVE_TENNIS_API_KEY: ${{ secrets.LIVE_TENNIS_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/vivo.mjs

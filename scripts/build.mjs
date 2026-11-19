@@ -229,6 +229,7 @@ var q=c.querySelector('[data-buscar]');if(q)q.addEventListener('input',function(
 });
 document.querySelectorAll('[data-tabs]').forEach(function(box){var bs=box.querySelectorAll('[role=tab]');bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-selected',x===b);document.getElementById(x.getAttribute('aria-controls')).classList.toggle('oculto',x!==b)})})})});
 </script>
+${scriptVivo()}
 </body>
 </html>`;
 }
@@ -281,8 +282,18 @@ function filaPartido(p) {
   else if (p.estado === 'cancelado') info += ' · Cancelado';
   else if (!fin && ['finalizado', 'por_confirmar'].includes(p.estado)) info += ' · Finalizado (resultado a confirmar)';
   if (p.resultado && p.resultado !== 'completed') info += ` · ${{ retired: 'Retiro', walkover: 'W.O.' }[p.resultado] || p.resultado}`;
-  return `<div class="partido"><div class="ronda">${info}</div>${fila(p.j1, 1)}${fila(p.j2, 2)}</div>`;
+  // Partidos de las Finals sin resultado final: el navegador lee el marcador en vivo (rama "vivo") y lo actualiza solo
+  const seguir = !fin && !p.dobles && /finals/i.test(`${p.tier || ''} ${p.torneo || ''}`) && !/next ?gen/i.test(p.torneo || '') && ['en_vivo', 'programado', 'por_confirmar', 'finalizado'].includes(p.estado);
+  return `<div class="partido"${seguir ? ` data-vivo="${esc(String(p.id))}" data-ronda="${esc(nombreRonda(p.rondaCod, p.ronda))}"` : ''}><div class="ronda">${info}</div>${fila(p.j1, 1)}${fila(p.j2, 2)}</div>`;
 }
+const scriptVivo = () => `<script>(function(){var ps=document.querySelectorAll('.partido[data-vivo]');if(!ps.length)return;var EN=${EN ? 1 : 0};
+function c(s,k){return s.map(function(x){var m=k?x[1]:x[0],o=k?x[0]:x[1];return '<i class="'+(m>o?'g':'')+'">'+m+'</i>'}).join('')}
+function t(){if(document.hidden)return;fetch('https://api.github.com/repos/bohemio89/atodotenis/contents/vivo.json?ref=vivo',{headers:{Accept:'application/vnd.github.raw+json'},cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
+if(!d||Date.now()-Date.parse(d.actualizado)>20*60e3)return;ps.forEach(function(e){var x=d.partidos[e.getAttribute('data-vivo')];if(!x||!x.sets)return;var f=e.querySelectorAll('.fila'),r=e.querySelector('.ronda'),n=e.getAttribute('data-ronda');
+f[0].querySelector('.sets').innerHTML=c(x.sets,0);f[1].querySelector('.sets').innerHTML=c(x.sets,1);
+if(x.estado==='en_vivo')r.innerHTML='<span class="vivo-dot"></span>'+(EN?'Live':'En vivo')+' · '+n;
+else if(x.estado==='terminado'){r.textContent=n+' · '+(EN?'Final':'Finalizado');if(x.ganador)f[x.ganador-1].classList.add('gana')}})}).catch(function(){})}
+t();setInterval(t,90000)})()</script>`;
 
 function porTorneo(lista, max = 999, ordenarPorFecha = false) {
   const grupos = new Map();
