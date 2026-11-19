@@ -2,17 +2,16 @@ import fs from 'node:fs';
 const UA = { 'User-Agent': 'ATodoTenis/1.0 (https://atodotenis.vercel.app)' };
 fs.mkdirSync('media/zverev', { recursive: true });
 const lista = [];
-for (const q of ['Alexander Zverev 2026', 'Alexander Zverev 2025', 'Zverev portrait', 'Alexander Zverev celebrates']) {
-  const u = 'https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=30&gsrsearch=' + encodeURIComponent(q + ' filetype:bitmap') + '&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=600';
+for (const cat of ['Alexander Zverev in 2026', 'Alexander Zverev in 2025', 'Alexander Zverev in 2024', 'Alexander Zverev']) {
+  const u = 'https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=categorymembers&gcmtype=file&gcmlimit=60&gcmsort=timestamp&gcmdir=desc&gcmtitle=' + encodeURIComponent('Category:' + cat) + '&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=600';
   const j = await (await fetch(u, { headers: UA })).json();
   for (const p of Object.values(j.query?.pages || {})) {
-    const i = p.imageinfo[0], m = i.extmetadata || {};
-    if (!/zverev/i.test(p.title) || i.width < 1500 || lista.some((x) => x.t === p.title)) continue;
-    if (/mischa|doubles|and |vs\.?|with/i.test(p.title)) continue;
+    const i = p.imageinfo?.[0]; if (!i) continue; const m = i.extmetadata || {};
+    if (i.width < 1400 || lista.some((x) => x.t === p.title) || /\.(svg|gif|webm|ogv)$/i.test(p.title)) continue;
     lista.push({ t: p.title, w: i.width, h: i.height, thumb: i.thumburl, orig: i.url, lic: m.LicenseShortName?.value, autor: (m.Artist?.value || '').replace(/<[^>]+>/g, '').trim().slice(0, 60) });
   }
 }
-const elegidas = lista.slice(0, 24);
+const elegidas = lista.slice(0, 36);
 for (const [k, x] of elegidas.entries()) {
   const b = Buffer.from(await (await fetch(x.thumb, { headers: UA })).arrayBuffer());
   fs.writeFileSync(`media/zverev/${String(k).padStart(2, '0')}.jpg`, b);
