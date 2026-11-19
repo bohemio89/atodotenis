@@ -1,0 +1,20 @@
+name: Recorte de Shelton (prueba)
+on:
+  push:
+    branches: [media]
+    paths: [media/shelton-recorte.txt]
+permissions: { contents: write }
+jobs:
+  recortar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - run: |
+          curl -sL -A "ATodoTenis/1.0 (https://atodotenis.vercel.app)" -o /tmp/orig.jpg "https://upload.wikimedia.org/wikipedia/commons/6/61/Ben_Shelton%2C_ATP_500_Basel_2024.jpg"
+          pip install -q filetype "rembg[cpu,cli]" pillow >/dev/null 2>&1
+          python3 -c "from PIL import Image;im=Image.open('/tmp/orig.jpg').convert('RGB');w,h=im.size;im.save('/tmp/zv.jpg',quality=95);print(im.size)"
+          rembg i -m u2net_human_seg /tmp/zv.jpg media/shelton-frente.png
+      - run: |
+          git config user.name "A Todo Tenis bot" && git config user.email "bot@atodotenis.local"
+          git add media/shelton-frente.png && git commit -m "Recorte de Shelton" && git push || true
