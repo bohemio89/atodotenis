@@ -63163,17 +63163,17 @@
  },
  "222572": {
   "id": 222572,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Kobe",
   "ronda": "Kobe - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T07:15:00Z",
+  "horario": "2026-11-19T08:20:00Z",
   "j1": {
    "id": 1530,
-   "nombre": "Dev S D/ Sinha",
+   "nombre": "Nitin Kumar Sinha / S D Prajwal Dev",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -63183,7 +63183,7 @@
   },
   "j2": {
    "id": 10162,
-   "nombre": "Loof/ Uesugi",
+   "nombre": "Kaito Uesugi / Loof",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -63192,12 +63192,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T04:15:27.238Z",
+  "visto": "2026-11-19T08:45:26.960Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8255",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T08:45:03.039425Z",
+   "age_seconds": 22,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     5
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-19T08:45:02.613593Z",
+   "sequence": 42,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-19T08:45:16.527211Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222609": {
   "id": 222609,
