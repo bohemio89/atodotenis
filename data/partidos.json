@@ -62846,7 +62846,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T06:45:37.109Z",
+  "visto": "2026-11-19T07:15:26.377Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -62854,11 +62854,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T06:44:57.439458Z",
-   "age_seconds": 39,
+   "accepted_at": "2026-11-19T07:15:09.924931Z",
+   "age_seconds": 14,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 12,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -62866,32 +62866,34 @@
    },
    "games": [
     [
-     4
+     6,
+     1
     ],
     [
-     4
+     7,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 12,
    "origin": "observed",
    "points": [
     "15",
-    "40"
+    "30"
    ],
-   "received_at": "2026-11-19T06:44:57.246773Z",
-   "sequence": 46,
+   "received_at": "2026-11-19T07:15:09.650354Z",
+   "sequence": 88,
    "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-19T06:45:31.335239Z",
+   "timestamp": "2026-11-19T07:15:09.924926Z",
    "puntos": [
     "15",
-    "40"
+    "30"
    ],
    "saca": 2
   },
@@ -62900,17 +62902,17 @@
  },
  "222560": {
   "id": 222560,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Kobe",
   "ronda": "Kobe - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T05:45:00Z",
+  "horario": "2026-11-19T07:00:00Z",
   "j1": {
    "id": 4989,
-   "nombre": "Reynolds/ Watt",
+   "nombre": "Finn Reynolds / James Watt",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -62920,7 +62922,7 @@
   },
   "j2": {
    "id": 42968,
-   "nombre": "Ichikawa/ Shimizu",
+   "nombre": "Ichikawa / Shimizu",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -62929,12 +62931,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T04:15:27.238Z",
+  "visto": "2026-11-19T07:15:26.377Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8255",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T07:14:54.358861Z",
+   "age_seconds": 30,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "30",
+    "40"
+   ],
+   "received_at": "2026-11-19T07:14:54.156682Z",
+   "sequence": 30,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-19T07:15:17.916453Z",
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222561": {
   "id": 222561,
