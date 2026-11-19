@@ -29390,7 +29390,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T14:30:38.229Z",
+  "visto": "2026-11-19T15:00:42.084Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": "atp_finals",
   "importante": true,
@@ -29398,11 +29398,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T14:30:15.449418Z",
-   "age_seconds": 22,
+   "accepted_at": "2026-11-19T15:00:24.155166Z",
+   "age_seconds": 17,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -29411,33 +29411,33 @@
    "games": [
     [
      7,
-     0
+     4
     ],
     [
      6,
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "40",
-    "AD"
+    "30",
+    "15"
    ],
-   "received_at": "2026-11-19T14:30:15.161661Z",
-   "sequence": 110,
+   "received_at": "2026-11-19T15:00:23.636714Z",
+   "sequence": 152,
    "server": 2,
    "sets": [
     1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 4,
    "stale": false,
-   "timestamp": "2026-11-19T14:30:33.128566Z",
+   "timestamp": "2026-11-19T15:00:24.155164Z",
    "puntos": [
-    "40",
-    "AD"
+    "30",
+    "15"
    ],
    "saca": 2
   },
@@ -41593,7 +41593,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "wta_125",
   "torneoId": "8223",
   "cubierto": false,
   "resultado": null,
@@ -41671,7 +41671,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "wta_125",
   "torneoId": "8223",
   "cubierto": false,
   "resultado": null,
@@ -41749,7 +41749,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -41825,7 +41825,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -41904,7 +41904,7 @@
   "motivo": null,
   "visto": "2026-11-17T17:16:48.789Z",
   "torneoClave": "challenger|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -41983,7 +41983,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:31:06.058Z",
   "torneoClave": "challenger|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -42062,7 +42062,7 @@
   "motivo": null,
   "visto": "2026-11-17T19:45:26.488Z",
   "torneoClave": "challenger|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -42141,7 +42141,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.812Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -42301,7 +42301,7 @@
   "motivo": null,
   "visto": "2026-11-17T17:53:54.716Z",
   "torneoClave": "challenger|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -42380,7 +42380,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.812Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -42459,7 +42459,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -42621,7 +42621,7 @@
   "motivo": null,
   "visto": "2026-11-17T16:00:46.890Z",
   "torneoClave": "challenger|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -42700,7 +42700,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.812Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -42781,7 +42781,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.812Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -54201,7 +54201,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:00:41.812Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -54361,7 +54361,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.812Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -54440,7 +54440,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.812Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -55984,7 +55984,7 @@
   "motivo": null,
   "visto": "2026-11-17T18:30:36.339Z",
   "torneoClave": "challenger|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8224",
   "cubierto": false,
@@ -56071,7 +56071,7 @@
   "motivo": null,
   "visto": "2026-11-18T17:45:28.989Z",
   "torneoClave": "challenger|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8224",
   "cubierto": false,
@@ -56158,7 +56158,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8224",
   "cubierto": false,
@@ -56245,7 +56245,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false
  },
  "221632": {
@@ -57344,7 +57344,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -60566,7 +60566,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false
  },
  "222233": {
@@ -60596,7 +60596,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false
  },
  "222255": {
@@ -60874,33 +60874,80 @@
  },
  "222395": {
   "id": 222395,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Colina",
   "ronda": "Colina - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-19T14:30:00Z",
+  "horario": "2026-11-19T14:35:00Z",
   "j1": {
+   "id": 275,
+   "nombre": "Carole Monnet",
+   "pais": "fra",
+   "ranking": 209
+  },
+  "j2": {
    "id": 811,
    "nombre": "Lucia Bronzetti",
    "pais": "ita",
    "ranking": 135
   },
-  "j2": {
-   "id": 275,
-   "nombre": "Carole Monnet",
-   "pais": "fra",
-   "ranking": 214
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:27.276Z",
-  "torneoClave": "challenger_women|Colina",
-  "tier": null,
-  "importante": false
+  "visto": "2026-11-19T15:00:42.084Z",
+  "torneoClave": "challenger|Colina",
+  "tier": "wta_125",
+  "importante": false,
+  "torneoId": "8223",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T14:59:37.985652Z",
+   "age_seconds": 63,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "40",
+    "40"
+   ],
+   "received_at": "2026-11-19T14:59:37.862802Z",
+   "sequence": 36,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-19T15:00:39.622446Z",
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222396": {
   "id": 222396,
@@ -60929,7 +60976,7 @@
   "motivo": null,
   "visto": "2026-11-18T18:15:29.721Z",
   "torneoClave": "challenger|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -61256,7 +61303,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T14:30:38.229Z",
+  "visto": "2026-11-19T15:00:42.084Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": "challenger_125",
   "importante": false,
@@ -61264,11 +61311,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T14:30:33.172488Z",
-   "age_seconds": 4,
+   "accepted_at": "2026-11-19T15:00:23.208539Z",
+   "age_seconds": 18,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -61277,33 +61324,33 @@
    "games": [
     [
      6,
-     1
+     4
     ],
     [
      2,
-     2
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "15",
-    "15"
+    "30",
+    "0"
    ],
-   "received_at": "2026-11-19T14:30:33.000575Z",
-   "sequence": 70,
+   "received_at": "2026-11-19T15:00:22.973061Z",
+   "sequence": 121,
    "server": 1,
    "sets": [
     1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 4,
    "stale": false,
-   "timestamp": "2026-11-19T14:30:33.172486Z",
+   "timestamp": "2026-11-19T15:00:39.639726Z",
    "puntos": [
-    "15",
-    "15"
+    "30",
+    "0"
    ],
    "saca": 1
   },
@@ -61525,7 +61572,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false
  },
  "222463": {
@@ -61642,7 +61689,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
   "cubierto": false,
@@ -62421,7 +62468,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false
  },
  "222527": {
@@ -63891,7 +63938,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false
  },
  "222636": {
@@ -64012,7 +64059,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T14:30:38.229Z",
   "torneoClave": "challenger|Metz (France)",
@@ -64394,7 +64441,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T14:30:38.229Z",
+  "visto": "2026-11-19T15:00:42.084Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
   "importante": false,
@@ -64402,8 +64449,8 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T14:30:14.074325Z",
-   "age_seconds": 24,
+   "accepted_at": "2026-11-19T14:59:56.712945Z",
+   "age_seconds": 45,
    "changing_sources_count": 2,
    "corroborated": true,
    "corroborated_age_seconds": 2,
@@ -64414,9 +64461,11 @@
    },
    "games": [
     [
-     2
+     2,
+     3
     ],
     [
+     6,
      2
     ]
    ],
@@ -64425,23 +64474,23 @@
    "origin": "observed",
    "points": [
     "0",
-    "40"
+    "0"
    ],
-   "received_at": "2026-11-19T14:30:13.688081Z",
-   "sequence": 25,
-   "server": 2,
+   "received_at": "2026-11-19T14:59:55.845830Z",
+   "sequence": 72,
+   "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-19T14:30:30.637839Z",
+   "timestamp": "2026-11-19T15:00:06.367454Z",
    "puntos": [
     "0",
-    "40"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -64643,7 +64692,7 @@
    "ranking": 483
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T14:30:38.229Z",
   "torneoClave": "challenger|Helsinki",
@@ -65070,7 +65119,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false
  },
  "222825": {
@@ -65159,7 +65208,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger_women|Colina",
-  "tier": null,
+  "tier": "wta_125",
   "importante": false
  },
  "222869": {
