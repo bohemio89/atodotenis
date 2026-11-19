@@ -27654,7 +27654,7 @@
   "motivo": null,
   "visto": "2026-11-17T18:30:36.339Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false,
   "torneoId": "2795",
   "cubierto": true,
@@ -27741,7 +27741,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:00:41.643Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false,
   "torneoId": "2795",
   "cubierto": true,
@@ -27828,7 +27828,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:26.939Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false
  },
  "219725": {
@@ -27866,7 +27866,7 @@
   "motivo": null,
   "visto": "2026-11-15T21:30:29.898Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false,
   "torneoId": "2795",
   "cubierto": true,
@@ -27952,7 +27952,7 @@
   "motivo": null,
   "visto": "2026-11-15T21:30:29.898Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false,
   "torneoId": "2795",
   "cubierto": true,
@@ -28006,7 +28006,7 @@
  },
  "219727": {
   "id": 219727,
-  "tour": "atp_doubles",
+  "tour": "atp",
   "torneo": "Finals - Turin",
   "ronda": null,
   "rondaCod": null,
@@ -28015,8 +28015,18 @@
   "genero": "men",
   "horario": "2026-11-19T10:30:00Z",
   "j1": {
+   "id": 1388,
+   "nombre": "Orlando Luz / Rafael Matos",
+   "pais": null,
+   "ranking": 97,
+   "paises": [
+    "bra",
+    "bra"
+   ]
+  },
+  "j2": {
    "id": 1761,
-   "nombre": "Arevalo/ Pavic",
+   "nombre": "Marcelo Arevalo / Mate Pavic",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -28024,23 +28034,60 @@
     "cro"
    ]
   },
-  "j2": {
-   "id": 1388,
-   "nombre": "Luz/ Matos",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "bra",
-    "bra"
-   ]
-  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:26.939Z",
+  "visto": "2026-11-19T10:45:27.388Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
-  "importante": false
+  "tier": "atp_finals",
+  "importante": false,
+  "torneoId": "2795",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T10:45:06.851809Z",
+   "age_seconds": 19,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "30",
+    "15"
+   ],
+   "received_at": "2026-11-19T10:45:06.218033Z",
+   "sequence": 10,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-19T10:45:18.798658Z",
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "219728": {
   "id": 219728,
@@ -28077,7 +28124,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:26.939Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false
  },
  "219729": {
@@ -28115,7 +28162,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.079Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false,
   "torneoId": "2795",
   "cubierto": true,
@@ -28202,7 +28249,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.471Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false,
   "torneoId": "2795",
   "cubierto": true,
@@ -28289,7 +28336,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:26.939Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false
  },
  "219732": {
@@ -28327,7 +28374,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.471Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false,
   "torneoId": "2795",
   "cubierto": true,
@@ -28414,7 +28461,7 @@
   "motivo": null,
   "visto": "2026-11-18T18:15:29.721Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": false,
   "torneoId": "2795",
   "cubierto": true,
@@ -28783,7 +28830,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.079Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true,
   "torneoId": "2794",
   "cubierto": true,
@@ -28862,7 +28909,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:26.939Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true
  },
  "219744": {
@@ -28892,7 +28939,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.471Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true,
   "torneoId": "2794",
   "cubierto": true,
@@ -28971,7 +29018,7 @@
   "motivo": null,
   "visto": "2026-11-18T23:00:41.792Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true,
   "torneoId": "2794",
   "cubierto": true,
@@ -29061,7 +29108,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:31:06.339Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true,
   "torneoId": "2794",
   "cubierto": true,
@@ -29142,7 +29189,7 @@
   "motivo": null,
   "visto": "2026-11-17T04:33:50.753Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true,
   "torneoId": "2794",
   "cubierto": true,
@@ -29232,7 +29279,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:26.939Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true
  },
  "219749": {
@@ -29262,7 +29309,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:31:06.478Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true,
   "torneoId": "2794",
   "cubierto": true,
@@ -29343,7 +29390,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:26.939Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true
  },
  "219751": {
@@ -29373,7 +29420,7 @@
   "motivo": null,
   "visto": "2026-11-17T22:12:44.774Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true,
   "torneoId": "2794",
   "cubierto": true,
@@ -29463,7 +29510,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:26.939Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true
  },
  "219753": {
@@ -29493,7 +29540,7 @@
   "motivo": null,
   "visto": "2026-11-15T21:30:29.898Z",
   "torneoClave": "atp|Finals - Turin",
-  "tier": null,
+  "tier": "atp_finals",
   "importante": true,
   "torneoId": "2794",
   "cubierto": true,
@@ -63331,7 +63378,7 @@
  },
  "222611": {
   "id": 222611,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Metz (France)",
   "ronda": "Metz - Quarter-finals",
   "rondaCod": "QF",
@@ -63362,7 +63409,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:27.276Z",
+  "visto": "2026-11-19T10:45:27.388Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": "challenger_125",
   "importante": false,
@@ -63370,11 +63417,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T10:14:51.908133Z",
-   "age_seconds": 32,
+   "accepted_at": "2026-11-19T10:45:18.795070Z",
+   "age_seconds": 8,
    "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -63382,29 +63429,31 @@
    },
    "games": [
     [
+     6,
      0
     ],
     [
+     2,
      1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 8,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-19T10:14:50.393089Z",
-   "sequence": 6,
+   "received_at": "2026-11-19T10:45:13.825856Z",
+   "sequence": 48,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-19T10:15:00.918511Z",
+   "timestamp": "2026-11-19T10:45:18.795069Z",
    "puntos": [
     "0",
     "0"
@@ -63416,7 +63465,7 @@
  },
  "222612": {
   "id": 222612,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Metz (France)",
   "ronda": "Metz - Quarter-finals",
   "rondaCod": "QF",
@@ -63447,7 +63496,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:27.276Z",
+  "visto": "2026-11-19T10:45:27.388Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": "challenger_125",
   "importante": false,
@@ -63455,8 +63504,8 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T10:15:17.941691Z",
-   "age_seconds": 6,
+   "accepted_at": "2026-11-19T10:45:18.810637Z",
+   "age_seconds": 7,
    "changing_sources_count": 1,
    "corroborated": false,
    "corroborated_age_seconds": null,
@@ -63467,31 +63516,33 @@
    },
    "games": [
     [
+     4,
      1
     ],
     [
+     6,
      1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "40",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-19T10:15:16.946208Z",
-   "sequence": 10,
+   "received_at": "2026-11-19T10:45:13.168319Z",
+   "sequence": 57,
    "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-19T10:15:17.941689Z",
+   "timestamp": "2026-11-19T10:45:18.810634Z",
    "puntos": [
-    "40",
+    "0",
     "0"
    ],
    "saca": 1
