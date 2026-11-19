@@ -28037,7 +28037,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T11:15:31.159Z",
+  "visto": "2026-11-19T11:45:37.595Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": "atp_finals",
   "importante": false,
@@ -28045,11 +28045,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T11:13:24.043009Z",
-   "age_seconds": 127,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-19T11:45:23.980495Z",
+   "age_seconds": 13,
+   "changing_sources_count": 3,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -28058,30 +28058,30 @@
    "games": [
     [
      3,
-     0
+     3
     ],
     [
      6,
-     0
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-19T11:13:22.816772Z",
-   "sequence": 53,
+   "received_at": "2026-11-19T11:45:22.656789Z",
+   "sequence": 94,
    "server": 1,
    "sets": [
     0,
     1
    ],
-   "sources_count": 2,
-   "stale": true,
-   "timestamp": "2026-11-19T11:15:27.410202Z",
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-19T11:45:23.980494Z",
    "puntos": [
     "0",
     "0"
@@ -37638,7 +37638,7 @@
   "motivo": "cancelled",
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "220268": {
@@ -37676,7 +37676,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "220269": {
@@ -37714,7 +37714,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:31:06.058Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "2663",
   "cubierto": true,
@@ -37801,7 +37801,7 @@
   "motivo": null,
   "visto": "2026-11-17T17:53:54.716Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "2663",
   "cubierto": true,
@@ -37888,7 +37888,7 @@
   "motivo": null,
   "visto": "2026-11-18T17:15:27.085Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "2663",
   "cubierto": true,
@@ -37975,7 +37975,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:45:27.542Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "2663",
   "cubierto": true,
@@ -38062,7 +38062,7 @@
   "motivo": null,
   "visto": "2026-11-17T18:30:36.339Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "2663",
   "cubierto": true,
@@ -42810,7 +42810,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -42888,7 +42888,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "220409": {
@@ -42917,7 +42917,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -42997,7 +42997,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -43075,7 +43075,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -43153,7 +43153,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -43231,7 +43231,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -43307,7 +43307,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -43383,7 +43383,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -43461,7 +43461,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -43541,7 +43541,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -43619,7 +43619,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-15T21:30:30.112Z",
-  "tier": null,
+  "tier": "challenger_125",
   "torneoId": "3200",
   "cubierto": true,
   "resultado": null,
@@ -44380,7 +44380,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.811Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -44461,7 +44461,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.811Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -44540,7 +44540,7 @@
   "motivo": null,
   "visto": "2026-11-18T17:45:28.989Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -44621,7 +44621,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -44700,7 +44700,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.811Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -44779,7 +44779,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.811Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -44860,7 +44860,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.811Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -44941,7 +44941,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -45022,7 +45022,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:00:41.812Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -45103,7 +45103,7 @@
   "motivo": "cancelled",
   "visto": "2026-11-17T15:00:41.812Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "220439": {
@@ -52343,7 +52343,7 @@
   "motivo": null,
   "visto": "2026-11-16T21:09:06.812Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -52659,7 +52659,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-16T21:09:06.812Z",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -52737,7 +52737,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-16T21:09:06.812Z",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -53287,7 +53287,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-16T21:09:06.811Z",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -53365,7 +53365,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-16T21:09:06.811Z",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -53443,7 +53443,7 @@
   "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-16T21:09:06.811Z",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -56226,7 +56226,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:00:41.812Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -56307,7 +56307,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:00:41.812Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -56386,7 +56386,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:00:41.812Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -56465,7 +56465,7 @@
   "motivo": null,
   "visto": "2026-11-17T16:30:37.241Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -56546,7 +56546,7 @@
   "motivo": null,
   "visto": "2026-11-17T15:00:41.812Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -56627,7 +56627,7 @@
   "motivo": null,
   "visto": "2026-11-17T17:16:48.789Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -56708,7 +56708,7 @@
   "motivo": null,
   "visto": "2026-11-17T19:00:43.201Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -57374,7 +57374,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -60037,7 +60037,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -60195,7 +60195,7 @@
   "motivo": null,
   "visto": "2026-11-18T16:00:41.283Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "3200",
   "cubierto": true,
@@ -60276,7 +60276,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "222225": {
@@ -60392,7 +60392,7 @@
   "motivo": null,
   "visto": "2026-11-18T18:15:29.722Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false,
   "torneoId": "2663",
   "cubierto": true,
@@ -60692,7 +60692,7 @@
  },
  "222394": {
   "id": 222394,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Helsinki",
   "ronda": "Helsinki - Quarter-finals",
   "rondaCod": "QF",
@@ -60701,8 +60701,8 @@
   "genero": "men",
   "horario": "2026-11-19T11:30:00Z",
   "j1": {
-   "id": 39344,
-   "nombre": "Pereira/ Winter Lopez",
+   "id": 13246,
+   "nombre": "Jakub Paul / Matej Vocel",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -60711,8 +60711,8 @@
    ]
   },
   "j2": {
-   "id": 13246,
-   "nombre": "Paul/ Vocel",
+   "id": 39344,
+   "nombre": "Benjamin Winter Lopez / Pereira",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -60721,12 +60721,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:27.276Z",
+  "visto": "2026-11-19T11:45:37.595Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
-  "importante": false
+  "tier": "challenger_125",
+  "importante": false,
+  "torneoId": "2663",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T11:45:29.228884Z",
+   "age_seconds": 8,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-19T11:45:28.774256Z",
+   "sequence": 11,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-19T11:45:37.331335Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222395": {
   "id": 222395,
@@ -61084,7 +61131,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "222404": {
@@ -63409,7 +63456,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T11:15:31.159Z",
   "torneoClave": "challenger|Metz (France)",
@@ -63496,7 +63543,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-19T11:15:31.159Z",
   "torneoClave": "challenger|Metz (France)",
@@ -63575,12 +63622,59 @@
    "ranking": 117
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T10:15:27.276Z",
+  "visto": "2026-11-19T11:45:37.596Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
-  "importante": false
+  "tier": "challenger_125",
+  "importante": false,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-19T11:45:11.361985Z",
+   "age_seconds": 26,
+   "changing_sources_count": 3,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "30",
+    "40"
+   ],
+   "received_at": "2026-11-19T11:45:10.994524Z",
+   "sequence": 12,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-19T11:45:37.121992Z",
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222618": {
   "id": 222618,
@@ -63609,7 +63703,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "222635": {
@@ -63843,7 +63937,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "222708": {
@@ -64005,7 +64099,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "222732": {
@@ -64043,7 +64137,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "222733": {
@@ -64209,7 +64303,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "222787": {
@@ -64285,7 +64379,7 @@
   "motivo": null,
   "visto": "2026-11-19T10:15:27.276Z",
   "torneoClave": "challenger|Helsinki",
-  "tier": null,
+  "tier": "challenger_125",
   "importante": false
  },
  "222795": {
