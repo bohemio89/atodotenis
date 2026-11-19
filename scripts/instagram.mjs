@@ -440,4 +440,9 @@ async function salida() {
 }
 
 const modo = process.argv[2];
+// Pausa manual: mientras rija, el robot no prepara ni publica nada (Jonathan publica a mano).
+if (!['perfil', 'borrar'].includes(modo) && CONFIG.instagram?.manualHasta && new Date(CONFIG.instagram.manualHasta) > new Date()) {
+  log(`Instagram en modo manual hasta ${CONFIG.instagram.manualHasta}: no se prepara ni publica nada.`);
+  process.exit(0);
+}
 (modo === 'salida' ? salida() : modo === 'publicar' ? publicar() : modo === 'carruseles' ? carruseles() : modo === 'perfil' ? perfil() : modo === 'borrar' ? borrar(process.argv[3] || '') : preparar().then(() => prepararClasificados().catch((x) => log('Clasificados:', x.message)))).catch((err) => { log('Instagram:', err.message); process.exit(0); });

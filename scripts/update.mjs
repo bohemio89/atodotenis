@@ -252,7 +252,30 @@ function prioridad(m) {
 }
 
 // ---------- Corrida ----------
+// Respaldo: si el seguimiento en vivo ya registró el final de un partido de Finals (rama 'vivo'),
+// se toma ese resultado aunque la API no tenga cupo, para que la nota salga sin esperar.
+async function resultadosDelVivo() {
+  try {
+    const h = { Accept: 'application/vnd.github.raw+json' };
+    if (process.env.GH_TOKEN) h.Authorization = `Bearer ${process.env.GH_TOKEN}`;
+    const r = await fetch('https://api.github.com/repos/bohemio89/atodotenis/contents/vivo.json?ref=vivo', { headers: h, signal: AbortSignal.timeout(20000) });
+    if (!r.ok) return;
+    const v = await r.json();
+    for (const [id, x] of Object.entries(v.partidos || {})) {
+      const p = partidos[id];
+      if (!p || p.confirmado || x.estado !== 'terminado' || !x.ganador || !Array.isArray(x.sets) || !x.sets.length) continue;
+      const games = [x.sets.map((s) => s[0]), x.sets.map((s) => s[1])];
+      const ganados = [games[0].filter((g, i) => g > games[1][i]).length, games[1].filter((g, i) => g > games[0][i]).length];
+      p.score = { ...(p.score || {}), games, sets: ganados };
+      p.estado = 'finalizado'; p.confirmado = true; p.ganador = x.ganador; p.fuente = 'vivo'; p.visto = new Date().toISOString();
+      log(`Resultado tomado del seguimiento en vivo: ${p.j1?.nombre} vs ${p.j2?.nombre} (${games[0].map((g, i) => `${g}-${games[1][i]}`).join(' ')})`);
+    }
+    guardarJSON('data/partidos.json', partidos);
+  } catch (e) { log('Respaldo vivo:', e.message); }
+}
+
 async function main() {
+  await resultadosDelVivo();
   await consultarUsoAPI();
   guardarJSON('data/estado.json', estado);
   const ahoraMs = ahora.getTime();
