@@ -54,6 +54,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PRUEBA_PARTIDOS: ${{ github.event.inputs.prueba_partidos }}
+          FORZAR: ${{ github.event.inputs.forzar }}
         run: node scripts/articles.mjs
       - name: Fotos de Getty Images para las notas nuevas
         continue-on-error: true

@@ -6,6 +6,7 @@
 // Cuida el cupo diario gratuito de la API: se detiene si quedan pocas consultas.
 import fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
+import { marcadoresESPN } from './espn.mjs';
 
 const KEY = process.env.LIVE_TENNIS_API_KEY;
 const BASE = 'https://api.livetennisapi.com/api/public/v1';
@@ -71,7 +72,9 @@ function proximoFinals() {
     Date.parse(p.horario) - ahora < 20 * 60e3 && ahora - Date.parse(p.horario) < 4 * 3600e3);
 }
 
+const PRUEBA = !!process.env.VIVO_PRUEBA; // prueba: no publica ni dispara nada, solo muestra lo que haría
 function publicar(datos) {
+  if (PRUEBA) { log('PUBLICARÍA', JSON.stringify(datos)); return; }
   fs.mkdirSync('/tmp/vivo', { recursive: true });
   fs.writeFileSync('/tmp/vivo/vivo.json', JSON.stringify(datos));
   // Sin esto Vercel intenta publicar la rama y manda un mail de error por cada actualización
@@ -91,6 +94,7 @@ function publicar(datos) {
 }
 
 function dispararActualizacion() {
+  if (PRUEBA) { log('DISPARARÍA la actualización completa'); return; }
   try {
     const repo = process.env.GITHUB_REPOSITORY || 'bohemio89/atodotenis';
     execFileSync('gh', ['api', '-X', 'POST', `repos/${repo}/actions/workflows/actualizar.yml/dispatches`, '-f', 'ref=main', '-f', 'inputs[forzar]=si'], { stdio: 'inherit' });
@@ -98,60 +102,111 @@ function dispararActualizacion() {
   } catch (e) { log('No se pudo disparar la actualización:', e.message); }
 }
 
-async function main() {
-  if (!KEY) { log('Sin clave de la API'); return; }
-  while (Date.now() - inicio < MAX_MIN * 60e3) {
-    // Si todavía no hay ninguno en juego y el próximo empieza en más de 5 minutos, se espera sin consultar
-    if (!vistosEnVivo.size) {
-      const prox = Object.values(partidos).filter((p) => esFinals(p) && p.estado === 'programado' && p.horario)
-        .map((p) => Date.parse(p.horario)).filter((t) => t > Date.now() + 5 * 60e3 && t - Date.now() < 25 * 60e3).sort()[0];
-      if (prox) { log('Esperando el comienzo del partido sin gastar consultas'); await dormir(Math.min(prox - Date.now() - 4 * 60e3, 20 * 60e3)); continue; }
-    }
-    const quedan = await usoRestante();
-    if (Number.isFinite(quedan) && quedan <= RESERVA) { log(`Quedan ${quedan} consultas: se pausa el seguimiento para no dejar al robot sin cupo.`); break; }
-    let datos;
-    try {
-      const r = await fetch(`${BASE}/matches?status=live&limit=200`, { headers: { Authorization: `Bearer ${KEY}` }, signal: AbortSignal.timeout(30000) });
-      if (!r.ok) { log('API', r.status); if (r.status === 429) break; await dormir(CADA_MIN * 60e3); continue; }
-      datos = await r.json();
-    } catch (e) { log('Error API:', e.message); await dormir(60e3); continue; }
+// ESPN (gratis, sin cupo) se mira cada TICK segundos: detecta el final del partido al instante y mueve sets y games.
+// La API de resultados se consulta solo cada CADA_MIN minutos y agrega los puntos del game y quién saca.
+const TICK_S = 30;
+const avisados = new Set(Object.values(partidos).filter((p) => p.confirmado || p.estado === 'finalizado').map((p) => String(p.id)));
+const terminadosAhora = {}; // partidos que terminaron durante esta corrida (se siguen mostrando como "Finalizado")
+let apiEnVivo = {};         // último marcador de la API por partido (puntos y saque)
+let proximaAPI = 0, ultimoPublicado = '', ultimaPublicacion = 0;
 
-    const finals = (datos.data || []).filter(esFinals);
-    CADA_MIN = calcularIntervalo(quedan, new Set(finals.map((m) => m.id)));
-    const salida = { actualizado: new Date().toISOString(), cadaMin: Math.round(CADA_MIN * 10) / 10, partidos: {} };
-    for (const m of finals) {
-      const g = m.score?.games || [[], []];
-      salida.partidos[m.id] = {
-        estado: 'en_vivo',
-        j1: m.players?.p1?.name || partidos[m.id]?.j1?.nombre || '', j2: m.players?.p2?.name || partidos[m.id]?.j2?.nombre || '',
-        torneo: /wta/i.test(`${m.tier} ${m.tournament}`) ? 'WTA Finals' : 'ATP Finals',
-        sets: (g[0] || []).map((a, i) => [a, (g[1] || [])[i] ?? 0]),
-        puntos: m.score?.points || null,
-        saca: m.score?.server || null,
-      };
-      vistosEnVivo.add(m.id);
-    }
-    // Los que estaban en vivo y ya no aparecen: terminaron
-    let termino = false;
-    for (const id of [...vistosEnVivo]) {
-      if (finals.some((m) => m.id === id)) continue;
-      vistosEnVivo.delete(id); termino = true;
-      // una consulta más para tener el marcador final exacto y el ganador
+function avisarFin(id, x, fuente) {
+  if (avisados.has(String(id))) return false;
+  avisados.add(String(id)); terminadosAhora[id] = x;
+  log(`Terminó ${x.j1 || ''} vs ${x.j2 || ''} (${(x.sets || []).map((s) => s.join('-')).join(' ')}) según ${fuente}`);
+  return true;
+}
+
+async function consultarAPI() {
+  const quedan = await usoRestante();
+  if (Number.isFinite(quedan) && quedan <= RESERVA) { log(`Quedan ${quedan} consultas de la API: se sigue solo con ESPN.`); proximaAPI = proximoReinicio() + 60e3; return false; }
+  let datos;
+  try {
+    const r = await fetch(`${BASE}/matches?status=live&limit=200`, { headers: { Authorization: `Bearer ${KEY}` }, signal: AbortSignal.timeout(30000) });
+    if (!r.ok) { log('API', r.status); proximaAPI = Date.now() + (r.status === 429 ? 30 : CADA_MIN) * 60e3; return false; }
+    datos = await r.json();
+  } catch (e) { log('Error API:', e.message); proximaAPI = Date.now() + 60e3; return false; }
+  const finals = (datos.data || []).filter(esFinals);
+  CADA_MIN = calcularIntervalo(quedan, new Set(finals.map((m) => m.id)));
+  proximaAPI = Date.now() + CADA_MIN * 60e3;
+  apiEnVivo = {};
+  for (const m of finals) {
+    const g = m.score?.games || [[], []];
+    apiEnVivo[m.id] = {
+      estado: 'en_vivo',
+      j1: m.players?.p1?.name || partidos[m.id]?.j1?.nombre || '', j2: m.players?.p2?.name || partidos[m.id]?.j2?.nombre || '',
+      torneo: /wta/i.test(`${m.tier} ${m.tournament}`) ? 'WTA Finals' : 'ATP Finals',
+      sets: (g[0] || []).map((a, i) => [a, (g[1] || [])[i] ?? 0]),
+      puntos: m.score?.points || null, saca: m.score?.server || null,
+    };
+    vistosEnVivo.add(m.id);
+  }
+  let termino = false;
+  for (const id of [...vistosEnVivo]) {
+    if (finals.some((m) => m.id === id)) continue;
+    vistosEnVivo.delete(id);
+    if (avisados.has(String(id))) continue; // ESPN ya lo dio por terminado
+    try {
+      const r = await fetch(`${BASE}/matches/${id}`, { headers: { Authorization: `Bearer ${KEY}` }, signal: AbortSignal.timeout(30000) });
+      const m = await r.json(); const g = m.score?.games || [[], []]; const s = m.score?.sets || [];
+      const ganador = m.status === 'completed' ? (Array.isArray(s) && s.length === 2 ? (s[0] > s[1] ? 1 : 2) : null) : null;
+      const x = { estado: m.status === 'completed' ? 'terminado' : 'interrumpido', j1: partidos[id]?.j1?.nombre || '', j2: partidos[id]?.j2?.nombre || '', torneo: 'ATP Finals', sets: (g[0] || []).map((a, i) => [a, (g[1] || [])[i] ?? 0]), ganador };
+      if (x.estado === 'terminado' && avisarFin(id, x, 'la API')) termino = true;
+    } catch {}
+  }
+  log(`API: ${finals.length} en vivo${Number.isFinite(quedan) ? ` · quedan ${quedan - 1} consultas hoy` : ''} · próxima en ${CADA_MIN.toFixed(1)} min`);
+  return termino;
+}
+
+async function main() {
+  if (!KEY) log('Sin clave de la API: se sigue solo con ESPN');
+  let refresco = Date.now();
+  while (Date.now() - inicio < MAX_MIN * 60e3) {
+    // Cada 10 minutos se releen los partidos publicados (por ejemplo, cuando se definen los rivales de una semifinal)
+    if (Date.now() - refresco > 10 * 60e3) {
+      refresco = Date.now();
       try {
-        const r = await fetch(`${BASE}/matches/${id}`, { headers: { Authorization: `Bearer ${KEY}` }, signal: AbortSignal.timeout(30000) });
-        const m = await r.json(); const g = m.score?.games || [[], []];
-        const s = m.score?.sets || [];
-        const ganador = m.status === 'completed' ? (Array.isArray(s) && s.length === 2 ? (s[0] > s[1] ? 1 : 2) : null) : null;
-        salida.partidos[id] = { estado: m.status === 'completed' ? 'terminado' : 'interrumpido', sets: (g[0] || []).map((a, i) => [a, (g[1] || [])[i] ?? 0]), ganador };
-      } catch { salida.partidos[id] = { estado: 'terminado' }; }
+        const r = await fetch(`https://raw.githubusercontent.com/${process.env.GITHUB_REPOSITORY || 'bohemio89/atodotenis'}/main/data/partidos.json`, { signal: AbortSignal.timeout(20000) });
+        if (r.ok) { const nuevos = await r.json(); for (const [id, p] of Object.entries(nuevos)) if (esFinals(p)) partidos[id] = p; }
+      } catch {}
     }
-    try { publicar(salida); } catch (e) { log('No se pudo publicar vivo.json:', e.message); }
-    log(`Finals en vivo: ${finals.length}${Number.isFinite(quedan) ? ` · quedan ${quedan - 1} consultas hoy` : ''} · próxima en ${CADA_MIN.toFixed(1)} min`);
+    let espn = null;
+    try { espn = await marcadoresESPN(partidos, esFinals); } catch (e) { log('ESPN no respondió:', e.message); }
+    const enVivoESPN = espn ? Object.entries(espn).filter(([, x]) => x.estado === 'en_vivo') : [];
+    let termino = false;
+
+    // Fin de partido según ESPN: se avisa en el momento
+    for (const [id, x] of Object.entries(espn || {})) {
+      if (x.estado === 'terminado' && x.ganador && !avisados.has(String(id)) && Date.now() - Date.parse(partidos[id]?.horario || 0) < 8 * 3600e3) {
+        if (avisarFin(id, { ...x, torneo: 'ATP Finals' }, 'ESPN')) termino = true;
+      }
+    }
+
+    // La API solo mientras hay un partido en juego (o si ESPN no responde y el partido ya debería haber empezado)
+    const enJuego = enVivoESPN.length > 0 || vistosEnVivo.size > 0 || (!espn && proximoFinals());
+    if (KEY && enJuego && Date.now() >= proximaAPI) { if (await consultarAPI()) termino = true; }
+
+    // Marcador para el sitio: ESPN + puntos y saque de la API
+    const salida = { actualizado: new Date().toISOString(), cadaMin: Math.round(CADA_MIN * 10) / 10, fuente: espn ? 'espn+api' : 'api', partidos: {} };
+    for (const [id, x] of enVivoESPN) {
+      const a = apiEnVivo[id];
+      const totalA = (a?.sets || []).flat().reduce((s, n) => s + n, 0), totalE = x.sets.flat().reduce((s, n) => s + n, 0);
+      salida.partidos[id] = { estado: 'en_vivo', j1: x.j1, j2: x.j2, torneo: 'ATP Finals', sets: totalA > totalE ? a.sets : x.sets, puntos: a && totalA >= totalE ? a.puntos : null, saca: a?.saca || null };
+    }
+    for (const [id, a] of Object.entries(apiEnVivo)) if (!salida.partidos[id] && !terminadosAhora[id]) salida.partidos[id] = a;
+    for (const [id, x] of Object.entries(terminadosAhora)) salida.partidos[id] = { estado: x.estado, j1: x.j1, j2: x.j2, torneo: x.torneo || 'ATP Finals', sets: x.sets, tiebreaks: x.tiebreaks || null, ganador: x.ganador };
+
+    // Se publica cuando cambia algo (y como mínimo cada 3 minutos para que el sitio sepa que el seguimiento sigue vivo)
+    const huella = JSON.stringify(salida.partidos);
+    if (termino || huella !== ultimoPublicado || Date.now() - ultimaPublicacion > 3 * 60e3) {
+      try { publicar(salida); ultimoPublicado = huella; ultimaPublicacion = Date.now(); } catch (e) { log('No se pudo publicar vivo.json:', e.message); }
+    }
     if (termino) dispararActualizacion();
 
-    if (finals.length || proximoFinals()) ultimoConFinals = Date.now();
+    if (enJuego || Object.keys(salida.partidos).length || proximoFinals()) ultimoConFinals = Date.now();
     else if (Date.now() - ultimoConFinals > SIN_PARTIDOS_MIN * 60e3) { log('No hay partidos de Finals en juego ni por empezar: fin del seguimiento.'); break; }
-    await dormir(CADA_MIN * 60e3);
+    if (PRUEBA && Date.now() - inicio > 50e3) break;
+    await dormir(TICK_S * 1000);
   }
 }
 main();

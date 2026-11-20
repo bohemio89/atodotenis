@@ -267,6 +267,7 @@ async function resultadosDelVivo() {
       const games = [x.sets.map((s) => s[0]), x.sets.map((s) => s[1])];
       const ganados = [games[0].filter((g, i) => g > games[1][i]).length, games[1].filter((g, i) => g > games[0][i]).length];
       p.score = { ...(p.score || {}), games, sets: ganados };
+      if (Array.isArray(x.tiebreaks) && x.tiebreaks.some(Boolean)) p.score.tiebreaks = x.tiebreaks;
       p.estado = 'finalizado'; p.confirmado = true; p.ganador = x.ganador; p.fuente = 'vivo'; p.visto = new Date().toISOString();
       log(`Resultado tomado del seguimiento en vivo: ${p.j1?.nombre} vs ${p.j2?.nombre} (${games[0].map((g, i) => `${g}-${games[1][i]}`).join(' ')})`);
     }

@@ -223,15 +223,20 @@ async function modelosDisponibles() {
   return MODELOS;
 }
 
+// Plazo total para Gemini en la corrida. Al terminar un partido de Finals (corrida forzada) la nota no espera a la IA:
+// si Gemini no contesta rápido sale con la plantilla verificada y se mejora en una corrida siguiente.
+const PLAZO_GEMINI = Date.now() + (process.env.FORZAR === 'si' ? 40e3 : 4 * 60e3);
 async function gemini(prompt) {
-  let ultimoError;
+  let ultimoError = new Error('sin tiempo para Gemini en esta corrida');
   for (const modelo of await modelosDisponibles()) {
     for (let intento = 1; intento <= 2; intento++) {
+      const resta = PLAZO_GEMINI - Date.now();
+      if (resta < 8000) throw ultimoError;
       try {
         const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'x-goog-api-key': KEY },
-          signal: AbortSignal.timeout(60000),
+          signal: AbortSignal.timeout(Math.min(45000, resta)),
           body: JSON.stringify({
             contents: [{ role: 'user', parts: [{ text: prompt }] }],
             // Gemma no acepta responseMimeType: se le pide JSON en el texto y se limpia la respuesta
@@ -239,7 +244,7 @@ async function gemini(prompt) {
           })
         });
         if (r.status === 503 || r.status === 500) { ultimoError = new Error(`Gemini ${modelo} saturado (${r.status})`); log(ultimoError.message); if (intento === 1) { await new Promise((s) => setTimeout(s, 4000)); continue; } break; }
-        if (r.status === 429) { ultimoError = new Error('429 límite de Gemini'); await new Promise((s) => setTimeout(s, 20000)); continue; }
+        if (r.status === 429) { ultimoError = new Error('429 límite de Gemini'); if (PLAZO_GEMINI - Date.now() < 30000) throw ultimoError; await new Promise((s) => setTimeout(s, 20000)); continue; }
         if ([400, 403, 404].includes(r.status)) { ultimoError = new Error(`Gemini ${modelo} HTTP ${r.status}: ${(await r.text()).replace(/\s+/g, ' ').slice(0, 200)}`); log(ultimoError.message); MODELOS = MODELOS.filter((x) => x !== modelo); break; }
         if (!r.ok) throw new Error(`Gemini ${modelo} HTTP ${r.status}: ${(await r.text()).replace(/\s+/g, ' ').slice(0, 300)}`);
         const j = await r.json();
@@ -457,7 +462,8 @@ async function mejorarPlantillas() {
 }
 
 async function main() {
-  await mejorarPlantillas().catch((e) => log('mejorarPlantillas:', e.message));
+  // En la corrida forzada por fin de partido primero va la nota nueva; las plantillas se mejoran después
+  if (process.env.FORZAR !== 'si') await mejorarPlantillas().catch((e) => log('mejorarPlantillas:', e.message));
   log(`Notas candidatas: ${candidatos.length}`);
   for (const p of candidatos) {
     if (!PRUEBA.length && !entraEnJornada(p)) { log(`Fuera de las ${MAX_JORNADA} más importantes de su jornada: ${p.j1?.nombre} - ${p.j2?.nombre}`); registro[p.id] = 'omitida'; continue; }
