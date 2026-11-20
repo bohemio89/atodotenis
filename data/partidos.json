@@ -64561,7 +64561,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T12:30:39.515Z",
+  "visto": "2026-11-20T12:45:43.062Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
   "importante": false,
@@ -64569,11 +64569,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T12:30:04.060082Z",
-   "age_seconds": 35,
+   "accepted_at": "2026-11-20T12:45:32.576055Z",
+   "age_seconds": 9,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 11,
+   "corroborated_age_seconds": 8,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -64581,32 +64581,34 @@
    },
    "games": [
     [
-     6
+     7,
+     1
     ],
     [
-     6
+     6,
+     1
     ]
    ],
-   "is_tiebreak": true,
-   "observed_age_seconds": 6,
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
    "origin": "observed",
    "points": [
-    "5",
-    "4"
+    "40",
+    "40"
    ],
-   "received_at": "2026-11-20T12:30:03.869626Z",
-   "sequence": 76,
+   "received_at": "2026-11-20T12:45:31.738849Z",
+   "sequence": 93,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-20T12:30:32.986865Z",
+   "timestamp": "2026-11-20T12:45:32.576052Z",
    "puntos": [
-    "5",
-    "4"
+    "40",
+    "40"
    ],
    "saca": 2
   },
@@ -65085,7 +65087,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T12:30:39.515Z",
+  "visto": "2026-11-20T12:45:43.062Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
   "importante": false,
@@ -65093,11 +65095,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T12:30:33.262691Z",
-   "age_seconds": 6,
+   "accepted_at": "2026-11-20T12:45:08.634857Z",
+   "age_seconds": 32,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -65106,32 +65108,32 @@
    "games": [
     [
      5,
-     0
+     2
     ],
     [
      7,
-     0
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
-    "30",
+    "40",
     "40"
    ],
-   "received_at": "2026-11-20T12:30:32.535038Z",
-   "sequence": 81,
+   "received_at": "2026-11-20T12:45:07.674380Z",
+   "sequence": 107,
    "server": 1,
    "sets": [
     0,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-20T12:30:33.262686Z",
+   "timestamp": "2026-11-20T12:45:34.904532Z",
    "puntos": [
-    "30",
+    "40",
     "40"
    ],
    "saca": 1
@@ -67605,13 +67607,13 @@
  "223045": {
   "id": 223045,
   "tour": "challenger",
-  "torneo": "Metz (France) - Qualification",
+  "torneo": "Metz (France)",
   "ronda": "Metz - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T12:30:00Z",
+  "horario": "2026-11-20T12:40:00Z",
   "j1": {
    "id": 146,
    "nombre": "Soonwoo Kwon",
@@ -67625,12 +67627,59 @@
    "ranking": 89
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T11:00:43.797Z",
-  "torneoClave": "challenger|Metz (France) - Qualification",
-  "tier": null,
-  "importante": false
+  "visto": "2026-11-20T12:45:43.062Z",
+  "torneoClave": "challenger|Metz (France)",
+  "tier": "challenger_125",
+  "importante": false,
+  "torneoId": "14867",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T12:45:39.551547Z",
+   "age_seconds": 2,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "15",
+    "30"
+   ],
+   "received_at": "2026-11-20T12:45:39.183712Z",
+   "sequence": 9,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-20T12:45:39.551546Z",
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223054": {
   "id": 223054,
@@ -68125,7 +68174,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T12:30:39.515Z",
+  "visto": "2026-11-20T12:45:43.062Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
   "importante": true,
@@ -68133,11 +68182,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T12:30:35.509694Z",
-   "age_seconds": 3,
+   "accepted_at": "2026-11-20T12:43:19.574236Z",
+   "age_seconds": 142,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68145,34 +68194,36 @@
    },
    "games": [
     [
-     3
+     6,
+     0
     ],
     [
+     0,
      0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-20T12:30:35.128290Z",
-   "sequence": 20,
-   "server": 1,
+   "received_at": "2026-11-20T12:43:17.220857Z",
+   "sequence": 38,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
-   "stale": false,
-   "timestamp": "2026-11-20T12:30:35.509692Z",
+   "stale": true,
+   "timestamp": "2026-11-20T12:45:36.504653Z",
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
