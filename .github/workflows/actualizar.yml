@@ -119,10 +119,10 @@ jobs:
           ULTIMA=$(git log -1 --format=%ct --author="A Todo Tenis bot" 2>/dev/null || echo 0)
           ULTIMA=${ULTIMA:-0}
           # Con partidos importantes en vivo, el marcador se publica en cada corrida
-          if git diff --cached --name-only | grep -q '^data/partidos.json$' && node -e "const d=require('./data/partidos.json');process.exit(Object.values(d).some(p=>p&&p.estado==='en_vivo'&&p.importante)?0:1)"; then IMPORTANTE=si; fi
+          # El marcador en vivo ya lo mueve el navegador (rama vivo): no hace falta publicar el sitio por cada cambio de score
           # Corrida forzada (fin de un partido de Finals): el resultado se publica en el momento
           if [ "${{ github.event.inputs.forzar }}" = "si" ]; then IMPORTANTE=si; fi
-          if [ -z "$IMPORTANTE" ] && [ $(( $(date +%s) - ULTIMA )) -lt 1740 ]; then echo "Solo datos y la última publicación fue hace menos de 30 minutos: se espera"; exit 0; fi
+          if [ -z "$IMPORTANTE" ] && [ $(( $(date +%s) - ULTIMA )) -lt 5340 ]; then echo "Solo datos y la última publicación fue hace menos de 90 minutos: se espera (Vercel gratis: 100 publicaciones por día)"; exit 0; fi
           # Notas editadas a mano (manual: true): si alguien las cambió mientras corría el robot, manda la versión publicada
           git fetch -q origin main || true
           for f in $(git diff --cached --name-only -- content/notas); do
