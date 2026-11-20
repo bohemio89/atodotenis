@@ -291,11 +291,13 @@ async function main() {
     const torneo = (p.torneo || '').toLowerCase();
     const inicio = new Date(p.horario || '').getTime();
     // Solo singles: los dobles viejos sin confirmar dejaban la prioridad encendida todo el día y gastaban el cupo.
-    return torneo.includes('finals') && !p.dobles && !/next ?gen/i.test(torneo) &&
+    // Los dobles vienen sin la marca 'dobles' en el calendario: se reconocen por la barra en los nombres.
+    const dobles = p.dobles || /\//.test(`${p.j1?.nombre || ''}${p.j2?.nombre || ''}`);
+    // Un partido programado no necesita corridas completas: el seguimiento en vivo se lanza solo antes del comienzo.
+    return torneo.includes('finals') && !dobles && !/next ?gen/i.test(torneo) &&
       (p.estado === 'en_vivo' ||
         (p.estado === 'por_confirmar' && Number.isFinite(inicio) && ahoraMs - inicio <= 6 * 3600e3) ||
-        (p.estado === 'programado' && Number.isFinite(inicio) &&
-          inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000));
+        (p.estado === 'programado' && Number.isFinite(inicio) && inicio < ahoraMs - 10 * 60000 && inicio >= ahoraMs - 3 * 3600e3));
   });
   // Semana de Finals: el cupo diario de la API se reserva para los partidos de Turín y Riad/Indian Wells.
   // Fuera de esos partidos se actualiza una vez por hora; si el seguimiento en vivo está activo, él mueve el marcador.
