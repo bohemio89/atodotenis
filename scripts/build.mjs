@@ -168,7 +168,8 @@ function imagenNota(n, conCredito = true) {
   return respaldo;
 }
 
-function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
+function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '', imagen = '' }) {
+  const ogImg = imagen ? (imagen.startsWith('/') ? S.url + imagen : imagen) : `${S.url}/og-default.png`;
   const t = titulo ? `${titulo} | ${S.nombre}` : `${S.nombre} | Todo el tenis`;
   const item = (href, txt, clave) => `<a href="${href}"${activo === clave ? ' class="activo" aria-current="page"' : ''}>${txt}</a>`;
   return `<!doctype html>
@@ -184,6 +185,7 @@ function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
 <meta property="og:description" content="${esc(descripcion || S.descripcion)}">
 <meta property="og:url" content="${S.url}${PRE}${ruta === '/' && EN ? '' : ruta}"><meta property="og:locale" content="${EN ? 'en_US' : 'es_AR'}">
 <meta property="og:site_name" content="${esc(S.nombre)}">
+<meta property="og:image" content="${esc(ogImg)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${esc(ogImg)}">
 <meta name="theme-color" content="#12161B">
 <link rel="icon" href="data:image/svg+xml,${encodeURIComponent(pelota(26).replace(' aria-hidden="true"', ' xmlns="http://www.w3.org/2000/svg"'))}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -588,6 +590,7 @@ for (const n of notas) {
   const ld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: n.titulo, description: n.bajada, datePublished: n.fecha, author: { '@type': 'Organization', name: S.nombre }, publisher: { '@type': 'Organization', name: S.nombre } };
   escribir(`nota/${n.slug}.html`, pagina({
     titulo: n.titulo, descripcion: n.bajada, ruta: `/nota/${n.slug}`, activo: 'noticias',
+    imagen: n.imagen?.url || '',
     extraHead: `<meta property="og:type" content="article"><script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`,
     cuerpo: `<article class="nota"><span class="etiqueta">${esc(n.categoria)}</span>
 <h1>${esc(n.titulo)}</h1><p class="bajada">${esc(n.bajada)}</p>
