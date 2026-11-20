@@ -377,6 +377,7 @@ async function carruseles() {
   log('Cuenta:', yo.username);
   const vivas = new Set(((await api(`${yo.id}/media?fields=id&limit=50`)).data || []).map((m) => m.id));
   for (const c of cola) {
+    if (SOLO && c.id !== SOLO) continue;
     if (e.publicadas.some((p) => p.slug === c.id)) continue;
     if (c.vence && Date.now() > new Date(c.vence).getTime()) continue;
     const tanda = turno(e);
@@ -441,7 +442,9 @@ async function salida() {
 
 const modo = process.argv[2];
 // Pausa manual: mientras rija, el robot no prepara ni publica nada (Jonathan publica a mano).
-if (!['perfil', 'borrar'].includes(modo) && CONFIG.instagram?.manualHasta && new Date(CONFIG.instagram.manualHasta) > new Date()) {
+// IG_SOLO: publicación pedida a mano de un carrusel puntual; sale aunque Instagram esté en modo manual
+const SOLO = (process.env.IG_SOLO || '').trim();
+if (!['perfil', 'borrar'].includes(modo) && !(modo === 'carruseles' && SOLO) && CONFIG.instagram?.manualHasta && new Date(CONFIG.instagram.manualHasta) > new Date()) {
   log(`Instagram en modo manual hasta ${CONFIG.instagram.manualHasta}: no se prepara ni publica nada.`);
   process.exit(0);
 }

@@ -1,5 +1,10 @@
 name: Instagram - publicar carruseles
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      solo:
+        description: 'Publicar solo este carrusel (id), aunque Instagram esté en modo manual'
+        default: ''
 permissions: { contents: write }
 concurrency: { group: actualizar, cancel-in-progress: false }
 jobs:
@@ -13,6 +18,7 @@ jobs:
       - env:
           INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
           IG_FORZAR: '1'   # a mano: publica sin esperar la tanda
+          IG_SOLO: ${{ github.event.inputs.solo }}
         run: node scripts/instagram.mjs carruseles
       - run: |
           git config user.name "A Todo Tenis bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
