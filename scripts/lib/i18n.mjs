@@ -4,7 +4,7 @@
 // Textos completos (se comparan sin espacios a los costados)
 const EXACTO = {
   'Inicio': 'Home', 'Noticias': 'News', 'Resultados': 'Results', 'Torneos': 'Tournaments', 'Ranking': 'Rankings', 'Calendario': 'Calendar',
-  'Argentinos': 'Argentines', 'Acerca del sitio': 'About', 'Créditos de imágenes': 'Image credits', 'Saltar al contenido': 'Skip to content',
+  'Argentinos': 'Argentines', 'Acerca del sitio': 'About', 'Créditos de imágenes': 'Image credits', 'Privacidad y cookies': 'Privacy and cookies', 'Saltar al contenido': 'Skip to content',
   'Buscar en el sitio': 'Search the site', 'Buscar': 'Search', 'Buscador': 'Search', 'A Todo Tenis, inicio': 'A Todo Tenis, home',
   'Instagram de A Todo Tenis': 'A Todo Tenis on Instagram', 'Principal': 'Main', 'Pie': 'Footer', 'Idioma / Language': 'Language',
   'Resultados, ranking y noticias de todo el circuito.': 'Results, rankings and news from across the tour.',

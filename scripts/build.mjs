@@ -194,7 +194,11 @@ function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '', ima
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSMVZJ9WBF"></script>
-<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LSMVZJ9WBF');</script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500,region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH']});
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});
+try{var cc=localStorage.getItem('att-cookies');if(cc)gtag('consent','update',{analytics_storage:cc==='si'?'granted':'denied'})}catch(e){}
+gtag('js', new Date()); gtag('config', 'G-LSMVZJ9WBF');</script>
 <link rel="alternate" type="application/rss+xml" title="${esc(S.nombre)}" href="/rss.xml">
 ${extraHead}
 </head>
@@ -215,7 +219,7 @@ ${cuerpo}
 </main>
 <footer class="pie"><div class="contenedor">
 <div>${logo}<p style="color:#C9D1D9;font-size:14px;max-width:380px">Resultados, ranking y noticias de todo el circuito.</p></div>
-<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/calendario|Calendario', '/acerca|Acerca del sitio', '/creditos|Créditos de imágenes'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
+<nav aria-label="Pie">${['/noticias|Noticias', '/resultados|Resultados', '/torneos|Torneos', '/grand-slams|Grand Slam', '/ranking|Ranking', '/calendario|Calendario', '/acerca|Acerca del sitio', '/creditos|Créditos de imágenes', '/privacidad|Privacidad y cookies'].map((x) => { const [h, t] = x.split('|'); return `<a href="${h}">${t}</a>`; }).join('')}</nav>
 </div><div class="legal">© ${new Date().getFullYear()} ${esc(S.nombre)}</div></footer>
 <script>
 try{var fl={};document.querySelectorAll('time[data-local]').forEach(function(t){var o=JSON.parse(t.getAttribute('data-local'));var k=t.getAttribute('data-local');fl[k]=fl[k]||new Intl.DateTimeFormat('${LOCALE}',o);t.textContent=fl[k].format(new Date(t.getAttribute('datetime')));});}catch(e){}
@@ -234,6 +238,15 @@ var q=c.querySelector('[data-buscar]');if(q)q.addEventListener('input',function(
 document.querySelectorAll('[data-tabs]').forEach(function(box){var bs=box.querySelectorAll('[role=tab]');bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-selected',x===b);document.getElementById(x.getAttribute('aria-controls')).classList.toggle('oculto',x!==b)})})})});
 </script>
 ${scriptVivo()}
+<div id="aviso-cookies" hidden role="dialog" aria-live="polite" aria-label="${EN ? 'Cookie notice' : 'Aviso de cookies'}" style="position:fixed;left:12px;right:12px;bottom:12px;z-index:50;max-width:620px;margin:0 auto;background:#1a2028;border:1px solid #2b3540;border-radius:12px;padding:16px 18px;box-shadow:0 10px 30px rgba(0,0,0,.45);font-size:14px;line-height:1.45;color:#E6EBF0">
+<p style="margin:0 0 12px">${EN ? 'We use Google Analytics cookies to count visits and improve the site. No personal details are requested.' : 'Usamos cookies de Google Analytics para contar las visitas y mejorar el sitio. No pedimos datos personales.'} <a href="${PRE}/privacidad" style="color:#C6F432;text-decoration:underline">${EN ? 'Learn more' : 'Más información'}</a></p>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" data-cookies="si" style="background:#C6F432;color:#12161B;border:0;border-radius:8px;padding:9px 16px;font:800 14px Montserrat,sans-serif;cursor:pointer">${EN ? 'Accept' : 'Aceptar'}</button><button type="button" data-cookies="no" style="background:transparent;color:#E6EBF0;border:1px solid #4a5563;border-radius:8px;padding:9px 16px;font:700 14px Montserrat,sans-serif;cursor:pointer">${EN ? 'Reject' : 'Rechazar'}</button></div></div>
+<script>(function(){var a=document.getElementById('aviso-cookies');if(!a)return;var k='att-cookies';
+function guardar(v){try{localStorage.setItem(k,v)}catch(e){}if(window.gtag)gtag('consent','update',{analytics_storage:v==='si'?'granted':'denied'});a.hidden=true}
+a.querySelectorAll('[data-cookies]').forEach(function(b){b.addEventListener('click',function(){guardar(b.getAttribute('data-cookies'))})});
+document.querySelectorAll('[data-cookies-abrir]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();a.hidden=false})});
+var elegido=null;try{elegido=localStorage.getItem(k)}catch(e){}
+if(!elegido)a.hidden=false})()</script>
 </body>
 </html>`;
 }
@@ -583,6 +596,34 @@ escribir('acerca.html', pagina({ titulo: 'Acerca del sitio', ruta: '/acerca', cu
 <p>Las imágenes que acompañan las notas se publican con su crédito correspondiente. Cuando una nota no tiene foto, se muestra una placa con el resultado del partido.</p>`}
 </div></article>` }));
 
+escribir('privacidad.html', pagina({ titulo: EN ? 'Privacy and cookies' : 'Privacidad y cookies', ruta: '/privacidad', descripcion: EN ? 'How A Todo Tenis measures visits with Google Analytics and how to opt out.' : 'Cómo A Todo Tenis mide las visitas con Google Analytics y cómo desactivarlo.', cuerpo: `
+<article class="nota"><h1>${EN ? 'Privacy and cookies' : 'Privacidad y cookies'}</h1><div class="cuerpo">${EN ? `
+<p>A Todo Tenis does not ask for your name, email or any other personal details. You can read the whole site without signing up.</p>
+<h2>Google Analytics</h2>
+<p>We use Google Analytics, a service provided by Google, to understand how the site is used: how many people visit, which pages they read, which country and type of device they come from, and how they found us (for example, from Instagram or a search engine). We use this information only to improve the site and its content.</p>
+<p>To do this, Google Analytics stores small files called cookies in your browser and collects data such as the pages you view, the approximate location derived from your connection and information about your device and browser. The data is processed by Google; you can read how Google uses information from sites that use its services at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a>.</p>
+<p>We do not use advertising cookies and we do not use this data for personalised ads.</p>
+<h2>Your choice</h2>
+<p>On your first visit, a notice lets you accept or reject these cookies. If you reject them, we do not measure your visit. Visitors from the European Economic Area, the United Kingdom and Switzerland are only measured after they accept. You can change your choice at any time: <a href="#" data-cookies-abrir style="color:#C6F432;text-decoration:underline">cookie settings</a>.</p>
+<p>You can also block cookies in your browser settings or install the Google Analytics opt-out add-on: <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</p>
+<h2>Other services on the site</h2>
+<p>Vercel, the company that hosts the site, measures visits without cookies. Some stories include embedded content from Getty Images, YouTube or Instagram; those services may set their own cookies under their own privacy policies.</p>
+<h2>Contact</h2>
+<p>If you have any questions, write to us on Instagram: <a href="https://www.instagram.com/atodotenis_web/" rel="noopener">@atodotenis_web</a>.</p>` : `
+<p>A Todo Tenis no te pide tu nombre, tu email ni ningún otro dato personal. Podés leer todo el sitio sin registrarte.</p>
+<h2>Google Analytics</h2>
+<p>Usamos Google Analytics, un servicio de Google, para entender cómo se usa el sitio: cuántas personas lo visitan, qué páginas leen, desde qué país y con qué tipo de dispositivo, y cómo llegaron (por ejemplo, desde Instagram o desde un buscador). Usamos esa información solo para mejorar el sitio y su contenido.</p>
+<p>Para eso, Google Analytics guarda en tu navegador unos archivos pequeños llamados cookies y recoge datos como las páginas que visitás, la ubicación aproximada según tu conexión y datos de tu dispositivo y navegador. Esos datos los procesa Google; podés leer cómo usa Google la información de los sitios que usan sus servicios en <a href="https://policies.google.com/technologies/partner-sites?hl=es" rel="noopener">policies.google.com/technologies/partner-sites</a>.</p>
+<p>No usamos cookies de publicidad ni usamos estos datos para anuncios personalizados.</p>
+<h2>Tu elección</h2>
+<p>En tu primera visita, un aviso te permite aceptar o rechazar estas cookies. Si las rechazás, no medimos tu visita. A quienes visitan el sitio desde el Espacio Económico Europeo, el Reino Unido y Suiza solo los medimos después de que aceptan. Podés cambiar tu elección cuando quieras: <a href="#" data-cookies-abrir style="color:#C6F432;text-decoration:underline">configurar cookies</a>.</p>
+<p>También podés bloquear las cookies desde la configuración de tu navegador o instalar el complemento de Google para no ser medido: <a href="https://tools.google.com/dlpage/gaoptout?hl=es" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</p>
+<h2>Otros servicios del sitio</h2>
+<p>Vercel, la empresa donde está alojado el sitio, mide las visitas sin usar cookies. Algunas notas incluyen contenido insertado de Getty Images, YouTube o Instagram; esos servicios pueden usar sus propias cookies, según sus políticas de privacidad.</p>
+<h2>Contacto</h2>
+<p>Si tenés alguna consulta, escribinos por Instagram: <a href="https://www.instagram.com/atodotenis_web/" rel="noopener">@atodotenis_web</a>.</p>`}
+</div></article>` }));
+
 for (const n of notas) {
   const p = partidos.find((x) => x.id === n.partidoId);
   const ficha = p && p.score ? `<div class="ficha"><div class="grupo-tit">${esc(n.torneo)}<span>${esc(nombreCategoria(p.tier, p.tour, p.torneo))}</span></div>${filaPartido(p)}</div>` : '';
@@ -609,7 +650,7 @@ escribir('creditos.html', pagina({ titulo: 'Créditos de imágenes', ruta: '/cre
 escribir('404.html', pagina({ titulo: 'Página no encontrada', ruta: '/404', cuerpo: '<article class="nota"><h1>Esta pelota se fue afuera</h1><p class="bajada">La página que buscás no existe. <a href="/" style="color:#C6F432">Volver al inicio</a>.</p></article>' }));
 
 // SEO: sitemap, RSS, robots
-const urls = ['/', '/noticias', '/resultados', '/torneos', '/grand-slams', ...GS.torneos.map((t) => `/grand-slam/${t.slug}`), '/ranking', '/calendario', '/acerca', ...T.lista.map((t) => `/torneo/${t.slug}`), ...notas.map((n) => `/nota/${n.slug}`)];
+const urls = ['/', '/noticias', '/resultados', '/torneos', '/grand-slams', ...GS.torneos.map((t) => `/grand-slam/${t.slug}`), '/ranking', '/calendario', '/acerca', '/privacidad', ...T.lista.map((t) => `/torneo/${t.slug}`), ...notas.map((n) => `/nota/${n.slug}`)];
 if (EN) {
   fs.writeFileSync(path.join(DIST, '.urls.json'), JSON.stringify(urls));
   console.log(`Versión en inglés: ${urls.length} páginas, ${notas.length} notas.`);
