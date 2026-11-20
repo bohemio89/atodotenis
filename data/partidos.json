@@ -28086,7 +28086,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-20T11:00:43.721Z",
   "torneoClave": "atp|Finals - Turin",
@@ -64545,26 +64545,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T11:30:00Z",
+  "horario": "2026-11-20T11:40:00Z",
   "j1": {
-   "id": 550,
-   "nombre": "Svyatoslav Gulin",
-   "pais": "rus",
-   "ranking": 407
-  },
-  "j2": {
    "id": 397,
    "nombre": "Toby Samuel",
    "pais": "gbr",
    "ranking": 92
   },
+  "j2": {
+   "id": 550,
+   "nombre": "Svyatoslav Gulin",
+   "pais": "rus",
+   "ranking": 407
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T11:00:43.797Z",
+  "visto": "2026-11-20T12:30:39.515Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
-  "importante": false
+  "importante": false,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T12:30:04.060082Z",
+   "age_seconds": 35,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 11,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6
+    ],
+    [
+     6
+    ]
+   ],
+   "is_tiebreak": true,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "5",
+    "4"
+   ],
+   "received_at": "2026-11-20T12:30:03.869626Z",
+   "sequence": 76,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-20T12:30:32.986865Z",
+   "puntos": [
+    "5",
+    "4"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222635": {
   "id": 222635,
@@ -65022,7 +65069,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T11:30:00Z",
+  "horario": "2026-11-20T11:40:00Z",
   "j1": {
    "id": 161,
    "nombre": "Nicolai Budkov Kjaer",
@@ -65036,12 +65083,61 @@
    "ranking": 137
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T11:00:43.797Z",
+  "visto": "2026-11-20T12:30:39.515Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
-  "importante": false
+  "importante": false,
+  "torneoId": "3200",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T12:30:33.262691Z",
+   "age_seconds": 6,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     5,
+     0
+    ],
+    [
+     7,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "30",
+    "40"
+   ],
+   "received_at": "2026-11-20T12:30:32.535038Z",
+   "sequence": 81,
+   "server": 1,
+   "sets": [
+    0,
+    1
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-20T12:30:33.262686Z",
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222708": {
   "id": 222708,
@@ -67601,7 +67697,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": false
  },
  "223056": {
@@ -67639,7 +67735,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": false
  },
  "223057": {
@@ -67677,7 +67773,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": false
  },
  "223058": {
@@ -68013,26 +68109,73 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-20T12:00:00Z",
+  "horario": "2026-11-20T12:20:00Z",
   "j1": {
    "id": 848,
    "nombre": "Dalila Jakupovic",
    "pais": "slo",
-   "ranking": 387
+   "ranking": 377
   },
   "j2": {
    "id": 23143,
    "nombre": "M.S. Goenadi",
-   "pais": "sin",
+   "pais": "idn",
    "ranking": null
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T11:00:43.766Z",
+  "visto": "2026-11-20T12:30:39.515Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
-  "importante": true
+  "tier": "bjk_cup",
+  "importante": true,
+  "torneoId": "3330",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T12:30:35.509694Z",
+   "age_seconds": 3,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "30",
+    "30"
+   ],
+   "received_at": "2026-11-20T12:30:35.128290Z",
+   "sequence": 20,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T12:30:35.509692Z",
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223108": {
   "id": 223108,
@@ -68061,7 +68204,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223109": {
@@ -68091,7 +68234,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223110": {
@@ -68121,7 +68264,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223111": {
@@ -68151,7 +68294,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223112": {
@@ -68181,7 +68324,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223113": {
@@ -68211,7 +68354,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223114": {
@@ -68241,7 +68384,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223115": {
@@ -68271,7 +68414,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223116": {
@@ -68301,7 +68444,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223117": {
@@ -68331,7 +68474,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223118": {
@@ -68361,7 +68504,7 @@
   "motivo": null,
   "visto": "2026-11-20T11:00:43.766Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
-  "tier": null,
+  "tier": "bjk_cup",
   "importante": true
  },
  "223125": {
