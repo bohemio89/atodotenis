@@ -1,0 +1,20 @@
+name: Probar vivo con ESPN
+on:
+  push:
+    branches: [media]
+    paths: [media/probar-vivo.txt]
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media, path: m }
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: |
+          cp m/media/vivo-prueba.mjs scripts/vivo.mjs && cp m/media/espn.mjs scripts/espn.mjs
+          # simula que Alcaraz-Cobolli todavía no estaba confirmado
+          node -e "const f='data/partidos.json';const d=require('./'+f);d[219743].confirmado=false;d[219743].estado='en_vivo';d[219743].horario=new Date(Date.now()-3600e3).toISOString();require('fs').writeFileSync(f,JSON.stringify(d))"
+          VIVO_PRUEBA=1 node scripts/vivo.mjs

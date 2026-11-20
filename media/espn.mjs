@@ -29,12 +29,13 @@ function nombreDe(c) {
 export async function marcadoresESPN(partidos, esFinals) {
   const candidatos = Object.values(partidos).filter((p) => esFinals(p) && !p.dobles && !/\//.test(`${p.j1?.nombre}${p.j2?.nombre}`) && p.j1?.nombre && p.j2?.nombre);
   const res = {};
+  let respondio = 0;
   for (const url of URLS) {
     let j;
     try {
       const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 ATodoTenis' }, signal: AbortSignal.timeout(15000) });
       if (!r.ok) continue;
-      j = await r.json();
+      j = await r.json(); respondio++;
     } catch { continue; }
     for (const { c, torneo } of partidosDe(j)) {
       if (!/finals/i.test(torneo) || /next ?gen/i.test(torneo)) continue;
@@ -69,5 +70,6 @@ export async function marcadoresESPN(partidos, esFinals) {
       };
     }
   }
+  if (!respondio) throw new Error('ESPN sin respuesta');
   return res;
 }
