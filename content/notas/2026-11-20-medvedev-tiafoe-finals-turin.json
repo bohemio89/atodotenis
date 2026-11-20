@@ -3,12 +3,12 @@
  "estado": "publicada",
  "fecha": "2026-11-20T21:09:34.962Z",
  "fechaPartido": "2026-11-20T19:30:00Z",
- "titulo": "Medvedev le ganó a Tiafoe en las ATP Finals",
- "bajada": "El número 5 del mundo se impuso 6-3 y 6-4 en el grupo Ivan Lendl y suma dos victorias y una derrota.",
+ "titulo": "Medvedev le ganó a Tiafoe y se clasificó a las semifinales de las ATP Finals",
+ "bajada": "El ruso se impuso 6-3 y 6-4, terminó segundo en el grupo Ivan Lendl y el sábado enfrentará a Alexander Zverev por un lugar en la final.",
  "cuerpo": [
-  "Daniil Medvedev, número 5 del ranking, venció a Frances Tiafoe (8°) por 6-3 y 6-4 en la fase de grupos de las ATP Finals.",
-  "Medvedev ganó el primer set 6-3 y el segundo 6-4, sin ceder sets.",
-  "Medvedev venía de ganarle a Cobolli por 7-6 y 6-3 y de perder con Alcaraz por 2-6 y 4-6. Tiafoe venía de perder con Alcaraz por 2-6 y 2-6 y de ganarle a Cobolli por 7-6 y 6-0. En el grupo Ivan Lendl, Medvedev suma dos victorias y una derrota, y Tiafoe tiene una victoria y dos derrotas. A las semifinales avanzan los dos primeros de cada grupo."
+  "Daniil Medvedev se clasificó a las semifinales de las ATP Finals. Le ganó 6-3 y 6-4 a Frances Tiafoe en el partido que definía el segundo lugar del grupo Ivan Lendl: el que ganaba, pasaba, y el ruso lo resolvió en sets corridos.",
+  "Medvedev cerró la fase de grupos con dos victorias y una derrota. Le había ganado 7-6 y 6-3 a Flavio Cobolli y había perdido 2-6 y 4-6 con Carlos Alcaraz. Tiafoe se despide de Turín con un triunfo, ante Cobolli, y dos derrotas.",
+  "El sábado, Medvedev, campeón del torneo en 2020, enfrentará a Alexander Zverev, número 1 del mundo y primero del grupo John McEnroe, desde las 20:30 de Turín (16:30 de Argentina). Antes, desde las 14 (10 de Argentina), Alcaraz jugará la otra semifinal ante Ben Shelton."
  ],
  "etiquetas": [
   "ATP Finals",
@@ -52,15 +52,15 @@
  "importancia": 65,
  "firma": "Redacción A Todo Tenis",
  "imagen": null,
- "generadoCon": "plantilla",
+ "generadoCon": "manual",
  "en": {
   "categoria": "ATP Finals",
-  "titulo": "Medvedev beats Tiafoe at the ATP Finals",
-  "bajada": "The world No. 5 won 6-3, 6-4 in the Ivan Lendl Group and now has two wins and one loss.",
+  "titulo": "Medvedev beats Tiafoe to reach the ATP Finals semi-finals",
+  "bajada": "The Russian won 6-3, 6-4, finished second in the Ivan Lendl Group and will face Alexander Zverev on Saturday for a place in the final.",
   "cuerpo": [
-   "World No. 5 Daniil Medvedev beat Frances Tiafoe (No. 8) 6-3, 6-4 in the group stage of the ATP Finals.",
-   "Medvedev took the first set 6-3 and the second 6-4, without dropping a set.",
-   "Medvedev had beaten Cobolli 7-6, 6-3 and lost to Alcaraz 2-6, 4-6. Tiafoe had lost to Alcaraz 2-6, 2-6 and beaten Cobolli 7-6, 6-0. In the Ivan Lendl Group, Medvedev has two wins and one loss, while Tiafoe has one win and two losses. The top two in each group advance to the semifinals."
+   "Daniil Medvedev is through to the ATP Finals semi-finals. He beat Frances Tiafoe 6-3, 6-4 in the match that decided second place in the Ivan Lendl Group: the winner went through, and the Russian did it in straight sets.",
+   "Medvedev finished the group stage with two wins and one loss. He had beaten Flavio Cobolli 7-6, 6-3 and lost 2-6, 4-6 to Carlos Alcaraz. Tiafoe leaves Turin with one win, over Cobolli, and two losses.",
+   "On Saturday, Medvedev, the 2020 champion, will face world No. 1 Alexander Zverev, winner of the John McEnroe Group, from 8:30 p.m. in Turin (4:30 p.m. in Argentina). Earlier, from 2 p.m. (10 a.m. in Argentina), Alcaraz plays the other semi-final against Ben Shelton."
   ],
   "huella": "7d35699ee33f",
   "modelo": "plantilla",
@@ -73,10 +73,49 @@
   "id": "2306105779",
   "fecha": "2026-11-20T21:09:43.225Z"
  },
- "video": {
-  "youtube": "mLp1ka1DTV4",
-  "titulo": "Daniil Medvedev vs Frances Tiafoe Battle ⚔️ | Indian Wells 2023 Semi-Final Extended Highlights",
-  "canal": "Tennis TV",
-  "publicado": "2026-11-20T18:00:46+00:00"
- }
+ "manual": true,
+ "bloques": [
+  {
+   "despuesDe": 1,
+   "tipo": "datos",
+   "titulo": {
+    "es": "Así terminó el grupo Ivan Lendl",
+    "en": "Ivan Lendl Group: final standings"
+   },
+   "fuente": {
+    "es": "ATP",
+    "en": "ATP"
+   },
+   "items": [
+    {
+     "valor": "3-0",
+     "texto": {
+      "es": "1.º Carlos Alcaraz (semifinal)",
+      "en": "1st Carlos Alcaraz (semi-final)"
+     }
+    },
+    {
+     "valor": "2-1",
+     "texto": {
+      "es": "2.º Daniil Medvedev (semifinal)",
+      "en": "2nd Daniil Medvedev (semi-final)"
+     }
+    },
+    {
+     "valor": "1-2",
+     "texto": {
+      "es": "3.º Frances Tiafoe",
+      "en": "3rd Frances Tiafoe"
+     }
+    },
+    {
+     "valor": "0-3",
+     "texto": {
+      "es": "4.º Flavio Cobolli",
+      "en": "4th Flavio Cobolli"
+     }
+    }
+   ]
+  }
+ ]
 }
