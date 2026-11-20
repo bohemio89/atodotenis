@@ -1,0 +1,14 @@
+name: Probar fuentes ATP
+on:
+  push:
+    branches: [media]
+    paths: [media/probar-atp.mjs]
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node media/probar-atp.mjs
