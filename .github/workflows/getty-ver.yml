@@ -1,0 +1,18 @@
+name: Ver fotos de Getty
+on:
+  push:
+    branches: [media]
+    paths: [media/getty-ver.txt]
+permissions: { contents: write }
+jobs:
+  ver:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: rm -rf media/getty-ver && node media/getty-ver.mjs $(cat media/getty-ver.txt)
+      - run: |
+          git config user.name "A Todo Tenis bot" && git config user.email "bot@atodotenis.local"
+          git add media/getty-ver && git commit -m "Miniaturas Getty" && git push || true
