@@ -191,6 +191,8 @@ function pagina({ titulo, descripcion, ruta, activo, cuerpo, extraHead = '' }) {
 <link rel="stylesheet" href="/estilos.css">
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LSMVZJ9WBF"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LSMVZJ9WBF');</script>
 <link rel="alternate" type="application/rss+xml" title="${esc(S.nombre)}" href="/rss.xml">
 ${extraHead}
 </head>
