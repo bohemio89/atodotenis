@@ -28171,7 +28171,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:29.883Z",
+  "visto": "2026-11-20T04:01:04.521Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": "atp_finals",
   "importante": false
@@ -28383,7 +28383,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:29.883Z",
+  "visto": "2026-11-20T04:01:04.521Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": "atp_finals",
   "importante": false
@@ -28956,7 +28956,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:29.883Z",
+  "visto": "2026-11-20T04:01:04.521Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": "atp_finals",
   "importante": true
@@ -29326,7 +29326,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:29.883Z",
+  "visto": "2026-11-20T04:01:04.521Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": "atp_finals",
   "importante": true
@@ -61997,9 +61997,9 @@
    "ranking": 1163
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T00:00:42.677Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Champaign",
   "tier": "challenger_75",
   "importante": false,
@@ -62827,7 +62827,7 @@
  },
  "222522": {
   "id": 222522,
-  "tour": "challenger",
+  "tour": "challenger_women",
   "torneo": "Colina",
   "ronda": "Colina - 1/8-finals",
   "rondaCod": "R16",
@@ -62848,10 +62848,10 @@
    "ranking": 503
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T00:00:42.677Z",
-  "torneoClave": "challenger|Colina",
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger_women|Colina",
   "tier": "wta_125",
   "importante": false,
   "torneoId": "8223",
@@ -63489,9 +63489,9 @@
    "ranking": 217
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T03:15:38.863Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Montevideo",
   "tier": "challenger_75",
   "importante": false,
@@ -63572,7 +63572,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T03:15:38.863Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
   "importante": false,
@@ -63580,11 +63580,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T03:14:40.130419Z",
-   "age_seconds": 57,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-20T04:00:32.113337Z",
+   "age_seconds": 32,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -63592,32 +63592,34 @@
    },
    "games": [
     [
+     6,
      2
     ],
     [
+     4,
      3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
     "0",
-    "0"
+    "15"
    ],
-   "received_at": "2026-11-20T03:14:39.857991Z",
-   "sequence": 34,
+   "received_at": "2026-11-20T04:00:31.413782Z",
+   "sequence": 92,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-20T03:15:32.807721Z",
+   "timestamp": "2026-11-20T04:00:54.578012Z",
    "puntos": [
     "0",
-    "0"
+    "15"
    ],
    "saca": 1
   },
@@ -63647,9 +63649,9 @@
    "ranking": 285
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T01:30:38.869Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Drummondville",
   "tier": "challenger_75",
   "importante": false,
@@ -63730,7 +63732,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T03:15:38.863Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
   "importante": false,
@@ -63738,11 +63740,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T03:15:04.290804Z",
-   "age_seconds": 33,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-20T04:01:01.742173Z",
+   "age_seconds": 2,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -63750,32 +63752,34 @@
    },
    "games": [
     [
-     1
+     3,
+     2
     ],
     [
+     6,
      4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-20T03:15:04.052568Z",
-   "sequence": 47,
+   "received_at": "2026-11-20T04:01:01.246691Z",
+   "sequence": 109,
    "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-20T03:15:32.928696Z",
+   "timestamp": "2026-11-20T04:01:01.742171Z",
    "puntos": [
-    "0",
-    "0"
+    "15",
+    "15"
    ],
    "saca": 1
   },
@@ -64578,7 +64582,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
   "importante": false
@@ -65055,7 +65059,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
   "importante": false
@@ -65807,14 +65811,14 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Champaign",
   "tier": "challenger_75",
   "importante": false
  },
  "222812": {
   "id": 222812,
-  "tour": "challenger",
+  "tour": "challenger_doubles",
   "torneo": "Champaign",
   "ronda": "Champaign - Quarter-finals",
   "rondaCod": "QF",
@@ -65843,9 +65847,9 @@
    ]
   },
   "dobles": true,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T01:30:38.869Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Champaign",
   "tier": "challenger_75",
   "importante": false,
@@ -66016,7 +66020,7 @@
  },
  "222823": {
   "id": 222823,
-  "tour": "challenger",
+  "tour": "challenger_doubles",
   "torneo": "Drummondville",
   "ronda": "Drummondville - Quarter-finals",
   "rondaCod": "QF",
@@ -66045,9 +66049,9 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T03:15:38.863Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Drummondville",
   "tier": "challenger_75",
   "importante": false,
@@ -66110,7 +66114,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-20T13:00:00Z",
+  "horario": "2026-11-20T18:30:00Z",
   "j1": {
    "id": 44724,
    "nombre": "McGiffin/ Osborne",
@@ -66134,7 +66138,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger_women|Colina",
   "tier": "wta_125",
   "importante": false
@@ -66163,7 +66167,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Montevideo",
   "tier": "challenger_75",
   "importante": false
@@ -66256,7 +66260,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-20T13:00:00Z",
+  "horario": "2026-11-20T22:00:00Z",
   "j1": {
    "id": 895,
    "nombre": "Rebeka Masarova",
@@ -66272,7 +66276,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger_women|Colina",
   "tier": "wta_125",
   "importante": false
@@ -66286,7 +66290,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T16:00:00Z",
+  "horario": "2026-11-20T20:30:00Z",
   "j1": {
    "id": 10924,
    "nombre": "Lui Maxted",
@@ -66302,7 +66306,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Champaign",
   "tier": "challenger_75",
   "importante": false
@@ -66347,7 +66351,7 @@
  },
  "222883": {
   "id": 222883,
-  "tour": "challenger",
+  "tour": "challenger_doubles",
   "torneo": "Champaign",
   "ronda": "Champaign - Quarter-finals",
   "rondaCod": "QF",
@@ -66376,9 +66380,9 @@
    ]
   },
   "dobles": true,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T00:00:42.677Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Champaign",
   "tier": "challenger_75",
   "importante": false,
@@ -66455,9 +66459,9 @@
    "ranking": 361
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T02:15:29.214Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
   "importante": false,
@@ -66576,21 +66580,21 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Montevideo",
   "tier": "challenger_75",
   "importante": false
  },
  "222900": {
   "id": 222900,
-  "tour": "challenger",
+  "tour": "challenger_doubles",
   "torneo": "Sydney",
   "ronda": "Sydney - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T03:00:00Z",
+  "horario": "2026-11-20T03:15:00Z",
   "j1": {
    "id": 38460,
    "nombre": "Eric Padgham / Hoeyeraal",
@@ -66614,7 +66618,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T03:15:38.863Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
   "importante": false,
@@ -66622,11 +66626,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T03:15:19.957017Z",
-   "age_seconds": 17,
+   "accepted_at": "2026-11-20T03:59:54.437895Z",
+   "age_seconds": 69,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 15,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -66634,41 +66638,41 @@
    },
    "games": [
     [
-     0
+     6
     ],
     [
-     0
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "15",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-20T03:15:19.095549Z",
-   "sequence": 3,
-   "server": 1,
+   "received_at": "2026-11-20T03:59:54.080208Z",
+   "sequence": 69,
+   "server": 2,
    "sets": [
     0,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-20T03:15:37.223659Z",
+   "timestamp": "2026-11-20T04:00:05.091450Z",
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
  },
  "222902": {
   "id": 222902,
-  "tour": "challenger",
+  "tour": "challenger_doubles",
   "torneo": "Champaign",
   "ronda": "Champaign - Quarter-finals",
   "rondaCod": "QF",
@@ -66697,9 +66701,9 @@
    ]
   },
   "dobles": true,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T02:45:27.412Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Champaign",
   "tier": "challenger_75",
   "importante": false,
@@ -66776,9 +66780,9 @@
    "ranking": 145
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T02:15:29.214Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
   "importante": false,
@@ -66843,7 +66847,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T03:30:00Z",
+  "horario": "2026-11-20T03:40:00Z",
   "j1": {
    "id": 212,
    "nombre": "Billy Harris",
@@ -66854,15 +66858,62 @@
    "id": 1234,
    "nombre": "Benjamin Hassan",
    "pais": "lbn",
-   "ranking": 454
+   "ranking": 451
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T04:01:01.762506Z",
+   "age_seconds": 2,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-20T04:01:01.194486Z",
+   "sequence": 37,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T04:01:01.762503Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222921": {
   "id": 222921,
@@ -66887,9 +66938,9 @@
    "ranking": 370
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T03:15:38.863Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -66952,7 +67003,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T03:00:00Z",
+  "horario": "2026-11-20T04:25:00Z",
   "j1": {
    "id": 44932,
    "nombre": "Jung/ Rai",
@@ -66976,7 +67027,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
   "importante": false
@@ -67004,9 +67055,9 @@
    "ranking": null
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-20T03:15:38.863Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -67069,37 +67120,84 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T03:30:00Z",
+  "horario": "2026-11-20T03:40:00Z",
   "j1": {
-   "id": 1573,
-   "nombre": "Yosuke Watanuki",
-   "pais": "jpn",
-   "ranking": 237
-  },
-  "j2": {
    "id": 814,
    "nombre": "Taro Daniel",
    "pais": "jpn",
    "ranking": 168
   },
+  "j2": {
+   "id": 1573,
+   "nombre": "Yosuke Watanuki",
+   "pais": "jpn",
+   "ranking": 326
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2524",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T04:00:38.174941Z",
+   "age_seconds": 26,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "40",
+    "AD"
+   ],
+   "received_at": "2026-11-20T04:00:37.955819Z",
+   "sequence": 37,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T04:01:03.610733Z",
+   "puntos": [
+    "40",
+    "AD"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222929": {
   "id": 222929,
   "tour": "challenger_doubles",
   "torneo": "Kobe",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Kobe - Semi-finals",
+  "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T05:00:00Z",
+  "horario": "2026-11-20T05:10:00Z",
   "j1": {
    "id": 4989,
    "nombre": "Reynolds/ Watt",
@@ -67123,7 +67221,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false
@@ -67132,12 +67230,12 @@
   "id": 222933,
   "tour": "challenger_doubles",
   "torneo": "Kobe",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Kobe - Semi-finals",
+  "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T05:00:00Z",
+  "horario": "2026-11-20T05:10:00Z",
   "j1": {
    "id": 10162,
    "nombre": "Loof/ Uesugi",
@@ -67161,7 +67259,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false
@@ -67170,8 +67268,8 @@
   "id": 222959,
   "tour": "challenger_doubles",
   "torneo": "Metz (France)",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Metz - Semi-finals",
+  "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
@@ -67199,9 +67297,1169 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T04:01:04.852Z",
   "torneoClave": "challenger|Metz (France)",
   "tier": "challenger_125",
+  "importante": false
+ },
+ "223041": {
+  "id": 223041,
+  "tour": "challenger_doubles",
+  "torneo": "Metz (France)",
+  "ronda": "Metz - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T13:30:00Z",
+  "j1": {
+   "id": 15783,
+   "nombre": "Cervantes/ Martinez",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 1348,
+   "nombre": "Gille/ Verbeek",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Metz (France)",
+  "tier": "challenger_125",
+  "importante": false
+ },
+ "223044": {
+  "id": 223044,
+  "tour": "challenger",
+  "torneo": "Metz (France) - Qualification",
+  "ronda": "Metz - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T14:00:00Z",
+  "j1": {
+   "id": 128,
+   "nombre": "Sascha Gueymard Wayenburg",
+   "pais": "fra",
+   "ranking": 191
+  },
+  "j2": {
+   "id": 567,
+   "nombre": "Luca Nardi",
+   "pais": "ita",
+   "ranking": 263
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Metz (France) - Qualification",
+  "tier": null,
+  "importante": false
+ },
+ "223045": {
+  "id": 223045,
+  "tour": "challenger",
+  "torneo": "Metz (France) - Qualification",
+  "ronda": "Metz - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T12:30:00Z",
+  "j1": {
+   "id": 146,
+   "nombre": "Soonwoo Kwon",
+   "pais": "kor",
+   "ranking": 156
+  },
+  "j2": {
+   "id": 500,
+   "nombre": "Dino Prizmic",
+   "pais": "cro",
+   "ranking": 89
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Metz (France) - Qualification",
+  "tier": null,
+  "importante": false
+ },
+ "223054": {
+  "id": 223054,
+  "tour": "challenger_women",
+  "torneo": "Colina",
+  "ronda": "Colina - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-20T16:30:00Z",
+  "j1": {
+   "id": 811,
+   "nombre": "Lucia Bronzetti",
+   "pais": "ita",
+   "ranking": 135
+  },
+  "j2": {
+   "id": 2820,
+   "nombre": "Valeriya Strakhova",
+   "pais": "ukr",
+   "ranking": 401
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger_women|Colina",
+  "tier": "wta_125",
+  "importante": false
+ },
+ "223055": {
+  "id": 223055,
+  "tour": "wta_doubles",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-21T10:00:00Z",
+  "j1": {
+   "id": 10084,
+   "nombre": "Klepac/ Radisic",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 46847,
+   "nombre": "Goenadi/ Sutjiadi",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": false
+ },
+ "223056": {
+  "id": 223056,
+  "tour": "wta_doubles",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": null,
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-21T12:00:00Z",
+  "j1": {
+   "id": 24357,
+   "nombre": "Falkowska/ Kubka",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "pol",
+    "pol"
+   ]
+  },
+  "j2": {
+   "id": 11659,
+   "nombre": "Hennemann/ Zaar",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "swe"
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": false
+ },
+ "223057": {
+  "id": 223057,
+  "tour": "wta_doubles",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-21T16:00:00Z",
+  "j1": {
+   "id": 19938,
+   "nombre": "Pigossi/ Stefani",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "bra",
+    "bra"
+   ]
+  },
+  "j2": {
+   "id": 46848,
+   "nombre": "Arseneault/ Dabrowski",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "can",
+    "can"
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": false
+ },
+ "223058": {
+  "id": 223058,
+  "tour": "challenger_doubles",
+  "torneo": "Helsinki",
+  "ronda": "Helsinki - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T14:00:00Z",
+  "j1": {
+   "id": 13246,
+   "nombre": "Paul/ Vocel",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 45978,
+   "nombre": "Johnson/ Venus",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "usa",
+    "nzl"
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": "challenger_125",
+  "importante": false
+ },
+ "223059": {
+  "id": 223059,
+  "tour": "challenger_doubles",
+  "torneo": "Helsinki",
+  "ronda": "Helsinki - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T17:00:00Z",
+  "j1": {
+   "id": 11266,
+   "nombre": "Rojer/ Winegar",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "usa"
+   ]
+  },
+  "j2": {
+   "id": 5251,
+   "nombre": "Liutarevich/ Pieczonka",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": "challenger_125",
+  "importante": false
+ },
+ "223060": {
+  "id": 223060,
+  "tour": "challenger_doubles",
+  "torneo": "Montevideo",
+  "ronda": "Montevideo - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T16:30:00Z",
+  "j1": {
+   "id": 46001,
+   "nombre": "Nijboer/ Nikles",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "ned",
+    "sui"
+   ]
+  },
+  "j2": {
+   "id": 1715,
+   "nombre": "Drzewiecki/ Matuszewski",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Montevideo",
+  "tier": "challenger_75",
+  "importante": false
+ },
+ "223074": {
+  "id": 223074,
+  "tour": "challenger",
+  "torneo": "Champaign",
+  "ronda": "Champaign - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T19:00:00Z",
+  "j1": {
+   "id": 8021,
+   "nombre": "Gavin Young",
+   "pais": "usa",
+   "ranking": 530
+  },
+  "j2": {
+   "id": 441,
+   "nombre": "Bor Artnak",
+   "pais": "slo",
+   "ranking": 522
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Champaign",
+  "tier": "challenger_75",
+  "importante": false
+ },
+ "223075": {
+  "id": 223075,
+  "tour": "challenger",
+  "torneo": "Drummondville",
+  "ronda": "Drummondville - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T18:30:00Z",
+  "j1": {
+   "id": 436,
+   "nombre": "Stefan Kozlov",
+   "pais": "usa",
+   "ranking": 205
+  },
+  "j2": {
+   "id": 678,
+   "nombre": "Clement Chidekh",
+   "pais": "fra",
+   "ranking": 116
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Drummondville",
+  "tier": "challenger_75",
+  "importante": false
+ },
+ "223076": {
+  "id": 223076,
+  "tour": "challenger",
+  "torneo": "Drummondville",
+  "ronda": "Drummondville - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T20:30:00Z",
+  "j1": {
+   "id": 479,
+   "nombre": "James Kent Trotter",
+   "pais": "jpn",
+   "ranking": 516
+  },
+  "j2": {
+   "id": 618,
+   "nombre": "Aidan Mayo",
+   "pais": "usa",
+   "ranking": 235
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Drummondville",
+  "tier": "challenger_75",
+  "importante": false
+ },
+ "223077": {
+  "id": 223077,
+  "tour": "challenger",
+  "torneo": "Helsinki",
+  "ronda": "Helsinki - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T13:00:00Z",
+  "j1": {
+   "id": 127,
+   "nombre": "Edas Butvilas",
+   "pais": "ltu",
+   "ranking": 213
+  },
+  "j2": {
+   "id": 447,
+   "nombre": "Nishesh Basavareddy",
+   "pais": "usa",
+   "ranking": 117
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": "challenger_125",
+  "importante": false
+ },
+ "223078": {
+  "id": 223078,
+  "tour": "challenger",
+  "torneo": "Helsinki",
+  "ronda": "Helsinki - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T15:30:00Z",
+  "j1": {
+   "id": 399,
+   "nombre": "Dalibor Svrcina",
+   "pais": "cze",
+   "ranking": 113
+  },
+  "j2": {
+   "id": 501,
+   "nombre": "Otto Virtanen",
+   "pais": "fin",
+   "ranking": 107
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Helsinki",
+  "tier": "challenger_125",
+  "importante": false
+ },
+ "223079": {
+  "id": 223079,
+  "tour": "challenger",
+  "torneo": "Metz (France) - Qualification",
+  "ronda": "Metz - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T17:00:00Z",
+  "j1": {
+   "id": 386,
+   "nombre": "Inaki Montes-De La Torre",
+   "pais": "esp",
+   "ranking": 189
+  },
+  "j2": {
+   "id": 1254,
+   "nombre": "Harold Mayot",
+   "pais": "fra",
+   "ranking": 210
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Metz (France) - Qualification",
+  "tier": null,
+  "importante": false
+ },
+ "223080": {
+  "id": 223080,
+  "tour": "challenger",
+  "torneo": "Montevideo",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T18:00:00Z",
+  "j1": {
+   "id": 555,
+   "nombre": "Oriol Roca Batalla",
+   "pais": "esp",
+   "ranking": 283
+  },
+  "j2": {
+   "id": 891,
+   "nombre": "Thiago Seyboth Wild",
+   "pais": "bra",
+   "ranking": 101
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Montevideo",
+  "tier": "challenger_75",
+  "importante": false
+ },
+ "223107": {
+  "id": 223107,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-20T12:00:00Z",
+  "j1": {
+   "id": 848,
+   "nombre": "Dalila Jakupovic",
+   "pais": "slo",
+   "ranking": 387
+  },
+  "j2": {
+   "id": 23143,
+   "nombre": "M.S. Goenadi",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223108": {
+  "id": 223108,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-20T13:30:00Z",
+  "j1": {
+   "id": 154,
+   "nombre": "Tamara Zidansek",
+   "pais": "slo",
+   "ranking": 145
+  },
+  "j2": {
+   "id": 41555,
+   "nombre": "L. Naswardhani",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223109": {
+  "id": 223109,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-20T16:00:00Z",
+  "j1": {
+   "id": 2953,
+   "nombre": "Gina Feistel",
+   "pais": "pol",
+   "ranking": 275
+  },
+  "j2": {
+   "id": 710,
+   "nombre": "Kajsa Rinaldo Persson",
+   "pais": "swe",
+   "ranking": 227
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223110": {
+  "id": 223110,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-20T17:00:00Z",
+  "j1": {
+   "id": 739,
+   "nombre": "Nauhany Vitoria Leme Da Silva",
+   "pais": "bra",
+   "ranking": 465
+  },
+  "j2": {
+   "id": 289,
+   "nombre": "Bianca Andreescu",
+   "pais": "can",
+   "ranking": 77
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223111": {
+  "id": 223111,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-20T17:30:00Z",
+  "j1": {
+   "id": 2858,
+   "nombre": "Martyna Kubka",
+   "pais": "pol",
+   "ranking": 144
+  },
+  "j2": {
+   "id": 704,
+   "nombre": "Caijsa Wilda Hennemann",
+   "pais": "swe",
+   "ranking": 244
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223112": {
+  "id": 223112,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-20T18:30:00Z",
+  "j1": {
+   "id": 1109,
+   "nombre": "Laura Pigossi",
+   "pais": "bra",
+   "ranking": 263
+  },
+  "j2": {
+   "id": 761,
+   "nombre": "Kayla Cross",
+   "pais": "can",
+   "ranking": 193
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223113": {
+  "id": 223113,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-21T11:30:00Z",
+  "j1": {
+   "id": 154,
+   "nombre": "Tamara Zidansek",
+   "pais": "slo",
+   "ranking": 145
+  },
+  "j2": {
+   "id": 23143,
+   "nombre": "M.S. Goenadi",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223114": {
+  "id": 223114,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-21T13:00:00Z",
+  "j1": {
+   "id": 848,
+   "nombre": "Dalila Jakupovic",
+   "pais": "slo",
+   "ranking": 387
+  },
+  "j2": {
+   "id": 41555,
+   "nombre": "L. Naswardhani",
+   "pais": null,
+   "ranking": null
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223115": {
+  "id": 223115,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-21T13:30:00Z",
+  "j1": {
+   "id": 2858,
+   "nombre": "Martyna Kubka",
+   "pais": "pol",
+   "ranking": 144
+  },
+  "j2": {
+   "id": 710,
+   "nombre": "Kajsa Rinaldo Persson",
+   "pais": "swe",
+   "ranking": 227
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223116": {
+  "id": 223116,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-21T15:00:00Z",
+  "j1": {
+   "id": 2953,
+   "nombre": "Gina Feistel",
+   "pais": "pol",
+   "ranking": 275
+  },
+  "j2": {
+   "id": 704,
+   "nombre": "Caijsa Wilda Hennemann",
+   "pais": "swe",
+   "ranking": 244
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223117": {
+  "id": 223117,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-21T17:30:00Z",
+  "j1": {
+   "id": 1109,
+   "nombre": "Laura Pigossi",
+   "pais": "bra",
+   "ranking": 263
+  },
+  "j2": {
+   "id": 289,
+   "nombre": "Bianca Andreescu",
+   "pais": "can",
+   "ranking": 77
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223118": {
+  "id": 223118,
+  "tour": "wta",
+  "torneo": "WTA Billie Jean King Cup - World Group",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-21T19:00:00Z",
+  "j1": {
+   "id": 739,
+   "nombre": "Nauhany Vitoria Leme Da Silva",
+   "pais": "bra",
+   "ranking": 465
+  },
+  "j2": {
+   "id": 761,
+   "nombre": "Kayla Cross",
+   "pais": "can",
+   "ranking": 193
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.677Z",
+  "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
+  "tier": null,
+  "importante": true
+ },
+ "223125": {
+  "id": 223125,
+  "tour": "challenger_women",
+  "torneo": "Colina",
+  "ronda": "Colina - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-20T15:00:00Z",
+  "j1": {
+   "id": 156,
+   "nombre": "Leyre Romero Gormaz",
+   "pais": "esp",
+   "ranking": 111
+  },
+  "j2": {
+   "id": 241,
+   "nombre": "Irene Burillo Escorihuela",
+   "pais": "esp",
+   "ranking": 213
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger_women|Colina",
+  "tier": "wta_125",
+  "importante": false
+ },
+ "223126": {
+  "id": 223126,
+  "tour": "challenger_doubles",
+  "torneo": "Drummondville",
+  "ronda": "Drummondville - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T17:00:00Z",
+  "j1": {
+   "id": 45997,
+   "nombre": "Hermans/ Visker",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "ned"
+   ]
+  },
+  "j2": {
+   "id": 44968,
+   "nombre": "Lammons/ Smith",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "usa"
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Drummondville",
+  "tier": "challenger_75",
+  "importante": false
+ },
+ "223139": {
+  "id": 223139,
+  "tour": "challenger",
+  "torneo": "Metz (France) - Qualification",
+  "ronda": "Metz - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T18:30:00Z",
+  "j1": {
+   "id": 8745,
+   "nombre": "Francesco Passaro",
+   "pais": "ita",
+   "ranking": 158
+  },
+  "j2": {
+   "id": 176,
+   "nombre": "Pierre-Hugues Herbert",
+   "pais": "fra",
+   "ranking": 250
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Metz (France) - Qualification",
+  "tier": null,
+  "importante": false
+ },
+ "223144": {
+  "id": 223144,
+  "tour": "atp",
+  "torneo": "Finals - Turin",
+  "ronda": "ATP Finals - Turin - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-21T13:00:00Z",
+  "j1": {
+   "id": 13,
+   "nombre": "Carlos Alcaraz",
+   "pais": "esp",
+   "ranking": 3
+  },
+  "j2": {
+   "id": 11,
+   "nombre": "Ben Shelton",
+   "pais": "usa",
+   "ranking": 4
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.521Z",
+  "torneoClave": "atp|Finals - Turin",
+  "tier": "atp_finals",
+  "importante": true
+ },
+ "223149": {
+  "id": 223149,
+  "tour": "atp_doubles",
+  "torneo": "Finals - Turin",
+  "ronda": "ATP Finals - Turin - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-21T11:00:00Z",
+  "j1": {
+   "id": 1406,
+   "nombre": "Krawietz/ Puetz",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "ger",
+    "ger"
+   ]
+  },
+  "j2": {
+   "id": 1400,
+   "nombre": "Arribage/ Olivetti",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "fra",
+    "fra"
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.521Z",
+  "torneoClave": "atp|Finals - Turin",
+  "tier": "atp_finals",
+  "importante": false
+ },
+ "223153": {
+  "id": 223153,
+  "tour": "challenger",
+  "torneo": "Drummondville",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T21:00:00Z",
+  "j1": {
+   "id": 5808,
+   "nombre": "Dylan Dietrich",
+   "pais": "sui",
+   "ranking": 186
+  },
+  "j2": {
+   "id": 1458,
+   "nombre": "Duncan Chan",
+   "pais": "can",
+   "ranking": 465
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Drummondville",
+  "tier": "challenger_75",
+  "importante": false
+ },
+ "223166": {
+  "id": 223166,
+  "tour": "challenger_doubles",
+  "torneo": "Montevideo",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-20T18:00:00Z",
+  "j1": {
+   "id": 35505,
+   "nombre": "Barrientos/ Kestelboim",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "col",
+    null
+   ]
+  },
+  "j2": {
+   "id": 25177,
+   "nombre": "Arias/ Carou",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "uru"
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-20T04:01:04.852Z",
+  "torneoClave": "challenger|Montevideo",
+  "tier": "challenger_75",
   "importante": false
  },
  "null": {
