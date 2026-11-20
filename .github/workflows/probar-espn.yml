@@ -1,0 +1,16 @@
+name: Probar ESPN
+on:
+  push:
+    branches: [media]
+    paths: [media/probar-espn.mjs, media/espn.mjs]
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - uses: actions/checkout@v4
+        with: { ref: main, path: principal, sparse-checkout: data }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node media/probar-espn.mjs principal/data/partidos.json

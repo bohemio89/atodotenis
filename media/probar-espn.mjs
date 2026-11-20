@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import { marcadoresESPN } from './espn.mjs';
+const partidos = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+const esFinals = (p) => /finals/i.test(`${p.tier || ''} ${p.torneo || ''}`) && !/next ?gen/i.test(p.torneo || '');
+const r = await marcadoresESPN(partidos, esFinals);
+for (const [id, x] of Object.entries(r)) console.log('ESPN', id, partidos[id].j1.nombre, 'vs', partidos[id].j2.nombre, '|', partidos[id].estado, '|', JSON.stringify(x));
+const j = await (await fetch('https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard')).json();
+const ev = j.events?.[0]; console.log('EV', ev?.name, Object.keys(ev || {}).join(','), (ev?.groupings || []).map((g) => g.grouping?.displayName + ':' + g.competitions?.length).join(' | '));
+const sched = (ev?.groupings || []).flatMap((g) => g.competitions || []).filter((c) => c.status?.type?.state !== 'post').map((c) => `${c.date} ${c.status.type.state} ${c.competitors.map((x) => x.athlete?.displayName || x.roster?.displayName).join(' v ')}`);
+console.log('PEND', sched.join('\n'));
