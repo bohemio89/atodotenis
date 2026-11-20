@@ -63570,7 +63570,7 @@
    "ranking": 422
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-20T04:30:34.887Z",
   "torneoClave": "challenger|Sydney",
@@ -63730,7 +63730,7 @@
    "ranking": 294
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-20T04:30:34.887Z",
   "torneoClave": "challenger|Sydney",
@@ -66616,7 +66616,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-20T04:30:34.887Z",
   "torneoClave": "challenger|Sydney",
@@ -66863,7 +66863,7 @@
    "ranking": 451
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-20T04:30:34.887Z",
   "torneoClave": "challenger|Kobe",
@@ -67140,7 +67140,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T04:30:34.887Z",
+  "visto": "2026-11-20T05:00:42.577Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -67148,9 +67148,9 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T04:30:29.870787Z",
-   "age_seconds": 4,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-20T05:00:28.074163Z",
+   "age_seconds": 14,
+   "changing_sources_count": 1,
    "corroborated": true,
    "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
@@ -67161,10 +67161,12 @@
    "games": [
     [
      6,
-     1
+     1,
+     0
     ],
     [
      4,
+     6,
      2
     ]
    ],
@@ -67172,22 +67174,22 @@
    "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "0",
-    "15"
+    "30",
+    "30"
    ],
-   "received_at": "2026-11-20T04:30:29.709221Z",
-   "sequence": 76,
+   "received_at": "2026-11-20T05:00:27.628716Z",
+   "sequence": 121,
    "server": 2,
    "sets": [
     1,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-20T04:30:29.870784Z",
+   "timestamp": "2026-11-20T05:00:38.508360Z",
    "puntos": [
-    "0",
-    "15"
+    "30",
+    "30"
    ],
    "saca": 2
   },
@@ -67196,17 +67198,17 @@
  },
  "222929": {
   "id": 222929,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Kobe",
   "ronda": "Kobe - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T05:10:00Z",
+  "horario": "2026-11-20T05:00:00Z",
   "j1": {
    "id": 4989,
-   "nombre": "Reynolds/ Watt",
+   "nombre": "Finn Reynolds / James Watt",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -67216,21 +67218,68 @@
   },
   "j2": {
    "id": 44936,
-   "nombre": "Banthia/ Chandrasekar",
+   "nombre": "Anirudh Chandrasekar / Banthia",
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ind",
     null
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T04:01:04.852Z",
+  "visto": "2026-11-20T05:00:42.578Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8255",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T05:00:26.030812Z",
+   "age_seconds": 16,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 13,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-20T05:00:25.946190Z",
+   "sequence": 3,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T05:00:34.480709Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222933": {
   "id": 222933,
