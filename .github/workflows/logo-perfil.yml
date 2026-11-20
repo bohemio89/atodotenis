@@ -1,0 +1,21 @@
+name: Bajar logo de perfil de Instagram
+on:
+  push:
+    branches: [media]
+    paths: ['.github/workflows/logo-perfil.yml']
+permissions: { contents: write }
+jobs:
+  logo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+        run: |
+          case "$INSTAGRAM_TOKEN" in EAA*) API=https://graph.facebook.com/v25.0;; *) API=https://graph.instagram.com/v25.0;; esac
+          URL=$(curl -fsS "$API/17841445997391293?fields=profile_picture_url&access_token=$INSTAGRAM_TOKEN" | python3 -c "import sys,json;print(json.load(sys.stdin)['profile_picture_url'])")
+          mkdir -p logo && curl -fsSL -o logo/atodotenis-logo.jpg "$URL" && file logo/atodotenis-logo.jpg
+          git config user.name "A Todo Tenis" && git config user.email "actions@users.noreply.github.com"
+          git add logo && git commit -m "Logo de perfil de Instagram" && git push
