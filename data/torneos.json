@@ -748,7 +748,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-15T10:30:00Z",
-  "ultimaVez": "2026-11-21T13:00:00Z",
+  "ultimaVez": "2026-11-21T17:00:00Z",
   "superficie": "hard",
   "tier": "atp_finals"
  },
@@ -778,7 +778,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-16T02:00:00Z",
-  "ultimaVez": "2026-11-21T02:00:00Z",
+  "ultimaVez": "2026-11-21T05:00:00Z",
   "superficie": "hard",
   "tier": "challenger_75"
  },
@@ -806,10 +806,17 @@
   "nombre": "Helsinki",
   "tour": "challenger",
   "id": "3200",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": true,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-16T10:30:00Z",
-  "ultimaVez": "2026-11-20T17:00:00Z",
+  "ultimaVez": "2026-11-21T11:00:00Z",
   "superficie": "hard",
   "tier": "challenger_125"
  },
@@ -818,7 +825,14 @@
   "nombre": "Champaign",
   "tour": "challenger",
   "id": "2477",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": true,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-16T01:00:00Z",
   "ultimaVez": "2026-11-20T21:30:00Z",
@@ -840,7 +854,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-16T15:00:00Z",
-  "ultimaVez": "2026-11-21T00:30:00Z",
+  "ultimaVez": "2026-11-21T00:45:00Z",
   "superficie": "hard",
   "tier": "challenger_75"
  },
@@ -859,7 +873,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-16T16:30:00Z",
-  "ultimaVez": "2026-11-20T23:00:00Z",
+  "ultimaVez": "2026-11-20T23:10:00Z",
   "superficie": "clay",
   "tier": "challenger_75"
  },
@@ -868,10 +882,17 @@
   "nombre": "Metz (France)",
   "tour": "challenger",
   "id": "14867",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": true,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-16T15:35:00Z",
-  "ultimaVez": "2026-11-20T13:40:00Z",
+  "ultimaVez": "2026-11-21T12:30:00Z",
   "superficie": "hard",
   "tier": "challenger_125"
  },
@@ -890,7 +911,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-16T13:00:00Z",
-  "ultimaVez": "2026-11-20T22:00:00Z",
+  "ultimaVez": "2026-11-20T23:25:00Z",
   "superficie": "clay",
   "tier": "wta_125"
  },
@@ -899,10 +920,17 @@
   "nombre": "Metz (France) - Qualification",
   "tour": "challenger",
   "id": "14868",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": null,
+   "superficie": "hard",
+   "cubierto": true,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-16T14:30:00Z",
-  "ultimaVez": "2026-11-20T18:30:00Z",
+  "ultimaVez": "2026-11-21T14:00:00Z",
   "superficie": "hard"
  },
  "challenger|Colina": {
@@ -957,11 +985,19 @@
   "nombre": "Champaign, USA",
   "tour": "challenger",
   "id": "2477",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": true,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-16T21:15:00Z",
-  "ultimaVez": "2026-11-18T21:35:00Z",
-  "superficie": "hard"
+  "ultimaVez": "2026-11-20T21:55:00Z",
+  "superficie": "hard",
+  "tier": "challenger_75"
  },
  "challenger|Colina, Chile": {
   "clave": "challenger|Colina, Chile",
@@ -971,8 +1007,9 @@
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-16T21:10:00Z",
-  "ultimaVez": "2026-11-17T21:35:00Z",
-  "superficie": "clay"
+  "ultimaVez": "2026-11-20T20:45:00Z",
+  "superficie": "clay",
+  "tier": "wta_125"
  },
  "challenger|Kobe, Japan": {
   "clave": "challenger|Kobe, Japan",
@@ -1060,10 +1097,17 @@
   "nombre": "WTA Billie Jean King Cup - World Group",
   "tour": "wta",
   "id": "3330",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": null,
+   "superficie": null,
+   "cubierto": false,
+   "genero": "women"
+  },
   "campeones": {},
   "primeraVez": "2026-11-20T12:00:00Z",
-  "ultimaVez": "2026-11-21T19:00:00Z",
+  "ultimaVez": "2026-11-22T15:30:00Z",
   "superficie": "clay",
   "tier": "bjk_cup"
  }
