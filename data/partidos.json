@@ -63491,7 +63491,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T02:45:27.412Z",
+  "visto": "2026-11-20T03:15:38.863Z",
   "torneoClave": "challenger|Montevideo",
   "tier": "challenger_75",
   "importante": false,
@@ -63499,11 +63499,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T02:44:55.726055Z",
-   "age_seconds": 31,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-20T03:14:17.657238Z",
+   "age_seconds": 80,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -63513,23 +63513,23 @@
     [
      6,
      6,
-     3
+     5
     ],
     [
      3,
      7,
-     0
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "40",
-    "30"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-20T02:44:54.653457Z",
-   "sequence": 173,
+   "received_at": "2026-11-20T03:14:16.629822Z",
+   "sequence": 205,
    "server": 2,
    "sets": [
     1,
@@ -63537,10 +63537,10 @@
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-20T02:45:17.697435Z",
+   "timestamp": "2026-11-20T03:15:22.578037Z",
    "puntos": [
-    "40",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -63556,26 +63556,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T01:30:00Z",
+  "horario": "2026-11-20T02:55:00Z",
   "j1": {
    "id": 655,
    "nombre": "Philip Sekulic",
    "pais": "aus",
-   "ranking": 332
+   "ranking": 329
   },
   "j2": {
    "id": 835,
    "nombre": "Enzo Aguiard",
    "pais": "aus",
-   "ranking": 423
+   "ranking": 422
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T03:15:38.863Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2628",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T03:14:40.130419Z",
+   "age_seconds": 57,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-20T03:14:39.857991Z",
+   "sequence": 34,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T03:15:32.807721Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222549": {
   "id": 222549,
@@ -63683,7 +63730,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T02:45:27.413Z",
+  "visto": "2026-11-20T03:15:38.863Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
   "importante": false,
@@ -63691,11 +63738,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T02:45:10.977337Z",
-   "age_seconds": 16,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-20T03:15:04.290804Z",
+   "age_seconds": 33,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 12,
+   "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -63703,34 +63750,34 @@
    },
    "games": [
     [
-     0
+     1
     ],
     [
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 7,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "15",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-20T02:45:10.593066Z",
-   "sequence": 3,
-   "server": 2,
+   "received_at": "2026-11-20T03:15:04.052568Z",
+   "sequence": 47,
+   "server": 1,
    "sets": [
     0,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-20T02:45:19.294643Z",
+   "timestamp": "2026-11-20T03:15:32.928696Z",
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -66000,7 +66047,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T02:45:27.412Z",
+  "visto": "2026-11-20T03:15:38.863Z",
   "torneoClave": "challenger|Drummondville",
   "tier": "challenger_75",
   "importante": false,
@@ -66008,11 +66055,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T02:45:22.308125Z",
-   "age_seconds": 4,
+   "accepted_at": "2026-11-20T03:15:22.637775Z",
+   "age_seconds": 15,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -66020,31 +66067,33 @@
    },
    "games": [
     [
-     2
+     6,
+     0
     ],
     [
-     3
+     7,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "15",
+    "0",
     "15"
    ],
-   "received_at": "2026-11-20T02:45:21.792041Z",
-   "sequence": 33,
+   "received_at": "2026-11-20T03:15:22.284820Z",
+   "sequence": 81,
    "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-20T02:45:22.308120Z",
+   "timestamp": "2026-11-20T03:15:22.637773Z",
    "puntos": [
-    "15",
+    "0",
     "15"
    ],
    "saca": 2
@@ -66534,7 +66583,7 @@
  },
  "222900": {
   "id": 222900,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Sydney",
   "ronda": "Sydney - Semi-finals",
   "rondaCod": "SF",
@@ -66543,18 +66592,8 @@
   "genero": "men",
   "horario": "2026-11-20T03:00:00Z",
   "j1": {
-   "id": 44006,
-   "nombre": "Kubler/ Puttergill",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "aus",
-    null
-   ]
-  },
-  "j2": {
    "id": 38460,
-   "nombre": "Hoeyeraal/ Padgham",
+   "nombre": "Eric Padgham / Hoeyeraal",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -66562,13 +66601,70 @@
     null
    ]
   },
+  "j2": {
+   "id": 44006,
+   "nombre": "Calum Puttergill / Kubler",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "aus"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T03:15:38.863Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8162",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T03:15:19.957017Z",
+   "age_seconds": 17,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 15,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "15",
+    "0"
+   ],
+   "received_at": "2026-11-20T03:15:19.095549Z",
+   "sequence": 3,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T03:15:37.223659Z",
+   "puntos": [
+    "15",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222902": {
   "id": 222902,
@@ -66601,7 +66697,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-20T02:45:27.412Z",
   "torneoClave": "challenger|Champaign",
@@ -66793,7 +66889,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T02:45:27.412Z",
+  "visto": "2026-11-20T03:15:38.863Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -66801,11 +66897,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T02:45:05.178802Z",
-   "age_seconds": 22,
+   "accepted_at": "2026-11-20T03:15:09.746157Z",
+   "age_seconds": 28,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -66813,34 +66909,36 @@
    },
    "games": [
     [
+     6,
      4
     ],
     [
-     3
+     4,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
     "15",
-    "15"
+    "30"
    ],
-   "received_at": "2026-11-20T02:45:04.670059Z",
-   "sequence": 45,
-   "server": 1,
+   "received_at": "2026-11-20T03:15:09.451519Z",
+   "sequence": 84,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-20T02:45:16.277031Z",
+   "timestamp": "2026-11-20T03:15:33.035025Z",
    "puntos": [
     "15",
-    "15"
+    "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -66908,7 +67006,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T02:45:27.412Z",
+  "visto": "2026-11-20T03:15:38.863Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -66916,11 +67014,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T02:44:13.148151Z",
-   "age_seconds": 74,
+   "accepted_at": "2026-11-20T03:15:28.205447Z",
+   "age_seconds": 9,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -66928,32 +67026,34 @@
    },
    "games": [
     [
-     4
+     4,
+     3
     ],
     [
-     5
+     6,
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
     "0",
-    "0"
+    "15"
    ],
-   "received_at": "2026-11-20T02:44:12.916140Z",
-   "sequence": 61,
+   "received_at": "2026-11-20T03:15:27.605294Z",
+   "sequence": 107,
    "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-20T02:44:37.570847Z",
+   "timestamp": "2026-11-20T03:15:28.205444Z",
    "puntos": [
     "0",
-    "0"
+    "15"
    ],
    "saca": 2
   },
