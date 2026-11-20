@@ -67000,27 +67000,17 @@
  },
  "222923": {
   "id": 222923,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Sydney",
   "ronda": "Sydney - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T04:25:00Z",
+  "horario": "2026-11-20T05:05:00Z",
   "j1": {
-   "id": 44932,
-   "nombre": "Jung/ Rai",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "tai",
-    null
-   ]
-  },
-  "j2": {
    "id": 41808,
-   "nombre": "Ellis/ Tu",
+   "nombre": "Ellis / Tu",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -67028,13 +67018,70 @@
     "aus"
    ]
   },
+  "j2": {
+   "id": 44932,
+   "nombre": "Jung / Rai",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "tai",
+    null
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T04:01:04.852Z",
+  "visto": "2026-11-20T05:30:49.079Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8162",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T05:30:43.490696Z",
+   "age_seconds": 5,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     5
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "40",
+    "0"
+   ],
+   "received_at": "2026-11-20T05:30:43.128046Z",
+   "sequence": 46,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T05:30:43.490695Z",
+   "puntos": [
+    "40",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222924": {
   "id": 222924,
@@ -67138,7 +67185,7 @@
    "ranking": 326
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-20T05:00:42.577Z",
   "torneoClave": "challenger|Kobe",
@@ -67205,7 +67252,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T05:00:00Z",
+  "horario": "2026-11-20T05:05:00Z",
   "j1": {
    "id": 4989,
    "nombre": "Finn Reynolds / James Watt",
@@ -67229,7 +67276,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T05:00:42.578Z",
+  "visto": "2026-11-20T05:30:49.079Z",
   "torneoClave": "challenger|Kobe",
   "tier": "challenger_75",
   "importante": false,
@@ -67237,11 +67284,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T05:00:26.030812Z",
-   "age_seconds": 16,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-20T05:30:35.676674Z",
+   "age_seconds": 13,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 13,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -67249,31 +67296,31 @@
    },
    "games": [
     [
-     0
+     5
     ],
     [
-     0
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 8,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "0",
+    "15",
     "15"
    ],
-   "received_at": "2026-11-20T05:00:25.946190Z",
-   "sequence": 3,
+   "received_at": "2026-11-20T05:30:35.418928Z",
+   "sequence": 53,
    "server": 2,
    "sets": [
     0,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-20T05:00:34.480709Z",
+   "timestamp": "2026-11-20T05:30:44.222802Z",
    "puntos": [
-    "0",
+    "15",
     "15"
    ],
    "saca": 2
