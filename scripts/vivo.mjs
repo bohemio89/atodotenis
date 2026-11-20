@@ -74,6 +74,8 @@ function proximoFinals() {
 function publicar(datos) {
   fs.mkdirSync('/tmp/vivo', { recursive: true });
   fs.writeFileSync('/tmp/vivo/vivo.json', JSON.stringify(datos));
+  // Sin esto Vercel intenta publicar la rama y manda un mail de error por cada actualización
+  fs.writeFileSync('/tmp/vivo/vercel.json', JSON.stringify({ git: { deploymentEnabled: false } }));
   const git = (...a) => execFileSync('git', a, { cwd: '/tmp/vivo', stdio: 'pipe' }).toString();
   if (!fs.existsSync('/tmp/vivo/.git')) {
     git('init', '-q', '-b', 'vivo');
@@ -83,7 +85,7 @@ function publicar(datos) {
     const h = execFileSync('git', ['config', '--get-regexp', '^http\\..*extraheader$']).toString().trim().split(/\s+/);
     if (h.length >= 2) git('config', h[0], h.slice(1).join(' '));
   }
-  git('add', 'vivo.json');
+  git('add', 'vivo.json', 'vercel.json');
   git('commit', '-q', '--allow-empty', '-m', `vivo ${datos.actualizado}`);
   git('push', '-q', '-f', 'origin', 'HEAD:vivo'); // un solo commit: la rama no crece
 }
