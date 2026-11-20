@@ -61997,7 +61997,7 @@
    "ranking": 1163
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-20T00:00:42.677Z",
   "torneoClave": "challenger|Champaign",
@@ -62848,7 +62848,7 @@
    "ranking": 503
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-20T00:00:42.677Z",
   "torneoClave": "challenger|Colina",
@@ -63475,26 +63475,73 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-19T23:00:00Z",
+  "horario": "2026-11-20T00:15:00Z",
   "j1": {
    "id": 149,
    "nombre": "Franco Roncadelli",
    "pais": "uru",
-   "ranking": 258
+   "ranking": 222
   },
   "j2": {
    "id": 422,
    "nombre": "Juan Manuel La Serna",
    "pais": "arg",
-   "ranking": 216
+   "ranking": 217
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T01:00:36.758Z",
   "torneoClave": "challenger|Montevideo",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2532",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T01:00:24.550524Z",
+   "age_seconds": 12,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     5
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "15",
+    "40"
+   ],
+   "received_at": "2026-11-20T01:00:24.200443Z",
+   "sequence": 58,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T01:00:34.840525Z",
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222543": {
   "id": 222543,
@@ -63551,7 +63598,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T00:00:42.677Z",
+  "visto": "2026-11-20T01:00:36.758Z",
   "torneoClave": "challenger|Drummondville",
   "tier": "challenger_75",
   "importante": false,
@@ -63559,11 +63606,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-20T00:00:38.789465Z",
-   "age_seconds": 1,
+   "accepted_at": "2026-11-20T01:00:05.007208Z",
+   "age_seconds": 31,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -63571,31 +63618,33 @@
    },
    "games": [
     [
-     2
+     3,
+     5
     ],
     [
-     3
+     6,
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "15",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-20T00:00:38.572693Z",
-   "sequence": 35,
+   "received_at": "2026-11-20T01:00:04.481107Z",
+   "sequence": 128,
    "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-20T00:00:38.789463Z",
+   "timestamp": "2026-11-20T01:00:34.350763Z",
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
    "saca": 1
@@ -65665,17 +65714,17 @@
  },
  "222812": {
   "id": 222812,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Champaign",
   "ronda": "Champaign - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T00:35:00Z",
+  "horario": "2026-11-20T00:40:00Z",
   "j1": {
    "id": 45986,
-   "nombre": "Barry/ Ingildsen",
+   "nombre": "Barry / Ingildsen",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -65685,7 +65734,7 @@
   },
   "j2": {
    "id": 45988,
-   "nombre": "Blancaneaux/ Perot",
+   "nombre": "Blancaneaux / Perot",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -65694,12 +65743,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T01:00:36.758Z",
   "torneoClave": "challenger|Champaign",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2478",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T01:00:20.485000Z",
+   "age_seconds": 16,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 7,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-20T01:00:20.154757Z",
+   "sequence": 29,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T01:00:29.591954Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222813": {
   "id": 222813,
@@ -66131,7 +66227,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-20T00:00:42.677Z",
   "torneoClave": "challenger|Champaign",
@@ -66196,26 +66292,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T00:00:00Z",
+  "horario": "2026-11-20T00:10:00Z",
   "j1": {
    "id": 600,
    "nombre": "Christian Langmo",
    "pais": "usa",
-   "ranking": 528
+   "ranking": 396
   },
   "j2": {
    "id": 6316,
    "nombre": "Sebastian Gorzny",
    "pais": "usa",
-   "ranking": 403
+   "ranking": 361
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-19T22:15:30.383Z",
+  "visto": "2026-11-20T01:00:36.758Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2628",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-20T00:59:46.327933Z",
+   "age_seconds": 50,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6
+    ],
+    [
+     6
+    ]
+   ],
+   "is_tiebreak": true,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "5",
+    "6"
+   ],
+   "received_at": "2026-11-20T00:59:46.260251Z",
+   "sequence": 80,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T01:00:36.254926Z",
+   "puntos": [
+    "5",
+    "6"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "222895": {
   "id": 222895,
@@ -66370,7 +66513,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-20T00:05:00Z",
+  "horario": "2026-11-20T00:10:00Z",
   "j1": {
    "id": 80,
    "nombre": "Li Tu",
@@ -66386,7 +66529,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-20T00:00:42.677Z",
+  "visto": "2026-11-20T01:00:36.758Z",
   "torneoClave": "challenger|Sydney",
   "tier": "challenger_75",
   "importante": false,
@@ -66394,11 +66537,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-19T23:51:43.551659Z",
-   "age_seconds": 536,
-   "changing_sources_count": 0,
-   "corroborated": false,
-   "corroborated_age_seconds": null,
+   "accepted_at": "2026-11-20T01:00:20.495258Z",
+   "age_seconds": 16,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -66406,34 +66549,36 @@
    },
    "games": [
     [
+     6,
      0
     ],
     [
-     0
+     4,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "40",
+    "15"
    ],
-   "received_at": "2026-11-19T23:51:43.373044Z",
-   "sequence": 1,
-   "server": null,
+   "received_at": "2026-11-20T01:00:20.326142Z",
+   "sequence": 69,
+   "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 1,
-   "stale": true,
-   "timestamp": "2026-11-20T00:00:38.728233Z",
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-20T01:00:33.345348Z",
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "15"
    ],
-   "saca": null
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
