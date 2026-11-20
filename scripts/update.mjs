@@ -290,16 +290,20 @@ async function main() {
   const hayFinalesEnVentana = Object.values(partidos).some((p) => {
     const torneo = (p.torneo || '').toLowerCase();
     const inicio = new Date(p.horario || '').getTime();
-    return torneo.includes('finals') &&
-      (p.estado === 'en_vivo' || p.estado === 'por_confirmar' ||
+    // Solo singles: los dobles viejos sin confirmar dejaban la prioridad encendida todo el día y gastaban el cupo.
+    return torneo.includes('finals') && !p.dobles && !/next ?gen/i.test(torneo) &&
+      (p.estado === 'en_vivo' ||
+        (p.estado === 'por_confirmar' && Number.isFinite(inicio) && ahoraMs - inicio <= 6 * 3600e3) ||
         (p.estado === 'programado' && Number.isFinite(inicio) &&
-          inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 4 * 3600e3));
+          inicio >= ahoraMs - 3 * 3600e3 && inicio <= ahoraMs + 30 * 60000));
   });
   // Semana de Finals: el cupo diario de la API se reserva para los partidos de Turín y Riad/Indian Wells.
   // Fuera de esos partidos se actualiza una vez por hora; si el seguimiento en vivo está activo, él mueve el marcador.
   const semanaFinals = C.prioridadFinalsHasta && ahora < new Date(C.prioridadFinalsHasta);
-  const intervaloActualizacion = hayFinalesEnVentana ? (process.env.VIVO_ACTIVO > 0 ? 30 : 15)
-    : semanaFinals ? 60 : hayPartidosEnVentana ? 30 : 60;
+  // Con el seguimiento en vivo activo, el marcador lo mueve él y el cupo es para él: el robot completo casi no consulta.
+  // Al terminar un partido, vivo.mjs dispara una corrida forzada que confirma el resultado y escribe la nota.
+  const intervaloActualizacion = hayFinalesEnVentana ? (process.env.VIVO_ACTIVO > 0 ? 120 : 15)
+    : semanaFinals ? 120 : hayPartidosEnVentana ? 30 : 60;
   const reservaAPI = hayFinalesEnVentana ? 2 : C.reserva;
   const debeActualizarRanking = ventanaRanking && estado.semanaJugadores !== semanaActual;
   // No considerar el ranking actualizado por una sincronización diaria anterior
