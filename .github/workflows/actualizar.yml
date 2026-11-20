@@ -122,6 +122,12 @@ jobs:
           # Corrida forzada (fin de un partido de Finals): el resultado se publica en el momento
           if [ "${{ github.event.inputs.forzar }}" = "si" ]; then IMPORTANTE=si; fi
           if [ -z "$IMPORTANTE" ] && [ $(( $(date +%s) - ULTIMA )) -lt 1740 ]; then echo "Solo datos y la última publicación fue hace menos de 30 minutos: se espera"; exit 0; fi
+          # Notas editadas a mano (manual: true): si alguien las cambió mientras corría el robot, manda la versión publicada
+          git fetch -q origin main || true
+          for f in $(git diff --cached --name-only -- content/notas); do
+            if git show "origin/main:$f" 2>/dev/null | grep -q '"manual": *true'; then git checkout origin/main -- "$f" && echo "Nota manual respetada: $f"; fi
+          done
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
           git commit -m "Actualización automática $(date -u +'%Y-%m-%d %H:%M') UTC"
           git pull --rebase -X ours origin main || true
           git push

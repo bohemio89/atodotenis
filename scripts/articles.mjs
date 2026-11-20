@@ -431,7 +431,7 @@ async function mejorarPlantillas() {
   for (const f of fs.readdirSync(path.join(ROOT, 'content/notas')).filter((x) => x.endsWith('.json'))) {
     const ruta = path.join(ROOT, 'content/notas', f);
     const n = JSON.parse(fs.readFileSync(ruta, 'utf8'));
-    if (n.generadoCon !== 'plantilla' || n.estado !== 'publicada' || Date.now() - new Date(n.fecha).getTime() > 12 * 3600e3) continue;
+    if (n.manual || n.generadoCon !== 'plantilla' || n.estado !== 'publicada' || Date.now() - new Date(n.fecha).getTime() > 12 * 3600e3) continue;
     if (n.reintentoGemini && Date.now() - new Date(n.reintentoGemini).getTime() < 25 * 60e3) continue;
     const p = PARTIDOS_TODOS[n.partidoId]; if (!p) continue;
     const datos = datosDelPartido(p);
