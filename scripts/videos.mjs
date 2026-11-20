@@ -43,7 +43,9 @@ async function main() {
     const desde = new Date(n.fechaPartido).getTime() - 2 * 3600e3;
     const opciones = lista.filter((v) => {
       const t = norm(v.titulo);
-      return t.includes(a) && t.includes(b) && new Date(v.publicado).getTime() >= desde && /highlight/i.test(v.titulo) && !/press conference|interview|reacts|on-court interview|when |throwback|flashback|rewind/i.test(v.titulo);
+      return t.includes(a) && t.includes(b) && new Date(v.publicado).getTime() >= desde && /highlight/i.test(v.titulo) && !/press conference|interview|reacts|on-court interview|when |throwback|flashback|rewind|classic/i.test(v.titulo)
+        // un año distinto al del partido (ej. 'Indian Wells 2023') es un video viejo
+        && !(v.titulo.match(/\b(19|20)\d{2}\b/g) || []).some((y) => y !== String(new Date(n.fecha || Date.now()).getUTCFullYear()));
     }).sort((x, y) => (/highlight/i.test(y.titulo) - /highlight/i.test(x.titulo)) || String(x.publicado).localeCompare(String(y.publicado)));
     const v = opciones[0];
     if (!v) continue;

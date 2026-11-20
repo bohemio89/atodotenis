@@ -361,13 +361,35 @@ function notaDeRespaldo(p) {
   const victoriasEs = (n) => `${vecesEs(n)} ${n === 1 ? 'victoria' : 'victorias'}`, derrotasEs = (n) => `${vecesEs(n)} ${n === 1 ? 'derrota' : 'derrotas'}`;
   const winsEn = (n) => `${vecesEn(n)} ${n === 1 ? 'win' : 'wins'}`, lossesEn = (n) => `${vecesEn(n)} ${n === 1 ? 'loss' : 'losses'}`;
   const invicto = grupo && recG.p === 0 && recG.g >= 2;
+  // Lo que significa el resultado: clasificación al cerrar el grupo, pase a la final o título
+  let puesto = 0;
+  if (grupo) {
+    const ids = new Set(Object.values(PARTIDOS_TODOS).filter((o) => o.torneo === p.torneo && !o.dobles && [o.j1, o.j2].every((j) => j && grupo.jugadores.includes(normNombre(j.nombre)))).flatMap((o) => [o.j1.id, o.j2.id]));
+    const jugadosGrupo = Object.values(PARTIDOS_TODOS).filter((o) => o.torneo === p.torneo && !o.dobles && (o.id === p.id || (o.confirmado && o.ganador)) && [o.j1?.id, o.j2?.id].every((x) => ids.has(x)));
+    if (ids.size === 4 && jugadosGrupo.length >= 6) {
+      const gan = {}; for (const o of jugadosGrupo) { const w = o.id === p.id ? gId : (o.ganador === 1 ? o.j1 : o.j2).id; gan[w] = (gan[w] || 0) + 1; }
+      const orden = [...ids].sort((x, y) => (gan[y] || 0) - (gan[x] || 0));
+      const pos = orden.indexOf(gId);
+      if (pos <= 1 && (gan[gId] || 0) > (gan[orden[2]] || 0)) puesto = pos + 1;
+    }
+  }
+  const ultimaRonda = String(p.ronda || '').split(' - ').pop();
+  const esSemi = !grupo && (p.rondaCod === 'SF' || /semi/i.test(ultimaRonda)), esFinal = !grupo && (p.rondaCod === 'F' || /^final$/i.test(ultimaRonda.trim()));
+  const fem = /women/.test(p.genero || '') || tour === 'wta';
 
   // ---- Español ----
   const quienEs = (nombre, rk) => rk ? `${nombre}, número ${rk} del ranking,` : nombre;
-  const titulo = remonto ? `${ag} dio vuelta el partido ante ${ap} en ${torneoEs}`
+  const titulo = esFinals && esFinal ? `${ag} ${fem ? 'es campeona' : 'es campeón'} de ${torneoEs}`
+    : esFinals && esSemi ? `${ag} le ganó a ${ap} y ${fem ? 'es finalista' : 'es finalista'} de ${torneoEs}`
+    : puesto && recG.p === 0 ? `${ag} le ganó a ${ap} y cerró ${fem ? 'invicta' : 'invicto'} el ${grupo.nombre.replace(/^Grupo /, 'grupo ')}`
+    : puesto ? `${ag} le ganó a ${ap} y se clasificó a las semifinales de ${torneoEs}`
+    : remonto ? `${ag} dio vuelta el partido ante ${ap} en ${torneoEs}`
     : invicto ? `${ag} le ganó a ${ap} y sigue ${/women/.test(p.genero || '') || tour === 'wta' ? 'invicta' : 'invicto'} en ${torneoEs}`
     : `${ag} le ganó a ${ap} en ${torneoEs}`;
-  const bajada = `${rkG ? `El número ${rkG} del mundo` : ag} se impuso ${marcadorEs}${grupo ? ` en el ${grupo.nombre.replace(/^Grupo /, 'grupo ')}` : rondaEs ? ` en ${rondaEs}` : ''}${grupo ? ` y suma ${victoriasEs(recG.g)}${recG.p ? ` y ${derrotasEs(recG.p)}` : ''}` : ''}.`;
+  const bajada = puesto ? `${rkG ? `El número ${rkG} del mundo` : ag} se impuso ${marcadorEs}, terminó ${puesto === 1 ? 'primero' : 'segundo'} en el ${grupo.nombre.replace(/^Grupo /, 'grupo ')} y ${recG.p === 0 ? 'jugará' : 'se metió en'} las semifinales.`
+    : esFinals && esFinal ? `${ag} le ganó ${marcadorEs} a ${ap} en la final de ${torneoEs}.`
+    : esFinals && esSemi ? `${ag} se impuso ${marcadorEs} ante ${ap} y jugará la final de ${torneoEs}.`
+    : `${rkG ? `El número ${rkG} del mundo` : ag} se impuso ${marcadorEs}${grupo ? ` en el ${grupo.nombre.replace(/^Grupo /, 'grupo ')}` : rondaEs ? ` en ${rondaEs}` : ''}${grupo ? ` y suma ${victoriasEs(recG.g)}${recG.p ? ` y ${derrotasEs(recG.p)}` : ''}` : ''}.`;
   const cuerpo = [];
   cuerpo.push(`${quienEs(G, rkG)} venció a ${P}${rkP ? ` (${rkP}°)` : ''} por ${marcadorEs} en ${rondaEs ? `${rondaEs} de ` : ''}${torneoEs}.`);
   const tbEs = (i) => { const t = tbPerdedor(i); return t != null ? ` en el tie-break por ${Math.max(7, t + 2)}-${t}` : ' en el tie-break'; };
@@ -397,10 +419,17 @@ function notaDeRespaldo(p) {
 
   // ---- English (mismo contenido) ----
   const whoEn = (nombre, rk) => rk ? `World No. ${rk} ${nombre}` : nombre;
-  const tituloEn = remonto ? `${ag} comes back to beat ${ap} at ${torneoEn}`
+  const tituloEn = esFinals && esFinal ? `${ag} wins ${torneoEn}`
+    : esFinals && esSemi ? `${ag} beats ${ap} to reach the final of ${torneoEn}`
+    : puesto && recG.p === 0 ? `${ag} beats ${ap} to finish the ${grupoEn} unbeaten`
+    : puesto ? `${ag} beats ${ap} to reach the semi-finals of ${torneoEn}`
+    : remonto ? `${ag} comes back to beat ${ap} at ${torneoEn}`
     : invicto ? `${ag} beats ${ap} to stay unbeaten at ${torneoEn}`
     : `${ag} beats ${ap} at ${torneoEn}`;
-  const bajadaEn = `${rkG ? `The world No. ${rkG}` : ag} won ${marcadorEn}${grupo ? ` in the ${grupoEn}` : rondaEn ? ` in ${rondaEn}` : ''}${grupo ? ` and now has ${winsEn(recG.g)}${recG.p ? ` and ${lossesEn(recG.p)}` : ''}` : ''}.`;
+  const bajadaEn = puesto ? `${rkG ? `The world No. ${rkG}` : ag} won ${marcadorEn}, finished ${puesto === 1 ? 'first' : 'second'} in the ${grupoEn} and goes through to the semi-finals.`
+    : esFinals && esFinal ? `${ag} beat ${ap} ${marcadorEn} in the final of ${torneoEn}.`
+    : esFinals && esSemi ? `${ag} beat ${ap} ${marcadorEn} and will play the final of ${torneoEn}.`
+    : `${rkG ? `The world No. ${rkG}` : ag} won ${marcadorEn}${grupo ? ` in the ${grupoEn}` : rondaEn ? ` in ${rondaEn}` : ''}${grupo ? ` and now has ${winsEn(recG.g)}${recG.p ? ` and ${lossesEn(recG.p)}` : ''}` : ''}.`;
   const cuerpoEn = [];
   cuerpoEn.push(`${whoEn(G, rkG)} beat ${P}${rkP ? ` (No. ${rkP})` : ''} ${marcadorEn} in ${rondaEn ? `${rondaEn} of ` : ''}${torneoEn}.`);
   const descSetEn = ([a, b], i) => {
