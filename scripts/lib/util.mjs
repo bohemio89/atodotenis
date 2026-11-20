@@ -145,7 +145,7 @@ export function tourBase(tour) {
   return ['atp', 'wta', 'challenger'].includes(b) ? b : null;
 }
 
-const CIUDADES = { Paris: 'París', London: 'Londres', Rome: 'Roma', Beijing: 'Pekín', Shanghai: 'Shanghái', Vienna: 'Viena', Basel: 'Basilea',
+const CIUDADES = { Paris: 'París', London: 'Londres', Rome: 'Roma', Beijing: 'Pekín', Vienna: 'Viena', Basel: 'Basilea',
   Turin: 'Turín', Riyadh: 'Riad', 'Monte Carlo': 'Montecarlo', Hamburg: 'Hamburgo', Munich: 'Múnich', Geneva: 'Ginebra', Stockholm: 'Estocolmo',
   Athens: 'Atenas', Brussels: 'Bruselas', Tokyo: 'Tokio', Dubai: 'Dubái', Rotterdam: 'Róterdam', Marseille: 'Marsella', Moscow: 'Moscú',
   Seoul: 'Seúl', Mexico: 'México', 'Mexico City': 'Ciudad de México', Cordoba: 'Córdoba', 'Villa Maria': 'Villa María', 'Sao Paulo': 'San Pablo',
