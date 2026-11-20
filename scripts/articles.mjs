@@ -385,8 +385,10 @@ function notaDeRespaldo(p) {
     cuerpo.push(t.trim());
   }
   const proxEs = [proxG && `${ag} jugará el ${diaEs(proxG)} ante ${rivalDe(proxG, gId)}`, proxP && `${ap} se medirá con ${rivalDe(proxP, pId)}`].filter(Boolean);
-  const ultima = grupo && recG.g + recG.p >= 2;
-  if (proxEs.length) cuerpo.push(`${grupo ? (ultima ? 'En la última fecha del grupo, ' : 'En la próxima fecha del grupo, ') : 'En su próximo partido, '}${proxEs.join(', mientras que ')}.`);
+  const jugados = grupo ? recG.g + recG.p : 0;
+  const ultima = grupo && jugados === 2;
+  const yaSemis = grupo && jugados >= 3; // terminó el grupo: el próximo partido es la semifinal
+  if (proxEs.length) cuerpo.push(`${yaSemis ? 'En semifinales, ' : grupo ? (ultima ? 'En la última fecha del grupo, ' : 'En la próxima fecha del grupo, ') : 'En su próximo partido, '}${proxEs.join(', mientras que ')}.`);
 
   // ---- English (mismo contenido) ----
   const whoEn = (nombre, rk) => rk ? `World No. ${rk} ${nombre}` : nombre;
@@ -414,7 +416,7 @@ function notaDeRespaldo(p) {
     cuerpoEn.push(t.trim());
   }
   const proxEn = [proxG && `${ag} will play ${rivalDe(proxG, gId)} on ${diaEn(proxG)}`, proxP && `${ap} will face ${rivalDe(proxP, pId)}`].filter(Boolean);
-  if (proxEn.length) cuerpoEn.push(`${grupo ? (ultima ? 'On the final day of the group, ' : 'In the next round of group matches, ') : 'Next, '}${proxEn.join(', while ')}.`);
+  if (proxEn.length) cuerpoEn.push(`${yaSemis ? 'In the semi-finals, ' : grupo ? (ultima ? 'On the final day of the group, ' : 'In the next round of group matches, ') : 'Next, '}${proxEn.join(', while ')}.`);
 
   return {
     titulo, bajada, cuerpo, etiquetas: [nomT, G, P],
