@@ -1,87 +1,94 @@
 {
-  "slug": "2026-11-21-alcaraz-shelton-finals-turin",
-  "estado": "publicada",
-  "fecha": "2026-11-21T15:45:01.109Z",
-  "fechaPartido": "2026-11-21T13:40:00Z",
-  "titulo": "Alcaraz le ganó a Shelton y es finalista de las ATP Finals",
-  "bajada": "Alcaraz se impuso 3-6, 6-3 y 7-6 (1) ante Shelton y jugará la final de las ATP Finals.",
-  "cuerpo": [
-    "Carlos Alcaraz, número 3 del ranking, venció a Ben Shelton (4°) por 3-6, 6-3 y 7-6 (1) en la semifinal de las ATP Finals.",
-    "El primer set se lo llevó Shelton, por 6-3. El segundo fue para Alcaraz, que lo cerró 6-3. El tercero fue para Alcaraz, que lo ganó en el tie-break por 7-1. Alcaraz perdió el primer set y dio vuelta el partido.",
-    "Alcaraz venía de ganarle a Tiafoe por 6-2 y 6-2 y de ganarle a Medvedev por 6-2 y 6-4 y de ganarle a Cobolli por 6-4 y 6-1. Shelton venía de ganarle a Fils por 6-2, 3-6 y 6-3 y de perder con Zverev por 2-6 y 6-7 y de ganarle a Jódar por 7-6 y 7-5."
+ "slug": "2026-11-21-alcaraz-shelton-finals-turin",
+ "estado": "publicada",
+ "fecha": "2026-11-21T15:45:01.109Z",
+ "fechaPartido": "2026-11-21T13:40:00Z",
+ "titulo": "Alcaraz le ganó a Shelton y es finalista de las ATP Finals",
+ "bajada": "Alcaraz se impuso 3-6, 6-3 y 7-6 (1) ante Shelton y jugará la final de las ATP Finals.",
+ "cuerpo": [
+  "Carlos Alcaraz, número 3 del ranking, venció a Ben Shelton (4°) por 3-6, 6-3 y 7-6 (1) en la semifinal de las ATP Finals.",
+  "El primer set se lo llevó Shelton, por 6-3. El segundo fue para Alcaraz, que lo cerró 6-3. El tercero fue para Alcaraz, que lo ganó en el tie-break por 7-1. Alcaraz perdió el primer set y dio vuelta el partido.",
+  "Alcaraz venía de ganarle a Tiafoe por 6-2 y 6-2 y de ganarle a Medvedev por 6-2 y 6-4 y de ganarle a Cobolli por 6-4 y 6-1. Shelton venía de ganarle a Fils por 6-2, 3-6 y 6-3 y de perder con Zverev por 2-6 y 6-7 y de ganarle a Jódar por 7-6 y 7-5."
+ ],
+ "etiquetas": [
+  "ATP Finals",
+  "Carlos Alcaraz",
+  "Ben Shelton"
+ ],
+ "categoria": "ATP Finals",
+ "argentina": false,
+ "superficie": "hard",
+ "partidoId": 223144,
+ "jugadores": [
+  "Carlos Alcaraz",
+  "Ben Shelton"
+ ],
+ "torneo": "ATP Finals",
+ "resultado": {
+  "ganador": {
+   "nombre": "Carlos Alcaraz",
+   "pais": "esp",
+   "ranking": 3
+  },
+  "perdedor": {
+   "nombre": "Ben Shelton",
+   "pais": "usa",
+   "ranking": 4
+  },
+  "sets": [
+   [
+    3,
+    6
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    7,
+    6
+   ]
   ],
-  "etiquetas": [
-    "ATP Finals",
-    "Carlos Alcaraz",
-    "Ben Shelton"
+  "tieBreaks": [
+   null,
+   null,
+   {
+    "p1": 1,
+    "p2": 7
+   }
   ],
+  "ronda": "SF",
+  "resultado": null
+ },
+ "importancia": 85,
+ "firma": "Redacción A Todo Tenis",
+ "imagen": null,
+ "generadoCon": "plantilla",
+ "en": {
   "categoria": "ATP Finals",
-  "argentina": false,
-  "superficie": "hard",
-  "partidoId": 223144,
-  "jugadores": [
-    "Carlos Alcaraz",
-    "Ben Shelton"
+  "titulo": "Alcaraz beats Shelton to reach the final of the ATP Finals",
+  "bajada": "Alcaraz beat Shelton 3-6, 6-3, 7-6 (1) and will play the final of the ATP Finals.",
+  "cuerpo": [
+   "World No. 3 Carlos Alcaraz beat Ben Shelton (No. 4) 3-6, 6-3, 7-6 (1) in the semifinals of the ATP Finals.",
+   "The first set went to Shelton, 6-3. The second went to Alcaraz, 6-3. The third went to Alcaraz, who won the tiebreak 7-1. Alcaraz lost the first set and came back to win.",
+   "Alcaraz had beaten Tiafoe 6-2, 6-2 and beaten Medvedev 6-2, 6-4 and beaten Cobolli 6-4, 6-1. Shelton had beaten Fils 6-2, 3-6, 6-3 and lost to Zverev 2-6, 6-7 and beaten Jódar 7-6, 7-5."
   ],
-  "torneo": "ATP Finals",
-  "resultado": {
-    "ganador": {
-      "nombre": "Carlos Alcaraz",
-      "pais": "esp",
-      "ranking": 3
-    },
-    "perdedor": {
-      "nombre": "Ben Shelton",
-      "pais": "usa",
-      "ranking": 4
-    },
-    "sets": [
-      [
-        3,
-        6
-      ],
-      [
-        6,
-        3
-      ],
-      [
-        7,
-        6
-      ]
-    ],
-    "tieBreaks": [
-      null,
-      null,
-      {
-        "p1": 1,
-        "p2": 7
-      }
-    ],
-    "ronda": "SF",
-    "resultado": null
-  },
-  "importancia": 85,
-  "firma": "Redacción A Todo Tenis",
-  "imagen": null,
-  "generadoCon": "plantilla",
-  "en": {
-    "categoria": "ATP Finals",
-    "titulo": "Alcaraz beats Shelton to reach the final of the ATP Finals",
-    "bajada": "Alcaraz beat Shelton 3-6, 6-3, 7-6 (1) and will play the final of the ATP Finals.",
-    "cuerpo": [
-      "World No. 3 Carlos Alcaraz beat Ben Shelton (No. 4) 3-6, 6-3, 7-6 (1) in the semifinals of the ATP Finals.",
-      "The first set went to Shelton, 6-3. The second went to Alcaraz, 6-3. The third went to Alcaraz, who won the tiebreak 7-1. Alcaraz lost the first set and came back to win.",
-      "Alcaraz had beaten Tiafoe 6-2, 6-2 and beaten Medvedev 6-2, 6-4 and beaten Cobolli 6-4, 6-1. Shelton had beaten Fils 6-2, 3-6, 6-3 and lost to Zverev 2-6, 6-7 and beaten Jódar 7-6, 7-5."
-    ],
-    "huella": "e597fe0c0d20",
-    "modelo": "plantilla",
-    "fecha": "2026-11-21T15:45:01.109Z"
-  },
-  "getty": {
-    "src": "https://embed.gettyimages.com/embed/2305624211?et=mOK8bPfhSzFYbwS7RFKSaQ&tld=com&sig=Wqb0fjlxisFPUMzi7O9zVvX4zfkjKxuDZQpOtqqD-XI%3D&caption=true&ver=1",
-    "w": 594,
-    "h": 396,
-    "id": "2305624211",
-    "fecha": "2026-11-21T15:45:11.218Z"
-  }
+  "huella": "e597fe0c0d20",
+  "modelo": "plantilla",
+  "fecha": "2026-11-21T15:45:01.109Z"
+ },
+ "getty": {
+  "src": "https://embed.gettyimages.com/embed/2305624211?et=mOK8bPfhSzFYbwS7RFKSaQ&tld=com&sig=Wqb0fjlxisFPUMzi7O9zVvX4zfkjKxuDZQpOtqqD-XI%3D&caption=true&ver=1",
+  "w": 594,
+  "h": 396,
+  "id": "2305624211",
+  "fecha": "2026-11-21T15:45:11.218Z"
+ },
+ "reintentoGemini": "2026-11-21T16:04:43.124Z",
+ "video": {
+  "youtube": "aJ_bIrNtrtA",
+  "titulo": "Carlos Alcaraz vs Ben Shelton BLOCKBUSTER Match Highlights 🍿 | Nitto ATP Finals 2026",
+  "canal": "Tennis TV",
+  "publicado": "2026-11-21T15:50:27+00:00"
+ }
 }
