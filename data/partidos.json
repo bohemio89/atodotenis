@@ -70092,12 +70092,38 @@
    "ranking": 5
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-21T19:44:07.438Z",
+  "visto": "2026-11-21T21:13:19.131Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": "atp_finals",
-  "importante": true
+  "importante": true,
+  "score": {
+   "games": [
+    [
+     7,
+     6
+    ],
+    [
+     6,
+     4
+    ]
+   ],
+   "sets": [
+    2,
+    0
+   ],
+   "tiebreaks": [
+    {
+     "p1": 7,
+     "p2": 0
+    },
+    null
+   ]
+  },
+  "confirmado": true,
+  "ganador": 1,
+  "fuente": "vivo"
  },
  "223422": {
   "id": 223422,
