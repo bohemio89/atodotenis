@@ -67689,7 +67689,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-21T13:45:27.822Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
@@ -69002,9 +69002,9 @@
    "ranking": 3
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-21T13:45:27.925Z",
+  "visto": "2026-11-21T15:44:24.233Z",
   "torneoClave": "atp|Finals - Turin",
   "tier": "atp_finals",
   "importante": true,
@@ -69024,10 +69024,14 @@
    },
    "games": [
     [
-     0
+     6,
+     3,
+     6
     ],
     [
-     0
+     3,
+     6,
+     7
     ]
    ],
    "is_tiebreak": false,
@@ -69041,8 +69045,8 @@
    "sequence": 5,
    "server": 1,
    "sets": [
-    0,
-    0
+    1,
+    2
    ],
    "sources_count": 2,
    "stale": false,
@@ -69051,10 +69055,19 @@
     "30",
     "15"
    ],
-   "saca": 1
+   "saca": 1,
+   "tiebreaks": [
+    null,
+    null,
+    {
+     "p1": 1,
+     "p2": 7
+    }
+   ]
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2,
+  "fuente": "vivo"
  },
  "223149": {
   "id": 223149,
@@ -70447,7 +70460,7 @@
    "ranking": 148
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-21T13:45:27.823Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
@@ -70512,7 +70525,7 @@
   "superficie": null,
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-21T14:00:00Z",
+  "horario": "2026-11-21T14:20:00Z",
   "j1": {
    "id": 854,
    "nombre": "Diane Parry",
@@ -70523,15 +70536,64 @@
    "id": 995,
    "nombre": "Storm Hunter",
    "pais": "usa",
-   "ranking": 164
+   "ranking": 187
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-21T05:45:25.345Z",
+  "visto": "2026-11-21T15:44:24.611Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
-  "importante": true
+  "importante": true,
+  "torneoId": "3330",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-21T15:44:03.167549Z",
+   "age_seconds": 21,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3,
+     3
+    ],
+    [
+     6,
+     5
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "30",
+    "0"
+   ],
+   "received_at": "2026-11-21T15:44:02.780042Z",
+   "sequence": 112,
+   "server": 1,
+   "sets": [
+    0,
+    1
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-21T15:44:20.626493Z",
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223314": {
   "id": 223314,
@@ -70624,7 +70686,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-21T13:45:27.822Z",
   "torneoClave": "challenger|Metz (France)",
@@ -70683,32 +70745,81 @@
  "223347": {
   "id": 223347,
   "tour": "challenger",
-  "torneo": "Metz (France) - Qualification",
+  "torneo": "Metz (France)",
   "ronda": "Metz - Semi-finals",
   "rondaCod": "SF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-21T14:00:00Z",
+  "horario": "2026-11-21T14:35:00Z",
   "j1": {
-   "id": 146,
-   "nombre": "Soonwoo Kwon",
-   "pais": "kor",
-   "ranking": 156
-  },
-  "j2": {
    "id": 128,
    "nombre": "Sascha Gueymard Wayenburg",
    "pais": "fra",
    "ranking": 191
   },
+  "j2": {
+   "id": 146,
+   "nombre": "Soonwoo Kwon",
+   "pais": "kor",
+   "ranking": 156
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-21T05:45:25.480Z",
-  "torneoClave": "challenger|Metz (France) - Qualification",
-  "tier": null,
-  "importante": false
+  "visto": "2026-11-21T15:44:24.611Z",
+  "torneoClave": "challenger|Metz (France)",
+  "tier": "challenger_125",
+  "importante": false,
+  "torneoId": "14867",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-21T15:44:17.644587Z",
+   "age_seconds": 6,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     3
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "15",
+    "40"
+   ],
+   "received_at": "2026-11-21T15:44:16.530755Z",
+   "sequence": 113,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-21T15:44:17.644580Z",
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223379": {
   "id": 223379,
@@ -70742,17 +70853,17 @@
  },
  "223380": {
   "id": 223380,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Helsinki",
   "ronda": "Helsinki - Final",
   "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-21T15:30:00Z",
+  "horario": "2026-11-21T15:40:00Z",
   "j1": {
    "id": 11266,
-   "nombre": "Rojer/ Winegar",
+   "nombre": "Rojer / Theodore Winegar",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -70762,7 +70873,7 @@
   },
   "j2": {
    "id": 45978,
-   "nombre": "Johnson/ Venus",
+   "nombre": "Johnson / Venus",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -70771,12 +70882,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-21T05:45:25.480Z",
+  "visto": "2026-11-21T15:44:24.611Z",
   "torneoClave": "challenger|Helsinki",
   "tier": "challenger_125",
-  "importante": false
+  "importante": false,
+  "torneoId": "2663",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-21T15:43:49.290894Z",
+   "age_seconds": 35,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "40",
+    "40"
+   ],
+   "received_at": "2026-11-21T15:43:48.895199Z",
+   "sequence": 13,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-21T15:44:19.191377Z",
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223381": {
   "id": 223381,
