@@ -399,7 +399,14 @@
   "nombre": "Stockholm",
   "tour": "atp",
   "id": "1686",
-  "meta": null,
+  "meta": {
+   "ciudad": "Stockholm",
+   "pais": "SE",
+   "categoria": "atp_250",
+   "superficie": "hard",
+   "cubierto": true,
+   "genero": "men"
+  },
   "campeones": {
    "2026": {
     "dobles": {
@@ -630,7 +637,14 @@
   "nombre": "Brisbane 3, Australia",
   "tour": "challenger",
   "id": "13459",
-  "meta": null,
+  "meta": {
+   "ciudad": "Brisbane",
+   "pais": "AU",
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-10T05:40:00Z",
   "ultimaVez": "2026-11-14T03:05:00Z",
@@ -685,7 +699,14 @@
   "nombre": "Lima, Peru",
   "tour": "challenger",
   "id": "4819",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "clay",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-10T21:10:00Z",
   "ultimaVez": "2026-11-14T01:05:00Z",
@@ -762,7 +783,14 @@
   "nombre": "Sopo (Colombia)",
   "tour": "challenger_women",
   "id": "14866",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "clay",
+   "cubierto": false,
+   "genero": "women"
+  },
   "campeones": {
    "2026": {
     "singles": {
@@ -806,7 +834,14 @@
   "nombre": "WTA Tour Finals, Doubles, Group A",
   "tour": "wta",
   "id": "3190",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "tour_finals",
+   "superficie": "hard",
+   "cubierto": true,
+   "genero": "women"
+  },
   "campeones": {},
   "primeraVez": "2026-11-14T02:10:00Z",
   "ultimaVez": "2026-11-14T02:10:00Z",
@@ -997,7 +1032,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-16T14:05:00Z",
-  "ultimaVez": "2026-11-20T23:40:00Z",
+  "ultimaVez": "2026-11-21T23:05:00Z",
   "superficie": "clay",
   "tier": "wta_125"
  },
@@ -1236,5 +1271,24 @@
   "ultimaVez": "2026-11-22T21:30:00Z",
   "superficie": "clay",
   "tier": "bjk_cup"
+ },
+ "wta|Billie Jean King Cup, Singles Matches": {
+  "clave": "wta|Billie Jean King Cup, Singles Matches",
+  "nombre": "Billie Jean King Cup, Singles Matches",
+  "tour": "wta",
+  "id": "3330",
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": null,
+   "superficie": null,
+   "cubierto": false,
+   "genero": "women"
+  },
+  "campeones": {},
+  "primeraVez": "2026-11-21T20:15:00Z",
+  "ultimaVez": "2026-11-21T20:15:00Z",
+  "tier": "bjk_cup",
+  "superficie": "hard"
  }
 }
