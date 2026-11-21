@@ -132,6 +132,10 @@ function bloqueNota(b) {
     return `<section class="bq bq-barras">${tit}${b.items.map((x) => `<div class="bq-fila${x.destacado ? ' dest' : ''}"><span class="bq-nom">${esc(tx(x.nombre))}</span><span class="bq-barra"><i style="width:${Math.max(4, Math.round((+x.valor || 0) / max * 100))}%"></i></span><span class="bq-val">${esc(tx(x.etiqueta ?? Number(x.valor).toLocaleString(EN ? 'en-US' : 'es-AR')))}</span></div>`).join('')}${pie}</section>`;
   }
   if (b.tipo === 'linea') return `<section class="bq bq-linea">${tit}<ol>${b.items.map((x) => `<li class="${x.estado || ''}"><span class="bq-cuando">${esc(tx(x.cuando))}</span><span class="bq-que">${esc(tx(x.que))}</span></li>`).join('')}</ol>${pie}</section>`;
+  if (b.tipo === 'horario') {
+    // Hora oficial del lugar y, debajo, la hora local de cada visitante (la calcula su navegador).
+    return `<section class="bq bq-horario">${tit}<div class="hr-fila"><span class="hr-et">${esc(tx(b.lugar))}</span><strong>${esc(tx(b.texto))}</strong></div><div class="hr-fila"><span class="hr-et">${EN ? 'Your time' : 'En tu horario'}</span><strong class="hr-local" data-utc="${esc(b.utc)}">—</strong></div>${pie}<script>document.querySelectorAll('.hr-local').forEach(function(e){try{var d=new Date(e.dataset.utc),l=document.documentElement.lang||undefined,w=d.toLocaleDateString(l,{weekday:'long'}),h=d.toLocaleTimeString(l,{hour:'2-digit',minute:'2-digit',hourCycle:'h23'});e.textContent=w.charAt(0).toUpperCase()+w.slice(1)+' '+d.getDate()+', '+h;}catch(x){}});</script></section>`;
+  }
   if (b.tipo === 'versus') {
     const lado = (j) => `<div class="vs-jug">${j.pais ? banderaDe(j.pais) : ''}<strong>${esc(tx(j.nombre))}</strong>${j.sub ? `<span>${esc(tx(j.sub))}</span>` : ''}</div>`;
     return `<section class="bq bq-versus">${tit}<div class="vs-cab">${lado(b.j1)}<span class="vs-x">vs</span>${lado(b.j2)}</div>${b.filas.map((x) => `<div class="vs-fila"><span class="vs-v${x.mejor === 1 ? ' dest' : ''}">${esc(tx(x.v1))}</span><span class="vs-dato">${esc(tx(x.dato))}</span><span class="vs-v${x.mejor === 2 ? ' dest' : ''}">${esc(tx(x.v2))}</span></div>`).join('')}${pie}</section>`;

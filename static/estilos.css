@@ -480,6 +480,11 @@ body{background:#0F1317}
 .bq-tarj .bq-sup{display:block;font-size:12px;color:var(--tenue);text-transform:uppercase;letter-spacing:.04em}
 .bq-tarj strong{display:block;font:800 18px/1.2 Montserrat,sans-serif;margin:6px 0 4px}
 .bq-tarj span:last-child{font-size:13px;color:var(--suave)}
+.hr-fila{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:10px 0;border-bottom:1px solid var(--linea)}
+.hr-fila:last-of-type{border-bottom:0}
+.hr-et{font-size:12px;color:var(--tenue);text-transform:uppercase;letter-spacing:.05em}
+.hr-fila strong{font:800 18px/1.2 Montserrat,sans-serif;color:var(--texto);text-align:right}
+.hr-local{color:var(--lima)!important}
 .bq-versus .vs-cab{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;padding-bottom:12px;margin-bottom:4px;border-bottom:1px solid var(--linea)}
 .vs-jug{text-align:center}
 .vs-jug .bandera{display:block;margin:0 auto 6px;width:28px;height:21px}
