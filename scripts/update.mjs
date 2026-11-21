@@ -303,6 +303,14 @@ async function main() {
   // Semana de Finals: el cupo diario de la API se reserva para los partidos de Turín y Riad/Indian Wells.
   // Fuera de esos partidos se actualiza una vez por hora; si el seguimiento en vivo está activo, él mueve el marcador.
   const semanaFinals = C.prioridadFinalsHasta && ahora < new Date(C.prioridadFinalsHasta);
+  // Día de definición (pedido de Jonathan): el cupo de la API es SOLO para los partidos de las Finals.
+  // Fuera de la ventana de esos partidos no se consulta nada; en las corridas forzadas solo se confirman partidos de las Finals.
+  const soloFinals = C.soloFinalsHasta && ahora < new Date(C.soloFinalsHasta);
+  const esFinals = (p) => /finals/i.test(p.torneo || '') && !/next ?gen/i.test(p.torneo || '') && !p.dobles && !/\//.test(`${p.j1?.nombre || ''}${p.j2?.nombre || ''}`);
+  if (soloFinals && !process.env.FORZAR && !hayFinalesEnVentana) {
+    log(`Solo Finals hasta ${C.soloFinalsHasta}: sin partidos de las Finals en la ventana, no se consulta la API.`);
+    return;
+  }
   // Con el seguimiento en vivo activo, el marcador lo mueve él y el cupo es para él: el robot completo casi no consulta.
   // Al terminar un partido, vivo.mjs dispara una corrida forzada que confirma el resultado y escribe la nota.
   const intervaloActualizacion = hayFinalesEnVentana ? (process.env.VIVO_ACTIVO > 0 ? 120 : 15)
@@ -340,7 +348,7 @@ async function main() {
       // Se procesan de a pocos para respetar el presupuesto diario; los restantes esperan
       // la próxima vigilancia de 30 minutos.
       const pendientes = Object.values(partidos)
-        .filter((p) => p.estado === 'por_confirmar' && !p.confirmado && p.horario &&
+        .filter((p) => p.estado === 'por_confirmar' && !p.confirmado && p.horario && (!soloFinals || esFinals(p)) &&
           ahoraMs - new Date(p.horario).getTime() <= 6 * 3600e3)
         .sort((a, b) => prioridad(b) - prioridad(a) || String(b.horario).localeCompare(String(a.horario)));
       const cupoVigilancia = Math.max(0, Math.min(2, C.maxDetallesPorCorrida, presupuestoVigilancia - 1));
@@ -388,7 +396,7 @@ async function main() {
   // 2) Calendario cada N horas
   const horasDesdeCal = estado.calendario ? (ahora - new Date(estado.calendario)) / 3600e3 : 99;
   if (horasDesdeCal >= C.calendarioCadaHoras - 0.25) {
-    for (const tour of C.toursCalendario) {
+    for (const tour of (soloFinals ? ['atp'] : C.toursCalendario)) {
       const fx = await api(`fixtures?limit=200&tour=${tour}`);
       for (const f of fx.data || []) if (tourBase(f.tour)) partidos[f.match_id] = desdeFixture(f);
       log(`Calendario ${tour}:`, (fx.data || []).length);
@@ -437,7 +445,7 @@ async function main() {
       // partidos importantes que el robot nunca vio en vivo (p. ej. con el cupo de la API agotado) y que por horario ya
       // tendrían que haber terminado: también se consultan, si no quedaban como "programados" para siempre
       (p.estado === 'programado' && p.importante && ahora - new Date(p.horario || 0) > 2.5 * 3600e3)) &&
-      ahora - new Date(p.horario || 0) < 7 * 864e5)
+      ahora - new Date(p.horario || 0) < 7 * 864e5 && (!soloFinals || esFinals(p)))
     .sort((a, b) => prioridad(b) - prioridad(a) || String(b.horario).localeCompare(String(a.horario)));
   // Los resultados de partidos importantes de los últimos 3 días se confirman siempre (3 consultas por corrida
   // como máximo), aunque la previsión de corridas futuras no deje margen: sin esto quedaban sin resultado final.
@@ -457,7 +465,7 @@ async function main() {
   // 4b) Datos de torneos nuevos (ciudad, país, categoría), una sola vez por torneo
   actualizarTorneos();
   const sinMeta = Object.values(torneos).filter((t) => t.id && !t.meta && tourBase(t.tour))
-    .sort((a, b) => String(b.ultimaVez).localeCompare(String(a.ultimaVez))).slice(0, Math.max(0, Math.min(6, disponibles - confirmados)));
+    .sort((a, b) => String(b.ultimaVez).localeCompare(String(a.ultimaVez))).slice(0, soloFinals ? 0 : Math.max(0, Math.min(6, disponibles - confirmados)));
   for (const t of sinMeta) {
     const m = await api(`tournaments/${t.id}`);
     t.meta = { ciudad: m.city, pais: m.country, categoria: m.category, superficie: m.surface, cubierto: !!m.indoor, genero: m.gender };
@@ -475,7 +483,7 @@ async function main() {
       if (j?.id && !j.pais && !paises.porId[j.id] && !faltan.has(j.id)) faltan.set(j.id, p.estado === 'en_vivo' ? 0 : p.estado === 'programado' ? 1 : 2);
     }
   }
-  const cupoPaises = Math.max(0, Math.min(C.maxPaisesPorCorrida, disponibles - confirmados - usadasTorneos));
+  const cupoPaises = soloFinals ? 0 : Math.max(0, Math.min(C.maxPaisesPorCorrida, disponibles - confirmados - usadasTorneos));
   const ids = [...faltan.entries()].sort((a, b) => a[1] - b[1]).slice(0, cupoPaises).map(([id]) => id);
   for (const id of ids) {
     const j = await api(`players/${id}`);
