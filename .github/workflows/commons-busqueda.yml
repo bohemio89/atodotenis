@@ -1,0 +1,22 @@
+name: Buscar fotos en Commons (texto)
+on:
+  push:
+    branches: [media]
+    paths: [media/busqueda-pedido.txt]
+permissions: { contents: write }
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: |
+          while IFS='|' read -r dir qs; do
+            [ -z "$dir" ] && continue
+            eval "node media/commons-busqueda.mjs $dir $qs" || true
+          done < media/busqueda-pedido.txt
+      - run: |
+          git config user.name "A Todo Tenis bot" && git config user.email "bot@atodotenis.local"
+          git add media && git commit -m "Fotos candidatas (Commons)" && git push || true
