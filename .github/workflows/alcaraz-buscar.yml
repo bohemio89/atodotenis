@@ -1,0 +1,18 @@
+name: Buscar fotos de Alcaraz (prueba)
+on:
+  push:
+    branches: [media]
+    paths: [media/alcaraz-pedido.txt]
+permissions: { contents: write }
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node media/alcaraz-buscar.mjs
+      - run: |
+          git config user.name "A Todo Tenis bot" && git config user.email "bot@atodotenis.local"
+          git add media/alcaraz && git commit -m "Fotos de Alcaraz candidatas" && git push || true
