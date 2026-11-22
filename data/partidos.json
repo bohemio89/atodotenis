@@ -35184,7 +35184,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "aus"
    ]
   },
   "j2": {
@@ -60694,7 +60694,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "aus",
     null
    ]
   },
@@ -64826,7 +64826,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "aus",
     null
    ]
   },
@@ -67102,26 +67102,32 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-21T15:00:00Z",
+  "horario": "2026-11-21T17:50:00Z",
   "j1": {
-   "id": 2953,
-   "nombre": "Gina Feistel",
-   "pais": "pol",
-   "ranking": 275
-  },
-  "j2": {
    "id": 704,
    "nombre": "Caijsa Wilda Hennemann",
    "pais": "swe",
-   "ranking": 244
+   "ranking": 248
+  },
+  "j2": {
+   "id": 2953,
+   "nombre": "Gina Feistel",
+   "pais": "pol",
+   "ranking": 279
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "cancelled",
   "motivo": null,
-  "visto": "2026-11-21T05:45:25.345Z",
+  "visto": "2026-11-22T01:15:33.909Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
-  "importante": true
+  "importante": true,
+  "torneoId": "3330",
+  "cubierto": true,
+  "resultado": null,
+  "score": null,
+  "confirmado": false,
+  "ganador": null
  },
  "223117": {
   "id": 223117,
@@ -67146,9 +67152,9 @@
    "ranking": 255
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "cancelled",
   "motivo": null,
-  "visto": "2026-11-21T23:15:24.703Z",
+  "visto": "2026-11-22T01:15:33.872Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
   "importante": true,
@@ -67184,7 +67190,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-21T23:15:24.545Z",
+  "visto": "2026-11-22T01:15:33.762Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
   "importante": true,
@@ -68575,7 +68581,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "aus"
    ]
   },
   "j2": {
@@ -68853,9 +68859,9 @@
    "ranking": 187
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-21T15:44:24.611Z",
+  "visto": "2026-11-22T01:15:33.949Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
   "importante": true,
@@ -68863,11 +68869,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-21T15:44:03.167549Z",
-   "age_seconds": 21,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-21T15:50:39.980049Z",
+   "age_seconds": 33893,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 33876,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68876,38 +68882,38 @@
    "games": [
     [
      3,
-     3
+     4
     ],
     [
      6,
-     5
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 33876,
    "origin": "observed",
    "points": [
-    "30",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-21T15:44:02.780042Z",
-   "sequence": 112,
-   "server": 1,
+   "received_at": "2026-11-21T15:50:39.055951Z",
+   "sequence": 122,
+   "server": 2,
    "sets": [
     0,
-    1
+    2
    ],
-   "sources_count": 3,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-21T15:44:20.626493Z",
+   "timestamp": "2026-11-21T15:50:39.980043Z",
    "puntos": [
-    "30",
+    "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "223314": {
   "id": 223314,
@@ -69305,7 +69311,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-21T23:15:24.586Z",
+  "visto": "2026-11-22T01:15:33.813Z",
   "torneoClave": "wta|Billie Jean King Cup, Singles Matches",
   "tier": "bjk_cup",
   "importante": true,
@@ -69314,10 +69320,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-21T20:55:20.296501Z",
-   "age_seconds": 8404,
+   "age_seconds": 15613,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 8,
+   "corroborated_age_seconds": 6052,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -69334,7 +69340,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 8,
+   "observed_age_seconds": 6052,
    "origin": "observed",
    "points": [
     "0",
@@ -69347,7 +69353,7 @@
     1,
     0
    ],
-   "sources_count": 1,
+   "sources_count": 0,
    "stale": true,
    "timestamp": "2026-11-21T21:10:50.217489Z",
    "puntos": [
@@ -69384,7 +69390,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-21T23:15:24.501Z",
+  "visto": "2026-11-22T01:15:33.699Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
   "importante": true,
@@ -69981,7 +69987,7 @@
    "pais": "sui",
    "ranking": 160
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-21T23:15:12.677380Z",
@@ -70186,6 +70192,456 @@
   "visto": "2026-11-21T23:15:24.630Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "importante": true
+ },
+ "223477": {
+  "id": 223477,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Playford 2",
+  "torneoId": "3191",
+  "ronda": "Playford 2 - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-21T23:35:00Z",
+  "j1": {
+   "id": 2061,
+   "nombre": "Jesse Delaney",
+   "pais": "aus",
+   "ranking": 1151
+  },
+  "j2": {
+   "id": 7637,
+   "nombre": "Chase Ferguson",
+   "pais": "aus",
+   "ranking": 677
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-22T01:15:04.990757Z",
+   "age_seconds": 28,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     1,
+     1
+    ],
+    [
+     3,
+     6,
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-22T01:15:04.679868Z",
+   "sequence": 132,
+   "server": 1,
+   "sets": [
+    1,
+    1
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-22T01:15:28.703617Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-22T01:15:33.511Z",
+  "importante": false
+ },
+ "223480": {
+  "id": 223480,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Playford 2",
+  "torneoId": "3191",
+  "ronda": "Playford 2 - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-22T00:40:00Z",
+  "j1": {
+   "id": 1861,
+   "nombre": "Eric Padgham",
+   "pais": "aus",
+   "ranking": 1814
+  },
+  "j2": {
+   "id": 14056,
+   "nombre": "Casey Hoole",
+   "pais": "aus",
+   "ranking": 598
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-22T01:15:28.785314Z",
+   "age_seconds": 4,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1,
+     1
+    ],
+    [
+     6,
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "15",
+    "15"
+   ],
+   "received_at": "2026-11-22T01:15:28.367362Z",
+   "sequence": 54,
+   "server": 2,
+   "sets": [
+    0,
+    1
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-22T01:15:28.785308Z",
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-22T01:15:33.511Z",
+  "importante": false
+ },
+ "223497": {
+  "id": 223497,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Playford 2",
+  "torneoId": "3191",
+  "ronda": "Playford 2 - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-22T01:05:00Z",
+  "j1": {
+   "id": 2121,
+   "nombre": "Benjamin O'Connell",
+   "pais": "aus",
+   "ranking": 945
+  },
+  "j2": {
+   "id": 12213,
+   "nombre": "Zane Stevens",
+   "pais": "aus",
+   "ranking": 1223
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-22T01:15:23.956359Z",
+   "age_seconds": 9,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-22T01:15:23.344295Z",
+   "sequence": 22,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-22T01:15:23.956357Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-22T01:15:33.511Z",
+  "importante": false
+ },
+ "223501": {
+  "id": 223501,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Yokohama",
+  "torneoId": "2510",
+  "ronda": "Yokohama - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-22T01:10:00Z",
+  "j1": {
+   "id": 841,
+   "nombre": "Yun Seong Chung",
+   "pais": "kor",
+   "ranking": 619
+  },
+  "j2": {
+   "id": 4815,
+   "nombre": "Jumpei Yamasaki",
+   "pais": "jpn",
+   "ranking": 1053
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-22T01:15:24.005691Z",
+   "age_seconds": 9,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "30",
+    "15"
+   ],
+   "received_at": "2026-11-22T01:15:23.344118Z",
+   "sequence": 15,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-22T01:15:24.005690Z",
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-22T01:15:33.511Z",
+  "importante": false
+ },
+ "223502": {
+  "id": 223502,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Yokohama",
+  "torneoId": "2510",
+  "ronda": "Yokohama - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-22T01:10:00Z",
+  "j1": {
+   "id": 1935,
+   "nombre": "Taisei Ichikawa",
+   "pais": "jpn",
+   "ranking": 758
+  },
+  "j2": {
+   "id": 4930,
+   "nombre": "Hiromasa Koyama",
+   "pais": "jpn",
+   "ranking": 859
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-22T01:15:32.836761Z",
+   "age_seconds": 0,
+   "changing_sources_count": 2,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": null,
+   "deciding_set": null,
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "30",
+    "30"
+   ],
+   "received_at": "2026-11-22T01:15:31.303736Z",
+   "sequence": 6,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-22T01:15:32.836759Z",
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-22T01:15:33.511Z",
+  "importante": false
+ },
+ "223503": {
+  "id": 223503,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "Yokohama",
+  "torneoId": "2510",
+  "ronda": "Yokohama - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-22T01:10:00Z",
+  "j1": {
+   "id": 607,
+   "nombre": "Ryuki Matsuda",
+   "pais": "jpn",
+   "ranking": 641
+  },
+  "j2": {
+   "id": 27625,
+   "nombre": "Yuma Tobe",
+   "pais": "jpn",
+   "ranking": null
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-22T01:15:32.814943Z",
+   "age_seconds": 0,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": null,
+   "deciding_set": null,
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-22T01:15:30.371185Z",
+   "sequence": 9,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-22T01:15:32.814941Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-22T01:15:33.511Z",
+  "importante": false
  },
  "223590": {
   "id": 223590,
