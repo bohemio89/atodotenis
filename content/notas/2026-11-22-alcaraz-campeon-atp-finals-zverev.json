@@ -74,13 +74,7 @@
   "propia": true
  },
  "generadoCon": "manual",
- "getty": {
-  "src": "https://embed.gettyimages.com/embed/2305903341?et=EZ10HkkpTHJuaEpoTa8sOg&tld=com&sig=IRu9P_1p5Y0qjZ1ca5jiFYnzcqe7THUotiqlRKST-n0=&caption=true&ver=1",
-  "w": 594,
-  "h": 396,
-  "id": "2305903341",
-  "fecha": "2026-11-22T19:41:30.296016+00:00"
- },
+ "getty": null,
  "en": {
   "titulo": "Alcaraz wins the ATP Finals, beating Zverev in the Turin final",
   "bajada": "The Spaniard beat the world No. 1 6-2, 7-6(7), saved three set points in the tie-break and won the season-ending event for the first time.",
@@ -143,12 +137,15 @@
    ]
   },
   {
-   "despuesDe": 6,
-   "tipo": "imagen",
-   "url": "/notas/alcaraz-campeon-atp-finals-2026-camino.jpg",
-   "alt": {
-    "es": "El camino de Carlos Alcaraz al título de las ATP Finals 2026: Tiafoe, Medvedev, Cobolli, Shelton y Zverev",
-    "en": "Carlos Alcaraz's road to the 2026 ATP Finals title: Tiafoe, Medvedev, Cobolli, Shelton and Zverev"
+   "despuesDe": 1,
+   "tipo": "getty",
+   "src": "https://embed.gettyimages.com/embed/2305903341?et=EZ10HkkpTHJuaEpoTa8sOg&tld=com&sig=IRu9P_1p5Y0qjZ1ca5jiFYnzcqe7THUotiqlRKST-n0=&caption=true&ver=1",
+   "w": 594,
+   "h": 396,
+   "id": "2305903341",
+   "epigrafe": {
+    "es": "Alcaraz posa con el trofeo de campeón en el Inalpi Arena de Turín.",
+    "en": "Alcaraz poses with the champion's trophy at Turin's Inalpi Arena."
    }
   }
  ],

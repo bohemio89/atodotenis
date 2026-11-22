@@ -74762,7 +74762,7 @@
    "ranking": 3
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
   "visto": "2026-11-22T19:18:39.967Z",
   "torneoClave": "atp|Finals - Turin",
@@ -74772,48 +74772,27 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-22T19:15:51.393909Z",
-   "age_seconds": 168,
-   "changing_sources_count": 1,
-   "corroborated": false,
-   "corroborated_age_seconds": null,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "default",
-    "rule": "full_set"
-   },
    "games": [
     [
-     3,
+     2,
      6
     ],
     [
      6,
-     6
+     7
     ]
    ],
-   "is_tiebreak": true,
-   "observed_age_seconds": 118,
-   "origin": "observed",
-   "points": [
-    "7",
-    "8"
-   ],
-   "received_at": "2026-11-22T19:15:50.759180Z",
-   "sequence": 146,
-   "server": 1,
    "sets": [
     0,
-    1
+    2
    ],
-   "sources_count": 0,
-   "stale": true,
-   "timestamp": "2026-11-22T19:16:41.093037Z",
-   "puntos": [
-    "7",
-    "8"
-   ],
-   "saca": 1
+   "tiebreaks": [
+    null,
+    {
+     "p1": 7,
+     "p2": 9
+    }
+   ]
   },
   "confirmado": true,
   "ganador": 2,
