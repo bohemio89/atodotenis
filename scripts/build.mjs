@@ -140,6 +140,27 @@ function bloqueNota(b) {
     const lado = (j) => `<div class="vs-jug">${j.pais ? banderaDe(j.pais) : ''}<strong>${esc(tx(j.nombre))}</strong>${j.sub ? `<span>${esc(tx(j.sub))}</span>` : ''}</div>`;
     return `<section class="bq bq-versus">${tit}<div class="vs-cab">${lado(b.j1)}<span class="vs-x">vs</span>${lado(b.j2)}</div>${b.filas.map((x) => `<div class="vs-fila"><span class="vs-v${x.mejor === 1 ? ' dest' : ''}">${esc(tx(x.v1))}</span><span class="vs-dato">${esc(tx(x.dato))}</span><span class="vs-v${x.mejor === 2 ? ' dest' : ''}">${esc(tx(x.v2))}</span></div>`).join('')}${pie}</section>`;
   }
+  if (b.tipo === 'cita') {
+    // Declaración destacada en recuadro.
+    return `<figure class="bq bq-cita"><blockquote>${esc(tx(b.texto))}</blockquote><figcaption><strong>${esc(tx(b.autor))}</strong>${b.contexto ? ` · ${esc(tx(b.contexto))}` : ''}</figcaption></figure>`;
+  }
+  if (b.tipo === 'camino') {
+    // Camino al título: rivales vencidos en orden (foto de Commons si hay) y el trofeo al final.
+    const sinTilde = (t) => String(t).normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const foto = (nom) => avatares[nom] || avatares[sinTilde(nom)];
+    const creditos = [];
+    const paso = (x) => {
+      const a = foto(x.nombre);
+      if (a?.url && a.autor) creditos.push(`${x.nombre}: ${a.autor} (${a.licencia || 'CC'})`);
+      const ini = esc(String(x.nombre).split(' ').map((w) => w[0]).slice(0, 2).join(''));
+      const img = a?.url ? `<img src="${esc(a.url)}" alt="" loading="lazy" style="object-position:${esc(a.foco || 'center 20%')}">` : `<span class="av-ini">${ini}</span>`;
+      return `<li class="cm-paso"><span class="cm-ronda">${esc(tx(x.ronda))}</span><span class="cm-foto">${img}</span>${x.pais ? banderaDe(x.pais) : ''}<strong>${esc(x.nombre)}</strong><span class="cm-score">${esc(tx(x.marcador))}</span></li>`;
+    };
+    const trofeo = `<li class="cm-paso cm-trofeo"><span class="cm-ronda">${esc(tx(b.final || (EN ? 'Champion' : 'Campeón')))}</span><span class="cm-foto cm-copa"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 8h24v14a12 12 0 0 1-24 0z" fill="currentColor"/><path d="M20 12h-8a8 8 0 0 0 8 12M44 12h8a8 8 0 0 1-8 12" fill="none" stroke="currentColor" stroke-width="3"/><path d="M29 34h6v10h-6z" fill="currentColor"/><path d="M22 46h20v6H22z" fill="currentColor"/></svg></span><strong>${esc(tx(b.campeon || ''))}</strong><span class="cm-score">${esc(tx(b.torneo || ''))}</span></li>`;
+    const pasos = b.items.map(paso).join('');
+    const cred = creditos.length ? `<p class="bq-fuente">${EN ? 'Photos' : 'Fotos'}: Wikimedia Commons · ${esc(creditos.join(' · '))}</p>` : '';
+    return `<section class="bq bq-camino">${tit}<ol class="cm-lista">${pasos}${trofeo}</ol>${pie}${cred}</section>`;
+  }
   if (b.tipo === 'tarjetas') return `<section class="bq bq-tarjetas">${tit}<div class="bq-grid">${b.items.map((x) => `<div class="bq-tarj"><span class="bq-sup">${esc(tx(x.arriba))}</span><strong>${esc(tx(x.titulo))}</strong><span>${esc(tx(x.texto))}</span></div>`).join('')}</div>${pie}</section>`;
   if (b.tipo === 'getty' && gettySrc(b)) { const w = b.w || 594, h = b.h || 396; return `<figure class="getty bq-foto"><div><iframe src="${esc(gettySrc(b))}" title="${EN ? 'Getty Images photo' : 'Foto de Getty Images'}" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="width:min(100%, ${w}px);aspect-ratio:${w}/${h + Math.round(w * 40 / 594)};display:block;margin:0 auto;border:0;background:transparent"></iframe></div>${b.epigrafe ? `<figcaption>${esc(tx(b.epigrafe))}</figcaption>` : ''}</figure>`; }
   if (b.tipo === 'instagram') {
