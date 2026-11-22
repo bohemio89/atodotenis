@@ -640,7 +640,14 @@
   "nombre": "Brisbane 3, Australia, Doubles",
   "tour": "challenger",
   "id": "13458",
-  "meta": null,
+  "meta": {
+   "ciudad": "Brisbane",
+   "pais": "AU",
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-10T06:40:00Z",
   "ultimaVez": "2026-11-10T07:30:00Z",
@@ -916,7 +923,7 @@
      "finalista": "Alexander Zverev",
      "paisFinalista": "ger",
      "paisesFinalista": null,
-     "marcador": "6-3 6-6",
+     "marcador": "6-2 7-6",
      "partidoId": 223687,
      "fecha": "2026-11-22T17:15:00Z"
     }
@@ -1130,7 +1137,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-16T14:05:00Z",
-  "ultimaVez": "2026-11-21T23:05:00Z",
+  "ultimaVez": "2026-11-22T21:15:00Z",
   "superficie": "clay",
   "tier": "wta_125"
  },
@@ -1485,7 +1492,14 @@
   "nombre": "San Salvador (El Salvador) - Qualification",
   "tour": "challenger",
   "id": "14884",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": null,
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-22T17:10:00Z",
   "ultimaVez": "2026-11-22T19:10:00Z",

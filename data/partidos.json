@@ -21108,60 +21108,6 @@
   "confirmado": false,
   "ganador": null
  },
- "219099": {
-  "id": 219099,
-  "tour": "challenger",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - 1/8-finals",
-  "rondaCod": "R16",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-11T19:05:00Z",
-  "j1": {
-   "id": 265,
-   "nombre": "Marina Ribera Bassols",
-   "pais": "esp",
-   "ranking": 129
-  },
-  "j2": {
-   "id": 268,
-   "nombre": "Maria Lourdes Carle",
-   "pais": "arg",
-   "ranking": 234
-  },
-  "dobles": false,
-  "estado": "por_confirmar",
-  "motivo": null,
-  "visto": "2026-11-11T19:45:23.168Z",
-  "torneoClave": "challenger|Sopo (Colombia)",
-  "tier": null,
-  "importante": false,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3
-    ],
-    [
-     2
-    ]
-   ],
-   "sets": [
-    0,
-    0
-   ],
-   "puntos": [
-    "40",
-    "AD"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null
- },
  "219185": {
   "id": 219185,
   "tour": "challenger",
@@ -23335,70 +23281,6 @@
   "ganador": null,
   "torneoClave": "challenger_women|Sopo (Colombia)",
   "importante": false
- },
- "219412": {
-  "id": 219412,
-  "tour": "challenger",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-12T19:35:00Z",
-  "j1": {
-   "id": 19632,
-   "nombre": "Georgina García Pérez / Mediorreal",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "chi",
-    null
-   ]
-  },
-  "j2": {
-   "id": 44726,
-   "nombre": "Samson / Zidansek",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "slo"
-   ]
-  },
-  "dobles": true,
-  "estado": "por_confirmar",
-  "motivo": null,
-  "visto": "2026-11-12T20:00:39.962Z",
-  "torneoClave": "challenger|Sopo (Colombia)",
-  "tier": null,
-  "importante": false,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     1,
-     0
-    ],
-    [
-     6,
-     2
-    ]
-   ],
-   "sets": [
-    0,
-    1
-   ],
-   "puntos": [
-    "15",
-    "15"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null
  },
  "219413": {
   "id": 219413,
@@ -44064,84 +43946,6 @@
   "confirmado": false,
   "ganador": null,
   "importante": false
- },
- "220480": {
-  "id": 220480,
-  "tour": "challenger",
-  "torneo": "Drummondville, Canada, Qualifying",
-  "ronda": "Qualification Round 1",
-  "rondaCod": "Q1",
-  "superficie": "hard",
-  "clasificacion": true,
-  "genero": "men",
-  "horario": "2026-11-15T21:00:00Z",
-  "j1": {
-   "id": 8029,
-   "nombre": "Vignesh Gogineni",
-   "pais": "usa",
-   "ranking": 739
-  },
-  "j2": {
-   "id": 8161,
-   "nombre": "Volodymyr Gurenko",
-   "pais": "can",
-   "ranking": 1588
-  },
-  "dobles": false,
-  "estado": "por_confirmar",
-  "motivo": null,
-  "visto": "2026-11-15T22:30:28.406Z",
-  "tier": null,
-  "importante": false,
-  "torneoId": "2445",
-  "cubierto": true,
-  "resultado": null,
-  "score": {
-   "accepted_at": "2026-11-15T22:30:06.050308Z",
-   "age_seconds": 22,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 5,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "default",
-    "rule": "full_set"
-   },
-   "games": [
-    [
-     7,
-     3
-    ],
-    [
-     6,
-     2
-    ]
-   ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 5,
-   "origin": "observed",
-   "points": [
-    "15",
-    "0"
-   ],
-   "received_at": "2026-11-15T22:30:05.955307Z",
-   "sequence": 131,
-   "server": 1,
-   "sets": [
-    1,
-    0
-   ],
-   "sources_count": 3,
-   "stale": false,
-   "timestamp": "2026-11-15T22:30:18.964349Z",
-   "puntos": [
-    "15",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null
  },
  "220481": {
   "id": 220481,
@@ -68393,7 +68197,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-22T03:30:00Z",
+  "horario": "2026-11-22T03:45:00Z",
   "j1": {
    "id": 765,
    "nombre": "Himeno Sakatsume",
@@ -68404,15 +68208,21 @@
    "id": 2436,
    "nombre": "Justina Maria Gonzalez Daniele",
    "pais": "arg",
-   "ranking": 430
+   "ranking": 422
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "cancelled",
   "motivo": null,
-  "visto": "2026-11-22T03:30:35.200Z",
+  "visto": "2026-11-22T22:00:37.813Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
-  "importante": true
+  "importante": true,
+  "torneoId": "3330",
+  "cubierto": true,
+  "resultado": null,
+  "score": null,
+  "confirmado": false,
+  "ganador": null
  },
  "223246": {
   "id": 223246,
@@ -68423,7 +68233,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-22T05:00:00Z",
+  "horario": "2026-11-22T05:15:00Z",
   "j1": {
    "id": 1580,
    "nombre": "Mai Hontama",
@@ -68434,15 +68244,21 @@
    "id": 2677,
    "nombre": "Maria Florencia Urrutia",
    "pais": "arg",
-   "ranking": 468
+   "ranking": 464
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "cancelled",
   "motivo": null,
-  "visto": "2026-11-22T03:30:35.200Z",
+  "visto": "2026-11-22T22:00:37.727Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
-  "importante": true
+  "importante": true,
+  "torneoId": "3330",
+  "cubierto": true,
+  "resultado": null,
+  "score": null,
+  "confirmado": false,
+  "ganador": null
  },
  "223247": {
   "id": 223247,
@@ -68453,26 +68269,32 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-22T08:30:00Z",
+  "horario": "2026-11-22T10:00:00Z",
   "j1": {
-   "id": 1204,
-   "nombre": "Lanlana Tararudee",
-   "pais": "tha",
-   "ranking": 62
-  },
-  "j2": {
    "id": 767,
    "nombre": "Viktorija Golubic",
    "pais": "sui",
    "ranking": 94
   },
+  "j2": {
+   "id": 1204,
+   "nombre": "Lanlana Tararudee",
+   "pais": "tha",
+   "ranking": 62
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "cancelled",
   "motivo": null,
-  "visto": "2026-11-22T03:30:35.200Z",
+  "visto": "2026-11-22T22:00:37.647Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
-  "importante": true
+  "importante": true,
+  "torneoId": "3330",
+  "cubierto": false,
+  "resultado": null,
+  "score": null,
+  "confirmado": false,
+  "ganador": null
  },
  "223248": {
   "id": 223248,
@@ -68483,26 +68305,32 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-22T10:00:00Z",
+  "horario": "2026-11-22T12:00:00Z",
   "j1": {
+   "id": 880,
+   "nombre": "Jil Teichmann",
+   "pais": "sui",
+   "ranking": 170
+  },
+  "j2": {
    "id": 1205,
    "nombre": "Mananchaya Sawangkaew",
    "pais": "tha",
    "ranking": 80
   },
-  "j2": {
-   "id": 880,
-   "nombre": "Jil Teichmann",
-   "pais": "sui",
-   "ranking": 149
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "cancelled",
   "motivo": null,
-  "visto": "2026-11-22T03:30:35.200Z",
+  "visto": "2026-11-22T22:00:37.574Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
-  "importante": true
+  "importante": true,
+  "torneoId": "3330",
+  "cubierto": false,
+  "resultado": null,
+  "score": null,
+  "confirmado": false,
+  "ganador": null
  },
  "223249": {
   "id": 223249,
@@ -68864,26 +68692,32 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-22T14:00:00Z",
+  "horario": "2026-11-22T14:40:00Z",
   "j1": {
-   "id": 854,
-   "nombre": "Diane Parry",
-   "pais": "fra",
-   "ranking": 34
-  },
-  "j2": {
    "id": 52,
    "nombre": "Talia Gibson",
    "pais": "aus",
    "ranking": 36
   },
+  "j2": {
+   "id": 854,
+   "nombre": "Diane Parry",
+   "pais": "fra",
+   "ranking": 34
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "cancelled",
   "motivo": null,
-  "visto": "2026-11-22T03:30:35.200Z",
+  "visto": "2026-11-22T22:00:37.466Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
-  "importante": true
+  "importante": true,
+  "torneoId": "3330",
+  "cubierto": true,
+  "resultado": null,
+  "score": null,
+  "confirmado": false,
+  "ganador": null
  },
  "223315": {
   "id": 223315,
@@ -68894,26 +68728,32 @@
   "superficie": null,
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-22T15:30:00Z",
+  "horario": "2026-11-22T16:00:00Z",
   "j1": {
+   "id": 995,
+   "nombre": "Storm Hunter",
+   "pais": "usa",
+   "ranking": 187
+  },
+  "j2": {
    "id": 1111,
    "nombre": "Clara Burel",
    "pais": "fra",
    "ranking": 148
   },
-  "j2": {
-   "id": 995,
-   "nombre": "Storm Hunter",
-   "pais": "usa",
-   "ranking": 164
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "cancelled",
   "motivo": null,
-  "visto": "2026-11-22T03:30:35.200Z",
+  "visto": "2026-11-22T22:00:37.338Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
-  "importante": true
+  "importante": true,
+  "torneoId": "3330",
+  "cubierto": false,
+  "resultado": null,
+  "score": null,
+  "confirmado": false,
+  "ganador": null
  },
  "223343": {
   "id": 223343,
@@ -74976,7 +74816,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "usa",
     "usa"
    ]
   },
@@ -75125,7 +74965,7 @@
    "ranking": 663
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-22T19:18:39.967Z",
   "torneoClave": "challenger|Champaign",
@@ -76178,14 +76018,14 @@
  },
  "223768": {
   "id": 223768,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Colina",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Colina - Final",
+  "rondaCod": "F",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-22T21:00:00Z",
+  "horario": "2026-11-22T21:15:00Z",
   "j1": {
    "id": 156,
    "nombre": "Leyre Romero Gormaz",
@@ -76195,16 +76035,63 @@
   "j2": {
    "id": 895,
    "nombre": "Rebeka Masarova",
-   "pais": "esp",
+   "pais": "sui",
    "ranking": 160
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-22T03:30:35.339Z",
-  "torneoClave": "challenger_women|Colina",
+  "visto": "2026-11-22T22:00:37.207Z",
+  "torneoClave": "challenger|Colina",
   "tier": "wta_125",
-  "importante": false
+  "importante": true,
+  "torneoId": "8223",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-22T22:00:06.674253Z",
+   "age_seconds": 29,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-22T22:00:06.269828Z",
+   "sequence": 64,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-22T22:00:31.815095Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224071": {
   "id": 224071,
@@ -76229,10 +76116,10 @@
   "j2": {
    "id": 46968,
    "nombre": "Sebastian Diaz Lora",
-   "pais": null,
+   "pais": "bol",
    "ranking": null
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-22T19:18:31.642588Z",
@@ -76282,6 +76169,83 @@
   "torneoClave": "challenger|San Salvador (El Salvador) - Qualification",
   "importante": false
  },
+ "224074": {
+  "id": 224074,
+  "tour": "challenger",
+  "tier": null,
+  "torneo": "San Salvador (El Salvador) - Qualification",
+  "torneoId": "14884",
+  "ronda": "San Salvador - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-22T20:15:00Z",
+  "j1": {
+   "id": 5980,
+   "nombre": "Jeffrey Fradkin",
+   "pais": "usa",
+   "ranking": 1724
+  },
+  "j2": {
+   "id": 11874,
+   "nombre": "Stephen Slocombe",
+   "pais": "bar",
+   "ranking": 1967
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-22T22:00:14.756758Z",
+   "age_seconds": 21,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     7,
+     5
+    ],
+    [
+     6,
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "40",
+    "40"
+   ],
+   "received_at": "2026-11-22T22:00:14.376911Z",
+   "sequence": 147,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-22T22:00:31.834191Z",
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-22T22:00:37.207Z",
+  "importante": false
+ },
  "224075": {
   "id": 224075,
   "tour": "challenger",
@@ -76308,7 +76272,7 @@
    "pais": "usa",
    "ranking": 1218
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-22T19:18:25.270341Z",
@@ -76623,7 +76587,7 @@
     "usa"
    ]
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-22T19:18:26.505879Z",
