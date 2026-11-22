@@ -74,7 +74,13 @@
   "propia": true
  },
  "generadoCon": "manual",
- "getty": null,
+ "getty": {
+  "src": "https://embed.gettyimages.com/embed/2305903341?et=EZ10HkkpTHJuaEpoTa8sOg&tld=com&sig=IRu9P_1p5Y0qjZ1ca5jiFYnzcqe7THUotiqlRKST-n0=&caption=true&ver=1",
+  "w": 594,
+  "h": 396,
+  "id": "2305903341",
+  "fecha": "2026-11-22T19:41:30.296016+00:00"
+ },
  "en": {
   "titulo": "Alcaraz wins the ATP Finals, beating Zverev in the Turin final",
   "bajada": "The Spaniard beat the world No. 1 6-2, 7-6(7), saved three set points in the tie-break and won the season-ending event for the first time.",
@@ -138,63 +144,12 @@
   },
   {
    "despuesDe": 6,
-   "tipo": "camino",
-   "titulo": {
-    "es": "El camino al título",
-    "en": "The road to the title"
-   },
-   "campeon": "Carlos Alcaraz",
-   "torneo": {
-    "es": "ATP Finals 2026",
-    "en": "2026 ATP Finals"
-   },
-   "items": [
-    {
-     "nombre": "Frances Tiafoe",
-     "pais": "usa",
-     "ronda": {
-      "es": "Grupo",
-      "en": "Group"
-     },
-     "marcador": "6-2 6-2"
-    },
-    {
-     "nombre": "Daniil Medvedev",
-     "pais": "rus",
-     "ronda": {
-      "es": "Grupo",
-      "en": "Group"
-     },
-     "marcador": "6-2 6-4"
-    },
-    {
-     "nombre": "Flavio Cobolli",
-     "pais": "ita",
-     "ronda": {
-      "es": "Grupo",
-      "en": "Group"
-     },
-     "marcador": "6-4 6-1"
-    },
-    {
-     "nombre": "Ben Shelton",
-     "pais": "usa",
-     "ronda": {
-      "es": "Semifinal",
-      "en": "Semifinal"
-     },
-     "marcador": "3-6 6-3 7-6(1)"
-    },
-    {
-     "nombre": "Alexander Zverev",
-     "pais": "ger",
-     "ronda": {
-      "es": "Final",
-      "en": "Final"
-     },
-     "marcador": "6-2 7-6(7)"
-    }
-   ]
+   "tipo": "imagen",
+   "url": "/notas/alcaraz-campeon-atp-finals-2026-camino.jpg",
+   "alt": {
+    "es": "El camino de Carlos Alcaraz al título de las ATP Finals 2026: Tiafoe, Medvedev, Cobolli, Shelton y Zverev",
+    "en": "Carlos Alcaraz's road to the 2026 ATP Finals title: Tiafoe, Medvedev, Cobolli, Shelton and Zverev"
+   }
   }
  ],
  "manual": true
