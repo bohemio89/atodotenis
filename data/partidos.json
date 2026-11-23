@@ -72724,7 +72724,7 @@
    "ranking": 371
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-23T06:45:30.125Z",
   "torneoClave": "challenger|Yokohama",
@@ -72819,26 +72819,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-23T07:00:00Z",
+  "horario": "2026-11-23T07:15:00Z",
   "j1": {
+   "id": 4812,
+   "nombre": "Lennon Roark Jones",
+   "pais": "jpn",
+   "ranking": 1752
+  },
+  "j2": {
    "id": 46887,
-   "nombre": "R. Ono",
+   "nombre": "Ryo Ono",
    "pais": "sin",
    "ranking": null
   },
-  "j2": {
-   "id": 4812,
-   "nombre": "L. R. Jones",
-   "pais": "jpn",
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T06:15:27.427Z",
+  "visto": "2026-11-23T07:30:42.108Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2510",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T07:30:13.204109Z",
+   "age_seconds": 26,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "40",
+    "40"
+   ],
+   "received_at": "2026-11-23T07:30:12.827890Z",
+   "sequence": 21,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-23T07:30:38.309662Z",
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223553": {
   "id": 223553,
@@ -72865,7 +72912,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T06:45:30.125Z",
+  "visto": "2026-11-23T07:30:42.108Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -72873,11 +72920,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-23T06:45:13.999457Z",
-   "age_seconds": 16,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-23T07:30:09.653083Z",
+   "age_seconds": 30,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -72886,35 +72933,37 @@
    "games": [
     [
      4,
+     6,
      5
     ],
     [
      6,
+     3,
      3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 7,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
     "40",
-    "40"
+    "AD"
    ],
-   "received_at": "2026-11-23T06:45:13.862547Z",
-   "sequence": 127,
-   "server": 1,
+   "received_at": "2026-11-23T07:30:09.527351Z",
+   "sequence": 194,
+   "server": 2,
    "sets": [
-    0,
+    1,
     1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-23T06:45:13.999455Z",
+   "timestamp": "2026-11-23T07:30:26.572785Z",
    "puntos": [
     "40",
-    "40"
+    "AD"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -72942,7 +72991,7 @@
    "ranking": 299
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-23T06:45:30.125Z",
   "torneoClave": "challenger|Yokohama",
@@ -77589,17 +77638,17 @@
  },
  "224069": {
   "id": 224069,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Yokohama",
   "ronda": "Yokohama - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-23T06:45:00Z",
+  "horario": "2026-11-23T07:20:00Z",
   "j1": {
    "id": 46966,
-   "nombre": "Suzuki/ Tobe",
+   "nombre": "Suzuki / Tobe",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -77609,7 +77658,7 @@
   },
   "j2": {
    "id": 46967,
-   "nombre": "Jones/ Staeheli",
+   "nombre": "Jones / Staeheli",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -77618,12 +77667,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T06:15:27.427Z",
+  "visto": "2026-11-23T07:30:42.108Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8154",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T07:30:05.674114Z",
+   "age_seconds": 34,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-23T07:30:05.401109Z",
+   "sequence": 14,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-23T07:30:32.415174Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224071": {
   "id": 224071,
