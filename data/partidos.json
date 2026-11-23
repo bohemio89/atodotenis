@@ -40834,7 +40834,7 @@
   "j1": {
    "id": 2201,
    "nombre": "A. Funk",
-   "pais": null,
+   "pais": "ger",
    "ranking": null
   },
   "j2": {
@@ -70583,7 +70583,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "rus",
     null
    ]
   },
@@ -70783,8 +70783,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "ger",
+    "ger"
    ]
   },
   "dobles": true,
@@ -72384,8 +72384,8 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "esp",
+    "bul"
    ]
   },
   "dobles": true,
@@ -72813,8 +72813,8 @@
  "223552": {
   "id": 223552,
   "tour": "challenger",
-  "torneo": "Yokohama",
-  "ronda": "Yokohama - 1/16-finals",
+  "torneo": "Yokohama, Japan",
+  "ronda": "Round of 32",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -72835,19 +72835,19 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T08:00:42.954Z",
-  "torneoClave": "challenger|Yokohama",
+  "visto": "2026-11-23T08:45:26.521Z",
+  "torneoClave": "challenger|Yokohama, Japan",
   "tier": "challenger_75",
   "importante": false,
   "torneoId": "2510",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-23T08:00:25.249138Z",
-   "age_seconds": 17,
+   "accepted_at": "2026-11-23T08:44:43.790359Z",
+   "age_seconds": 42,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 8,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -72856,35 +72856,35 @@
    "games": [
     [
      6,
-     0
+     5
     ],
     [
      0,
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 8,
    "origin": "observed",
    "points": [
-    "AD",
-    "40"
+    "40",
+    "15"
    ],
-   "received_at": "2026-11-23T08:00:24.606926Z",
-   "sequence": 61,
-   "server": 2,
+   "received_at": "2026-11-23T08:44:43.379101Z",
+   "sequence": 124,
+   "server": 1,
    "sets": [
     1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-23T08:00:40.060619Z",
+   "timestamp": "2026-11-23T08:45:09.795137Z",
    "puntos": [
-    "AD",
-    "40"
+    "40",
+    "15"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -73299,7 +73299,7 @@
   "j2": {
    "id": 2236,
    "nombre": "R. T. Pieleanu",
-   "pais": null,
+   "pais": "rou",
    "ranking": null
   },
   "dobles": false,
@@ -73322,7 +73322,7 @@
   "j1": {
    "id": 1318,
    "nombre": "I. Lopez Morillo",
-   "pais": null,
+   "pais": "esp",
    "ranking": null
   },
   "j2": {
@@ -73386,7 +73386,7 @@
   "j2": {
    "id": 5076,
    "nombre": "M. Jones",
-   "pais": null,
+   "pais": "usa",
    "ranking": null
   },
   "dobles": false,
@@ -73415,7 +73415,7 @@
   "j2": {
    "id": 8056,
    "nombre": "A. Mazdrashki",
-   "pais": null,
+   "pais": "bul",
    "ranking": null
   },
   "dobles": false,
@@ -73918,7 +73918,7 @@
   "j2": {
    "id": 934,
    "nombre": "N. Belozertsev",
-   "pais": null,
+   "pais": "uzb",
    "ranking": null
   },
   "dobles": false,
@@ -73941,7 +73941,7 @@
   "j1": {
    "id": 1022,
    "nombre": "S. M. Ozdemir",
-   "pais": null,
+   "pais": "tur",
    "ranking": null
   },
   "j2": {
@@ -73976,7 +73976,7 @@
   "j2": {
    "id": 2251,
    "nombre": "V. Manukyan",
-   "pais": null,
+   "pais": "rus",
    "ranking": null
   },
   "dobles": false,
@@ -74005,7 +74005,7 @@
   "j2": {
    "id": 15555,
    "nombre": "J. Maute",
-   "pais": null,
+   "pais": "ger",
    "ranking": null
   },
   "dobles": false,
@@ -74028,7 +74028,7 @@
   "j1": {
    "id": 2201,
    "nombre": "A. Funk",
-   "pais": null,
+   "pais": "ger",
    "ranking": null
   },
   "j2": {
@@ -74063,7 +74063,7 @@
   "j2": {
    "id": 932,
    "nombre": "A. Chekhov",
-   "pais": null,
+   "pais": "rus",
    "ranking": null
   },
   "dobles": false,
@@ -77669,7 +77669,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-23T08:00:42.954Z",
   "torneoClave": "challenger|Yokohama",
@@ -79102,147 +79102,385 @@
  "224100": {
   "id": 224100,
   "tour": "challenger",
-  "torneo": "Ankara (Turkey) - Qualification",
-  "ronda": "Ankara - Final",
-  "rondaCod": "F",
+  "torneo": "Ankara, Turkiye, Qualifying",
+  "ronda": "Qualification Final",
+  "rondaCod": "Q",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-23T08:00:00Z",
+  "horario": "2026-11-23T08:10:00Z",
   "j1": {
-   "id": 2201,
-   "nombre": "A. Funk",
-   "pais": null,
-   "ranking": null
+   "id": 934,
+   "nombre": "Nikita Belozertsev",
+   "pais": "uzb",
+   "ranking": 786
   },
   "j2": {
-   "id": 934,
-   "nombre": "N. Belozertsev",
-   "pais": null,
-   "ranking": null
+   "id": 2201,
+   "nombre": "Aaron Funk",
+   "pais": "ger",
+   "ranking": 748
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T06:15:27.427Z",
-  "tier": null,
-  "importante": false
+  "visto": "2026-11-23T08:45:26.521Z",
+  "tier": "challenger_50",
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T08:45:26.345542Z",
+   "age_seconds": 0,
+   "changing_sources_count": 2,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": null,
+   "deciding_set": null,
+   "games": [
+    [
+     6,
+     3
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "40",
+    "40"
+   ],
+   "received_at": "2026-11-23T08:45:26.069133Z",
+   "sequence": 69,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-23T08:45:26.345536Z",
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224101": {
   "id": 224101,
   "tour": "challenger",
-  "torneo": "Ankara (Turkey) - Qualification",
-  "ronda": "Ankara - Final",
-  "rondaCod": "F",
+  "torneo": "Ankara, Turkiye, Qualifying",
+  "ronda": "Qualification Final",
+  "rondaCod": "Q",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-23T08:00:00Z",
+  "horario": "2026-11-23T08:10:00Z",
   "j1": {
    "id": 2251,
-   "nombre": "V. Manukyan",
-   "pais": null,
-   "ranking": null
+   "nombre": "Vardan Manukyan",
+   "pais": "rus",
+   "ranking": 1203
   },
   "j2": {
    "id": 15555,
-   "nombre": "J. Maute",
-   "pais": null,
-   "ranking": null
+   "nombre": "Jannik Maute",
+   "pais": "ger",
+   "ranking": 933
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T06:15:27.427Z",
-  "tier": null,
-  "importante": false
+  "visto": "2026-11-23T08:45:26.521Z",
+  "tier": "challenger_50",
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T08:44:03.578983Z",
+   "age_seconds": 82,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-23T08:44:02.856320Z",
+   "sequence": 63,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-23T08:45:26.176343Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224102": {
   "id": 224102,
   "tour": "challenger",
-  "torneo": "Hersonissos 4",
-  "ronda": "Hersonissos 4 - Final",
-  "rondaCod": "F",
+  "torneo": "Hersonissos 4, Greece, Qualifying",
+  "ronda": "Qualification Final",
+  "rondaCod": "Q",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-23T08:00:00Z",
+  "horario": "2026-11-23T08:10:00Z",
   "j1": {
    "id": 390,
    "nombre": "Gilles Arnaud Bailly",
    "pais": "bel",
-   "ranking": 541
+   "ranking": 445
   },
   "j2": {
    "id": 2236,
-   "nombre": "R. T. Pieleanu",
-   "pais": null,
-   "ranking": null
+   "nombre": "Rares Teodor Pieleanu",
+   "pais": "rou",
+   "ranking": 785
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T06:15:27.427Z",
-  "tier": null,
-  "importante": false
+  "visto": "2026-11-23T08:45:26.521Z",
+  "tier": "challenger_50",
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T08:43:45.874641Z",
+   "age_seconds": 100,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-23T08:43:45.242980Z",
+   "sequence": 47,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-23T08:45:26.182726Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224103": {
   "id": 224103,
   "tour": "challenger",
-  "torneo": "Hersonissos 4",
-  "ronda": "Hersonissos 4 - Final",
-  "rondaCod": "F",
+  "torneo": "Hersonissos 4, Greece, Qualifying",
+  "ronda": "Qualification Final",
+  "rondaCod": "Q",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-23T08:00:00Z",
+  "horario": "2026-11-23T08:10:00Z",
   "j1": {
    "id": 216,
-   "nombre": "G. Ghetu",
+   "nombre": "Gabriel Ghetu",
    "pais": "rou",
-   "ranking": null
+   "ranking": 608
   },
   "j2": {
    "id": 5076,
-   "nombre": "M. Jones",
-   "pais": null,
-   "ranking": null
+   "nombre": "Miles Jones",
+   "pais": "usa",
+   "ranking": 731
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T06:15:27.427Z",
-  "tier": null,
-  "importante": false
+  "visto": "2026-11-23T08:45:26.521Z",
+  "tier": "challenger_50",
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T08:44:59.632871Z",
+   "age_seconds": 26,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "15",
+    "40"
+   ],
+   "received_at": "2026-11-23T08:44:59.503400Z",
+   "sequence": 42,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-23T08:45:25.584015Z",
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224104": {
   "id": 224104,
   "tour": "challenger",
-  "torneo": "Hersonissos 4",
-  "ronda": "Hersonissos 4 - Final",
-  "rondaCod": "F",
+  "torneo": "Hersonissos 4, Greece, Qualifying",
+  "ronda": "Qualification Final",
+  "rondaCod": "Q",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-23T08:00:00Z",
+  "horario": "2026-11-23T08:10:00Z",
   "j1": {
    "id": 1318,
-   "nombre": "I. Lopez Morillo",
-   "pais": null,
-   "ranking": null
+   "nombre": "Imanol Lopez Morillo",
+   "pais": "esp",
+   "ranking": 618
   },
   "j2": {
    "id": 8056,
-   "nombre": "A. Mazdrashki",
-   "pais": null,
-   "ranking": null
+   "nombre": "Anas Mazdrashki",
+   "pais": "bul",
+   "ranking": 821
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T06:15:27.427Z",
-  "tier": null,
-  "importante": false
+  "visto": "2026-11-23T08:45:26.521Z",
+  "tier": "challenger_50",
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T08:44:58.427487Z",
+   "age_seconds": 28,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "30",
+    "30"
+   ],
+   "received_at": "2026-11-23T08:44:57.765692Z",
+   "sequence": 53,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-23T08:45:13.665255Z",
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224105": {
   "id": 224105,
@@ -79487,31 +79725,80 @@
  "224115": {
   "id": 224115,
   "tour": "challenger",
-  "torneo": "Ankara (Turkey) - Qualification",
-  "ronda": "Ankara - Final",
-  "rondaCod": "F",
+  "torneo": "Ankara, Turkiye, Qualifying",
+  "ronda": "Qualification Final",
+  "rondaCod": "Q",
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-23T08:00:00Z",
+  "horario": "2026-11-23T08:10:00Z",
   "j1": {
    "id": 932,
-   "nombre": "A. Chekhov",
-   "pais": null,
-   "ranking": null
+   "nombre": "Anton Chekhov",
+   "pais": "rus",
+   "ranking": 1921
   },
   "j2": {
    "id": 1022,
-   "nombre": "S. M. Ozdemir",
-   "pais": null,
-   "ranking": null
+   "nombre": "S Mert Ozdemir",
+   "pais": "tur",
+   "ranking": 1674
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T06:15:27.427Z",
-  "tier": null,
-  "importante": false
+  "visto": "2026-11-23T08:45:26.521Z",
+  "tier": "challenger_50",
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T08:45:21.998409Z",
+   "age_seconds": 4,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-23T08:45:21.280871Z",
+   "sequence": 46,
+   "server": 1,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 4,
+   "stale": false,
+   "timestamp": "2026-11-23T08:45:21.998404Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224116": {
   "id": 224116,
