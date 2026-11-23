@@ -7113,7 +7113,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ukr",
     null
    ]
   },
@@ -70666,7 +70666,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "tur"
    ]
   },
   "dobles": true,
@@ -72256,7 +72256,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ukr",
     "esp"
    ]
   },
@@ -72371,7 +72371,7 @@
    "ranking": null,
    "paises": [
     "ita",
-    null
+    "ita"
    ]
   },
   "j2": {
@@ -72380,7 +72380,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "cyp",
     null
    ]
   },
@@ -73588,26 +73588,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-23T12:25:00Z",
+  "horario": "2026-11-23T12:50:00Z",
   "j1": {
    "id": 393,
    "nombre": "Gianluca Cadenasso",
    "pais": "ita",
-   "ranking": 214
+   "ranking": 215
   },
   "j2": {
    "id": 2252,
    "nombre": "Melios Efstathiou",
    "pais": "cyp",
-   "ranking": 565
+   "ranking": 560
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T12:00:59.190Z",
+  "visto": "2026-11-23T12:45:26.757Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T12:45:05.194332Z",
+   "age_seconds": 21,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "0",
+    "30"
+   ],
+   "received_at": "2026-11-23T12:45:04.652764Z",
+   "sequence": 4,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-23T12:45:18.181842Z",
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223620": {
   "id": 223620,
@@ -73623,21 +73670,65 @@
    "id": 1050,
    "nombre": "Georgii Kravchenko",
    "pais": "ukr",
-   "ranking": 274
+   "ranking": 275
   },
   "j2": {
    "id": 2631,
    "nombre": "Jacopo Vasamì",
    "pais": "ita",
-   "ranking": 379
+   "ranking": 382
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T12:00:59.190Z",
+  "visto": "2026-11-23T12:45:26.757Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T12:45:24.593111Z",
+   "age_seconds": 2,
+   "changing_sources_count": 2,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": null,
+   "deciding_set": null,
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "30",
+    "0"
+   ],
+   "received_at": "2026-11-23T12:45:23.642064Z",
+   "sequence": 14,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-23T12:45:24.593105Z",
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223621": {
   "id": 223621,
@@ -73782,7 +73873,7 @@
    "ranking": 350
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-23T12:00:59.190Z",
   "torneoClave": "challenger|Hersonissos 4",
@@ -74325,7 +74416,7 @@
   "j2": {
    "id": 2255,
    "nombre": "M. Scaglia",
-   "pais": null,
+   "pais": "fra",
    "ranking": null
   },
   "dobles": false,
@@ -74383,7 +74474,7 @@
   "j2": {
    "id": 2303,
    "nombre": "A. Raynel",
-   "pais": null,
+   "pais": "fra",
    "ranking": null
   },
   "dobles": false,
@@ -74441,7 +74532,7 @@
   "j2": {
    "id": 2354,
    "nombre": "N. Schell",
-   "pais": null,
+   "pais": "ger",
    "ranking": null
   },
   "dobles": false,
@@ -74470,7 +74561,7 @@
   "j2": {
    "id": 2340,
    "nombre": "Y. Smiej",
-   "pais": null,
+   "pais": "mar",
    "ranking": null
   },
   "dobles": false,
@@ -74760,7 +74851,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T12:00:59.190Z",
+  "visto": "2026-11-23T12:45:26.757Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
   "importante": false,
@@ -74768,11 +74859,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-23T12:00:36.590082Z",
-   "age_seconds": 21,
+   "accepted_at": "2026-11-23T12:45:18.093250Z",
+   "age_seconds": 8,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -74780,34 +74871,36 @@
    },
    "games": [
     [
-     1
+     3,
+     3
     ],
     [
-     1
+     6,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "30",
-    "40"
+    "15",
+    "0"
    ],
-   "received_at": "2026-11-23T12:00:36.112972Z",
-   "sequence": 16,
-   "server": 2,
+   "received_at": "2026-11-23T12:45:17.592353Z",
+   "sequence": 80,
+   "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-23T12:00:45.679040Z",
+   "timestamp": "2026-11-23T12:45:18.093243Z",
    "puntos": [
-    "30",
-    "40"
+    "15",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -75031,26 +75124,75 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-23T12:30:00Z",
+  "horario": "2026-11-23T12:20:00Z",
   "j1": {
-   "id": 2402,
-   "nombre": "G. Saritas",
+   "id": 1554,
+   "nombre": "Mert Naci Turker",
    "pais": "tur",
-   "ranking": null
+   "ranking": 822
   },
   "j2": {
-   "id": 1554,
-   "nombre": "M. N. Turker",
+   "id": 2402,
+   "nombre": "Gokberk Saritas",
    "pais": "tur",
-   "ranking": null
+   "ranking": 2313
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T12:00:59.190Z",
+  "visto": "2026-11-23T12:45:26.757Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T12:44:52.889721Z",
+   "age_seconds": 33,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 7,
+   "origin": "observed",
+   "points": [
+    "15",
+    "30"
+   ],
+   "received_at": "2026-11-23T12:44:52.666016Z",
+   "sequence": 54,
+   "server": 1,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-23T12:45:18.121699Z",
+   "puntos": [
+    "15",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223665": {
   "id": 223665,
@@ -79991,25 +80133,72 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-23T12:00:00Z",
+  "horario": "2026-11-23T12:10:00Z",
   "j1": {
    "id": 517,
    "nombre": "Calvin Hemery",
    "pais": "fra",
-   "ranking": 284
+   "ranking": 268
   },
   "j2": {
    "id": 2354,
-   "nombre": "N. Schell",
-   "pais": null,
-   "ranking": null
+   "nombre": "Niklas Schell",
+   "pais": "ger",
+   "ranking": 1211
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T12:00:59.190Z",
+  "visto": "2026-11-23T12:45:26.757Z",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14882",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T12:44:48.733511Z",
+   "age_seconds": 37,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 12,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     5
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "15",
+    "40"
+   ],
+   "received_at": "2026-11-23T12:44:48.532102Z",
+   "sequence": 53,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-23T12:45:17.918952Z",
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224119": {
   "id": 224119,
@@ -80020,25 +80209,72 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-23T12:00:00Z",
+  "horario": "2026-11-23T12:10:00Z",
   "j1": {
-   "id": 2303,
-   "nombre": "A. Raynel",
-   "pais": null,
-   "ranking": null
+   "id": 2255,
+   "nombre": "Mathieu Scaglia",
+   "pais": "fra",
+   "ranking": 1006
   },
   "j2": {
-   "id": 2255,
-   "nombre": "M. Scaglia",
-   "pais": null,
-   "ranking": null
+   "id": 2303,
+   "nombre": "Amaury Raynel",
+   "pais": "fra",
+   "ranking": 1280
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T12:00:59.190Z",
+  "visto": "2026-11-23T12:45:26.757Z",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14882",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T12:45:01.402378Z",
+   "age_seconds": 25,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 7,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-23T12:45:01.008119Z",
+   "sequence": 58,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-23T12:45:01.402376Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224121": {
   "id": 224121,
@@ -80049,25 +80285,72 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-23T12:00:00Z",
+  "horario": "2026-11-23T12:15:00Z",
   "j1": {
    "id": 1044,
    "nombre": "Federico Iannaccone",
    "pais": "ita",
-   "ranking": 574
+   "ranking": 572
   },
   "j2": {
    "id": 2340,
-   "nombre": "Y. Smiej",
-   "pais": null,
-   "ranking": null
+   "nombre": "Yassine Smiej",
+   "pais": "mar",
+   "ranking": 1125
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T12:00:59.190Z",
+  "visto": "2026-11-23T12:45:26.757Z",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14882",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T12:44:07.339330Z",
+   "age_seconds": 79,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 7,
+   "origin": "observed",
+   "points": [
+    "15",
+    "15"
+   ],
+   "received_at": "2026-11-23T12:44:06.170777Z",
+   "sequence": 36,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-23T12:45:01.403963Z",
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224136": {
   "id": 224136,
@@ -80134,7 +80417,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "ger"
    ]
   },
   "dobles": true,
@@ -80248,7 +80531,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "fra"
    ]
   },
   "dobles": true,
@@ -80275,7 +80558,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ita",
     null
    ]
   },
@@ -80314,7 +80597,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "mar"
    ]
   },
   "j2": {
@@ -80554,7 +80837,7 @@
    "ranking": 1087
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-23T12:00:59.190Z",
   "tier": "challenger_50",
@@ -80632,7 +80915,7 @@
    "ranking": 687
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-23T12:00:59.190Z",
   "tier": "challenger_50",
