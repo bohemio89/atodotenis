@@ -1,87 +1,89 @@
 {
- "slug": "2026-11-22-olivetti-arribage-arevalo-pavic-finals-turin",
- "estado": "publicada",
- "fecha": "2026-11-23T01:19:21.492Z",
- "fechaPartido": "2026-11-22T14:10:00Z",
- "titulo": "Olivetti y Arribage ganaron el título de dobles en las ATP Finals",
- "bajada": "La dupla venció a Arevalo y Pavic tras dar vuelta el encuentro en tres sets.",
- "cuerpo": [
-  "Albano Olivetti y Theo Arribage se quedaron con el título de dobles en las ATP Finals. La pareja superó a Marcelo Arevalo y Mate Pavic por 3-6, 7-6 (2) y 1-0 en la final disputada sobre cemento bajo techo.",
-  "El encuentro tuvo una remontada luego de un arranque favorable para los rivales. Arevalo y Pavic comenzaron mejor el partido y se quedaron con el primer set por 6-3.",
-  "Olivetti y Arribage reaccionaron en el segundo parcial para mantener las opciones. La dupla se adjudicó la manga por 7-6 (2) en el desempate y forzó la definición.",
-  "En el tercer set, Olivetti y Arribage cerraron la victoria por 1-0. En el cuadro individual, Carlos Alcaraz, N° 3 del mundo, venció a Alexander Zverev, N° 1 del ranking, por 6-2 y 7-6 (7)."
- ],
- "etiquetas": [
-  "ATP Finals",
-  "Albano Olivetti / Theo Arribage",
-  "Marcelo Arevalo / Mate Pavic"
- ],
- "categoria": "ATP Finals",
- "argentina": false,
- "superficie": "hard",
- "partidoId": 223688,
- "jugadores": [
-  "Albano Olivetti / Theo Arribage",
-  "Marcelo Arevalo / Mate Pavic"
- ],
- "torneo": "ATP Finals",
- "resultado": {
-  "ganador": {
-   "nombre": "Albano Olivetti / Theo Arribage",
-   "pais": "",
-   "ranking": null
-  },
-  "perdedor": {
-   "nombre": "Marcelo Arevalo / Mate Pavic",
-   "pais": "",
-   "ranking": null
-  },
-  "sets": [
-   [
-    3,
-    6
-   ],
-   [
-    7,
-    6
-   ],
-   [
-    1,
-    0
-   ]
-  ],
-  "tieBreaks": [
-   null,
-   {
-    "p1": 7,
-    "p2": 2
-   },
-   null
-  ],
-  "ronda": "F",
-  "resultado": null
- },
- "importancia": 70,
- "firma": "Redacción A Todo Tenis",
- "imagen": null,
- "generadoCon": "gemini-3.5-flash",
- "en": {
-  "categoria": "ATP Finals",
-  "titulo": "Olivetti / Arribage wins the ATP Finals",
-  "bajada": "Olivetti / Arribage beat Arevalo / Pavic 3-6, 7-6 (2), 1-0 in the final of the ATP Finals.",
+  "slug": "2026-11-22-olivetti-arribage-arevalo-pavic-finals-turin",
+  "estado": "publicada",
+  "fecha": "2026-11-23T01:19:21.492Z",
+  "fechaPartido": "2026-11-22T14:10:00Z",
+  "titulo": "Olivetti y Arribage ganaron el título de dobles en las ATP Finals",
+  "bajada": "La dupla venció a Arevalo y Pavic tras dar vuelta el encuentro en tres sets.",
   "cuerpo": [
-   "Albano Olivetti / Theo Arribage beat Marcelo Arevalo / Mate Pavic 3-6, 7-6 (2), 1-0 in the final of the ATP Finals.",
-   "The first set went to Arevalo / Pavic, 6-3. The second went to Olivetti / Arribage, who won the tiebreak 7-2. The third went to Olivetti / Arribage, 1-0. Olivetti / Arribage lost the first set and came back to win."
+    "Albano Olivetti y Theo Arribage se quedaron con el título de dobles en las ATP Finals. La pareja superó a Marcelo Arevalo y Mate Pavic por 3-6, 7-6 (2) y 1-0 en la final disputada sobre cemento bajo techo.",
+    "El encuentro tuvo una remontada luego de un arranque favorable para los rivales. Arevalo y Pavic comenzaron mejor el partido y se quedaron con el primer set por 6-3.",
+    "Olivetti y Arribage reaccionaron en el segundo parcial para mantener las opciones. La dupla se adjudicó la manga por 7-6 (2) en el desempate y forzó la definición.",
+    "En el tercer set, Olivetti y Arribage cerraron la victoria por 1-0. En el cuadro individual, Carlos Alcaraz, N° 3 del mundo, venció a Alexander Zverev, N° 1 del ranking, por 6-2 y 7-6 (7)."
   ],
-  "huella": "5cb285ade244",
-  "modelo": "plantilla",
-  "fecha": "2026-11-23T01:19:21.493Z"
- },
- "getty": {
-  "src": "https://embed.gettyimages.com/embed/2306360045?et=rkgwpXbhR4NHopueN0njIg&tld=com&sig=SsG1XfHRLfrtbb91nuyLd8zlvXYkGrCvG7J3il1LP3w%3D&caption=true&ver=1",
-  "w": 594,
-  "h": 396,
-  "id": "2306360045",
-  "fecha": "2026-11-23T01:19:29.658Z"
- }
+  "etiquetas": [
+    "ATP Finals",
+    "Albano Olivetti / Theo Arribage",
+    "Marcelo Arevalo / Mate Pavic"
+  ],
+  "categoria": "ATP Finals",
+  "argentina": false,
+  "superficie": "hard",
+  "partidoId": 223688,
+  "jugadores": [
+    "Albano Olivetti / Theo Arribage",
+    "Marcelo Arevalo / Mate Pavic"
+  ],
+  "torneo": "ATP Finals",
+  "resultado": {
+    "ganador": {
+      "nombre": "Albano Olivetti / Theo Arribage",
+      "pais": "",
+      "ranking": null
+    },
+    "perdedor": {
+      "nombre": "Marcelo Arevalo / Mate Pavic",
+      "pais": "",
+      "ranking": null
+    },
+    "sets": [
+      [
+        3,
+        6
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "tieBreaks": [
+      null,
+      {
+        "p1": 7,
+        "p2": 2
+      },
+      null
+    ],
+    "ronda": "F",
+    "resultado": null
+  },
+  "importancia": 70,
+  "firma": "Redacción A Todo Tenis",
+  "imagen": null,
+  "generadoCon": "gemini-3.5-flash",
+  "en": {
+    "titulo": "Olivetti and Arribage win doubles title at the ATP Finals",
+    "bajada": "The duo defeated Arevalo and Pavic after turning the match around in three sets.",
+    "cuerpo": [
+      "Albano Olivetti and Theo Arribage claimed the doubles title at the ATP Finals. The pair defeated Marcelo Arevalo and Mate Pavic 3-6, 7-6 (2), 1-0 in the final played on indoor hard court.",
+      "The match featured a comeback following a strong start from their opponents. Arevalo and Pavic began the match better and took the first set 6-3.",
+      "Olivetti and Arribage reacted in the second set to keep their chances alive. The duo claimed the set 7-6 (2) in the tiebreak to force a decider.",
+      "In the third set, Olivetti and Arribage sealed the victory 1-0. In the singles draw, world No. 3 Carlos Alcaraz defeated world No. 1 Alexander Zverev 6-2, 7-6 (7)."
+    ],
+    "categoria": "ATP Finals",
+    "modelo": "gemini-3.5-flash",
+    "huella": "a92584810e6d",
+    "fecha": "2026-11-23T04:15:40.805Z"
+  },
+  "getty": {
+    "src": "https://embed.gettyimages.com/embed/2306360045?et=rkgwpXbhR4NHopueN0njIg&tld=com&sig=SsG1XfHRLfrtbb91nuyLd8zlvXYkGrCvG7J3il1LP3w%3D&caption=true&ver=1",
+    "w": 594,
+    "h": 396,
+    "id": "2306360045",
+    "fecha": "2026-11-23T01:19:29.658Z"
+  }
 }
