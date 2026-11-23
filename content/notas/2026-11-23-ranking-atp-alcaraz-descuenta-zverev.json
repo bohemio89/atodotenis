@@ -76,8 +76,14 @@
  ],
  "galeria": [
   {
-   "url": "/notas/ranking-atp-2026-11-23.jpg",
-   "alt": "Top 10 del ranking ATP al 23 de noviembre de 2026",
+   "url": {
+    "es": "/notas/ranking-atp-2026-11-23.jpg",
+    "en": "/notas/ranking-atp-2026-11-23-en.jpg"
+   },
+   "alt": {
+    "es": "Top 10 del ranking ATP al 23 de noviembre de 2026",
+    "en": "ATP rankings Top 10 as of November 23, 2026"
+   },
    "despuesDe": 4
   }
  ],
