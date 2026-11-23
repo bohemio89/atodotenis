@@ -1505,7 +1505,7 @@
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-24T07:00:00Z",
-  "ultimaVez": "2026-11-24T07:00:00Z",
+  "ultimaVez": "2026-11-25T08:00:00Z",
   "superficie": "hard"
  },
  "challenger|Playford 2": {
@@ -1513,7 +1513,14 @@
   "nombre": "Playford 2",
   "tour": "challenger",
   "id": "3191",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-22T23:30:00Z",
   "ultimaVez": "2026-11-24T23:30:00Z",
@@ -1525,10 +1532,17 @@
   "nombre": "Hersonissos 4",
   "tour": "challenger",
   "id": "12900",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-23T08:00:00Z",
-  "ultimaVez": "2026-11-24T08:00:00Z",
+  "ultimaVez": "2026-11-25T08:00:00Z",
   "superficie": "hard",
   "tier": "challenger_50"
  },
@@ -1537,7 +1551,14 @@
   "nombre": "Yokohama",
   "tour": "challenger",
   "id": "2510",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-23T01:00:00Z",
   "ultimaVez": "2026-11-25T01:00:00Z",
@@ -1549,10 +1570,17 @@
   "nombre": "Ankara (Turkey) - Qualification",
   "tour": "challenger",
   "id": "14881",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": true,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-23T08:00:00Z",
-  "ultimaVez": "2026-11-24T08:00:00Z",
+  "ultimaVez": "2026-11-25T08:00:00Z",
   "superficie": "hard",
   "tier": "challenger_50"
  },
@@ -1564,7 +1592,7 @@
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-23T10:00:00Z",
-  "ultimaVez": "2026-11-24T10:00:00Z",
+  "ultimaVez": "2026-11-24T16:30:00Z",
   "superficie": "hard",
   "tier": "challenger_50"
  },
@@ -1572,12 +1600,20 @@
   "clave": "challenger|San Salvador (El Salvador)",
   "nombre": "San Salvador (El Salvador)",
   "tour": "challenger",
-  "id": null,
-  "meta": null,
+  "id": "14883",
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-23T19:00:00Z",
   "ultimaVez": "2026-11-24T16:00:00Z",
-  "superficie": "hard"
+  "superficie": "hard",
+  "tier": "challenger_50"
  },
  "challenger|Florianopolis": {
   "clave": "challenger|Florianopolis",
@@ -1587,7 +1623,7 @@
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-23T13:00:00Z",
-  "ultimaVez": "2026-11-24T13:00:00Z",
+  "ultimaVez": "2026-11-25T13:00:00Z",
   "superficie": "clay",
   "tier": "challenger_75"
  },
@@ -1615,10 +1651,17 @@
   "nombre": "Monastir 2 (Tunisia)",
   "tour": "challenger",
   "id": "14885",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": null,
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-23T15:15:00Z",
-  "ultimaVez": "2026-11-24T10:00:00Z",
+  "ultimaVez": "2026-11-25T10:00:00Z",
   "superficie": "hard",
   "tier": "challenger_50"
  },
@@ -1630,7 +1673,7 @@
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-23T14:00:00Z",
-  "ultimaVez": "2026-11-24T15:00:00Z",
+  "ultimaVez": "2026-11-25T15:00:00Z",
   "superficie": "clay",
   "tier": "wta_125"
  },
