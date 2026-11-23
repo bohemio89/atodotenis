@@ -79052,7 +79052,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T22:45:26.308Z",
+  "visto": "2026-11-23T23:30:35.669Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -79060,11 +79060,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-23T22:45:10.391277Z",
-   "age_seconds": 13,
+   "accepted_at": "2026-11-23T23:30:16.876572Z",
+   "age_seconds": 16,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -79072,32 +79072,36 @@
    },
    "games": [
     [
-     5
+     5,
+     6,
+     0
     ],
     [
-     6
+     7,
+     3,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "0",
-    "15"
+    "30",
+    "0"
    ],
-   "received_at": "2026-11-23T22:45:09.448797Z",
-   "sequence": 70,
+   "received_at": "2026-11-23T23:30:16.752332Z",
+   "sequence": 125,
    "server": 2,
    "sets": [
-    0,
-    0
+    1,
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-23T22:45:18.392636Z",
+   "timestamp": "2026-11-23T23:30:33.660382Z",
    "puntos": [
-    "0",
-    "15"
+    "30",
+    "0"
    ],
    "saca": 2
   },
@@ -84663,7 +84667,7 @@
   "id": 224678,
   "tour": "challenger",
   "tier": "challenger_75",
-  "torneo": "Florianopolis, Brazil, Qualifying",
+  "torneo": "Florianopolis",
   "torneoId": "2565",
   "ronda": "Qualification Round 2",
   "rondaCod": "Q2",
@@ -84685,14 +84689,14 @@
    "pais": "bra",
    "ranking": 1084
   },
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-23T22:45:11.876786Z",
-   "age_seconds": 12,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-23T22:53:23.420220Z",
+   "age_seconds": 2232,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 2217,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -84701,7 +84705,7 @@
    "games": [
     [
      6,
-     3
+     6
     ],
     [
      3,
@@ -84709,31 +84713,31 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 2217,
    "origin": "observed",
    "points": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-23T22:45:10.447794Z",
-   "sequence": 81,
-   "server": 2,
+   "received_at": "2026-11-23T22:53:22.894634Z",
+   "sequence": 95,
+   "server": 1,
    "sets": [
-    1,
+    2,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-23T22:45:11.876784Z",
+   "timestamp": "2026-11-23T22:53:23.420214Z",
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null,
-  "visto": "2026-11-23T22:45:26.308Z",
+  "confirmado": true,
+  "ganador": 1,
+  "visto": "2026-11-23T23:30:35.966Z",
   "importante": false
  },
  "224734": {
@@ -84742,8 +84746,8 @@
   "tier": "challenger_75",
   "torneo": "Florianopolis",
   "torneoId": "2565",
-  "ronda": "Qualification Round 2",
-  "rondaCod": "Q2",
+  "ronda": "Florianopolis - Final",
+  "rondaCod": "F",
   "superficie": "clay",
   "cubierto": false,
   "dobles": false,
@@ -84765,11 +84769,11 @@
   "estado": "en_vivo",
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-23T22:45:19.337239Z",
-   "age_seconds": 4,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-23T23:29:22.983139Z",
+   "age_seconds": 70,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -84777,29 +84781,106 @@
    },
    "games": [
     [
-     1
+     1,
+     3
     ],
     [
+     6,
      3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-23T23:29:22.903319Z",
+   "sequence": 86,
+   "server": 1,
+   "sets": [
+    0,
+    1
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-23T23:29:55.645042Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-23T23:30:35.669Z",
+  "importante": false
+ },
+ "224738": {
+  "id": 224738,
+  "tour": "challenger",
+  "tier": "challenger_75",
+  "torneo": "Florianopolis",
+  "torneoId": "2565",
+  "ronda": "Florianopolis - Final",
+  "rondaCod": "F",
+  "superficie": "clay",
+  "cubierto": false,
+  "dobles": false,
+  "clasificacion": true,
+  "genero": "men",
+  "horario": "2026-11-23T22:55:00Z",
+  "j1": {
+   "id": 351,
+   "nombre": "Santiago De La Fuente",
+   "pais": "arg",
+   "ranking": 682
+  },
+  "j2": {
+   "id": 355,
+   "nombre": "Nicolas Zanellato",
+   "pais": "bra",
+   "ranking": 671
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T23:26:36.127161Z",
+   "age_seconds": 237,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 120,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     5
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 120,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-23T22:45:18.921684Z",
-   "sequence": 33,
+   "received_at": "2026-11-23T23:26:35.816070Z",
+   "sequence": 50,
    "server": 2,
    "sets": [
     0,
     0
    ],
-   "sources_count": 2,
-   "stale": false,
-   "timestamp": "2026-11-23T22:45:19.337234Z",
+   "sources_count": 0,
+   "stale": true,
+   "timestamp": "2026-11-23T23:27:55.930370Z",
    "puntos": [
     "0",
     "0"
@@ -84808,7 +84889,7 @@
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-23T22:45:26.308Z",
+  "visto": "2026-11-23T23:30:35.669Z",
   "importante": false
  },
  "null": {
