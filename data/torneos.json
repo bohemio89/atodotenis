@@ -1588,7 +1588,8 @@
   "campeones": {},
   "primeraVez": "2026-11-23T13:00:00Z",
   "ultimaVez": "2026-11-24T13:00:00Z",
-  "superficie": "clay"
+  "superficie": "clay",
+  "tier": "challenger_75"
  },
  "challenger|San Salvador (El Salvador) - Qualification": {
   "clave": "challenger|San Salvador (El Salvador) - Qualification",
@@ -1654,5 +1655,17 @@
   "ultimaVez": "2026-11-23T11:10:00Z",
   "tier": "challenger_50",
   "superficie": "hard"
+ },
+ "challenger|Buenos Aires": {
+  "clave": "challenger|Buenos Aires",
+  "nombre": "Buenos Aires",
+  "tour": "challenger",
+  "id": "4869",
+  "meta": null,
+  "campeones": {},
+  "primeraVez": "2026-11-23T14:10:00Z",
+  "ultimaVez": "2026-11-23T14:10:00Z",
+  "tier": "wta_125",
+  "superficie": "clay"
  }
 }
