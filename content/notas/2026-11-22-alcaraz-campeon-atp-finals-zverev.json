@@ -138,7 +138,10 @@
   {
    "despuesDe": 6,
    "tipo": "imagen",
-   "url": "/notas/alcaraz-campeon-atp-finals-2026-camino.jpg",
+   "url": {
+    "es": "/notas/alcaraz-campeon-atp-finals-2026-camino.jpg",
+    "en": "/notas/alcaraz-campeon-atp-finals-2026-camino-en.jpg"
+   },
    "alt": {
     "es": "El camino de Carlos Alcaraz al título de las ATP Finals 2026: Tiafoe, Medvedev, Cobolli, Shelton y Zverev",
     "en": "Carlos Alcaraz's road to the 2026 ATP Finals title: Tiafoe, Medvedev, Cobolli, Shelton and Zverev"

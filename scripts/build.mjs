@@ -140,7 +140,7 @@ function bloqueNota(b) {
     const lado = (j) => `<div class="vs-jug">${j.pais ? banderaDe(j.pais) : ''}<strong>${esc(tx(j.nombre))}</strong>${j.sub ? `<span>${esc(tx(j.sub))}</span>` : ''}</div>`;
     return `<section class="bq bq-versus">${tit}<div class="vs-cab">${lado(b.j1)}<span class="vs-x">vs</span>${lado(b.j2)}</div>${b.filas.map((x) => `<div class="vs-fila"><span class="vs-v${x.mejor === 1 ? ' dest' : ''}">${esc(tx(x.v1))}</span><span class="vs-dato">${esc(tx(x.dato))}</span><span class="vs-v${x.mejor === 2 ? ' dest' : ''}">${esc(tx(x.v2))}</span></div>`).join('')}${pie}</section>`;
   }
-  if (b.tipo === 'imagen' && b.url) return `<figure class="bq-foto bq-img"><img src="${esc(b.url)}" alt="${esc(tx(b.alt))}" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px">${b.epigrafe ? `<figcaption>${esc(tx(b.epigrafe))}</figcaption>` : ''}</figure>`;
+  if (b.tipo === 'imagen' && b.url) return `<figure class="bq-foto bq-img"><img src="${esc(tx(b.url))}" alt="${esc(tx(b.alt))}" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px">${b.epigrafe ? `<figcaption>${esc(tx(b.epigrafe))}</figcaption>` : ''}</figure>`;
   if (b.tipo === 'cita') {
     // Declaración destacada en recuadro.
     return `<figure class="bq bq-cita"><blockquote>${esc(tx(b.texto))}</blockquote><figcaption><strong>${esc(tx(b.autor))}</strong>${b.contexto ? ` · ${esc(tx(b.contexto))}` : ''}</figcaption></figure>`;
