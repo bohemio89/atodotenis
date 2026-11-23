@@ -68107,7 +68107,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-21T05:45:00Z",
+  "horario": "2026-11-21T05:55:00Z",
   "j1": {
    "id": 765,
    "nombre": "Himeno Sakatsume",
@@ -68118,15 +68118,64 @@
    "id": 2677,
    "nombre": "Maria Florencia Urrutia",
    "pais": "arg",
-   "ranking": 468
+   "ranking": 464
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-21T05:45:25.345Z",
+  "visto": "2026-11-23T00:45:26.879Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
-  "importante": true
+  "importante": true,
+  "torneoId": "3330",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-21T07:05:04.043353Z",
+   "age_seconds": 150022,
+   "changing_sources_count": 0,
+   "corroborated": true,
+   "corroborated_age_seconds": 150000,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     6
+    ],
+    [
+     0,
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 150000,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-21T07:05:03.940259Z",
+   "sequence": 95,
+   "server": 2,
+   "sets": [
+    2,
+    0
+   ],
+   "sources_count": 0,
+   "stale": false,
+   "timestamp": "2026-11-21T07:05:04.043350Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": true,
+  "ganador": 1
  },
  "223243": {
   "id": 223243,
@@ -69615,7 +69664,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-23T00:00:39.829Z",
+  "visto": "2026-11-23T00:45:26.338Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
   "importante": true,
@@ -69651,7 +69700,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-23T00:00:39.929Z",
+  "visto": "2026-11-23T00:45:26.597Z",
   "torneoClave": "wta|WTA Billie Jean King Cup - World Group",
   "tier": "bjk_cup",
   "importante": true,
@@ -76190,7 +76239,7 @@
    "pais": "usa",
    "ranking": 461
   },
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-22T23:59:48.586162Z",
@@ -76271,47 +76320,52 @@
   "estado": "en_vivo",
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-23T00:00:39.164544Z",
-   "age_seconds": 0,
-   "changing_sources_count": 2,
-   "corroborated": false,
-   "corroborated_age_seconds": null,
-   "deciding_match_tiebreak_next": null,
-   "deciding_set": null,
+   "accepted_at": "2026-11-23T00:45:11.764934Z",
+   "age_seconds": 14,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
    "games": [
     [
+     3,
      1
     ],
     [
-     2
+     6,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "0",
-    "15"
+    "40",
+    "40"
    ],
-   "received_at": "2026-11-23T00:00:38.920020Z",
-   "sequence": 26,
+   "received_at": "2026-11-23T00:45:11.587854Z",
+   "sequence": 79,
    "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-23T00:00:39.164542Z",
+   "timestamp": "2026-11-23T00:45:21.588452Z",
    "puntos": [
-    "0",
-    "15"
+    "40",
+    "40"
    ],
    "saca": 2
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-23T00:00:39.706Z",
+  "visto": "2026-11-23T00:45:26.108Z",
   "motivo": null,
   "importante": false
  },
@@ -77384,25 +77438,72 @@
   "superficie": "hard",
   "clasificacion": true,
   "genero": "men",
-  "horario": "2026-11-23T01:00:00Z",
+  "horario": "2026-11-23T00:40:00Z",
   "j1": {
    "id": 5390,
-   "nombre": "M. E. Sik",
-   "pais": "aus",
-   "ranking": null
+   "nombre": "Mustafa Ege Sik",
+   "pais": "tur",
+   "ranking": 1581
   },
   "j2": {
    "id": 12213,
-   "nombre": "Z. Stevens",
+   "nombre": "Zane Stevens",
    "pais": "aus",
-   "ranking": null
+   "ranking": 1223
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T00:00:39.706Z",
+  "visto": "2026-11-23T00:45:26.108Z",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "3191",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-23T00:45:13.559431Z",
+   "age_seconds": 12,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-23T00:45:13.349488Z",
+   "sequence": 18,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-23T00:45:22.900582Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224081": {
   "id": 224081,
@@ -77912,47 +78013,52 @@
   "estado": "en_vivo",
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-23T00:00:39.179787Z",
-   "age_seconds": 0,
+   "accepted_at": "2026-11-23T00:44:52.185961Z",
+   "age_seconds": 33,
    "changing_sources_count": 2,
-   "corroborated": false,
-   "corroborated_age_seconds": null,
-   "deciding_match_tiebreak_next": null,
-   "deciding_set": null,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
    "games": [
     [
+     4,
      1
     ],
     [
+     6,
      3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
-    "AD",
-    "40"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-23T00:00:35.967068Z",
-   "sequence": 31,
+   "received_at": "2026-11-23T00:44:51.972762Z",
+   "sequence": 93,
    "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-23T00:00:39.179784Z",
+   "timestamp": "2026-11-23T00:45:20.601702Z",
    "puntos": [
-    "AD",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 1
   },
   "confirmado": false,
   "ganador": null,
-  "visto": "2026-11-23T00:00:39.706Z",
+  "visto": "2026-11-23T00:45:26.108Z",
   "motivo": null,
   "importante": false
  },
