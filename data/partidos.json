@@ -5869,7 +5869,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ger",
     "ger"
    ]
   },
@@ -15054,7 +15054,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ger",
     "ger"
    ]
   },
@@ -19953,62 +19953,6 @@
   "confirmado": false,
   "ganador": null
  },
- "219356": {
-  "id": 219356,
-  "tour": "challenger_women",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-12T16:55:00Z",
-  "j1": {
-   "id": 144,
-   "nombre": "Polona Hercog",
-   "pais": "slo",
-   "ranking": 200
-  },
-  "j2": {
-   "id": 1123,
-   "nombre": "Alice Tubello",
-   "pais": "fra",
-   "ranking": 146
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-12T19:00:39.350Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     6,
-     4
-    ],
-    [
-     2,
-     2
-    ]
-   ],
-   "sets": [
-    1,
-    0
-   ],
-   "puntos": [
-    "30",
-    "40"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
-  "importante": false
- },
  "219358": {
   "id": 219358,
   "tour": "challenger",
@@ -20170,252 +20114,6 @@
   "visto": "2026-11-12T19:00:39.349Z",
   "torneoClave": "challenger|Monastir",
   "tier": null,
-  "importante": false
- },
- "219409": {
-  "id": 219409,
-  "tour": "challenger_women_doubles",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-12T16:40:00Z",
-  "j1": {
-   "id": 27174,
-   "nombre": "Erjavec / Kulambayeva",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "slo",
-    "kaz"
-   ]
-  },
-  "j2": {
-   "id": 44724,
-   "nombre": "McGiffin / Osborne",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "aus"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-12T19:00:39.350Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3
-    ],
-    [
-     2
-    ]
-   ],
-   "sets": [
-    0,
-    0
-   ],
-   "puntos": [
-    "30",
-    "15"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
-  "importante": false
- },
- "219410": {
-  "id": 219410,
-  "tour": "challenger_women_doubles",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-12T18:20:00Z",
-  "j1": {
-   "id": 8974,
-   "nombre": "Jakupovic / Radisic",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "slo"
-   ]
-  },
-  "j2": {
-   "id": 27338,
-   "nombre": "Monnet / Pigossi",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "bra"
-   ]
-  },
-  "dobles": true,
-  "estado": "por_confirmar",
-  "motivo": null,
-  "visto": "2026-11-12T19:00:39.350Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     3,
-     0
-    ],
-    [
-     6,
-     1
-    ]
-   ],
-   "sets": [
-    0,
-    1
-   ],
-   "puntos": [
-    "15",
-    "15"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
-  "importante": false
- },
- "219411": {
-  "id": 219411,
-  "tour": "challenger_women_doubles",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-12T15:10:00Z",
-  "j1": {
-   "id": 36068,
-   "nombre": "Rasheeda McAdoo / Rogers",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    null
-   ]
-  },
-  "j2": {
-   "id": 45936,
-   "nombre": "Costoulas / Zamarripa",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "bel",
-    null
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-12T19:00:39.350Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     1,
-     4
-    ],
-    [
-     6,
-     3
-    ]
-   ],
-   "sets": [
-    0,
-    1
-   ],
-   "puntos": [
-    "30",
-    "30"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
-  "importante": false
- },
- "219413": {
-  "id": 219413,
-  "tour": "challenger_women",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-12T15:10:00Z",
-  "j1": {
-   "id": 152,
-   "nombre": "Andrea Lazaro Garcia",
-   "pais": "esp",
-   "ranking": 143
-  },
-  "j2": {
-   "id": 271,
-   "nombre": "Elizabeth Mandlik",
-   "pais": "usa",
-   "ranking": 237
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-12T19:00:39.349Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     0,
-     3
-    ],
-    [
-     6,
-     2
-    ]
-   ],
-   "sets": [
-    0,
-    1
-   ],
-   "puntos": [
-    "30",
-    "15"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
   "importante": false
  },
  "219414": {
@@ -20614,116 +20312,6 @@
   },
   "confirmado": false,
   "ganador": null
- },
- "219491": {
-  "id": 219491,
-  "tour": "challenger_women",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-12T15:10:00Z",
-  "j1": {
-   "id": 241,
-   "nombre": "Irene Burillo Escorihuela",
-   "pais": "esp",
-   "ranking": 213
-  },
-  "j2": {
-   "id": 680,
-   "nombre": "Laura Samson",
-   "pais": "cze",
-   "ranking": 119
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-12T19:00:39.349Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     5
-    ],
-    [
-     6
-    ]
-   ],
-   "sets": [
-    0,
-    0
-   ],
-   "puntos": [
-    "15",
-    "40"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
-  "importante": false
- },
- "219492": {
-  "id": 219492,
-  "tour": "challenger_women",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-12T17:30:00Z",
-  "j1": {
-   "id": 265,
-   "nombre": "Marina Ribera Bassols",
-   "pais": "esp",
-   "ranking": 129
-  },
-  "j2": {
-   "id": 289,
-   "nombre": "Bianca Andreescu",
-   "pais": "can",
-   "ranking": 100
-  },
-  "dobles": false,
-  "estado": "por_confirmar",
-  "motivo": null,
-  "visto": "2026-11-12T19:00:39.349Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "games": [
-    [
-     4,
-     2
-    ],
-    [
-     6,
-     2
-    ]
-   ],
-   "sets": [
-    0,
-    1
-   ],
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
-  "importante": false
  },
  "219495": {
   "id": 219495,
@@ -24732,251 +24320,6 @@
   "torneoClave": "challenger|Orleans",
   "importante": false
  },
- "219815": {
-  "id": 219815,
-  "tour": "challenger_women",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-13T17:00:00Z",
-  "j1": {
-   "id": 144,
-   "nombre": "Polona Hercog",
-   "pais": "slo",
-   "ranking": 200
-  },
-  "j2": {
-   "id": 289,
-   "nombre": "Bianca Andreescu",
-   "pais": "can",
-   "ranking": 100
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-13T19:45:24.459Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "accepted_at": "2026-11-13T17:44:46.422742Z",
-   "age_seconds": 38,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 3,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "default",
-    "rule": "full_set"
-   },
-   "games": [
-    [
-     1,
-     3
-    ],
-    [
-     6,
-     2
-    ]
-   ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 3,
-   "origin": "observed",
-   "points": [
-    "30",
-    "30"
-   ],
-   "received_at": "2026-11-13T17:44:46.010941Z",
-   "sequence": 80,
-   "server": 2,
-   "sets": [
-    0,
-    1
-   ],
-   "sources_count": 2,
-   "stale": false,
-   "timestamp": "2026-11-13T17:45:20.869014Z",
-   "puntos": [
-    "30",
-    "30"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
-  "importante": false
- },
- "219816": {
-  "id": 219816,
-  "tour": "challenger_women",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-13T15:05:00Z",
-  "j1": {
-   "id": 271,
-   "nombre": "Elizabeth Mandlik",
-   "pais": "usa",
-   "ranking": 237
-  },
-  "j2": {
-   "id": 680,
-   "nombre": "Laura Samson",
-   "pais": "cze",
-   "ranking": 119
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-13T19:45:24.459Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "accepted_at": "2026-11-13T15:41:04.344519Z",
-   "age_seconds": 258,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 6,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "default",
-    "rule": "full_set"
-   },
-   "games": [
-    [
-     6,
-     0
-    ],
-    [
-     3,
-     0
-    ]
-   ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 6,
-   "origin": "observed",
-   "points": [
-    "0",
-    "0"
-   ],
-   "received_at": "2026-11-13T15:41:03.834238Z",
-   "sequence": 63,
-   "server": 1,
-   "sets": [
-    1,
-    0
-   ],
-   "sources_count": 2,
-   "stale": true,
-   "timestamp": "2026-11-13T15:44:45.118496Z",
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
-  "importante": false
- },
- "219817": {
-  "id": 219817,
-  "tour": "challenger_women_doubles",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-13T16:10:00Z",
-  "j1": {
-   "id": 27174,
-   "nombre": "Erjavec / Kulambayeva",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "slo",
-    "kaz"
-   ]
-  },
-  "j2": {
-   "id": 36068,
-   "nombre": "Rasheeda McAdoo / Rogers",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "usa",
-    null
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-13T19:45:24.459Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "accepted_at": "2026-11-13T16:44:53.708255Z",
-   "age_seconds": 31,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 3,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "inferred",
-    "rule": "match_tiebreak"
-   },
-   "games": [
-    [
-     6,
-     0
-    ],
-    [
-     1,
-     2
-    ]
-   ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 3,
-   "origin": "observed",
-   "points": [
-    "0",
-    "0"
-   ],
-   "received_at": "2026-11-13T16:44:53.448582Z",
-   "sequence": 56,
-   "server": 1,
-   "sets": [
-    1,
-    0
-   ],
-   "sources_count": 2,
-   "stale": false,
-   "timestamp": "2026-11-13T16:45:18.672760Z",
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
-  "importante": false
- },
  "219819": {
   "id": 219819,
   "tour": "challenger_doubles",
@@ -25299,93 +24642,6 @@
   "confirmado": false,
   "ganador": null,
   "torneoClave": "challenger|Orleans",
-  "importante": false
- },
- "219901": {
-  "id": 219901,
-  "tour": "challenger_women_doubles",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Semi-finals",
-  "rondaCod": "SF",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-13T18:15:00Z",
-  "j1": {
-   "id": 27338,
-   "nombre": "Monnet / Pigossi",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "fra",
-    "bra"
-   ]
-  },
-  "j2": {
-   "id": 44726,
-   "nombre": "Samson / Zidansek",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "slo"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-13T19:45:24.459Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "accepted_at": "2026-11-13T18:41:07.673058Z",
-   "age_seconds": 265,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 4,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "inferred",
-    "rule": "match_tiebreak"
-   },
-   "games": [
-    [
-     6,
-     0
-    ],
-    [
-     3,
-     0
-    ]
-   ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 3,
-   "origin": "observed",
-   "points": [
-    "0",
-    "0"
-   ],
-   "received_at": "2026-11-13T18:41:07.219298Z",
-   "sequence": 48,
-   "server": 1,
-   "sets": [
-    1,
-    0
-   ],
-   "sources_count": 2,
-   "stale": true,
-   "timestamp": "2026-11-13T18:45:29.785945Z",
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
   "importante": false
  },
  "219902": {
@@ -26777,174 +26033,6 @@
   "confirmado": false,
   "ganador": null,
   "torneoClave": "challenger|Monastir",
-  "importante": false
- },
- "220116": {
-  "id": 220116,
-  "tour": "challenger_women",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Final",
-  "rondaCod": "F",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-14T17:15:00Z",
-  "j1": {
-   "id": 271,
-   "nombre": "Elizabeth Mandlik",
-   "pais": "usa",
-   "ranking": 237
-  },
-  "j2": {
-   "id": 289,
-   "nombre": "Bianca Andreescu",
-   "pais": "can",
-   "ranking": 100
-  },
-  "dobles": false,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "accepted_at": "2026-11-14T18:34:37.992345Z",
-   "age_seconds": 645,
-   "changing_sources_count": 0,
-   "corroborated": true,
-   "corroborated_age_seconds": 625,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "default",
-    "rule": "full_set"
-   },
-   "games": [
-    [
-     3,
-     3
-    ],
-    [
-     6,
-     6
-    ]
-   ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 625,
-   "origin": "observed",
-   "points": [
-    "0",
-    "0"
-   ],
-   "received_at": "2026-11-14T18:34:37.836752Z",
-   "sequence": 128,
-   "server": 2,
-   "sets": [
-    0,
-    2
-   ],
-   "sources_count": 0,
-   "stale": false,
-   "timestamp": "2026-11-14T18:34:37.992340Z",
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": true,
-  "ganador": 2,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
-  "importante": true
- },
- "220119": {
-  "id": 220119,
-  "tour": "challenger_women_doubles",
-  "torneo": "Sopo (Colombia)",
-  "ronda": "Sopo - Final",
-  "rondaCod": "F",
-  "superficie": "clay",
-  "clasificacion": false,
-  "genero": "women",
-  "horario": "2026-11-14T15:05:00Z",
-  "j1": {
-   "id": 27174,
-   "nombre": "Erjavec / Kulambayeva",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "slo",
-    "kaz"
-   ]
-  },
-  "j2": {
-   "id": 44726,
-   "nombre": "Samson / Zidansek",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "cze",
-    "slo"
-   ]
-  },
-  "dobles": true,
-  "estado": "finalizado",
-  "motivo": null,
-  "visto": "2026-11-14T19:45:24.806Z",
-  "tier": null,
-  "torneoId": "14866",
-  "cubierto": false,
-  "resultado": null,
-  "score": {
-   "accepted_at": "2026-11-14T16:45:09.068154Z",
-   "age_seconds": 15,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 7,
-   "deciding_match_tiebreak_next": true,
-   "deciding_set": {
-    "basis": "confirmed",
-    "rule": "match_tiebreak"
-   },
-   "games": [
-    [
-     5,
-     6,
-     11
-    ],
-    [
-     7,
-     2,
-     11
-    ]
-   ],
-   "is_tiebreak": true,
-   "observed_age_seconds": 7,
-   "origin": "observed",
-   "points": [
-    "11",
-    "11"
-   ],
-   "received_at": "2026-11-14T16:45:08.962074Z",
-   "sequence": 134,
-   "server": 1,
-   "sets": [
-    1,
-    1
-   ],
-   "sources_count": 3,
-   "stale": false,
-   "timestamp": "2026-11-14T16:45:17.232361Z",
-   "puntos": [
-    "11",
-    "11"
-   ],
-   "saca": 1
-  },
-  "confirmado": false,
-  "ganador": null,
-  "torneoClave": "challenger_women|Sopo (Colombia)",
   "importante": false
  },
  "220120": {
@@ -69052,7 +68140,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:45:46.487Z",
+  "visto": "2026-11-24T17:30:34.071Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -69061,10 +68149,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T07:11:24.213827Z",
-   "age_seconds": 34462,
+   "age_seconds": 37146,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 33785,
+   "corroborated_age_seconds": 36469,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -69081,7 +68169,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 588,
+   "observed_age_seconds": 1111,
    "origin": "observed",
    "points": [
     "0",
@@ -69096,7 +68184,7 @@
    ],
    "sources_count": 0,
    "stale": true,
-   "timestamp": "2026-11-24T16:35:57.843548Z",
+   "timestamp": "2026-11-24T17:11:59.285873Z",
    "puntos": [
     "0",
     "0"
@@ -70958,7 +70046,7 @@
    "ranking": 514
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T16:45:46.487Z",
   "torneoClave": "challenger|Hersonissos 4",
@@ -72949,32 +72037,79 @@
  "223670": {
   "id": 223670,
   "tour": "challenger",
-  "torneo": "Monastir 2 (Tunisia) - Qualification",
+  "torneo": "Monastir 2 (Tunisia)",
   "ronda": "Monastir 2 - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-24T16:45:00Z",
+  "horario": "2026-11-24T16:55:00Z",
   "j1": {
    "id": 921,
    "nombre": "Yannik Kelm",
    "pais": "ger",
-   "ranking": 430
+   "ranking": 448
   },
   "j2": {
    "id": 12825,
    "nombre": "Carlos Taberner",
    "pais": "esp",
-   "ranking": 456
+   "ranking": 515
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:00:40.915Z",
-  "torneoClave": "challenger|Monastir 2 (Tunisia) - Qualification",
+  "visto": "2026-11-24T17:30:34.071Z",
+  "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14885",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T17:30:01.849370Z",
+   "age_seconds": 29,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "30",
+    "30"
+   ],
+   "received_at": "2026-11-24T17:30:01.334216Z",
+   "sequence": 49,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-24T17:30:25.223895Z",
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223671": {
   "id": 223671,
@@ -75009,7 +74144,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:45:46.487Z",
+  "visto": "2026-11-24T17:30:34.071Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -75017,11 +74152,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T16:44:53.179308Z",
-   "age_seconds": 53,
+   "accepted_at": "2026-11-24T17:29:49.312185Z",
+   "age_seconds": 41,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -75030,35 +74165,35 @@
    "games": [
     [
      4,
-     0
+     3
     ],
     [
      6,
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "40",
-    "AD"
+    "15",
+    "40"
    ],
-   "received_at": "2026-11-24T16:44:52.395362Z",
-   "sequence": 76,
-   "server": 1,
+   "received_at": "2026-11-24T17:29:48.812965Z",
+   "sequence": 129,
+   "server": 2,
    "sets": [
     0,
     1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-24T16:45:43.373572Z",
+   "timestamp": "2026-11-24T17:30:20.249097Z",
    "puntos": [
-    "40",
-    "AD"
+    "15",
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -75088,7 +74223,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:45:46.487Z",
+  "visto": "2026-11-24T17:30:34.071Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -75096,11 +74231,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T16:45:40.830319Z",
-   "age_seconds": 5,
+   "accepted_at": "2026-11-24T17:29:03.450306Z",
+   "age_seconds": 87,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -75109,35 +74244,35 @@
    "games": [
     [
      6,
-     0
+     5
     ],
     [
      4,
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
     "0",
-    "30"
+    "0"
    ],
-   "received_at": "2026-11-24T16:45:40.358338Z",
-   "sequence": 65,
-   "server": 2,
+   "received_at": "2026-11-24T17:29:03.117444Z",
+   "sequence": 130,
+   "server": 1,
    "sets": [
     1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 1,
    "stale": false,
-   "timestamp": "2026-11-24T16:45:40.830317Z",
+   "timestamp": "2026-11-24T17:29:13.196876Z",
    "puntos": [
     "0",
-    "30"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -75181,26 +74316,73 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-24T16:45:00Z",
+  "horario": "2026-11-24T16:55:00Z",
   "j1": {
    "id": 495,
    "nombre": "Alvaro Guillen Meza",
    "pais": "ecu",
-   "ranking": 445
+   "ranking": 537
   },
   "j2": {
    "id": 622,
    "nombre": "Genaro Alberto Olivieri",
    "pais": "arg",
-   "ranking": 244
+   "ranking": 238
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:00:40.915Z",
+  "visto": "2026-11-24T17:30:34.071Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2565",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T17:29:49.263176Z",
+   "age_seconds": 41,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 7,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 7,
+   "origin": "observed",
+   "points": [
+    "40",
+    "AD"
+   ],
+   "received_at": "2026-11-24T17:29:48.844413Z",
+   "sequence": 50,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-24T17:30:14.440394Z",
+   "puntos": [
+    "40",
+    "AD"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223734": {
   "id": 223734,
@@ -75255,7 +74437,7 @@
    "ranking": 666
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T16:45:46.486Z",
   "torneoClave": "challenger|Florianopolis",
@@ -77327,32 +76509,79 @@
  "224087": {
   "id": 224087,
   "tour": "challenger",
-  "torneo": "San Salvador (El Salvador) - Qualification",
+  "torneo": "San Salvador (El Salvador)",
   "ronda": "San Salvador - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-24T17:30:00Z",
+  "horario": "2026-11-24T17:15:00Z",
   "j1": {
    "id": 373,
-   "nombre": "S. Heredia",
+   "nombre": "Samuel Heredia",
    "pais": "col",
-   "ranking": null
+   "ranking": 630
   },
   "j2": {
    "id": 1197,
-   "nombre": "Y. T. Alexandrescou",
+   "nombre": "Yannick Theodor Alexandrescou",
    "pais": "fra",
-   "ranking": null
+   "ranking": 821
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:00:40.915Z",
-  "torneoClave": "challenger|San Salvador (El Salvador) - Qualification",
+  "visto": "2026-11-24T17:30:34.071Z",
+  "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14883",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T17:29:40.604822Z",
+   "age_seconds": 50,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-24T17:29:40.047181Z",
+   "sequence": 18,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-24T17:30:22.787397Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224088": {
   "id": 224088,
@@ -77439,7 +76668,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:45:46.487Z",
+  "visto": "2026-11-24T17:30:34.071Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -77447,11 +76676,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T16:45:23.646422Z",
-   "age_seconds": 22,
+   "accepted_at": "2026-11-24T17:29:32.413829Z",
+   "age_seconds": 58,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -77460,22 +76689,22 @@
    "games": [
     [
      1,
-     1
+     6
     ],
     [
      6,
-     0
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "0",
-    "15"
+    "30",
+    "40"
    ],
-   "received_at": "2026-11-24T16:45:23.381628Z",
-   "sequence": 49,
+   "received_at": "2026-11-24T17:29:31.930426Z",
+   "sequence": 114,
    "server": 2,
    "sets": [
     0,
@@ -77483,10 +76712,10 @@
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-24T16:45:42.072291Z",
+   "timestamp": "2026-11-24T17:30:29.368804Z",
    "puntos": [
-    "0",
-    "15"
+    "30",
+    "40"
    ],
    "saca": 2
   },
@@ -79162,7 +78391,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ger",
     "ger"
    ]
   },
@@ -80132,7 +79361,7 @@
    "ranking": 228
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T16:45:46.487Z",
   "torneoClave": "challenger|Buenos Aires",
@@ -80271,7 +79500,7 @@
    "ranking": 598
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T16:45:46.487Z",
   "torneoClave": "challenger|Buenos Aires",
@@ -82458,7 +81687,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:45:46.487Z",
+  "visto": "2026-11-24T17:30:34.071Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -82467,10 +81696,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T07:06:48.998232Z",
-   "age_seconds": 34737,
+   "age_seconds": 37422,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 33869,
+   "corroborated_age_seconds": 36553,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -82487,7 +81716,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 589,
+   "observed_age_seconds": 1111,
    "origin": "observed",
    "points": [
     "0",
@@ -82502,7 +81731,7 @@
    ],
    "sources_count": 0,
    "stale": true,
-   "timestamp": "2026-11-24T16:35:57.015531Z",
+   "timestamp": "2026-11-24T17:11:59.174178Z",
    "puntos": [
     "0",
     "0"
@@ -84218,7 +83447,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:45:46.487Z",
+  "visto": "2026-11-24T17:30:34.071Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
   "importante": false,
@@ -84226,11 +83455,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T16:45:09.819168Z",
-   "age_seconds": 36,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-24T17:29:55.154017Z",
+   "age_seconds": 35,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -84239,35 +83468,35 @@
    "games": [
     [
      3,
-     0
+     4
     ],
     [
      6,
-     0
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "40",
+    "AD"
    ],
-   "received_at": "2026-11-24T16:45:09.392100Z",
-   "sequence": 55,
-   "server": 1,
+   "received_at": "2026-11-24T17:29:54.685363Z",
+   "sequence": 107,
+   "server": 2,
    "sets": [
     0,
     1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-24T16:45:43.438402Z",
+   "timestamp": "2026-11-24T17:30:14.430215Z",
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "AD"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -84297,7 +83526,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:45:46.487Z",
+  "visto": "2026-11-24T17:30:34.071Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
   "importante": false,
@@ -84305,11 +83534,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T16:45:31.671580Z",
-   "age_seconds": 14,
+   "accepted_at": "2026-11-24T17:30:20.838299Z",
+   "age_seconds": 10,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -84317,32 +83546,34 @@
    },
    "games": [
     [
-     6
+     7,
+     4
     ],
     [
-     6
+     6,
+     4
     ]
    ],
-   "is_tiebreak": true,
-   "observed_age_seconds": 4,
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "3",
-    "2"
+    "15",
+    "40"
    ],
-   "received_at": "2026-11-24T16:45:31.150018Z",
-   "sequence": 74,
+   "received_at": "2026-11-24T17:30:20.649020Z",
+   "sequence": 137,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-24T16:45:42.157113Z",
+   "timestamp": "2026-11-24T17:30:20.838295Z",
    "puntos": [
-    "3",
-    "2"
+    "15",
+    "40"
    ],
    "saca": 2
   },
@@ -84832,7 +84063,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:45:46.487Z",
+  "visto": "2026-11-24T17:30:34.071Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -84840,11 +84071,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T16:45:34.202727Z",
-   "age_seconds": 12,
+   "accepted_at": "2026-11-24T17:29:32.122540Z",
+   "age_seconds": 58,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -84853,35 +84084,35 @@
    "games": [
     [
      2,
-     0
+     3
     ],
     [
      6,
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "40",
+    "40"
    ],
-   "received_at": "2026-11-24T16:45:33.676313Z",
-   "sequence": 51,
-   "server": 1,
+   "received_at": "2026-11-24T17:29:31.930426Z",
+   "sequence": 106,
+   "server": 2,
    "sets": [
     0,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-24T16:45:43.398226Z",
+   "timestamp": "2026-11-24T17:30:22.743179Z",
    "puntos": [
-    "30",
-    "30"
+    "40",
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -84939,7 +84170,7 @@
    "ranking": null
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T16:45:46.487Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
@@ -85583,31 +84814,78 @@
   "id": 224917,
   "tour": "challenger",
   "torneo": "Florianopolis",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Round of 32",
+  "rondaCod": "R32",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-24T16:30:00Z",
+  "horario": "2026-11-24T17:00:00Z",
   "j1": {
+   "id": 351,
+   "nombre": "Santiago De La Fuente",
+   "pais": "arg",
+   "ranking": 688
+  },
+  "j2": {
    "id": 422,
    "nombre": "Juan Manuel La Serna",
    "pais": "arg",
-   "ranking": 217
-  },
-  "j2": {
-   "id": 351,
-   "nombre": "S. De La Fuente",
-   "pais": "arg",
-   "ranking": null
+   "ranking": 212
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:00:40.915Z",
+  "visto": "2026-11-24T17:30:34.071Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2565",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T17:21:45.444435Z",
+   "age_seconds": 525,
+   "changing_sources_count": 0,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "0",
+    "30"
+   ],
+   "received_at": "2026-11-24T17:21:44.997613Z",
+   "sequence": 26,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 1,
+   "stale": true,
+   "timestamp": "2026-11-24T17:28:32.954623Z",
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224918": {
   "id": 224918,
@@ -85935,12 +85213,12 @@
    "pais": "cze",
    "ranking": 59
   },
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T16:45:44.309832Z",
-   "age_seconds": 2,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-24T17:19:25.398921Z",
+   "age_seconds": 668,
+   "changing_sources_count": 0,
    "corroborated": false,
    "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
@@ -85952,40 +85230,40 @@
     [
      2,
      6,
-     0
+     2
     ],
     [
      6,
      3,
-     1
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 668,
    "origin": "observed",
    "points": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-24T16:45:44.166567Z",
-   "sequence": 121,
-   "server": 1,
+   "received_at": "2026-11-24T17:19:23.206331Z",
+   "sequence": 162,
+   "server": 2,
    "sets": [
     1,
-    1
+    2
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-24T16:45:44.309830Z",
+   "timestamp": "2026-11-24T17:19:25.398912Z",
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null,
-  "visto": "2026-11-24T16:45:46.487Z",
+  "confirmado": true,
+  "ganador": 2,
+  "visto": "2026-11-24T17:30:34.330Z",
   "torneoClave": "atp|ATP Davis Cup - World Group",
   "importante": true
  },
