@@ -6954,7 +6954,7 @@
    "ranking": null,
    "paises": [
     "ukr",
-    null
+    "ukr"
    ]
   },
   "dobles": true,
@@ -71878,7 +71878,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ukr",
     "ukr"
    ]
   },
@@ -72057,7 +72057,7 @@
    "ranking": 393
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T10:00:41.622Z",
   "torneoClave": "challenger|Yokohama",
@@ -72435,7 +72435,7 @@
    "ranking": 474
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T10:00:41.622Z",
   "torneoClave": "challenger|Yokohama",
@@ -73333,7 +73333,7 @@
    "ranking": 853
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T10:00:41.622Z",
   "torneoClave": "challenger|Hersonissos 4",
@@ -73647,7 +73647,7 @@
    "ranking": 503
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T10:00:41.622Z",
   "torneoClave": "challenger|Hersonissos 4",
@@ -73714,26 +73714,75 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-24T10:05:00Z",
+  "horario": "2026-11-24T10:10:00Z",
   "j1": {
-   "id": 1848,
-   "nombre": "Johannus Monday",
-   "pais": "gbr",
-   "ranking": 493
-  },
-  "j2": {
    "id": 919,
    "nombre": "Philip Henning",
    "pais": "rsa",
-   "ranking": 249
+   "ranking": 236
+  },
+  "j2": {
+   "id": 1848,
+   "nombre": "Johannus Monday",
+   "pais": "gbr",
+   "ranking": 482
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T10:00:41.622Z",
+  "visto": "2026-11-24T10:45:27.271Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T10:45:10.009746Z",
+   "age_seconds": 17,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "0",
+    "30"
+   ],
+   "received_at": "2026-11-24T10:45:06.688489Z",
+   "sequence": 51,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-24T10:45:19.014536Z",
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223624": {
   "id": 223624,
@@ -75095,7 +75144,7 @@
    "ranking": 526
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T10:00:41.622Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
@@ -84480,7 +84529,7 @@
    "ranking": 488
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T10:00:41.622Z",
   "torneoClave": "challenger|Yokohama",
@@ -84886,7 +84935,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T10:00:41.622Z",
+  "visto": "2026-11-24T10:45:27.270Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
   "importante": false,
@@ -84894,11 +84943,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T10:00:37.388455Z",
-   "age_seconds": 1,
+   "accepted_at": "2026-11-24T10:45:15.607203Z",
+   "age_seconds": 11,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 9,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -84906,34 +84955,36 @@
    },
    "games": [
     [
-     3
+     6,
+     4
     ],
     [
+     4,
      1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 9,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-24T10:00:37.200107Z",
-   "sequence": 28,
-   "server": 2,
+   "received_at": "2026-11-24T10:45:13.154067Z",
+   "sequence": 94,
+   "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 4,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-24T10:00:37.388453Z",
+   "timestamp": "2026-11-24T10:45:15.607196Z",
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -84949,24 +85000,73 @@
   "genero": "men",
   "horario": "2026-11-24T10:05:00Z",
   "j1": {
-   "id": 2022,
-   "nombre": "O. Okonkwo",
-   "pais": "gbr",
-   "ranking": null
+   "id": 934,
+   "nombre": "Nikita Belozertsev",
+   "pais": "uzb",
+   "ranking": 786
   },
   "j2": {
-   "id": 934,
-   "nombre": "N. Belozertsev",
-   "pais": "uzb",
-   "ranking": null
+   "id": 2022,
+   "nombre": "Oliver Okonkwo",
+   "pais": "gbr",
+   "ranking": 953
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T10:00:41.622Z",
+  "visto": "2026-11-24T10:45:27.270Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T10:44:17.034231Z",
+   "age_seconds": 70,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-24T10:44:16.113101Z",
+   "sequence": 59,
+   "server": 1,
+   "sets": [
+    0,
+    1
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-24T10:45:18.955246Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224532": {
   "id": 224532,
@@ -85194,26 +85294,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-24T10:30:00Z",
+  "horario": "2026-11-24T10:35:00Z",
   "j1": {
    "id": 2001,
    "nombre": "Nikita Mashtakov",
    "pais": "ukr",
-   "ranking": 432
+   "ranking": 434
   },
   "j2": {
    "id": 8056,
-   "nombre": "A. Mazdrashki",
+   "nombre": "Anas Mazdrashki",
    "pais": "bul",
-   "ranking": null
+   "ranking": 818
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T10:00:41.622Z",
+  "visto": "2026-11-24T10:45:27.271Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T10:44:26.631486Z",
+   "age_seconds": 60,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 12,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-24T10:44:26.171666Z",
+   "sequence": 13,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-24T10:45:18.945891Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224567": {
   "id": 224567,
