@@ -519,3 +519,5 @@ body{background:#0F1317}
 .cm-copa svg{width:42px;height:42px}
 .cm-trofeo strong{color:var(--lima)}
 @media(max-width:600px){.cm-paso::after{display:none}.cm-lista{grid-template-columns:repeat(3,1fr)}}
+/* Carrusel en celular: títulos largos sin salirse ni taparse */
+@media (max-width:600px){.hs-fila{height:360px}.hs{padding:16px}.hero2 .hs:nth-child(1) h2{font-size:20px;line-height:1.08;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}.hero2 .hs:nth-child(1) p{font-size:13px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.hs-flecha{top:16px;transform:none;width:34px;height:34px}}
