@@ -1,0 +1,19 @@
+name: Capturas del sitio
+on:
+  push:
+    branches: [media]
+    paths: [media/sitio-capturas.txt]
+permissions: { contents: write }
+jobs:
+  capturas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm i --no-save playwright@1 && npx playwright install --with-deps chromium
+      - run: node media/sitio-capturas.mjs
+      - run: |
+          git config user.name "A Todo Tenis bot" && git config user.email "bot@atodotenis.local"
+          git add media/sitio-capturas && git commit -m "Capturas del sitio" && git pull --rebase -q && git push || true
