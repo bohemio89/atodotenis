@@ -68140,7 +68140,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T22:15:30.765Z",
+  "visto": "2026-11-24T23:00:41.483Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -68149,10 +68149,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T07:11:24.213827Z",
-   "age_seconds": 54243,
+   "age_seconds": 56957,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 53566,
+   "corroborated_age_seconds": 56280,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68169,7 +68169,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1689,
+   "observed_age_seconds": 4402,
    "origin": "observed",
    "points": [
     "0",
@@ -68518,7 +68518,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T22:15:30.765Z",
+  "visto": "2026-11-24T23:00:41.603Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -68527,10 +68527,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T07:15:05.560216Z",
-   "age_seconds": 928,
+   "age_seconds": 56735,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 556,
+   "corroborated_age_seconds": 4403,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68547,7 +68547,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 443,
+   "observed_age_seconds": 4403,
    "origin": "observed",
    "points": [
     "30",
@@ -76844,32 +76844,81 @@
  "224091": {
   "id": 224091,
   "tour": "challenger",
-  "torneo": "San Salvador (El Salvador) - Qualification",
+  "torneo": "San Salvador (El Salvador)",
   "ronda": "San Salvador - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-24T20:30:00Z",
+  "horario": "2026-11-24T22:20:00Z",
   "j1": {
-   "id": 5012,
-   "nombre": "B. Willwerth",
-   "pais": "usa",
-   "ranking": null
-  },
-  "j2": {
    "id": 434,
    "nombre": "Mateus Alves",
    "pais": "bra",
-   "ranking": 410
+   "ranking": 425
+  },
+  "j2": {
+   "id": 5012,
+   "nombre": "Benjamin Willwerth",
+   "pais": "usa",
+   "ranking": 780
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:00:40.915Z",
-  "torneoClave": "challenger|San Salvador (El Salvador) - Qualification",
+  "visto": "2026-11-24T23:00:41.335Z",
+  "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14883",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T22:57:09.520471Z",
+   "age_seconds": 210,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-24T22:57:09.186065Z",
+   "sequence": 67,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": true,
+   "timestamp": "2026-11-24T23:00:39.892110Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224092": {
   "id": 224092,
@@ -79897,21 +79946,21 @@
    "ranking": 219
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-24T19:52:21.685Z",
+  "visto": "2026-11-24T23:00:42.428Z",
   "torneoClave": "challenger|Buenos Aires",
   "tier": "wta_125",
   "importante": false,
   "torneoId": "4869",
   "cubierto": false,
-  "resultado": null,
+  "resultado": "retired",
   "score": {
-   "accepted_at": "2026-11-24T19:50:44.879997Z",
-   "age_seconds": 96,
-   "changing_sources_count": 2,
-   "corroborated": false,
-   "corroborated_age_seconds": null,
+   "accepted_at": "2026-11-24T20:12:47.490909Z",
+   "age_seconds": 10074,
+   "changing_sources_count": 0,
+   "corroborated": true,
+   "corroborated_age_seconds": 9857,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -79921,7 +79970,7 @@
     [
      1,
      7,
-     0
+     2
     ],
     [
      6,
@@ -79930,29 +79979,42 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 9857,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "40",
+    "30"
    ],
-   "received_at": "2026-11-24T19:50:44.397443Z",
-   "sequence": 146,
+   "received_at": "2026-11-24T20:12:47.423847Z",
+   "sequence": 165,
    "server": 2,
    "sets": [
     1,
     1
    ],
-   "sources_count": 1,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-24T19:52:15.909370Z",
+   "tiebreaks": [
+    null,
+    {
+     "p1": 7,
+     "p2": 1
+    },
+    null
+   ],
+   "tiebreaks_source": [
+    null,
+    "summary",
+    null
+   ],
+   "timestamp": "2026-11-24T20:12:47.490907Z",
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "30"
    ],
    "saca": 2
   },
-  "confirmado": false,
+  "confirmado": true,
   "ganador": null
  },
  "224172": {
@@ -80447,9 +80509,9 @@
    "ranking": 665
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-24T19:15:37.564Z",
+  "visto": "2026-11-24T23:00:42.658Z",
   "torneoClave": "challenger|Buenos Aires",
   "tier": "wta_125",
   "importante": false,
@@ -80457,11 +80519,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T19:14:59.178288Z",
-   "age_seconds": 37,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-24T19:37:29.565086Z",
+   "age_seconds": 12193,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 8,
+   "corroborated_age_seconds": 12187,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -80470,38 +80532,38 @@
    "games": [
     [
      6,
-     1
+     6
     ],
     [
      2,
-     1
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 12187,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-24T19:14:58.940182Z",
-   "sequence": 105,
+   "received_at": "2026-11-24T19:37:29.418401Z",
+   "sequence": 136,
    "server": 1,
    "sets": [
-    1,
+    2,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-24T19:15:33.410115Z",
+   "timestamp": "2026-11-24T19:37:29.565078Z",
    "puntos": [
-    "30",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "224205": {
   "id": 224205,
@@ -82015,7 +82077,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T22:15:30.765Z",
+  "visto": "2026-11-24T23:00:41.849Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -82024,10 +82086,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T07:06:48.998232Z",
-   "age_seconds": 54519,
+   "age_seconds": 57232,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 53650,
+   "corroborated_age_seconds": 56364,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -82044,7 +82106,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1690,
+   "observed_age_seconds": 4403,
    "origin": "observed",
    "points": [
     "0",
@@ -84715,32 +84777,79 @@
  "224756": {
   "id": 224756,
   "tour": "challenger",
-  "torneo": "San Salvador (El Salvador) - Qualification",
+  "torneo": "San Salvador (El Salvador)",
   "ronda": "San Salvador - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-24T20:30:00Z",
+  "horario": "2026-11-24T22:50:00Z",
   "j1": {
-   "id": 5980,
-   "nombre": "J. Fradkin",
-   "pais": "usa",
-   "ranking": null
-  },
-  "j2": {
    "id": 371,
    "nombre": "Karl Poling",
    "pais": "usa",
-   "ranking": 455
+   "ranking": 457
+  },
+  "j2": {
+   "id": 5980,
+   "nombre": "Jeffrey Fradkin",
+   "pais": "usa",
+   "ranking": 1724
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T16:00:40.915Z",
-  "torneoClave": "challenger|San Salvador (El Salvador) - Qualification",
+  "visto": "2026-11-24T23:00:41.335Z",
+  "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14883",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T23:00:03.064166Z",
+   "age_seconds": 37,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "40",
+    "40"
+   ],
+   "received_at": "2026-11-24T23:00:02.919717Z",
+   "sequence": 66,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-24T23:00:36.288246Z",
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224757": {
   "id": 224757,
@@ -84826,8 +84935,8 @@
  "224758": {
   "id": 224758,
   "tour": "challenger",
-  "torneo": "San Salvador, El Salvador",
-  "ronda": "Round of 32",
+  "torneo": "San Salvador (El Salvador)",
+  "ronda": "San Salvador - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
@@ -84846,21 +84955,21 @@
    "ranking": 951
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-24T22:15:30.015Z",
-  "torneoClave": "challenger|San Salvador, El Salvador",
+  "visto": "2026-11-24T23:00:41.983Z",
+  "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
   "torneoId": "14883",
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T22:15:25.690080Z",
-   "age_seconds": 2,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-24T22:40:59.308554Z",
+   "age_seconds": 1182,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 1025,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -84869,38 +84978,38 @@
    "games": [
     [
      4,
-     2
+     4
     ],
     [
      6,
-     3
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 1025,
    "origin": "observed",
    "points": [
-    "15",
-    "40"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-24T22:15:25.539043Z",
-   "sequence": 113,
-   "server": 2,
+   "received_at": "2026-11-24T22:40:50.613295Z",
+   "sequence": 147,
+   "server": 1,
    "sets": [
     0,
-    1
+    2
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-24T22:15:25.690076Z",
+   "timestamp": "2026-11-24T22:40:59.308551Z",
    "puntos": [
-    "15",
-    "40"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "224857": {
   "id": 224857,
@@ -85423,7 +85532,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T22:15:30.015Z",
+  "visto": "2026-11-24T23:00:41.336Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -85432,10 +85541,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T18:43:55.289447Z",
-   "age_seconds": 12692,
+   "age_seconds": 15405,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 2058,
+   "corroborated_age_seconds": 4770,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -85452,7 +85561,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
     "0",
@@ -85467,7 +85576,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-24T22:15:22.218366Z",
+   "timestamp": "2026-11-24T23:00:36.279107Z",
    "puntos": [
     "0",
     "0"
@@ -85581,7 +85690,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T22:15:30.015Z",
+  "visto": "2026-11-24T23:00:41.335Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -85590,10 +85699,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T18:43:10.321790Z",
-   "age_seconds": 12737,
+   "age_seconds": 15450,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 1689,
+   "corroborated_age_seconds": 4401,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -85610,7 +85719,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
     "15",
@@ -85625,7 +85734,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-24T22:15:22.213458Z",
+   "timestamp": "2026-11-24T23:00:36.265339Z",
    "puntos": [
     "15",
     "40"
@@ -85660,7 +85769,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T22:15:30.015Z",
+  "visto": "2026-11-24T23:00:41.335Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -85669,10 +85778,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T18:47:38.440478Z",
-   "age_seconds": 12469,
+   "age_seconds": 15181,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 2024,
+   "corroborated_age_seconds": 4737,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -85687,7 +85796,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
     "0",
@@ -85702,7 +85811,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-24T22:15:22.210219Z",
+   "timestamp": "2026-11-24T23:00:36.268675Z",
    "puntos": [
     "0",
     "40"

@@ -1696,7 +1696,14 @@
   "nombre": "Yokohama, Japan",
   "tour": "challenger",
   "id": "2510",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-23T07:15:00Z",
   "ultimaVez": "2026-11-23T07:15:00Z",
@@ -1708,7 +1715,14 @@
   "nombre": "Hersonissos 4, Greece",
   "tour": "challenger",
   "id": "12900",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-23T11:10:00Z",
   "ultimaVez": "2026-11-23T11:10:00Z",
