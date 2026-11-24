@@ -71076,18 +71076,18 @@
    "id": 465,
    "nombre": "Carl Emil Overbeck",
    "pais": "den",
-   "ranking": 324
+   "ranking": 337
   },
   "j2": {
    "id": 1944,
    "nombre": "Isaac Becroft",
    "pais": "nzl",
-   "ranking": 507
+   "ranking": 478
   },
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T05:00:55.014Z",
+  "visto": "2026-11-24T05:36:36.387Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -71095,11 +71095,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T05:00:29.504445Z",
-   "age_seconds": 25,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-24T05:30:51.058952Z",
+   "age_seconds": 336,
+   "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 9,
+   "corroborated_age_seconds": 265,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -71108,33 +71108,33 @@
    "games": [
     [
      6,
-     4
+     6
     ],
     [
      4,
-     3
+     6
     ]
    ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "is_tiebreak": true,
+   "observed_age_seconds": 265,
    "origin": "observed",
    "points": [
-    "15",
-    "30"
+    "9",
+    "8"
    ],
-   "received_at": "2026-11-24T05:00:28.909519Z",
-   "sequence": 106,
+   "received_at": "2026-11-24T05:30:50.864772Z",
+   "sequence": 150,
    "server": 1,
    "sets": [
     1,
     0
    ],
-   "sources_count": 2,
-   "stale": false,
-   "timestamp": "2026-11-24T05:00:54.459318Z",
+   "sources_count": 0,
+   "stale": true,
+   "timestamp": "2026-11-24T05:31:24.453116Z",
    "puntos": [
-    "15",
-    "30"
+    "9",
+    "8"
    ],
    "saca": 1
   },
@@ -71551,26 +71551,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-24T05:00:00Z",
+  "horario": "2026-11-24T05:20:00Z",
   "j1": {
-   "id": 842,
-   "nombre": "Dane Sweeny",
-   "pais": "aus",
-   "ranking": 122
-  },
-  "j2": {
    "id": 497,
    "nombre": "Jake Delaney",
    "pais": "aus",
-   "ranking": 338
+   "ranking": 353
+  },
+  "j2": {
+   "id": 842,
+   "nombre": "Dane Sweeny",
+   "pais": "aus",
+   "ranking": 123
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T04:15:34.709Z",
+  "visto": "2026-11-24T05:36:36.387Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "3191",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T05:35:53.139626Z",
+   "age_seconds": 34,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "15",
+    "40"
+   ],
+   "received_at": "2026-11-24T05:35:52.640288Z",
+   "sequence": 38,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-24T05:36:11.436424Z",
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223522": {
   "id": 223522,
@@ -71595,7 +71642,7 @@
    "ranking": 406
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T05:00:55.014Z",
   "torneoClave": "challenger|Playford 2",
@@ -72138,18 +72185,18 @@
    "id": 84,
    "nombre": "Hayato Matsuoka",
    "pais": "jpn",
-   "ranking": 274
+   "ranking": 338
   },
   "j2": {
    "id": 463,
    "nombre": "Koki Matsuda",
    "pais": "jpn",
-   "ranking": 472
+   "ranking": 464
   },
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T05:00:55.014Z",
+  "visto": "2026-11-24T05:36:36.387Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -72157,11 +72204,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T05:00:21.321559Z",
-   "age_seconds": 33,
+   "accepted_at": "2026-11-24T05:36:22.448748Z",
+   "age_seconds": 5,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 6,
+   "corroborated_age_seconds": 4,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -72170,35 +72217,37 @@
    "games": [
     [
      4,
-     6
+     6,
+     5
     ],
     [
      6,
-     3
+     3,
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-24T05:00:20.967024Z",
-   "sequence": 119,
-   "server": 2,
+   "received_at": "2026-11-24T05:36:22.324378Z",
+   "sequence": 171,
+   "server": 1,
    "sets": [
     1,
     1
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-24T05:00:41.741976Z",
+   "timestamp": "2026-11-24T05:36:22.448742Z",
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -83463,18 +83512,18 @@
    "id": 11221,
    "nombre": "Harrison Satara",
    "pais": "aus",
-   "ranking": 1417
+   "ranking": 1411
   },
   "j2": {
    "id": 13762,
    "nombre": "Jason Kubler",
    "pais": "aus",
-   "ranking": 562
+   "ranking": 617
   },
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T05:00:55.014Z",
+  "visto": "2026-11-24T05:36:36.387Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -83482,11 +83531,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T05:00:04.325011Z",
-   "age_seconds": 50,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-24T05:35:36.028257Z",
+   "age_seconds": 51,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 9,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -83494,10 +83543,12 @@
    },
    "games": [
     [
-     4
+     4,
+     5
     ],
     [
-     4
+     6,
+     2
     ]
    ],
    "is_tiebreak": false,
@@ -83505,23 +83556,23 @@
    "origin": "observed",
    "points": [
     "15",
-    "40"
+    "0"
    ],
-   "received_at": "2026-11-24T05:00:04.189758Z",
-   "sequence": 50,
-   "server": 1,
+   "received_at": "2026-11-24T05:35:35.002252Z",
+   "sequence": 97,
+   "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-24T05:00:54.451969Z",
+   "timestamp": "2026-11-24T05:35:56.341975Z",
    "puntos": [
     "15",
-    "40"
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -83941,18 +83992,18 @@
    "id": 841,
    "nombre": "Yun Seong Chung",
    "pais": "kor",
-   "ranking": 619
+   "ranking": 610
   },
   "j2": {
    "id": 5318,
    "nombre": "Finn Bass",
    "pais": "gbr",
-   "ranking": 1188
+   "ranking": 1186
   },
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T05:00:55.014Z",
+  "visto": "2026-11-24T05:36:36.387Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -83960,11 +84011,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T05:00:33.927339Z",
-   "age_seconds": 21,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-24T05:36:07.096493Z",
+   "age_seconds": 20,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -83973,35 +84024,37 @@
    "games": [
     [
      6,
+     4,
      4
     ],
     [
      4,
-     5
+     6,
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "AD",
+    "40"
    ],
-   "received_at": "2026-11-24T05:00:33.606574Z",
-   "sequence": 119,
-   "server": 1,
+   "received_at": "2026-11-24T05:36:06.821926Z",
+   "sequence": 175,
+   "server": 2,
    "sets": [
     1,
-    0
+    1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-24T05:00:44.398719Z",
+   "timestamp": "2026-11-24T05:36:07.096485Z",
    "puntos": [
-    "0",
-    "0"
+    "AD",
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -84050,18 +84103,18 @@
    "id": 78,
    "nombre": "Yuta Shimizu",
    "pais": "jpn",
-   "ranking": 363
+   "ranking": 373
   },
   "j2": {
    "id": 1935,
    "nombre": "Taisei Ichikawa",
    "pais": "jpn",
-   "ranking": 758
+   "ranking": 755
   },
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T05:00:55.014Z",
+  "visto": "2026-11-24T05:36:36.387Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -84069,11 +84122,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T05:00:42.065570Z",
-   "age_seconds": 12,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-24T05:36:08.476362Z",
+   "age_seconds": 19,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -84082,22 +84135,22 @@
    "games": [
     [
      6,
-     0
+     5
     ],
     [
      4,
-     0
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "30",
-    "30"
+    "15",
+    "0"
    ],
-   "received_at": "2026-11-24T05:00:40.502836Z",
-   "sequence": 64,
+   "received_at": "2026-11-24T05:36:08.168761Z",
+   "sequence": 123,
    "server": 2,
    "sets": [
     1,
@@ -84105,10 +84158,10 @@
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-24T05:00:51.588029Z",
+   "timestamp": "2026-11-24T05:36:19.996703Z",
    "puntos": [
-    "30",
-    "30"
+    "15",
+    "0"
    ],
    "saca": 2
   },
