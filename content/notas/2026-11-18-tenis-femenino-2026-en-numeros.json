@@ -17,12 +17,12 @@
   "Mirra Andreeva"
  ],
  "tour": "wta",
- "titulo": "2026 en números: Rybakina en la cima, Andreeva al acecho y cuatro Grand Slams repartidos",
+ "titulo": "2026 en números: Rybakina en la cima, Andreeva al acecho y cuatro Grand Slam repartidos",
  "bajada": "Un cambio en el número 1 después de casi dos años, dos campeonas nuevas de Grand Slam y una pelea por la cima de 2027 que arranca con menos de 300 puntos de diferencia.",
  "cuerpo": [
-  "Elena Rybakina fue la gran figura de la temporada. Ganó el Australian Open y el US Open, sus Grand Slams número dos y tres, mientras que Mirra Andreeva en Roland Garros y Linda Noskova en Wimbledon festejaron su primer título grande. Noskova le ganó 6-2, 5-7 y 6-3 a Karolina Muchova en una final entre checas y, con 21 años, se convirtió en la campeona más joven de Wimbledon desde Petra Kvitova en 2011.",
+  "Elena Rybakina fue la gran figura de la temporada. Ganó el Abierto de Australia y el Abierto de Estados Unidos, sus Grand Slam número dos y tres, mientras que Mirra Andreeva en Roland Garros y Linda Noskova en Wimbledon festejaron su primer título grande. Noskova le ganó 6-2, 5-7 y 6-3 a Karolina Muchova en una final entre checas y, con 21 años, se convirtió en la campeona más joven de Wimbledon desde Petra Kvitova en 2011.",
   "El número 1 también cambió de manos. Aryna Sabalenka empezó el año en la cima y la perdió en septiembre, después de 99 semanas seguidas. Rybakina se convirtió en la número 1 número 30 de la historia del ranking y en la primera persona de Kazajistán, hombre o mujer, en llegar a ese lugar. La remontada impresiona: a fines de 2025, Sabalenka tenía 9.870 puntos y Rybakina 4.350. En octubre, Rybakina aseguró el número 1 de fin de año en Tokio y es la jugadora número 17 de la historia en lograrlo.",
-  "Andreeva cerró la temporada con 55 victorias, la mayor cantidad del circuito, y cuatro títulos: Adelaide, Roland Garros, Linz y las WTA Finals. Rybakina también sumó cuatro, entre ellos sus dos Grand Slams, y Sabalenka tres: Brisbane, Indian Wells y Miami.",
+  "Andreeva cerró la temporada con 55 victorias, la mayor cantidad del circuito, y cuatro títulos: Adelaide, Roland Garros, Linz y las WTA Finals. Rybakina también sumó cuatro, entre ellos sus dos Grand Slam, y Sabalenka tres: Brisbane, Indian Wells y Miami.",
   "Hay más números que cuentan el año. Rybakina metió 438 aces y Sabalenka ganó 42 partidos sin ceder sets antes de las Finals. En dobles, Katerina Siniakova ganó siete títulos y terminó como número 1 de fin de año por sexta vez, más que cualquier otra jugadora de la historia.",
   "El cierre fue en Indian Wells, sin Rybakina, que no jugó las WTA Finals. Andreeva aprovechó: ganó cinco partidos seguidos sin perder un set y le ganó la final a Elina Svitolina por 7-5 y 6-3.",
   "La pelea por la cima de 2027 arranca ajustada. Rybakina suma 8.099 puntos y Andreeva, la nueva número 2, 7.806: menos de 300 de diferencia. Más atrás aparecen Sabalenka, con 6.685, y Coco Gauff y Jessica Pegula, casi empatadas. Andreeva avisó que no va a pensar en el número 1 a principios de año, y la primera prueba será en Melbourne, donde Rybakina defiende el título."
@@ -48,7 +48,10 @@
    },
    "items": [
     {
-     "arriba": "Australian Open",
+     "arriba": {
+      "es": "Abierto de Australia",
+      "en": "Australian Open"
+     },
      "titulo": "Elena Rybakina",
      "texto": {
       "es": "Final ante Sabalenka",
@@ -72,7 +75,10 @@
      }
     },
     {
-     "arriba": "US Open",
+     "arriba": {
+      "es": "Abierto de Estados Unidos",
+      "en": "US Open"
+     },
      "titulo": "Elena Rybakina",
      "texto": {
       "es": "Final ante Sabalenka",
@@ -110,7 +116,7 @@
       "en": "September 14"
      },
      "que": {
-      "es": "Rybakina, número 1 por primera vez tras ganar el US Open",
+      "es": "Rybakina, número 1 por primera vez tras ganar el Abierto de Estados Unidos",
       "en": "Rybakina, No. 1 for the first time after winning the US Open"
      }
     },
