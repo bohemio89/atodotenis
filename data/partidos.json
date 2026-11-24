@@ -70263,7 +70263,7 @@
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "esa",
     null
    ]
   },
@@ -71440,7 +71440,7 @@
    "ranking": 419
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T00:00:40.805Z",
   "torneoClave": "challenger|Playford 2",
@@ -73947,7 +73947,7 @@
   "j2": {
    "id": 1326,
    "nombre": "C. T. Duran",
-   "pais": null,
+   "pais": "esa",
    "ranking": null
   },
   "dobles": false,
@@ -75943,7 +75943,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "esa"
    ]
   },
   "dobles": true,
@@ -76095,7 +76095,7 @@
    "ranking": null,
    "paises": [
     null,
-    null
+    "crc"
    ]
   },
   "dobles": true,
@@ -79098,7 +79098,7 @@
    "ranking": 1114
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-24T00:00:40.805Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
@@ -79219,32 +79219,79 @@
  "224085": {
   "id": 224085,
   "tour": "challenger",
-  "torneo": "San Salvador (El Salvador) - Qualification",
+  "torneo": "San Salvador (El Salvador)",
   "ronda": "San Salvador - 1/16-finals",
   "rondaCod": "R32",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-23T23:30:00Z",
+  "horario": "2026-11-24T00:20:00Z",
   "j1": {
+   "id": 15994,
+   "nombre": "Jesse Flores",
+   "pais": "crc",
+   "ranking": 782
+  },
+  "j2": {
    "id": 15995,
-   "nombre": "D. Duran",
+   "nombre": "Diego Duran",
    "pais": "esa",
    "ranking": null
   },
-  "j2": {
-   "id": 15994,
-   "nombre": "J. Flores",
-   "pais": "crc",
-   "ranking": null
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-23T22:00:36.694Z",
-  "torneoClave": "challenger|San Salvador (El Salvador) - Qualification",
+  "visto": "2026-11-24T00:45:24.623Z",
+  "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14883",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-24T00:45:20.989916Z",
+   "age_seconds": 3,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "40",
+    "40"
+   ],
+   "received_at": "2026-11-24T00:45:20.858102Z",
+   "sequence": 47,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-24T00:45:20.989912Z",
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224086": {
   "id": 224086,
@@ -83362,7 +83409,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T00:00:40.805Z",
+  "visto": "2026-11-24T00:45:24.623Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -83370,11 +83417,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T00:00:10.904377Z",
-   "age_seconds": 29,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-24T00:45:04.196009Z",
+   "age_seconds": 20,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -83382,34 +83429,36 @@
    },
    "games": [
     [
+     6,
      3
     ],
     [
-     1
+     2,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "30",
+    "15",
     "15"
    ],
-   "received_at": "2026-11-24T00:00:10.490351Z",
-   "sequence": 34,
-   "server": 1,
+   "received_at": "2026-11-24T00:45:04.116110Z",
+   "sequence": 77,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-24T00:00:32.022691Z",
+   "timestamp": "2026-11-24T00:45:14.315345Z",
    "puntos": [
-    "30",
+    "15",
     "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -83469,7 +83518,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-24T00:00:40.805Z",
+  "visto": "2026-11-24T00:45:24.623Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -83477,11 +83526,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-24T00:00:34.054829Z",
-   "age_seconds": 6,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-24T00:45:07.377530Z",
+   "age_seconds": 17,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -83489,34 +83538,36 @@
    },
    "games": [
     [
-     1
+     3,
+     5
     ],
     [
+     6,
      3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
     "15",
-    "40"
+    "0"
    ],
-   "received_at": "2026-11-24T00:00:33.936731Z",
-   "sequence": 32,
-   "server": 2,
+   "received_at": "2026-11-24T00:45:07.170080Z",
+   "sequence": 98,
+   "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-24T00:00:34.054822Z",
+   "timestamp": "2026-11-24T00:45:22.410406Z",
    "puntos": [
     "15",
-    "40"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
