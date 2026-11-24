@@ -21,7 +21,7 @@ const DIR_IMG = path.join(ROOT, 'static/ig');
 //   C 23 UTC (01 Israel · 00 Madrid · 20 Buenos Aires): resultados del día
 const TANDAS = [{ id: 'A', h: 11 }, { id: 'B', h: 16 }, { id: 'C', h: 23 }];
 const VENTANA_H = 2;            // cada tanda queda abierta 2 horas
-const MAX_POR_DIA = 4;           // en días de Finals: resultado + clasificados del grupo
+const MAX_POR_DIA = 3;           // tope de publicaciones de feed por día
 const HORAS_VIGENCIA = 24;      // un resultado más viejo que esto ya no se publica
 const FORZAR = process.env.IG_FORZAR === '1';
 function tandaActual(d = new Date()) {
@@ -192,7 +192,9 @@ async function preparar() {
   if (e.pendiente) { log('Ya hay una publicación preparada:', e.pendiente.slug); return; }
   const hecho = new Set(e.publicadas.map((p) => p.slug));
   const limite = Date.now() - HORAS_NOTA * 3600e3;
-  const cand = notas().filter((n) => !hecho.has(n.slug) && new Date(n.fecha).getTime() > limite &&
+  // Solo las finales salen con imagen propia; el resto de los partidos va en el carrusel "Resultados del día" (ig-series.mjs)
+  const esFinal = (n) => String(n.resultado?.ronda || '').toUpperCase() === 'F' || /campe[oó]n|campeona/i.test(n.titulo || '');
+  const cand = notas().filter((n) => esFinal(n) && !hecho.has(n.slug) && new Date(n.fecha).getTime() > limite &&
       n.resultado?.ganador?.nombre && n.resultado?.perdedor?.nombre && n.resultado?.sets?.length)
     .sort((a, b) => (b.importancia || 0) - (a.importancia || 0) || new Date(b.fecha) - new Date(a.fecha));
   if (!cand.length) { log('Sin resultados nuevos con datos completos para Instagram.'); return; }
@@ -380,6 +382,9 @@ async function carruseles() {
     if (SOLO && c.id !== SOLO) continue;
     if (e.publicadas.some((p) => p.slug === c.id)) continue;
     if (c.vence && Date.now() > new Date(c.vence).getTime()) continue;
+    // Calendario: una pieza programada no sale antes de su fecha ni fuera de su tanda (A 11 UTC, B 16 UTC, C 23 UTC)
+    if (c.desde && Date.now() < new Date(c.desde).getTime()) continue;
+    if (c.tanda && !SOLO && tandaActual()?.id !== c.tanda) continue;
     const tanda = turno(e);
     if (!tanda) return;
     if (c.vence && Date.now() > new Date(c.vence).getTime()) { log('Vencido, no se publica:', c.id); continue; }

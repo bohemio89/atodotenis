@@ -47,6 +47,39 @@ export async function fotoJugador(nombre, ancho = 500) {
   return esJPEG(b) ? `data:image/jpeg;base64,${b.toString('base64')}` : null;
 }
 
+
+// Tamaño real de un JPEG (ancho, alto), leyendo su encabezado.
+export function medidasJPEG(b) {
+  let i = 2;
+  while (b && i < b.length - 9) {
+    if (b[i] !== 0xff) { i++; continue; }
+    const m = b[i + 1], largo = b.readUInt16BE(i + 2);
+    if (m >= 0xc0 && m <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(m)) return { alto: b.readUInt16BE(i + 5), ancho: b.readUInt16BE(i + 7) };
+    i += 2 + largo;
+  }
+  return null;
+}
+
+// Foto elegida a mano en Commons (por ejemplo, la de una efeméride), bajada al ancho pedido y guardada.
+// Devuelve { data, ancho, alto } o null. No hay estiramiento: si Commons no la tiene a ese ancho, no sirve.
+export async function fotoElegida(url, clave, ancho = 1600) {
+  const local = path.join(DIR_FOTOS, `${clave}-${ancho}.jpg`);
+  if (!fs.existsSync(local)) {
+    const archivo = decodeURIComponent(String(url).split('?')[0].split('/').pop());
+    const directa = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(archivo)}?width=${ancho}`;
+    try {
+      const r = await fetch(directa, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
+      const b = r.ok ? Buffer.from(await r.arrayBuffer()) : null;
+      if (!esJPEG(b)) return null;
+      fs.mkdirSync(DIR_FOTOS, { recursive: true });
+      fs.writeFileSync(local, b);
+    } catch { return null; }
+  }
+  const b = fs.readFileSync(local);
+  const m = medidasJPEG(b);
+  return esJPEG(b) && m ? { data: `data:image/jpeg;base64,${b.toString('base64')}`, ...m } : null;
+}
+
 const fuente = (p) => `file://${path.join(ROOT, 'node_modules/@fontsource', p)}`;
 export const CSS_BASE = `
 @font-face{font-family:Inter;font-weight:400;src:url(${fuente('inter/files/inter-latin-400-normal.woff2')})}
@@ -82,7 +115,7 @@ export async function dibujar(placas, salidas) {
     if (control.rotas || control.fuentes) { log('Placa descartada: imágenes rotas', control.rotas, 'fuentes sin cargar', control.fuentes); return null; }
     for (let i = 0; i < placas.length; i++) {
       fs.mkdirSync(path.dirname(salidas[i]), { recursive: true });
-      await p.locator(`#s${i} > .s`).screenshot({ path: salidas[i], type: 'jpeg', quality: 92 });
+      await p.locator(`#s${i} > .s`).screenshot({ path: salidas[i], type: 'jpeg', quality: 95 });
     }
     return salidas;
   } catch (err) { log('No se pudo dibujar:', err.message); return null; }
