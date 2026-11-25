@@ -1512,7 +1512,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-24T07:00:00Z",
-  "ultimaVez": "2026-11-25T14:55:00Z",
+  "ultimaVez": "2026-11-26T12:30:00Z",
   "superficie": "hard",
   "tier": "challenger_50"
  },
@@ -1588,7 +1588,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-23T08:00:00Z",
-  "ultimaVez": "2026-11-26T08:00:00Z",
+  "ultimaVez": "2026-11-26T09:30:00Z",
   "superficie": "hard",
   "tier": "challenger_50"
  },
@@ -1600,7 +1600,7 @@
   "meta": null,
   "campeones": {},
   "primeraVez": "2026-11-23T10:00:00Z",
-  "ultimaVez": "2026-11-26T10:00:00Z",
+  "ultimaVez": "2026-11-27T10:00:00Z",
   "superficie": "hard",
   "tier": "challenger_50"
  },
@@ -1676,7 +1676,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-23T15:15:00Z",
-  "ultimaVez": "2026-11-25T14:30:00Z",
+  "ultimaVez": "2026-11-26T13:00:00Z",
   "superficie": "hard",
   "tier": "challenger_50"
  },
@@ -1695,7 +1695,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-23T14:00:00Z",
-  "ultimaVez": "2026-11-26T15:00:00Z",
+  "ultimaVez": "2026-11-26T21:30:00Z",
   "superficie": "clay",
   "tier": "wta_125"
  },
@@ -1752,7 +1752,7 @@
   },
   "campeones": {},
   "primeraVez": "2026-11-23T14:10:00Z",
-  "ultimaVez": "2026-11-25T21:10:00Z",
+  "ultimaVez": "2026-11-25T22:10:00Z",
   "tier": "wta_125",
   "superficie": "clay"
  },
@@ -1818,7 +1818,14 @@
   "nombre": "Ankara, Turkiye",
   "tour": "challenger",
   "id": "14881",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": "challenger",
+   "superficie": "hard",
+   "cubierto": true,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-25T11:35:00Z",
   "ultimaVez": "2026-11-25T11:35:00Z",
@@ -1830,7 +1837,14 @@
   "nombre": "Monastir 2, Tunisia",
   "tour": "challenger",
   "id": "14885",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": null,
+   "superficie": "hard",
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-25T11:30:00Z",
   "ultimaVez": "2026-11-25T11:30:00Z",
@@ -1931,5 +1945,24 @@
   "ultimaVez": "2026-11-25T14:45:00Z",
   "tier": "challenger_75",
   "superficie": "clay"
+ },
+ "atp|Davis Cup Double Matches": {
+  "clave": "atp|Davis Cup Double Matches",
+  "nombre": "Davis Cup Double Matches",
+  "tour": "atp",
+  "id": "2725",
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": null,
+   "superficie": null,
+   "cubierto": false,
+   "genero": "men"
+  },
+  "campeones": {},
+  "primeraVez": "2026-11-25T20:45:00Z",
+  "ultimaVez": "2026-11-25T20:45:00Z",
+  "tier": "davis_cup",
+  "superficie": "hard"
  }
 }
