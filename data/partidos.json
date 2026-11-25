@@ -53069,7 +53069,7 @@
   "motivo": null,
   "visto": "2026-11-25T10:15:34.761Z",
   "torneoClave": "challenger|Ankara (Turkey)",
-  "tier": null,
+  "tier": "challenger_50",
   "importante": false
  },
  "223486": {
@@ -53107,7 +53107,7 @@
   "motivo": null,
   "visto": "2026-11-25T10:15:34.761Z",
   "torneoClave": "challenger|Ankara (Turkey)",
-  "tier": null,
+  "tier": "challenger_50",
   "importante": false
  },
  "223487": {
@@ -53145,7 +53145,7 @@
   "motivo": null,
   "visto": "2026-11-25T10:15:34.761Z",
   "torneoClave": "challenger|Ankara (Turkey)",
-  "tier": null,
+  "tier": "challenger_50",
   "importante": false
  },
  "223488": {
@@ -53183,7 +53183,7 @@
   "motivo": null,
   "visto": "2026-11-25T10:15:34.761Z",
   "torneoClave": "challenger|Ankara (Turkey)",
-  "tier": null,
+  "tier": "challenger_50",
   "importante": false
  },
  "223489": {
@@ -53221,7 +53221,7 @@
   "motivo": null,
   "visto": "2026-11-25T10:15:34.761Z",
   "torneoClave": "challenger|Ankara (Turkey)",
-  "tier": null,
+  "tier": "challenger_50",
   "importante": false
  },
  "223490": {
@@ -53259,22 +53259,22 @@
   "motivo": null,
   "visto": "2026-11-25T10:15:34.761Z",
   "torneoClave": "challenger|Ankara (Turkey)",
-  "tier": null,
+  "tier": "challenger_50",
   "importante": false
  },
  "223491": {
   "id": 223491,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Ankara (Turkey)",
   "ronda": "Ankara - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-25T10:25:00Z",
+  "horario": "2026-11-25T10:30:00Z",
   "j1": {
    "id": 32801,
-   "nombre": "Matuszewski/ Werblinski",
+   "nombre": "Piotr Matuszewski / Werblinski",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -53284,7 +53284,7 @@
   },
   "j2": {
    "id": 46873,
-   "nombre": "Kirci/ Saritas",
+   "nombre": "Kirci / Saritas",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -53293,12 +53293,61 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.354Z",
   "torneoClave": "challenger|Ankara (Turkey)",
-  "tier": null,
-  "importante": false
+  "tier": "challenger_50",
+  "importante": false,
+  "torneoId": "14880",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-25T11:00:34.492646Z",
+   "age_seconds": 6,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     6,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "15",
+    "15"
+   ],
+   "received_at": "2026-11-25T11:00:31.765728Z",
+   "sequence": 47,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-25T11:00:34.492645Z",
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223492": {
   "id": 223492,
@@ -53335,7 +53384,7 @@
   "motivo": null,
   "visto": "2026-11-25T10:15:34.761Z",
   "torneoClave": "challenger|Ankara (Turkey)",
-  "tier": null,
+  "tier": "challenger_50",
   "importante": false
  },
  "223496": {
@@ -55151,7 +55200,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-25T10:15:34.761Z",
   "torneoClave": "challenger|Hersonissos 4",
@@ -58765,7 +58814,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.354Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
   "importante": false,
@@ -58773,11 +58822,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T10:15:26.345908Z",
-   "age_seconds": 7,
+   "accepted_at": "2026-11-25T11:00:20.372378Z",
+   "age_seconds": 20,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 9,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -58785,21 +58834,21 @@
    },
    "games": [
     [
-     1
+     5
     ],
     [
-     0
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "30",
+    "15"
    ],
-   "received_at": "2026-11-25T10:15:25.996515Z",
-   "sequence": 10,
+   "received_at": "2026-11-25T11:00:19.862415Z",
+   "sequence": 76,
    "server": 1,
    "sets": [
     0,
@@ -58807,10 +58856,10 @@
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-25T10:15:26.345905Z",
+   "timestamp": "2026-11-25T11:00:39.868741Z",
    "puntos": [
-    "0",
-    "0"
+    "30",
+    "15"
    ],
    "saca": 1
   },
@@ -59079,7 +59128,7 @@
    "ranking": 759
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-25T10:15:34.761Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
@@ -72349,7 +72398,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.354Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
   "importante": false,
@@ -72357,44 +72406,43 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T10:15:18.514169Z",
-   "age_seconds": 14,
+   "accepted_at": "2026-11-25T11:00:40.149812Z",
+   "age_seconds": 0,
    "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 1,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "default",
-    "rule": "full_set"
-   },
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": null,
+   "deciding_set": null,
    "games": [
     [
-     2
+     6,
+     3
     ],
     [
-     3
+     4,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "0",
-    "15"
+    "40",
+    "0"
    ],
-   "received_at": "2026-11-25T10:15:18.335345Z",
-   "sequence": 31,
+   "received_at": "2026-11-25T11:00:39.568541Z",
+   "sequence": 95,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-25T10:15:26.537695Z",
+   "timestamp": "2026-11-25T11:00:40.149805Z",
    "puntos": [
-    "0",
-    "15"
+    "40",
+    "0"
    ],
    "saca": 1
   },
@@ -72580,7 +72628,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.354Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
   "importante": false,
@@ -72588,11 +72636,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T10:15:30.202968Z",
-   "age_seconds": 3,
+   "accepted_at": "2026-11-25T10:59:12.862830Z",
+   "age_seconds": 87,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -72600,32 +72648,34 @@
    },
    "games": [
     [
+     6,
      2
     ],
     [
-     0
+     3,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "40",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-25T10:15:29.683045Z",
-   "sequence": 14,
+   "received_at": "2026-11-25T10:59:10.981398Z",
+   "sequence": 80,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-25T10:15:30.202962Z",
+   "timestamp": "2026-11-25T10:59:55.663725Z",
    "puntos": [
-    "40",
-    "15"
+    "0",
+    "0"
    ],
    "saca": 1
   },
@@ -72735,7 +72785,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.354Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
   "importante": false,
@@ -72743,11 +72793,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T10:15:14.373656Z",
-   "age_seconds": 19,
+   "accepted_at": "2026-11-25T10:59:19.128818Z",
+   "age_seconds": 81,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 18,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -72755,32 +72805,34 @@
    },
    "games": [
     [
-     1
+     3,
+     2
     ],
     [
-     1
+     6,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
     "0",
-    "30"
+    "0"
    ],
-   "received_at": "2026-11-25T10:15:13.952979Z",
-   "sequence": 13,
+   "received_at": "2026-11-25T10:59:18.087118Z",
+   "sequence": 75,
    "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 1,
    "stale": false,
-   "timestamp": "2026-11-25T10:15:26.436200Z",
+   "timestamp": "2026-11-25T10:59:28.511279Z",
    "puntos": [
     "0",
-    "30"
+    "0"
    ],
    "saca": 1
   },
@@ -74130,7 +74182,7 @@
   "tour": "challenger",
   "torneo": "Florianopolis",
   "ronda": "Round of 32",
-  "rondaCod": null,
+  "rondaCod": "R32",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
@@ -74150,7 +74202,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.355Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -74159,10 +74211,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T18:43:55.289447Z",
-   "age_seconds": 55898,
+   "age_seconds": 58605,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 4747,
+   "corroborated_age_seconds": 7454,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -74179,7 +74231,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
     "0",
@@ -74194,7 +74246,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-25T10:15:27.194176Z",
+   "timestamp": "2026-11-25T11:00:40.382504Z",
    "puntos": [
     "0",
     "0"
@@ -74288,7 +74340,7 @@
   "tour": "challenger",
   "torneo": "Florianopolis",
   "ronda": "Round of 32",
-  "rondaCod": null,
+  "rondaCod": "R32",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
@@ -74308,7 +74360,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.354Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -74317,10 +74369,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T18:43:10.321790Z",
-   "age_seconds": 55943,
+   "age_seconds": 58650,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 4761,
+   "corroborated_age_seconds": 7469,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -74337,7 +74389,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
     "15",
@@ -74352,7 +74404,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-25T10:15:27.152788Z",
+   "timestamp": "2026-11-25T11:00:40.344710Z",
    "puntos": [
     "15",
     "40"
@@ -74367,7 +74419,7 @@
   "tour": "challenger",
   "torneo": "Florianopolis",
   "ronda": "Round of 32",
-  "rondaCod": null,
+  "rondaCod": "R32",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
@@ -74387,7 +74439,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.354Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -74396,10 +74448,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T18:47:38.440478Z",
-   "age_seconds": 55674,
+   "age_seconds": 58382,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 4748,
+   "corroborated_age_seconds": 7455,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -74414,7 +74466,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
     "0",
@@ -74429,7 +74481,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-25T10:15:27.012705Z",
+   "timestamp": "2026-11-25T11:00:40.401386Z",
    "puntos": [
     "0",
     "40"
@@ -74630,7 +74682,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.354Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
   "importante": false,
@@ -74638,11 +74690,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T10:14:21.176854Z",
-   "age_seconds": 72,
+   "accepted_at": "2026-11-25T11:00:25.826421Z",
+   "age_seconds": 15,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -74650,34 +74702,36 @@
    },
    "games": [
     [
-     4
+     7,
+     1
     ],
     [
-     2
+     5,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 7,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "15",
-    "30"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-25T10:14:19.937555Z",
-   "sequence": 50,
-   "server": 1,
+   "received_at": "2026-11-25T11:00:24.323369Z",
+   "sequence": 96,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-25T10:15:01.845306Z",
+   "timestamp": "2026-11-25T11:00:37.474424Z",
    "puntos": [
-    "15",
-    "30"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -74707,7 +74761,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.354Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
   "importante": false,
@@ -74715,11 +74769,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T10:15:26.280706Z",
-   "age_seconds": 7,
-   "changing_sources_count": 1,
-   "corroborated": false,
-   "corroborated_age_seconds": null,
+   "accepted_at": "2026-11-25T11:00:10.198991Z",
+   "age_seconds": 30,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -74727,31 +74781,33 @@
    },
    "games": [
     [
-     0
+     2,
+     1
     ],
     [
-     0
+     6,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 7,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "0",
+    "15",
     "15"
    ],
-   "received_at": "2026-11-25T10:15:25.996514Z",
-   "sequence": 3,
+   "received_at": "2026-11-25T11:00:08.904033Z",
+   "sequence": 61,
    "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 1,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-25T10:15:26.280704Z",
+   "timestamp": "2026-11-25T11:00:39.814456Z",
    "puntos": [
-    "0",
+    "15",
     "15"
    ],
    "saca": 2
@@ -75294,7 +75350,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-25T10:05:00Z",
+  "horario": "2026-11-25T10:10:00Z",
   "j1": {
    "id": 406,
    "nombre": "Pedro Vives Marcos",
@@ -75310,7 +75366,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T10:15:34.761Z",
+  "visto": "2026-11-25T11:00:42.354Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
   "importante": false,
@@ -75318,11 +75374,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T10:13:49.734819Z",
-   "age_seconds": 103,
+   "accepted_at": "2026-11-25T11:00:14.704968Z",
+   "age_seconds": 26,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -75330,32 +75386,34 @@
    },
    "games": [
     [
+     6,
      1
     ],
     [
-     0
+     3,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "40",
+    "15"
    ],
-   "received_at": "2026-11-25T10:13:48.794302Z",
-   "sequence": 10,
+   "received_at": "2026-11-25T11:00:14.433183Z",
+   "sequence": 75,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-25T10:15:08.781731Z",
+   "timestamp": "2026-11-25T11:00:39.797743Z",
    "puntos": [
-    "0",
-    "0"
+    "40",
+    "15"
    ],
    "saca": 2
   },
