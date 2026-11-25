@@ -1,0 +1,19 @@
+name: yt-oembed
+on:
+  push:
+    branches: [media]
+    paths: [media/yt-pedido.txt]
+permissions: { contents: write }
+jobs:
+  ver:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - run: |
+          : > media/yt-respuesta.txt
+          for id in $(cat media/yt-pedido.txt); do
+            echo "$id $(curl -s "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=$id&format=json")" >> media/yt-respuesta.txt
+          done
+          git config user.name bot; git config user.email bot@users.noreply.github.com
+          git add media/yt-respuesta.txt && git commit -m "yt oembed" && git push || true
