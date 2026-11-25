@@ -162,7 +162,23 @@ function bloqueNota(b) {
     const cred = creditos.length ? `<p class="bq-fuente">${EN ? 'Photos' : 'Fotos'}: Wikimedia Commons · ${esc(creditos.join(' · '))}</p>` : '';
     return `<section class="bq bq-camino">${tit}<ol class="cm-lista">${pasos}${trofeo}</ol>${pie}${cred}</section>`;
   }
-  if (b.tipo === 'tarjetas') return `<section class="bq bq-tarjetas">${tit}<div class="bq-grid">${b.items.map((x) => `<div class="bq-tarj"><span class="bq-sup">${esc(tx(x.arriba))}</span><strong>${esc(tx(x.titulo))}</strong><span>${esc(tx(x.texto))}</span></div>`).join('')}</div>${pie}</section>`;
+  if (b.tipo === 'tarjetas') {
+    // Tarjetas en columnas parejas (sin una tarjeta sola en la última fila) y, si el título es un jugador con foto, su cara.
+    const n = b.items.length, cols = n <= 3 ? n : (n === 4 ? 2 : 3);
+    const sinTilde = (t) => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const creditos = new Set();
+    const fotoDe = (x) => { const nom = tx(x.titulo); return x.foto === false ? null : (avatares[nom] || avatares[sinTilde(nom)]); };
+    const conCaras = b.items.some((x) => fotoDe(x)?.url);   // si hay al menos una foto, todas llevan círculo (foto o iniciales)
+    const tarj = (x) => {
+      const nom = tx(x.titulo), a = fotoDe(x);
+      if (a?.url && a.autor) creditos.add(`${nom}: ${a.autor} (${a.licencia || 'CC'})`);
+      const ini = esc(String(nom).split(' ').filter(Boolean).map((w) => w[0]).slice(0, 2).join(''));
+      const cara = !conCaras ? '' : a?.url ? `<span class="tj-foto"><img src="${esc(a.url)}" alt="" loading="lazy" style="object-position:${esc(a.foco || 'center 20%')}"></span>` : `<span class="tj-foto tj-ini">${ini}</span>`;
+      return `<div class="bq-tarj${cara ? ' con-foto' : ''}">${cara}<div class="tj-txt"><span class="bq-sup">${esc(tx(x.arriba))}</span><strong>${esc(nom)}</strong><span class="tj-pie">${esc(tx(x.texto))}</span></div></div>`;
+    };
+    const cred = creditos.size ? `<p class="bq-fuente">${EN ? 'Photos' : 'Fotos'}: Wikimedia Commons · ${esc([...creditos].join(' · '))}</p>` : '';
+    return `<section class="bq bq-tarjetas">${tit}<div class="tj-grid" style="--cols:${cols}">${b.items.map(tarj).join('')}</div>${pie}${cred}</section>`;
+  }
   if (b.tipo === 'getty' && gettySrc(b)) { const w = b.w || 594, h = b.h || 396; return `<figure class="getty bq-foto"><div><iframe src="${esc(gettySrc(b))}" title="${EN ? 'Getty Images photo' : 'Foto de Getty Images'}" loading="lazy" scrolling="no" frameborder="0" allowfullscreen style="width:min(100%, ${w}px);aspect-ratio:${w}/${h + Math.round(w * 40 / 594)};display:block;margin:0 auto;border:0;background:transparent"></iframe></div>${b.epigrafe ? `<figcaption>${esc(tx(b.epigrafe))}</figcaption>` : ''}</figure>`; }
   if (b.tipo === 'instagram') {
     const cod = String(b.url || '').match(/instagram\.com\/(?:[\w.]+\/)?(?:p|reel)\/([\w-]+)/)?.[1];

@@ -521,3 +521,27 @@ body{background:#0F1317}
 @media(max-width:600px){.cm-paso::after{display:none}.cm-lista{grid-template-columns:repeat(3,1fr)}}
 /* Carrusel en celular: títulos largos sin salirse ni taparse */
 @media (max-width:600px){.hs-fila{height:360px}.hs{padding:16px}.hero2 .hs:nth-child(1) h2{font-size:20px;line-height:1.08;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}.hero2 .hs:nth-child(1) p{font-size:13px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.hs-flecha{top:16px;transform:none;width:34px;height:34px}}
+
+/* Bloques de la nota, versión 2 (nov 2026): tarjetas con foto y columnas parejas, datos y barras más legibles */
+.bq{padding:24px 24px 20px;border-radius:14px}
+.bq-tit{font-size:14px;letter-spacing:.08em;margin:0 0 18px;display:flex;align-items:center;gap:10px}
+.bq-tit::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--lima);flex:none}
+.tj-grid{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:12px}
+.bq-tarj{display:flex;gap:14px;align-items:flex-start;background:var(--panel2);border:0;border-radius:12px;padding:16px;position:relative;overflow:hidden}
+.bq-tarj::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lima)}
+.tj-foto{flex:none;width:56px;height:56px;border-radius:50%;overflow:hidden;background:var(--panel);box-shadow:0 0 0 2px rgba(198,244,50,.55)}
+.tj-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.tj-txt{min-width:0;display:flex;flex-direction:column}
+.bq-tarj .bq-sup{font:700 11px/1.3 Montserrat,sans-serif;color:var(--lima);letter-spacing:.06em;text-transform:uppercase}
+.bq-tarj strong{font:800 17px/1.2 Montserrat,sans-serif;margin:6px 0 6px;color:var(--texto);overflow-wrap:anywhere}
+.bq-tarj .tj-pie{font-size:14px;line-height:1.4;color:var(--suave)}
+.tj-ini{display:flex;align-items:center;justify-content:center;font:800 18px Montserrat,sans-serif;color:var(--tenue)}
+.bq-dato{padding:18px 12px;border-radius:12px}
+.bq-dato strong{font-size:40px;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.bq-dato span{font-size:13.5px}
+.bq-fila{font-size:15px;margin:10px 0}
+.bq-barra{height:12px}
+.bq-val{font-variant-numeric:tabular-nums;color:var(--texto)}
+.bq-fila.dest .bq-nom,.bq-fila.dest .bq-val{color:var(--lima)}
+@media (max-width:700px){.tj-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.bq{padding:20px 16px 16px}.bq-tarj{padding:14px}.bq-dato strong{font-size:34px}}
