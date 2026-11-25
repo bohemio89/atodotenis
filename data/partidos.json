@@ -53154,7 +53154,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T14:00:46.027Z",
+  "visto": "2026-11-25T14:30:47.579Z",
   "torneoClave": "challenger|Ankara (Turkey)",
   "tier": "challenger_50",
   "importante": false,
@@ -53162,11 +53162,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T14:00:36.281968Z",
-   "age_seconds": 8,
-   "changing_sources_count": 2,
-   "corroborated": false,
-   "corroborated_age_seconds": null,
+   "accepted_at": "2026-11-25T14:30:24.036753Z",
+   "age_seconds": 21,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -53174,34 +53174,36 @@
    },
    "games": [
     [
+     6,
      2
     ],
     [
-     0
+     3,
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 8,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-25T14:00:34.866510Z",
-   "sequence": 10,
-   "server": 1,
+   "received_at": "2026-11-25T14:30:21.632901Z",
+   "sequence": 59,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-25T14:00:36.281961Z",
+   "timestamp": "2026-11-25T14:30:39.162221Z",
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -53324,7 +53326,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-25T14:00:46.026Z",
   "torneoClave": "challenger|Ankara (Turkey)",
@@ -53449,7 +53451,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-25T14:00:46.026Z",
   "torneoClave": "challenger|Ankara (Turkey)",
@@ -55835,7 +55837,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T14:00:46.027Z",
+  "visto": "2026-11-25T14:30:47.579Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
   "importante": false,
@@ -55843,11 +55845,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T14:00:31.204066Z",
-   "age_seconds": 13,
-   "changing_sources_count": 1,
-   "corroborated": false,
-   "corroborated_age_seconds": null,
+   "accepted_at": "2026-11-25T14:30:10.506939Z",
+   "age_seconds": 35,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -55855,32 +55857,34 @@
    },
    "games": [
     [
+     3,
      1
     ],
     [
-     1
+     6,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 13,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "15",
-    "30"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-25T14:00:29.990555Z",
-   "sequence": 11,
+   "received_at": "2026-11-25T14:30:09.663246Z",
+   "sequence": 57,
    "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-25T14:00:31.204065Z",
+   "timestamp": "2026-11-25T14:30:27.969492Z",
    "puntos": [
-    "15",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -67169,7 +67173,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-25T14:00:46.027Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
@@ -67506,7 +67510,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-25T14:00:46.027Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
@@ -69208,7 +69212,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T14:00:46.027Z",
+  "visto": "2026-11-25T14:30:47.578Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -69216,11 +69220,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T13:59:59.390002Z",
-   "age_seconds": 45,
+   "accepted_at": "2026-11-25T14:30:10.508649Z",
+   "age_seconds": 35,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -69228,32 +69232,34 @@
    },
    "games": [
     [
+     3,
      0
     ],
     [
-     3
+     6,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "15",
-    "0"
+    "30",
+    "40"
    ],
-   "received_at": "2026-11-25T13:59:58.963346Z",
-   "sequence": 21,
+   "received_at": "2026-11-25T14:30:09.840622Z",
+   "sequence": 55,
    "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-25T14:00:27.720707Z",
+   "timestamp": "2026-11-25T14:30:43.317320Z",
    "puntos": [
-    "15",
-    "0"
+    "30",
+    "40"
    ],
    "saca": 1
   },
@@ -75085,7 +75091,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T14:00:46.027Z",
+  "visto": "2026-11-25T14:30:47.579Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -75093,11 +75099,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T13:59:29.703369Z",
-   "age_seconds": 75,
+   "accepted_at": "2026-11-25T14:30:41.398490Z",
+   "age_seconds": 4,
    "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 11,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -75106,33 +75112,35 @@
    "games": [
     [
      4,
-     4
+     6,
+     0
     ],
     [
      6,
-     1
+     3,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "15",
+    "40"
    ],
-   "received_at": "2026-11-25T13:59:29.407978Z",
-   "sequence": 108,
+   "received_at": "2026-11-25T14:30:41.137071Z",
+   "sequence": 132,
    "server": 2,
    "sets": [
-    0,
+    1,
     1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-25T14:00:44.310586Z",
+   "timestamp": "2026-11-25T14:30:41.398488Z",
    "puntos": [
-    "0",
-    "0"
+    "15",
+    "40"
    ],
    "saca": 2
   },
@@ -75148,7 +75156,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-25T13:45:00Z",
+  "horario": "2026-11-25T14:45:00Z",
   "j1": {
    "id": 339,
    "nombre": "Thiago Cigarran",
@@ -75164,7 +75172,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T14:00:46.027Z",
+  "visto": "2026-11-25T14:30:47.579Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -75173,10 +75181,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T18:47:38.440478Z",
-   "age_seconds": 69186,
+   "age_seconds": 70987,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 1021,
+   "corroborated_age_seconds": 284,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -75191,7 +75199,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
     "0",
@@ -75206,7 +75214,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-25T14:00:44.556080Z",
+   "timestamp": "2026-11-25T14:30:41.664719Z",
    "puntos": [
     "0",
     "40"
@@ -76110,7 +76118,7 @@
    "ranking": 489
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-25T14:00:46.026Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
@@ -77380,6 +77388,90 @@
   "visto": "2026-11-25T10:15:34.761Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
+  "importante": false
+ },
+ "225274": {
+  "id": 225274,
+  "tour": "challenger",
+  "tier": "challenger_50",
+  "torneo": "Monastir 2 (Tunisia)",
+  "torneoId": "14885",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "cubierto": false,
+  "dobles": true,
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-25T14:25:00Z",
+  "j1": {
+   "id": 12010,
+   "nombre": "Alberto Barroso Campos / Ignasi Forcano",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "esp",
+    null
+   ]
+  },
+  "j2": {
+   "id": 47466,
+   "nombre": "Perego / Tabacco",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "ita",
+    "ita"
+   ]
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-25T14:30:27.180173Z",
+   "age_seconds": 18,
+   "changing_sources_count": 2,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 9,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-25T14:30:26.770806Z",
+   "sequence": 3,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-25T14:30:36.060950Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-25T14:30:47.579Z",
+  "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "importante": false
  },
  "null": {
