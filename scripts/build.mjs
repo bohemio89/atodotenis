@@ -175,7 +175,7 @@ function bloqueNota(b) {
 function videoNota(n) {
   const id = n.video?.youtube;
   if (!id || !/^[\w-]{6,20}$/.test(id)) return '';
-  return `<section class="video-nota"><h2>Lo mejor del partido</h2>
+  return `<section class="video-nota"><h2>${esc(tx(n.video.encabezado) || (EN ? 'Match highlights' : 'Lo mejor del partido'))}</h2>
 <button class="yt" type="button" data-id="${esc(id)}" aria-label="Reproducir: ${esc(n.video.titulo || 'highlights')}">
 <img src="https://i.ytimg.com/vi/${esc(id)}/hqdefault.jpg" alt="" loading="lazy"><span class="yt-play" aria-hidden="true"></span></button>
 <p class="meta">Video: ${esc(n.video.canal || 'YouTube')} en YouTube</p>
