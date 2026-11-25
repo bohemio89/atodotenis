@@ -61200,27 +61200,17 @@
  },
  "223535": {
   "id": 223535,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Hersonissos 4",
   "ronda": "Hersonissos 4 - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-25T08:00:00Z",
+  "horario": "2026-11-25T08:05:00Z",
   "j1": {
-   "id": 46879,
-   "nombre": "Cukierman/ Neos",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "j2": {
    "id": 44950,
-   "nombre": "Caripi/ Pietri",
+   "nombre": "Caripi / Pietri",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -61228,13 +61218,70 @@
     "fra"
    ]
   },
+  "j2": {
+   "id": 46879,
+   "nombre": "Cukierman / Neos",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T04:00:40.423Z",
+  "visto": "2026-11-25T08:15:32.801Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "12909",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-25T08:14:48.156187Z",
+   "age_seconds": 44,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 22,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-25T08:14:47.783970Z",
+   "sequence": 9,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-25T08:15:31.968985Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223536": {
   "id": 223536,
@@ -65087,26 +65134,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-25T08:00:00Z",
+  "horario": "2026-11-25T08:05:00Z",
   "j1": {
-   "id": 939,
-   "nombre": "J. Sels",
-   "pais": "ned",
-   "ranking": null
-  },
-  "j2": {
    "id": 442,
    "nombre": "Max Wiskandt",
    "pais": "ger",
    "ranking": 396
   },
+  "j2": {
+   "id": 939,
+   "nombre": "Jelle Sels",
+   "pais": "ned",
+   "ranking": 759
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T04:00:40.423Z",
+  "visto": "2026-11-25T08:15:32.801Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-25T08:15:05.794065Z",
+   "age_seconds": 26,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 8,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 8,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-25T08:15:05.239200Z",
+   "sequence": 9,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-25T08:15:15.863013Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "223666": {
   "id": 223666,
@@ -68975,27 +69069,27 @@
  },
  "224063": {
   "id": 224063,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Yokohama",
   "ronda": "Yokohama - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-25T07:15:00Z",
+  "horario": "2026-11-25T07:50:00Z",
   "j1": {
    "id": 46962,
-   "nombre": "Chandrasekar/ Loof",
+   "nombre": "Anirudh Chandrasekar / Loof",
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ind",
     null
    ]
   },
   "j2": {
    "id": 46963,
-   "nombre": "Hsu/ Leong",
+   "nombre": "Hsu / Leong",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -69004,12 +69098,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T04:00:40.423Z",
+  "visto": "2026-11-25T08:15:32.800Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8154",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-25T08:15:22.867408Z",
+   "age_seconds": 9,
+   "changing_sources_count": 1,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     5
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 9,
+   "origin": "observed",
+   "points": [
+    "40",
+    "0"
+   ],
+   "received_at": "2026-11-25T08:15:22.128367Z",
+   "sequence": 39,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-25T08:15:22.867401Z",
+   "puntos": [
+    "40",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224064": {
   "id": 224064,
@@ -69044,7 +69185,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T07:45:27.815Z",
+  "visto": "2026-11-25T08:15:32.800Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -69052,11 +69193,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-25T07:45:15.370991Z",
-   "age_seconds": 11,
+   "accepted_at": "2026-11-25T08:15:12.316789Z",
+   "age_seconds": 20,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -69064,34 +69205,36 @@
    },
    "games": [
     [
+     2,
      2
     ],
     [
-     3
+     6,
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "30",
-    "40"
+    "0",
+    "15"
    ],
-   "received_at": "2026-11-25T07:45:15.107497Z",
-   "sequence": 35,
-   "server": 1,
+   "received_at": "2026-11-25T08:15:11.026664Z",
+   "sequence": 85,
+   "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-25T07:45:23.897072Z",
+   "timestamp": "2026-11-25T08:15:32.047430Z",
    "puntos": [
-    "30",
-    "40"
+    "0",
+    "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -69127,7 +69270,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-25T07:45:27.815Z",
   "torneoClave": "challenger|Yokohama",
@@ -69359,41 +69502,88 @@
  },
  "224068": {
   "id": 224068,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Yokohama",
   "ronda": "Yokohama - 1/8-finals",
   "rondaCod": "R16",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-25T06:45:00Z",
+  "horario": "2026-11-25T08:35:00Z",
   "j1": {
    "id": 1530,
-   "nombre": "Dev S D/ Sinha",
+   "nombre": "Nitin Kumar Sinha / S D Prajwal Dev",
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "ind",
+    "ind"
    ]
   },
   "j2": {
    "id": 31642,
-   "nombre": "Chung/ Hsieh",
+   "nombre": "Hsieh / Yun Seong Chung",
    "pais": null,
    "ranking": null,
    "paises": [
     null,
-    null
+    "kor"
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T04:00:40.423Z",
+  "visto": "2026-11-25T08:15:32.801Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8154",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-25T08:15:17.260502Z",
+   "age_seconds": 15,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "30",
+    "30"
+   ],
+   "received_at": "2026-11-25T08:15:16.809952Z",
+   "sequence": 6,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-25T08:15:26.456234Z",
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224069": {
   "id": 224069,
@@ -79869,7 +80059,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T07:45:27.834Z",
+  "visto": "2026-11-25T08:15:32.801Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -79878,10 +80068,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T18:43:55.289447Z",
-   "age_seconds": 46891,
+   "age_seconds": 48697,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 6623,
+   "corroborated_age_seconds": 8429,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -79898,7 +80088,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
     "0",
@@ -79913,7 +80103,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-25T07:45:23.926782Z",
+   "timestamp": "2026-11-25T08:15:30.064761Z",
    "puntos": [
     "0",
     "0"
@@ -80027,7 +80217,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T07:45:27.834Z",
+  "visto": "2026-11-25T08:15:32.801Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -80036,10 +80226,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T18:43:10.321790Z",
-   "age_seconds": 46936,
+   "age_seconds": 48742,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 6623,
+   "corroborated_age_seconds": 8429,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -80056,7 +80246,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 7,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
     "15",
@@ -80071,7 +80261,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-25T07:45:19.974990Z",
+   "timestamp": "2026-11-25T08:15:30.049152Z",
    "puntos": [
     "15",
     "40"
@@ -80106,7 +80296,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T07:45:27.834Z",
+  "visto": "2026-11-25T08:15:32.801Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -80115,10 +80305,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-24T18:47:38.440478Z",
-   "age_seconds": 46668,
+   "age_seconds": 48474,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 6623,
+   "corroborated_age_seconds": 8429,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -80133,7 +80323,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
     "0",
@@ -80148,7 +80338,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-25T07:45:23.901344Z",
+   "timestamp": "2026-11-25T08:15:30.052699Z",
    "puntos": [
     "0",
     "40"
@@ -80347,26 +80537,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-25T08:00:00Z",
+  "horario": "2026-11-25T08:05:00Z",
   "j1": {
    "id": 96,
    "nombre": "Alejo Sanchez Quilez",
    "pais": "esp",
-   "ranking": 319
+   "ranking": 321
   },
   "j2": {
    "id": 2249,
-   "nombre": "D. Azoidis",
+   "nombre": "Dimitris Azoidis",
    "pais": "gre",
-   "ranking": null
+   "ranking": 853
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T04:00:40.423Z",
+  "visto": "2026-11-25T08:15:32.801Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-25T08:15:07.225422Z",
+   "age_seconds": 25,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "40",
+    "30"
+   ],
+   "received_at": "2026-11-25T08:15:06.777955Z",
+   "sequence": 12,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-25T08:15:24.790007Z",
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224947": {
   "id": 224947,
@@ -80377,26 +80614,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-25T08:00:00Z",
+  "horario": "2026-11-25T08:05:00Z",
   "j1": {
    "id": 669,
    "nombre": "Thomas Faurel",
    "pais": "fra",
-   "ranking": 295
+   "ranking": 293
   },
   "j2": {
    "id": 934,
-   "nombre": "N. Belozertsev",
+   "nombre": "Nikita Belozertsev",
    "pais": "uzb",
-   "ranking": null
+   "ranking": 786
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T04:00:40.423Z",
+  "visto": "2026-11-25T08:15:32.801Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-25T08:14:51.443250Z",
+   "age_seconds": 41,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "40",
+    "15"
+   ],
+   "received_at": "2026-11-25T08:14:51.183404Z",
+   "sequence": 6,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-25T08:15:26.277208Z",
+   "puntos": [
+    "40",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224948": {
   "id": 224948,
@@ -80437,26 +80721,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-25T08:00:00Z",
+  "horario": "2026-11-25T08:05:00Z",
   "j1": {
-   "id": 8056,
-   "nombre": "A. Mazdrashki",
-   "pais": "bul",
-   "ranking": null
-  },
-  "j2": {
    "id": 919,
    "nombre": "Philip Henning",
    "pais": "rsa",
-   "ranking": 233
+   "ranking": 236
+  },
+  "j2": {
+   "id": 8056,
+   "nombre": "Anas Mazdrashki",
+   "pais": "bul",
+   "ranking": 818
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T04:00:40.423Z",
+  "visto": "2026-11-25T08:15:32.801Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-25T08:15:26.651157Z",
+   "age_seconds": 6,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "15",
+    "15"
+   ],
+   "received_at": "2026-11-25T08:15:25.496532Z",
+   "sequence": 14,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 4,
+   "stale": false,
+   "timestamp": "2026-11-25T08:15:26.651155Z",
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224983": {
   "id": 224983,
