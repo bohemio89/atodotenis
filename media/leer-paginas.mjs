@@ -7,7 +7,7 @@ const b = await chromium.launch(); const p = await b.newPage({ viewport: { width
 for (const [i, u] of urls.entries()) {
   try { await p.goto(u, { waitUntil: 'networkidle', timeout: 45000 }); } catch {}
   await p.waitForTimeout(3000);
-  const t = await p.evaluate(() => document.body.innerText).catch(() => '');
+  const t = await p.evaluate(() => document.body.innerText + '\n\nENLACES:\n' + [...document.querySelectorAll('a[href*="/news/"],a[href*="/noticias/"]')].map((a) => a.href).join('\n')).catch(() => '');
   fs.writeFileSync(`media/paginas/${String(i).padStart(2, '0')}.txt`, u + '\n\n' + t);
 }
 await b.close();
