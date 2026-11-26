@@ -67367,7 +67367,7 @@
    "ranking": 817
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-26T05:00:47.640Z",
   "torneoClave": "challenger|Yokohama",
@@ -67564,7 +67564,7 @@
  },
  "225229": {
   "id": 225229,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Playford 2",
   "ronda": "Playford 2 - Quarter-finals",
   "rondaCod": "QF",
@@ -67595,7 +67595,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T05:00:47.639Z",
+  "visto": "2026-11-26T05:45:26.436Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -67603,11 +67603,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-26T05:00:00.328152Z",
-   "age_seconds": 45,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-26T05:44:46.166443Z",
+   "age_seconds": 40,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -67615,10 +67615,12 @@
    },
    "games": [
     [
-     1
+     6,
+     5
     ],
     [
-     1
+     3,
+     3
     ]
    ],
    "is_tiebreak": false,
@@ -67628,28 +67630,28 @@
     "0",
     "0"
    ],
-   "received_at": "2026-11-26T04:59:59.851792Z",
-   "sequence": 16,
-   "server": 1,
+   "received_at": "2026-11-26T05:44:45.638559Z",
+   "sequence": 91,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-26T05:00:22.788683Z",
+   "timestamp": "2026-11-26T05:45:22.611996Z",
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
  },
  "225230": {
   "id": 225230,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Playford 2",
   "ronda": "Playford 2 - Quarter-finals",
   "rondaCod": "QF",
@@ -67680,7 +67682,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T05:00:47.639Z",
+  "visto": "2026-11-26T05:45:26.436Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -67688,11 +67690,98 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-26T05:00:44.151668Z",
-   "age_seconds": 1,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-26T05:45:16.207541Z",
+   "age_seconds": 10,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     5,
+     5
+    ],
+    [
+     7,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "30"
+   ],
+   "received_at": "2026-11-26T05:45:15.668153Z",
+   "sequence": 97,
+   "server": 2,
+   "sets": [
+    0,
+    1
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-26T05:45:16.207536Z",
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
+ },
+ "225233": {
+  "id": 225233,
+  "tour": "challenger",
+  "torneo": "Yokohama",
+  "ronda": "Yokohama - Quarter-finals",
+  "rondaCod": "QF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-26T05:40:00Z",
+  "j1": {
+   "id": 38373,
+   "nombre": "Jecan / Kielan",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 46967,
+   "nombre": "Jones / Staeheli",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "sui"
+   ]
+  },
+  "dobles": true,
+  "estado": "en_vivo",
+  "motivo": null,
+  "visto": "2026-11-26T05:45:26.436Z",
+  "torneoClave": "challenger|Yokohama",
+  "tier": "challenger_75",
+  "importante": false,
+  "torneoId": "8154",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-26T05:45:03.483083Z",
+   "age_seconds": 22,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -67703,72 +67792,34 @@
      2
     ],
     [
-     2
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-26T05:00:44.052414Z",
-   "sequence": 29,
-   "server": 1,
+   "received_at": "2026-11-26T05:45:03.278173Z",
+   "sequence": 11,
+   "server": 2,
    "sets": [
     0,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-26T05:00:44.151666Z",
+   "timestamp": "2026-11-26T05:45:19.612182Z",
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
- },
- "225233": {
-  "id": 225233,
-  "tour": "challenger_doubles",
-  "torneo": "Yokohama",
-  "ronda": "Yokohama - Quarter-finals",
-  "rondaCod": "QF",
-  "superficie": "hard",
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-26T05:00:00Z",
-  "j1": {
-   "id": 46967,
-   "nombre": "Jones/ Staeheli",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    "sui"
-   ]
-  },
-  "j2": {
-   "id": 38373,
-   "nombre": "Jecan/ Kielan",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    null,
-    null
-   ]
-  },
-  "dobles": true,
-  "estado": "programado",
-  "motivo": null,
-  "visto": "2026-11-26T05:00:47.639Z",
-  "torneoClave": "challenger|Yokohama",
-  "tier": "challenger_75",
-  "importante": false
  },
  "225234": {
   "id": 225234,
@@ -67870,7 +67921,7 @@
  },
  "225247": {
   "id": 225247,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Yokohama",
   "ronda": "Yokohama - Quarter-finals",
   "rondaCod": "QF",
@@ -67901,7 +67952,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T05:00:47.639Z",
+  "visto": "2026-11-26T05:45:26.436Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -67909,11 +67960,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-26T05:00:34.143694Z",
-   "age_seconds": 11,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-26T05:45:06.799190Z",
+   "age_seconds": 19,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -67921,32 +67972,34 @@
    },
    "games": [
     [
-     1
+     3,
+     3
     ],
     [
-     2
+     6,
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "30",
-    "0"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-26T05:00:34.045015Z",
-   "sequence": 20,
+   "received_at": "2026-11-26T05:45:06.187841Z",
+   "sequence": 89,
    "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-26T05:00:42.537001Z",
+   "timestamp": "2026-11-26T05:45:25.122538Z",
    "puntos": [
-    "30",
-    "0"
+    "15",
+    "15"
    ],
    "saca": 1
   },
@@ -68022,7 +68075,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-26T05:00:47.639Z",
   "torneoClave": "challenger|Yokohama",
