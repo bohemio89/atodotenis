@@ -1,0 +1,19 @@
+name: Leer páginas oficiales
+on:
+  push:
+    branches: [media]
+    paths: [media/leer-paginas.txt]
+permissions: { contents: write }
+jobs:
+  leer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm i --no-save playwright@1 && npx playwright install chromium
+      - run: node media/leer-paginas.mjs
+      - run: |
+          git config user.name "A Todo Tenis bot" && git config user.email "bot@atodotenis.local"
+          git add media/paginas && git commit -m "Páginas leídas" && git pull --rebase -q && git push || true
