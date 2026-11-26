@@ -30,16 +30,22 @@
  ],
  "importancia": 85,
  "firma": "Redacción A Todo Tenis",
- "imagen": null,
+ "imagen": {
+  "url": "/notas/los-que-mas-subieron-2026-jodar.jpg",
+  "urlNota": "/notas/los-que-mas-subieron-2026-jodar.jpg",
+  "anchoNota": 1920,
+  "urlMovil": "/notas/los-que-mas-subieron-2026-jodar-movil.jpg",
+  "portada": true,
+  "credito": "Crosscourt View / CC BY-SA 4.0, vía Wikimedia Commons",
+  "enlace": "https://commons.wikimedia.org/wiki/File:Rafa-jodar-roland-garros-2026-profile.jpg",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "jugador": "Rafael Jódar",
+  "alt": "Rafael Jódar en Roland Garros 2026",
+  "ancho": 1920,
+  "alto": 1280
+ },
  "generadoCon": "manual",
  "manual": true,
- "getty": {
-  "src": "https://embed.gettyimages.com/embed/2272806846?et=smYqz18GT_1GZpmYYqNrSw&tld=com&sig=EuRwuRPrKdyNB-17W-PgbPbklA5DF5DZ3Fbm18HnEWk=&caption=true&ver=1",
-  "w": 594,
-  "h": 396,
-  "id": "2272806846",
-  "fecha": "2026-11-26T16:00:00+00:00"
- },
  "en": {
   "titulo": "2026's biggest climbers: Jodar and Chwalinska lead the year's rankings leaps",
   "bajada": "Rafael Jodar started the year at No. 165 and finished it in the Top 10, setting a record along the way. Maja Chwalinska went from No. 146 to No. 12. These are the players who climbed the furthest in 2026.",
@@ -54,6 +60,18 @@
   "categoria": "ATP"
  },
  "bloques": [
+  {
+   "despuesDe": 1,
+   "tipo": "getty",
+   "src": "https://embed.gettyimages.com/embed/2272806846?et=smYqz18GT_1GZpmYYqNrSw&tld=com&sig=EuRwuRPrKdyNB-17W-PgbPbklA5DF5DZ3Fbm18HnEWk=&caption=true&ver=1",
+   "w": 594,
+   "h": 396,
+   "id": "2272806846",
+   "epigrafe": {
+    "es": "Jódar festeja una victoria en el Mutua Madrid Open 2026.",
+    "en": "Jódar celebrates a win at the 2026 Mutua Madrid Open."
+   }
+  },
   {
    "despuesDe": 0,
    "tipo": "tarjetas",
