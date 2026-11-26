@@ -29,7 +29,7 @@ const notas = fs.readdirSync(path.join(ROOT, 'content/notas')).filter((f) => f.e
   .filter((n) => n.estado === 'publicada')
   // Versión en inglés: solo las notas que ya tienen su traducción
   .filter((n) => !EN || (n.en?.titulo && Array.isArray(n.en.cuerpo)))
-  .map((n) => EN ? { ...n, titulo: n.en.titulo, bajada: n.en.bajada, cuerpo: n.en.cuerpo, categoria: n.en.categoria || n.categoria } : n)
+  .map((n) => EN ? { ...n, titulo: n.en.titulo, bajada: n.en.bajada, cuerpo: n.en.cuerpo, categoria: n.en.categoria || n.categoria, imagen: n.en.imagen && n.imagen ? { ...n.imagen, ...n.en.imagen } : n.imagen } : n)
   .sort((a, b) => b.fecha.localeCompare(a.fecha));
 
 // Hora que el navegador convierte a la zona del visitante (respaldo: hora Argentina)
@@ -147,6 +147,24 @@ function bloqueNota(b) {
         <div class="asc-pista"><span class="asc-riel"><i style="width:${Math.max(26, Math.round(x.sube / max * 100))}%"><b class="asc-d">${x.desde}</b><b class="asc-h">${x.hasta}</b></i></span></div></div>
       <span class="asc-sube">▲ +${x.sube}</span></div>`;
     return `<section class="bq bq-ascenso">${tit}${hero}<div class="asc-lista">${items.sort((a, c) => a.hasta - c.hasta).map(fila).join('')}</div>${pie}</section>`;
+  }
+  if (b.tipo === 'serie') {
+    // Marcador de una serie por equipos (Copa Davis): países con bandera, resultado grande y cada partido con su marcador.
+    // b = { local:{pais,nombre}, visita:{pais,nombre}, resultado:[2,1], fecha:{es,en}, estado:{es,en}?, partidos:[{tipo:{es,en}, a, b, gana:'a'|'b'|null, sets:[[6,3],[3,6],[6,2]], tb:[null,6,null], nota:{es,en}}] }
+    const eq = (e, lado, gano) => `<div class="sr-eq ${lado}${gano ? ' gana' : ''}">${banderaDe(e.pais).replace('class="bandera"', 'class="bandera sr-band"')}<span>${esc(tx(e.nombre))}</span></div>`;
+    const [ra, rb] = b.resultado || [0, 0], fin = !b.estado;
+    const filas = (b.partidos || []).map((m) => {
+      const set = (i, quien) => { const [x, y] = m.sets[i]; const v = quien === 'a' ? x : y, o = quien === 'a' ? y : x; const t = m.tb?.[i]; return `<b class="${v > o ? 'gs' : ''}">${v}${t != null && v < o ? `<sup>${t}</sup>` : ''}</b>`; };
+      const lado = (q) => `<div class="sr-jug${m.gana === q ? ' gana' : ''}"><span class="sr-nom">${esc(tx(m[q]))}</span><span class="sr-sets">${(m.sets || []).map((_, i) => set(i, q)).join('')}</span></div>`;
+      return `<div class="sr-par"><span class="sr-tipo">${esc(tx(m.tipo))}</span>${m.sets?.length ? lado('a') + lado('b') : `<div class="sr-pend">${esc(tx(m.a))} <i>vs</i> ${esc(tx(m.b))}</div>`}${m.nota ? `<span class="sr-nota">${esc(tx(m.nota))}</span>` : ''}</div>`;
+    }).join('');
+    return `<section class="bq bq-serie">${tit}<div class="sr-cab">${eq(b.local, 'izq', fin && ra > rb)}<div class="sr-res"><strong>${ra}<i>-</i>${rb}</strong><small>${esc(tx(b.estado) || tx(b.fecha) || '')}</small></div>${eq(b.visita, 'der', fin && rb > ra)}</div><div class="sr-lista">${filas}</div>${pie}</section>`;
+  }
+  if (b.tipo === 'cuadro') {
+    // Cuadro de eliminación: rondas en columnas; cada cruce con dos equipos, ganador resaltado y fecha.
+    const eqc = (e, g) => `<div class="cd-eq${g ? ' gana' : ''}">${banderaDe(e.pais)}<span>${esc(tx(e.nombre))}</span>${e.r != null ? `<b>${e.r}</b>` : ''}</div>`;
+    const cols = (b.rondas || []).map((r) => `<div class="cd-col"><h4>${esc(tx(r.nombre))}</h4>${r.cruces.map((c) => `<div class="cd-cruce${c.dest ? ' dest' : ''}">${eqc(c.a, c.gana === 'a')}${eqc(c.b, c.gana === 'b')}${c.cuando ? `<small>${esc(tx(c.cuando))}</small>` : ''}</div>`).join('')}</div>`).join('');
+    return `<section class="bq bq-cuadro">${tit}<div class="cd-grid" style="--n:${(b.rondas || []).length}">${cols}</div>${pie}</section>`;
   }
   if (b.tipo === 'pisos') {
     // Tablero por pisos del ranking (top 10, top 30, top 50, top 100, más allá): una flecha por jugador desde su puesto de
