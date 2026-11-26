@@ -64140,26 +64140,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-26T02:00:00Z",
+  "horario": "2026-11-26T02:10:00Z",
   "j1": {
-   "id": 828,
-   "nombre": "K. Isomura",
-   "pais": "jpn",
-   "ranking": null
-  },
-  "j2": {
    "id": 84,
    "nombre": "Hayato Matsuoka",
    "pais": "jpn",
-   "ranking": 274
+   "ranking": 338
+  },
+  "j2": {
+   "id": 828,
+   "nombre": "Kokoro Isomura",
+   "pais": "jpn",
+   "ranking": 683
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T22:45:27.677Z",
+  "visto": "2026-11-26T02:15:25.339Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2510",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-26T02:14:23.600398Z",
+   "age_seconds": 61,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-26T02:14:23.422529Z",
+   "sequence": 8,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-26T02:14:54.239924Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "224893": {
   "id": 224893,
@@ -64184,7 +64231,7 @@
    "ranking": 617
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-26T01:45:24.535Z",
   "torneoClave": "challenger|Playford 2",
@@ -64293,7 +64340,7 @@
    "ranking": 250
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-26T01:45:24.535Z",
   "torneoClave": "challenger|Playford 2",
@@ -66943,7 +66990,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T01:45:24.535Z",
+  "visto": "2026-11-26T02:15:25.339Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -66951,11 +66998,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-26T01:45:00.320756Z",
-   "age_seconds": 24,
+   "accepted_at": "2026-11-26T02:12:05.174589Z",
+   "age_seconds": 200,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 153,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -66965,36 +67012,36 @@
     [
      4,
      7,
-     4
+     6
     ],
     [
      6,
      5,
-     4
+     6
     ]
    ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "is_tiebreak": true,
+   "observed_age_seconds": 153,
    "origin": "observed",
    "points": [
-    "40",
-    "40"
+    "6",
+    "3"
    ],
-   "received_at": "2026-11-26T01:45:00.211565Z",
-   "sequence": 200,
-   "server": 2,
+   "received_at": "2026-11-26T02:12:04.909538Z",
+   "sequence": 232,
+   "server": 1,
    "sets": [
     1,
     1
    ],
-   "sources_count": 2,
-   "stale": false,
-   "timestamp": "2026-11-26T01:45:17.558393Z",
+   "sources_count": 0,
+   "stale": true,
+   "timestamp": "2026-11-26T02:12:38.561833Z",
    "puntos": [
-    "40",
-    "40"
+    "6",
+    "3"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -67196,26 +67243,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-26T02:00:00Z",
+  "horario": "2026-11-26T02:10:00Z",
   "j1": {
    "id": 78,
    "nombre": "Yuta Shimizu",
    "pais": "jpn",
-   "ranking": 363
+   "ranking": 373
   },
   "j2": {
    "id": 923,
    "nombre": "Luca Staeheli",
    "pais": "sui",
-   "ranking": 439
+   "ranking": 436
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-25T22:45:27.677Z",
+  "visto": "2026-11-26T02:15:25.339Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2510",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-26T02:14:22.344725Z",
+   "age_seconds": 62,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-26T02:14:21.896737Z",
+   "sequence": 8,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-26T02:15:22.593408Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225229": {
   "id": 225229,
