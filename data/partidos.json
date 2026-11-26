@@ -67593,7 +67593,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-26T05:45:26.436Z",
   "torneoClave": "challenger|Playford 2",
@@ -67680,7 +67680,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-26T05:45:26.436Z",
   "torneoClave": "challenger|Playford 2",
@@ -67769,7 +67769,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T05:45:26.436Z",
+  "visto": "2026-11-26T06:15:28.613Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -67777,11 +67777,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-26T05:45:03.483083Z",
-   "age_seconds": 22,
+   "accepted_at": "2026-11-26T06:14:46.457986Z",
+   "age_seconds": 41,
    "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 1,
+   "corroborated_age_seconds": 33,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -67789,29 +67789,31 @@
    },
    "games": [
     [
-     2
+     6,
+     0
     ],
     [
+     4,
      0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-26T05:45:03.278173Z",
-   "sequence": 11,
+   "received_at": "2026-11-26T06:14:46.365891Z",
+   "sequence": 57,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-26T05:45:19.612182Z",
+   "timestamp": "2026-11-26T06:15:19.984746Z",
    "puntos": [
     "0",
     "0"
@@ -67950,7 +67952,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-26T05:45:26.436Z",
   "torneoClave": "challenger|Yokohama",
@@ -68008,27 +68010,17 @@
  },
  "225248": {
   "id": 225248,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Yokohama",
   "ronda": "Yokohama - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-26T05:40:00Z",
+  "horario": "2026-11-26T06:00:00Z",
   "j1": {
-   "id": 27865,
-   "nombre": "Isomura/ Shiraishi",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "jpn",
-    "jpn"
-   ]
-  },
-  "j2": {
    "id": 5320,
-   "nombre": "Bass/ Duncan",
+   "nombre": "Finn Bass / Scott Duncan",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -68036,13 +68028,70 @@
     null
    ]
   },
+  "j2": {
+   "id": 27865,
+   "nombre": "Hikaru Shiraishi / Kokoro Isomura",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "jpn",
+    "jpn"
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T05:00:47.639Z",
+  "visto": "2026-11-26T06:15:28.613Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8154",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-26T06:15:10.951254Z",
+   "age_seconds": 16,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-26T06:15:10.745136Z",
+   "sequence": 36,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-26T06:15:24.882092Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225259": {
   "id": 225259,
