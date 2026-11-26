@@ -144,9 +144,24 @@ function bloqueNota(b) {
       <span class="asc-hero-num">▲ +${prota.sube}</span><span class="asc-hero-de">${prota.desde} <i>→</i> <b>${prota.hasta}</b></span></div>${foto(tx(prota.completo || prota.nombre))}</div>` : '';
     const fila = (x) => `<div class="asc-fila${x.destacado ? ' dest' : ''}"><span class="asc-pos">${x.hasta}</span>
       <div class="asc-medio"><span class="asc-nom">${esc(tx(x.nombre))} ${banderaDe(x.pais)}</span>
-        <div class="asc-pista"><span class="asc-ini">${EN ? 'Jan' : 'Ene'} ${x.desde}</span><span class="asc-riel"><i style="width:${Math.max(18, Math.round(x.sube / max * 100))}%"></i></span><span class="asc-fin">${EN ? 'Nov' : 'Nov'} ${x.hasta}</span></div></div>
+        <div class="asc-pista"><span class="asc-riel"><i style="width:${Math.max(26, Math.round(x.sube / max * 100))}%"><b class="asc-d">${x.desde}</b><b class="asc-h">${x.hasta}</b></i></span></div></div>
       <span class="asc-sube">▲ +${x.sube}</span></div>`;
     return `<section class="bq bq-ascenso">${tit}${hero}<div class="asc-lista">${items.sort((a, c) => a.hasta - c.hasta).map(fila).join('')}</div>${pie}</section>`;
+  }
+  if (b.tipo === 'pisos') {
+    // Tablero por pisos del ranking (top 10, top 30, top 50, top 100, más allá): una flecha por jugador desde su puesto de
+    // enero hasta el de noviembre. Cada piso ocupa la misma altura; dentro del piso, la posición es proporcional.
+    const pisosR = [[1, 10, 'Top 10'], [11, 30, 'Top 30'], [31, 50, 'Top 50'], [51, 100, 'Top 100'], [101, 400, '+100']];
+    const alto = 100 / pisosR.length;
+    const yPct = (r) => { const k = pisosR.findIndex(([lo, hi]) => r <= hi); const [lo, hi] = pisosR[Math.max(0, k)]; return (Math.max(0, k) + Math.min(1, (r - lo) / (hi - lo + 1))) * alto; };
+    const n = b.items.length;
+    const cols = b.items.map((x, i) => {
+      const y1 = yPct(x.hasta), y0 = Math.min(98, yPct(x.desde)), left = ((i + 0.5) / n) * 100; // dentro de .ps-zona, a la derecha de las etiquetas de piso
+      return `<div class="ps-col${x.destacado ? ' dest' : ''}" style="left:${left.toFixed(2)}%">
+        <span class="ps-flecha" style="top:${y1.toFixed(2)}%;height:${(y0 - y1).toFixed(2)}%"></span>
+        <span class="ps-et${i % 2 ? ' abajo' : ''}" style="top:${(i % 2 ? y0 : y1).toFixed(2)}%"><b>${esc(tx(x.nombre))} ${banderaDe(x.pais)}</b><small>${x.desde} → <i>${x.hasta}</i></small></span></div>`;
+    }).join('');
+    return `<section class="bq bq-pisos">${tit}<div class="ps-tablero">${pisosR.map(([, , et], k) => `<div class="ps-piso${k === 0 ? ' oro' : ''}" style="top:${(k * alto).toFixed(2)}%;height:${alto.toFixed(2)}%"><span>${esc(et)}</span></div>`).join('')}<div class="ps-zona">${cols}</div></div>${pie}</section>`;
   }
   if (b.tipo === 'pendiente') {
     // Gráfico de pendiente: puesto al principio (izquierda) y al final (derecha). Escala logarítmica para que se lean los saltos;

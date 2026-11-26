@@ -584,3 +584,65 @@ body{background:#0F1317}
 .asc-riel i::after{content:"";position:absolute;right:-6px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--lima);box-shadow:0 0 0 3px rgba(198,244,50,.25),0 0 12px rgba(198,244,50,.6)}
 .asc-sube{font:800 17px Montserrat,sans-serif;color:#0B0E12;background:var(--lima);border-radius:999px;padding:8px 14px;white-space:nowrap;box-shadow:0 0 16px rgba(198,244,50,.25)}
 @media (max-width:600px){.asc-hero{padding:18px}.asc-hero-num{font-size:54px}.asc-hero-nom{font-size:22px}.asc-foto{width:84px;height:84px}.asc-fila{grid-template-columns:40px 1fr auto;gap:10px;padding:10px 12px}.asc-pos{font-size:24px}.asc-sube{font-size:14px;padding:6px 10px}.asc-nom{font-size:14px}}
+
+/* ===== Placas v3 (estilo de referencia de Jonathan, nov 2026): navy, dorado y lima, letra condensada ===== */
+.bq-ascenso,.bq-pisos{background:radial-gradient(120% 80% at 50% 0%,#16263C 0%,#0E1828 60%,#0B1320 100%);border:1px solid #1F3048}
+.bq-ascenso .bq-tit,.bq-pisos .bq-tit{font-family:var(--cond);font-size:17px;letter-spacing:.06em}
+.asc-hero{background:linear-gradient(160deg,#1E2B3E,#16202F);border:1px solid #2A3B54;box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 10px 30px rgba(0,0,0,.25)}
+.asc-kicker{font-family:var(--cond);font-size:16px;color:#D9B25E}
+.asc-hero-nom{font-family:var(--cond);font-weight:800;font-size:34px;text-transform:uppercase;letter-spacing:.01em}
+.asc-hero-num{font-family:var(--cond);font-weight:800;font-size:96px;background:linear-gradient(180deg,#F8DD95 10%,#D3A443 60%,#A87C25);-webkit-background-clip:text;background-clip:text;text-shadow:none;filter:drop-shadow(0 4px 14px rgba(217,178,94,.25))}
+.asc-hero-de{font-family:var(--cond);font-size:34px;color:#8E9BAD}
+.asc-fila{background:linear-gradient(180deg,#1C293B,#172232);border:1px solid #253650;border-radius:14px;padding:14px 18px;grid-template-columns:62px 1fr auto}
+.asc-fila.dest{border-color:rgba(198,244,50,.55);box-shadow:0 0 0 1px rgba(198,244,50,.15),0 0 24px rgba(198,244,50,.08)}
+.asc-pos{font-family:var(--cond);font-size:38px;color:#D9B25E}
+.asc-nom{font-family:var(--cond);font-size:21px;font-weight:800;letter-spacing:.01em}
+.asc-pista{grid-template-columns:34px 1fr 34px;gap:12px;font-family:var(--cond);font-size:15px}
+.asc-ini{color:#8E9BAD;text-align:right}
+.asc-fin{color:#F2F4F5;font-weight:800;font-size:17px}
+.asc-riel{height:6px;background:transparent}
+.asc-riel::before{content:"";position:absolute;left:-2px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;border:2px solid #4A5A70;background:#0E1828}
+.asc-riel i{height:6px;background:linear-gradient(90deg,rgba(198,244,50,0),rgba(198,244,50,.55) 45%,var(--lima))}
+.asc-riel i::after{width:18px;height:18px;margin-top:-9px;right:-9px;background:radial-gradient(circle,#E6FF8A 0 35%,var(--lima) 36%);box-shadow:0 0 0 4px rgba(198,244,50,.22),0 0 18px rgba(198,244,50,.7)}
+.asc-sube{font-family:var(--cond);font-size:22px;padding:8px 18px}
+/* Tablero por pisos */
+.ps-tablero{position:relative;height:520px;margin-top:6px}
+.ps-piso{position:absolute;left:0;right:0;padding:0 16px;display:flex;align-items:center;border-radius:12px;background:linear-gradient(90deg,rgba(40,58,82,.55),rgba(40,58,82,.25));border:1px solid #22344C;box-sizing:border-box;margin-top:2px}
+.ps-piso + .ps-piso{border-top-width:1px}
+.ps-piso span{font-family:var(--cond);font-weight:800;font-size:18px;color:#C9D1D9;letter-spacing:.03em}
+.ps-piso.oro{background:linear-gradient(90deg,rgba(217,178,94,.35),rgba(217,178,94,.12));border-color:rgba(217,178,94,.5)}
+.ps-piso.oro span{color:#F3D58A}
+.ps-col{position:absolute;top:0;bottom:0;width:0}
+.ps-flecha{position:absolute;left:-2px;width:4px;border-radius:4px;background:linear-gradient(0deg,rgba(198,244,50,0),var(--lima));box-shadow:0 0 12px rgba(198,244,50,.45)}
+.ps-flecha::before{content:"";position:absolute;left:50%;top:-12px;margin-left:-9px;border:9px solid transparent;border-bottom:13px solid var(--lima);border-top:0}
+.ps-col.dest .ps-flecha{width:6px;left:-3px;background:linear-gradient(0deg,rgba(243,213,138,0),#F3D58A);box-shadow:0 0 18px rgba(243,213,138,.6)}
+.ps-col.dest .ps-flecha::before{border-bottom-color:#F3D58A}
+.ps-et{position:absolute;left:0;transform:translate(-50%,calc(-100% - 18px));display:flex;flex-direction:column;align-items:center;gap:3px;white-space:nowrap;z-index:2}
+.ps-et b{display:flex;align-items:center;gap:6px;font-family:var(--cond);font-weight:800;font-size:16px;text-transform:uppercase;color:#F3D58A;background:#0E1828;border:2px solid var(--lima);border-radius:999px;padding:3px 12px}
+.ps-et b .bandera{width:18px;height:13px}
+.ps-et small{font-family:var(--cond);font-size:15px;color:#9AA5B1;background:rgba(14,24,40,.85);padding:0 6px;border-radius:6px}
+.ps-et small i{font-style:normal;color:var(--lima);font-weight:800}
+.ps-col.dest .ps-et b{border-color:#F3D58A}
+@media (max-width:600px){
+ .asc-hero-num{font-size:64px}.asc-hero-nom{font-size:24px}.asc-hero-de{font-size:24px}
+ .asc-fila{grid-template-columns:44px 1fr auto;padding:12px}.asc-pos{font-size:28px}.asc-nom{font-size:17px}.asc-sube{font-size:16px;padding:6px 12px}
+ .ps-tablero{height:560px}.ps-piso span{font-size:13px}.ps-et b{font-size:11px;padding:2px 7px;gap:3px}.ps-et b .bandera{display:none}.ps-et small{font-size:11px}
+ .ps-col:nth-child(even) .ps-et{transform:translate(-50%,calc(-100% - 52px))}
+}
+
+/* v3.1: el riel arranca en el anillo del puesto de enero; números sobre los extremos; columnas del tablero a la derecha de las etiquetas */
+.asc-pista{display:block;margin-top:22px}
+.asc-riel{display:block;position:relative;height:6px}
+.asc-riel::before{content:none}
+.asc-riel i{position:absolute;right:12px;top:0;display:block}
+.asc-riel i::before{content:"";position:absolute;left:-8px;top:50%;width:14px;height:14px;margin-top:-9px;border-radius:50%;border:2px solid #5B6D86;background:#0E1828}
+.asc-d,.asc-h{position:absolute;bottom:14px;font-family:var(--cond);line-height:1}
+.asc-d{left:-1px;transform:translateX(-50%);color:#8E9BAD;font-weight:700;font-size:15px}
+.asc-h{right:0;transform:translateX(50%);color:#F2F4F5;font-weight:800;font-size:18px}
+.ps-zona{position:absolute;top:0;bottom:0;left:120px;right:24px}
+@media (max-width:600px){.ps-zona{left:58px;right:6px}.ps-piso{padding:0 8px}.ps-piso span{font-size:12px;width:44px;line-height:1.1}}
+
+/* v3.2: etiquetas alternadas arriba (punta) y abajo (base) para que no se pisen */
+.ps-et.abajo{transform:translate(-50%,14px)}
+@media (max-width:600px){.ps-col:nth-child(even) .ps-et{transform:translate(-50%,calc(-100% - 18px))}.ps-col .ps-et.abajo{transform:translate(-50%,12px)}.ps-et b{font-size:10.5px;padding:2px 6px}.ps-et small{font-size:10.5px}}
+@media (max-width:600px){.ps-piso{align-items:flex-start;padding-top:8px}}
