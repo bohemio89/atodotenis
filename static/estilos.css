@@ -545,3 +545,19 @@ body{background:#0F1317}
 .bq-fila.dest .bq-nom,.bq-fila.dest .bq-val{color:var(--lima)}
 @media (max-width:700px){.tj-grid{grid-template-columns:1fr}}
 @media (max-width:480px){.bq{padding:20px 16px 16px}.bq-tarj{padding:14px}.bq-dato strong{font-size:34px}}
+
+/* Gráfico de pendiente (ranking al principio y al final) */
+.bq-pendiente svg{overflow:visible;width:100%;height:auto;display:block}
+.pd-chico{display:none!important}
+@media (max-width:600px){.pd-grande{display:none!important}.pd-chico{display:block!important}}
+.pd-col{font:700 13px Montserrat,sans-serif;fill:var(--suave);letter-spacing:.06em;text-transform:uppercase}
+.pd-eje{stroke:var(--borde,#2A3440);stroke-width:2}
+.pd-l path{fill:none;stroke:#4B5866;stroke-width:3}
+.pd-l circle{fill:#4B5866}
+.pd-l.dest path{stroke:var(--lima);stroke-width:4.5}
+.pd-l.dest circle{fill:var(--lima)}
+.pd-n0{font:700 15px Inter,sans-serif;fill:var(--suave);font-variant-numeric:tabular-nums}
+.pd-n1{font:800 20px Montserrat,sans-serif;fill:var(--texto);font-variant-numeric:tabular-nums}
+.pd-l.dest .pd-n1{fill:var(--lima)}
+.pd-nom{font:700 16px Inter,sans-serif;fill:var(--texto)}
+.pd-sube{font-weight:800;fill:var(--lima);font-size:14px}

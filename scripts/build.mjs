@@ -131,6 +131,39 @@ function bloqueNota(b) {
     const max = Math.max(...b.items.map((x) => +x.valor || 0)) || 1;
     return `<section class="bq bq-barras">${tit}${b.items.map((x) => `<div class="bq-fila${x.destacado ? ' dest' : ''}"><span class="bq-nom">${esc(tx(x.nombre))}</span><span class="bq-barra"><i style="width:${Math.max(4, Math.round((+x.valor || 0) / max * 100))}%"></i></span><span class="bq-val">${esc(tx(x.etiqueta ?? Number(x.valor).toLocaleString(EN ? 'en-US' : 'es-AR')))}</span></div>`).join('')}${pie}</section>`;
   }
+  if (b.tipo === 'pendiente') {
+    // Gráfico de pendiente: puesto al principio (izquierda) y al final (derecha). Escala logarítmica para que se lean los saltos;
+    // los puntos se separan lo justo para que ningún número se pise. Dos versiones: computadora y celular (letra más grande).
+    const dibujo = (W, xL, xR, k, clase) => {
+      const top = 70 * k, gap = Math.max(34 * k, 27);
+      const H = Math.round(top + Math.max(330 * k, gap * (b.items.length + 1) * 1.6) + 40 * k);
+      const bot = H - 40 * k;
+      const todos = b.items.flatMap((x) => [x.desde, x.hasta]);
+      const lmin = Math.log(Math.max(1, Math.min(...todos)) * 0.9), lmax = Math.log(Math.max(...todos) * 1.08);
+      const esc0 = (r) => top + (Math.log(r) - lmin) / (lmax - lmin) * (bot - top);
+      const separar = (campo) => {
+        const o = b.items.map((x, i) => ({ i, y: esc0(x[campo]) })).sort((p1, p2) => p1.y - p2.y);
+        for (let q = 1; q < o.length; q++) if (o[q].y - o[q - 1].y < gap) o[q].y = o[q - 1].y + gap;
+        const exceso = o[o.length - 1].y - bot;
+        if (exceso > 0) for (let q = o.length - 1; q >= 0; q--) { o[q].y -= exceso; if (q && o[q].y - o[q - 1].y >= gap) break; }
+        return Object.fromEntries(o.map((d) => [d.i, d.y]));
+      };
+      const yI = separar('desde'), yD = separar('hasta');
+      const lineas = b.items.map((x, i) => ({ x, i })).sort((p1, p2) => (p1.x.destacado ? 1 : 0) - (p2.x.destacado ? 1 : 0));
+      return `<svg class="${clase}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(tx(b.titulo))}">
+        <text x="${xL}" y="${30 * k}" text-anchor="middle" class="pd-col">${esc(tx(b.desde) || '')}</text><text x="${xR}" y="${30 * k}" text-anchor="middle" class="pd-col">${esc(tx(b.hasta) || '')}</text>
+        <line x1="${xL}" y1="${top - 22 * k}" x2="${xL}" y2="${bot + 16 * k}" class="pd-eje"/><line x1="${xR}" y1="${top - 22 * k}" x2="${xR}" y2="${bot + 16 * k}" class="pd-eje"/>
+        ${lineas.map(({ x, i }) => {
+          const y0 = yI[i].toFixed(1), y1 = yD[i].toFixed(1), m = (xR - xL) * 0.45;
+          return `<g class="pd-l${x.destacado ? ' dest' : ''}"><path d="M${xL} ${y0} C ${xL + m} ${y0}, ${xR - m} ${y1}, ${xR} ${y1}"/>
+          <circle cx="${xL}" cy="${y0}" r="${6 * k}"/><circle cx="${xR}" cy="${y1}" r="${8 * k}"/>
+          <text x="${xL - 16 * k}" y="${(+y0 + 6 * k).toFixed(1)}" text-anchor="end" class="pd-n0">${x.desde}</text>
+          <text x="${xR + 18 * k}" y="${(+y1 + 8 * k).toFixed(1)}" class="pd-n1">${x.hasta}</text>
+          <text x="${xR + 74 * k}" y="${(+y1 + 8 * k).toFixed(1)}" class="pd-nom">${esc(tx(x.nombre))}<tspan class="pd-sube" dx="${8 * k}">▲${x.desde - x.hasta}</tspan></text></g>`;
+        }).join('')}</svg>`;
+    };
+    return `<section class="bq bq-pendiente">${tit}${dibujo(720, 90, 400, 1, 'pd-grande')}${dibujo(380, 46, 168, 0.62, 'pd-chico')}${pie}</section>`;
+  }
   if (b.tipo === 'linea') return `<section class="bq bq-linea">${tit}<ol>${b.items.map((x) => `<li class="${x.estado || ''}"><span class="bq-cuando">${esc(tx(x.cuando))}</span><span class="bq-que">${esc(tx(x.que))}</span></li>`).join('')}</ol>${pie}</section>`;
   if (b.tipo === 'horario') {
     // Hora oficial del lugar y, debajo, la hora local de cada visitante (la calcula su navegador).
