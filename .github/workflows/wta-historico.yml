@@ -1,0 +1,20 @@
+name: wta-historico
+on:
+  push:
+    branches: [media]
+    paths: [media/wta-historico.txt]
+permissions: { contents: write }
+jobs:
+  bajar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - run: |
+          fecha=$(tr -d ' \n' < media/wta-historico.txt)
+          mkdir -p media/wta-historico
+          for p in 0 1 2 3 4 5; do
+            curl -s -H 'origin: https://www.wtatennis.com' -H 'referer: https://www.wtatennis.com/' -A 'Mozilla/5.0' "https://api.wtatennis.com/tennis/players/ranked?page=$p&pageSize=100&type=rankSingles&sort=asc&name=&metric=SINGLES&at=$fecha&nationality=" > media/wta-historico/$fecha-$p.json
+          done
+          git config user.name bot; git config user.email bot@users.noreply.github.com
+          git add media/wta-historico && git commit -m "WTA ranking $fecha" && git pull --rebase -q && git push || true
