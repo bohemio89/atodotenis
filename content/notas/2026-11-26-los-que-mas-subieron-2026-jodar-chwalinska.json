@@ -92,7 +92,7 @@
   },
   {
    "despuesDe": 1,
-   "tipo": "pendiente",
+   "tipo": "ascenso",
    "titulo": {
     "es": "Cómo subieron: ATP",
     "en": "How they climbed: ATP"
@@ -114,32 +114,39 @@
      "nombre": "Jódar",
      "desde": 165,
      "hasta": 10,
-     "destacado": true
+     "destacado": true,
+     "pais": "esp",
+     "completo": "Rafael Jódar"
     },
     {
      "nombre": "Blockx",
      "desde": 115,
-     "hasta": 28
+     "hasta": 28,
+     "pais": "bel"
     },
     {
      "nombre": "Fery",
      "desde": 185,
-     "hasta": 32
+     "hasta": 32,
+     "pais": "gbr"
     },
     {
      "nombre": "Buse",
      "desde": 100,
-     "hasta": 33
+     "hasta": 33,
+     "pais": "per"
     },
     {
      "nombre": "Van Assche",
      "desde": 164,
-     "hasta": 34
+     "hasta": 34,
+     "pais": "fra"
     },
     {
      "nombre": "Gea",
      "desde": 241,
-     "hasta": 48
+     "hasta": 48,
+     "pais": "fra"
     }
    ]
   },
@@ -200,7 +207,7 @@
   },
   {
    "despuesDe": 2,
-   "tipo": "pendiente",
+   "tipo": "ascenso",
    "titulo": {
     "es": "Cómo subieron: WTA",
     "en": "How they climbed: WTA"
@@ -222,32 +229,39 @@
      "nombre": "Chwalinska",
      "desde": 146,
      "hasta": 12,
-     "destacado": true
+     "destacado": true,
+     "pais": "pol",
+     "completo": "Maja Chwalinska"
     },
     {
      "nombre": "Bartunkova",
      "desde": 126,
-     "hasta": 30
+     "hasta": 30,
+     "pais": "cze"
     },
     {
      "nombre": "Parry",
      "desde": 122,
-     "hasta": 34
+     "hasta": 34,
+     "pais": "fra"
     },
     {
      "nombre": "Snigur",
      "desde": 149,
-     "hasta": 42
+     "hasta": 42,
+     "pais": "ukr"
     },
     {
      "nombre": "Tagger",
      "desde": 154,
-     "hasta": 54
+     "hasta": 54,
+     "pais": "aut"
     },
     {
      "nombre": "Kalinina",
      "desde": 174,
-     "hasta": 56
+     "hasta": 56,
+     "pais": "ukr"
     }
    ]
   },

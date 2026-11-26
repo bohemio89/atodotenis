@@ -131,6 +131,23 @@ function bloqueNota(b) {
     const max = Math.max(...b.items.map((x) => +x.valor || 0)) || 1;
     return `<section class="bq bq-barras">${tit}${b.items.map((x) => `<div class="bq-fila${x.destacado ? ' dest' : ''}"><span class="bq-nom">${esc(tx(x.nombre))}</span><span class="bq-barra"><i style="width:${Math.max(4, Math.round((+x.valor || 0) / max * 100))}%"></i></span><span class="bq-val">${esc(tx(x.etiqueta ?? Number(x.valor).toLocaleString(EN ? 'en-US' : 'es-AR')))}</span></div>`).join('')}${pie}</section>`;
   }
+  if (b.tipo === 'ascenso') {
+    // Placa de ascenso en el ranking: el protagonista en grande y, debajo, una pista por jugador (de enero a noviembre)
+    // con el largo de la flecha proporcional a los puestos ganados.
+    const items = b.items.map((x) => ({ ...x, sube: x.desde - x.hasta }));
+    const max = Math.max(...items.map((x) => x.sube)) || 1;
+    const prota = items.find((x) => x.destacado);
+    const sinTilde = (t) => String(t).normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const foto = (n) => { const a = avatares[n] || avatares[sinTilde(n)]; return a?.url ? `<span class="asc-foto"><img src="${esc(a.url)}" alt="" loading="lazy" style="object-position:${esc(a.foco || 'center 20%')}"></span>` : ''; };
+    const hero = prota ? `<div class="asc-hero"><div class="asc-hero-txt"><span class="asc-kicker">${EN ? 'The big climb' : 'El gran ascenso'}</span>
+      <strong class="asc-hero-nom">${esc(tx(prota.completo || prota.nombre))} ${banderaDe(prota.pais)}</strong>
+      <span class="asc-hero-num">▲ +${prota.sube}</span><span class="asc-hero-de">${prota.desde} <i>→</i> <b>${prota.hasta}</b></span></div>${foto(tx(prota.completo || prota.nombre))}</div>` : '';
+    const fila = (x) => `<div class="asc-fila${x.destacado ? ' dest' : ''}"><span class="asc-pos">${x.hasta}</span>
+      <div class="asc-medio"><span class="asc-nom">${esc(tx(x.nombre))} ${banderaDe(x.pais)}</span>
+        <div class="asc-pista"><span class="asc-ini">${EN ? 'Jan' : 'Ene'} ${x.desde}</span><span class="asc-riel"><i style="width:${Math.max(18, Math.round(x.sube / max * 100))}%"></i></span><span class="asc-fin">${EN ? 'Nov' : 'Nov'} ${x.hasta}</span></div></div>
+      <span class="asc-sube">▲ +${x.sube}</span></div>`;
+    return `<section class="bq bq-ascenso">${tit}${hero}<div class="asc-lista">${items.sort((a, c) => a.hasta - c.hasta).map(fila).join('')}</div>${pie}</section>`;
+  }
   if (b.tipo === 'pendiente') {
     // Gráfico de pendiente: puesto al principio (izquierda) y al final (derecha). Escala logarítmica para que se lean los saltos;
     // los puntos se separan lo justo para que ningún número se pise. Dos versiones: computadora y celular (letra más grande).

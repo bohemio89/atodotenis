@@ -561,3 +561,26 @@ body{background:#0F1317}
 .pd-l.dest .pd-n1{fill:var(--lima)}
 .pd-nom{font:700 16px Inter,sans-serif;fill:var(--texto)}
 .pd-sube{font-weight:800;fill:var(--lima);font-size:14px}
+
+/* Placa de ascenso en el ranking */
+.bq-ascenso{background:linear-gradient(180deg,#141B24,#10161E)}
+.asc-hero{display:flex;align-items:center;justify-content:space-between;gap:16px;background:radial-gradient(120% 140% at 0% 0%,rgba(226,184,92,.18),rgba(226,184,92,0) 55%),#1A222D;border:1px solid rgba(226,184,92,.35);border-radius:14px;padding:22px 24px;margin-bottom:14px}
+.asc-kicker{display:block;font:800 13px Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#E2B85C}
+.asc-hero-nom{display:flex;align-items:center;gap:10px;font:800 28px/1.1 Montserrat,sans-serif;margin:8px 0 4px;color:var(--texto)}
+.asc-hero-num{display:block;font:800 72px/1 Montserrat,sans-serif;letter-spacing:-.02em;background:linear-gradient(180deg,#F6D98C,#C9962F);-webkit-background-clip:text;background-clip:text;color:transparent}
+.asc-hero-de{display:block;margin-top:8px;font:800 26px Montserrat,sans-serif;color:var(--suave)}
+.asc-hero-de b{color:var(--lima)} .asc-hero-de i{font-style:normal;color:var(--lima)}
+.asc-foto{flex:none;width:112px;height:112px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 3px var(--lima),0 0 24px rgba(198,244,50,.35)}
+.asc-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.asc-lista{display:flex;flex-direction:column;gap:8px}
+.asc-fila{display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:14px;background:#1A222D;border:1px solid #243040;border-radius:12px;padding:12px 16px}
+.asc-fila.dest{border-color:rgba(198,244,50,.5)}
+.asc-pos{font:800 30px Montserrat,sans-serif;color:#E2B85C;text-align:center;font-variant-numeric:tabular-nums}
+.asc-nom{display:flex;align-items:center;gap:8px;font:800 16px Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.02em;color:var(--texto)}
+.asc-pista{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;margin-top:8px;font-size:12.5px;color:var(--suave);font-variant-numeric:tabular-nums}
+.asc-fin{color:var(--lima);font-weight:700}
+.asc-riel{position:relative;height:8px;border-radius:8px;background:#26303C}
+.asc-riel i{position:absolute;right:0;top:0;bottom:0;border-radius:8px;background:linear-gradient(90deg,rgba(198,244,50,.15),var(--lima))}
+.asc-riel i::after{content:"";position:absolute;right:-6px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--lima);box-shadow:0 0 0 3px rgba(198,244,50,.25),0 0 12px rgba(198,244,50,.6)}
+.asc-sube{font:800 17px Montserrat,sans-serif;color:#0B0E12;background:var(--lima);border-radius:999px;padding:8px 14px;white-space:nowrap;box-shadow:0 0 16px rgba(198,244,50,.25)}
+@media (max-width:600px){.asc-hero{padding:18px}.asc-hero-num{font-size:54px}.asc-hero-nom{font-size:22px}.asc-foto{width:84px;height:84px}.asc-fila{grid-template-columns:40px 1fr auto;gap:10px;padding:10px 12px}.asc-pos{font-size:24px}.asc-sube{font-size:14px;padding:6px 10px}.asc-nom{font-size:14px}}
