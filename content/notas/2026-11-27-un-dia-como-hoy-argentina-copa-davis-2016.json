@@ -63,48 +63,6 @@
  },
  "bloques": [
   {
-   "despuesDe": 0,
-   "tipo": "datos",
-   "titulo": {
-    "es": "El título en números",
-    "en": "The title in numbers"
-   },
-   "fuente": {
-    "es": "Copa Davis",
-    "en": "Davis Cup"
-   },
-   "items": [
-    {
-     "valor": "5",
-     "texto": {
-      "es": "finales jugó Argentina hasta ganarla",
-      "en": "finals Argentina played before winning one"
-     }
-    },
-    {
-     "valor": "35",
-     "texto": {
-      "es": "años desde su primera final, en 1981",
-      "en": "years after its first final, in 1981"
-     }
-    },
-    {
-     "valor": "4 h 53",
-     "texto": {
-      "es": "duró la remontada de Del Potro ante Cilic",
-      "en": "Del Potro's comeback against Cilic lasted"
-     }
-    },
-    {
-     "valor": "15",
-     "texto": {
-      "es": "países campeones de la Copa Davis con Argentina",
-      "en": "Davis Cup champion nations, Argentina included"
-     }
-    }
-   ]
-  },
-  {
    "despuesDe": 3,
    "tipo": "getty",
    "src": "https://embed.gettyimages.com/embed/626483790?et=33GbMyWBR-5LcR913eKKuA&tld=com&sig=9O47LMLargECxk1gEzKmNJj1kI2IUUhfu9VUXMYzYOo=&caption=true&ver=1",
@@ -324,6 +282,17 @@
      ]
     }
    ]
+  }
+ ],
+ "galeria": [
+  {
+   "despuesDe": 0,
+   "url": "/notas/copa-davis-2016-numeros.jpg",
+   "alt": {
+    "es": "El título en números: 5 finales, 35 años desde la primera, 4 h 53 de la remontada de Del Potro y 15 países campeones",
+    "en": "The title in numbers: 5 finals, 35 years since the first, Del Potro's 4h53 comeback and 15 champion nations"
+   },
+   "propia": true
   }
  ]
 }
