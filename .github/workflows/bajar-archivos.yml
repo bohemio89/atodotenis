@@ -1,0 +1,20 @@
+name: Bajar archivos con licencia libre
+on:
+  push:
+    branches: [media]
+    paths: [media/bajar-pedido.txt]
+permissions: { contents: write }
+jobs:
+  bajar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media }
+      - run: |
+          mkdir -p media/bajados
+          while IFS='|' read -r url nombre; do
+            [ -z "$url" ] && continue
+            curl -sfL -A "ATodoTenisBot/1.0 (atodotenis.vercel.app)" "$url" -o "media/bajados/$nombre" || echo "falló $url"
+          done < media/bajar-pedido.txt
+          git config user.name "A Todo Tenis bot" && git config user.email "bot@atodotenis.local"
+          git add media/bajados && git commit -m "Archivos bajados" && git pull --rebase -q && git push || true
