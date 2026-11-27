@@ -68562,7 +68562,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T03:00:38.198Z",
+  "visto": "2026-11-27T03:45:26.025Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -68570,11 +68570,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T03:00:23.309207Z",
-   "age_seconds": 14,
+   "accepted_at": "2026-11-27T03:45:15.208477Z",
+   "age_seconds": 10,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68582,29 +68582,31 @@
    },
    "games": [
     [
-     3
+     5,
+     0
     ],
     [
-     1
+     7,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
     "40",
     "0"
    ],
-   "received_at": "2026-11-27T03:00:22.932007Z",
-   "sequence": 26,
+   "received_at": "2026-11-27T03:45:14.847082Z",
+   "sequence": 83,
    "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-27T03:00:23.309203Z",
+   "timestamp": "2026-11-27T03:45:24.788146Z",
    "puntos": [
     "40",
     "0"
@@ -69042,12 +69044,12 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-27T03:30:00Z",
+  "horario": "2026-11-27T03:20:00Z",
   "j1": {
    "id": 75,
    "nombre": "Masamichi Imamura",
    "pais": "jpn",
-   "ranking": 434
+   "ranking": 419
   },
   "j2": {
    "id": 185,
@@ -69056,12 +69058,59 @@
    "ranking": 200
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T23:30:34.939Z",
+  "visto": "2026-11-27T03:45:26.025Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2510",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-27T03:44:55.161847Z",
+   "age_seconds": 30,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "15",
+    "15"
+   ],
+   "received_at": "2026-11-27T03:44:55.048258Z",
+   "sequence": 37,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-27T03:45:22.445982Z",
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225237": {
   "id": 225237,
@@ -69072,12 +69121,12 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-27T03:30:00Z",
+  "horario": "2026-11-27T03:20:00Z",
   "j1": {
    "id": 469,
    "nombre": "Kaichi Uchida",
    "pais": "jpn",
-   "ranking": 460
+   "ranking": 645
   },
   "j2": {
    "id": 10956,
@@ -69086,12 +69135,59 @@
    "ranking": 371
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T23:30:34.939Z",
+  "visto": "2026-11-27T03:45:26.025Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2510",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-27T03:45:12.059333Z",
+   "age_seconds": 13,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "15",
+    "40"
+   ],
+   "received_at": "2026-11-27T03:45:11.502700Z",
+   "sequence": 50,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-27T03:45:25.228947Z",
+   "puntos": [
+    "15",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225242": {
   "id": 225242,
@@ -72635,7 +72731,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T03:00:38.198Z",
+  "visto": "2026-11-27T03:45:26.025Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -72643,8 +72739,8 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T03:00:36.931908Z",
-   "age_seconds": 1,
+   "accepted_at": "2026-11-27T03:45:16.220122Z",
+   "age_seconds": 9,
    "changing_sources_count": 1,
    "corroborated": true,
    "corroborated_age_seconds": 0,
@@ -72655,34 +72751,36 @@
    },
    "games": [
     [
-     3
+     7,
+     2
     ],
     [
-     3
+     6,
+     2
     ]
    ],
    "is_tiebreak": false,
    "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "30",
-    "0"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-27T03:00:36.523458Z",
-   "sequence": 40,
-   "server": 1,
+   "received_at": "2026-11-27T03:45:16.105456Z",
+   "sequence": 104,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-27T03:00:36.931904Z",
+   "timestamp": "2026-11-27T03:45:16.220120Z",
    "puntos": [
-    "30",
-    "0"
+    "15",
+    "15"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -72816,7 +72914,7 @@
    "ranking": 338
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-27T03:00:38.198Z",
   "torneoClave": "challenger|Yokohama",
