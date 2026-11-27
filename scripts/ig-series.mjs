@@ -6,6 +6,7 @@
 //   node scripts/ig-series.mjs [ranking|efemeride|campeones]  → fuerza una serie (pruebas)
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { ROOT, log, conGrafia } from './lib/util.mjs';
 const esc = (t) => esc0(conGrafia(t));
 import { esc as esc0, fotoJugador, focoJugador, fotoElegida, dibujar, marco, caja, etiqueta, fondoFoto } from './lib/ig-render.mjs';
@@ -64,7 +65,13 @@ async function ranking() {
       <span class="ngris" style="width:150px;text-align:right;font:700 36px BC">${esc(j.puntos?.toLocaleString('es-AR'))}</span>
       <span style="width:86px;text-align:right;font:700 34px BC">${flecha(j)}</span></div>`).join('')}</div>
     ${marco(n, 3, n === 3 ? CREDT : '', 'Puntos y movimiento de la semana')}</div>`;
-  const placas = [portada, tabla('ATP', atp, 2, carasATP), tabla('WTA', wta, 3, carasWTA)];
+  // Placas 2 y 3: las mismas del Top 10 de las notas de ranking (scripts/placa-ranking.mjs); si fallan, la tabla de respaldo
+  const placaNota = (tour) => { try {
+    const f = path.join(ROOT, 'node_modules', `.placa-${tour}.jpg`);
+    execFileSync(process.execPath, [path.join(ROOT, 'scripts/placa-ranking.mjs'), tour, 'es', hoyISO, f], { stdio: 'inherit' });
+    return `<div class="s n" style="background:url('data:image/jpeg;base64,${fs.readFileSync(f).toString('base64')}') center/cover"></div>`;
+  } catch (err) { log('Placa de ranking no disponible, se usa la tabla:', tour, err.message); return null; } };
+  const placas = [portada, placaNota('atp') || tabla('ATP', atp, 2, carasATP), placaNota('wta') || tabla('WTA', wta, 3, carasWTA)];
   const sube = [...atp, ...wta].filter((j) => j.cambio > 0).sort((a, b) => b.cambio - a.cambio)[0];
   const texto = [
     `El ranking de esta semana: ${atp[0].nombre} es el N° 1 de la ATP y ${wta[0].nombre}, de la WTA.`,
