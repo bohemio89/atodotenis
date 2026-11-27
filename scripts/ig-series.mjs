@@ -6,11 +6,13 @@
 //   node scripts/ig-series.mjs [ranking|efemeride|campeones]  → fuerza una serie (pruebas)
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT, log } from './lib/util.mjs';
-import { esc, fotoJugador, focoJugador, fotoElegida, cabecera, pie, dibujar } from './lib/ig-render.mjs';
+import { ROOT, log, conGrafia } from './lib/util.mjs';
+const esc = (t) => esc0(conGrafia(t));
+import { esc as esc0, fotoJugador, focoJugador, fotoElegida, dibujar, marco, caja, etiqueta, fondoFoto } from './lib/ig-render.mjs';
 
 const SITIO = 'https://atodotenis.vercel.app';
 const CRED = `<div style="position:absolute;left:64px;right:64px;bottom:100px;font-size:20px;color:#6B7785">Fotos: Wikimedia Commons, licencias libres. Autores en atodotenis.vercel.app/creditos</div>`;
+const CREDT = 'Fotos: Wikimedia Commons, licencias libres. Autores en atodotenis.vercel.app/creditos';
 const COLA = path.join(ROOT, 'data/ig-carruseles.json');
 const leer = (f, d) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, f), 'utf8')); } catch { return d; } };
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
@@ -39,31 +41,29 @@ async function ranking() {
   if (ESTADO.rankingFirma === firma && !PRUEBA) { log('El top 10 no cambió desde el último ranking: no se publica.'); return null; }
   const fecha = `${ahora.getUTCDate()} de ${MESES[ahora.getUTCMonth()]}`;
   const [f1, f2] = [await fotoJugador(atp[0].nombre, 1280), await fotoJugador(wta[0].nombre, 1280)];
-  const mitad = (foto, tour, j) => `<div style="position:relative;flex:1;height:820px;border-radius:22px;overflow:hidden;background:#1B222A url('${foto}') ${focoJugador(j.nombre)}/cover">
-    <div style="position:absolute;inset:auto 0 0 0;padding:120px 32px 30px;background:linear-gradient(rgba(18,22,27,0),#12161B 70%)">
-    <div style="font:800 30px Montserrat" class="lima">N° 1 ${tour}</div><div style="font:800 52px/1.05 Montserrat">${esc(j.nombre)}</div>
-    <div style="font-size:28px" class="gris">${esc(j.puntos?.toLocaleString('es-AR'))} puntos</div></div></div>`;
-  const tipo = (tour, j) => `<div style="flex:1;height:820px;border-radius:22px;background:#1B222A;padding:48px 36px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-end">
-    <div style="font:800 30px Montserrat" class="lima">N° 1 ${tour}</div><div style="font:800 60px/1.05 Montserrat">${esc(j.nombre)}</div>
-    <div style="font-size:28px" class="gris">${esc(j.puntos?.toLocaleString('es-AR'))} puntos</div></div>`;
+  const n1 = (tour, j) => `<div style="position:absolute;left:36px;right:24px;bottom:40px"><div class="ndor" style="font:900 italic 40px BC;letter-spacing:.04em">N° 1 ${tour}</div>
+    <div style="font:900 italic 66px/0.92 BC;text-transform:uppercase;margin-top:6px">${esc(j.nombre)}</div><div class="ngris" style="font:700 30px BC;margin-top:6px">${esc(j.puntos?.toLocaleString('es-AR'))} PUNTOS</div></div>`;
+  const mitad = (foto, tour, j, lado) => `<div style="position:absolute;top:0;${lado}:0;width:538px;height:930px;overflow:hidden;background:${foto ? `#16263C url('${foto}') ${focoJugador(j.nombre)}/cover` : 'linear-gradient(180deg,#1E3350,#0E1828)'}">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,10,18,.5),rgba(6,10,18,0) 25%,rgba(6,10,18,0) 50%,rgba(11,19,32,.95) 88%)"></div>${n1(tour, j)}</div>`;
   const conFotos = f1 && f2;
-  const portada = `<div class="s">${cabecera('EL RANKING DEL LUNES')}
-    <div style="position:absolute;left:64px;right:64px;top:170px"><p style="margin:0;font:800 84px/1 Montserrat;letter-spacing:-.02em">Así está<br><span class="lima">el top 10</span></p>
-    <p style="margin:16px 0 0;font-size:32px" class="gris">Semana del ${fecha}</p></div>
-    <div style="position:absolute;left:64px;right:64px;top:440px;display:flex;gap:24px">${conFotos ? mitad(f1, 'ATP', atp[0]) + mitad(f2, 'WTA', wta[0]) : tipo('ATP', atp[0]) + tipo('WTA', wta[0])}</div>
-    ${pie('DESLIZÁ →', '1/3')}</div>`;
-  const flecha = (j) => j.cambio > 0 ? `<span class="lima">▲ ${j.cambio}</span>` : j.cambio < 0 ? `<span style="color:#FF6B6B">▼ ${-j.cambio}</span>`
-    : j.mov === 'up' ? '<span class="lima">▲</span>' : j.mov === 'down' ? '<span style="color:#FF6B6B">▼</span>' : '<span class="gris">=</span>';
+  const portada = `<div class="s n">${mitad(conFotos ? f1 : null, 'ATP', atp[0], 'left')}${mitad(conFotos ? f2 : null, 'WTA', wta[0], 'right')}
+    <div style="position:absolute;left:538px;width:4px;top:0;height:930px;background:#D9B25E"></div>
+    <div style="position:absolute;left:0;right:0;top:960px;text-align:center">${etiqueta(`El ranking del lunes · ${fecha}`)}</div>
+    <div style="position:absolute;left:80px;right:80px;top:1050px">${caja('Así está el top 10', { size: 104 })}</div>
+    ${marco(1, 3, '', 'Deslizá →')}</div>`;
+  const flecha = (j) => j.cambio > 0 ? `<span style="color:#7BE38B">▲ ${j.cambio}</span>` : j.cambio < 0 ? `<span style="color:#FF6B6B">▼ ${-j.cambio}</span>`
+    : j.mov === 'up' ? '<span style="color:#7BE38B">▲</span>' : j.mov === 'down' ? '<span style="color:#FF6B6B">▼</span>' : '<span class="ngris">=</span>';
   const caras = async (js) => { const f = []; for (const j of js) f.push(await fotoJugador(j.nombre)); return f.every(Boolean) ? f : null; };
   const [carasATP, carasWTA] = [await caras(atp), await caras(wta)];
-  const tabla = (tour, js, n, fotos) => `<div class="s">${cabecera(`RANKING ${tour}`)}
-    <div style="position:absolute;left:64px;right:64px;top:170px">${js.map((j, i) => `<div style="display:flex;align-items:center;height:100px;border-bottom:${i < 9 ? '2px solid #232C36' : '0'}">
-      <span style="width:84px;font:700 56px RC" class="${i ? '' : 'lima'}">${j.ranking}</span>
-      ${fotos ? `<span style="width:78px;height:78px;border-radius:50%;margin-right:22px;flex:none;background:#1B222A url('${fotos[i]}') ${focoJugador(j.nombre)}/cover"></span>` : ''}
-      <span style="flex:1;font:800 40px Montserrat;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(j.nombre)} <small style="font:400 24px Inter" class="gris">${esc(pais(j.pais))}</small></span>
-      <span style="width:150px;text-align:right;font:700 36px RC" class="gris">${esc(j.puntos?.toLocaleString('es-AR'))}</span>
-      <span style="width:90px;text-align:right;font:700 34px RC">${flecha(j)}</span></div>`).join('')}</div>
-    ${n === 3 ? CRED : ''}${pie('Puntos y movimiento de la semana', `${n}/3`)}</div>`;
+  const tabla = (tour, js, n, fotos) => `<div class="s n">
+    <div style="position:absolute;left:250px;right:60px;top:66px">${caja(`Ranking ${tour}`, { size: 80 })}</div>
+    <div style="position:absolute;left:44px;right:44px;top:250px;display:flex;flex-direction:column;gap:8px">${js.map((j, i) => `<div style="display:flex;align-items:center;height:86px;padding:0 22px;background:${i ? 'linear-gradient(90deg,#17263C,#0F1A2B)' : 'linear-gradient(90deg,#3A2E12,#17263C 60%)'};border-left:8px solid ${i ? '#2A3B54' : '#D9B25E'}">
+      <span class="${i ? '' : 'noro'}" style="width:76px;font:900 italic 56px BC">${j.ranking}</span>
+      ${fotos ? `<span style="width:66px;height:66px;border-radius:50%;margin-right:20px;flex:none;border:3px solid ${i ? '#2A3B54' : '#D9B25E'};background:#16263C url('${fotos[i]}') ${focoJugador(j.nombre)}/cover"></span>` : ''}
+      <span style="flex:1;min-width:0;font:800 italic 44px BC;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(j.nombre)} <small class="ngris" style="font:700 26px BC">${esc(pais(j.pais))}</small></span>
+      <span class="ngris" style="width:150px;text-align:right;font:700 36px BC">${esc(j.puntos?.toLocaleString('es-AR'))}</span>
+      <span style="width:86px;text-align:right;font:700 34px BC">${flecha(j)}</span></div>`).join('')}</div>
+    ${marco(n, 3, n === 3 ? CREDT : '', 'Puntos y movimiento de la semana')}</div>`;
   const placas = [portada, tabla('ATP', atp, 2, carasATP), tabla('WTA', wta, 3, carasWTA)];
   const sube = [...atp, ...wta].filter((j) => j.cambio > 0).sort((a, b) => b.cambio - a.cambio)[0];
   const texto = [
@@ -80,7 +80,6 @@ async function ranking() {
 // Carrusel de 3 placas: portada con foto de la época, la historia y los números.
 // Control de calidad: solo sale si la efeméride tiene titulo, historia, datos y una foto elegida a mano
 // (content/efemerides.json) y la foto es lo bastante grande para cubrir la placa sin estirarse.
-const FILA = 'display:flex;gap:28px;align-items:flex-end';
 async function efemeride(fechaFija) {
   const items = leer('content/efemerides.json', {}).items || [];
   const mmdd = hoyISO.slice(5);
@@ -96,24 +95,25 @@ async function efemeride(fechaFija) {
   const escala = foto ? Math.max(1080 / foto.ancho, 1350 / foto.alto) : 9;
   if (escala > 1.1) { log('Efeméride descartada: la foto no tiene calidad suficiente', e.fecha, foto ? `${foto.ancho}x${foto.alto}` : 'sin foto'); return null; }
   const fechaTxt = `${Number(e.fecha.slice(8))} de ${MESES[Number(e.fecha.slice(5, 7)) - 1]} de ${anio}`;
-  const credito = `<div style="position:absolute;left:64px;right:64px;bottom:100px;font-size:20px;color:#6B7785">Foto: ${esc(e.foto.autor || 'Wikimedia Commons')} · ${esc(e.foto.licencia || 'licencia libre')} · Wikimedia Commons</div>`;
-  const portada = `<div class="s"><div style="position:absolute;inset:0;background:url('${foto.data}') ${esc(e.foto.foco || 'center 30%')}/cover"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(rgba(10,13,17,.6),rgba(10,13,17,0) 22%,rgba(10,13,17,0) 42%,rgba(10,13,17,.88) 66%,#0A0D11)"></div>
-    ${cabecera('UN DÍA COMO HOY')}
-    <div style="position:absolute;left:64px;right:64px;bottom:150px">
-      <div style="${FILA}"><span style="font:700 170px/0.8 RC" class="lima">${anio}</span><span style="font-size:32px;padding-bottom:8px" class="gris">${fechaTxt}<br>hace ${hace} ${hace === 1 ? 'año' : 'años'}</span></div>
-      <p style="margin:34px 0 0;font:800 64px/1.06 Montserrat;letter-spacing:-.02em">${esc(e.titulo)}</p></div>
-    ${pie('DESLIZÁ →', '1/3')}</div>`;
-  const historia = `<div class="s">${cabecera('LA HISTORIA')}
-    <div style="position:absolute;left:64px;right:64px;top:200px">
-      <div style="font:700 44px RC;letter-spacing:.02em" class="lima">${esc(fechaTxt.toUpperCase())}</div>
-      ${e.historia.map((t, i) => `<p style="margin:${i ? 34 : 30}px 0 0;font:${i ? '400 40px/1.38 Inter' : '800 46px/1.22 Montserrat'};${i ? 'color:#D5DBE1' : ''}">${esc(t)}</p>`).join('')}
-      ${e.marcador ? `<div style="margin-top:46px;display:inline-block;background:#1B222A;border-left:8px solid #C6F432;padding:22px 30px;border-radius:10px"><div style="font-size:24px" class="gris">${esc(e.marcadorTitulo || 'Marcador de la final')}</div><div style="font:700 56px RC;white-space:nowrap;margin-top:6px">${esc(e.marcador)}</div></div>` : ''}
-    </div>${pie('DESLIZÁ →', '2/3')}</div>`;
-  const numeros = `<div class="s">${cabecera('EN NÚMEROS')}
-    <div style="position:absolute;left:64px;right:64px;top:210px">
-      ${e.datos.slice(0, 3).map((d, i) => `<div style="padding:30px 0;${i ? 'border-top:2px solid #232C36' : ''}"><div style="font:700 150px/0.9 RC;letter-spacing:-.01em" class="lima">${esc(d.valor)}</div><div style="font:800 40px/1.2 Montserrat;margin-top:12px">${esc(d.texto)}</div></div>`).join('')}
-    </div>${credito}${pie(`Fuente: ${esc(e.fuente || '')}`, '3/3')}</div>`;
+  const fechaCorta = `${e.fecha.slice(8)}/${e.fecha.slice(5, 7)}/${anio}`;
+  const credito = `Foto: ${esc(e.foto.autor || 'Wikimedia Commons')} · ${esc(e.foto.licencia || 'licencia libre')} · Wikimedia Commons`;
+  const portada = `<div class="s n">${fondoFoto(foto.data, esc(e.foto.foco || 'center 30%'), 1020)}
+    <div style="position:absolute;left:0;right:0;top:${e.titulo.length > 60 ? 700 : 760}px;text-align:center">${etiqueta(`Un día como hoy · ${fechaCorta}`)}</div>
+    <div style="position:absolute;left:66px;right:66px;top:${e.titulo.length > 60 ? 800 : 850}px">${caja(e.titulo, { size: e.titulo.length <= 45 ? 96 : e.titulo.length <= 70 ? 82 : 70 })}</div>
+    ${marco(1, 3, credito, `Hace ${hace} ${hace === 1 ? 'año' : 'años'} · deslizá →`)}</div>`;
+  const historia = `<div class="s n">
+    <div style="position:absolute;left:250px;right:60px;top:66px">${caja('La historia', { size: 84 })}</div>
+    <div style="position:absolute;left:70px;right:70px;top:290px">
+      <div class="ndor" style="font:900 italic 46px BC;letter-spacing:.03em;text-transform:uppercase">${esc(fechaTxt)}</div>
+      ${e.historia.map((t, i) => `<p style="margin:${i ? 30 : 24}px 0 0;${i ? 'font:400 38px/1.38 Inter;color:#D5DBE1' : 'font:800 italic 52px/1.08 BC;text-transform:uppercase'}">${esc(t)}</p>`).join('')}
+      ${e.marcador ? `<div class="ntarj" style="margin-top:44px;display:inline-block;padding:20px 34px;border-top:none;border-left:8px solid #D9B25E"><div class="ngris" style="font:700 28px BC;letter-spacing:.06em;text-transform:uppercase">${esc(e.marcadorTitulo || 'Marcador de la final')}</div><div class="noro" style="font:900 italic 64px BC;white-space:nowrap;margin-top:4px">${esc(e.marcador)}</div></div>` : ''}
+    </div>${marco(2, 3, '', 'Deslizá →')}</div>`;
+  const ds = e.datos.slice(0, 3);
+  const numeros = `<div class="s n">
+    <div style="position:absolute;left:250px;right:60px;top:66px">${caja('En números', { size: 84, oro: true })}</div>
+    <div style="position:absolute;left:70px;right:70px;top:300px;display:flex;flex-direction:column;gap:40px">
+      ${ds.map((d) => `<div class="ntarj" style="padding:36px 40px 40px;display:flex;align-items:center;gap:34px"><div class="noro" style="font:900 italic ${String(d.valor).length > 5 ? 96 : 140}px/0.95 BC;white-space:nowrap;padding-right:8px">${esc(d.valor)}</div><div style="font:800 italic 40px/1.08 BC;text-transform:uppercase">${esc(d.texto)}</div></div>`).join('')}
+    </div>${marco(3, 3, `Fuente: ${esc(e.fuente || '')}`, '¿Lo viste en vivo?')}</div>`;
   const texto = [`Un día como hoy, hace ${hace} ${hace === 1 ? 'año' : 'años'}.`, e.texto, e.pregunta || '¿Lo viste en vivo?', ['#tenis', '#tennis', '#undiacomohoy', ...(e.hashtags || [])].slice(0, 5).join(' ')].join('\n\n');
   return { id: `efemeride-${fechaFija || hoyISO}`, placas: [portada, historia, numeros], texto, vence: `${hoyISO}T23:59:00Z`, prioridad: 4 };
 }
@@ -140,18 +140,15 @@ async function campeones() {
   const placas = [];
   for (const [k, f] of elegidos.entries()) {
     const foto = fotosC[k];
-    const datos = `<div style="font:800 28px Montserrat;letter-spacing:.06em" class="lima">${esc(f.etiqueta.toUpperCase())} · ${esc(f.torneo.toUpperCase())}</div>
-      <div style="font:800 96px/1 Montserrat;letter-spacing:-.02em;margin:12px 0 18px">${esc(f.campeon)}</div>
-      <div style="font-size:32px" class="gris">${/wta/.test(f.cat) ? 'Campeona' : 'Campeón'} · le ganó la final a ${esc(f.finalista)}</div>
-      <div style="font:700 64px RC;margin-top:16px">${esc(f.marcador)}</div>`;
-    placas.push(foto
-      ? `<div class="s"><div style="position:absolute;inset:0 0 auto 0;height:900px;background:url('${foto}') ${focoJugador(f.campeon)}/cover"></div>
-        <div style="position:absolute;inset:0 0 auto 0;height:900px;background:linear-gradient(rgba(18,22,27,.55),rgba(18,22,27,0) 25%,rgba(18,22,27,0) 55%,#12161B)"></div>
-        ${cabecera('CAMPEONES DE LA SEMANA')}<div style="position:absolute;left:64px;right:64px;top:700px">${datos}</div>${k === n - 1 ? CRED : ''}
-        ${pie(n > 1 && k < n - 1 ? 'DESLIZÁ →' : 'La nota completa, en el link de la bio', `${k + 1}/${n}`)}</div>`
-      : `<div class="s">${cabecera('CAMPEONES DE LA SEMANA')}<div style="position:absolute;left:64px;right:64px;top:300px">
-        <div style="font:700 200px/0.85 RC;letter-spacing:-.01em" class="lima">${/wta/.test(f.cat) ? 'CAMPEONA' : 'CAMPEÓN'}</div><div style="margin-top:60px">${datos}</div></div>
-        ${pie(n > 1 && k < n - 1 ? 'DESLIZÁ →' : 'La nota completa, en el link de la bio', `${k + 1}/${n}`)}</div>`);
+    const ella = /wta/.test(f.cat);
+    const abajo = `<div style="position:absolute;left:70px;right:70px;top:1075px;display:flex;align-items:center;justify-content:space-between;gap:30px">
+      <div style="font:400 32px/1.3 Inter;color:#D5DBE1">${ella ? 'Campeona' : 'Campeón'} · le ganó la final a <b style="color:#fff">${esc(f.finalista)}</b></div>
+      <div class="noro" style="font:900 italic 62px BC;white-space:nowrap;padding-right:6px">${esc(f.marcador)}</div></div>`;
+    placas.push(`<div class="s n">${foto ? fondoFoto(foto, focoJugador(f.campeon), 960)
+      : `<div class="noro" style="position:absolute;left:0;right:0;top:300px;text-align:center;font:900 italic 230px/0.9 BC">${ella ? 'CAMPEONA' : 'CAMPEÓN'}</div>`}
+      <div style="position:absolute;left:0;right:0;top:${foto ? 770 : 600}px;text-align:center">${etiqueta(`${f.etiqueta} · ${f.torneo}`)}</div>
+      <div style="position:absolute;left:70px;right:70px;top:${foto ? 860 : 700}px">${caja(f.campeon, { size: f.campeon.length > 18 ? 92 : 112 })}</div>
+      ${abajo}${marco(k + 1, n, k === n - 1 ? CREDT : '', n > 1 && k < n - 1 ? 'Campeones de la semana · deslizá →' : 'La nota, en el link de la bio')}</div>`);
   }
   const primero = filas[0];
   const texto = [
@@ -180,27 +177,29 @@ async function resultados() {
   const sets = (n) => n.resultado.sets.map(([a, b]) => `${a}-${b}`).join(' ');
   const total = notas.length + 1;
   const fechaHoy = `${ahora.getUTCDate()} de ${MESES[ahora.getUTCMonth()]}`;
-  const portada = `<div class="s">${cabecera('RESULTADOS DEL DÍA')}
-    <div style="position:absolute;left:64px;right:64px;top:170px"><p style="margin:0;font:800 84px/1 Montserrat;letter-spacing:-.02em">Lo que pasó<br><span class="lima">hoy</span></p>
-    <p style="margin:16px 0 0;font-size:32px" class="gris">${fechaHoy} · ${notas.length} partidos</p></div>
-    <div style="position:absolute;left:64px;right:64px;top:400px">${notas.slice(0, 7).map((n, i) => `<div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;${i ? 'border-top:2px solid #232C36' : ''}">
-      <div style="min-width:0"><div style="font:800 20px Montserrat;letter-spacing:.06em" class="lima">${esc(String(n.torneo || n.categoria || '').toUpperCase())}</div>
-      <div style="font:800 36px/1.15 Montserrat;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(ape(n.resultado.ganador.nombre))} <span class="gris" style="font:400 30px Inter">le ganó a</span> ${esc(ape(n.resultado.perdedor.nombre))}</div></div>
-      <div style="font:700 40px RC;white-space:nowrap">${esc(sets(n))}</div></div>`).join('')}${notas.length > 7 ? `<div style="padding-top:14px;font-size:28px" class="gris">y ${notas.length - 7} más en las placas siguientes</div>` : ''}</div>
-    ${pie('DESLIZÁ →', `1/${total}`)}</div>`;
+  const portada = `<div class="s n">
+    <div style="position:absolute;left:250px;right:60px;top:66px">${caja('Lo que pasó hoy', { size: 84 })}</div>
+    <div style="position:absolute;left:70px;top:250px">${etiqueta(`${fechaHoy} · ${notas.length} partidos`)}</div>
+    <div style="position:absolute;left:44px;right:44px;top:350px;display:flex;flex-direction:column;gap:10px">${notas.slice(0, 7).map((n) => `<div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 24px;background:linear-gradient(90deg,#17263C,#0F1A2B);border-left:8px solid #D9B25E">
+      <div style="min-width:0"><div class="ndor" style="font:700 24px BC;letter-spacing:.06em">${esc(String(n.torneo || n.categoria || '').toUpperCase())}</div>
+      <div style="font:800 italic 40px/1.05 BC;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(ape(n.resultado.ganador.nombre))} <span class="ngris" style="font:700 30px BC;text-transform:none">le ganó a</span> ${esc(ape(n.resultado.perdedor.nombre))}</div></div>
+      <div style="font:900 italic 42px BC;white-space:nowrap">${esc(sets(n))}</div></div>`).join('')}${notas.length > 7 ? `<div class="ngris" style="padding-top:8px;font:700 30px BC">Y ${notas.length - 7} MÁS EN LAS PLACAS SIGUIENTES</div>` : ''}</div>
+    ${marco(1, total, '', 'Deslizá →')}</div>`;
   const fila = (j, gano, n) => {
     const f = caras[j.nombre];
-    const circulo = f ? `<span style="width:240px;height:240px;border-radius:50%;flex:none;background:#1B222A url('${f}') ${focoJugador(j.nombre)}/cover;${gano ? 'box-shadow:0 0 0 6px #C6F432' : 'filter:grayscale(.35)'}"></span>`
-      : `<span style="width:240px;height:240px;border-radius:50%;flex:none;background:#1B222A;display:flex;align-items:center;justify-content:center;font:800 72px Montserrat" class="gris">${esc(iniciales(j.nombre))}</span>`;
-    const celdas = n.resultado.sets.map((st) => { const [a, b] = gano ? st : [st[1], st[0]]; return `<span style="width:78px;text-align:center;font:700 76px RC;${a > b ? 'color:#C6F432' : 'color:#6B7785'}">${a}</span>`; }).join('');
-    return `<div style="display:flex;align-items:center;gap:36px;padding:44px 0">${circulo}
-      <div style="flex:1;min-width:0"><div style="font:800 54px/1.06 Montserrat;${gano ? '' : 'color:#AEB7C1'}">${esc(j.nombre)}</div><div style="font-size:28px;margin-top:8px" class="gris">${esc(String(j.pais || '').toUpperCase())}${j.ranking ? ` · N° ${j.ranking}` : ''}</div></div>
+    const borde = gano ? 'box-shadow:0 0 0 6px #D9B25E' : 'filter:grayscale(.4);box-shadow:0 0 0 4px #2A3B54';
+    const circulo = f ? `<span style="width:240px;height:240px;border-radius:50%;flex:none;background:#16263C url('${f}') ${focoJugador(j.nombre)}/cover;${borde}"></span>`
+      : `<span class="ngris" style="width:240px;height:240px;border-radius:50%;flex:none;background:#16263C;display:flex;align-items:center;justify-content:center;font:900 italic 80px BC;${borde}">${esc(iniciales(j.nombre))}</span>`;
+    const celdas = n.resultado.sets.map((st) => { const [a, b] = gano ? st : [st[1], st[0]]; return `<span class="${a > b ? 'noro' : ''}" style="width:74px;text-align:center;font:900 italic 80px BC;${a > b ? '' : 'color:#5B6878'}">${a}</span>`; }).join('');
+    return `<div style="display:flex;align-items:center;gap:36px;padding:46px 0">${circulo}
+      <div style="flex:1;min-width:0"><div style="font:900 italic 62px/0.95 BC;text-transform:uppercase;${gano ? '' : 'color:#AEB7C1'}">${esc(j.nombre)}</div><div class="ngris" style="font:700 30px BC;margin-top:8px">${esc(String(j.pais || '').toUpperCase())}${j.ranking ? ` · N° ${j.ranking}` : ''}</div></div>
       <div style="display:flex">${celdas}</div></div>`;
   };
-  const placas = [portada, ...notas.map((n, k) => `<div class="s">${cabecera(String(n.torneo || n.categoria || 'TENIS').toUpperCase())}
-    <div style="position:absolute;left:64px;right:64px;top:250px">${fila(n.resultado.ganador, true, n)}<div style="height:2px;background:#232C36"></div>${fila(n.resultado.perdedor, false, n)}
-    <div style="margin-top:40px;border-left:8px solid #C6F432;padding:6px 0 6px 30px"><p style="margin:0;font:400 42px/1.38 Inter;color:#E1E6EB;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden">${esc(n.bajada || '')}</p></div></div>
-    ${k === notas.length - 1 ? CRED : ''}${pie(k < notas.length - 1 ? 'DESLIZÁ →' : 'Todas las notas, en el link de la bio', `${k + 2}/${total}`)}</div>`)];
+  const placas = [portada, ...notas.map((n, k) => `<div class="s n">
+    <div style="position:absolute;left:250px;right:60px;top:66px">${caja(String(n.torneo || n.categoria || 'Tenis'), { size: 72 })}</div>
+    <div style="position:absolute;left:60px;right:60px;top:250px">${fila(n.resultado.ganador, true, n)}<div style="height:3px;background:linear-gradient(90deg,#D9B25E,rgba(217,178,94,0))"></div>${fila(n.resultado.perdedor, false, n)}
+    <div class="ntarj" style="margin-top:46px;border-top:none;border-left:8px solid #D9B25E;padding:26px 34px"><p style="margin:0;font:400 40px/1.38 Inter;color:#E1E6EB;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden">${esc(n.bajada || '')}</p></div></div>
+    ${marco(k + 2, total, k === notas.length - 1 ? CREDT : '', k < notas.length - 1 ? 'Deslizá →' : 'Las notas, en el link de la bio')}</div>`)];
   const texto = [
     `Los resultados del día: ${notas.slice(0, 4).map((n) => `${n.resultado.ganador.nombre} le ganó a ${n.resultado.perdedor.nombre}`).join('; ')}${notas.length > 4 ? ' y más' : ''}.`,
     '¿Cuál fue el mejor partido de hoy?',
@@ -247,11 +246,11 @@ const trabajos = forzada === 'efemerides' && PRUEBA
 for (const trabajo of trabajos) {
   const pieza = await trabajo();
   if (!pieza) continue;
-  if (cola.some((c) => c.id === pieza.id)) continue;
+  if (!PRUEBA && cola.some((c) => c.id === pieza.id)) continue;
   const archivos = pieza.placas.map((_, i) => path.join(ROOT, PRUEBA ? 'static/ig/prueba' : 'static/ig/series', `${pieza.id}-${i + 1}.jpg`));
   if (!(await dibujar(pieza.placas, archivos))) { log('Serie descartada por imágenes:', pieza.id); continue; }
   if (PRUEBA) { log('Prueba dibujada:', pieza.id); continue; }
-  cola.push({ id: pieza.id, prioridad: pieza.prioridad, imagenes: archivos.map((a) => `${SITIO}/ig/series/${path.basename(a)}`), texto: pieza.texto, vence: pieza.vence, ...(pieza.claves ? { claves: pieza.claves } : {}), ...(pieza.tanda ? { tanda: pieza.tanda } : {}) });
+  cola.push({ id: pieza.id, prioridad: pieza.prioridad, imagenes: archivos.map((a) => `${SITIO}/ig/series/${path.basename(a)}`), texto: conGrafia(pieza.texto), vence: pieza.vence, ...(pieza.claves ? { claves: pieza.claves } : {}), ...(pieza.tanda ? { tanda: pieza.tanda } : {}) });
   fs.writeFileSync(COLA, JSON.stringify(cola, null, 1) + '\n');
   if (pieza.estado) { Object.assign(ESTADO, pieza.estado); fs.writeFileSync(ARCHIVO_ESTADO, JSON.stringify(ESTADO, null, 1) + '\n'); }
   log('Serie lista para Instagram:', pieza.id);

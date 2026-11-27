@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - run: npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed
+      - run: npm i --no-save --no-audit --no-fund --silent playwright-core @fontsource/inter @fontsource/montserrat @fontsource/roboto-condensed @fontsource/barlow-condensed
       - run: node scripts/ig-series.mjs ${{ inputs.serie }} ${{ inputs.modo }}
       - run: |
           git config user.name "A Todo Tenis" && git config user.email "actions@users.noreply.github.com"

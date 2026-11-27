@@ -95,6 +95,40 @@ body{margin:0;background:#000}
 .pie{position:absolute;left:64px;right:64px;bottom:52px;display:flex;justify-content:space-between;font-size:28px;color:#9AA5B1}.pie b{font:800 28px Montserrat;color:#F2F4F5}
 .lima{color:#C6F432}.gris{color:#9AA5B1}
 `;
+// ---------- Diseño v2 (desde nov 2026): foto protagonista, cajas inclinadas azul marino y dorado, Barlow Condensed ----------
+const ORO = 'linear-gradient(180deg,#F8DD95 0%,#D3A443 55%,#A87C25 100%)';
+export const CSS_V2 = `
+@font-face{font-family:BC;font-weight:900;font-style:italic;src:url(${fuente('barlow-condensed/files/barlow-condensed-latin-900-italic.woff2')})}
+@font-face{font-family:BC;font-weight:800;font-style:italic;src:url(${fuente('barlow-condensed/files/barlow-condensed-latin-800-italic.woff2')})}
+@font-face{font-family:BC;font-weight:700;src:url(${fuente('barlow-condensed/files/barlow-condensed-latin-700-normal.woff2')})}
+@font-face{font-family:Inter;font-weight:700;src:url(${fuente('inter/files/inter-latin-700-normal.woff2')})}
+.s.n{background:radial-gradient(120% 70% at 50% 0%,#1D3352,#0B1320 70%);box-sizing:border-box}.s.n *{box-sizing:border-box}
+.nfoto{position:absolute;left:0;right:0;top:0;background-size:cover;background-repeat:no-repeat}
+.nsombra{position:absolute;left:0;right:0;top:0;background:linear-gradient(180deg,rgba(6,10,18,.55) 0%,rgba(6,10,18,0) 18%,rgba(6,10,18,0) 55%,rgba(11,19,32,.92) 85%,#0B1320 100%)}
+.nlogo{position:absolute;left:0;top:0;width:230px;height:210px;background:${ORO};clip-path:polygon(0 0,100% 0,72% 100%,0 100%);z-index:5}
+.nlogo b{position:absolute;left:34px;top:40px;font:900 italic 54px/0.86 BC;color:#0B1320;letter-spacing:.01em}
+.nlogo i{position:absolute;left:34px;top:150px;width:56px;height:10px;background:#0B1320}
+.ncont{position:absolute;right:44px;top:44px;z-index:5;background:rgba(11,19,32,.75);border:2px solid rgba(217,178,94,.5);border-radius:40px;padding:8px 24px;font:700 30px BC;color:#fff}
+.netq{display:inline-block;background:${ORO};color:#0B1320;font:900 italic 38px/1 BC;padding:14px 26px;letter-spacing:.03em;transform:skewX(-10deg);text-transform:uppercase}
+.netq span{display:inline-block;transform:skewX(10deg)}
+.ncaja{position:relative;background:linear-gradient(160deg,#1E3350 0%,#16263C 45%,#0B1320 100%);color:#fff;border:5px solid #D9B25E;padding:28px 40px 32px;transform:skewX(-6deg);box-shadow:16px 16px 0 #A87C25,0 30px 60px rgba(0,0,0,.55)}
+.ncaja h1{margin:0;transform:skewX(6deg);font:900 italic 100px/0.92 BC;text-transform:uppercase;text-align:center}
+.ncaja.oro{background:${ORO};color:#0B1320;border-color:#F8DD95;box-shadow:16px 16px 0 #16263C,0 30px 60px rgba(0,0,0,.55)}
+.nbarra{position:absolute;left:0;right:0;bottom:0;height:92px;background:linear-gradient(90deg,#16263C,#0B1320);border-top:6px solid #D9B25E;clip-path:polygon(140px 0,100% 0,100% 100%,0 100%,0 60%);z-index:5}
+.nbarra span{position:absolute;right:44px;bottom:22px;font:800 italic 40px BC;color:#E2B85C;letter-spacing:.04em}
+.nbarra em{position:absolute;left:170px;bottom:26px;font:700 28px BC;color:#9AA5B1;font-style:normal;letter-spacing:.06em;text-transform:uppercase}
+.ncred{position:absolute;left:44px;right:44px;bottom:104px;font:400 19px Inter;color:#8E9BAD;z-index:4}
+.noro{background:${ORO};-webkit-background-clip:text;background-clip:text;color:transparent}
+.ndor{color:#E2B85C}.ngris{color:#9AA5B1}
+.ntarj{background:linear-gradient(180deg,#17263C,#0E1828);border:2px solid #2A3B54;border-top:6px solid #D9B25E}
+`;
+// Marco común: bloque de marca, contador n/total, crédito opcional y barra inferior con el usuario
+export const marco = (n, total, cred = '', aviso = '') => `<div class="nlogo"><b>A TODO<br>TENIS</b><i></i></div><div class="ncont">${n}/${total}</div>${cred ? `<div class="ncred">${cred}</div>` : ''}<div class="nbarra">${aviso ? `<em>${esc(aviso)}</em>` : ''}<span>@ATODOTENIS_WEB</span></div>`;
+// Caja de título inclinada; el tamaño baja solo con textos largos
+export const caja = (txt, { size, oro = false } = {}) => { const t = String(txt); const z = size || (t.length <= 22 ? 112 : t.length <= 40 ? 96 : t.length <= 60 ? 82 : 70); return `<div class="ncaja${oro ? ' oro' : ''}"><h1 style="font-size:${z}px">${esc(t)}</h1></div>`; };
+export const etiqueta = (txt) => `<div class="netq"><span>${esc(txt)}</span></div>`;
+export const fondoFoto = (url, foco = 'center 30%', alto = 1000) => `<div class="nfoto" style="height:${alto}px;background-image:url('${url}');background-position:${foco}"></div><div class="nsombra" style="height:${alto}px"></div>`;
+
 export const cabecera = (chip) => `<div class="chip">${esc(chip)}</div><div class="marca">A Todo <b>Tenis</b></div>`;
 export const pie = (izq, der) => `<div class="pie"><span>${izq}</span><b>${esc(der)}</b></div>`;
 
@@ -105,7 +139,7 @@ export async function dibujar(placas, salidas) {
   try {
     const p = await nav.newPage({ viewport: { width: 1080, height: 1350 } });
     const tmp = path.join(ROOT, 'node_modules', '.ig-serie.html');
-    fs.writeFileSync(tmp, `<!doctype html><html><head><meta charset="utf-8"><style>${CSS_BASE}</style></head><body>${placas.map((h, i) => `<div id="s${i}">${h}</div>`).join('')}</body></html>`);
+    fs.writeFileSync(tmp, `<!doctype html><html><head><meta charset="utf-8"><style>${CSS_BASE}${placas.some((h) => h.includes('class="s n')) ? CSS_V2 : ''}</style></head><body>${placas.map((h, i) => `<div id="s${i}">${h}</div>`).join('')}</body></html>`);
     await p.goto('file://' + tmp, { waitUntil: 'networkidle', timeout: 60000 });
     await p.evaluate(async () => { await Promise.all([...document.fonts].map((f) => f.load().catch(() => null))); await document.fonts.ready; });
     // Ninguna imagen rota y todas las fuentes cargadas: si no, no se genera nada.
