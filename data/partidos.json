@@ -68562,7 +68562,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T03:45:26.025Z",
+  "visto": "2026-11-27T04:15:35.265Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -68570,11 +68570,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T03:45:15.208477Z",
-   "age_seconds": 10,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-27T04:15:22.206297Z",
+   "age_seconds": 11,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68583,35 +68583,35 @@
    "games": [
     [
      5,
-     0
+     6
     ],
     [
      7,
-     0
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 1,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "40",
-    "0"
+    "15",
+    "30"
    ],
-   "received_at": "2026-11-27T03:45:14.847082Z",
-   "sequence": 83,
-   "server": 1,
+   "received_at": "2026-11-27T04:15:21.982760Z",
+   "sequence": 131,
+   "server": 2,
    "sets": [
-    0,
+    1,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 4,
    "stale": false,
-   "timestamp": "2026-11-27T03:45:24.788146Z",
+   "timestamp": "2026-11-27T04:15:22.206256Z",
    "puntos": [
-    "40",
-    "0"
+    "15",
+    "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -68639,9 +68639,9 @@
    "ranking": 224
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-27T02:15:29.244Z",
+  "visto": "2026-11-27T04:15:35.609Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -68649,11 +68649,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T02:15:11.197893Z",
-   "age_seconds": 16,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "accepted_at": "2026-11-27T02:22:39.980875Z",
+   "age_seconds": 6775,
+   "changing_sources_count": 0,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68662,38 +68662,49 @@
    "games": [
     [
      6,
-     6
+     7
     ],
     [
      4,
      6
     ]
    ],
-   "is_tiebreak": true,
-   "observed_age_seconds": 7,
+   "is_tiebreak": false,
+   "observed_age_seconds": 6775,
    "origin": "observed",
    "points": [
     "0",
-    "2"
+    "0"
    ],
-   "received_at": "2026-11-27T02:15:10.864744Z",
-   "sequence": 128,
-   "server": 1,
+   "received_at": "2026-11-27T02:22:39.513564Z",
+   "sequence": 138,
+   "server": 2,
    "sets": [
-    1,
+    2,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-27T02:15:11.197887Z",
+   "tiebreaks": [
+    null,
+    {
+     "p1": 7,
+     "p2": 5
+    }
+   ],
+   "tiebreaks_source": [
+    null,
+    "summary"
+   ],
+   "timestamp": "2026-11-27T02:22:39.980867Z",
    "puntos": [
     "0",
-    "2"
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "225228": {
   "id": 225228,
@@ -69060,7 +69071,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T03:45:26.025Z",
+  "visto": "2026-11-27T04:15:35.265Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -69068,11 +69079,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T03:44:55.161847Z",
-   "age_seconds": 30,
+   "accepted_at": "2026-11-27T04:15:02.454594Z",
+   "age_seconds": 31,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -69080,31 +69091,33 @@
    },
    "games": [
     [
-     3
+     7,
+     1
     ],
     [
-     3
+     5,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "15",
+    "0",
     "15"
    ],
-   "received_at": "2026-11-27T03:44:55.048258Z",
-   "sequence": 37,
+   "received_at": "2026-11-27T04:15:02.252681Z",
+   "sequence": 85,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-27T03:45:22.445982Z",
+   "timestamp": "2026-11-27T04:15:33.724436Z",
    "puntos": [
-    "15",
+    "0",
     "15"
    ],
    "saca": 1
@@ -69137,7 +69150,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T03:45:26.025Z",
+  "visto": "2026-11-27T04:15:35.265Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -69145,11 +69158,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T03:45:12.059333Z",
-   "age_seconds": 13,
+   "accepted_at": "2026-11-27T04:15:24.801676Z",
+   "age_seconds": 9,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -69157,34 +69170,36 @@
    },
    "games": [
     [
-     3
+     7,
+     0
     ],
     [
-     3
+     6,
+     0
     ]
    ],
    "is_tiebreak": false,
    "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "15",
+    "40",
     "40"
    ],
-   "received_at": "2026-11-27T03:45:11.502700Z",
-   "sequence": 50,
-   "server": 2,
+   "received_at": "2026-11-27T04:15:24.437040Z",
+   "sequence": 97,
+   "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-27T03:45:25.228947Z",
+   "timestamp": "2026-11-27T04:15:24.801675Z",
    "puntos": [
-    "15",
+    "40",
     "40"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -72610,9 +72625,9 @@
    "ranking": 123
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-27T02:15:29.244Z",
+  "visto": "2026-11-27T04:15:35.693Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -72620,11 +72635,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T02:15:20.596104Z",
-   "age_seconds": 6,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "accepted_at": "2026-11-27T02:30:29.910640Z",
+   "age_seconds": 6305,
+   "changing_sources_count": 0,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -72639,34 +72654,34 @@
     [
      6,
      4,
-     2
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 6305,
    "origin": "observed",
    "points": [
-    "15",
-    "40"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-27T02:15:20.256363Z",
-   "sequence": 151,
+   "received_at": "2026-11-27T02:30:29.460932Z",
+   "sequence": 175,
    "server": 2,
    "sets": [
     1,
-    1
+    2
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-27T02:15:20.596102Z",
+   "timestamp": "2026-11-27T02:30:29.910637Z",
    "puntos": [
-    "15",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "225520": {
   "id": 225520,
@@ -72729,7 +72744,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-27T03:45:26.025Z",
   "torneoClave": "challenger|Playford 2",
@@ -72914,9 +72929,9 @@
    "ranking": 338
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-27T03:00:38.198Z",
+  "visto": "2026-11-27T04:15:35.475Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -72924,11 +72939,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T03:00:16.797333Z",
-   "age_seconds": 21,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "accepted_at": "2026-11-27T03:04:23.013304Z",
+   "age_seconds": 4272,
+   "changing_sources_count": 0,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -72941,34 +72956,34 @@
     ],
     [
      6,
-     4
+     6
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 4259,
    "origin": "observed",
    "points": [
-    "40",
-    "AD"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-27T03:00:16.493142Z",
-   "sequence": 72,
+   "received_at": "2026-11-27T03:04:22.697583Z",
+   "sequence": 79,
    "server": 1,
    "sets": [
     0,
-    1
+    2
    ],
-   "sources_count": 3,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-27T03:00:37.633445Z",
+   "timestamp": "2026-11-27T03:04:36.068953Z",
    "puntos": [
-    "40",
-    "AD"
+    "0",
+    "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 2
  },
  "225531": {
   "id": 225531,
