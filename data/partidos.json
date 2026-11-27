@@ -73601,26 +73601,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-27T08:00:00Z",
+  "horario": "2026-11-27T08:10:00Z",
   "j1": {
    "id": 669,
    "nombre": "Thomas Faurel",
    "pais": "fra",
-   "ranking": 295
+   "ranking": 293
   },
   "j2": {
    "id": 2325,
-   "nombre": "R. Guna",
+   "nombre": "Robert Guna",
    "pais": "rou",
-   "ranking": null
+   "ranking": 765
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T05:45:25.765Z",
+  "visto": "2026-11-27T08:15:28.081Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-27T08:15:00.432679Z",
+   "age_seconds": 27,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "30",
+    "0"
+   ],
+   "received_at": "2026-11-27T08:14:59.756479Z",
+   "sequence": 9,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-27T08:15:09.864713Z",
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225563": {
   "id": 225563,
@@ -73631,26 +73678,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-27T08:00:00Z",
+  "horario": "2026-11-27T08:10:00Z",
   "j1": {
-   "id": 2111,
-   "nombre": "Vadym Ursu",
-   "pais": "ukr",
-   "ranking": 438
-  },
-  "j2": {
    "id": 1316,
    "nombre": "Tuncay Duran",
    "pais": "tur",
-   "ranking": 540
+   "ranking": 530
+  },
+  "j2": {
+   "id": 2111,
+   "nombre": "Vadym Ursu",
+   "pais": "ukr",
+   "ranking": 456
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T05:45:25.765Z",
+  "visto": "2026-11-27T08:15:28.081Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-27T08:14:09.228824Z",
+   "age_seconds": 78,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-27T08:14:08.994416Z",
+   "sequence": 8,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-27T08:15:23.763517Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225564": {
   "id": 225564,
