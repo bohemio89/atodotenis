@@ -1980,7 +1980,14 @@
   "nombre": "Davis Cup Single Matches",
   "tour": "atp",
   "id": "3120",
-  "meta": null,
+  "meta": {
+   "ciudad": null,
+   "pais": null,
+   "categoria": null,
+   "superficie": null,
+   "cubierto": false,
+   "genero": "men"
+  },
   "campeones": {},
   "primeraVez": "2026-11-27T17:10:00Z",
   "ultimaVez": "2026-11-27T17:10:00Z",
