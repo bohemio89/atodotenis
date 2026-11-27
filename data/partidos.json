@@ -66493,7 +66493,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-27T00:00:42.078Z",
   "torneoClave": "challenger|Buenos Aires",
@@ -66822,7 +66822,7 @@
    "ranking": null
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-27T00:00:42.078Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
@@ -68236,7 +68236,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T00:00:42.078Z",
+  "visto": "2026-11-27T00:45:24.187Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -68244,11 +68244,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T00:00:02.346671Z",
-   "age_seconds": 39,
+   "accepted_at": "2026-11-27T00:44:54.392461Z",
+   "age_seconds": 29,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -68256,32 +68256,34 @@
    },
    "games": [
     [
-     6
+     7,
+     3
     ],
     [
-     6
+     6,
+     5
     ]
    ],
-   "is_tiebreak": true,
-   "observed_age_seconds": 0,
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "1",
-    "1"
+    "30",
+    "0"
    ],
-   "received_at": "2026-11-27T00:00:02.157718Z",
-   "sequence": 84,
+   "received_at": "2026-11-27T00:44:54.232071Z",
+   "sequence": 145,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-27T00:00:35.074455Z",
+   "timestamp": "2026-11-27T00:45:19.922834Z",
    "puntos": [
-    "1",
-    "1"
+    "30",
+    "0"
    ],
    "saca": 2
   },
@@ -68572,26 +68574,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-27T00:30:00Z",
+  "horario": "2026-11-27T00:40:00Z",
   "j1": {
    "id": 600,
    "nombre": "Christian Langmo",
    "pais": "usa",
-   "ranking": 396
+   "ranking": 379
   },
   "j2": {
    "id": 1011,
    "nombre": "Matthew Dellavedova",
    "pais": "aus",
-   "ranking": 227
+   "ranking": 224
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T23:30:34.939Z",
+  "visto": "2026-11-27T00:45:24.187Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "3191",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-27T00:44:45.632610Z",
+   "age_seconds": 38,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-27T00:44:45.215219Z",
+   "sequence": 7,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-27T00:45:18.539462Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225228": {
   "id": 225228,
@@ -71326,27 +71375,17 @@
  },
  "225387": {
   "id": 225387,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "San Salvador (El Salvador)",
   "ronda": "San Salvador - Quarter-finals",
   "rondaCod": "QF",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-27T00:30:00Z",
+  "horario": "2026-11-27T00:40:00Z",
   "j1": {
-   "id": 47474,
-   "nombre": "Arevalo/ Reyes-Varela",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "esa",
-    null
-   ]
-  },
-  "j2": {
    "id": 46896,
-   "nombre": "Fradkin/ Nefve",
+   "nombre": "Fradkin / Nefve",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -71354,13 +71393,70 @@
     "usa"
    ]
   },
+  "j2": {
+   "id": 47474,
+   "nombre": "Arevalo / Miguel Angel Reyes-Varela",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "esa",
+    null
+   ]
+  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T23:30:34.939Z",
+  "visto": "2026-11-27T00:45:24.187Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14883",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-27T00:45:00.461216Z",
+   "age_seconds": 23,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-27T00:45:00.232066Z",
+   "sequence": 11,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-27T00:45:16.580892Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225388": {
   "id": 225388,
@@ -71562,7 +71658,7 @@
    "ranking": 181
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-27T00:00:42.078Z",
   "torneoClave": "challenger|Buenos Aires, Argentina",
@@ -72351,26 +72447,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-27T00:30:00Z",
+  "horario": "2026-11-27T00:40:00Z",
   "j1": {
+   "id": 465,
+   "nombre": "Carl Emil Overbeck",
+   "pais": "den",
+   "ranking": 337
+  },
+  "j2": {
    "id": 842,
    "nombre": "Dane Sweeny",
    "pais": "aus",
    "ranking": 123
   },
-  "j2": {
-   "id": 465,
-   "nombre": "Carl Emil Overbeck",
-   "pais": "den",
-   "ranking": 324
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-26T23:30:34.939Z",
+  "visto": "2026-11-27T00:45:24.187Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "3191",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-27T00:45:04.263944Z",
+   "age_seconds": 19,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "0",
+    "40"
+   ],
+   "received_at": "2026-11-27T00:45:03.796570Z",
+   "sequence": 11,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-27T00:45:21.090094Z",
+   "puntos": [
+    "0",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225520": {
   "id": 225520,
