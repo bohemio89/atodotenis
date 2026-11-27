@@ -75190,7 +75190,7 @@
    "ranking": 691
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-27T17:00:41.803Z",
   "torneoClave": "challenger|Florianopolis",
@@ -75974,6 +75974,84 @@
   "ganador": 1,
   "visto": "2026-11-27T17:00:41.916Z",
   "torneoClave": "atp|ATP Davis Cup - World Group",
+  "importante": true
+ },
+ "225800": {
+  "id": 225800,
+  "tour": "atp",
+  "tier": "davis_cup",
+  "torneo": "Davis Cup Single Matches",
+  "torneoId": "3120",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "cubierto": true,
+  "dobles": false,
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-27T17:10:00Z",
+  "j1": {
+   "id": 22,
+   "nombre": "Jiri Lehecka",
+   "pais": "cze",
+   "ranking": 14
+  },
+  "j2": {
+   "id": 652,
+   "nombre": "Flavio Cobolli",
+   "pais": "ita",
+   "ranking": 7
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-27T17:45:07.294370Z",
+   "age_seconds": 17,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     6,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "40"
+   ],
+   "received_at": "2026-11-27T17:45:07.218455Z",
+   "sequence": 49,
+   "server": 2,
+   "sets": [
+    1,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-27T17:45:07.294368Z",
+   "puntos": [
+    "0",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-27T17:45:26.216Z",
+  "torneoClave": "atp|Davis Cup Single Matches",
   "importante": true
  },
  "null": {
