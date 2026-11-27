@@ -287,7 +287,10 @@
  "galeria": [
   {
    "despuesDe": 0,
-   "url": "/notas/copa-davis-2016-numeros.jpg",
+   "url": {
+    "es": "/notas/copa-davis-2016-numeros.jpg",
+    "en": "/notas/copa-davis-2016-numeros-en.jpg"
+   },
    "alt": {
     "es": "El título en números: 5 finales, 35 años desde la primera, 4 h 53 de la remontada de Del Potro y 15 países campeones",
     "en": "The title in numbers: 5 finals, 35 years since the first, Del Potro's 4h53 comeback and 15 champion nations"
