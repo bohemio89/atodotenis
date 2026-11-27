@@ -69517,26 +69517,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-27T09:00:00Z",
+  "horario": "2026-11-27T09:10:00Z",
   "j1": {
    "id": 96,
    "nombre": "Alejo Sanchez Quilez",
    "pais": "esp",
-   "ranking": 319
+   "ranking": 321
   },
   "j2": {
    "id": 919,
    "nombre": "Philip Henning",
    "pais": "rsa",
-   "ranking": 233
+   "ranking": 236
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T05:45:25.765Z",
+  "visto": "2026-11-27T09:15:37.199Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-27T09:15:07.107522Z",
+   "age_seconds": 30,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "30",
+    "30"
+   ],
+   "received_at": "2026-11-27T09:15:06.877522Z",
+   "sequence": 11,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-27T09:15:33.476594Z",
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225274": {
   "id": 225274,
@@ -73541,7 +73588,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T08:45:28.539Z",
+  "visto": "2026-11-27T09:15:37.199Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
   "importante": false,
@@ -73549,11 +73596,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T08:44:56.476154Z",
-   "age_seconds": 31,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-27T09:15:09.213245Z",
+   "age_seconds": 27,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 6,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -73561,34 +73608,36 @@
    },
    "games": [
     [
-     5
+     7,
+     0
     ],
     [
-     3
+     6,
+     0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "40",
-    "AD"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-27T08:44:55.277810Z",
-   "sequence": 59,
-   "server": 2,
+   "received_at": "2026-11-27T09:15:08.900125Z",
+   "sequence": 101,
+   "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-27T08:45:09.194113Z",
+   "timestamp": "2026-11-27T09:15:34.022459Z",
    "puntos": [
-    "40",
-    "AD"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -73618,7 +73667,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T08:45:28.539Z",
+  "visto": "2026-11-27T09:15:37.199Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
   "importante": false,
@@ -73626,11 +73675,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-27T08:45:14.143195Z",
-   "age_seconds": 13,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-27T09:14:50.480304Z",
+   "age_seconds": 46,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 0,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -73638,34 +73687,36 @@
    },
    "games": [
     [
+     7,
      4
     ],
     [
-     4
+     5,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-27T08:45:13.751159Z",
-   "sequence": 61,
-   "server": 1,
+   "received_at": "2026-11-27T09:14:48.674013Z",
+   "sequence": 106,
+   "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-27T08:45:23.819008Z",
+   "timestamp": "2026-11-27T09:14:59.820655Z",
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -74027,26 +74078,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-27T09:00:00Z",
+  "horario": "2026-11-27T09:10:00Z",
   "j1": {
-   "id": 11732,
-   "nombre": "O. Ovcharenko",
-   "pais": "ukr",
-   "ranking": null
-  },
-  "j2": {
    "id": 1068,
    "nombre": "Ioannis Xilas",
    "pais": "gre",
-   "ranking": 519
+   "ranking": 514
+  },
+  "j2": {
+   "id": 11732,
+   "nombre": "Oleksandr Ovcharenko",
+   "pais": "ukr",
+   "ranking": 626
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-27T05:45:25.765Z",
+  "visto": "2026-11-27T09:15:37.199Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-27T09:15:13.914953Z",
+   "age_seconds": 23,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 6,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "0",
+    "30"
+   ],
+   "received_at": "2026-11-27T09:15:13.403684Z",
+   "sequence": 10,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-27T09:15:36.979457Z",
+   "puntos": [
+    "0",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225629": {
   "id": 225629,
