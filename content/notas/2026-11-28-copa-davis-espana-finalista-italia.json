@@ -51,14 +51,23 @@
     {
       "despuesDe": 1,
       "tipo": "serie",
-      "titulo": "España 2-0 Gran Bretaña",
+      "titulo": {
+        "es": "España 2-0 Gran Bretaña",
+        "en": "Spain 2-0 Great Britain"
+      },
       "local": {
         "pais": "esp",
-        "nombre": "España"
+        "nombre": {
+          "es": "España",
+          "en": "Spain"
+        }
       },
       "visita": {
         "pais": "gbr",
-        "nombre": "Gran Bretaña"
+        "nombre": {
+          "es": "Gran Bretaña",
+          "en": "Great Britain"
+        }
       },
       "resultado": [
         2,
@@ -66,7 +75,10 @@
       ],
       "partidos": [
         {
-          "tipo": "Primer single",
+          "tipo": {
+            "es": "Primer single",
+            "en": "First singles"
+          },
           "a": "Rafael Jódar",
           "b": "Cameron Norrie",
           "gana": "a",
@@ -82,7 +94,10 @@
           ]
         },
         {
-          "tipo": "Segundo single",
+          "tipo": {
+            "es": "Segundo single",
+            "en": "Second singles"
+          },
           "a": "Carlos Alcaraz",
           "b": "Arthur Fery",
           "gana": "a",
@@ -98,26 +113,44 @@
           ]
         }
       ],
-      "fuente": "Copa Davis (daviscup.com)"
+      "fuente": {
+        "es": "Copa Davis (daviscup.com)",
+        "en": "Davis Cup"
+      }
     },
     {
       "despuesDe": 7,
       "tipo": "cuadro",
-      "titulo": "El camino a la final",
-      "fuente": "Copa Davis",
+      "titulo": {
+        "es": "El camino a la final",
+        "en": "The road to the final"
+      },
+      "fuente": {
+        "es": "Copa Davis",
+        "en": "Davis Cup"
+      },
       "rondas": [
         {
-          "nombre": "Cuartos de final",
+          "nombre": {
+            "es": "Cuartos de final",
+            "en": "Quarter-finals"
+          },
           "cruces": [
             {
               "a": {
                 "pais": "esp",
-                "nombre": "España",
+                "nombre": {
+                  "es": "España",
+                  "en": "Spain"
+                },
                 "r": 2
               },
               "b": {
                 "pais": "aut",
-                "nombre": "Austria",
+                "nombre": {
+                  "es": "Austria",
+                  "en": "Austria"
+                },
                 "r": 0
               },
               "gana": "a"
@@ -125,17 +158,26 @@
           ]
         },
         {
-          "nombre": "Semifinales",
+          "nombre": {
+            "es": "Semifinales",
+            "en": "Semi-finals"
+          },
           "cruces": [
             {
               "a": {
                 "pais": "esp",
-                "nombre": "España",
+                "nombre": {
+                  "es": "España",
+                  "en": "Spain"
+                },
                 "r": 2
               },
               "b": {
                 "pais": "gbr",
-                "nombre": "Gran Bretaña",
+                "nombre": {
+                  "es": "Gran Bretaña",
+                  "en": "Great Britain"
+                },
                 "r": 0
               },
               "gana": "a"
@@ -143,23 +185,50 @@
           ]
         },
         {
-          "nombre": "Final",
+          "nombre": {
+            "es": "Final",
+            "en": "Final"
+          },
           "cruces": [
             {
               "a": {
                 "pais": "esp",
-                "nombre": "España"
+                "nombre": {
+                  "es": "España",
+                  "en": "Spain"
+                }
               },
               "b": {
                 "pais": "ita",
-                "nombre": "Italia"
+                "nombre": {
+                  "es": "Italia",
+                  "en": "Italy"
+                }
               },
               "dest": true,
-              "cuando": "Domingo 29 · 15:00 h de Bolonia"
+              "cuando": {
+                "es": "Domingo 29 · 15:00 h de Bolonia",
+                "en": "Sunday 29 · 3:00 p.m. Bologna time"
+              }
             }
           ]
         }
       ]
     }
-  ]
+  ],
+  "en": {
+    "titulo": "Spain reach the Davis Cup final: Alcaraz and Jódar set up a rematch with Italy",
+    "bajada": "Spain beat Great Britain 2-0 in Bologna, with wins for Rafael Jódar and Carlos Alcaraz. On Sunday, they will challenge the three-time defending champions for the title.",
+    "cuerpo": [
+      "Spain are one step away from lifting the Davis Cup once again. David Ferrer's team defeated Great Britain 2-0 in the Final 8 semi-finals in Bologna to reach the title match for the second year in a row. Their opponents will be Italy, champions in each of the last three editions and the team that beat Spain in the 2025 final.",
+      "The tie was decided in the singles. Rafael Jódar gave Spain the lead with a hard-fought 6-2, 7-5 win over Cameron Norrie in 92 minutes. The Madrid-born player took the initiative from the baseline, secured two breaks in the first set and held his nerve when the Briton fought back in the second.",
+      "Norrie levelled the second set at 4-4, but Jódar stayed composed. He regained control at the decisive moment, broke again in the eleventh game and served out the match. It was another significant step in the young Spaniard's breakthrough season, after he had already contributed a point in the quarter-final tie against Austria.",
+      "Carlos Alcaraz then took the court. The world number three beat Arthur Fery 6-2, 6-1 in 72 minutes to seal Spain's place in the final without the need for a deciding doubles match. Alcaraz dominated on return, put pressure on the Briton's second serve and maintained his intensity through the final game.",
+      "The match carried extra significance for Alcaraz: it was his first appearance in this year's competition and his return to the Davis Cup since 2024. An injury had kept him out of last year's decisive stage, when Spain reached the final before losing to Italy. This time he arrived in Bologna after winning the ATP Finals for the first time in Turin and delivered in a crucial moment.",
+      "The result also highlighted the depth of the Spanish team. Jódar once again took responsibility for the opening singles, while Alcaraz came in to finish the job. Captain Ferrer can also call on players such as Marcel Granollers, Pedro Martínez and Daniel Mérida. Sunday's final will be Ferrer's last tie in charge of Spain.",
+      "The rematch will be a major challenge. Italy are aiming to become the first men's team to win four consecutive titles since the United States in the early 1970s. Spain, who have not lifted the trophy since 2019, will be chasing a seventh crown and looking to end the hosts' run. The final will be a repeat of the 2025 showdown, when Italy won 2-0.",
+      "The final will take place on Sunday, 29 November, from 3:00 p.m. local time in Bologna. The format features two singles matches and a doubles match if the tie is level. Spain have done their part to get this far; now they have the chance to turn the rematch into another chapter in their Davis Cup history."
+    ],
+    "categoria": "Davis Cup"
+  }
 }
