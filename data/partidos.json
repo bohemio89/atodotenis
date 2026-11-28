@@ -78055,7 +78055,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T20:45:28.528Z",
   "torneoClave": "challenger|Florianopolis",
@@ -78138,7 +78138,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T20:45:28.529Z",
+  "visto": "2026-11-28T21:30:35.047Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -78146,8 +78146,8 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T20:45:02.312618Z",
-   "age_seconds": 26,
+   "accepted_at": "2026-11-28T21:29:40.113621Z",
+   "age_seconds": 53,
    "changing_sources_count": 1,
    "corroborated": true,
    "corroborated_age_seconds": 0,
@@ -78158,34 +78158,36 @@
    },
    "games": [
     [
-     4
+     6,
+     1
     ],
     [
-     4
+     7,
+     1
     ]
    ],
    "is_tiebreak": false,
    "observed_age_seconds": 0,
    "origin": "observed",
    "points": [
-    "40",
-    "15"
+    "15",
+    "0"
    ],
-   "received_at": "2026-11-28T20:45:02.187260Z",
-   "sequence": 47,
-   "server": 2,
+   "received_at": "2026-11-28T21:29:40.002871Z",
+   "sequence": 90,
+   "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-28T20:45:26.489455Z",
+   "timestamp": "2026-11-28T21:30:29.181790Z",
    "puntos": [
-    "40",
-    "15"
+    "15",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
