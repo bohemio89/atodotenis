@@ -76860,7 +76860,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T09:30:00Z",
+  "horario": "2026-11-28T09:45:00Z",
   "j1": {
    "id": 330,
    "nombre": "Diego Dedura",
@@ -76871,15 +76871,62 @@
    "id": 669,
    "nombre": "Thomas Faurel",
    "pais": "fra",
-   "ranking": 295
+   "ranking": 293
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T06:00:39.261Z",
+  "visto": "2026-11-28T09:45:28.220Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T09:45:21.385131Z",
+   "age_seconds": 6,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "15",
+    "15"
+   ],
+   "received_at": "2026-11-28T09:45:20.923375Z",
+   "sequence": 4,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-28T09:45:21.385128Z",
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225773": {
   "id": 225773,
@@ -76942,7 +76989,7 @@
    "ranking": 530
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T09:15:27.878Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
@@ -77249,7 +77296,7 @@
    "ranking": 626
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T09:15:27.879Z",
   "torneoClave": "challenger|Hersonissos 4",
