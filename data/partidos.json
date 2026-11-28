@@ -76151,7 +76151,7 @@
  },
  "225718": {
   "id": 225718,
-  "tour": "challenger_women_doubles",
+  "tour": "challenger",
   "torneo": "Buenos Aires",
   "ronda": "Buenos Aires - Semi-finals",
   "rondaCod": "SF",
@@ -76161,17 +76161,17 @@
   "horario": "2026-11-28T19:00:00Z",
   "j1": {
    "id": 47316,
-   "nombre": "Ayala/ Larraya Guidi",
+   "nombre": "Ayala / Sol Ailin Larraya Guidi",
    "pais": null,
    "ranking": null,
    "paises": [
     "arg",
-    null
+    "arg"
    ]
   },
   "j2": {
    "id": 47319,
-   "nombre": "Akli/ Rencheli",
+   "nombre": "Akli / Rencheli",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -76180,12 +76180,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T18:22:27.829Z",
-  "torneoClave": "challenger_women|Buenos Aires",
+  "visto": "2026-11-28T18:58:22.883Z",
+  "torneoClave": "challenger|Buenos Aires",
   "tier": "wta_125",
-  "importante": false
+  "importante": false,
+  "torneoId": "4872",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T18:57:44.839001Z",
+   "age_seconds": 37,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "30",
+    "0"
+   ],
+   "received_at": "2026-11-28T18:57:44.784814Z",
+   "sequence": 4,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-28T18:58:18.164953Z",
+   "puntos": [
+    "30",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225730": {
   "id": 225730,
@@ -77977,17 +78024,27 @@
  },
  "225857": {
   "id": 225857,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Florianopolis",
   "ronda": "Florianopolis - Final",
   "rondaCod": "F",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T18:30:00Z",
+  "horario": "2026-11-28T18:45:00Z",
   "j1": {
+   "id": 41521,
+   "nombre": "Marcelo Zormann / Zeballos",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    "bra",
+    "bol"
+   ]
+  },
+  "j2": {
    "id": 46983,
-   "nombre": "Bagnis/ Kestelboim",
+   "nombre": "Bagnis / Kestelboim",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -77995,23 +78052,60 @@
     null
    ]
   },
-  "j2": {
-   "id": 41521,
-   "nombre": "Zeballos/ Zormann Da Silva",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "bol",
-    null
-   ]
-  },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T18:22:27.829Z",
+  "visto": "2026-11-28T18:58:22.883Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "5090",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T18:57:44.145316Z",
+   "age_seconds": 37,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-28T18:57:44.040322Z",
+   "sequence": 21,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T18:57:53.544095Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225860": {
   "id": 225860,
@@ -78052,26 +78146,73 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T18:25:00Z",
+  "horario": "2026-11-28T18:30:00Z",
   "j1": {
    "id": 108,
    "nombre": "Eduardo Ribeiro",
    "pais": "bra",
-   "ranking": 359
+   "ranking": 408
   },
   "j2": {
    "id": 422,
    "nombre": "Juan Manuel La Serna",
    "pais": "arg",
-   "ranking": 217
+   "ranking": 212
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T18:22:27.829Z",
+  "visto": "2026-11-28T18:58:22.883Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2565",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T18:58:09.141113Z",
+   "age_seconds": 12,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "30",
+    "15"
+   ],
+   "received_at": "2026-11-28T18:58:08.876688Z",
+   "sequence": 40,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-28T18:58:19.560006Z",
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225864": {
   "id": 225864,
@@ -78175,7 +78316,7 @@
    "ranking": 160
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T18:22:27.829Z",
   "torneoClave": "challenger_women|Buenos Aires",
