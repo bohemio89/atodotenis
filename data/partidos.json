@@ -76254,7 +76254,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T02:45:26.477Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
@@ -76552,7 +76552,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T02:45:26.478Z",
+  "visto": "2026-11-28T03:15:29.859Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -76560,11 +76560,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T02:45:24.532517Z",
-   "age_seconds": 1,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-28T03:15:07.015847Z",
+   "age_seconds": 20,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -76572,32 +76572,34 @@
    },
    "games": [
     [
-     4
+     6,
+     1
     ],
     [
-     4
+     4,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 2,
    "origin": "observed",
    "points": [
-    "40",
-    "30"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-28T02:45:24.435106Z",
-   "sequence": 54,
+   "received_at": "2026-11-28T03:15:06.848524Z",
+   "sequence": 93,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-28T02:45:24.532513Z",
+   "timestamp": "2026-11-28T03:15:20.065751Z",
    "puntos": [
-    "40",
-    "30"
+    "0",
+    "0"
    ],
    "saca": 2
   },
