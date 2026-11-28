@@ -716,3 +716,6 @@ body{background:#0F1317}
 .bq-datos .bq-grid{grid-template-columns:repeat(2,1fr)}
 .bq-datos .bq-dato strong{white-space:nowrap}
 @media (min-width:700px){.bq-datos .bq-dato strong{font-size:60px}.bq-datos .bq-dato span{font-size:16px}.bq-datos .bq-dato{padding:28px 18px 24px}}
+
+/* Copa Davis: en celulares mostrar la imagen completa en la portada, sin cortar a los protagonistas. */
+@media (max-width:600px){.hero2 .hs .fondo img{object-fit:contain!important;object-position:center center!important}}
