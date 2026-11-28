@@ -72413,7 +72413,7 @@
  },
  "225485": {
   "id": 225485,
-  "tour": "challenger",
+  "tour": "challenger_women",
   "torneo": "Buenos Aires",
   "ronda": "Buenos Aires - Quarter-finals",
   "rondaCod": "QF",
@@ -72436,8 +72436,8 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.816Z",
-  "torneoClave": "challenger|Buenos Aires",
+  "visto": "2026-11-28T06:00:39.261Z",
+  "torneoClave": "challenger_women|Buenos Aires",
   "tier": "wta_125",
   "importante": false,
   "torneoId": "4869",
@@ -73219,7 +73219,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-28T01:30:32.748Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -75933,7 +75933,7 @@
   "dobles": true,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -76182,7 +76182,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger_women|Buenos Aires",
   "tier": "wta_125",
   "importante": false
@@ -76268,7 +76268,7 @@
  },
  "225731": {
   "id": 225731,
-  "tour": "challenger",
+  "tour": "challenger_doubles",
   "torneo": "San Salvador (El Salvador)",
   "ronda": "San Salvador - Semi-finals",
   "rondaCod": "SF",
@@ -76297,9 +76297,9 @@
    ]
   },
   "dobles": true,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-28T02:45:26.477Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -76380,7 +76380,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-28T04:00:41.734Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -76459,7 +76459,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T05:30:34.724Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -76467,11 +76467,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T05:30:06.068795Z",
-   "age_seconds": 28,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-28T05:59:57.642197Z",
+   "age_seconds": 41,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 7,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -76480,32 +76480,32 @@
    "games": [
     [
      3,
-     0
+     5
     ],
     [
      6,
-     1
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 7,
    "origin": "observed",
    "points": [
-    "15",
+    "0",
     "0"
    ],
-   "received_at": "2026-11-28T05:30:05.565985Z",
-   "sequence": 69,
+   "received_at": "2026-11-28T05:59:57.280698Z",
+   "sequence": 108,
    "server": 1,
    "sets": [
     0,
     1
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-28T05:30:18.111630Z",
+   "timestamp": "2026-11-28T06:00:07.867396Z",
    "puntos": [
-    "15",
+    "0",
     "0"
    ],
    "saca": 1
@@ -76538,7 +76538,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T05:30:34.724Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -76546,8 +76546,8 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T05:30:02.999788Z",
-   "age_seconds": 31,
+   "accepted_at": "2026-11-28T06:00:32.469418Z",
+   "age_seconds": 6,
    "changing_sources_count": 1,
    "corroborated": true,
    "corroborated_age_seconds": 5,
@@ -76559,11 +76559,13 @@
    "games": [
     [
      6,
-     2
+     4,
+     3
     ],
     [
      4,
-     3
+     6,
+     0
     ]
    ],
    "is_tiebreak": false,
@@ -76571,21 +76573,21 @@
    "origin": "observed",
    "points": [
     "0",
-    "0"
+    "30"
    ],
-   "received_at": "2026-11-28T05:30:02.885232Z",
-   "sequence": 83,
+   "received_at": "2026-11-28T06:00:32.272665Z",
+   "sequence": 130,
    "server": 2,
    "sets": [
     1,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-28T05:30:13.767412Z",
+   "timestamp": "2026-11-28T06:00:32.469415Z",
    "puntos": [
     "0",
-    "0"
+    "30"
    ],
    "saca": 2
   },
@@ -76594,7 +76596,7 @@
  },
  "225738": {
   "id": 225738,
-  "tour": "challenger",
+  "tour": "challenger_doubles",
   "torneo": "Playford 2",
   "ronda": "Playford 2 - Final",
   "rondaCod": "F",
@@ -76623,9 +76625,9 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-28T05:30:34.723Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -76688,7 +76690,7 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T04:00:00Z",
+  "horario": "2026-11-28T06:30:00Z",
   "j1": {
    "id": 46962,
    "nombre": "Chandrasekar/ Loof",
@@ -76712,7 +76714,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false
@@ -76742,7 +76744,7 @@
   "dobles": false,
   "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-28T05:30:34.796Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -76823,7 +76825,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.731Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
   "importante": false
@@ -76861,7 +76863,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Ankara (Turkey)",
   "tier": "challenger_50",
   "importante": false
@@ -76891,7 +76893,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
   "importante": false
@@ -76921,7 +76923,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia) - Qualification",
   "tier": "challenger_50",
   "importante": false
@@ -77149,7 +77151,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
   "importante": false
@@ -77179,7 +77181,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
   "importante": false
@@ -77209,7 +77211,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia) - Qualification",
   "tier": "challenger_50",
   "importante": false
@@ -77247,7 +77249,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
   "importante": false
@@ -77285,7 +77287,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
   "importante": false
@@ -77416,7 +77418,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false
@@ -77454,7 +77456,7 @@
   "dobles": true,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false
@@ -77484,7 +77486,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|San Salvador (El Salvador) - Qualification",
   "tier": "challenger_50",
   "importante": false
@@ -77514,7 +77516,7 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false
@@ -77523,8 +77525,8 @@
   "id": 225864,
   "tour": "challenger_women",
   "torneo": "Buenos Aires",
-  "ronda": null,
-  "rondaCod": null,
+  "ronda": "Buenos Aires - Semi-finals",
+  "rondaCod": "SF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
@@ -77543,9 +77545,137 @@
   "dobles": false,
   "estado": "programado",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T06:00:39.261Z",
   "torneoClave": "challenger_women|Buenos Aires",
   "tier": "wta_125",
+  "importante": false
+ },
+ "225867": {
+  "id": 225867,
+  "tour": "challenger_women",
+  "torneo": "Buenos Aires",
+  "ronda": "Buenos Aires - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "clay",
+  "clasificacion": false,
+  "genero": "women",
+  "horario": "2026-11-28T17:00:00Z",
+  "j1": {
+   "id": 766,
+   "nombre": "Veronika Erjavec",
+   "pais": "slo",
+   "ranking": 160
+  },
+  "j2": {
+   "id": 455,
+   "nombre": "Julia Riera",
+   "pais": "arg",
+   "ranking": 139
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-28T06:00:39.261Z",
+  "torneoClave": "challenger_women|Buenos Aires",
+  "tier": "wta_125",
+  "importante": false
+ },
+ "225874": {
+  "id": 225874,
+  "tour": "challenger",
+  "torneo": "San Salvador (El Salvador) - Qualification",
+  "ronda": "San Salvador - Semi-finals",
+  "rondaCod": "SF",
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-28T21:30:00Z",
+  "j1": {
+   "id": 4792,
+   "nombre": "Timo Legout",
+   "pais": "fra",
+   "ranking": 334
+  },
+  "j2": {
+   "id": 5544,
+   "nombre": "Luis Augusto Miguel",
+   "pais": "bra",
+   "ranking": 547
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-28T06:00:39.261Z",
+  "torneoClave": "challenger|San Salvador (El Salvador) - Qualification",
+  "tier": "challenger_50",
+  "importante": false
+ },
+ "225878": {
+  "id": 225878,
+  "tour": "challenger_doubles",
+  "torneo": "San Salvador (El Salvador)",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-29T00:00:00Z",
+  "j1": {
+   "id": 46890,
+   "nombre": "Ambrogi/ Gomez",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    null
+   ]
+  },
+  "j2": {
+   "id": 44227,
+   "nombre": "Alvarez Valdes/ Flores",
+   "pais": null,
+   "ranking": null,
+   "paises": [
+    null,
+    "crc"
+   ]
+  },
+  "dobles": true,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-28T06:00:39.261Z",
+  "torneoClave": "challenger|San Salvador (El Salvador)",
+  "tier": "challenger_50",
+  "importante": false
+ },
+ "225883": {
+  "id": 225883,
+  "tour": "challenger",
+  "torneo": "Playford 2",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-29T00:30:00Z",
+  "j1": {
+   "id": 842,
+   "nombre": "Dane Sweeny",
+   "pais": "aus",
+   "ranking": 123
+  },
+  "j2": {
+   "id": 117,
+   "nombre": "Tristan Schoolkate",
+   "pais": "aus",
+   "ranking": 143
+  },
+  "dobles": false,
+  "estado": "programado",
+  "motivo": null,
+  "visto": "2026-11-28T06:00:39.261Z",
+  "torneoClave": "challenger|Playford 2",
+  "tier": "challenger_75",
   "importante": false
  },
  "null": {
