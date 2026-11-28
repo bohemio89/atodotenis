@@ -89,27 +89,45 @@
       "items": [
         {
           "valor": "15",
-          "texto": "Cruces entre ambos países"
+          "texto": {
+            "es": "Cruces entre ambos países",
+            "en": "Meetings between the two nations"
+          }
         },
         {
           "valor": "8-6",
-          "texto": "Ventaja de Italia en el historial"
+          "texto": {
+            "es": "Ventaja de Italia en el historial",
+            "en": "Italy's head-to-head lead"
+          }
         },
         {
           "valor": "1932",
-          "texto": "Año del primer enfrentamiento"
+          "texto": {
+            "es": "Año del primer enfrentamiento",
+            "en": "Year of the first meeting"
+          }
         },
         {
           "valor": "2006",
-          "texto": "Último cruce antes de la final 2025"
+          "texto": {
+            "es": "Último cruce antes de la final 2025",
+            "en": "Last meeting before the 2025 final"
+          }
         },
         {
           "valor": "4",
-          "texto": "Títulos de Italia hasta 2025"
+          "texto": {
+            "es": "Títulos de Italia hasta 2025",
+            "en": "Italy titles through 2025"
+          }
         },
         {
           "valor": "6",
-          "texto": "Títulos de España"
+          "texto": {
+            "es": "Títulos de España",
+            "en": "Spain titles"
+          }
         }
       ]
     },
@@ -138,7 +156,10 @@
         2,
         0
       ],
-      "fecha": "Final 2025",
+      "fecha": {
+        "es": "Final 2025",
+        "en": "2025 final"
+      },
       "partidos": [
         {
           "tipo": {
@@ -198,7 +219,10 @@
       "tipo": "imagen",
       "url": "https://contentfulproxy.stadion.io/0gg9pgt9u0k4/6LLLrDI7Ecu5SWwlzHT3D5/47cf71cf5f967a8f3d3bcd12447a6ba6/Italy_celebrate_1.jpg?fm=webp&fit=fill&f=center&w=1920&h=1280",
       "alt": "El equipo italiano celebra su clasificación a la final de la Copa Davis 2026",
-      "epigrafe": "Italia festejó el pase a la final tras superar a Chequia. Foto: Getty Images para ITF."
+      "epigrafe": {
+        "es": "Italia festejó el pase a la final tras superar a Chequia. Foto: Getty Images para ITF.",
+        "en": "Italy celebrated reaching the final after beating the Czech Republic. Photo: Getty Images for ITF."
+      }
     }
   ],
   "en": {
