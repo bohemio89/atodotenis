@@ -35,7 +35,9 @@
     "enlace": "/notas/final-davis-2026.jpg",
     "alt": "La gran final de la Copa Davis 2026 en Bolonia: Italia vs. España",
     "ancho": 2752,
-    "alto": 1536
+    "alto": 1536,
+    "urlNota": "/notas/final-davis-2026.jpg",
+    "anchoNota": 1100
   },
   "generadoCon": "manual",
   "manual": true,
@@ -209,15 +211,6 @@
         "es": "Davis Cup",
         "en": "Davis Cup"
       }
-    },
-    {
-      "despuesDe": 6,
-      "tipo": "imagen",
-      "url": "/notas/final-davis-2026.jpg",
-      "alt": {
-        "es": "La final de la Copa Davis 2026 entre Italia y España",
-        "en": "The 2026 Davis Cup final between Italy and Spain"
-      }
     }
   ],
   "en": {
@@ -234,5 +227,12 @@
       "The tie will be played over a best-of-three-match format: two singles matches, followed by doubles if the teams are level. The team nominations may determine the order of play, but there will be little room for error. In a final between two nations with such a rich history, every point could shape the next chapter of a rivalry that has already produced fourteen meetings."
     ],
     "categoria": "Davis Cup"
+  },
+  "video": {
+    "youtube": "6ICDsdWkSfs",
+    "encabezado": "La final de 2025: los mejores momentos",
+    "titulo": "Italia 2-0 España | Final de la Copa Davis 2025",
+    "canal": "World Tennis",
+    "despuesDe": 6
   }
 }
