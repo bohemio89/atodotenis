@@ -77567,7 +77567,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T13:30:43.472Z",
+  "visto": "2026-11-28T14:00:44.725Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
   "importante": false,
@@ -77575,11 +77575,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T13:30:26.208529Z",
-   "age_seconds": 15,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-28T13:59:59.179211Z",
+   "age_seconds": 45,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 6,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -77588,35 +77588,35 @@
    "games": [
     [
      6,
-     1
+     4
     ],
     [
      3,
-     1
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 6,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "15",
+    "40",
     "30"
    ],
-   "received_at": "2026-11-28T13:30:25.820779Z",
-   "sequence": 67,
-   "server": 1,
+   "received_at": "2026-11-28T13:59:58.729695Z",
+   "sequence": 105,
+   "server": 2,
    "sets": [
     1,
     0
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-28T13:30:35.209824Z",
+   "timestamp": "2026-11-28T14:00:23.858234Z",
    "puntos": [
-    "15",
+    "40",
     "30"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -78304,7 +78304,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T13:30:43.472Z",
+  "visto": "2026-11-28T14:00:44.725Z",
   "torneoClave": "atp|ATP Davis Cup - World Group",
   "tier": "davis_cup",
   "importante": true,
@@ -78312,11 +78312,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T13:30:37.090340Z",
-   "age_seconds": 4,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-28T14:00:33.026340Z",
+   "age_seconds": 11,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 4,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -78324,32 +78324,34 @@
    },
    "games": [
     [
-     3
+     6,
+     1
     ],
     [
+     2,
      0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 4,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "40",
-    "40"
+    "0",
+    "15"
    ],
-   "received_at": "2026-11-28T13:30:36.936165Z",
-   "sequence": 24,
+   "received_at": "2026-11-28T14:00:32.973559Z",
+   "sequence": 70,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
-   "sources_count": 2,
+   "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-28T13:30:37.090337Z",
+   "timestamp": "2026-11-28T14:00:33.026334Z",
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "15"
    ],
    "saca": 2
   },
