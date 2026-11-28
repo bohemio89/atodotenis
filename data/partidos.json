@@ -77739,7 +77739,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T15:15:35.728Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
@@ -77921,7 +77921,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T15:15:35.728Z",
+  "visto": "2026-11-28T16:00:50.466Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -77930,10 +77930,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-28T14:54:26.245087Z",
-   "age_seconds": 1267,
+   "age_seconds": 3984,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 118,
+   "corroborated_age_seconds": 103,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -77950,7 +77950,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
     "0",
@@ -77965,7 +77965,7 @@
    ],
    "sources_count": 1,
    "stale": true,
-   "timestamp": "2026-11-28T15:15:33.292378Z",
+   "timestamp": "2026-11-28T16:00:44.756559Z",
    "puntos": [
     "0",
     "0"
@@ -78082,7 +78082,7 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-28T15:05:00Z",
+  "horario": "2026-11-28T15:15:00Z",
   "j1": {
    "id": 270,
    "nombre": "Guiomar Zuleta De Reales Maristany",
@@ -78098,7 +78098,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T15:15:35.728Z",
+  "visto": "2026-11-28T16:00:50.466Z",
   "torneoClave": "challenger|Buenos Aires",
   "tier": "wta_125",
   "importante": false,
@@ -78106,11 +78106,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T15:14:50.147802Z",
-   "age_seconds": 43,
+   "accepted_at": "2026-11-28T16:00:20.720918Z",
+   "age_seconds": 29,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -78118,32 +78118,34 @@
    },
    "games": [
     [
-     0
+     6,
+     4
     ],
     [
+     0,
      0
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 4,
    "origin": "observed",
    "points": [
-    "40",
-    "15"
+    "15",
+    "40"
    ],
-   "received_at": "2026-11-28T15:14:50.074643Z",
-   "sequence": 6,
+   "received_at": "2026-11-28T16:00:20.578768Z",
+   "sequence": 60,
    "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-28T15:15:30.782733Z",
+   "timestamp": "2026-11-28T16:00:46.019567Z",
    "puntos": [
-    "40",
-    "15"
+    "15",
+    "40"
    ],
    "saca": 1
   },
