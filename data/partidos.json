@@ -76714,7 +76714,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T07:45:34.720Z",
   "torneoClave": "challenger|Yokohama",
@@ -76930,24 +76930,71 @@
   "genero": "men",
   "horario": "2026-11-28T08:00:00Z",
   "j1": {
-   "id": 1316,
-   "nombre": "Tuncay Duran",
-   "pais": "tur",
-   "ranking": 540
-  },
-  "j2": {
    "id": 169,
    "nombre": "Matthew Donald",
    "pais": "cze",
-   "ranking": 352
+   "ranking": 361
+  },
+  "j2": {
+   "id": 1316,
+   "nombre": "Tuncay Duran",
+   "pais": "tur",
+   "ranking": 530
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T06:00:39.261Z",
+  "visto": "2026-11-28T08:30:45.244Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14881",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T08:30:30.940029Z",
+   "age_seconds": 14,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-28T08:30:30.640036Z",
+   "sequence": 36,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T08:30:41.470302Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225780": {
   "id": 225780,
@@ -77191,21 +77238,68 @@
    "id": 6151,
    "nombre": "Andres Martin",
    "pais": "usa",
-   "ranking": 373
+   "ranking": 362
   },
   "j2": {
    "id": 11732,
-   "nombre": "O. Ovcharenko",
+   "nombre": "Oleksandr Ovcharenko",
    "pais": "ukr",
-   "ranking": null
+   "ranking": 626
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T06:00:39.261Z",
+  "visto": "2026-11-28T08:30:45.244Z",
   "torneoClave": "challenger|Hersonissos 4",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "12900",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T08:29:11.613502Z",
+   "age_seconds": 93,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 1,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-28T08:29:11.041953Z",
+   "sequence": 21,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T08:30:23.669225Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225807": {
   "id": 225807,
