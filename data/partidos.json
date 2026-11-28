@@ -76961,7 +76961,7 @@
    ]
   },
   "dobles": true,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T13:00:39.487Z",
   "torneoClave": "challenger|Ankara (Turkey)",
@@ -77567,7 +77567,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T13:00:39.488Z",
+  "visto": "2026-11-28T13:30:43.472Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
   "importante": false,
@@ -77575,11 +77575,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T13:00:00.397668Z",
-   "age_seconds": 37,
-   "changing_sources_count": 1,
+   "accepted_at": "2026-11-28T13:30:26.208529Z",
+   "age_seconds": 15,
+   "changing_sources_count": 2,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 6,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -77587,34 +77587,36 @@
    },
    "games": [
     [
-     2
+     6,
+     1
     ],
     [
-     2
+     3,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 6,
    "origin": "observed",
    "points": [
-    "30",
-    "40"
+    "15",
+    "30"
    ],
-   "received_at": "2026-11-28T13:00:00.191140Z",
-   "sequence": 31,
-   "server": 2,
+   "received_at": "2026-11-28T13:30:25.820779Z",
+   "sequence": 67,
+   "server": 1,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-28T13:00:22.753149Z",
+   "timestamp": "2026-11-28T13:30:35.209824Z",
    "puntos": [
-    "30",
-    "40"
+    "15",
+    "30"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -78286,26 +78288,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T12:30:00Z",
+  "horario": "2026-11-28T13:20:00Z",
   "j1": {
-   "id": 566,
-   "nombre": "Arthur Fery",
-   "pais": "gbr",
-   "ranking": 32
-  },
-  "j2": {
    "id": 13,
    "nombre": "Carlos Alcaraz",
    "pais": "esp",
    "ranking": 3
   },
+  "j2": {
+   "id": 566,
+   "nombre": "Arthur Fery",
+   "pais": "gbr",
+   "ranking": 32
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T12:18:16.973Z",
+  "visto": "2026-11-28T13:30:43.472Z",
   "torneoClave": "atp|ATP Davis Cup - World Group",
   "tier": "davis_cup",
-  "importante": true
+  "importante": true,
+  "torneoId": "3120",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T13:30:37.090340Z",
+   "age_seconds": 4,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 4,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     3
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 4,
+   "origin": "observed",
+   "points": [
+    "40",
+    "40"
+   ],
+   "received_at": "2026-11-28T13:30:36.936165Z",
+   "sequence": 24,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T13:30:37.090337Z",
+   "puntos": [
+    "40",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "null": {
   "id": null,
