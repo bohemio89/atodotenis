@@ -76443,26 +76443,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T02:00:00Z",
+  "horario": "2026-11-28T04:40:00Z",
   "j1": {
    "id": 70,
    "nombre": "Naoya Honda",
    "pais": "jpn",
-   "ranking": 564
+   "ranking": 567
   },
   "j2": {
    "id": 84,
    "nombre": "Hayato Matsuoka",
    "pais": "jpn",
-   "ranking": 274
+   "ranking": 338
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T04:45:28.243Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2510",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T04:44:51.160183Z",
+   "age_seconds": 37,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "0",
+    "15"
+   ],
+   "received_at": "2026-11-28T04:44:50.824194Z",
+   "sequence": 9,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T04:45:10.023123Z",
+   "puntos": [
+    "0",
+    "15"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225736": {
   "id": 225736,
@@ -76473,40 +76520,87 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T02:00:00Z",
+  "horario": "2026-11-28T04:40:00Z",
   "j1": {
    "id": 75,
    "nombre": "Masamichi Imamura",
    "pais": "jpn",
-   "ranking": 434
+   "ranking": 419
   },
   "j2": {
    "id": 469,
    "nombre": "Kaichi Uchida",
    "pais": "jpn",
-   "ranking": 460
+   "ranking": 645
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T04:45:28.242Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2510",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T04:45:08.984448Z",
+   "age_seconds": 19,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     0
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "30",
+    "40"
+   ],
+   "received_at": "2026-11-28T04:45:08.701617Z",
+   "sequence": 12,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T04:45:19.970309Z",
+   "puntos": [
+    "30",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225738": {
   "id": 225738,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Playford 2",
   "ronda": "Playford 2 - Final",
   "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T03:30:00Z",
+  "horario": "2026-11-28T04:30:00Z",
   "j1": {
-   "id": 26058,
-   "nombre": "Bayldon/ Fancutt",
+   "id": 1859,
+   "nombre": "Calum Puttergill / Dane Sweeny",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -76515,8 +76609,8 @@
    ]
   },
   "j2": {
-   "id": 1859,
-   "nombre": "Puttergill/ Sweeny",
+   "id": 26058,
+   "nombre": "Blake Bayldon / Thomas Fancutt",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -76525,12 +76619,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T04:45:28.242Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "9076",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T04:45:23.297345Z",
+   "age_seconds": 4,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-28T04:45:23.184736Z",
+   "sequence": 29,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T04:45:23.297342Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225739": {
   "id": 225739,
@@ -76593,7 +76734,7 @@
    "ranking": 250
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T04:00:41.628Z",
   "torneoClave": "challenger|Playford 2",
