@@ -77921,7 +77921,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T16:34:34.385Z",
+  "visto": "2026-11-28T17:15:26.297Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
   "importante": false,
@@ -77930,10 +77930,10 @@
   "resultado": null,
   "score": {
    "accepted_at": "2026-11-28T14:54:26.245087Z",
-   "age_seconds": 6008,
+   "age_seconds": 8459,
    "changing_sources_count": 0,
    "corroborated": true,
-   "corroborated_age_seconds": 2127,
+   "corroborated_age_seconds": 55,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -77950,7 +77950,7 @@
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 7,
+   "observed_age_seconds": 8,
    "origin": "observed",
    "points": [
     "0",
@@ -77963,9 +77963,9 @@
     1,
     0
    ],
-   "sources_count": 1,
+   "sources_count": 2,
    "stale": true,
-   "timestamp": "2026-11-28T16:34:26.814504Z",
+   "timestamp": "2026-11-28T17:15:17.640745Z",
    "puntos": [
     "0",
     "0"
@@ -78154,33 +78154,80 @@
  },
  "225867": {
   "id": 225867,
-  "tour": "challenger_women",
+  "tour": "challenger",
   "torneo": "Buenos Aires",
   "ronda": "Buenos Aires - Semi-finals",
   "rondaCod": "SF",
   "superficie": "clay",
   "clasificacion": false,
   "genero": "women",
-  "horario": "2026-11-28T17:00:00Z",
+  "horario": "2026-11-28T17:05:00Z",
   "j1": {
-   "id": 766,
-   "nombre": "Veronika Erjavec",
-   "pais": "slo",
-   "ranking": 160
-  },
-  "j2": {
    "id": 455,
    "nombre": "Julia Riera",
    "pais": "arg",
    "ranking": 139
   },
+  "j2": {
+   "id": 766,
+   "nombre": "Veronika Erjavec",
+   "pais": "slo",
+   "ranking": 160
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T12:18:17.089Z",
-  "torneoClave": "challenger_women|Buenos Aires",
+  "visto": "2026-11-28T17:15:26.298Z",
+  "torneoClave": "challenger|Buenos Aires",
   "tier": "wta_125",
-  "importante": false
+  "importante": false,
+  "torneoId": "4869",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T17:14:22.902570Z",
+   "age_seconds": 63,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 9,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 6,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-28T17:14:22.867519Z",
+   "sequence": 22,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T17:15:19.733133Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225874": {
   "id": 225874,
