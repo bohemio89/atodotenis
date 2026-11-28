@@ -54,17 +54,38 @@
     {
       "despuesDe": 1,
       "tipo": "horario",
-      "titulo": "¿A qué hora es la final?",
-      "lugar": "Bolonia",
-      "texto": "Domingo 29, 15:00",
+      "titulo": {
+        "es": "¿A qué hora es la final?",
+        "en": "What time is the final?"
+      },
+      "lugar": {
+        "es": "Bolonia",
+        "en": "Bologna"
+      },
+      "texto": {
+        "es": "Domingo 29, 15:00",
+        "en": "Sunday 29, 3:00 p.m."
+      },
       "utc": "2026-11-29T14:00:00Z",
-      "fuente": "Copa Davis"
+      "fuente": {
+        "es": {
+          "es": "Copa Davis",
+          "en": "Davis Cup"
+        },
+        "en": "Davis Cup"
+      }
     },
     {
       "despuesDe": 3,
       "tipo": "datos",
-      "titulo": "Italia vs. España: los números en la Davis",
-      "fuente": "Copa Davis / ITF",
+      "titulo": {
+        "es": "Italia vs. España: los números en la Davis",
+        "en": "Italia vs. España: los números en la Davis"
+      },
+      "fuente": {
+        "es": "Copa Davis / ITF",
+        "en": "Davis Cup"
+      },
       "items": [
         {
           "valor": "15",
@@ -95,14 +116,23 @@
     {
       "despuesDe": 5,
       "tipo": "serie",
-      "titulo": "La final de 2025: Italia 2-0 España",
+      "titulo": {
+        "es": "La final de 2025: Italia 2-0 España",
+        "en": "La final de 2025: Italia 2-0 España"
+      },
       "local": {
         "pais": "ita",
-        "nombre": "Italia"
+        "nombre": {
+          "es": "Italia",
+          "en": "Spain"
+        }
       },
       "visita": {
         "pais": "esp",
-        "nombre": "España"
+        "nombre": {
+          "es": "España",
+          "en": "Great Britain"
+        }
       },
       "resultado": [
         2,
@@ -111,7 +141,10 @@
       "fecha": "Final 2025",
       "partidos": [
         {
-          "tipo": "Primer single",
+          "tipo": {
+            "es": "Primer single",
+            "en": "First singles"
+          },
           "a": "Matteo Berrettini",
           "b": "Pablo Carreño Busta",
           "gana": "a",
@@ -127,7 +160,10 @@
           ]
         },
         {
-          "tipo": "Segundo single",
+          "tipo": {
+            "es": "Segundo single",
+            "en": "Second singles"
+          },
           "a": "Flavio Cobolli",
           "b": "Jaume Munar",
           "gana": "a",
@@ -152,7 +188,10 @@
           ]
         }
       ],
-      "fuente": "Davis Cup"
+      "fuente": {
+        "es": "Davis Cup",
+        "en": "Davis Cup"
+      }
     },
     {
       "despuesDe": 6,
@@ -161,5 +200,20 @@
       "alt": "El equipo italiano celebra su clasificación a la final de la Copa Davis 2026",
       "epigrafe": "Italia festejó el pase a la final tras superar a Chequia. Foto: Getty Images para ITF."
     }
-  ]
+  ],
+  "en": {
+    "titulo": "Italy and Spain face off for the Davis Cup: a rematch steeped in history",
+    "bajada": "The final will replay the 2025 showdown in Bologna. Italy are chasing a fourth consecutive title, while Alcaraz has the chance to win the one major team trophy still missing from his collection.",
+    "cuerpo": [
+      "Italy and Spain will meet again in the Davis Cup final on Sunday, 29 November. The match will be played in Bologna, the same city where the Italians lifted the trophy a year ago. Italy arrive as three-time defending champions and will look to extend their run; Spain are seeking revenge and their first title since 2019.",
+      "The two teams took different routes to the Final 8 showpiece. Spain came through their ties against Austria and Great Britain with back-to-back 2-0 wins, driven by the rise of Rafael Jódar and the return of Carlos Alcaraz. Italy, meanwhile, needed a deciding doubles match against the Czech Republic: Lorenzo Musetti and Andrea Vavassori sealed the tie in a third-set tie-break to keep the title defence alive.",
+      "The rivalry between the two nations stretches back decades, and Sunday's final will be their 15th meeting in the competition. Italy lead the head-to-head by eight ties to six, according to the official Davis Cup record. Their first encounter took place in 1932, long before the rivalry returned to the final stage.",
+      "Before the 2025 final, the countries had last met in 2006, when Spain won 4-1 in Santander. The Spaniards had also won the three meetings immediately before that final; Italy's victory in Bologna ended that run and changed the historical balance. Sunday's match will be the first time the nations have contested consecutive Davis Cup finals against each other.",
+      "The most recent meeting was last year's final. Italy won 2-0 to claim the fourth Davis Cup title in their history: Matteo Berrettini opened with a 6-3, 6-4 victory over Pablo Carreño Busta, and Flavio Cobolli sealed the title against Jaume Munar. Cobolli lost the first set but fought back to win 1-6, 7-6 (5), 7-5.",
+      "For Alcaraz, the final has special significance. The Spaniard has completed the career Grand Slam and has just won the ATP Finals for the first time, but the Davis Cup remains a major title he has yet to lift. An injury kept him out of the 2025 final, which he had to watch from home as his teammates lost; now he has the chance to pursue the trophy on court with his team.",
+      "Italy's recent form makes the challenge even tougher. Filippo Volandri's team won the 2023, 2024 and 2025 editions, and another triumph would give them four consecutive titles, a run not seen since the United States won five in a row between 1968 and 1972. Spain, with six titles in their history, will be aiming for a seventh.",
+      "The tie will be played over a best-of-three-match format: two singles matches, followed by doubles if the teams are level. The team nominations may determine the order of play, but there will be little room for error. In a final between two nations with such a rich history, every point could shape the next chapter of a rivalry that has already produced fourteen meetings."
+    ],
+    "categoria": "Davis Cup"
+  }
 }
