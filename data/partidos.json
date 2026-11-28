@@ -76459,7 +76459,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T06:00:39.261Z",
+  "visto": "2026-11-28T06:30:40.083Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -76467,11 +76467,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T05:59:57.642197Z",
-   "age_seconds": 41,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-28T06:30:33.070410Z",
+   "age_seconds": 5,
+   "changing_sources_count": 3,
    "corroborated": true,
-   "corroborated_age_seconds": 7,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -76480,33 +76480,35 @@
    "games": [
     [
      3,
-     5
+     6,
+     2
     ],
     [
      6,
-     4
+     4,
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 7,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "15",
+    "15"
    ],
-   "received_at": "2026-11-28T05:59:57.280698Z",
-   "sequence": 108,
+   "received_at": "2026-11-28T06:30:32.865008Z",
+   "sequence": 142,
    "server": 1,
    "sets": [
-    0,
+    1,
     1
    ],
    "sources_count": 3,
    "stale": false,
-   "timestamp": "2026-11-28T06:00:07.867396Z",
+   "timestamp": "2026-11-28T06:30:33.070405Z",
    "puntos": [
-    "0",
-    "0"
+    "15",
+    "15"
    ],
    "saca": 1
   },
@@ -76538,7 +76540,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T06:00:39.261Z",
+  "visto": "2026-11-28T06:30:40.084Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -76546,11 +76548,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T06:00:32.469418Z",
-   "age_seconds": 6,
+   "accepted_at": "2026-11-28T06:30:27.925929Z",
+   "age_seconds": 10,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -76560,23 +76562,23 @@
     [
      6,
      4,
-     3
+     6
     ],
     [
      4,
      6,
-     0
+     6
     ]
    ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "is_tiebreak": true,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "0",
-    "30"
+    "1",
+    "0"
    ],
-   "received_at": "2026-11-28T06:00:32.272665Z",
-   "sequence": 130,
+   "received_at": "2026-11-28T06:30:27.787968Z",
+   "sequence": 178,
    "server": 2,
    "sets": [
     1,
@@ -76584,10 +76586,10 @@
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-28T06:00:32.469415Z",
+   "timestamp": "2026-11-28T06:30:37.760794Z",
    "puntos": [
-    "0",
-    "30"
+    "1",
+    "0"
    ],
    "saca": 2
   },
