@@ -76874,7 +76874,7 @@
    "ranking": 293
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T11:00:38.910Z",
   "torneoClave": "challenger|Ankara (Turkey) - Qualification",
@@ -76932,27 +76932,27 @@
  },
  "225773": {
   "id": 225773,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Ankara (Turkey)",
   "ronda": "Ankara - Final",
   "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T11:00:00Z",
+  "horario": "2026-11-28T11:40:00Z",
   "j1": {
    "id": 1555,
-   "nombre": "Ozdemir/ Turker",
+   "nombre": "Mert Naci Turker / S Mert Ozdemir",
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
-    null
+    "tur",
+    "tur"
    ]
   },
   "j2": {
    "id": 46866,
-   "nombre": "Agafonov/ Binda",
+   "nombre": "Agafonov / Binda",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -76961,12 +76961,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T06:00:39.261Z",
+  "visto": "2026-11-28T11:45:31.258Z",
   "torneoClave": "challenger|Ankara (Turkey)",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14880",
+  "cubierto": true,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T11:45:00.919973Z",
+   "age_seconds": 29,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "15",
+    "15"
+   ],
+   "received_at": "2026-11-28T11:45:00.676614Z",
+   "sequence": 8,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T11:45:23.482076Z",
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225779": {
   "id": 225779,
@@ -77083,7 +77130,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T11:00:38.910Z",
+  "visto": "2026-11-28T11:45:31.258Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
   "importante": false,
@@ -77091,8 +77138,8 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T11:00:36.699202Z",
-   "age_seconds": 2,
+   "accepted_at": "2026-11-28T11:43:46.472561Z",
+   "age_seconds": 103,
    "changing_sources_count": 1,
    "corroborated": true,
    "corroborated_age_seconds": 1,
@@ -77104,35 +77151,35 @@
    "games": [
     [
      7,
-     0
+     5
     ],
     [
      5,
-     0
+     4
     ]
    ],
    "is_tiebreak": false,
    "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-28T11:00:36.260545Z",
-   "sequence": 80,
-   "server": 2,
+   "received_at": "2026-11-28T11:43:46.263665Z",
+   "sequence": 139,
+   "server": 1,
    "sets": [
     1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-28T11:00:36.699197Z",
+   "timestamp": "2026-11-28T11:45:16.605148Z",
    "puntos": [
-    "40",
-    "40"
+    "0",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -77437,7 +77484,7 @@
    "ranking": 236
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T11:00:38.910Z",
   "torneoClave": "challenger|Hersonissos 4",
@@ -77984,6 +78031,82 @@
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false
+ },
+ "225909": {
+  "id": 225909,
+  "tour": "atp",
+  "tier": "davis_cup",
+  "torneo": "ATP Davis Cup - World Group",
+  "torneoId": "3120",
+  "ronda": null,
+  "rondaCod": null,
+  "superficie": "hard",
+  "cubierto": true,
+  "dobles": false,
+  "clasificacion": false,
+  "genero": "men",
+  "horario": "2026-11-28T11:20:00Z",
+  "j1": {
+   "id": 23,
+   "nombre": "Rafael Jodar",
+   "pais": "esp",
+   "ranking": 10
+  },
+  "j2": {
+   "id": 535,
+   "nombre": "Cameron Norrie",
+   "pais": "gbr",
+   "ranking": 52
+  },
+  "estado": "en_vivo",
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T11:44:26.624945Z",
+   "age_seconds": 63,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 3,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 3,
+   "origin": "observed",
+   "points": [
+    "AD",
+    "40"
+   ],
+   "received_at": "2026-11-28T11:44:26.405396Z",
+   "sequence": 42,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T11:45:23.973468Z",
+   "puntos": [
+    "AD",
+    "40"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null,
+  "visto": "2026-11-28T11:45:31.258Z",
+  "torneoClave": "atp|ATP Davis Cup - World Group",
+  "importante": true
  },
  "null": {
   "id": null,
