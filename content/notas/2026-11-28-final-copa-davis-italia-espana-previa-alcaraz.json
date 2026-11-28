@@ -69,10 +69,7 @@
       },
       "utc": "2026-11-29T14:00:00Z",
       "fuente": {
-        "es": {
-          "es": "Copa Davis",
-          "en": "Davis Cup"
-        },
+        "es": "Copa Davis",
         "en": "Davis Cup"
       }
     },
@@ -81,7 +78,7 @@
       "tipo": "datos",
       "titulo": {
         "es": "Italia vs. España: los números en la Davis",
-        "en": "Italia vs. España: los números en la Davis"
+        "en": "Italy vs Spain: the Davis Cup numbers"
       },
       "fuente": {
         "es": "Copa Davis / ITF",
@@ -137,20 +134,20 @@
       "tipo": "serie",
       "titulo": {
         "es": "La final de 2025: Italia 2-0 España",
-        "en": "La final de 2025: Italia 2-0 España"
+        "en": "The 2025 final: Italy 2-0 Spain"
       },
       "local": {
         "pais": "ita",
         "nombre": {
           "es": "Italia",
-          "en": "Spain"
+          "en": "Italy"
         }
       },
       "visita": {
         "pais": "esp",
         "nombre": {
           "es": "España",
-          "en": "Great Britain"
+          "en": "Spain"
         }
       },
       "resultado": [
@@ -219,7 +216,10 @@
       "despuesDe": 6,
       "tipo": "imagen",
       "url": "https://contentfulproxy.stadion.io/0gg9pgt9u0k4/6LLLrDI7Ecu5SWwlzHT3D5/47cf71cf5f967a8f3d3bcd12447a6ba6/Italy_celebrate_1.jpg?fm=webp&fit=fill&f=center&w=1920&h=1280",
-      "alt": "El equipo italiano celebra su clasificación a la final de la Copa Davis 2026",
+      "alt": {
+        "es": "El equipo italiano celebra su clasificación a la final de la Copa Davis 2026",
+        "en": "The Italian team celebrates reaching the 2026 Davis Cup final"
+      },
       "epigrafe": {
         "es": "Italia festejó el pase a la final tras superar a Chequia. Foto: Getty Images para ITF.",
         "en": "Italy celebrated reaching the final after beating the Czech Republic. Photo: Getty Images for ITF."
