@@ -77565,7 +77565,7 @@
    "ranking": 423
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T14:00:44.725Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
@@ -77710,7 +77710,7 @@
  },
  "225832": {
   "id": 225832,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Monastir 2 (Tunisia)",
   "ronda": "Monastir 2 - Final",
   "rondaCod": "F",
@@ -77720,7 +77720,7 @@
   "horario": "2026-11-28T14:20:00Z",
   "j1": {
    "id": 11080,
-   "nombre": "Martinez/ Nedunchezhiyan",
+   "nombre": "Jeevan Nedunchezhiyan / Martinez",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -77730,7 +77730,7 @@
   },
   "j2": {
    "id": 12010,
-   "nombre": "Barroso Campos/ Forcano",
+   "nombre": "Alberto Barroso Campos / Ignasi Forcano",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -77739,12 +77739,59 @@
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T12:18:17.089Z",
+  "visto": "2026-11-28T14:45:27.886Z",
   "torneoClave": "challenger|Monastir 2 (Tunisia)",
   "tier": "challenger_50",
-  "importante": false
+  "importante": false,
+  "torneoId": "14885",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T14:44:35.829399Z",
+   "age_seconds": 52,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 22,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 22,
+   "origin": "observed",
+   "points": [
+    "15",
+    "15"
+   ],
+   "received_at": "2026-11-28T14:44:28.108858Z",
+   "sequence": 39,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-28T14:44:35.829397Z",
+   "puntos": [
+    "15",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225846": {
   "id": 225846,
@@ -77856,26 +77903,73 @@
   "superficie": "clay",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T14:00:00Z",
+  "horario": "2026-11-28T14:05:00Z",
   "j1": {
-   "id": 11111,
-   "nombre": "Igor Marcondes",
-   "pais": "bra",
-   "ranking": 292
-  },
-  "j2": {
    "id": 114,
    "nombre": "Felipe Meligeni Alves",
    "pais": "bra",
-   "ranking": 345
+   "ranking": 322
+  },
+  "j2": {
+   "id": 11111,
+   "nombre": "Igor Marcondes",
+   "pais": "bra",
+   "ranking": 327
   },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T12:18:17.089Z",
+  "visto": "2026-11-28T14:45:27.886Z",
   "torneoClave": "challenger|Florianopolis",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "2565",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T14:45:13.051891Z",
+   "age_seconds": 14,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "0",
+    "0"
+   ],
+   "received_at": "2026-11-28T14:45:12.981123Z",
+   "sequence": 53,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T14:45:22.573019Z",
+   "puntos": [
+    "0",
+    "0"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225857": {
   "id": 225857,
@@ -78302,9 +78396,9 @@
    "ranking": 32
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-28T14:00:44.725Z",
+  "visto": "2026-11-28T14:45:28.006Z",
   "torneoClave": "atp|ATP Davis Cup - World Group",
   "tier": "davis_cup",
   "importante": true,
@@ -78312,11 +78406,11 @@
   "cubierto": true,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T14:00:33.026340Z",
-   "age_seconds": 11,
-   "changing_sources_count": 2,
-   "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "accepted_at": "2026-11-28T14:28:18.406844Z",
+   "age_seconds": 1029,
+   "changing_sources_count": 0,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -78325,38 +78419,38 @@
    "games": [
     [
      6,
-     1
+     6
     ],
     [
      2,
-     0
+     1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 1029,
    "origin": "observed",
    "points": [
     "0",
-    "15"
+    "0"
    ],
-   "received_at": "2026-11-28T14:00:32.973559Z",
-   "sequence": 70,
-   "server": 2,
+   "received_at": "2026-11-28T14:28:18.294462Z",
+   "sequence": 106,
+   "server": 1,
    "sets": [
-    1,
+    2,
     0
    ],
-   "sources_count": 3,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-28T14:00:33.026334Z",
+   "timestamp": "2026-11-28T14:28:18.406842Z",
    "puntos": [
     "0",
-    "15"
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "null": {
   "id": null,
