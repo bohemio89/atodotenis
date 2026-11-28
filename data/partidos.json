@@ -76459,7 +76459,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T06:30:40.083Z",
+  "visto": "2026-11-28T07:11:00.446Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -76467,11 +76467,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T06:30:33.070410Z",
-   "age_seconds": 5,
-   "changing_sources_count": 3,
+   "accepted_at": "2026-11-28T07:10:33.329106Z",
+   "age_seconds": 26,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 5,
+   "corroborated_age_seconds": 1,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -76481,34 +76481,34 @@
     [
      3,
      6,
-     2
+     4
     ],
     [
      6,
      4,
-     1
+     5
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "15",
-    "15"
+    "40",
+    "AD"
    ],
-   "received_at": "2026-11-28T06:30:32.865008Z",
-   "sequence": 142,
+   "received_at": "2026-11-28T07:10:33.143165Z",
+   "sequence": 196,
    "server": 1,
    "sets": [
     1,
     1
    ],
-   "sources_count": 3,
+   "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-28T06:30:33.070405Z",
+   "timestamp": "2026-11-28T07:10:43.615917Z",
    "puntos": [
-    "15",
-    "15"
+    "40",
+    "AD"
    ],
    "saca": 1
   },
@@ -76538,7 +76538,7 @@
    "ranking": 645
   },
   "dobles": false,
-  "estado": "en_vivo",
+  "estado": "por_confirmar",
   "motivo": null,
   "visto": "2026-11-28T06:30:40.084Z",
   "torneoClave": "challenger|Yokohama",
@@ -76685,17 +76685,17 @@
  },
  "225739": {
   "id": 225739,
-  "tour": "challenger_doubles",
+  "tour": "challenger",
   "torneo": "Yokohama",
   "ronda": "Yokohama - Final",
   "rondaCod": "F",
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T06:30:00Z",
+  "horario": "2026-11-28T06:45:00Z",
   "j1": {
-   "id": 46962,
-   "nombre": "Chandrasekar/ Loof",
+   "id": 38373,
+   "nombre": "Jecan / Kielan",
    "pais": null,
    "ranking": null,
    "paises": [
@@ -76704,22 +76704,69 @@
    ]
   },
   "j2": {
-   "id": 38373,
-   "nombre": "Jecan/ Kielan",
+   "id": 46962,
+   "nombre": "Anirudh Chandrasekar / Loof",
    "pais": null,
    "ranking": null,
    "paises": [
-    null,
+    "ind",
     null
    ]
   },
   "dobles": true,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T06:00:39.261Z",
+  "visto": "2026-11-28T07:11:00.446Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "8154",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T07:10:53.783761Z",
+   "age_seconds": 6,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 5,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "inferred",
+    "rule": "match_tiebreak"
+   },
+   "games": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 5,
+   "origin": "observed",
+   "points": [
+    "30",
+    "15"
+   ],
+   "received_at": "2026-11-28T07:10:53.423045Z",
+   "sequence": 21,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T07:10:53.783757Z",
+   "puntos": [
+    "30",
+    "15"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225740": {
   "id": 225740,
