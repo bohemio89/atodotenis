@@ -30495,92 +30495,6 @@
   "confirmado": false,
   "ganador": null
  },
- "222502": {
-  "id": 222502,
-  "tour": "challenger",
-  "tier": null,
-  "torneo": "Sydney, Australia, Doubles",
-  "torneoId": null,
-  "ronda": "Round of 16",
-  "rondaCod": "R16",
-  "superficie": null,
-  "cubierto": false,
-  "dobles": true,
-  "clasificacion": false,
-  "genero": "men",
-  "horario": "2026-11-18T00:30:00Z",
-  "j1": {
-   "id": 35313,
-   "nombre": "Jake Delaney / Jesse Delaney",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "aus",
-    "aus"
-   ]
-  },
-  "j2": {
-   "id": 45971,
-   "nombre": "Hoole / Vujic",
-   "pais": null,
-   "ranking": null,
-   "paises": [
-    "aus",
-    "aus"
-   ]
-  },
-  "estado": "por_confirmar",
-  "resultado": null,
-  "score": {
-   "accepted_at": "2026-11-18T01:30:23.409086Z",
-   "age_seconds": 18,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 2,
-   "deciding_match_tiebreak_next": false,
-   "deciding_set": {
-    "basis": "inferred",
-    "rule": "match_tiebreak"
-   },
-   "games": [
-    [
-     6,
-     2
-    ],
-    [
-     4,
-     4
-    ]
-   ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 2,
-   "origin": "observed",
-   "points": [
-    "0",
-    "0"
-   ],
-   "received_at": "2026-11-18T01:30:23.269855Z",
-   "sequence": 77,
-   "server": 2,
-   "sets": [
-    1,
-    0
-   ],
-   "sources_count": 2,
-   "stale": false,
-   "timestamp": "2026-11-18T01:30:39.886847Z",
-   "puntos": [
-    "0",
-    "0"
-   ],
-   "saca": 2
-  },
-  "confirmado": false,
-  "ganador": null,
-  "visto": "2026-11-18T01:30:42.023Z",
-  "torneoClave": "challenger|Sydney, Australia, Doubles",
-  "importante": false
- },
  "222504": {
   "id": 222504,
   "tour": "challenger",
@@ -73262,7 +73176,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T00:45:30.715Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -73270,11 +73184,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T00:00:05.255389Z",
-   "age_seconds": 37,
+   "accepted_at": "2026-11-28T00:45:02.902150Z",
+   "age_seconds": 26,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 2,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -73283,35 +73197,37 @@
    "games": [
     [
      2,
-     4
+     7,
+     0
     ],
     [
      6,
-     4
+     6,
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "0",
-    "0"
+    "30",
+    "40"
    ],
-   "received_at": "2026-11-28T00:00:05.216766Z",
-   "sequence": 114,
-   "server": 1,
+   "received_at": "2026-11-28T00:45:02.566472Z",
+   "sequence": 171,
+   "server": 2,
    "sets": [
-    0,
+    1,
     1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-28T00:00:38.264365Z",
+   "timestamp": "2026-11-28T00:45:27.892476Z",
    "puntos": [
-    "0",
-    "0"
+    "30",
+    "40"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -76346,24 +76262,71 @@
   "genero": "men",
   "horario": "2026-11-28T00:40:00Z",
   "j1": {
+   "id": 600,
+   "nombre": "Christian Langmo",
+   "pais": "usa",
+   "ranking": 379
+  },
+  "j2": {
    "id": 842,
    "nombre": "Dane Sweeny",
    "pais": "aus",
    "ranking": 123
   },
-  "j2": {
-   "id": 600,
-   "nombre": "Christian Langmo",
-   "pais": "usa",
-   "ranking": 396
-  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.732Z",
+  "visto": "2026-11-28T00:45:30.715Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "3191",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T00:45:01.232630Z",
+   "age_seconds": 28,
+   "changing_sources_count": 2,
+   "corroborated": true,
+   "corroborated_age_seconds": 2,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 2,
+   "origin": "observed",
+   "points": [
+    "30",
+    "30"
+   ],
+   "received_at": "2026-11-28T00:45:01.199544Z",
+   "sequence": 10,
+   "server": 1,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 2,
+   "stale": false,
+   "timestamp": "2026-11-28T00:45:18.846374Z",
+   "puntos": [
+    "30",
+    "30"
+   ],
+   "saca": 1
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225734": {
   "id": 225734,
