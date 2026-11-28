@@ -76459,7 +76459,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T04:45:28.243Z",
+  "visto": "2026-11-28T05:30:34.724Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -76467,11 +76467,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T04:44:51.160183Z",
-   "age_seconds": 37,
+   "accepted_at": "2026-11-28T05:30:06.068795Z",
+   "age_seconds": 28,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 3,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -76479,34 +76479,36 @@
    },
    "games": [
     [
+     3,
      0
     ],
     [
+     6,
      1
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 3,
    "origin": "observed",
    "points": [
-    "0",
-    "15"
+    "15",
+    "0"
    ],
-   "received_at": "2026-11-28T04:44:50.824194Z",
-   "sequence": 9,
-   "server": 2,
+   "received_at": "2026-11-28T05:30:05.565985Z",
+   "sequence": 69,
+   "server": 1,
    "sets": [
     0,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-28T04:45:10.023123Z",
+   "timestamp": "2026-11-28T05:30:18.111630Z",
    "puntos": [
-    "0",
-    "15"
+    "15",
+    "0"
    ],
-   "saca": 2
+   "saca": 1
   },
   "confirmado": false,
   "ganador": null
@@ -76536,7 +76538,7 @@
   "dobles": false,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T04:45:28.242Z",
+  "visto": "2026-11-28T05:30:34.724Z",
   "torneoClave": "challenger|Yokohama",
   "tier": "challenger_75",
   "importante": false,
@@ -76544,11 +76546,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T04:45:08.984448Z",
-   "age_seconds": 19,
-   "changing_sources_count": 2,
+   "accepted_at": "2026-11-28T05:30:02.999788Z",
+   "age_seconds": 31,
+   "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 2,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -76556,32 +76558,34 @@
    },
    "games": [
     [
-     1
+     6,
+     2
     ],
     [
-     0
+     4,
+     3
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 2,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
-    "30",
-    "40"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-28T04:45:08.701617Z",
-   "sequence": 12,
+   "received_at": "2026-11-28T05:30:02.885232Z",
+   "sequence": 83,
    "server": 2,
    "sets": [
-    0,
+    1,
     0
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-28T04:45:19.970309Z",
+   "timestamp": "2026-11-28T05:30:13.767412Z",
    "puntos": [
-    "30",
-    "40"
+    "0",
+    "0"
    ],
    "saca": 2
   },
@@ -76621,7 +76625,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T04:45:28.242Z",
+  "visto": "2026-11-28T05:30:34.723Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -76629,11 +76633,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T04:45:23.297345Z",
-   "age_seconds": 4,
+   "accepted_at": "2026-11-28T05:29:04.256340Z",
+   "age_seconds": 90,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 3,
+   "corroborated_age_seconds": 5,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "inferred",
@@ -76641,34 +76645,36 @@
    },
    "games": [
     [
-     2
+     3,
+     3
     ],
     [
-     3
+     6,
+     4
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 3,
+   "observed_age_seconds": 5,
    "origin": "observed",
    "points": [
     "0",
     "0"
    ],
-   "received_at": "2026-11-28T04:45:23.184736Z",
-   "sequence": 29,
-   "server": 1,
+   "received_at": "2026-11-28T05:29:04.194466Z",
+   "sequence": 95,
+   "server": 2,
    "sets": [
     0,
-    0
+    1
    ],
-   "sources_count": 2,
+   "sources_count": 1,
    "stale": false,
-   "timestamp": "2026-11-28T04:45:23.297342Z",
+   "timestamp": "2026-11-28T05:29:18.621473Z",
    "puntos": [
     "0",
     "0"
    ],
-   "saca": 1
+   "saca": 2
   },
   "confirmado": false,
   "ganador": null
@@ -76734,9 +76740,9 @@
    "ranking": 250
   },
   "dobles": false,
-  "estado": "por_confirmar",
+  "estado": "finalizado",
   "motivo": null,
-  "visto": "2026-11-28T04:00:41.628Z",
+  "visto": "2026-11-28T05:30:34.796Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
   "importante": false,
@@ -76744,11 +76750,11 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T04:00:14.185451Z",
-   "age_seconds": 26,
-   "changing_sources_count": 1,
-   "corroborated": true,
-   "corroborated_age_seconds": 0,
+   "accepted_at": "2026-11-28T04:16:18.299688Z",
+   "age_seconds": 4456,
+   "changing_sources_count": 0,
+   "corroborated": false,
+   "corroborated_age_seconds": null,
    "deciding_match_tiebreak_next": false,
    "deciding_set": {
     "basis": "default",
@@ -76758,39 +76764,39 @@
     [
      6,
      3,
-     3
+     6
     ],
     [
      4,
      6,
-     1
+     2
     ]
    ],
    "is_tiebreak": false,
-   "observed_age_seconds": 0,
+   "observed_age_seconds": 4456,
    "origin": "observed",
    "points": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
-   "received_at": "2026-11-28T04:00:14.092034Z",
-   "sequence": 155,
+   "received_at": "2026-11-28T04:16:08.586073Z",
+   "sequence": 175,
    "server": 1,
    "sets": [
-    1,
+    2,
     1
    ],
-   "sources_count": 2,
+   "sources_count": 0,
    "stale": false,
-   "timestamp": "2026-11-28T04:00:37.029654Z",
+   "timestamp": "2026-11-28T04:16:18.299680Z",
    "puntos": [
-    "30",
-    "15"
+    "0",
+    "0"
    ],
    "saca": 1
   },
-  "confirmado": false,
-  "ganador": null
+  "confirmado": true,
+  "ganador": 1
  },
  "225768": {
   "id": 225768,
