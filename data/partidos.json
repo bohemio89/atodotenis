@@ -76256,7 +76256,7 @@
   "dobles": true,
   "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T02:00:40.429Z",
+  "visto": "2026-11-28T02:45:26.477Z",
   "torneoClave": "challenger|San Salvador (El Salvador)",
   "tier": "challenger_50",
   "importante": false,
@@ -76264,46 +76264,48 @@
   "cubierto": false,
   "resultado": null,
   "score": {
-   "accepted_at": "2026-11-28T02:00:18.056381Z",
-   "age_seconds": 22,
+   "accepted_at": "2026-11-28T02:44:30.317244Z",
+   "age_seconds": 56,
    "changing_sources_count": 1,
    "corroborated": true,
-   "corroborated_age_seconds": 8,
-   "deciding_match_tiebreak_next": false,
+   "corroborated_age_seconds": 1,
+   "deciding_match_tiebreak_next": true,
    "deciding_set": {
-    "basis": "inferred",
+    "basis": "confirmed",
     "rule": "match_tiebreak"
    },
    "games": [
     [
      6,
-     0
+     4,
+     8
     ],
     [
      3,
-     1
+     6,
+     5
     ]
    ],
-   "is_tiebreak": false,
-   "observed_age_seconds": 5,
+   "is_tiebreak": true,
+   "observed_age_seconds": 1,
    "origin": "observed",
    "points": [
-    "0",
-    "30"
+    "8",
+    "5"
    ],
-   "received_at": "2026-11-28T02:00:17.869436Z",
-   "sequence": 56,
+   "received_at": "2026-11-28T02:44:30.086078Z",
+   "sequence": 118,
    "server": 1,
    "sets": [
     1,
-    0
+    1
    ],
    "sources_count": 2,
    "stale": false,
-   "timestamp": "2026-11-28T02:00:34.937903Z",
+   "timestamp": "2026-11-28T02:45:20.346826Z",
    "puntos": [
-    "0",
-    "30"
+    "8",
+    "5"
    ],
    "saca": 1
   },
@@ -76534,26 +76536,73 @@
   "superficie": "hard",
   "clasificacion": false,
   "genero": "men",
-  "horario": "2026-11-28T02:00:00Z",
+  "horario": "2026-11-28T02:15:00Z",
   "j1": {
-   "id": 481,
-   "nombre": "Omar Jasika",
-   "pais": "aus",
-   "ranking": 294
-  },
-  "j2": {
    "id": 117,
    "nombre": "Tristan Schoolkate",
    "pais": "aus",
    "ranking": 143
   },
+  "j2": {
+   "id": 481,
+   "nombre": "Omar Jasika",
+   "pais": "aus",
+   "ranking": 250
+  },
   "dobles": false,
-  "estado": "programado",
+  "estado": "en_vivo",
   "motivo": null,
-  "visto": "2026-11-28T00:00:42.731Z",
+  "visto": "2026-11-28T02:45:26.478Z",
   "torneoClave": "challenger|Playford 2",
   "tier": "challenger_75",
-  "importante": false
+  "importante": false,
+  "torneoId": "3191",
+  "cubierto": false,
+  "resultado": null,
+  "score": {
+   "accepted_at": "2026-11-28T02:45:24.532517Z",
+   "age_seconds": 1,
+   "changing_sources_count": 1,
+   "corroborated": true,
+   "corroborated_age_seconds": 0,
+   "deciding_match_tiebreak_next": false,
+   "deciding_set": {
+    "basis": "default",
+    "rule": "full_set"
+   },
+   "games": [
+    [
+     4
+    ],
+    [
+     4
+    ]
+   ],
+   "is_tiebreak": false,
+   "observed_age_seconds": 0,
+   "origin": "observed",
+   "points": [
+    "40",
+    "30"
+   ],
+   "received_at": "2026-11-28T02:45:24.435106Z",
+   "sequence": 54,
+   "server": 2,
+   "sets": [
+    0,
+    0
+   ],
+   "sources_count": 3,
+   "stale": false,
+   "timestamp": "2026-11-28T02:45:24.532513Z",
+   "puntos": [
+    "40",
+    "30"
+   ],
+   "saca": 2
+  },
+  "confirmado": false,
+  "ganador": null
  },
  "225768": {
   "id": 225768,
