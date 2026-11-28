@@ -280,7 +280,7 @@ function videoNota(n) {
 <p class="meta">Video: ${esc(n.video.canal || 'YouTube')} en YouTube</p>
 <script>document.querySelectorAll('.yt').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';f.title='${EN ? 'Match highlights' : 'Highlights del partido'}';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.className='yt-frame';b.replaceWith(f);});});</script></section>`;
 }
-function imagenNota(n, conCredito = true, soloPortada = false) {
+function imagenNota(n, conCredito = true) {
   const respaldo = placa(n) || cancha(n.superficie);
   // Foto de Getty (embed oficial): la misma foto de la nota en tarjetas y portada. Cubre todo el recuadro;
   // la barra gris de Getty queda debajo, fuera de la vista (dentro de la nota se ve completa).
@@ -293,8 +293,7 @@ function imagenNota(n, conCredito = true, soloPortada = false) {
     const alternativa = n.imagen.url.replace(/^https:\/\/thumb\.wikimedia\.org\/wikipedia\/commons\/thumb\/(.+)\/[^/]+(?:\?.*)?$/, 'https://upload.wikimedia.org/wikipedia/commons/$1');
     const fallback = n.imagen.urlFallback || (alternativa !== n.imagen.url ? alternativa : '');
     // urlMovil: versión armada para el recuadro alto del celular (la foto entera arriba, sin recortar a los jugadores)
-    const urlMovil = soloPortada ? n.imagen.urlPortadaMovil : n.imagen.urlMovil;
-    const movil = urlMovil ? `<source media="(max-width:600px)" srcset="${esc(urlMovil)}">` : '';
+    const movil = n.imagen.urlMovil ? `<source media="(max-width:600px)" srcset="${esc(n.imagen.urlMovil)}">` : '';
     return `<div class="fondo"><picture style="display:contents">${movil}<img src="${esc(n.imagen.url)}"${srcsetCommons(n.imagen.url)} data-fallback="${esc(fallback)}" onerror="if(this.dataset.fallback){var f=this.dataset.fallback;this.dataset.fallback='';this.removeAttribute('srcset');this.src=f;}else{this.hidden=true;var p=this.nextElementSibling;if(p)p.hidden=false;}" alt="${esc(EN ? n.titulo : n.imagen.alt || '')}" loading="lazy" style="width:100%;height:100%;object-fit:${esc(n.imagen.ajustePortada || 'cover')};object-position:center center;background:#0B0E12"></picture><div class="imagen-respaldo" hidden>${respaldo}</div>${conCredito && !n.imagen.propia ? `<span class="credito-mini">Foto: ${esc(creditoCorto(n))}</span>` : ''}</div>`;
   }
   return respaldo;
@@ -617,7 +616,7 @@ function destacadas(max = 5) {
 }
 function hero() {
   const item = (href, fondo, cat, titulo, bajada) => `<a class="hs" href="${href}">${fondo}${cat ? `<span class="etiqueta">${esc(cat)}</span>` : ''}<h2>${esc(titulo)}</h2>${bajada ? `<p>${esc(bajada)}</p>` : ''}</a>`;
-  const items = destacadas().map((n) => item(`/nota/${n.slug}`, imagenNota(n, true, true), n.categoria, n.titulo, n.bajada));
+  const items = destacadas().map((n) => item(`/nota/${n.slug}`, imagenNota(n), n.categoria, n.titulo, n.bajada));
   // Si todavía hay pocas notas, se completa con resultados destacados
   const conNota = new Set(notas.map((n) => n.partidoId));
   for (const p of terminados.filter((x) => x.importante && !conNota.has(x.id))) {
